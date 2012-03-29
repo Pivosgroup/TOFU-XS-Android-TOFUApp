@@ -1,3 +1,4 @@
+#pragma once
 /*
  *      Copyright (C) 2005-2013 Team XBMC
  *      http://xbmc.org
@@ -18,14 +19,12 @@
  *
  */
 
-#ifndef WINDOW_EVENTS_LINUX_H
-#define WINDOW_EVENTS_LINUX_H
-
-#pragma once
 #include "windowing/WinEvents.h"
 #include "input/linux/LinuxInputDevices.h"
 
-class CWinEventsLinux : public IWinEvents
+#include <map>
+
+class CWinEventsLinux : public CWinEventsBase
 {
 public:
   CWinEventsLinux();
@@ -42,6 +41,6 @@ public:
 private:
   static bool m_initialized;
   static CLinuxInputDevices m_devices;
+  static std::map<int, int> m_altMap;
+  static std::map<int, int> m_keyPadMap;
 };
-
-#endif
