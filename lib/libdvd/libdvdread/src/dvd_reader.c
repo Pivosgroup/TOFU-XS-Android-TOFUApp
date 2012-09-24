@@ -249,6 +249,7 @@ static dvd_reader_t *DVDOpenImageFile( const char *location, int have_css )
         dvdinput_close(dev);
         return NULL;
     }
+    memset( dvd, 0, sizeof( dvd_reader_t ) );
     dvd->isImageFile = 1;
     dvd->dev = dev;
     dvd->path_root = NULL;
@@ -515,6 +516,8 @@ dvd_reader_t *DVDOpen( const char *ppath )
 	    fclose( mntfile );
 	}
 #elif defined(__linux__)
+    /* amlogic/linux hack, tries to use /root as a device, wtf? */
+    if (strcmp("/root", path_copy )) {
         mntfile = fopen( _PATH_MOUNTED, "r" );
         if( mntfile ) {
             struct mntent *me;
@@ -533,6 +536,7 @@ dvd_reader_t *DVDOpen( const char *ppath )
             }
             fclose( mntfile );
 	}
+    }
 #elif defined(_WIN32) || defined(__OS2__)
 #ifdef __OS2__
     /* Use DVDOpenImageFile() only if it is a drive */
