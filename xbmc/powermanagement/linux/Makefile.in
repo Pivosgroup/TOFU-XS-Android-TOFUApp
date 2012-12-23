@@ -1,0 +1,13 @@
+SRCS  = ConsoleDeviceKitPowerSyscall.cpp
+SRCS += ConsoleUPowerSyscall.cpp
+SRCS += HALPowerSyscall.cpp
+SRCS += UPowerSyscall.cpp
+SRCS += LogindUPowerSyscall.cpp
+ifeq (@USE_OPENGLES@,1)
+SRCS += PivosPowerSyscall.cpp
+endif
+
+LIB   = powermanagement_linux.a
+
+include ../../../Makefile.include
+-include $(patsubst %.cpp,%.P,$(patsubst %.c,%.P,$(SRCS)))
