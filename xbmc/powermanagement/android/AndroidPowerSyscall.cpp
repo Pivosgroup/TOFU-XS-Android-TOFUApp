@@ -22,6 +22,8 @@
 
 #include "AndroidPowerSyscall.h"
 #include "android/activity/XBMCApp.h"
+#include "android/jni/PowerManager.h"
+#include "android/jni/SystemClock.h"
 
 CAndroidPowerSyscall::CAndroidPowerSyscall()
 { }
@@ -34,9 +36,35 @@ int CAndroidPowerSyscall::BatteryLevel(void)
   return CXBMCApp::GetBatteryLevel();
 }
 
+bool CAndroidPowerSyscall::CanReboot(void)
+{
+  int result = CXBMCApp::checkCallingOrSelfPermission("android.permission.REBOOT");
+  return (result == 0);
+}
+
+bool CAndroidPowerSyscall::CanSuspend(void)
+{
+  int result = CXBMCApp::checkCallingOrSelfPermission("android.permission.DEVICE_POWER");
+  return (result == 0);
+}
+
+bool CAndroidPowerSyscall::Suspend(void)
+{
+  int64_t timestamp = CJNISystemClock::uptimeMillis();
+  CJNIPowerManager(CXBMCApp::getSystemService("power")).goToSleep(timestamp);
+  return true;
+}
+
+bool CAndroidPowerSyscall::Reboot(void)
+{
+  CJNIPowerManager(CXBMCApp::getSystemService("power")).reboot("user initiated");
+  return true;
+}
+
 bool CAndroidPowerSyscall::PumpPowerEvents(IPowerEventsCallback *callback)
 {    
   return true;
 }
+
 
 #endif
