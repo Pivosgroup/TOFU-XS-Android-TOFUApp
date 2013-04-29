@@ -29,14 +29,14 @@ public:
   ~CAndroidPowerSyscall();
 
   virtual bool Powerdown(void) { return false; }
-  virtual bool Suspend(void) { return false; }
+  virtual bool Suspend(void);
   virtual bool Hibernate(void) { return false; }
-  virtual bool Reboot(void) { return false; }
+  virtual bool Reboot(void);
 
   virtual bool CanPowerdown(void) { return false; }
-  virtual bool CanSuspend(void) { return false; }
+  virtual bool CanSuspend(void);
   virtual bool CanHibernate(void) { return false; }
-  virtual bool CanReboot(void) { return false; }
+  virtual bool CanReboot(void);
   virtual int  BatteryLevel(void);
 
   virtual bool PumpPowerEvents(IPowerEventsCallback *callback);
