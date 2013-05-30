@@ -92,6 +92,9 @@
 #include "osx/smc.h"
 #include "linux/LinuxResourceCounter.h"
 static CLinuxResourceCounter m_resourceCounter;
+
+#elif defined(TARGET_ANDROID)
+#include "xbmc/android/activity/XBMCApp.h"
 #endif
 
 #define SYSHEATUPDATEINTERVAL 60000
@@ -2335,7 +2338,11 @@ bool CGUIInfoManager::GetBool(int condition1, int contextWindow, const CGUIListI
   else if (condition == SYSTEM_LOGGEDON)
     bReturn = !(g_windowManager.GetActiveWindow() == WINDOW_LOGIN_SCREEN);
   else if (condition == SYSTEM_SHOW_EXIT_BUTTON)
-    bReturn = g_advancedSettings.m_showExitButton;
+#if defined(ANDROID)
+    bReturn = !CXBMCApp::IsLauncher();
+#else
+    bReturn |= g_advancedSettings.m_showExitButton;
+#endif
   else if (condition == SYSTEM_HAS_LOGINSCREEN)
     bReturn = CProfilesManager::Get().UsingLoginScreen();
   else if (condition == WEATHER_IS_FETCHED)
