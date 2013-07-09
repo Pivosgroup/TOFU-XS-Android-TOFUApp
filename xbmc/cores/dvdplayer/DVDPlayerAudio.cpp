@@ -623,8 +623,13 @@ void CDVDPlayerAudio::HandleSyncError(double duration)
 {
   double clock = m_pClock->GetClock();
   double error = m_dvdAudio.GetPlayingPts() - clock;
+  int64_t now;
 
+#if 1
+  if( fabs(error) > DVD_MSEC_TO_TIME(250) || m_syncclock )
+#else
   if( fabs(error) > DVD_MSEC_TO_TIME(100) || m_syncclock )
+#endif
   {
     m_pClock->Discontinuity(clock+error);
     CLog::Log(LOGDEBUG, "CDVDPlayerAudio:: Discontinuity1 - was:%f, should be:%f, error:%f", clock, clock+error, error);
