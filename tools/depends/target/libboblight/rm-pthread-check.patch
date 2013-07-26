@@ -1,0 +1,11 @@
+--- a/configure.ac	2013-07-21 20:18:54.012034312 -0400
++++ b/configure.ac	2013-07-21 20:19:16.542034300 -0400
+@@ -15,7 +15,6 @@ AC_HEADER_STDC
+ AM_PROG_LIBTOOL
+ 
+ dnl all use this
+-AC_CHECK_LIB(pthread,[main])
+ AC_CHECK_LIB(rt,[main])
+ AC_CHECK_LIB(m,[main])
+ AC_CHECK_LIB(dl,[main])
+
