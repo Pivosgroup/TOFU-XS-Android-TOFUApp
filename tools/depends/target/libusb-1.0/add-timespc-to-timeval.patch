@@ -1,0 +1,16 @@
+--- a/libusb/io.c	2013-07-21 20:06:06.042034392 -0400
++++ b/io.c	2013-07-21 20:07:00.472034385 -0400
+@@ -36,6 +36,12 @@
+ 
+ #include "libusbi.h"
+ 
++#define TIMESPEC_TO_TIMEVAL(tv, ts)                                     \
++        do {                                                            \
++                (tv)->tv_sec = (ts)->tv_sec;                            \
++                (tv)->tv_usec = (ts)->tv_nsec / 1000;                   \
++        } while (0)
++
+ /**
+  * \page io Synchronous and asynchronous device I/O
+  *
+
