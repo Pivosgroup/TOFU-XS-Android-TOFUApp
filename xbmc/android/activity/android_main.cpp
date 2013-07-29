@@ -85,12 +85,19 @@ extern "C" JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserved)
   jclass cMain = env->FindClass("org/xbmc/xbmc/Main");
   if(cMain)
   {
-    JNINativeMethod mOnNewIntent = {
+    static JNINativeMethod sMethods[] = {
+    {
       "_onNewIntent",
       "(Landroid/content/Intent;)V",
       (void*)&CJNIContext::_onNewIntent
+    },
+    {
+      "_onSystemUiVisibilityChange",
+      "(I)V",
+      (void*)&CJNIContext::_onSystemUiVisibilityChange
+    }
     };
-    env->RegisterNatives(cMain, &mOnNewIntent, 1);
+    env->RegisterNatives(cMain, &sMethods[0], sizeof(sMethods)/sizeof(JNINativeMethod));
   }
 
   jclass cBroadcastReceiver = env->FindClass("org/xbmc/xbmc/XBMCBroadcastReceiver");

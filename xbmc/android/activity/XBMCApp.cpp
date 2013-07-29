@@ -48,6 +48,7 @@
 #include "AppParamParser.h"
 #include "XbmcContext.h"
 #include <android/bitmap.h>
+#include "AndroidFeatures.h"
 #include "android/jni/JNIThreading.h"
 #include "android/jni/BroadcastReceiver.h"
 #include "android/jni/Intent.h"
@@ -71,6 +72,8 @@
 #include "android/jni/Cursor.h"
 #include "android/jni/ContentResolver.h"
 #include "android/jni/MediaStore.h"
+#include "android/jni/Window.h"
+#include "android/jni/View.h"
 
 #define GIGABYTES       1073741824
 
@@ -114,11 +117,19 @@ CXBMCApp::~CXBMCApp()
 void CXBMCApp::onStart()
 {
   android_printf("%s: ", __PRETTY_FUNCTION__);
+
+  // must hide before the native window's view is created.
+  // do this regardless of if already started, if we have
+  // been moved to the background and are shown again,
+  // we get an onStart call.
+  ShowStatusBar(false);
+
   if (!m_firstrun)
   {
     android_printf("%s: Already running, ignoring request to start", __PRETTY_FUNCTION__);
     return;
   }
+
   pthread_attr_t attr;
   pthread_attr_init(&attr);
   pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
@@ -129,6 +140,12 @@ void CXBMCApp::onStart()
 void CXBMCApp::onResume()
 {
   android_printf("%s: ", __PRETTY_FUNCTION__);
+
+  // when resuming from being backgrounded, CXBMCApp::onStart
+  // is now too early and we have not been given our window
+  // back, so do the ShowStatusBar call again to take affect.
+  ShowStatusBar(false);
+
   CJNIIntentFilter batteryFilter;
   batteryFilter.addAction("android.intent.action.BATTERY_CHANGED");
   registerReceiver(*this, batteryFilter);
@@ -356,6 +373,47 @@ int CXBMCApp::GetDPI()
   AConfiguration_delete(config);
 
   return dpi;
+}
+
+void CXBMCApp::ShowStatusBar(bool show)
+{
+  int version = CAndroidFeatures::GetVersion();
+  int flags = 0;
+
+  android_printf("%s: show(%i)", __PRETTY_FUNCTION__, show);
+  CJNIWindow window = getWindow();
+  if (!window)
+    return;
+
+  CJNIView view = window.getDecorView();
+  if(!view)
+    return;
+
+  if (show)
+    flags = CJNIView::SYSTEM_UI_FLAG_VISIBLE;
+  else
+  {
+    flags = CJNIView::SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+    flags |= CJNIView::SYSTEM_UI_FLAG_LOW_PROFILE;
+    if (version >= 16)
+    {
+      flags |= CJNIView::SYSTEM_UI_FLAG_FULLSCREEN;
+      flags |= CJNIView::SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN;
+      flags |= CJNIView::SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
+    }
+  }
+  if (view.getSystemUiVisibility() != flags)
+  {
+    android_printf("%s: setSystemUiVisibility(%i)", __PRETTY_FUNCTION__, flags);
+    view.setSystemUiVisibility(flags);
+  }
+}
+
+void CXBMCApp::onSystemUiVisibilityChange(int visibility)
+{
+  android_printf("%s: visibility(%i)", __PRETTY_FUNCTION__, visibility);
+  if (visibility == CJNIView::SYSTEM_UI_FLAG_VISIBLE)
+    ShowStatusBar(false);
 }
 
 std::vector<androidPackage> CXBMCApp::GetApplications()
