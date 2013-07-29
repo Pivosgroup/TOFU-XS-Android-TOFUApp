@@ -56,12 +56,14 @@ public:
 
   static CJNIContext* GetAppInstance() { return m_appInstance; };
   static void _onNewIntent(JNIEnv *env, jobject context, jobject intent);
+  static void _onSystemUiVisibilityChange(JNIEnv *env, jobject context, int visibility);
 
 protected:
   CJNIContext(const ANativeActivity *nativeActivity);
   ~CJNIContext();
 
   virtual void onNewIntent(CJNIIntent intent)=0;
+  virtual void onSystemUiVisibilityChange(int visibility)=0;
 
 private:
   CJNIContext();
