@@ -208,3 +208,11 @@ void CJNIContext::_onNewIntent(JNIEnv *env, jobject context, jobject intent)
   if(m_appInstance)
     m_appInstance->onNewIntent(CJNIIntent(jhobject(intent)));
 }
+
+void CJNIContext::_onSystemUiVisibilityChange(JNIEnv *env, jobject context, int visibility)
+{
+  (void)env;
+  (void)context;
+  if(m_appInstance)
+    m_appInstance->onSystemUiVisibilityChange(visibility);
+}
