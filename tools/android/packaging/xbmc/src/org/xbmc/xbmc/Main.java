@@ -5,9 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.View.OnSystemUiVisibilityChangeListener;
 
-public class Main extends NativeActivity 
+public class Main extends NativeActivity implements View.OnSystemUiVisibilityChangeListener
 {
+  native void _onSystemUiVisibilityChange(int visibility);
   native void _onNewIntent(Intent intent);
 
   public Main() 
@@ -19,6 +21,7 @@ public class Main extends NativeActivity
   public void onCreate(Bundle savedInstanceState) 
   {
     super.onCreate(savedInstanceState);
+    getWindow().getDecorView().setOnSystemUiVisibilityChangeListener(this);
   }
 
   @Override
@@ -56,6 +59,11 @@ public class Main extends NativeActivity
               | API_SYSTEM_UI_FLAG_FULLSCREEN
               | API_SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
     }
+  }
+
+  public void onSystemUiVisibilityChange(int visibility)
+  {
+    _onSystemUiVisibilityChange(visibility);
   }
 
 }

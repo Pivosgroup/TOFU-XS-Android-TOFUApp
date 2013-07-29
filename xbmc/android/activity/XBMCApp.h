@@ -60,6 +60,7 @@ public:
   virtual ~CXBMCApp();
   virtual void onReceive(CJNIIntent intent);
   virtual void onNewIntent(CJNIIntent intent);
+  virtual void onSystemUiVisibilityChange(int visibility);
 
   bool isValid() { return m_activity != NULL; }
 
@@ -103,6 +104,8 @@ public:
   static void SetSystemVolume(int val);
 
   static int GetDPI();
+  static void ShowStatusBar(bool show);
+
 protected:
   // limit who can access Volume
   friend class CAESinkAUDIOTRACK;
