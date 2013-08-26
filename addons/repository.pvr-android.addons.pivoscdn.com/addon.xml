@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.pvr-android.addons.pivoscdn.com"
+		name="XBMC.org PVR Add-ons"
+		version="1.1.1"
+		provider-name="Pivos">
+  <requires>
+    <import addon="xbmc.addon" version="12.0.0"/>
+    <import addon="xbmc.pvr" version="1.9.0"/>
+  </requires>
+	<extension point="xbmc.addon.repository"
+		name="Pivos XBMC PVR Repository Clone">
+		<info compressed="true">http://addons.pivoscdn.com/gotham/pvr/android/addons.xml</info>
+		<checksum>http://addons.pivoscdn.com/gotham/pvr/android/addons.xml.md5</checksum>
+		<datadir zip="true">http://addons.pivoscdn.com/gotham/pvr/android</datadir>
+		<hashes>false</hashes>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Install PVR Add-ons from Pivos</summary>
+		<description lang="en">Download and install PVR add-ons from the Pivos addon repository.[CR]  These addons are pulled from the official XBMC.org repository and hosted by Pivos to ease the burden on XBMC's mirrors. By using this repository you will be able to take advantage of our fast Content Delivery Network to help get you faster downloads from a region close to you.[CR]</description>
+		<disclaimer lang="en">Pivos did not make the add-ons on this repository and are not responsible for their content</disclaimer>
+		<platform>android</platform>
+	</extension>
+</addon>

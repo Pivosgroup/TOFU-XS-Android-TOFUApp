@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.addons.pivoscdn.com"
+		name="XBMC.org Addons"
+		version="2.1.15"
+		provider-name="Pivos">
+  <requires>
+    <import addon="xbmc.addon" version="12.0.0"/>
+  </requires>
+	<extension point="xbmc.addon.repository"
+		name="XBMC.org Addons">
+		<dir minversion="12.9.0">
+			<info compressed="true">http://addons.pivoscdn.com/gotham/addons.xml</info>
+			<checksum>http://addons.pivoscdn.com/gotham/addons.xml.md5</checksum>
+			<datadir zip="true">http://addons.pivoscdn.com/gotham</datadir>
+			<hashes>false</hashes>
+		</dir>
+		<info compressed="true">http://addons.pivoscdn.com/frodo_12.3/addons.xml</info>
+		<checksum>http://addons.pivoscdn.com/frodo_12.3/addons.xml.md5</checksum>
+		<datadir zip="true">http://addons.pivoscdn.com/frodo_12.3</datadir>
+		<hashes>false</hashes>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Install Add-ons from Pivos</summary>
+		<description lang="en">Download and install add-ons from the Pivos addon repository.[CR]  These addons are pulled from the official XBMC.org repository and hosted by Pivos to ease the burden on XBMC's mirrors. By using this repository you will be able to take advantage of our fast Content Delivery Network to help get you faster downloads from a region close to you.[CR]</description>
+		<disclaimer lang="en">Pivos did not make the add-ons on this repository and is not responsible for their content</disclaimer>
+		<platform>linux android</platform>
+	</extension>
+</addon>
