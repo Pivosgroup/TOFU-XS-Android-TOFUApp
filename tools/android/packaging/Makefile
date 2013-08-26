@@ -23,9 +23,11 @@ EXCLUDED_ADDONS  = screensaver.rsxs.euphoria
 EXCLUDED_ADDONS += visualization.dxspectrum
 EXCLUDED_ADDONS += visualization.milkdrop
 EXCLUDED_ADDONS += visualization.projectm
-EXCLUDED_ADDONS += repository.addons.pivoscdn.com
-EXCLUDED_ADDONS += repository.pivos-addons.pivoscdn.com
-EXCLUDED_ADDONS += repository.pvr-android.addons.pivoscdn.com
+EXCLUDED_ADDONS += repository.xbmc.org
+EXCLUDED_ADDONS += repository.pvr-ios.xbmc.org
+EXCLUDED_ADDONS += repository.pvr-win32.xbmc.org
+EXCLUDED_ADDONS += repository.pvr-osx32.xbmc.org
+EXCLUDED_ADDONS += repository.pvr-osx64.xbmc.org
 EXCLUDED_ADDONS += repository.pvr-android.xbmc.org
 EXCLUDED_ADDONS += skin.confluence
 
