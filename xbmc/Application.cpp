@@ -1118,11 +1118,11 @@ bool CApplication::InitDirectoriesLinux()
     // map our special drives
     CSpecialProtocol::SetXBMCBinPath(xbmcBinPath);
     CSpecialProtocol::SetXBMCPath(xbmcPath);
-    CSpecialProtocol::SetHomePath(userHome + "/.xbmc");
-    CSpecialProtocol::SetMasterProfilePath(userHome + "/.xbmc/userdata");
+    CSpecialProtocol::SetHomePath(userHome + "/.tofu");
+    CSpecialProtocol::SetMasterProfilePath(userHome + "/.tofu/userdata");
 
     CStdString strTempPath = userHome;
-    strTempPath = URIUtils::AddFileToFolder(strTempPath, ".xbmc/temp");
+    strTempPath = URIUtils::AddFileToFolder(strTempPath, ".tofu/temp");
     if (getenv("XBMC_TEMP"))
       strTempPath = getenv("XBMC_TEMP");
     CSpecialProtocol::SetTempPath(strTempPath);
@@ -1207,9 +1207,9 @@ bool CApplication::InitDirectoriesOSX()
     #if defined(TARGET_DARWIN_IOS)
       CStdString strTempPath = URIUtils::AddFileToFolder(userHome,  CStdString(DarwinGetXbmcRootFolder()) + "/XBMC/temp");
     #else
-      CStdString strTempPath = URIUtils::AddFileToFolder(userHome, ".xbmc/");
+      CStdString strTempPath = URIUtils::AddFileToFolder(userHome, ".tofu/");
       CDirectory::Create(strTempPath);
-      strTempPath = URIUtils::AddFileToFolder(userHome, ".xbmc/temp");
+      strTempPath = URIUtils::AddFileToFolder(userHome, ".tofu/temp");
     #endif
     CSpecialProtocol::SetTempPath(strTempPath);
 

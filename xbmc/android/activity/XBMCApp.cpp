@@ -97,7 +97,7 @@ std::vector<androidPackage> CXBMCApp::m_applications;
 
 CXBMCApp::CXBMCApp(ANativeActivity* nativeActivity)
   : CJNIContext(nativeActivity)
-  , CJNIBroadcastReceiver("org/xbmc/xbmc/XBMCBroadcastReceiver")
+  , CJNIBroadcastReceiver("com/pivos/tofu/XBMCBroadcastReceiver")
   , m_wakeLock(NULL)
 {
   m_activity = nativeActivity;
@@ -271,7 +271,7 @@ bool CXBMCApp::getWakeLock()
   if (m_wakeLock)
     return true;
 
-  m_wakeLock = new CJNIWakeLock(CJNIPowerManager(getSystemService("power")).newWakeLock("org.xbmc.xbmc"));
+  m_wakeLock = new CJNIWakeLock(CJNIPowerManager(getSystemService("power")).newWakeLock("com.pivos.tofu"));
 
   return true;
 }
@@ -683,7 +683,7 @@ void CXBMCApp::SetupEnv()
   std::string externalDir;
   CJNIFile androidPath = getExternalFilesDir("");
   if (!androidPath)
-    androidPath = getDir("org.xbmc.xbmc", 1);
+    androidPath = getDir("com.pivos.tofu", 1);
 
   if (androidPath)
     externalDir = androidPath.getAbsolutePath();
