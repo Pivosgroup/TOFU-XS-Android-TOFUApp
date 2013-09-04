@@ -1,3 +1,7 @@
+XBMC_APPNAME=tofu.bin
+XBMC_LIBNAME=libtofu.so
+XBMC_LIBFLAG=-ltofu
+
 AR=@AR@
 ARFLAGS=crus
 RM=rm -rf
