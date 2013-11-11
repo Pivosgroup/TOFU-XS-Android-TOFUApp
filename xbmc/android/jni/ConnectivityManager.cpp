@@ -35,10 +35,28 @@ int CJNIConnectivityManager::TYPE_BLUETOOTH(0);
 int CJNIConnectivityManager::TYPE_DUMMY(0);
 int CJNIConnectivityManager::TYPE_ETHERNET(0);
 int CJNIConnectivityManager::DEFAULT_NETWORK_PREFERENCE(0);
+std::string CJNIConnectivityManager::CONNECTIVITY_ACTION;
+std::string CJNIConnectivityManager::EXTRA_NETWORK_INFO;
+std::string CJNIConnectivityManager::EXTRA_IS_FAILOVER;
+std::string CJNIConnectivityManager::EXTRA_OTHER_NETWORK_INFO;
+std::string CJNIConnectivityManager::EXTRA_NO_CONNECTIVITY;
+std::string CJNIConnectivityManager::EXTRA_REASON;
+std::string CJNIConnectivityManager::EXTRA_EXTRA_INFO;
+std::string CJNIConnectivityManager::ACTION_BACKGROUND_DATA_SETTING_CHANGED;
 
 void CJNIConnectivityManager::PopulateStaticFields()
 {
   jhclass clazz = find_class("android/net/ConnectivityManager");
+
+  CONNECTIVITY_ACTION=jcast<std::string>(get_static_field<jhstring>(clazz, "CONNECTIVITY_ACTION"));
+  EXTRA_NETWORK_INFO= jcast<std::string>(get_static_field<jhstring>(clazz, "EXTRA_NETWORK_INFO"));
+  EXTRA_IS_FAILOVER = jcast<std::string>(get_static_field<jhstring>(clazz, "EXTRA_IS_FAILOVER"));
+  EXTRA_OTHER_NETWORK_INFO = jcast<std::string>(get_static_field<jhstring>(clazz, "EXTRA_OTHER_NETWORK_INFO"));
+  EXTRA_NO_CONNECTIVITY = jcast<std::string>(get_static_field<jhstring>(clazz, "EXTRA_NO_CONNECTIVITY"));
+  EXTRA_REASON      = jcast<std::string>(get_static_field<jhstring>(clazz, "EXTRA_REASON"));
+  EXTRA_EXTRA_INFO  = jcast<std::string>(get_static_field<jhstring>(clazz, "EXTRA_EXTRA_INFO"));
+  ACTION_BACKGROUND_DATA_SETTING_CHANGED = jcast<std::string>(get_static_field<jhstring>(clazz, "ACTION_BACKGROUND_DATA_SETTING_CHANGED"));
+
   TYPE_MOBILE       = (get_static_field<int>(clazz, "TYPE_MOBILE"));
   TYPE_WIFI         = (get_static_field<int>(clazz, "TYPE_WIFI"));
   TYPE_MOBILE_MMS   = (get_static_field<int>(clazz, "TYPE_MOBILE_MMS"));
@@ -50,6 +68,7 @@ void CJNIConnectivityManager::PopulateStaticFields()
   TYPE_DUMMY        = (get_static_field<int>(clazz, "TYPE_DUMMY"));
   TYPE_ETHERNET     = (get_static_field<int>(clazz, "TYPE_ETHERNET"));
   DEFAULT_NETWORK_PREFERENCE = (get_static_field<int>(clazz, "DEFAULT_NETWORK_PREFERENCE"));
+
 }
 
 bool CJNIConnectivityManager::isNetworkTypeValid(int networkType)

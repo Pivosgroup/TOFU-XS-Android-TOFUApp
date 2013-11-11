@@ -20,6 +20,7 @@
  */
 
 #include "JNIBase.h"
+#include "Parcel.h"
 
 class CJNIURI;
 class CJNIIntent : public CJNIBase
@@ -35,6 +36,7 @@ public:
   std::string getType() const ;
 
   int getIntExtra(const std::string &name, int defaultValue) const;
+  CJNIParcel getParcelableExtra (const std::string &name) const;
 
   bool hasExtra(const std::string &name) const;
   bool hasCategory(const std::string &category) const;

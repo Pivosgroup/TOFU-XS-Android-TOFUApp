@@ -22,6 +22,7 @@
 #include "JNIBase.h"
 #include "Enum.h"
 #include "NetworkInfo.h"
+#include "Parcel.h"
 
 class CJNISupplicantState : public CJNIEnum
 {
@@ -37,6 +38,7 @@ class CJNIWifiInfo : public CJNIBase
 {
 public:
   CJNIWifiInfo(const jni::jhobject &object) : CJNIBase(object){};
+  CJNIWifiInfo(const CJNIParcel &object)    : CJNIBase(object){};
   ~CJNIWifiInfo(){};
 
   std::string getSSID()  const;

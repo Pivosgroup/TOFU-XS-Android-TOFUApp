@@ -29,6 +29,65 @@
 
 using namespace jni;
 
+  int CJNIWifiManager::ERROR_AUTHENTICATING(0);
+  std::string CJNIWifiManager::WIFI_STATE_CHANGED_ACTION;
+  std::string CJNIWifiManager::EXTRA_WIFI_STATE;
+  std::string CJNIWifiManager::EXTRA_PREVIOUS_WIFI_STATE;
+  int CJNIWifiManager::WIFI_STATE_DISABLING(0);
+  int CJNIWifiManager::WIFI_STATE_DISABLED(0);
+  int CJNIWifiManager::WIFI_STATE_ENABLING(0);
+  int CJNIWifiManager::WIFI_STATE_ENABLED(0);
+  int CJNIWifiManager::WIFI_STATE_UNKNOWN(0);
+  std::string CJNIWifiManager::SUPPLICANT_CONNECTION_CHANGE_ACTION;
+  std::string CJNIWifiManager::EXTRA_SUPPLICANT_CONNECTED;
+  std::string CJNIWifiManager::NETWORK_STATE_CHANGED_ACTION;
+  std::string CJNIWifiManager::EXTRA_NETWORK_INFO;
+  std::string CJNIWifiManager::EXTRA_BSSID;
+  std::string CJNIWifiManager::EXTRA_WIFI_INFO;
+  std::string CJNIWifiManager::SUPPLICANT_STATE_CHANGED_ACTION;
+  std::string CJNIWifiManager::EXTRA_NEW_STATE;
+  std::string CJNIWifiManager::EXTRA_SUPPLICANT_ERROR;
+  std::string CJNIWifiManager::SCAN_RESULTS_AVAILABLE_ACTION;
+  std::string CJNIWifiManager::RSSI_CHANGED_ACTION;
+  std::string CJNIWifiManager::EXTRA_NEW_RSSI;
+  std::string CJNIWifiManager::NETWORK_IDS_CHANGED_ACTION;
+  std::string CJNIWifiManager::ACTION_PICK_WIFI_NETWORK;
+  int CJNIWifiManager::WIFI_MODE_FULL(0);
+  int CJNIWifiManager::WIFI_MODE_SCAN_ONLY(0);
+  int CJNIWifiManager::WIFI_MODE_FULL_HIGH_PERF(0);
+
+void CJNIWifiManager::PopulateStaticFields()
+{
+  jhclass clazz  = find_class("android/net/wifi/WifiManager");
+
+  ERROR_AUTHENTICATING = get_static_field<int>(clazz, "ERROR_AUTHENTICATING");
+  WIFI_STATE_CHANGED_ACTION = jcast<std::string>(get_static_field<jhstring>(clazz, "WIFI_STATE_CHANGED_ACTION"));
+  EXTRA_WIFI_STATE = jcast<std::string>(get_static_field<jhstring>(clazz, "EXTRA_WIFI_STATE"));
+  EXTRA_PREVIOUS_WIFI_STATE = jcast<std::string>(get_static_field<jhstring>(clazz, "EXTRA_PREVIOUS_WIFI_STATE"));
+  WIFI_STATE_DISABLING = get_static_field<int>(clazz, "WIFI_STATE_DISABLING");
+  WIFI_STATE_DISABLED = get_static_field<int>(clazz, "WIFI_STATE_DISABLED");
+  WIFI_STATE_ENABLING = get_static_field<int>(clazz, "WIFI_STATE_ENABLING");
+  WIFI_STATE_ENABLED = get_static_field<int>(clazz, "WIFI_STATE_ENABLED");
+  WIFI_STATE_UNKNOWN =get_static_field<int>(clazz, "WIFI_STATE_UNKNOWN");
+  SUPPLICANT_CONNECTION_CHANGE_ACTION = jcast<std::string>(get_static_field<jhstring>(clazz, "SUPPLICANT_CONNECTION_CHANGE_ACTION"));
+  EXTRA_SUPPLICANT_CONNECTED = jcast<std::string>(get_static_field<jhstring>(clazz, "EXTRA_SUPPLICANT_CONNECTED"));
+  NETWORK_STATE_CHANGED_ACTION = jcast<std::string>(get_static_field<jhstring>(clazz, "NETWORK_STATE_CHANGED_ACTION"));
+  EXTRA_NETWORK_INFO = jcast<std::string>(get_static_field<jhstring>(clazz, "EXTRA_NETWORK_INFO"));
+  EXTRA_BSSID = jcast<std::string>(get_static_field<jhstring>(clazz, "EXTRA_BSSID"));
+  EXTRA_WIFI_INFO = jcast<std::string>(get_static_field<jhstring>(clazz, "EXTRA_WIFI_INFO"));
+  SUPPLICANT_STATE_CHANGED_ACTION = jcast<std::string>(get_static_field<jhstring>(clazz, "SUPPLICANT_STATE_CHANGED_ACTION"));
+  EXTRA_NEW_STATE = jcast<std::string>(get_static_field<jhstring>(clazz, "EXTRA_NEW_STATE"));
+  EXTRA_SUPPLICANT_ERROR = jcast<std::string>(get_static_field<jhstring>(clazz, "EXTRA_SUPPLICANT_ERROR"));
+  SCAN_RESULTS_AVAILABLE_ACTION = jcast<std::string>(get_static_field<jhstring>(clazz, "SCAN_RESULTS_AVAILABLE_ACTION"));
+  RSSI_CHANGED_ACTION = jcast<std::string>(get_static_field<jhstring>(clazz, "RSSI_CHANGED_ACTION"));
+  EXTRA_NEW_RSSI = jcast<std::string>(get_static_field<jhstring>(clazz, "EXTRA_NEW_RSSI"));
+  NETWORK_IDS_CHANGED_ACTION = jcast<std::string>(get_static_field<jhstring>(clazz, "NETWORK_IDS_CHANGED_ACTION"));
+  ACTION_PICK_WIFI_NETWORK = jcast<std::string>(get_static_field<jhstring>(clazz, "ACTION_PICK_WIFI_NETWORK"));
+  WIFI_MODE_FULL = get_static_field<int>(clazz, "WIFI_MODE_FULL");
+  WIFI_MODE_SCAN_ONLY = get_static_field<int>(clazz, "WIFI_MODE_SCAN_ONLY");
+  WIFI_MODE_FULL_HIGH_PERF = get_static_field<int>(clazz, "WIFI_MODE_FULL_HIGH_PERF");
+}
+
 CJNIList<CJNIWifiConfiguration> CJNIWifiManager::getConfiguredNetworks()
 {
   return call_method<jhobject>(m_object,

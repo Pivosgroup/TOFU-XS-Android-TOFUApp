@@ -21,6 +21,7 @@
 
 #include "JNIBase.h"
 #include "Enum.h"
+#include "Parcel.h"
 
 class CJNINetworkInfoState : public CJNIEnum
 {
@@ -46,6 +47,7 @@ class CJNINetworkInfo : public CJNIBase
 {
 public:
   CJNINetworkInfo();
+  CJNINetworkInfo(const CJNIParcel &object)    : CJNIBase(object){};
   CJNINetworkInfo(const jni::jhobject &object) : CJNIBase(object){};
   ~CJNINetworkInfo(){};
 
