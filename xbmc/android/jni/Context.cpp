@@ -44,6 +44,7 @@
 #include "MediaFormat.h"
 #include "Window.h"
 #include "View.h"
+#include "WifiManager.h"
 #include "Build.h"
 
 #include <android/native_activity.h>
@@ -87,6 +88,7 @@ void CJNIContext::PopulateStaticFields()
   CJNIMediaCodecInfoCodecCapabilities::PopulateStaticFields();
   CJNIMediaFormat::PopulateStaticFields();
   CJNIView::PopulateStaticFields();
+  CJNIWifiManager::PopulateStaticFields();
   CJNIBuild::PopulateStaticFields();
 }
 

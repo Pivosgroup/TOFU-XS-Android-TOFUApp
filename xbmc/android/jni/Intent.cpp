@@ -65,6 +65,13 @@ int CJNIIntent::getIntExtra(const std::string &name, int defaultValue) const
     jcast<jhstring>(name), defaultValue);
 }
 
+CJNIParcel CJNIIntent::getParcelableExtra (const std::string &name) const
+{
+  return call_method<jhobject>(m_object,
+    "getParcelableExtra", "(Ljava/lang/String;)Landroid/os/Parcelable;",
+    jcast<jhstring>(name));
+}
+
 bool CJNIIntent::hasExtra(const std::string &name) const
 {
   return call_method<jboolean>(m_object,

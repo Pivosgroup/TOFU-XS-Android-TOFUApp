@@ -56,6 +56,34 @@ public:
   static int compareSignalLevel(int, int);
   CJNIWifiManagerMulticastLock createMulticastLock(const std::string &tag);
 
+  static void PopulateStaticFields();
+  static int ERROR_AUTHENTICATING;
+  static std::string WIFI_STATE_CHANGED_ACTION;
+  static std::string EXTRA_WIFI_STATE;
+  static std::string EXTRA_PREVIOUS_WIFI_STATE;
+  static int WIFI_STATE_DISABLING;
+  static int WIFI_STATE_DISABLED;
+  static int WIFI_STATE_ENABLING;
+  static int WIFI_STATE_ENABLED;
+  static int WIFI_STATE_UNKNOWN;
+  static std::string SUPPLICANT_CONNECTION_CHANGE_ACTION;
+  static std::string EXTRA_SUPPLICANT_CONNECTED;
+  static std::string NETWORK_STATE_CHANGED_ACTION;
+  static std::string EXTRA_NETWORK_INFO;
+  static std::string EXTRA_BSSID;
+  static std::string EXTRA_WIFI_INFO;
+  static std::string SUPPLICANT_STATE_CHANGED_ACTION;
+  static std::string EXTRA_NEW_STATE;
+  static std::string EXTRA_SUPPLICANT_ERROR;
+  static std::string SCAN_RESULTS_AVAILABLE_ACTION;
+  static std::string RSSI_CHANGED_ACTION;
+  static std::string EXTRA_NEW_RSSI;
+  static std::string NETWORK_IDS_CHANGED_ACTION;
+  static std::string ACTION_PICK_WIFI_NETWORK;
+  static int WIFI_MODE_FULL;
+  static int WIFI_MODE_SCAN_ONLY;
+  static int WIFI_MODE_FULL_HIGH_PERF;
+
 private:
   CJNIWifiManager();
 };

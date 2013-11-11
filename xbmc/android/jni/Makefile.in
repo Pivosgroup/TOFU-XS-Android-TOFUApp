@@ -50,6 +50,9 @@ SRCS      += View.cpp
 SRCS      += Window.cpp
 SRCS      += Build.cpp
 SRCS      += KeyCharacterMap.cpp
+SRCS      += SettingsSecure.cpp
+SRCS      += SettingsSystem.cpp
+SRCS      += NetworkInterface.cpp
 
 LIB        = jni.a
 

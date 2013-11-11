@@ -40,6 +40,14 @@ public:
   bool getBackgroundDataSetting();
 
   static void PopulateStaticFields();
+  static std::string CONNECTIVITY_ACTION;
+  static std::string EXTRA_NETWORK_INFO;
+  static std::string EXTRA_IS_FAILOVER;
+  static std::string EXTRA_OTHER_NETWORK_INFO;
+  static std::string EXTRA_NO_CONNECTIVITY;
+  static std::string EXTRA_REASON;
+  static std::string EXTRA_EXTRA_INFO;
+  static std::string ACTION_BACKGROUND_DATA_SETTING_CHANGED;
   static int TYPE_MOBILE;
   static int TYPE_WIFI;
   static int TYPE_MOBILE_MMS;
