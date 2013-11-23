@@ -104,6 +104,8 @@ public:
   static void SetSystemVolume(int val);
 
   static int GetDPI();
+  static const std::string GetSUPath();
+
   static bool WaitForNativeWindow(int timeout);
   bool WaitForMedia(int timeout);
   static bool IsLauncher() { return m_runAsLauncher;};

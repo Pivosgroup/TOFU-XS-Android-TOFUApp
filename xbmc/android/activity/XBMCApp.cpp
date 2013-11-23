@@ -41,6 +41,7 @@
 #include "settings/AdvancedSettings.h"
 #include "xbmc.h"
 #include "windowing/WinEvents.h"
+#include "filesystem/File.h"
 #include "guilib/GUIWindowManager.h"
 #include "utils/log.h"
 #include "ApplicationMessenger.h"
@@ -289,6 +290,7 @@ void CXBMCApp::run()
 
   SetupEnv();
   XBMC::Context context;
+  GetSUPath();
 
   m_initialVolume = GetSystemVolume();
 
@@ -389,6 +391,33 @@ int CXBMCApp::GetDPI()
   AConfiguration_delete(config);
 
   return dpi;
+}
+
+const std::string CXBMCApp::GetSUPath()
+{
+  static int m_isRooted = -1;
+  static std::string su_path;
+  if (m_isRooted == -1)
+  {
+    // check the standard location
+    su_path = "/system/bin/su";
+    m_isRooted = XFILE::CFile::Exists(su_path) ? 1 : 0;
+
+    // if not found check the alternate location
+    if (!m_isRooted)
+    {
+      su_path = "/system/xbin/su";
+      m_isRooted = XFILE::CFile::Exists(su_path) ? 1 : 0;
+    }
+
+    // if not found, we are not rooted
+    if (!m_isRooted)
+      su_path = "";
+    else
+      android_printf("GetSUPath: found su at %s", su_path.c_str());
+  }
+
+  return su_path;
 }
 
 void CXBMCApp::ShowStatusBar(bool show)
