@@ -1,0 +1,2299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+	<include file="defaults.xml" />
+	<include file="variables.xml" />
+	<include file="Includes_Viewtypes.xml" />
+	<include file="Viewtype_Banners.xml" />
+	<include file="Viewtype_Landscape.xml" />
+	<include file="Viewtype_List.xml" />
+	<include file="Viewtype_LowList.xml" />
+	<include file="Viewtype_LowListMusic.xml" />
+	<include file="Viewtype_ShowcaseMovies.xml" />
+	<include file="Viewtype_ShowcaseSquare.xml" />
+	<include file="Viewtype_TriPanel.xml" />
+	<include file="Viewtype_TriPanelSquare.xml" />
+	<include file="Viewtype_Wall.xml" />
+	<include file="Viewtype_Posters.xml" />
+	<include file="Viewtype_InfoWall.xml" />
+	<include file="Viewtype_BigFan.xml" />
+	<include file="Viewtype_Episode.xml" />
+	<include file="Viewtype_Stripshow.xml" />
+	<include file="Viewtype_Shift.xml" />
+	<include file="Viewtype_Panel.xml" />
+	<include file="Includes_Widget1.xml" />
+	<include file="Includes_MediaFlags.xml" />
+	<include file="Includes_Animations.xml" />
+	<include file="Includes_MediaMenu.xml" />
+	<include file="Includes_Music.xml" />
+	<include file="Includes_WidgetLayout.xml" />
+	<include file="Includes_Backgrounds.xml" />
+	<include file="Includes_Visualization.xml" />
+	<include file="Includes_Breadcrumbs.xml" />
+	<include file="Includes_Weather.xml" />
+	<include file="Includes_MainMenu.xml" />
+	<include file="Includes_PVR.xml" />
+	<include file="Includes_Widget2.xml" />
+	<include file="Includes_CustomizerWindow.xml" />
+	<include file="Viewtype_InfoPanel.xml" />
+	<include file="Includes_NextAired.xml" />
+	<constant name="AutoScrollTime">2000</constant>
+	<include name="Dialogs_Group">
+		<posx>579</posx>
+		<posy>900</posy>
+		<width>764</width>
+		<height>136</height>
+	</include>
+	<include name="Dialogs_Tablet">
+		<control type="image">
+			<posx>6</posx>
+			<posy>6</posy>
+			<width>756</width>
+			<height>127</height>
+			<texture border="5">panel.png</texture>
+			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>135</posx>
+			<posy>6</posy>
+			<width>4</width>
+			<height>127</height>
+			<texture>divider-vertical.png</texture>
+			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>738</posx>
+			<posy>6</posy>
+			<width>4</width>
+			<height>127</height>
+			<texture>divider-vertical.png</texture>
+			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		</control>
+	</include>
+	<include name="Dialogs_Exclam">
+		<control type="image">
+			<posx>4</posx>
+			<posy>18</posy>
+			<width>133</width>
+			<height>100</height>
+			<aspectratio aligny="top">scale</aspectratio>
+			<texture>BigIcons/Exclamation.png</texture>
+			<colordiffuse>white</colordiffuse>
+			<animation effect="fade" start="100" end="70" time="480" pulse="true" condition="true">Conditional</animation>
+		</control>
+	</include>
+	<include name="Dialogs_Settings">
+		<control type="image">
+			<posx>4</posx>
+			<width>133</width>
+			<height>100</height>
+			<aspectratio aligny="top">scale</aspectratio>
+			<texture>BigIcons/Gears.png</texture>
+			<colordiffuse>white</colordiffuse>
+		</control>
+	</include>
+	<include name="Dialogs_LabelVars">
+		<posx>158</posx>
+		<width>564</width>
+		<height>32</height>
+		<scroll>true</scroll>
+	</include>
+	<include name="Dialogs_Label1">
+		<posy>4</posy>
+		<include>Dialogs_LabelVars</include>
+	</include>
+	<include name="Dialogs_Label2">
+		<posy>34</posy>
+		<include>Dialogs_LabelVars</include>
+	</include>
+	<include name="Objects_MediaMenuButtonAlt">
+		<width>400</width>
+		<height>60</height>
+		<textoffsetx>15</textoffsetx>
+		<textoffsety>2</textoffsety>
+		<texturefocus border="3">list-focus.png</texturefocus>
+		<texturenofocus border="3">list-nofocus.png</texturenofocus>
+		<alttexturefocus border="3">list-focus.png</alttexturefocus>
+		<alttexturenofocus border="3">list-nofocus.png</alttexturenofocus>
+		<font>Font_Reg30_2</font>
+		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		<onleft>ClearProperty(viewtypeselect,home)</onleft>
+		<onleft>ActivateWindow(1121)</onleft>
+		<radiowidth>98</radiowidth>
+		<radioposx>308</radioposx>
+	</include>
+	<include name="Objects_MediaMenuButtonIcons">
+		<width>450</width>
+		<height>95</height>
+		<textoffsetx>80</textoffsetx>
+		<textoffsety>28</textoffsety>
+		<aligny>top</aligny>
+		<texturefocus border="3">list-focus.png</texturefocus>
+		<texturenofocus border="3">list-nofocus.png</texturenofocus>
+		<alttexturefocus border="3">list-focus.png</alttexturefocus>
+		<alttexturenofocus border="3">list-nofocus.png</alttexturenofocus>
+		<font>Font_Reg29</font>
+		<textcolor>$VAR[DefaultColorVar]</textcolor>
+		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		<onleft>ClearProperty(viewtypeselect,home)</onleft>
+		<onleft>ActivateWindow(1121)</onleft>
+		<radiowidth>98</radiowidth>
+		<radioposx>308</radioposx>
+	</include>
+	<include name="Objects_MediaMenuButtonAround">
+		<width>400</width>
+		<height>60</height>
+		<textoffsetx>15</textoffsetx>
+		<textoffsety>2</textoffsety>
+		<texturefocus border="3">list-focus.png</texturefocus>
+		<texturenofocus border="3">list-nofocus.png</texturenofocus>
+		<alttexturefocus border="3">list-focus.png</alttexturefocus>
+		<alttexturenofocus border="3">list-nofocus.png</alttexturenofocus>
+		<font>Font_Reg30_2</font>
+		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		<radiowidth>98</radiowidth>
+		<radioposx>308</radioposx>
+	</include>
+	<include name="Objects_MediaMenuButtonAlt2">
+		<width>470</width>
+		<height>60</height>
+		<textoffsetx>15</textoffsetx>
+		<textoffsety>2</textoffsety>
+		<texturefocus border="3">list-focus.png</texturefocus>
+		<texturenofocus border="3">list-nofocus.png</texturenofocus>
+		<alttexturefocus border="3">list-focus.png</alttexturefocus>
+		<alttexturenofocus border="3">list-nofocus.png</alttexturenofocus>
+		<font>Font_Reg30_2</font>
+		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		<onleft>Dialog.Close(1126)</onleft>
+		<onright>Dialog.Close(1126)</onright>
+		<onright>SetFocus(50)</onright>
+		<radiowidth>98</radiowidth>
+		<radioposx>378</radioposx>
+	</include>
+	<include name="Objects_MediaBackgroundsButton">
+		<width>470</width>
+		<height>60</height>
+		<textoffsetx>15</textoffsetx>
+		<textoffsety>2</textoffsety>
+		<texturefocus border="3">list-focus.png</texturefocus>
+		<texturenofocus border="3">list-nofocus.png</texturenofocus>
+		<alttexturefocus border="3">list-focus.png</alttexturefocus>
+		<alttexturenofocus border="3">list-nofocus.png</alttexturenofocus>
+		<font>Font_Reg30_2</font>
+		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		<radiowidth>98</radiowidth>
+		<radioposx>378</radioposx>
+	</include>
+	<include name="Objects_MediaMenuLabelAlt2">
+		<width>470</width>
+		<height>45</height>
+		<textoffsetx>15</textoffsetx>
+		<textoffsety>0</textoffsety>
+		<texturefocus border="3">list-focus.png</texturefocus>
+		<texturenofocus border="3">list-nofocus.png</texturenofocus>
+		<alttexturefocus border="3">list-focus.png</alttexturefocus>
+		<alttexturenofocus border="3">list-nofocus.png</alttexturenofocus>
+		<font>Font_Bold26_Caps</font>
+		<textcolor>$VAR[FontColorVar]</textcolor>
+		<disabledcolor>$VAR[FontColorVar]</disabledcolor>
+		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+	</include>
+	<include name="ShutdownNoGlow">
+		<texturefocus border="5">list-shutdown-focus.png</texturefocus>
+		<texturenofocus border="5">list-shutdown-nofocus.png</texturenofocus>
+		<alttexturefocus border="5">list-shutdown-focus.png</alttexturefocus>
+		<alttexturenofocus border="5">list-shutdown-nofocus.png</alttexturenofocus>
+	</include>
+	<include name="ShutdownNoGlowAlt">
+		<texturefocus border="3">list-focus.png</texturefocus>
+		<texturenofocus border="3">list-nofocus.png</texturenofocus>
+		<alttexturefocus border="3">list-focus.png</alttexturefocus>
+		<alttexturenofocus border="3">list-nofocus.png</alttexturenofocus>
+	</include>
+	<include name="Objects_ContextMenuButton">
+		<width>431</width>
+		<height>59</height>
+		<textoffsetx>30</textoffsetx>
+		<textoffsety>8</textoffsety>
+		<align>center</align>
+		<aligny>top</aligny>
+		<font>Font_Reg33_Caps</font>
+		<include>ShutdownNoGlowAlt</include>
+	</include>
+	<include name="Objects_ShutdownMenuButton">
+		<width>430</width>
+		<height>75</height>
+		<textoffsetx>80</textoffsetx>
+		<textoffsety>15</textoffsety>
+		<align>left</align>
+		<aligny>top</aligny>
+		<font>Font_Reg33_Caps</font>
+		<include>ShutdownNoGlow</include>
+	</include>
+	<include name="Objects_ShutdownMenuIcon">
+		<width>67</width>
+		<height>63</height>
+		<aspectratio aligny="top">scale</aspectratio>
+	</include>
+	<include name="HiddenObject">
+		<posx>-300</posx>
+		<posy>-300</posy>
+		<width>1</width>
+		<height>1</height>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<label>-</label>
+		<font>-</font>
+	</include>
+	<include name="TvTunesVisibleCondition">
+		<visible>IsEmpty(Window(videolibrary).Property(tvtunesIsAlive))</visible>
+	</include>
+	<include name="Objects_KeyOffVars">
+		<textoffsety>32</textoffsety>
+		<align>center</align>
+		<aligny>top</aligny>
+		<font>Font_Reg30_2</font>
+		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+	</include>
+	<include name="Objects_DoubleKeyOff">
+		<posx>-119</posx>
+		<width>285</width>
+		<height>102</height>
+		<texturefocus border="24">keyboard/keyboard_singlef.png</texturefocus>
+		<texturenofocus border="24">keyboard/keyboard_singlenf.png</texturenofocus>
+		<alttexturefocus border="24">keyboard/keyboard_singlef.png</alttexturefocus>
+		<alttexturenofocus border="24">keyboard/keyboard_singlenf.png</alttexturenofocus>
+		<include>Objects_KeyOffVars</include>
+		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+	</include>
+	<include name="Objects_DoubleKeyOffSymbol">
+		<width>165</width>
+		<height>102</height>
+		<textoffsety>32</textoffsety>
+		<align>center</align>
+		<aligny>top</aligny>
+		<texturefocus border="24">keyboard/keyboard_singlef.png</texturefocus>
+		<texturenofocus border="24">keyboard/keyboard_singlenf.png</texturenofocus>
+		<font>Font_Reg30_2</font>
+		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+	</include>
+	<include name="Objects_SingleKeyOff">
+		<width>102</width>
+		<height>102</height>
+		<texturefocus>keyboard/keyboard_singlef.png</texturefocus>
+		<texturenofocus>keyboard/keyboard_singlenf.png</texturenofocus>
+		<include>Objects_KeyOffVars</include>
+		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+	</include>
+	<include name="Furniture_SettingsBackPanel">
+		<control type="image">
+			<posx>62</posx>
+			<posy>62</posy>
+			<width>1794</width>
+			<height>954</height>
+			<texture border="5">panel.png</texture>
+			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>386</posx>
+			<posy>62</posy>
+			<width>4</width>
+			<height>954</height>
+			<texture>divider-vertical.png</texture>
+			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		</control>
+	</include>
+	<include name="Furniture_SettingsBackPanel2">
+		<control type="image">
+			<posx>62</posx>
+			<posy>62</posy>
+			<width>1794</width>
+			<height>954</height>
+			<texture border="5">panel.png</texture>
+			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>122</posx>
+			<posy>86</posy>
+			<width>314</width>
+			<height>87</height>
+			<aspectratio>keep</aspectratio>
+			<texture>TOFU_Logo.png</texture>
+			<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+		</control>
+	</include>
+	<include name="Furniture_SettingsInternalBackPanel">
+		<control type="image">
+			<posx>440</posx>
+			<posy>66</posy>
+			<width>1375</width>
+			<height>948</height>
+			<texture border="60,0,60,0">settings-frame.png</texture>
+			<include>Animation_WindowFade250</include>
+		</control>
+	</include>
+	<include name="Furniture_SettingsInternalBackPanel2">
+		<control type="image">
+			<posx>332</posx>
+			<posy>66</posy>
+			<width>1520</width>
+			<height>948</height>
+			<texture border="60,0,1,0">settings-frame2.png</texture>
+			<include>Animation_WindowFade250</include>
+		</control>
+	</include>
+	<include name="Default_SettingRadioButton">
+		<width>1469</width>
+		<height>74</height>
+		<textoffsetx>30</textoffsetx>
+		<texturefocus border="3">list-focus.png</texturefocus>
+		<texturenofocus border="3">list-nofocus.png</texturenofocus>
+		<font>Font_Reg32</font>
+		<radioposx>1300</radioposx>
+	</include>
+	<include name="Default_SettingRadioButtonShort">
+		<width>734</width>
+		<height>74</height>
+		<textoffsetx>30</textoffsetx>
+		<texturefocus border="3">list-focus.png</texturefocus>
+		<texturenofocus border="3">list-nofocus.png</texturenofocus>
+		<font>Font_Reg32</font>
+		<radioposx>565</radioposx>
+	</include>
+	<include name="Default_SettingButton">
+		<width>1469</width>
+		<height>74</height>
+		<textoffsetx>30</textoffsetx>
+		<texturefocus border="3">list-focus.png</texturefocus>
+		<texturenofocus border="3">list-nofocus.png</texturenofocus>
+		<font>Font_Reg32</font>
+		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+	</include>
+	<include name="Default_SettingButtonShort">
+		<width>734</width>
+		<height>74</height>
+		<textoffsetx>30</textoffsetx>
+		<texturefocus border="3">list-focus.png</texturefocus>
+		<texturenofocus border="3">list-nofocus.png</texturenofocus>
+		<font>Font_Reg32</font>
+		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+	</include>
+	<include name="FullscreenDimensions">
+		<width>1920</width>
+		<height>1080</height>
+	</include>
+	<include name="Objects_OSDSeekForward">
+		<width min="10" max="300">auto</width>
+		<height>90</height>
+		<textoffsetx>0</textoffsetx>
+		<aligny>center</aligny>
+		<font>Font_MainClassic</font>
+	</include>
+	<include name="Aspectratio_Keep">
+		<aspectratio align="center">keep</aspectratio>
+	</include>
+	<include name="Aspectratio_Scale">
+		<aspectratio align="center">scale</aspectratio>
+	</include>
+	<include name="Objects_CommonSettingsButton">
+		<width>1172</width>
+		<height>60</height>
+		<textoffsetx>45</textoffsetx>
+		<texturefocus border="3">list-focus.png</texturefocus>
+		<texturenofocus border="3">list-nofocus.png</texturenofocus>
+		<font>Font_Reg32</font>
+		<radioposx>1020</radioposx>
+		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+	</include>
+	<include name="Objects_NowPlayingSettingsButton">
+		<width>672</width>
+		<height>60</height>
+		<textoffsetx>25</textoffsetx>
+		<texturefocus border="3">list-focus.png</texturefocus>
+		<texturenofocus border="3">list-nofocus.png</texturenofocus>
+		<font>Font_Reg32</font>
+		<radioposx>550</radioposx>
+		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+	</include>
+	<include name="Objects_CustomizerSettingsButton">
+		<width>400</width>
+		<height>60</height>
+		<textoffsetx>45</textoffsetx>
+		<texturefocus border="3">list-focus.png</texturefocus>
+		<texturenofocus border="3">list-nofocus.png</texturenofocus>
+		<font>Font_Reg32</font>
+		<radioposx>290</radioposx>
+		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+	</include>
+	<include name="Objects_SubMenuSettingsButton">
+		<width>530</width>
+		<height>60</height>
+		<textoffsetx>45</textoffsetx>
+		<texturefocus border="3">list-focus.png</texturefocus>
+		<texturenofocus border="3">list-nofocus.png</texturenofocus>
+		<font>Font_Reg32</font>
+		<radioposx>420</radioposx>
+		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+	</include>
+	<include name="Objects_CustomizerInfoButton">
+		<width>535</width>
+		<height>60</height>
+		<textoffsetx>20</textoffsetx>
+		<textoffsety>8</textoffsety>
+		<aligny>top</aligny>
+		<font>Font_Reg28</font>
+		<textcolor>$VAR[FontColorVar]</textcolor>
+	</include>
+	<include name="Objects_CommonSettingsScrollbar">
+		<posx>1524</posx>
+		<posy>285</posy>
+		<width>46</width>
+		<height>540</height>
+		<include>Animation_VerticalScrollBar</include>
+	</include>
+	<include name="AlaskaPausedLabel">
+		<control type="group">
+			<visible>Player.Paused + Skin.HasSetting(AlaskaPausedLabel)</visible>
+			<include>Animation_CommonFade</include>
+			<control type="label">
+				<posy>390</posy>
+				<width>1920</width>
+				<align>center</align>
+				<label>$LOCALIZE[112]</label>
+				<font>Font_BigPause</font>
+			</control>
+		</control>
+	</include>
+	<include name="AutoConfig">
+		<onload>Skin.ResetSettings</onload>
+		<onload>Skin.SetString(LibraryStructure,1)</onload>
+		<onload>Skin.SetBool(AutoScroll)</onload>
+		<onload>Skin.SetBool(breadcrumbslabel)</onload>
+		<onload>Skin.SetBool(musicfanartslideshow)</onload>
+		<onload>Skin.SetBool(itemsplaylist)</onload>
+		<onload>Skin.SetBool(showcasewrap)</onload>
+		<onload>Skin.SetBool(showcaseinfoon)</onload>
+		<onload>Skin.SetBool(showcaseinfoontv)</onload>
+		<onload>Skin.SetBool(fanartinfopane)</onload>
+		<onload>Skin.SetBool(posterinfopane503)</onload>
+		<onload>Skin.SetBool(fanartinfopane504)</onload>
+		<onload>Skin.SetBool(nohighlist)</onload>
+		<onload>Skin.SetBool(wallgenre)</onload>
+		<onload>Skin.SetBool(WallVertical)</onload>
+		<onload>Skin.SetBool(unwatchedicon)</onload>
+		<onload>Skin.SetBool(newstatus)</onload>
+		<onload>Skin.SetBool(watchedoverlay)</onload>
+		<onload>Skin.SetBool(preferplot)</onload>
+		<onload>Skin.SetBool(infopanellauncher)</onload>
+		<onload>Skin.SetBool(lowlist)</onload>
+		<onload>Skin.SetBool(timehomehigh)</onload>
+		<onload>Skin.SetBool(GlobalNowPlaying)</onload>
+		<onload>Skin.SetBool(altoverlayinfowall)</onload>
+		<onload>Skin.SetBool(breadcrumbsweather)</onload>
+		<onload>Skin.SetString(InfopanelDelay,2)</onload>
+		<onload>Skin.SetString(TriPanelPosition,1)</onload>
+		<onload>Skin.SetString(MusicVideosHomeItem.Disable,1)</onload>
+		<onload>Skin.SetString(LiveTVHomeItem.Disable,1)</onload>
+		<onload>Skin.SetString(CustomHomeItem1.Disable,1)</onload>
+		<onload>Skin.SetString(CustomHomeItem2.Disable,1)</onload>
+		<onload>Skin.SetString(CustomHomeItem3.Disable,1)</onload>
+		<onload>Skin.SetString(CustomHomeItem4.Disable,1)</onload>
+		<onload>Skin.SetString(CustomHomeItem5.Disable,1)</onload>
+		<onload>Skin.SetString(CustomHomeItem6.Disable,1)</onload>
+		<onload>Skin.SetString(LiveTVHomeItem.SubMenu,1)</onload>
+		<onload>Skin.SetString(ShutdownHomeItem.SubMenu,1)</onload>
+		<onload>Skin.SetString(CustomSub8_1.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub8_2.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub8_3.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub8_4.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub8_5.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub9_1.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub9_2.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub9_3.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub9_4.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub9_5.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub0_1.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub0_2.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub0_3.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub0_4.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub0_5.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub0_6.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub0_7.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub0_8.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub1_1.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub1_2.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub1_3.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub1_4.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub1_5.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub2_1.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub2_2.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub2_3.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub2_4.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub2_5.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub3_1.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub3_2.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub3_3.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub3_4.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub3_5.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub4_1.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub4_2.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub4_3.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub4_4.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub4_5.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub5_1.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub5_2.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub5_3.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub5_4.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub5_5.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub6_1.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub6_2.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub6_3.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub6_4.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub6_5.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub7_1.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub7_2.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub7_3.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub7_4.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub7_5.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub8_1.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub8_2.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub8_3.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub8_4.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub8_5.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub9_1.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub9_2.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub9_3.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub9_4.Disable,1)</onload>
+		<onload>Skin.SetString(CustomSub9_5.Disable,1)</onload>
+		<onload>Skin.SetBool(setup-0.1.3)</onload>
+	</include>
+	<include name="DelayAnimations">
+		<animation effect="fade" end="100" time="120" delay="1000" condition="Stringcompare(Skin.String(InfopanelDelay),1)">Visible</animation>
+		<animation effect="fade" end="100" time="120" delay="2000" condition="Stringcompare(Skin.String(InfopanelDelay),2)">Visible</animation>
+		<animation effect="fade" end="100" time="120" delay="3000" condition="Stringcompare(Skin.String(InfopanelDelay),3)">Visible</animation>
+		<animation effect="fade" end="100" time="120" delay="4000" condition="Stringcompare(Skin.String(InfopanelDelay),4)">Visible</animation>
+		<animation effect="fade" end="100" time="120" delay="5000" condition="Stringcompare(Skin.String(InfopanelDelay),5)">Visible</animation>
+	</include>
+	<include name="UnwatchedIcon">
+		<control type="group">
+			<visible>Skin.HasSetting(unwatchedicon) + [Container.Content(tvshows) | Container.Content(seasons)] + IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)</visible>
+			<control type="image">
+				<posx>10</posx>
+				<posy>5</posy>
+				<width>35</width>
+				<height>35</height>
+				<aspectratio>keep</aspectratio>
+				<texture>common/circle.png</texture>
+			</control>
+			<control type="label">
+				<posx>27</posx>
+				<posy>2</posy>
+				<width>50</width>
+				<height>38</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+				<font>Font_Reg17</font>
+				<textcolor>black</textcolor>
+				<scroll>false</scroll>
+			</control>
+		</control>
+	</include>
+	<include name="ColorChooserButton">
+		<width>600</width>
+		<height>60</height>
+		<textoffsetx>15</textoffsetx>
+		<textoffsety>2</textoffsety>
+		<texturefocus border="3">list-focus.png</texturefocus>
+		<texturenofocus border="3">list-nofocus.png</texturenofocus>
+		<alttexturefocus border="3">list-focus.png</alttexturefocus>
+		<alttexturenofocus border="3">list-nofocus.png</alttexturenofocus>
+		<font>Font_Reg30_2</font>
+		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		<radiowidth>98</radiowidth>
+		<radioposx>508</radioposx>
+	</include>
+	<include name="DialogVideoInfoButton">
+		<width>254</width>
+		<height>50</height>
+		<textoffsetx>0</textoffsetx>
+		<textoffsety>4</textoffsety>
+		<align>center</align>
+		<aligny>top</aligny>
+		<texturefocus border="3">button-focus.png</texturefocus>
+		<texturenofocus border="3">button-nofocus.png</texturenofocus>
+		<font>Font_Reg30_2</font>
+		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		<onup>50</onup>
+	</include>
+	<include name="DialogVideoInfoButtonSolid">
+		<width>254</width>
+		<height>50</height>
+		<textoffsetx>0</textoffsetx>
+		<textoffsety>4</textoffsety>
+		<align>center</align>
+		<aligny>top</aligny>
+		<texturefocus border="3">button-nofocus-solid.png</texturefocus>
+		<texturenofocus border="3">button-nofocus-solid.png</texturenofocus>
+		<font>Font_Reg30_2</font>
+		<textcolor>$VAR[FontColorVar]</textcolor>
+		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		<onup>50</onup>
+	</include>
+	<include name="DialogBackFade">
+		<control type="image">
+			<posx>-240</posx>
+			<posy>-135</posy>
+			<width>2400</width>
+			<height>1350</height>
+			<texture border="1">diffuseoverlay.png</texture>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(fullscreenvideo)">Conditional</animation>
+			<animation effect="fade" end="100" time="200">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+		</control>
+	</include>
+	<include name="ContextMenuOverlay">
+		<control type="image">
+			<texture>diffuseoverlay.png</texture>
+			<include>FullscreenDimensions</include>
+			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			<animation effect="fade" end="100" time="200">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+			<visible>Window.IsActive(contextmenu)</visible>
+			<animation effect="fade" time="200">Visible</animation>
+			<animation effect="fade" time="200">Hidden</animation>
+		</control>
+	</include>
+	<include name="QuickNavContent">
+		<item>
+			<label fallback="31502">$INFO[Skin.String(QuickNavItem1.Label)]</label>
+			<property name="Path" fallback="ReplaceWindow(Videos,MovieTitles,return)">$INFO[Skin.String(QuickNavItem1.Path)]</property>
+			<property name="Type" fallback="custom">$INFO[Skin.String(QuickNavItem1.Type)]</property>
+			<property name="DisableIcon">$INFO[Skin.String(QuickNavItem1.Disable)]</property>
+			<thumb fallback="BigIcons/Film.png">$INFO[Skin.String(QuickNavItem1.MultiFanart)]</thumb>
+			<onclick>SetProperty(MenuItem,QuickNavItem1,home)</onclick>
+			<onclick>SetFocus(810)</onclick>
+			<visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickNavItem1.Disable))</visible>
+		</item>
+		<item>
+			<label fallback="31503">$INFO[Skin.String(QuickNavItem2.Label)]</label>
+			<property name="Path" fallback="ReplaceWindow(Videos,TVShowTitles,return)">$INFO[Skin.String(QuickNavItem2.Path)]</property>
+			<property name="Type" fallback="custom">$INFO[Skin.String(QuickNavItem2.Type)]</property>
+			<property name="DisableIcon">$INFO[Skin.String(QuickNavItem2.Disable)]</property>
+			<thumb fallback="BigIcons/Television.png">$INFO[Skin.String(QuickNavItem2.MultiFanart)]</thumb>
+			<onclick>SetProperty(MenuItem,QuickNavItem2,home)</onclick>
+			<onclick>SetFocus(810)</onclick>
+			<visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickNavItem2.Disable))</visible>
+		</item>
+		<item>
+			<label fallback="31501">$INFO[Skin.String(QuickNavItem3.Label)]</label>
+			<property name="Path" fallback="ReplaceWindow(Music)">$INFO[Skin.String(QuickNavItem3.Path)]</property>
+			<property name="Type" fallback="custom">$INFO[Skin.String(QuickNavItem3.Type)]</property>
+			<property name="DisableIcon">$INFO[Skin.String(QuickNavItem3.Disable)]</property>
+			<thumb fallback="BigIcons/Headphone.png">$INFO[Skin.String(QuickNavItem3.MultiFanart)]</thumb>
+			<onclick>SetProperty(MenuItem,QuickNavItem3,home)</onclick>
+			<onclick>SetFocus(810)</onclick>
+			<visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickNavItem3.Disable))</visible>
+		</item>
+		<item>
+			<label fallback="20389">$INFO[Skin.String(QuickNavItem4.Label)]</label>
+			<property name="Path" fallback="ReplaceWindow(Videos,MusicVideoTitles,return)">$INFO[Skin.String(QuickNavItem4.Path)]</property>
+			<property name="Type" fallback="custom">$INFO[Skin.String(QuickNavItem4.Type)]</property>
+			<property name="DisableIcon">$INFO[Skin.String(QuickNavItem4.Disable)]</property>
+			<thumb fallback="BigIcons/Media.png">$INFO[Skin.String(QuickNavItem4.MultiFanart)]</thumb>
+			<onclick>SetProperty(MenuItem,QuickNavItem4,home)</onclick>
+			<onclick>SetFocus(810)</onclick>
+			<visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickNavItem4.Disable))</visible>
+		</item>
+		<item>
+			<label fallback="31017">$INFO[Skin.String(QuickNavItem5.Label)]</label>
+			<property name="Path" fallback="ActivateWindowAndFocus(PVR, 32,0, 11,0)">$INFO[Skin.String(QuickNavItem5.Path)]</property>
+			<property name="Type" fallback="custom">$INFO[Skin.String(QuickNavItem5.Type)]</property>
+			<property name="DisableIcon">$INFO[Skin.String(QuickNavItem5.Disable)]</property>
+			<thumb fallback="BigIcons/TV.png">$INFO[Skin.String(QuickNavItem5.MultiFanart)]</thumb>
+			<onclick>SetProperty(MenuItem,QuickNavItem5,home)</onclick>
+			<onclick>SetFocus(810)</onclick>
+			<visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickNavItem5.Disable))</visible>
+		</item>
+		<item>
+			<label fallback="1037">$INFO[Skin.String(QuickNavItem6.Label)]</label>
+			<property name="Path" fallback="ReplaceWindow(Videos,Addons,return)">$INFO[Skin.String(QuickNavItem6.Path)]</property>
+			<property name="Type" fallback="custom">$INFO[Skin.String(QuickNavItem6.Type)]</property>
+			<property name="DisableIcon">$INFO[Skin.String(QuickNavItem6.Disable)]</property>
+			<thumb fallback="BigIcons/Camcorder.png">$INFO[Skin.String(QuickNavItem6.MultiFanart)]</thumb>
+			<onclick>SetProperty(MenuItem,QuickNavItem6,home)</onclick>
+			<onclick>SetFocus(810)</onclick>
+			<visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickNavItem6.Disable))</visible>
+		</item>
+		<item>
+			<label fallback="31507">$INFO[Skin.String(QuickNavItem7.Label)]</label>
+			<property name="Path" fallback="ReplaceWindow(Programs)">$INFO[Skin.String(QuickNavItem7.Path)]</property>
+			<property name="Type" fallback="custom">$INFO[Skin.String(QuickNavItem7.Type)]</property>
+			<property name="DisableIcon">$INFO[Skin.String(QuickNavItem7.Disable)]</property>
+			<thumb fallback="BigIcons/Puzzle.png">$INFO[Skin.String(QuickNavItem7.MultiFanart)]</thumb>
+			<onclick>SetProperty(MenuItem,QuickNavItem7,home)</onclick>
+			<onclick>SetFocus(810)</onclick>
+			<visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickNavItem7.Disable))</visible>
+		</item>
+		<item>
+			<label fallback="137">$INFO[Skin.String(QuickNavItem8.Label)]</label>
+			<property name="Path" fallback="RunScript(script.globalsearch)">$INFO[Skin.String(QuickNavItem8.Path)]</property>
+			<property name="Type" fallback="custom">$INFO[Skin.String(QuickNavItem8.Type)]</property>
+			<property name="DisableIcon">$INFO[Skin.String(QuickNavItem8.Disable)]</property>
+			<thumb fallback="BigIcons/Search.png">$INFO[Skin.String(QuickNavItem8.MultiFanart)]</thumb>
+			<onclick>SetProperty(MenuItem,QuickNavItem8,home)</onclick>
+			<onclick>SetFocus(810)</onclick>
+			<visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickNavItem8.Disable))</visible>
+		</item>
+		<item>
+			<label fallback="1036">$INFO[Skin.String(QuickNavItem9.Label)]</label>
+			<property name="Path" fallback="ActivateWindow(favourites)">$INFO[Skin.String(QuickNavItem9.Path)]</property>
+			<property name="Type" fallback="custom">$INFO[Skin.String(QuickNavItem9.Type)]</property>
+			<property name="DisableIcon">$INFO[Skin.String(QuickNavItem9.Disable)]</property>
+			<thumb fallback="BigIcons/Star.png">$INFO[Skin.String(QuickNavItem9.MultiFanart)]</thumb>
+			<onclick>SetProperty(MenuItem,QuickNavItem9,home)</onclick>
+			<onclick>SetFocus(810)</onclick>
+			<visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickNavItem9.Disable))</visible>
+		</item>
+	</include>
+	<include name="FileManagerPanels">
+		<control type="image">
+			<posx>108</posx>
+			<posy>115</posy>
+			<width>743</width>
+			<height>558</height>
+			<texture border="5">panel.png</texture>
+			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>675</posx>
+			<posy>149</posy>
+			<width>128</width>
+			<height>540</height>
+			<texture>views/listpanel_detailwide.png</texture>
+			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		</control>
+	</include>
+	<include name="FullScreenInfoBarLiveTV">
+		<control type="image" id="1">
+			<posy>900</posy>
+			<width>1920</width>
+			<height>180</height>
+			<texture border="5">panel-bottom.png</texture>
+			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		</control>
+		<control type="group" id="1">
+			<posx>-1536</posx>
+			<animation type="WindowOpen">
+				<effect type="slide" start="-450,0" end="0,0" time="480" tween="cubic" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" end="-450,0" time="480" tween="cubic" />
+				<effect type="fade" start="100" end="0" time="480" />
+			</animation>
+			<control type="image" id="1">
+				<posx>1580</posx>
+				<posy>842</posy>
+				<width>300</width>
+				<height>180</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[VideoPlayer.Cover]</texture>
+			</control>
+		</control>
+		<control type="group" id="1">
+			<animation type="WindowOpen">
+				<effect type="slide" start="450,0" end="0,0" time="480" tween="cubic" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" end="450,0" time="480" tween="cubic" />
+				<effect type="fade" start="100" end="0" time="480" />
+			</animation>
+			<control type="label" id="1">
+				<posx>1560</posx>
+				<posy>975</posy>
+				<width>350</width>
+				<height>68</height>
+				<align>center</align>
+				<label>$INFO[VideoPlayer.ChannelName]</label>
+				<font>Font_Bold33</font>
+				<textcolor>$VAR[FontColorVar]</textcolor>
+				<scroll>true</scroll>
+			</control>
+		</control>
+		<control type="progress" id="1">
+			<posx>390</posx>
+			<posy>1002</posy>
+			<width>1140</width>
+			<height>22</height>
+			<info>Player.ProgressCache</info>
+			<midtexture border="12,0,12,0" colordiffuse="$VAR[DefaultColorVar]">dialogs/progress/progress_cache.png</midtexture>
+			<visible>VideoPlayer.HasEpg</visible>
+		</control>
+		<control type="progress" id="1">
+			<posx>390</posx>
+			<posy>1002</posy>
+			<width>1140</width>
+			<height>22</height>
+			<info>Player.Progress</info>
+			<visible>VideoPlayer.HasEpg</visible>
+		</control>
+		<control type="group" id="1">
+			<posy>908</posy>
+			<control type="label" id="1">
+				<posy>8</posy>
+				<width>1920</width>
+				<height>38</height>
+				<align>center</align>
+				<label>$INFO[VideoPlayer.Title]</label>
+				<font>Font_Bold40</font>
+				<visible>!IsEmpty(VideoPlayer.Title)</visible>
+			</control>
+			<control type="label" id="1">
+				<posy>50</posy>
+				<width>1920</width>
+				<height>38</height>
+				<align>center</align>
+				<label>$LOCALIZE[19031]: $INFO[VideoPlayer.NextTitle]</label>
+				<font>Font_Reg28</font>
+				<textcolor>$VAR[FontColorVar]</textcolor>
+				<visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
+			</control>
+		</control>
+		<control type="group" id="1">
+			<posy>908</posy>
+			<control type="label" id="1">
+				<posx>390</posx>
+				<posy>128</posy>
+				<width>1140</width>
+				<height>38</height>
+				<label>$INFO[VideoPlayer.StartTime]</label>
+				<font>Font_Reg30_2</font>
+				<textcolor>$VAR[FontColorVar]</textcolor>
+			</control>
+			<control type="label" id="1">
+				<posy>128</posy>
+				<width>1920</width>
+				<height>38</height>
+				<align>center</align>
+				<label>$INFO[VideoPlayer.Time,, / ]$INFO[VideoPlayer.Duration]</label>
+				<font>Font_Reg30_2</font>
+				<visible>!Skin.HasSetting(PreferRemaining)</visible>
+			</control>
+			<control type="label" id="1">
+				<posy>128</posy>
+				<width>1920</width>
+				<height>38</height>
+				<align>center</align>
+				<label>$INFO[VideoPlayer.Time,, / ]$INFO[VideoPlayer.TimeRemaining,- ]</label>
+				<font>Font_Reg30_2</font>
+				<visible>Skin.HasSetting(PreferRemaining)</visible>
+			</control>
+			<control type="label" id="1">
+				<posx>1530</posx>
+				<posy>128</posy>
+				<width>1140</width>
+				<height>38</height>
+				<align>right</align>
+				<label>$INFO[VideoPlayer.FinishTime]</label>
+				<font>Font_Reg30_2</font>
+				<textcolor>$VAR[FontColorVar]</textcolor>
+			</control>
+		</control>
+	</include>
+	<include name="FullScreenInfoBar">
+		<control type="group">
+			<posx>1552</posx>
+			<posy>789</posy>
+			<visible>VideoPlayer.Content(episodes) | VideoPlayer.Content(movies)</visible>
+			<animation type="WindowOpen">
+				<effect type="slide" start="450,0" end="0,0" time="480" tween="cubic" />
+				<effect type="fade" end="100" time="480" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" end="450,0" time="480" tween="cubic" />
+				<effect type="fade" start="100" end="0" time="480" />
+			</animation>
+			<control type="image">
+				<posx>22</posx>
+				<posy>-70</posy>
+				<width>345</width>
+				<height>234</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<texture background="true">$VAR[PlayerArtworkVar]</texture>
+			</control>
+		</control>
+		<control type="image">
+			<posx>704</posx>
+			<posy>904</posy>
+			<width>513</width>
+			<height>50</height>
+			<texture flipy="true" border="51,3,51,3">tab.png</texture>
+			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			<visible>player.chaptercount + ![Player.Forwarding | Player.Rewinding]</visible>
+		</control>
+		<control type="label">
+			<posx>750</posx>
+			<posy>902</posy>
+			<width>420</width>
+			<height>42</height>
+			<align>center</align>
+			<label>$LOCALIZE[21396]: $INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
+			<font>Font_Reg33_Caps</font>
+			<visible>player.chaptercount + ![Player.Forwarding | Player.Rewinding]</visible>
+		</control>
+		<control type="image">
+			<posy>945</posy>
+			<width>1920</width>
+			<height>130</height>
+			<texture border="5">panel-bottom.png</texture>
+			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		</control>
+		<control type="image" id="888777">
+			<texture>$INFO[VideoPlayer.Cover]</texture>
+			<include>HiddenObject</include>
+			<visible>no</visible>
+		</control>
+		<control type="group">
+			<visible>!Skin.HasSetting(DisableVideoThumb) + !substring(Control.GetLabel(888777),defaultvideo)</visible>
+			<include>Animation_VisibleChange200</include>
+			<control type="group">
+				<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)</visible>
+				<animation type="WindowOpen">
+					<effect type="slide" start="-450,0" end="0,0" time="480" tween="cubic" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="slide" end="-450,0" time="480" tween="cubic" />
+					<effect type="fade" start="100" end="0" time="480" />
+				</animation>
+				<control type="image">
+					<posx>25</posx>
+					<posy>600</posy>
+					<width>310</width>
+					<height>465</height>
+					<aspectratio aligny="bottom">stretch</aspectratio>
+					<texture background="true" diffuse="thumbs/movieposter_mask.png">$VAR[PlayerPosterVar]</texture>
+					<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<visible>VideoPlayer.Content(files)</visible>
+				<animation type="WindowOpen">
+					<effect type="slide" start="450,0" end="0,0" time="480" tween="cubic" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="slide" end="450,0" time="480" tween="cubic" />
+					<effect type="fade" start="100" end="0" time="480" />
+				</animation>
+				<control type="image">
+					<posx>1568</posx>
+					<posy>594</posy>
+					<width>324</width>
+					<height>479</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture background="true">$INFO[VideoPlayer.Cover]</texture>
+					<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
+					<bordersize>7</bordersize>
+				</control>
+			</control>
+		</control>
+		<control type="progress" id="23">
+			<posx>390</posx>
+			<posy>1002</posy>
+			<width>1140</width>
+			<height>22</height>
+			<info>Player.ProgressCache</info>
+			<midtexture border="12,0,12,0" colordiffuse="$VAR[DefaultColorVar]">dialogs/progress/progress_cache.png</midtexture>
+		</control>
+		<control type="progress" id="23">
+			<posx>390</posx>
+			<posy>1002</posy>
+			<width>1140</width>
+			<height>22</height>
+			<info>Player.Progress</info>
+		</control>
+		<control type="fadelabel">
+			<posx>390</posx>
+			<posy>956</posy>
+			<width>1140</width>
+			<height>8</height>
+			<align>center</align>
+			<aligny>top</aligny>
+			<label>$INFO[VideoPlayer.mpaa]</label>
+			<label>$INFO[VideoPlayer.RatingAndVotes,$LOCALIZE[31095]: ]$INFO[VideoPlayer.Top250, $LOCALIZE[13409] # ]</label>
+			<label>$INFO[VideoPlayer.Genre]</label>
+			<label>$INFO[VideoPlayer.Writer,$LOCALIZE[31157] ]</label>
+			<label>$INFO[VideoPlayer.Director,$LOCALIZE[31156] ]</label>
+			<font>Font_Reg30_2</font>
+			<scroll>true</scroll>
+			<scrollspeed>70</scrollspeed>
+			<pauseatend>5000</pauseatend>
+			<visible>VideoPlayer.Content(movies)</visible>
+		</control>
+		<control type="fadelabel">
+			<posx>390</posx>
+			<posy>956</posy>
+			<width>1140</width>
+			<height>8</height>
+			<align>center</align>
+			<aligny>top</aligny>
+			<label>$INFO[VideoPlayer.Writer,$LOCALIZE[31157] ]</label>
+			<label>$INFO[VideoPlayer.Director,$LOCALIZE[31156] ]</label>
+			<label>$INFO[VideoPlayer.premiered,$LOCALIZE[20416]: ]</label>
+			<font>Font_Reg30_2</font>
+			<scroll>true</scroll>
+			<scrollspeed>70</scrollspeed>
+			<pauseatend>5000</pauseatend>
+			<visible>VideoPlayer.Content(episodes)</visible>
+		</control>
+		<control type="group">
+			<posx>1552</posx>
+			<posy>922</posy>
+			<control type="group">
+				<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)</visible>
+				<animation effect="slide" end="0,30" condition="IsEmpty(VideoPlayer.Rating)">Conditional</animation>
+				<control type="label">
+					<posx>38</posx>
+					<posy>56</posy>
+					<width>300</width>
+					<height>38</height>
+					<align>center</align>
+					<label>$VAR[VideoSeasonVar,S]$VAR[VideoEpisodeVar,E]</label>
+					<font>Font_OSDTitle2</font>
+					<visible>VideoPlayer.Content(episodes)</visible>
+				</control>
+				<control type="label">
+					<posx>38</posx>
+					<posy>56</posy>
+					<width>300</width>
+					<height>38</height>
+					<align>center</align>
+					<label>$INFO[VideoPlayer.Year]</label>
+					<font>Font_OSDTitle2</font>
+					<visible>!VideoPlayer.Content(episodes)</visible>
+				</control>
+				<control type="image">
+					<posx>98</posx>
+					<posy>110</posy>
+					<width>180</width>
+					<height>36</height>
+					<texture>$INFO[VideoPlayer.Rating,stars/,.png]</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<posy>908</posy>
+			<control type="label">
+				<posx>390</posx>
+				<posy>128</posy>
+				<width>1140</width>
+				<height>38</height>
+				<label>$INFO[VideoPlayer.Time]</label>
+				<font>Font_Reg30_2</font>
+				<textcolor>$VAR[FontColorVar]</textcolor>
+			</control>
+			<control type="label">
+				<posy>128</posy>
+				<width>1920</width>
+				<height>38</height>
+				<align>center</align>
+				<label>$INFO[System.Time,, / ]$INFO[Player.FinishTime]</label>
+				<font>Font_Reg30_2</font>
+			</control>
+			<control type="label">
+				<posx>1530</posx>
+				<posy>128</posy>
+				<width>1140</width>
+				<height>38</height>
+				<align>right</align>
+				<label>$INFO[VideoPlayer.Duration]</label>
+				<font>Font_Reg30_2</font>
+				<textcolor>$VAR[FontColorVar]</textcolor>
+				<visible>!Skin.HasSetting(PreferRemaining)</visible>
+			</control>
+			<control type="label">
+				<posx>1530</posx>
+				<posy>128</posy>
+				<width>1140</width>
+				<height>38</height>
+				<align>right</align>
+				<label>$INFO[Player.TimeRemaining,- ]</label>
+				<font>Font_Reg30_2</font>
+				<textcolor>$VAR[FontColorVar]</textcolor>
+				<visible>Skin.HasSetting(PreferRemaining)</visible>
+			</control>
+		</control>
+	</include>
+	<include name="BottomProgressBar">
+		<control type="group">
+			<posy>993</posy>
+			<animation type="WindowOpen">
+				<effect type="fade" time="160" end="100" />
+				<effect type="slide" time="160" start="0,98" end="0,0" tween="cubic" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" time="160" start="100" end="0" />
+				<effect type="slide" time="160" end="0,98" easing="in" tween="cubic" />
+			</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>35</posy>
+				<width>1920</width>
+				<height>50</height>
+				<texture border="3">panel-bottom.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
+			<control type="progress" id="23">
+				<posx>150</posx>
+				<posy>57</posy>
+				<width>1620</width>
+				<height>20</height>
+				<info>Player.ProgressCache</info>
+				<midtexture border="12,0,12,0" colordiffuse="$VAR[DefaultColorVar]">dialogs/progress/progress_cache.png</midtexture>
+			</control>
+			<control type="progress" id="23">
+				<posx>150</posx>
+				<posy>57</posy>
+				<width>1620</width>
+				<height>20</height>
+				<info>Player.Progress</info>
+				<overlaytexture>-</overlaytexture>
+			</control>
+			<control type="slider" id="87">
+				<posx>150</posx>
+				<posy>57</posy>
+				<width>1620</width>
+				<height>20</height>
+				<action>seek</action>
+			</control>
+			<control type="label">
+				<posx>135</posx>
+				<posy>45</posy>
+				<width>300</width>
+				<height>42</height>
+				<align>right</align>
+				<label>$INFO[Player.Time]</label>
+				<font>Font_Reg30_2</font>
+			</control>
+			<control type="label">
+				<posx>135r</posx>
+				<posy>45</posy>
+				<width>300</width>
+				<height>42</height>
+				<label>$INFO[Player.Duration]</label>
+				<font>Font_Reg30_2</font>
+				<visible>!Skin.HasSetting(PreferRemaining)</visible>
+			</control>
+			<control type="label">
+				<posx>135r</posx>
+				<posy>45</posy>
+				<width>300</width>
+				<height>42</height>
+				<label>$INFO[Player.TimeRemaining,- ]</label>
+				<font>Font_Reg30_2</font>
+				<visible>Skin.HasSetting(PreferRemaining)</visible>
+			</control>
+		</control>
+	</include>
+	<include name="QuickList">
+		<control type="group">
+			<posx>656</posx>
+			<include>Animation_OpenCloseZoom_New</include>
+			<control type="image">
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>608</width>
+				<height>870</height>
+				<texture border="5">panel.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
+			<control type="button" id="810">
+				<include>HiddenObject</include>
+				<onfocus>SetFocus(800)</onfocus>
+				<onfocus>Action(Close)</onfocus>
+				<onfocus condition="Stringcompare(Container(800).ListItem.Property(Path),ActivateWindow(Videos,MovieTitles,return)) | Stringcompare(Container(800).ListItem.Property(Path),ActivateWindow(Videos,MusicVideoTitles,return)) | Substring(Container(800).ListItem.Property(Path),videodb://movies/)">SetProperty(DontRunTVShowScripts,True,Home)</onfocus>
+				<onfocus condition="stringcompare(Container(800).ListItem.Property(Type),0) | stringcompare(Container(800).ListItem.Property(Type),1) | stringcompare(Container(800).ListItem.Property(Type),2) | stringcompare(Container(800).ListItem.Property(Type),3)">RunAddon($INFO[Container(800).ListItem.Property(Path)])</onfocus>
+				<onfocus condition="stringcompare(Container(800).ListItem.Property(Type),4)">ActivateWindow(Videos,$ESCINFO[Container(800).ListItem.Property(Path)],return)</onfocus>
+				<onfocus condition="stringcompare(Container(800).ListItem.Property(Type),5)">ActivateWindow(MusicLibrary,$ESCINFO[Container(800).ListItem.Property(Path)],return)</onfocus>
+				<onfocus condition="stringcompare(Container(800).ListItem.Property(Type),6) | Stringcompare(Container(800).ListItem.Property(Type),7) | Stringcompare(Container(800).ListItem.Property(Type),custom)">$INFO[Container(800).ListItem.Property(Path)]</onfocus>
+				<visible>IsEmpty(Window(home).Property(quicknavsetup))</visible>
+			</control>
+			<control type="button" id="810">
+				<include>HiddenObject</include>
+				<onfocus>SetFocus(800)</onfocus>
+				<onfocus>Skin.Setstring(ItemToEdit.Label,$ESCINFO[Container(800).ListItem.Label])</onfocus>
+				<onfocus>Skin.Setstring(ItemToEdit.MultiFanart,$ESCINFO[Container(800).ListItem.Thumb])</onfocus>
+				<onfocus>Skin.Setstring(ItemToEdit.Disable,$INFO[Container(800).ListItem.Property(DisableIcon)])</onfocus>
+				<onfocus>Skin.Setstring(ItemToEdit.Type,$ESCINFO[Container(800).ListItem.Property(Type)])</onfocus>
+				<onfocus>Skin.Setstring(ItemToEdit.Path,$ESCINFO[Container(800).ListItem.Property(Path)])</onfocus>
+				<onfocus>ActivateWindow(1136)</onfocus>
+				<visible>!IsEmpty(Window(home).Property(quicknavsetup))</visible>
+			</control>
+			<control type="list" id="800">
+				<posx>4</posx>
+				<posy>150</posy>
+				<width>600</width>
+				<height>1080</height>
+				<visible>!Window.IsVisible(script-globalsearch-main.xml)</visible>
+				<orientation>vertical</orientation>
+				<onleft>Dialog.CLose(1157)</onleft>
+				<onup>800</onup>
+				<ondown>9012</ondown>
+				<onright>Dialog.Close(1157)</onright>
+				<itemlayout width="600" height="80">
+					<control type="image">
+						<posx>0</posx>
+						<width>600</width>
+						<height>80</height>
+						<texture border="3">list-nofocus.png</texture>
+						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>72</posx>
+						<posy>1</posy>
+						<width>80</width>
+						<height>80</height>
+						<aspectratio align="center">keep</aspectratio>
+						<texture>$INFO[ListItem.Thumb]</texture>
+						<colordiffuse>white</colordiffuse>
+					</control>
+					<control type="label">
+						<posx>200</posx>
+						<width>600</width>
+						<height>80</height>
+						<font>Font_Reg37_Caps</font>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="image">
+						<width>600</width>
+						<height>80</height>
+						<aspectratio>keep</aspectratio>
+						<texture>close.png</texture>
+						<visible>stringcompare(ListItem.Property(DisableIcon),1)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout width="600" height="80">
+					<control type="image">
+						<posx>0</posx>
+						<width>600</width>
+						<height>80</height>
+						<texture border="3">list-nofocus.png</texture>
+						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<width>600</width>
+						<height>80</height>
+						<texture border="3">list-focus.png</texture>
+						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+						<include>PanelGlowFade</include>
+						<visible>Control.HasFocus(800)</visible>
+					</control>
+					<control type="image">
+						<posx>72</posx>
+						<posy>1</posy>
+						<width>80</width>
+						<height>80</height>
+						<aspectratio align="center">keep</aspectratio>
+						<texture>$INFO[ListItem.Thumb]</texture>
+						<colordiffuse>white</colordiffuse>
+					</control>
+					<control type="label">
+						<posx>200</posx>
+						<width>600</width>
+						<height>80</height>
+						<font>Font_Reg37_Caps</font>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="image">
+						<width>600</width>
+						<height>80</height>
+						<aspectratio>keep</aspectratio>
+						<texture>close.png</texture>
+						<visible>stringcompare(ListItem.Property(DisableIcon),1)</visible>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label fallback="31502">$INFO[Skin.String(QuickList1_1.Label)]</label>
+						<property name="Path" fallback="ReplaceWindow(Videos,MovieTitles,return)">$INFO[Skin.String(QuickList1_1.Path)]</property>
+						<property name="Type" fallback="custom">$INFO[Skin.String(QuickList1_1.Type)]</property>
+						<property name="DisableIcon">$INFO[Skin.String(QuickList1_1.Disable)]</property>
+						<thumb fallback="BigIcons/Film.png">$INFO[Skin.String(QuickList1_1.MultiFanart)]</thumb>
+						<onclick>SetProperty(MenuItem,QuickList1_1,home)</onclick>
+						<onclick>SetFocus(810)</onclick>
+						<visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_1.Disable))</visible>
+					</item>
+					<item>
+						<label fallback="31503">$INFO[Skin.String(QuickList1_2.Label)]</label>
+						<property name="Path" fallback="ReplaceWindow(Videos,TVShowTitles,return)">$INFO[Skin.String(QuickList1_2.Path)]</property>
+						<property name="Type" fallback="custom">$INFO[Skin.String(QuickList1_2.Type)]</property>
+						<property name="DisableIcon">$INFO[Skin.String(QuickList1_2.Disable)]</property>
+						<thumb fallback="BigIcons/Television.png">$INFO[Skin.String(QuickList1_2.MultiFanart)]</thumb>
+						<onclick>SetProperty(MenuItem,QuickList1_2,home)</onclick>
+						<onclick>SetFocus(810)</onclick>
+						<visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_2.Disable))</visible>
+					</item>
+					<item>
+						<label fallback="31501">$INFO[Skin.String(QuickList1_3.Label)]</label>
+						<property name="Path" fallback="ReplaceWindow(Music)">$INFO[Skin.String(QuickList1_3.Path)]</property>
+						<property name="Type" fallback="custom">$INFO[Skin.String(QuickList1_3.Type)]</property>
+						<property name="DisableIcon">$INFO[Skin.String(QuickList1_3.Disable)]</property>
+						<thumb fallback="BigIcons/Headphone.png">$INFO[Skin.String(QuickList1_3.MultiFanart)]</thumb>
+						<onclick>SetProperty(MenuItem,QuickList1_3,home)</onclick>
+						<onclick>SetFocus(810)</onclick>
+						<visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_3.Disable))</visible>
+					</item>
+					<item>
+						<label fallback="20389">$INFO[Skin.String(QuickList1_4.Label)]</label>
+						<property name="Path" fallback="ReplaceWindow(Videos,MusicVideoTitles,return)">$INFO[Skin.String(QuickList1_4.Path)]</property>
+						<property name="Type" fallback="custom">$INFO[Skin.String(QuickList1_4.Type)]</property>
+						<property name="DisableIcon">$INFO[Skin.String(QuickList1_4.Disable)]</property>
+						<thumb fallback="BigIcons/Media.png">$INFO[Skin.String(QuickList1_4.MultiFanart)]</thumb>
+						<onclick>SetProperty(MenuItem,QuickList1_4,home)</onclick>
+						<onclick>SetFocus(810)</onclick>
+						<visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_4.Disable))</visible>
+					</item>
+					<item>
+						<label fallback="1036">$INFO[Skin.String(QuickList1_5.Label)]</label>
+						<property name="Path" fallback="ActivateWindow(favourites)">$INFO[Skin.String(QuickList1_5.Path)]</property>
+						<property name="Type" fallback="custom">$INFO[Skin.String(QuickList1_5.Type)]</property>
+						<property name="DisableIcon">$INFO[Skin.String(QuickList1_5.Disable)]</property>
+						<thumb fallback="BigIcons/Star.png">$INFO[Skin.String(QuickList1_5.MultiFanart)]</thumb>
+						<onclick>SetProperty(MenuItem,QuickList1_5,home)</onclick>
+						<onclick>SetFocus(810)</onclick>
+						<visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_5.Disable))</visible>
+					</item>
+					<item>
+						<label fallback="1037">$INFO[Skin.String(QuickList1_6.Label)]</label>
+						<property name="Path" fallback="ReplaceWindow(Videos,Addons,return)">$INFO[Skin.String(QuickList1_6.Path)]</property>
+						<property name="Type" fallback="custom">$INFO[Skin.String(QuickList1_6.Type)]</property>
+						<property name="DisableIcon">$INFO[Skin.String(QuickList1_6.Disable)]</property>
+						<thumb fallback="BigIcons/Monitor.png">$INFO[Skin.String(QuickList1_6.MultiFanart)]</thumb>
+						<onclick>SetProperty(MenuItem,QuickList1_6,home)</onclick>
+						<onclick>SetFocus(810)</onclick>
+						<visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_6.Disable))</visible>
+					</item>
+					<item>
+						<label fallback="31507">$INFO[Skin.String(QuickList1_7.Label)]</label>
+						<property name="Path" fallback="ReplaceWindow(Programs)">$INFO[Skin.String(QuickList1_7.Path)]</property>
+						<property name="Type" fallback="custom">$INFO[Skin.String(QuickList1_7.Type)]</property>
+						<property name="DisableIcon">$INFO[Skin.String(QuickList1_7.Disable)]</property>
+						<thumb fallback="BigIcons/Puzzle.png">$INFO[Skin.String(QuickList1_7.MultiFanart)]</thumb>
+						<onclick>SetProperty(MenuItem,QuickList1_7,home)</onclick>
+						<onclick>SetFocus(810)</onclick>
+						<visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_7.Disable))</visible>
+					</item>
+					<item>
+						<label fallback="137">$INFO[Skin.String(QuickList1_8.Label)]</label>
+						<property name="Path" fallback="RunScript(script.globalsearch)">$INFO[Skin.String(QuickList1_8.Path)]</property>
+						<property name="Type" fallback="custom">$INFO[Skin.String(QuickList1_8.Type)]</property>
+						<property name="DisableIcon">$INFO[Skin.String(QuickList1_8.Disable)]</property>
+						<thumb fallback="BigIcons/Search.png">$INFO[Skin.String(QuickList1_8.MultiFanart)]</thumb>
+						<onclick>SetProperty(MenuItem,QuickList1_8,home)</onclick>
+						<onclick>SetFocus(810)</onclick>
+						<visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_8.Disable))</visible>
+					</item>
+					<item>
+						<label fallback="559">$INFO[Skin.String(QuickList1_9.Label)]</label>
+						<property name="Path" fallback="ReplaceWindow(musicplaylist)">$INFO[Skin.String(QuickList1_9.Path)]</property>
+						<property name="Type" fallback="custom">$INFO[Skin.String(QuickList1_9.Type)]</property>
+						<property name="DisableIcon">$INFO[Skin.String(QuickList1_9.Disable)]</property>
+						<thumb fallback="BigIcons/Format.png">$INFO[Skin.String(QuickList1_9.MultiFanart)]</thumb>
+						<onclick>SetProperty(MenuItem,QuickList1_9,home)</onclick>
+						<onclick>SetFocus(810)</onclick>
+						<visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_9.Disable))</visible>
+					</item>
+				</content>
+			</control>
+			<control type="button" id="9012">
+				<posx>150</posx>
+				<posy>890</posy>
+				<width>308</width>
+				<height>60</height>
+				<align>center</align>
+				<texturefocus border="3">button-focus.png</texturefocus>
+				<texturenofocus border="3">button-nofocus.png</texturenofocus>
+				<label>$VAR[QuickNavButtonLabelVar]</label>
+				<font>Font_Reg26</font>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+				<onclick condition="IsEmpty(Window(home).Property(quicknavsetup))">SetProperty(quicknavsetup,1,home)</onclick>
+				<onclick condition="IsEmpty(Window(home).Property(quicknavsetup))">Notification($LOCALIZE[31902],$LOCALIZE[31881])</onclick>
+				<onclick condition="!IsEmpty(Window(home).Property(quicknavsetup))">ClearProperty(quicknavsetup,home)</onclick>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>SetFocus(800,20)</onup>
+				<onup>800</onup>
+				<ondown>SetFocus(800,0)</ondown>
+				<ondown>800</ondown>
+				<visible>IsEmpty(Window(home).Property(viewtypeselect))</visible>
+				<visible>!Skin.HasSetting(kioskmode)</visible>
+			</control>
+		</control>
+	</include>
+	<include name="LiveTVVideoOSD">
+		<control type="group">
+			<control type="grouplist">
+				<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+				<posx>50</posx>
+				<posy>11</posy>
+				<width>960</width>
+				<height>135</height>
+				<itemgap>-18</itemgap>
+				<scrolltime tween="sine">200</scrolltime>
+				<orientation>horizontal</orientation>
+				<onleft>70013</onleft>
+				<onright>70004</onright>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/Speaker.png</texturenofocus>
+					<colordiffuse>white</colordiffuse>
+				</control>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/Camcorder.png</texturenofocus>
+					<colordiffuse>white</colordiffuse>
+				</control>
+			</control>
+			<control type="grouplist">
+				<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+				<posx>460</posx>
+				<posy>11</posy>
+				<width>960</width>
+				<height>135</height>
+				<align>center</align>
+				<itemgap>-18</itemgap>
+				<scrolltime tween="sine">200</scrolltime>
+				<orientation>horizontal</orientation>
+				<onleft>70002</onleft>
+				<onright>70011</onright>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/Arrowup.png</texturenofocus>
+					<colordiffuse>white</colordiffuse>
+					<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
+				</control>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/Arrowdown.png</texturenofocus>
+					<colordiffuse>white</colordiffuse>
+					<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
+				</control>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/ButtonFRW.png</texturenofocus>
+					<colordiffuse>white</colordiffuse>
+					<enable>Player.SeekEnabled</enable>
+					<animation effect="fade" start="100" end="50" time="80" condition="!Player.SeekEnabled">Conditional</animation>
+				</control>
+				<control type="togglebutton">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/ButtonPause.png</texturenofocus>
+					<alttexturenofocus>BigIcons/ButtonPlay.png</alttexturenofocus>
+					<colordiffuse>white</colordiffuse>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+				</control>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/ButtonStop.png</texturenofocus>
+					<colordiffuse>white</colordiffuse>
+				</control>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/ButtonFFW.png</texturenofocus>
+					<colordiffuse>white</colordiffuse>
+					<enable>Player.SeekEnabled</enable>
+					<animation effect="fade" start="100" end="50" time="80" condition="!Player.SeekEnabled">Conditional</animation>
+				</control>
+				<control type="togglebutton">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/ButtonRecord.png</texturenofocus>
+					<alttexturenofocus>BigIcons/ButtonRecord.png</alttexturenofocus>
+					<colordiffuse>white</colordiffuse>
+					<usealttexture>Player.Recording</usealttexture>
+					<enable>Player.CanRecord</enable>
+					<animation effect="fade" start="100" end="50" time="80" condition="!Player.CanRecord">Conditional</animation>
+				</control>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/ButtonEPG.png</texturenofocus>
+					<colordiffuse>white</colordiffuse>
+				</control>
+			</control>
+			<control type="grouplist">
+				<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+				<posx>910</posx>
+				<posy>11</posy>
+				<width>960</width>
+				<height>135</height>
+				<align>right</align>
+				<itemgap>-18</itemgap>
+				<scrolltime tween="sine">200</scrolltime>
+				<orientation>horizontal</orientation>
+				<onleft>70009</onleft>
+				<onright>70001</onright>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+				<animation effect="slide" end="412" time="160" condition="Skin.HasSetting(RemoveVideoPlayerControls)">Conditional</animation>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/ButtonTxt.png</texturenofocus>
+					<colordiffuse>white</colordiffuse>
+				</control>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/ButtonPlaylist.png</texturenofocus>
+					<colordiffuse>white</colordiffuse>
+				</control>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/Gears.png</texturenofocus>
+					<colordiffuse>white</colordiffuse>
+				</control>
+			</control>
+			<control type="group" id="703">
+				<control type="grouplist" id="70014">
+					<posx>50</posx>
+					<posy>11</posy>
+					<width>960</width>
+					<height>135</height>
+					<itemgap>-18</itemgap>
+					<scrolltime tween="sine">200</scrolltime>
+					<orientation>horizontal</orientation>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<onleft>70029</onleft>
+					<onright>70018</onright>
+					<control type="button" id="70015">
+						<width>100</width>
+						<height>100</height>
+						<texturefocus>BigIcons/Speaker.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<label>13396</label>
+						<font>-</font>
+						<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+						<onclick>ActivateWindow(OSDAudioSettings)</onclick>
+					</control>
+					<control type="button" id="70016">
+						<width>100</width>
+						<height>100</height>
+						<texturefocus>BigIcons/Camcorder.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<label>13395</label>
+						<font>-</font>
+						<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+						<onclick>ActivateWindow(OSDVideoSettings)</onclick>
+					</control>
+				</control>
+				<control type="grouplist" id="70017">
+					<posx>460</posx>
+					<posy>11</posy>
+					<width>960</width>
+					<height>135</height>
+					<align>center</align>
+					<itemgap>-18</itemgap>
+					<scrolltime tween="sine">200</scrolltime>
+					<orientation>horizontal</orientation>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<onleft>70016</onleft>
+					<onright>70027</onright>
+					<control type="button" id="70018">
+						<width>100</width>
+						<height>100</height>
+						<texturefocus>BigIcons/Arrowup.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<label>31105</label>
+						<font>-</font>
+						<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+						<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
+						<onclick>PlayerControl(Next)</onclick>
+					</control>
+					<control type="button" id="70019">
+						<width>100</width>
+						<height>100</height>
+						<texturefocus>BigIcons/Arrowdown.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<label>31106</label>
+						<font>-</font>
+						<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+						<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
+						<onclick>PlayerControl(Previous)</onclick>
+					</control>
+					<control type="button" id="70020">
+						<width>100</width>
+						<height>100</height>
+						<texturefocus>BigIcons/ButtonFRW.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<label>31352</label>
+						<font>-</font>
+						<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+						<enable>Player.SeekEnabled</enable>
+						<onclick>PlayerControl(Rewind)</onclick>
+					</control>
+					<control type="togglebutton" id="70021">
+						<width>100</width>
+						<height>100</height>
+						<texturefocus>BigIcons/ButtonPause.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<alttexturefocus>BigIcons/ButtonPlay.png</alttexturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<label>31351</label>
+						<altlabel>208</altlabel>
+						<font>-</font>
+						<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+						<onclick>PlayerControl(Play)</onclick>
+					</control>
+					<control type="button" id="70022">
+						<width>100</width>
+						<height>100</height>
+						<texturefocus>BigIcons/ButtonStop.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<label>31352</label>
+						<font>-</font>
+						<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+						<onclick>PlayerControl(Stop)</onclick>
+					</control>
+					<control type="button" id="70023">
+						<width>100</width>
+						<height>100</height>
+						<texturefocus>BigIcons/ButtonFFW.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<label>31352</label>
+						<font>-</font>
+						<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+						<enable>Player.SeekEnabled</enable>
+						<onclick>PlayerControl(Forward)</onclick>
+					</control>
+					<control type="togglebutton" id="70024">
+						<width>100</width>
+						<height>100</height>
+						<texturefocus>BigIcons/ButtonRecord.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<alttexturefocus>BigIcons/ButtonRecord.png</alttexturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<label>31110</label>
+						<altlabel>31111</altlabel>
+						<font>-</font>
+						<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+						<usealttexture>Player.Recording</usealttexture>
+						<onclick>PlayerControl(Record)</onclick>
+						<enable>Player.CanRecord</enable>
+					</control>
+					<control type="button" id="70025">
+						<width>100</width>
+						<height>100</height>
+						<texturefocus>BigIcons/ButtonEPG.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<label>31108</label>
+						<font>-</font>
+						<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+						<onclick>ActivateWindow(PVROSDGuide)</onclick>
+						<onclick>Dialog.Close(VideoOSD)</onclick>
+					</control>
+				</control>
+				<control type="grouplist" id="70026">
+					<posx>910</posx>
+					<posy>11</posy>
+					<width>960</width>
+					<height>135</height>
+					<align>right</align>
+					<itemgap>-18</itemgap>
+					<scrolltime tween="sine">200</scrolltime>
+					<orientation>horizontal</orientation>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<onleft>70025</onleft>
+					<onright>70015</onright>
+					<animation effect="slide" end="412" time="160" condition="Skin.HasSetting(RemoveVideoPlayerControls)">Conditional</animation>
+					<control type="button" id="70027">
+						<width>100</width>
+						<height>100</height>
+						<texturefocus>BigIcons/ButtonTxt.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<label>31109</label>
+						<font>-</font>
+						<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+						<onclick>ActivateWindow(Teletext)</onclick>
+						<onclick>Dialog.Close(VideoOSD)</onclick>
+					</control>
+					<control type="button" id="70028">
+						<width>100</width>
+						<height>100</height>
+						<texturefocus>BigIcons/ButtonPlaylist.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<label>31107</label>
+						<font>-</font>
+						<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+						<onclick>ActivateWindow(PVROSDChannels)</onclick>
+						<onclick>Dialog.Close(VideoOSD)</onclick>
+					</control>
+					<control type="button" id="70029">
+						<width>100</width>
+						<height>100</height>
+						<texturefocus>BigIcons/Gears.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<label>31026</label>
+						<font>-</font>
+						<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+						<onclick>ActivateWindow(1118)</onclick>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="DefaultVideoOSD">
+		<control type="group">
+			<posy>10</posy>
+			<control type="grouplist">
+				<posx>50</posx>
+				<posy>11</posy>
+				<width>960</width>
+				<height>135</height>
+				<itemgap>7</itemgap>
+				<scrolltime tween="sine">200</scrolltime>
+				<orientation>horizontal</orientation>
+				<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturefocus>BigIcons/Book.png</texturefocus>
+					<texturenofocus>BigIcons/Book.png</texturenofocus>
+					<label>298</label>
+					<font>-</font>
+					<colordiffuse>white</colordiffuse>
+					<onclick>ActivateWindow(videobookmarks)</onclick>
+				</control>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturefocus>BigIcons/Speaker.png</texturefocus>
+					<texturenofocus>BigIcons/Speaker.png</texturenofocus>
+					<label>13396</label>
+					<font>-</font>
+					<colordiffuse>white</colordiffuse>
+					<onclick>ActivateWindow(osdaudiosettings)</onclick>
+				</control>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturefocus>BigIcons/Camcorder.png</texturefocus>
+					<texturenofocus>BigIcons/Camcorder.png</texturenofocus>
+					<label>13395</label>
+					<font>-</font>
+					<colordiffuse>white</colordiffuse>
+					<onclick>ActivateWindow(osdvideosettings)</onclick>
+				</control>
+			</control>
+			<control type="grouplist">
+				<posx>480</posx>
+				<posy>11</posy>
+				<width>960</width>
+				<height>135</height>
+				<align>center</align>
+				<visible>!Skin.HasSetting(RemoveVideoPlayerControls)</visible>
+				<scrolltime tween="sine">200</scrolltime>
+				<orientation>horizontal</orientation>
+				<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/ButtonFirst.png</texturenofocus>
+					<colordiffuse>white</colordiffuse>
+				</control>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/ButtonFRW.png</texturenofocus>
+					<colordiffuse>white</colordiffuse>
+				</control>
+				<control type="togglebutton">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/ButtonPause.png</texturenofocus>
+					<alttexturenofocus>BigIcons/ButtonPlay.png</alttexturenofocus>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<colordiffuse>white</colordiffuse>
+				</control>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/ButtonStop.png</texturenofocus>
+					<colordiffuse>white</colordiffuse>
+				</control>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/ButtonFFW.png</texturenofocus>
+					<colordiffuse>white</colordiffuse>
+				</control>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/ButtonEnd.png</texturenofocus>
+					<colordiffuse>white</colordiffuse>
+				</control>
+			</control>
+			<control type="grouplist">
+				<posx>910</posx>
+				<posy>11</posy>
+				<width>960</width>
+				<height>135</height>
+				<align>right</align>
+				<itemgap>7</itemgap>
+				<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+				<scrolltime tween="sine">200</scrolltime>
+				<orientation>horizontal</orientation>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/Subtitle.png</texturenofocus>
+					<colordiffuse>white</colordiffuse>
+				</control>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/dvdmenu.png</texturenofocus>
+					<enable>VideoPlayer.HasMenu</enable>
+					<animation effect="fade" start="100" end="50" time="80" condition="!VideoPlayer.HasMenu">Conditional</animation>
+					<colordiffuse>white</colordiffuse>
+					<visible>!VideoPlayer.IsStereoscopic</visible>
+				</control>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/3D.png</texturenofocus>
+					<colordiffuse>white</colordiffuse>
+					<visible>VideoPlayer.IsStereoscopic</visible>
+				</control>
+				<control type="button">
+					<width>100</width>
+					<height>100</height>
+					<texturenofocus>BigIcons/Gears.png</texturenofocus>
+					<colordiffuse>white</colordiffuse>
+				</control>
+			</control>
+			<control type="grouplist" id="650">
+				<posx>50</posx>
+				<posy>11</posy>
+				<width>960</width>
+				<height>135</height>
+				<itemgap>7</itemgap>
+				<scrolltime tween="sine">200</scrolltime>
+				<orientation>horizontal</orientation>
+				<onup>703</onup>
+				<ondown condition="Window.IsActive(playercontrols)">9011</ondown>
+				<ondown condition="!Window.IsActive(playercontrols)">701</ondown>
+				<onleft>705</onleft>
+				<onright>600</onright>
+				<control type="button" id="700">
+					<width>100</width>
+					<height>100</height>
+					<texturefocus>BigIcons/Book.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<label>298</label>
+					<font>-</font>
+					<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+					<onclick>ActivateWindow(videobookmarks)</onclick>
+				</control>
+				<control type="button" id="701">
+					<width>100</width>
+					<height>100</height>
+					<texturefocus>BigIcons/Speaker.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<label>13396</label>
+					<font>-</font>
+					<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+					<onclick>ActivateWindow(osdaudiosettings)</onclick>
+				</control>
+				<control type="button" id="702">
+					<width>100</width>
+					<height>100</height>
+					<texturefocus>BigIcons/Camcorder.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<label>13395</label>
+					<font>-</font>
+					<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+					<onclick>ActivateWindow(osdvideosettings)</onclick>
+				</control>
+			</control>
+			<control type="grouplist" id="651">
+				<posx>480</posx>
+				<posy>11</posy>
+				<width>960</width>
+				<height>135</height>
+				<align>center</align>
+				<visible>!Skin.HasSetting(RemoveVideoPlayerControls)</visible>
+				<scrolltime tween="sine">200</scrolltime>
+				<orientation>horizontal</orientation>
+				<onup>703</onup>
+				<ondown condition="Window.IsActive(playercontrols)">9011</ondown>
+				<ondown condition="!Window.IsActive(playercontrols)">701</ondown>
+				<onleft>702</onleft>
+				<onright>703</onright>
+				<control type="button" id="600">
+					<width>100</width>
+					<height>100</height>
+					<texturefocus>BigIcons/ButtonFirst.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<label>210</label>
+					<font>-</font>
+					<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+					<onclick>PlayerControl(Previous)</onclick>
+				</control>
+				<control type="button" id="601">
+					<width>100</width>
+					<height>100</height>
+					<texturefocus>BigIcons/ButtonFRW.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<label>31354</label>
+					<font>-</font>
+					<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+					<onclick>PlayerControl(Rewind)</onclick>
+				</control>
+				<control type="togglebutton" id="602">
+					<width>100</width>
+					<height>100</height>
+					<texturefocus>BigIcons/ButtonPause.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<alttexturefocus>BigIcons/ButtonPlay.png</alttexturefocus>
+					<alttexturenofocus>-</alttexturenofocus>
+					<label>31351</label>
+					<altlabel>208</altlabel>
+					<font>-</font>
+					<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<onclick>PlayerControl(Play)</onclick>
+				</control>
+				<control type="button" id="603">
+					<width>100</width>
+					<height>100</height>
+					<texturefocus>BigIcons/ButtonStop.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<label>31352</label>
+					<font>-</font>
+					<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+					<onclick>PlayerControl(Stop)</onclick>
+				</control>
+				<control type="button" id="604">
+					<width>100</width>
+					<height>100</height>
+					<texturefocus>BigIcons/ButtonFFW.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<label>31353</label>
+					<font>-</font>
+					<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+					<onclick>PlayerControl(Forward)</onclick>
+				</control>
+				<control type="button" id="605">
+					<width>100</width>
+					<height>100</height>
+					<texturefocus>BigIcons/ButtonEnd.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<label>209</label>
+					<font>-</font>
+					<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+					<onclick>PlayerControl(Next)</onclick>
+				</control>
+			</control>
+			<control type="grouplist" id="652">
+				<posx>910</posx>
+				<posy>11</posy>
+				<width>960</width>
+				<height>135</height>
+				<align>right</align>
+				<itemgap>7</itemgap>
+				<scrolltime tween="sine">200</scrolltime>
+				<orientation>horizontal</orientation>
+				<onup>703</onup>
+				<ondown condition="Window.IsActive(playercontrols)">9011</ondown>
+				<ondown condition="!Window.IsActive(playercontrols)">701</ondown>
+				<onleft>605</onleft>
+				<onright>700</onright>
+				<control type="button" id="703">
+					<width>100</width>
+					<height>100</height>
+					<texturefocus>BigIcons/Subtitle.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<alttexturefocus>BigIcons/Subtitle.png</alttexturefocus>
+					<alttexturenofocus>-</alttexturenofocus>
+					<label>31356</label>
+					<font>-</font>
+					<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+					<onclick>ActivateWindow(SubtitleSearch)</onclick>
+				</control>
+				<control type="button" id="704">
+					<width>100</width>
+					<height>100</height>
+					<texturefocus>BigIcons/dvdmenu.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<label>31355</label>
+					<font>-</font>
+					<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+					<onclick>PlayerControl(ShowVideoMenu)</onclick>
+					<enable>VideoPlayer.HasMenu</enable>
+					<animation effect="fade" start="100" end="50" time="80" condition="!VideoPlayer.HasMenu">Conditional</animation>
+					<visible>!VideoPlayer.IsStereoscopic</visible>
+				</control>
+				<control type="button" id="706">
+					<width>100</width>
+					<height>100</height>
+					<texturefocus>BigIcons/3D.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<label>36528</label>
+					<font>-</font>
+					<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+					<onclick>ActivateWindow(1190)</onclick>
+					<visible>VideoPlayer.IsStereoscopic</visible>
+				</control>
+				<control type="button" id="705">
+					<width>100</width>
+					<height>100</height>
+					<texturefocus>BigIcons/Gears.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<label>31026</label>
+					<font>-</font>
+					<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+					<onclick>ActivateWindow(1118)</onclick>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="InvisibleIncludeLabels">
+		<control type="label" id="11111">
+			<label> $INFO[Skin.String(MusicVideosHomeItem.Widget)] $INFO[Skin.String(MusicHomeItem.Widget)] $INFO[Skin.String(TVShowHomeItem.Widget)] $INFO[Skin.String(MovieHomeItem.Widget)] $INFO[Skin.String(LiveTVHomeItem.Widget)] $INFO[Skin.String(PicturesHomeItem.Widget)] $INFO[Skin.String(CustomHomeItem1.Widget)] $INFO[Skin.String(CustomHomeItem2.Widget)] $INFO[Skin.String(CustomHomeItem3.Widget)] $INFO[Skin.String(CustomHomeItem4.Widget)] $INFO[Skin.String(CustomHomeItem5.Widget)] $INFO[Skin.String(CustomHomeItem6.Widget)] $INFO[Skin.String(InternetHomeItem.Widget)] $INFO[Skin.String(VideosHomeItem.Widget)] $INFO[Skin.String(ProgramsHomeItem.Widget)] $INFO[Skin.String(SettingsHomeItem.Widget)] $INFO[Skin.String(SearchHomeItem.Widget)] $INFO[Skin.String(ShutdownHomeItem.Widget)] $INFO[Skin.String(FavouritesHomeItem.Widget)] $INFO[Skin.String(WeatherHomeItem.Widget)] </label>
+			<textcolor>00FFFFFF</textcolor>
+		</control>
+		<control type="label" id="11112">
+			<label> $INFO[Skin.String(MusicVideosHomeItem.Widget2)] $INFO[Skin.String(MusicHomeItem.Widget2)] $INFO[Skin.String(TVShowHomeItem.Widget2)] $INFO[Skin.String(MovieHomeItem.Widget2)] $INFO[Skin.String(LiveTVHomeItem.Widget2)] $INFO[Skin.String(PicturesHomeItem.Widget2)] $INFO[Skin.String(CustomHomeItem1.Widget2)] $INFO[Skin.String(CustomHomeItem2.Widget2)] $INFO[Skin.String(CustomHomeItem3.Widget2)] $INFO[Skin.String(CustomHomeItem4.Widget2)] $INFO[Skin.String(CustomHomeItem5.Widget2)] $INFO[Skin.String(CustomHomeItem6.Widget2)] $INFO[Skin.String(InternetHomeItem.Widget2)] $INFO[Skin.String(VideosHomeItem.Widget2)] $INFO[Skin.String(ProgramsHomeItem.Widget2)] $INFO[Skin.String(SettingsHomeItem.Widget2)] $INFO[Skin.String(SearchHomeItem.Widget2)] $INFO[Skin.String(ShutdownHomeItem.Widget2)] $INFO[Skin.String(FavouritesHomeItem.Widget2)] $INFO[Skin.String(WeatherHomeItem.Widget2)] </label>
+			<textcolor>00FFFFFF</textcolor>
+		</control>
+		<control type="label" id="11113">
+			<label> $INFO[Skin.String(MusicVideosHomeItem.MultiFanart)] $INFO[Skin.String(MusicHomeItem.MultiFanart)] $INFO[Skin.String(TVShowHomeItem.MultiFanart)] $INFO[Skin.String(MovieHomeItem.MultiFanart)] $INFO[Skin.String(LiveTVHomeItem.MultiFanart)] $INFO[Skin.String(PicturesHomeItem.MultiFanart)] $INFO[Skin.String(CustomHomeItem1.MultiFanart)] $INFO[Skin.String(CustomHomeItem2.MultiFanart)] $INFO[Skin.String(CustomHomeItem3.MultiFanart)] $INFO[Skin.String(CustomHomeItem4.MultiFanart)] $INFO[Skin.String(CustomHomeItem5.MultiFanart)] $INFO[Skin.String(CustomHomeItem6.MultiFanart)] $INFO[Skin.String(VideosHomeItem.MultiFanart)] $INFO[Skin.String(ProgramsHomeItem.MultiFanart)] $INFO[Skin.String(SettingsHomeItem.MultiFanart)] $INFO[Skin.String(SearchHomeItem.MultiFanart)] $INFO[Skin.String(ShutdownHomeItem.MultiFanart)] $INFO[Skin.String(FavouritesHomeItem.MultiFanart)] $INFO[Skin.String(WeatherHomeItem.MultiFanart)] $INFO[Skin.String(CustomSub1_1.MultiFanart)] $INFO[Skin.String(InternetHomeItem.MultiFanart)] $INFO[Skin.String(CustomSub1_2.MultiFanart)] $INFO[Skin.String(CustomSub1_3.MultiFanart)] $INFO[Skin.String(CustomSub1_4.MultiFanart)] $INFO[Skin.String(CustomSub1_5.MultiFanart)] $INFO[Skin.String(CustomSub2_1.MultiFanart)] $INFO[Skin.String(CustomSub2_2.MultiFanart)] $INFO[Skin.String(CustomSub2_3.MultiFanart)] $INFO[Skin.String(CustomSub2_4.MultiFanart)] $INFO[Skin.String(CustomSub2_5.MultiFanart)] $INFO[Skin.String(CustomSub2_1.MultiFanart)] $INFO[Skin.String(CustomSub2_2.MultiFanart)] $INFO[Skin.String(CustomSub2_3.MultiFanart)] $INFO[Skin.String(CustomSub2_4.MultiFanart)] $INFO[Skin.String(CustomSub2_5.MultiFanart)] $INFO[Skin.String(CustomSub3_1.MultiFanart)] $INFO[Skin.String(CustomSub3_2.MultiFanart)] $INFO[Skin.String(CustomSub3_3.MultiFanart)] $INFO[Skin.String(CustomSub3_4.MultiFanart)] $INFO[Skin.String(CustomSub3_5.MultiFanart)] $INFO[Skin.String(CustomSub4_1.MultiFanart)] $INFO[Skin.String(CustomSub4_2.MultiFanart)] $INFO[Skin.String(CustomSub4_3.MultiFanart)] $INFO[Skin.String(CustomSub4_4.MultiFanart)] $INFO[Skin.String(CustomSub4_5.MultiFanart)] $INFO[Skin.String(CustomSub5_1.MultiFanart)] $INFO[Skin.String(CustomSub5_2.MultiFanart)] $INFO[Skin.String(CustomSub5_3.MultiFanart)] $INFO[Skin.String(CustomSub5_4.MultiFanart)] $INFO[Skin.String(CustomSub5_5.MultiFanart)] $INFO[Skin.String(CustomSub6_1.MultiFanart)] $INFO[Skin.String(CustomSub6_2.MultiFanart)] $INFO[Skin.String(CustomSub6_3.MultiFanart)] $INFO[Skin.String(CustomSub6_4.MultiFanart)] $INFO[Skin.String(CustomSub6_5.MultiFanart)] $INFO[Skin.String(CustomSub7_1.MultiFanart)] $INFO[Skin.String(CustomSub7_2.MultiFanart)] $INFO[Skin.String(CustomSub7_3.MultiFanart)] $INFO[Skin.String(CustomSub7_4.MultiFanart)] $INFO[Skin.String(CustomSub7_5.MultiFanart)] $INFO[Skin.String(CustomSub8_1.MultiFanart)] $INFO[Skin.String(CustomSub8_2.MultiFanart)] $INFO[Skin.String(CustomSub8_3.MultiFanart)] $INFO[Skin.String(CustomSub8_4)] $INFO[Skin.String(CustomSub8_5.MultiFanart)] $INFO[Skin.String(CustomSub9_1.MultiFanart)] $INFO[Skin.String(CustomSub9_2.MultiFanart)] $INFO[Skin.String(CustomSub9_3.MultiFanart)] $INFO[Skin.String(CustomSub9_4.MultiFanart)] $INFO[Skin.String(CustomSub9_5.MultiFanart)]</label>
+			<textcolor>00FFFFFF</textcolor>
+		</control>
+		<control type="label" id="11114">
+			<label> $INFO[Skin.String(MusicVideosHomeItem.Submenu)] $INFO[Skin.String(MusicHomeItem.Submenu)] $INFO[Skin.String(TVShowHomeItem.Submenu)] $INFO[Skin.String(MovieHomeItem.Submenu)] $INFO[Skin.String(LiveTVHomeItem.Submenu)] $INFO[Skin.String(PicturesHomeItem.Submenu)] $INFO[Skin.String(CustomHomeItem1.Submenu)] $INFO[Skin.String(CustomHomeItem2.Submenu)] $INFO[Skin.String(CustomHomeItem3.Submenu)] $INFO[Skin.String(CustomHomeItem4.Submenu)] $INFO[Skin.String(CustomHomeItem5.Submenu)] $INFO[Skin.String(CustomHomeItem6.Submenu)] $INFO[Skin.String(VideosHomeItem.Submenu)] $INFO[Skin.String(ProgramsHomeItem.Submenu)] $INFO[Skin.String(SettingsHomeItem.Submenu)] $INFO[Skin.String(SearchHomeItem.Submenu)] $INFO[Skin.String(ShutdownHomeItem.Submenu)] $INFO[Skin.String(FavouritesHomeItem.Submenu)] $INFO[Skin.String(WeatherHomeItem.Submenu)] </label>
+			<textcolor>00FFFFFF</textcolor>
+		</control>
+	</include>
+	<include name="TopBarContent">
+		<control type="image">
+			<posx>28</posx>
+			<posy>3</posy>
+			<width>95</width>
+			<height>36</height>
+			<texture>Pivos_Logo.png</texture>
+			<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+			<visible>Window.IsVisible(Home)</visible>
+		</control>
+		<control type="group">
+			<posx>1000</posx>
+			<posy>0</posy>
+			<animation effect="slide" start="0,0" end="140,0" condition="!Skin.HasSetting(breadcrumbsweather)">Conditional</animation>
+			<control type="grouplist">
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>38</height>
+				<width>240</width>
+				<align>right</align>
+				<itemgap>2</itemgap>
+				<orientation>horizontal</orientation>
+				<visible>Window.IsVisible(Home)</visible>
+				<control type="group">
+					<width>32</width>
+					<control type="image">
+						<posx>0</posx>
+						<posy>4</posy>
+						<width>32</width>
+						<height>32</height>
+						<texture>panel-icon-user.png</texture>
+					</control>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width min="10" max="200">auto</width>
+					<height>38</height>
+					<label>$INFO[System.ProfileName]</label>
+					<font>Font_Reg26_Caps</font>
+				</control>
+			</control>
+			<control type="image">
+				<posx>250</posx>
+				<posy>6</posy>
+				<width>2</width>
+				<height>29</height>
+				<texture>white-line.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+				<visible>Window.IsVisible(Home)</visible>
+			</control>
+			<control type="image">
+				<posx>270</posx>
+				<posy>4</posy>
+				<width>32</width>
+				<height>32</height>
+				<texture>$VAR[IconNetwork]</texture>
+			</control>
+			<control type="multiimage">
+				<posx>270</posx>
+				<posy>4</posy>
+				<width>32</width>
+				<height>32</height>
+				<imagepath>wifi</imagepath>
+				<timeperimage>200</timeperimage>
+				<visible>false</visible><!--FIXME-->
+			</control>
+			<control type="image">
+				<posx>319</posx>
+				<posy>4</posy>
+				<width>32</width>
+				<height>32</height>
+				<texture>$VAR[IconUSB]</texture>
+			</control>
+			<control type="image">
+				<posx>369</posx>
+				<posy>6</posy>
+				<width>2</width>
+				<height>29</height>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+				<texture>white-line.png</texture>
+			</control>
+			<control type="label">
+				<posx>624</posx>
+				<posy>8</posy>
+				<width>240</width>
+				<height>22</height>
+				<label>$INFO[System.Date]</label>
+				<font>Font_Reg26_Caps</font>
+				<align>right</align>
+			</control>
+			<control type="image">
+				<posx>634</posx>
+				<posy>6</posy>
+				<width>2</width>
+				<height>29</height>
+				<texture>white-line.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
+			<control type="group">
+				<posx>680</posx>
+				<animation effect="slide" start="0,0" end="40,0" condition="IsEmpty(System.Time(xx))">Conditional</animation>
+				<visible>Skin.HasSetting(breadcrumbsweather)</visible>
+				<control type="label">
+					<posx>0</posx>
+					<posy>8</posy>
+					<width>50</width>
+					<height>22</height>
+					<label>$INFO[System.Time(hh)]</label>
+					<font>Font_Reg26_Caps</font>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<posx>5</posx>
+					<posy>8</posy>
+					<width>10</width>
+					<height>22</height>
+					<label>:</label>
+					<font>Font_Reg26_Caps</font>
+				</control>
+				<control type="label">
+					<posx>16</posx>
+					<posy>8</posy>
+					<width>50</width>
+					<height>22</height>
+					<label>$INFO[System.Time(mm)]</label>
+					<font>Font_Reg26_Caps</font>
+				</control>
+			</control>
+			<control type="group">
+				<posx>680</posx>
+				<animation effect="slide" start="0,0" end="40,0" condition="IsEmpty(System.Time(xx))">Conditional</animation>
+				<visible>!Skin.HasSetting(breadcrumbsweather)</visible>
+				<control type="label">
+					<posx>0</posx>
+					<posy>8</posy>
+					<width>50</width>
+					<height>22</height>
+					<label>$INFO[System.Time(hh)]</label>
+					<font>Font_Reg26_Caps</font>
+					<align>right</align>
+					<textcolor>$VAR[DefaultColorVar]</textcolor>
+				</control>
+				<control type="label">
+					<posx>5</posx>
+					<posy>8</posy>
+					<width>10</width>
+					<height>22</height>
+					<label>:</label>
+					<font>Font_Reg26_Caps</font>
+					<textcolor>$VAR[DefaultColorVar]</textcolor>
+				</control>
+				<control type="label">
+					<posx>16</posx>
+					<posy>8</posy>
+					<width>50</width>
+					<height>22</height>
+					<label>$INFO[System.Time(mm)]</label>
+					<font>Font_Reg26_Caps</font>
+					<textcolor>$VAR[DefaultColorVar]</textcolor>
+				</control>
+			</control>
+			<control type="label">
+				<posx>765</posx>
+				<posy>8</posy>
+				<width>60</width>
+				<height>22</height>
+				<label>$INFO[System.Time(xx)]</label>
+				<font>Font_Reg26_Caps</font>
+				<align>right</align>
+			</control>
+			<control type="group">
+				<visible>Skin.HasSetting(breadcrumbsweather)</visible>
+				<control type="image">
+					<posx>775</posx>
+					<posy>6</posy>
+					<width>2</width>
+					<height>29</height>
+					<texture>white-line.png</texture>
+					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+				</control>
+				<control type="label">
+					<posx>846</posx>
+					<posy>8</posy>
+					<width>70</width>
+					<height>22</height>
+					<label>$INFO[Weather.Temperature]</label>
+					<font>Font_Reg26_Caps</font>
+					<align>right</align>
+					<textcolor>$VAR[DefaultColorVar]</textcolor>
+				</control>
+				<control type="image">
+					<posx>842</posx>
+					<posy>-15</posy>
+					<width>72</width>
+					<height>72</height>
+					<texture>weather/small/$INFO[Weather.FanartCode].png</texture>
+					<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

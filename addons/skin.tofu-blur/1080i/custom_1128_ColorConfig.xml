@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="1128" type="dialog">
+	<defaultcontrol>15</defaultcontrol>
+	<zorder>1</zorder>
+	<coordinates>
+		<posx>0</posx>
+		<posy>0</posy>
+		<system>1</system>
+	</coordinates>
+	<include>Animation_DialogPopup</include>
+	<controls>
+		<include>DialogBackFade</include>
+		<control type="group">
+			<posx>579</posx>
+			<posy>330</posy>
+			<width>764</width>
+			<animation effect="fade" start="100" end="0" time="160" condition="Window.IsActive(1138) | Window.IsActive(1127)">Conditional</animation>
+			<control type="group">
+				<animation effect="zoom" end="100,110" center="960,0" time="0" condition="Window.IsActive(skinsettings) | Window.IsActive(weather) | Window.IsActive(PVR)">Conditional</animation>
+				<control type="image">
+					<posx>6</posx>
+					<posy>-14</posy>
+					<width>737</width>
+					<height>300</height>
+					<texture border="5">panel.png</texture>
+					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+				</control>
+			</control>
+			<include>Dialogs_Settings</include>
+			<control type="grouplist">
+				<posx>138</posx>
+				<onback>Dialog.Close(1128)</onback>
+				<control type="button" id="1602">
+					<width>600</width>
+					<height>45</height>
+					<textoffsetx>15</textoffsetx>
+					<textoffsety>0</textoffsety>
+					<texturenofocus border="3">list-nofocus.png</texturenofocus>
+					<label>$LOCALIZE[31176]</label>
+					<font>Font_Bold26_Caps</font>
+					<textcolor>$VAR[FontColorVar]</textcolor>
+					<disabledcolor>$VAR[FontColorVar]</disabledcolor>
+					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+					<include>Animation_CommonFade</include>
+					<enable>no</enable>
+				</control>
+				<control type="radiobutton" id="15">
+					<label>$LOCALIZE[31182] $LOCALIZE[31083]</label>
+					<include>ColorChooserButton</include>
+					<onclick>Skin.ToggleSetting(colortext)</onclick>
+					<selected>Skin.HasSetting(colortext)</selected>
+				</control>
+				<control type="button" id="11">
+					<label>- $LOCALIZE[31976]</label>
+					<include>ColorChooserButton</include>
+					<onclick>SetProperty(coloritem,fontcolor,1124)</onclick>
+					<onclick>ActivateWindow(1138)</onclick>
+					<enable>Skin.HasSetting(colortext)</enable>
+				</control>
+				<control type="radiobutton" id="16">
+					<label>$LOCALIZE[31182] $LOCALIZE[31084]</label>
+					<include>ColorChooserButton</include>
+					<onclick>Skin.ToggleSetting(colorpanels)</onclick>
+					<selected>Skin.HasSetting(colorpanels)</selected>
+				</control>
+				<control type="button" id="12">
+					<label>- $LOCALIZE[31976]</label>
+					<include>ColorChooserButton</include>
+					<onclick>SetProperty(coloritem,panelcolor,1124)</onclick>
+					<onclick>ActivateWindow(1138)</onclick>
+					<enable>Skin.HasSetting(colorpanels)</enable>
+				</control>
+			</control>
+			<control type="image">
+				<posx>670</posx>
+				<posy>110</posy>
+				<width>50</width>
+				<height>50</height>
+				<texture>common/white.png</texture>
+				<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+				<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(colortext)">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>670</posx>
+				<posy>230</posy>
+				<width>50</width>
+				<height>50</height>
+				<texture>common/white.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+				<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(colorpanels)">Conditional</animation>
+			</control>
+		</control>
+	</controls>
+</window>

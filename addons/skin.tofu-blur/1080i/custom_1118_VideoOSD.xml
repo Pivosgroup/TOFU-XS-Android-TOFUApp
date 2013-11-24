@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1118">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<coordinates>
+		<posx>0</posx>
+		<posy>0</posy>
+		<system>1</system>
+	</coordinates>
+	<include>Animation_DialogPopup</include>
+	<controls>
+		<include>DialogBackFade</include>
+		<control type="image">
+			<posx>372</posx>
+			<posy>190</posy>
+			<width>1178</width>
+			<height>622</height>
+			<texture border="5">panel.png</texture>
+			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>376</posx>
+			<posy>232</posy>
+			<width>1170</width>
+			<height>60</height>
+			<texture border="3">list-nofocus.png</texture>
+		</control>
+		<control type="label">
+			<posx>420</posx>
+			<posy>205</posy>
+			<width>600</width>
+			<height>60</height>
+			<label>$LOCALIZE[31619]</label>
+			<font>Font_Bold33</font>
+			<textcolor>$VAR[FontColorVar]</textcolor>
+		</control>
+		<control type="grouplist" id="450">
+			<posx>376</posx>
+			<posy>292</posy>
+			<width>1170</width>
+			<height>480</height>
+			<aligny>center</aligny>
+			<pagecontrol>60</pagecontrol>
+			<onleft>60</onleft>
+			<onright>60</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<control type="radiobutton" id="453">
+				<label>31994</label>
+				<include>Objects_CommonSettingsButton</include>
+				<onclick>Skin.ToggleSetting(AlaskaPausedLabel)</onclick>
+				<selected>Skin.HasSetting(AlaskaPausedLabel)</selected>
+			</control>
+			<control type="radiobutton" id="454">
+				<label>31627</label>
+				<include>Objects_CommonSettingsButton</include>
+				<onclick>Skin.ToggleSetting(RemoveVideoPlayerControls)</onclick>
+				<selected>Skin.HasSetting(RemoveVideoPlayerControls)</selected>
+			</control>
+			<control type="radiobutton" id="455">
+				<label>31639</label>
+				<include>Objects_CommonSettingsButton</include>
+				<onclick>Skin.ToggleSetting(DisableVideoThumb)</onclick>
+				<selected>Skin.HasSetting(DisableVideoThumb)</selected>
+			</control>
+			<control type="radiobutton" id="456">
+				<label>31640</label>
+				<include>Objects_CommonSettingsButton</include>
+				<onclick>Skin.ToggleSetting(PreferRemaining)</onclick>
+				<selected>Skin.HasSetting(PreferRemaining)</selected>
+			</control>
+			<control type="radiobutton" id="457">
+				<label>31995</label>
+				<include>Objects_CommonSettingsButton</include>
+				<onclick>Skin.ToggleSetting(morefullscreeninfo)</onclick>
+				<selected>Skin.HasSetting(morefullscreeninfo)</selected>
+			</control>
+		</control>
+		<control type="scrollbar" id="60">
+			<include>Objects_CommonSettingsScrollbar</include>
+			<onleft>450</onleft>
+			<onright>450</onright>
+			<ondown>60</ondown>
+			<onup>60</onup>
+		</control>
+	</controls>
+</window>

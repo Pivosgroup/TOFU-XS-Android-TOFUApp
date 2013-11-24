@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol>1001</defaultcontrol>
+	<include>Animation_DialogZoom</include>
+	<coordinates>
+		<posx>729</posx>
+		<posy>471</posy>
+		<system>1</system>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<posx>-2000</posx>
+			<posy>-1000</posy>
+			<width>6000</width>
+			<height>3000</height>
+			<texture>common/bgcolor.png</texture>
+			<animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+			<animation effect="fade" end="100" time="560">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="240">WindowClose</animation>
+		</control>
+		<control type="image" id="999">
+			<posx>11</posx>
+			<posy>0</posy>
+			<width>439</width>
+			<height>88</height>
+			<texture border="5">panel.png</texture>
+			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		</control>
+		<control type="button" id="1001">
+			<posx>15</posx>
+			<posy>15</posy>
+			<width>431</width>
+			<height>58</height>
+			<textoffsety>12</textoffsety>
+			<align>center</align>
+			<texturefocus border="3">list-focus.png</texturefocus>
+			<texturenofocus border="3">list-nofocus.png</texturenofocus>
+			<font>Font_Reg30_2</font>
+			<onleft>1001</onleft>
+			<onright>1001</onright>
+			<onup>1003</onup>
+			<ondown>1002</ondown>
+		</control>
+		<control type="button" id="1002">
+			<posx>15</posx>
+			<posy>97</posy>
+			<width>431</width>
+			<height>58</height>
+			<textoffsety>12</textoffsety>
+			<align>center</align>
+			<texturefocus border="3">list-focus.png</texturefocus>
+			<texturenofocus border="3">list-nofocus.png</texturenofocus>
+			<font>Font_Reg30_2</font>
+			<onleft>1002</onleft>
+			<onright>1002</onright>
+			<onup>1001</onup>
+			<ondown>1003</ondown>
+		</control>
+		<control type="button" id="1003">
+			<posx>15</posx>
+			<posy>155</posy>
+			<width>431</width>
+			<height>58</height>
+			<textoffsety>12</textoffsety>
+			<align>center</align>
+			<texturefocus border="3">list-focus.png</texturefocus>
+			<texturenofocus border="3">list-nofocus.png</texturenofocus>
+			<font>Font_Reg30_2</font>
+			<onleft>1003</onleft>
+			<onright>1003</onright>
+			<onup>1002</onup>
+			<ondown>1001</ondown>
+		</control>
+	</controls>
+</window>

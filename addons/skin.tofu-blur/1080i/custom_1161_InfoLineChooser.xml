@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1161">
+	<defaultcontrol always="true">4</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>DialogBackFade</include>
+		<control type="group">
+			<posx>280</posx>
+			<posy>-60</posy>
+			<include>Animation_OpenCloseZoom</include>
+			<visible>!Window.IsActive(script-RSS_Editor-rssEditor.xml)</visible>
+			<control type="image">
+				<posx>248</posx>
+				<posy>210</posy>
+				<width>904</width>
+				<height>520</height>
+				<texture border="5">panel.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
+			<control type="panel" id="4">
+				<posx>252</posx>
+				<posy>240</posy>
+				<width>896</width>
+				<height>500</height>
+				<aligny>center</aligny>
+				<scrolltime>0</scrolltime>
+				<orientation>vertical</orientation>
+				<onright>20</onright>
+				<itemlayout height="60" width="448">
+					<control type="image">
+						<width>448</width>
+						<height>60</height>
+						<texture border="3">button-nofocus.png</texture>
+						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+					</control>
+					<control type="label">
+						<width>448</width>
+						<height>60</height>
+						<textoffsetx>10</textoffsetx>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Font_Reg30_2</font>
+					</control>
+				</itemlayout>
+				<focusedlayout height="60" width="448">
+					<control type="group">
+						<visible>Control.HasFocus(4)</visible>
+						<control type="image">
+							<width>448</width>
+							<height>60</height>
+							<texture border="3">button-focus.png</texture>
+							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+						</control>
+						<control type="label">
+							<width>448</width>
+							<height>60</height>
+							<textoffsetx>10</textoffsetx>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Font_Reg30_2</font>
+							<scroll>true</scroll>
+						</control>
+					</control>
+					<control type="group">
+						<visible>!Control.HasFocus(4)</visible>
+						<control type="image">
+							<width>448</width>
+							<height>60</height>
+							<texture border="3">button-nofocus.png</texture>
+							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+						</control>
+						<control type="label">
+							<width>448</width>
+							<textoffsetx>10</textoffsetx>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Font_Reg30_2</font>
+						</control>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>$LOCALIZE[231]</label>
+						<onclick>Skin.SetString(ItemToEdit.InfoLine,none)</onclick>
+						<onclick>Dialog.Close(1161)</onclick>
+					</item>
+					<item>
+						<label>31502</label>
+						<onclick>Skin.SetString(ItemToEdit.InfoLine,movies)</onclick>
+						<onclick>Dialog.Close(1161)</onclick>
+						<visible>Library.HasContent(movies)</visible>
+					</item>
+					<item>
+						<label>31503</label>
+						<onclick>Skin.SetString(ItemToEdit.InfoLine,tvshows)</onclick>
+						<onclick>Dialog.Close(1161)</onclick>
+						<visible>Library.HasContent(tvshows)</visible>
+					</item>
+					<item>
+						<label>31501</label>
+						<onclick>Skin.SetString(ItemToEdit.InfoLine,music)</onclick>
+						<onclick>Dialog.Close(1161)</onclick>
+						<visible>Library.HasContent(music)</visible>
+					</item>
+					<item>
+						<label>20389</label>
+						<onclick>Skin.SetString(ItemToEdit.InfoLine,musicvideos)</onclick>
+						<onclick>Dialog.Close(1161)</onclick>
+						<visible>Library.HasContent(musicvideos)</visible>
+					</item>
+					<item>
+						<label>31509</label>
+						<onclick>Skin.SetString(ItemToEdit.InfoLine,favourites)</onclick>
+						<onclick>Dialog.Close(1161)</onclick>
+						<visible>System.HasAddon(script.favourites)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[20161] $LOCALIZE[24001]</label>
+						<onclick>Skin.SetString(ItemToEdit.InfoLine,programs)</onclick>
+						<onclick>Dialog.Close(1161)</onclick>
+					</item>
+					<item>
+						<label>31510</label>
+						<onclick>Skin.SetString(ItemToEdit.InfoLine,weather)</onclick>
+						<onclick>Dialog.Close(1161)</onclick>
+					</item>
+					<item>
+						<label>31819</label>
+						<onclick>Skin.SetString(ItemToEdit.InfoLine,nextaired)</onclick>
+						<onclick>Dialog.Close(1161)</onclick>
+						<visible>Library.HasContent(tvshows)</visible>
+					</item>
+					<item>
+						<label>31358</label>
+						<onclick>Skin.SetString(ItemToEdit.InfoLine,system)</onclick>
+						<onclick>Dialog.Close(1161)</onclick>
+					</item>
+					<item>
+						<label>12390</label>
+						<onclick>Skin.SetString(ItemToEdit.InfoLine,shutdown)</onclick>
+						<onclick>Dialog.Close(1161)</onclick>
+					</item>
+				</content>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+	<include name="weatherwidgetback">
+		<control type="image">
+			<width>284</width>
+			<height>396</height>
+			<texture border="20">$VAR[WeatherWidgetBackVar]</texture>
+			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		</control>
+	</include>
+	<include name="weatherwidget2back">
+		<control type="image">
+			<width>284</width>
+			<height>396</height>
+			<texture border="20">$VAR[WeatherWidget2BackVar]</texture>
+			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		</control>
+	</include>
+</includes>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="1123" type="dialog">
+	<defaultcontrol always="true">100</defaultcontrol>
+	<include>Animation_DialogPopup</include>
+	<controls>
+		<include>DialogBackFade</include>
+		<control type="image">
+			<posx>0</posx>
+			<posy>387</posy>
+			<width>87</width>
+			<height>214</height>
+			<aspectratio>keep</aspectratio>
+			<texture>tooltip.png</texture>
+			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			<include>Animation_CommonFade</include>
+		</control>
+		<control type="group">
+			<control type="image">
+				<posx>11</posx>
+				<posy>492</posy>
+				<width>25</width>
+				<height>25</height>
+				<texture>Back.png</texture>
+				<animation effect="rotate" end="-90" center="auto" delay="240" time="640" condition="Window.IsActive(musicinformation) | Control.HasFocus(7000) | Control.IsVisible(508) | Control.IsVisible(501) | Control.IsVisible(503) | Control.IsVisible(510) | Control.IsVisible(57) | Control.IsVisible(516) | Control.IsVisible(509) | [Control.IsVisible(500) + !Skin.HasSetting(WallVertical)]">Conditional</animation>
+				<animation effect="rotate" end="-180" center="auto" delay="240" time="640" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+				<animation effect="rotate" start="-90" end="180" center="auto" delay="240" time="640" condition="Control.IsVisible(503) + Skin.HasSetting(landscapeonelogo) + Container.Content(movies)">Conditional</animation>
+				<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+			</control>
+		</control>
+		<control type="image">
+			<posx>120</posx>
+			<posy>480</posy>
+			<width>50</width>
+			<height>50</height>
+			<texture flipx="true">arrowright.png</texture>
+			<animation effect="slide" end="100,0" time="640" pulse="true" tween="cubic" reversible="false" condition="true">Conditional</animation>
+		</control>
+		<control type="group">
+			<posx>589</posx>
+			<posy>375</posy>
+			<control type="image">
+				<posx>19</posx>
+				<posy>20</posy>
+				<width>742</width>
+				<height>360</height>
+				<texture border="5">panel.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>23</posx>
+				<width>734</width>
+				<height>60</height>
+				<texture border="3">list-nofocus.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
+			<control type="label">
+				<width>780</width>
+				<height>78</height>
+				<textoffsetx>45</textoffsetx>
+				<align>center</align>
+				<label>31706</label>
+				<textcolor>$VAR[FontColorVar]</textcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="textbox">
+				<posx>30</posx>
+				<posy>68</posy>
+				<width>720</width>
+				<height>250</height>
+				<align>center</align>
+				<label>31707</label>
+			</control>
+			<control type="button" id="100">
+				<posx>278</posx>
+				<posy>328</posy>
+				<width>225</width>
+				<height>45</height>
+				<textoffsetx>30</textoffsetx>
+				<align>center</align>
+				<label>186</label>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+				<texturefocus border="3">button-focus.png</texturefocus>
+				<texturenofocus border="3">button-nofocus.png</texturenofocus>
+				<onclick>Skin.Setbool(ExplainMediaMenu)</onclick>
+				<onclick>back</onclick>
+				<onleft>100</onleft>
+				<onright>100</onright>
+				<onup>100</onup>
+				<ondown>100</ondown>
+			</control>
+		</control>
+	</controls>
+</window>

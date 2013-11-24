@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1133">
+	<onload>ClearProperty(NoStyleSelect)</onload>
+	<defaultcontrol always="true">4</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>DialogBackFade</include>
+		<control type="group">
+			<posy>30</posy>
+			<control type="image">
+				<posx>346</posx>
+				<posy>110</posy>
+				<width>1208</width>
+				<height>790</height>
+				<texture border="5">panel.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
+			<include>Animation_OpenCloseZoom</include>
+			<control type="group">
+				<posy>-100</posy>
+				<control type="panel" id="4">
+					<posx>350</posx>
+					<posy>240</posy>
+					<width>1200</width>
+					<height>720</height>
+					<aligny>center</aligny>
+					<scrolltime>0</scrolltime>
+					<onup>4</onup>
+					<ondown>4</ondown>
+					<orientation>vertical</orientation>
+					<itemlayout height="60" width="400">
+						<control type="image">
+							<width>400</width>
+							<height>60</height>
+							<texture border="3">list-nofocus.png</texture>
+							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+						</control>
+						<control type="label">
+							<width>400</width>
+							<height>60</height>
+							<textoffsetx>10</textoffsetx>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Font_Reg30_2</font>
+						</control>
+					</itemlayout>
+					<focusedlayout height="60" width="400">
+						<control type="group">
+							<visible>Control.HasFocus(4)</visible>
+							<control type="image">
+								<width>400</width>
+								<height>60</height>
+								<texture border="3">list-focus.png</texture>
+								<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+							</control>
+							<control type="label">
+								<width>400</width>
+								<height>60</height>
+								<textoffsetx>10</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+								<font>Font_Reg30_2</font>
+								<scroll>true</scroll>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!Control.HasFocus(4)</visible>
+							<control type="image">
+								<width>400</width>
+								<height>60</height>
+								<texture>button-nofocus.png</texture>
+								<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+							</control>
+							<control type="label">
+								<width>400</width>
+								<textoffsetx>10</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+								<font>Font_Reg30_2</font>
+							</control>
+						</control>
+					</focusedlayout>
+					<content>
+						<item>
+							<label>$LOCALIZE[231]</label>
+							<onclick>Skin.Reset(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)])</onclick>
+							<onclick>Skin.Reset(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title)</onclick>
+							<onclick>Dialog.Close(1133)</onclick>
+						</item>
+						<item>
+							<label>$LOCALIZE[31323]</label>
+							<onclick>SetProperty(CustomYesNoDialog,recentmovies,1124)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31323])</onclick>
+							<onclick>ActivateWindow(1137)</onclick>
+							<visible>Library.HasContent(movies)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[31222]</label>
+							<onclick>SetProperty(CustomYesNoDialog,randommovies,1124)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31222])</onclick>
+							<onclick>ActivateWindow(1137)</onclick>
+							<visible>Library.HasContent(movies)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[31872]</label>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featuredmoviesdefault)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31872])</onclick>
+							<visible>Library.HasContent(movies)</visible>
+							<onclick>Dialog.Close(1133)</onclick>
+						</item>
+						<item>
+							<label>$LOCALIZE[31335]</label>
+							<onclick>SetProperty(CustomYesNoDialog,watchlistmovies,1124)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31335])</onclick>
+							<onclick>ActivateWindow(1137)</onclick>
+							<visible>Library.HasContent(movies)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[31324]</label>
+							<onclick>SetProperty(CustomYesNoDialog,recenttv,1124)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31324])</onclick>
+							<onclick>ActivateWindow(1137)</onclick>
+							<visible>Library.HasContent(tvshows)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[31220]</label>
+							<onclick>SetProperty(CustomYesNoDialog,randomtv,1124)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31220])</onclick>
+							<onclick>ActivateWindow(1137)</onclick>
+							<visible>Library.HasContent(tvshows)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[31464]</label>
+							<onclick>SetProperty(CustomYesNoDialog,watchlisttv,1124)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31464])</onclick>
+							<onclick>ActivateWindow(1137)</onclick>
+							<visible>Library.HasContent(tvshows)</visible>
+						</item>
+						<item>
+							<label>31819</label>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31819])</onclick>
+							<onclick>SetProperty(CustomYesNoDialog,nextairedtv,1124)</onclick>
+							<onclick>ActivateWindow(1137)</onclick>
+							<visible>Library.HasContent(tvshows)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[31873]</label>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featuredtvdefault)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31873])</onclick>
+							<visible>Library.HasContent(tvshows)</visible>
+							<onclick>Dialog.Close(1133)</onclick>
+						</item>
+						<item>
+							<label>$LOCALIZE[31359]</label>
+							<onclick>SetProperty(CustomYesNoDialog,recentalbums,1124)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31359])</onclick>
+							<onclick>ActivateWindow(1137)</onclick>
+							<visible>Library.HasContent(music)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[31068]</label>
+							<onclick>SetProperty(CustomYesNoDialog,randomalbums,1124)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31068])</onclick>
+							<onclick>ActivateWindow(1137)</onclick>
+							<visible>Library.HasContent(music)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[31874]</label>
+							<visible>Library.HasContent(music)</visible>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featuredmusicdefault)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31068])</onclick>
+							<onclick>Dialog.Close(1133)</onclick>
+						</item>
+						<item>
+							<label>$LOCALIZE[31326]</label>
+							<visible>Library.HasContent(music)</visible>
+							<onclick>SetProperty(CustomYesNoDialog,watchlistalbums,1124)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31326])</onclick>
+							<onclick>ActivateWindow(1137)</onclick>
+							<onclick>Dialog.Close(1133)</onclick>
+						</item>
+						<item>
+							<label>31817</label>
+							<onclick>SetProperty(CustomYesNoDialog,randomartists,1124)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31817])</onclick>
+							<onclick>ActivateWindow(1137)</onclick>
+						</item>
+						<item>
+							<label>$LOCALIZE[31081]</label>
+							<onclick>SetProperty(CustomYesNoDialog,recentmusicvideos,1124)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31081])</onclick>
+							<onclick>ActivateWindow(1137)</onclick>
+							<visible>Library.HasContent(MusicVideos)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[31091]</label>
+							<onclick>SetProperty(CustomYesNoDialog,randommusicvideos,1124)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31091])</onclick>
+							<onclick>ActivateWindow(1137)</onclick>
+							<visible>Library.HasContent(MusicVideos)</visible>
+						</item>
+						<item>
+							<label>31712</label>
+							<onclick>SetProperty(CustomYesNoDialog,watchlistmusicvideos,1124)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31712])</onclick>
+							<onclick>ActivateWindow(1137)</onclick>
+							<visible>Library.HasContent(MusicVideos)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[31070]</label>
+							<onclick>SetProperty(CustomYesNoDialog,randomaddons,1124)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31070])</onclick>
+							<onclick>ActivateWindow(1137)</onclick>
+						</item>
+						<item>
+							<label>1036</label>
+							<onclick>RunScript(script.favourites)</onclick>
+							<onclick>SetProperty(CustomYesNoDialog,favouriteIcon,1124)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[1036])</onclick>
+							<onclick>ActivateWindow(1137)</onclick>
+						</item>
+						<item>
+							<label>$LOCALIZE[31069] 1</label>
+							<onclick>SetProperty(CustomYesNoDialog,Icon1,1124)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,Icon Panel 1)</onclick>
+							<onclick>ActivateWindow(1137)</onclick>
+						</item>
+						<item>
+							<label>$LOCALIZE[31069] 2</label>
+							<onclick>SetProperty(CustomYesNoDialog,Icon2,1124)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,Icon Panel 2)</onclick>
+							<onclick>ActivateWindow(1137)</onclick>
+						</item>
+						<item>
+							<label>$LOCALIZE[31071]</label>
+							<onclick>SetProperty(CustomYesNoDialog,weather,1124)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31071])</onclick>
+							<onclick>ActivateWindow(1146)</onclick>
+							<visible>!IsEmpty(Weather.Plugin)</visible>
+						</item>
+						<item>
+							<label>31183</label>
+							<onclick>SetProperty(CustomYesNoDialog,wundergroundpanel,1124)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,Weather Wunderground)</onclick>
+							<onclick>ActivateWindow(1146)</onclick>
+							<visible>SubString(Weather.Plugin,weather.wunderground)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[31072]</label>
+							<onclick>SetProperty(CustomYesNoDialog,systemclassic,1124)</onclick>
+							<onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[138])</onclick>
+							<onclick>ActivateWindow(1146)</onclick>
+						</item>
+					</content>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

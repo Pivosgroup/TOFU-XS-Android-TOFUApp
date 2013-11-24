@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1116">
+	<defaultcontrol>450</defaultcontrol>
+	<zorder>4</zorder>
+	<coordinates>
+		<posx>0</posx>
+		<posy>0</posy>
+		<system>1</system>
+	</coordinates>
+	<include>Animation_DialogPopup</include>
+	<controls>
+		<include>DialogBackFade</include>
+		<control type="group">
+			<posy>-100</posy>
+			<control type="image">
+				<posx>372</posx>
+				<posy>190</posy>
+				<width>1178</width>
+				<height>622</height>
+				<texture border="5">panel.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>376</posx>
+				<posy>232</posy>
+				<width>1170</width>
+				<height>60</height>
+				<texture border="3">list-nofocus.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>356</posx>
+				<posy>225</posy>
+				<width>1210</width>
+				<height>60</height>
+				<align>center</align>
+				<label>$LOCALIZE[513]</label>
+				<font>Font_Bold33</font>
+				<textcolor>$VAR[FontColorVar]</textcolor>
+				<visible>Window.IsActive(home)</visible>
+			</control>
+			<control type="label">
+				<posx>356</posx>
+				<posy>225</posy>
+				<width>1210</width>
+				<height>60</height>
+				<align>center</align>
+				<label>$LOCALIZE[31676] [LOWERCASE]$LOCALIZE[5][/LOWERCASE]</label>
+				<font>Font_Bold33</font>
+				<textcolor>$VAR[FontColorVar]</textcolor>
+				<visible>Window.IsActive(skinsettings)</visible>
+			</control>
+			<control type="grouplist" id="450">
+				<posx>376</posx>
+				<posy>292</posy>
+				<width>1170</width>
+				<height>480</height>
+				<aligny>center</aligny>
+				<onleft>60</onleft>
+				<onright>60</onright>
+				<onup>450</onup>
+				<ondown>450</ondown>
+				<onback>Dialog.Close(1116)</onback>
+				<control type="radiobutton" id="460">
+					<label>$LOCALIZE[24021] $LOCALIZE[31676]</label>
+					<include>Objects_CommonSettingsButton</include>
+					<onclick>Skin.ToggleSetting(disabletopbar)</onclick>
+					<onclick>Skin.Reset(GlobalNowPlaying)</onclick>
+					<onclick>Skin.Reset(breadcrumbslabel)</onclick>
+					<onclick>Skin.Reset(breadcrumbsweather)</onclick>
+					<selected>Skin.HasSetting(disabletopbar)</selected>
+				</control>
+				<control type="button" id="462">
+					<label>$LOCALIZE[31677]:</label>
+					<label2>[COLOR $VAR[FontColorVar]]$VAR[TopBarLeftSideLabelVar][/COLOR]</label2>
+					<include>Objects_CommonSettingsButton</include>
+					<onclick condition="!Skin.HasSetting(breadcrumbslabel)">Skin.SetBool(breadcrumbslabel)</onclick>
+					<onclick condition="Skin.HasSetting(breadcrumbslabel)">Skin.Reset(GlobalNowPlaying)</onclick>
+					<onclick condition="Skin.HasSetting(breadcrumbslabel)">Skin.Reset(breadcrumbslabel)</onclick>
+					<visible>!Skin.HasSetting(disabletopbar)</visible>
+				</control>
+				<control type="radiobutton" id="463">
+					<label>$LOCALIZE[31116] '$LOCALIZE[31040]'</label>
+					<include>Objects_CommonSettingsButton</include>
+					<onclick>Skin.ToggleSetting(GlobalNowPlaying)</onclick>
+					<selected>Skin.HasSetting(GlobalNowPlaying)</selected>
+					<enable>Skin.HasSetting(breadcrumbslabel)</enable>
+					<visible>!Skin.HasSetting(disabletopbar)</visible>
+				</control>
+				<control type="radiobutton" id="464">
+					<label>$LOCALIZE[31116] $LOCALIZE[20088]</label>
+					<include>Objects_CommonSettingsButton</include>
+					<onclick>Skin.ToggleSetting(breadcrumbsweather)</onclick>
+					<selected>Skin.HasSetting(breadcrumbsweather)</selected>
+					<visible>!Skin.HasSetting(disabletopbar)</visible>
+				</control>
+				<control type="button" id="465">
+					<align>center</align>
+					<label>13012</label>
+					<include>Objects_CommonSettingsButton</include>
+					<onclick>Dialog.Close(1116)</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="141">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<coordinates>
+		<posx>0</posx>
+		<posy>0</posy>
+		<system>1</system>
+	</coordinates>
+	<include>Animation_DialogPopup</include>
+	<controls>
+		<include>DialogBackFade</include>
+		<control type="image">
+			<posx>372</posx>
+			<posy>200</posy>
+			<width>1177</width>
+			<height>692</height>
+			<texture border="5">panel.png</texture>
+			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>376</posx>
+			<posy>232</posy>
+			<width>1169</width>
+			<height>60</height>
+			<texture border="3">list-nofocus.png</texture>
+			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		</control>
+		<control type="label" id="1">
+			<posx>420</posx>
+			<posy>225</posy>
+			<width>600</width>
+			<height>60</height>
+			<label>$LOCALIZE[1046]</label>
+			<font>Font_Bold33</font>
+			<textcolor>$VAR[FontColorVar]</textcolor>
+		</control>
+		<control type="label">
+			<posx>1514</posx>
+			<posy>842</posy>
+			<width>315</width>
+			<height>60</height>
+			<align>right</align>
+			<aligny>bottom</aligny>
+			<label>$INFO[Container(3).NumItems,, $LOCALIZE[31025]]$INFO[Container(3).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(3).NumPages,/,)]</label>
+			<font>Font_Reg25</font>
+		</control>
+		<control type="list" id="3">
+			<posx>376</posx>
+			<posy>292</posy>
+			<width>1169</width>
+			<height>540</height>
+			<onleft>61</onleft>
+			<onright>61</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>61</pagecontrol>
+			<itemlayout height="60">
+				<control type="image">
+					<width>1172</width>
+					<height>60</height>
+					<texture border="3">list-nofocus.png</texture>
+					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>45</posx>
+					<posy>14</posy>
+					<width>32</width>
+					<height>32</height>
+					<texture>network/$INFO[ListItem.Property(state)].png</texture>
+				</control>
+				<control type="label">
+					<posx>95</posx>
+					<posy>0</posy>
+					<width>955</width>
+					<height>60</height>
+					<font>Font_Reg30_2</font>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="image">
+					<posx>1064</posx>
+					<posy>22</posy>
+					<width>16</width>
+					<height>16</height>
+					<visible>!IsEmpty(ListItem.Property(encryption))</visible>
+					<texture>network/ap-lock.png</texture>
+				</control>
+				<control type="image">
+					<posx>1096</posx>
+					<posy>23</posy>
+					<width>28</width>
+					<height>14</height>
+					<texture>$INFO[ListItem.Property(signal),network/ap-signal,.png]</texture>
+				</control>
+			</itemlayout>
+			<focusedlayout height="60">
+				<control type="image">
+					<width>1172</width>
+					<height>60</height>
+					<texture border="3">list-nofocus.png</texture>
+					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+				</control>
+				<control type="image">
+					<width>1172</width>
+					<height>60</height>
+					<texture border="3">list-focus.png</texture>
+					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+					<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(3)">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>45</posx>
+					<posy>14</posy>
+					<width>32</width>
+					<height>32</height>
+					<texture>network/$INFO[ListItem.Property(state)].png</texture>
+				</control>
+				<control type="label">
+					<posx>95</posx>
+					<posy>0</posy>
+					<width>955</width>
+					<height>60</height>
+					<font>Font_Reg30_2</font>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="image">
+					<posx>1064</posx>
+					<posy>22</posy>
+					<width>16</width>
+					<height>16</height>
+					<visible>!IsEmpty(ListItem.Property(encryption))</visible>
+					<texture>network/ap-lock.png</texture>
+				</control>
+				<control type="image">
+					<posx>1096</posx>
+					<posy>23</posy>
+					<width>28</width>
+					<height>14</height>
+					<texture>$INFO[ListItem.Property(signal),network/ap-signal,.png]</texture>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="scrollbar" id="61">
+			<posx>352</posx>
+			<posy>285</posy>
+			<width>46</width>
+			<height>540</height>
+			<include>Animation_VerticalScrollBar</include>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<ondown>61</ondown>
+			<onup>61</onup>
+		</control>
+	</controls>
+</window>

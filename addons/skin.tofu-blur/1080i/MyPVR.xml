@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol>32</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include condition="!Skin.HasSetting(setup-0.1.3)">AutoConfig</include>
+	<onload condition="!Skin.HasSetting(ExplainMediaMenu)">ActivateWindow(1123)</onload>
+	<controls>
+		<control type="multiimage">
+			<imagepath background="true">$VAR[LiveTVFanartVar]</imagepath>
+			<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
+			<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
+		</control>
+		<control type="image">
+			<posy>0</posy>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>common/bgcolor.png</texture>
+			<animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+			<animation effect="fade" end="100" time="440" delay="160">VisibleChange</animation>
+			<visible>Skin.HasSetting(darkinfopane)</visible>
+		</control>
+		<control type="group">
+			<visible>!Control.IsVisible(11) + !Control.IsVisible(12) + !Control.IsVisible(13)</visible>
+			<control type="visualisation">
+				<include>FullscreenDimensions</include>
+				<visible>Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis)</visible>
+			</control>
+			<control type="videowindow">
+				<include>FullscreenDimensions</include>
+				<visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<posy>30</posy>
+			<include>Animation_OpenCloseZoom_New</include>
+			<control type="group">
+				<include>Animation_VisibleChange200</include>
+				<visible>Control.IsVisible(10) | Control.IsVisible(11) | Control.IsVisible(12) | Control.IsVisible(13) | Control.IsVisible(14) | Control.IsVisible(15) | Control.IsVisible(16) | Control.IsVisible(17)</visible>
+				<control type="image">
+					<posx>59</posx>
+					<posy>43</posy>
+					<width>1806</width>
+					<height>938</height>
+					<texture border="5">panel.png</texture>
+					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+				</control>
+				<control type="group">
+					<visible>Control.IsVisible(11) | Control.IsVisible(12) | Control.IsVisible(13)</visible>
+					<control type="image">
+						<posx>0</posx>
+						<posy>95</posy>
+						<width>940</width>
+						<height>830</height>
+						<texture>views/listpanel_detailwide.png</texture>
+						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>938</posx>
+						<posy>95</posy>
+						<width>2</width>
+						<height>830</height>
+						<texture>views/tripanel/upright.png</texture>
+						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+						<animation effect="fade" end="50" condition="true">Conditional</animation>
+					</control>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<posx>100</posx>
+			<posy>135</posy>
+			<visible>Control.IsVisible(11) | Control.IsVisible(12) | Control.IsVisible(13)</visible>
+			<include>Animation_VisibleChange200</include>
+			<include>Animation_OpenCloseZoom_New</include>
+			<control type="image">
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>810</width>
+				<height>454</height>
+				<texture>common/black.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>814</width>
+				<height>458</height>
+				<texture border="5">panel.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>804</width>
+				<height>448</height>
+				<texture>$VAR[PVRThumbVar]</texture>
+				<include>Animation_VisibleChange200</include>
+				<visible>!Player.HasVideo</visible>
+			</control>
+			<control type="videowindow">
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>804</width>
+				<height>448</height>
+				<visible>Player.HasVideo</visible>
+				<animation effect="slide" end="-3000,0" time="0">WindowClose</animation>
+			</control>
+		</control>
+		<control type="group" id="50">
+			<posy>30</posy>
+			<include>Animation_OpenCloseZoom_New</include>
+			<!-- view id = 10 -->
+			<include>EPGTimelineView</include>
+			<!-- view id = 11+12 -->
+			<include>LiveTVChannelView</include>
+			<!-- view id = 13 -->
+			<include>LiveTVRecordingsView</include>
+			<!-- view id = 14 -->
+			<include>LiveTVTimersView</include>
+			<!-- view id = 15 -->
+			<include>LiveTVGuideChannelView</include>
+			<!-- view id = 16 -->
+			<include>LiveTVGuideNowNextView</include>
+			<!-- view id = 17 -->
+			<include>LiveTVSearchView</include>
+		</control>
+		<control type="group">
+			<include>Animation_HideBreadCrumbs</include>
+			<include>Breadcrumbs_BackBar</include>
+			<include>BreadcrumbsContent</include>
+			<include>Breadcrumbs_Furniture</include>
+		</control>
+		<include>Furniture_NowPlayingWidget</include>
+		<include>Media_Menu_Furniture</include>
+		<control type="label" id="29">
+			<font>-</font>
+			<include>HiddenObject</include>
+		</control>
+		<control type="label" id="30">
+			<font>-</font>
+			<include>HiddenObject</include>
+		</control>
+		<control type="group" id="9000">
+			<animation type="Conditional" condition="Window.IsActive(1127)">
+				<effect type="slide" end="-600" time="320" easing="in" tween="cubic" />
+			</animation>
+			<control type="group">
+				<include>Animation_MediaMenuSlide2</include>
+				<control type="grouplist" id="9003">
+					<width>400</width>
+					<height>1080</height>
+					<orientation>vertical</orientation>
+					<onright>50</onright>
+					<onup>9003</onup>
+					<ondown>9003</ondown>
+					<onback>50</onback>
+					<control type="button" id="32">
+						<label>19023</label>
+						<include>Objects_MediaMenuButtonIcons</include>
+					</control>
+					<control type="button" id="33">
+						<posy>38</posy>
+						<label>19024</label>
+						<visible>!Skin.HasSetting(noradio)</visible>
+						<include>Objects_MediaMenuButtonIcons</include>
+					</control>
+					<control type="button" id="34">
+						<posy>112</posy>
+						<label>19163</label>
+						<include>Objects_MediaMenuButtonIcons</include>
+					</control>
+					<control type="button" id="31">
+						<posy>38</posy>
+						<label>-</label>
+						<include>Objects_MediaMenuButtonIcons</include>
+					</control>
+					<control type="button" id="35">
+						<posy>150</posy>
+						<label>19040</label>
+						<include>Objects_MediaMenuButtonIcons</include>
+					</control>
+					<control type="button" id="36">
+						<posy>188</posy>
+						<label>137</label>
+						<include>Objects_MediaMenuButtonIcons</include>
+					</control>
+					<control type="radiobutton" id="326">
+						<posy>188</posy>
+						<label>31175</label>
+						<onclick>Skin.ToggleSetting(smalltvlist)</onclick>
+						<include>Objects_MediaMenuButtonIcons</include>
+						<selected>!Skin.HasSetting(smalltvlist)</selected>
+					</control>
+					<control type="button" id="1664">
+						<label>31708</label>
+						<include>Objects_MediaMenuButtonAlt</include>
+						<onclick>ActivateWindow(1127)</onclick>
+					</control>
+				</control>
+				<control type="grouplist">
+					<posy>15</posy>
+					<orientation>vertical</orientation>
+					<itemgap>20</itemgap>
+					<visible>ControlGroup(9003).HasFocus</visible>
+					<animation effect="fade" time="220">Visible</animation>
+					<animation effect="fade" time="160" delay="1000">Hidden</animation>
+					<control type="image">
+						<texture>BigIcons/Television.png</texture>
+						<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(32)">Conditional</animation>
+						<include>MediaMenuIcons</include>
+					</control>
+					<control type="image">
+						<texture>BigIcons/Microphone.png</texture>
+						<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(33)">Conditional</animation>
+						<include>MediaMenuIcons</include>
+					</control>
+					<control type="image">
+						<texture>BigIcons/ButtonRecord.png</texture>
+						<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(34)">Conditional</animation>
+						<include>MediaMenuIcons</include>
+					</control>
+					<control type="image">
+						<texture>BigIcons/ButtonEPG.png</texture>
+						<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(31)">Conditional</animation>
+						<include>MediaMenuIcons</include>
+					</control>
+					<control type="image">
+						<texture>BigIcons/AlarmClock.png</texture>
+						<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(35)">Conditional</animation>
+						<include>MediaMenuIcons</include>
+					</control>
+					<control type="image">
+						<texture>BigIcons/Search.png</texture>
+						<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(36)">Conditional</animation>
+						<include>MediaMenuIcons</include>
+					</control>
+					<control type="image">
+						<texture>BigIcons/Formatbullets.png</texture>
+						<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(326)">Conditional</animation>
+						<include>MediaMenuIcons</include>
+					</control>
+					<control type="image">
+						<texture>BigIcons/Controlpanel.png</texture>
+						<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(1664)">Conditional</animation>
+						<include>MediaMenuIcons</include>
+					</control>
+				</control>
+			</control>
+		</control>
+		<include>ContextMenuOverlay</include>
+	</controls>
+</window>

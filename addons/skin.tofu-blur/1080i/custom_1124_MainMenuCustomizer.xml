@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="1124" type="window">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<onload>Notification($LOCALIZE[31902],$LOCALIZE[31914])</onload>
+	<onload>AlarmClock(WidgetMove,Control.Move(8000,1),00:07,silent,loop)</onload>
+	<onload>AlarmClock(Widget2Move,Control.Move(7000,1),00:07,silent,loop)</onload>
+	<onload>AlarmClock(HomeTileLeft,Control.Move(5001,1),00:07,silent,loop)</onload>
+	<onload>AlarmClock(HomeTileRight,Control.Move(5003,1),00:10,silent,loop)</onload>
+	<onload>AlarmClock(HomeTileMid,Control.Move(5002,1),00:15,silent,loop)</onload>
+	<onload>AlarmClock(HomeTile2Left,Control.Move(6001,1),00:07,silent,loop)</onload>
+	<onload>AlarmClock(HomeTile2Right,Control.Move(6003,1),00:10,silent,loop)</onload>
+	<onload>AlarmClock(HomeTile2Mid,Control.Move(6002,1),00:15,silent,loop)</onload>
+	<onload>SetProperty(MenuName,MenuItem,home)</onload>
+	<onunload>CancelAlarm(HomeTileLeft,true)</onunload>
+	<onunload>CancelAlarm(HomeTileRight,true)</onunload>
+	<onunload>CancelAlarm(HomeTileMid,true)</onunload>
+	<onunload>CancelAlarm(HomeTile2Left,true)</onunload>
+	<onunload>CancelAlarm(HomeTile2Right,true)</onunload>
+	<onunload>CancelAlarm(HomeTile2Mid,true)</onunload>
+	<onunload>CancelAlarm(WidgetMove,true)</onunload>
+	<onunload>CancelAlarm(Widget2Move,true)</onunload>
+	<onunload>Skin.SetString(widgetlist,$INFO[Control.GetLabel(11111)])</onunload>
+	<onunload>Skin.SetString(widget2list,$INFO[Control.GetLabel(11112)])</onunload>
+	<onunload>Skin.SetString(backgroundlist,$INFO[Control.GetLabel(11113)])</onunload>
+	<onunload>Skin.SetString(submenulist,$INFO[Control.GetLabel(11114)])</onunload>
+	<coordinates>
+		<posx>0</posx>
+		<posy>0</posy>
+		<system>1</system>
+	</coordinates>
+	<controls>
+		<include>MainMenuCommonContent</include>
+		<control type="button" id="9006">
+			<include>HiddenObject</include>
+			<onfocus>Skin.Setstring(ItemToEdit.Label,$ESCINFO[Container(9000).ListItem.Label])</onfocus>
+			<onfocus>Skin.Setstring(ItemToEdit.MultiFanart,$ESCINFO[Container(9000).ListItem.Icon])</onfocus>
+			<onfocus>Skin.Setstring(ItemToEdit.Icon,$ESCINFO[Container(9000).ListItem.Property(BigIcon)])</onfocus>
+			<onfocus>Skin.Setstring(ItemToEdit.Widget,$INFO[Container(9000).ListItem.Property(Widget)])</onfocus>
+			<onfocus>Skin.Setstring(ItemToEdit.Widget2,$INFO[Container(9000).ListItem.Property(Widget2)])</onfocus>
+			<onfocus>Skin.Setstring(ItemToEdit.WidgetTitle,$ESCINFO[Container(9000).ListItem.Property(WidgetTitle)])</onfocus>
+			<onfocus>Skin.Setstring(ItemToEdit.Widget2Title,$ESCINFO[Container(9000).ListItem.Property(Widget2Title)])</onfocus>
+			<onfocus>Skin.Setstring(ItemToEdit.InfoLine,$INFO[Container(9000).ListItem.Property(InfoLine)])</onfocus>
+			<onfocus>Skin.Setstring(ItemToEdit.SubMenu,$INFO[Container(9000).ListItem.Property(SubMenu)])</onfocus>
+			<onfocus>Skin.Setstring(ItemToEdit.Disable,$INFO[Container(9000).ListItem.Property(DisableIcon)])</onfocus>
+			<onfocus>Skin.Setstring(ItemToEdit.Type,$INFO[Container(9000).ListItem.Property(Type)])</onfocus>
+			<onfocus>Skin.Setstring(ItemToEdit.Path,$ESCINFO[Container(9000).ListItem.Property(Path)])</onfocus>
+			<onfocus>ActivateWindow(1122)</onfocus>
+			<onfocus>SetFocus(9000)</onfocus>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+		</control>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" time="0" condition="true">conditional</animation>
+			<include>InvisibleIncludeLabels</include>
+		</control>
+		<control type="multiimage">
+			<aspectratio align="center" aligny="top">scale</aspectratio>
+			<imagepath background="true">$VAR[HomeMainFanartVar]</imagepath>
+			<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
+			<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
+		</control>
+		<include condition="!IsEmpty(Skin.String(CDWall_Folder_Path))">cdwall-musicvisualisation</include>
+		<include condition="!IsEmpty(Skin.String(MovieWall_Folder_Path_1)) | !IsEmpty(Skin.String(MovieWall_Folder_Path_2)) | !IsEmpty(Skin.String(MovieWall_Folder_Path_3)) | !IsEmpty(Skin.String(MovieWall_Folder_Path_4)) | !IsEmpty(Skin.String(MovieWall_Folder_Path_5))">MovieWall</include>
+		<control type="image">
+			<aspectratio align="center" aligny="top">scale</aspectratio>
+			<texture background="true" fallback="special://skin/backgrounds/music/music.jpg">$INFO[Skin.String(LiveBG)]</texture>
+			<fadetime>600</fadetime>
+			<include>FullscreenDimensions</include>
+			<include>Animation_WindowFade250</include>
+			<animation effect="fade" time="480">Visible</animation>
+			<animation effect="fade" time="480">Hidden</animation>
+			<visible>!Control.IsVisible(2355) + Substring(Control.GetLabel(4322),case)</visible>
+		</control>
+		<include>InteractiveCasesBackground</include>
+		<include>LiveCDCasesbackground</include>
+		<control type="group">
+			<visible>!Skin.HasSetting(lowermainmenu)</visible>
+			<include>Animation_VisibleChangeDelayed</include>
+			<control type="image">
+				<posy>360</posy>
+				<width>1920</width>
+				<height>945</height>
+				<texture>home/nowplaying_shadow.png</texture>
+				<visible>!ControlGroup(5000).HasFocus</visible>
+				<visible>Substring(Control.GetLabel(4321),featured) | Substring(Control.GetLabel(4321),weather) | Substring(Control.GetLabel(4321),panel)</visible>
+				<include>Animation_VisibleChangeDelayed</include>
+				<animation effect="slide" time="320" tween="cubic" easing="inout" end="0,-225" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
+			</control>
+			<control type="image">
+				<width>1920</width>
+				<height>945</height>
+				<texture flipy="true">home/nowplaying_shadow.png</texture>
+				<include>Animation_VisibleChangeDelayed</include>
+				<visible>Control.IsVisible(6000) | Substring(Control.GetLabel(4325),weather)</visible>
+				<animation effect="slide" time="320" tween="cubic" easing="inout" end="0,-225" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Skin.HasSetting(lowermainmenu)</visible>
+			<include>Animation_VisibleChangeDelayed</include>
+			<control type="image">
+				<posy>160</posy>
+				<width>1920</width>
+				<height>694</height>
+				<texture>home/nowplaying_shadow.png</texture>
+				<visible>!ControlGroup(5000).HasFocus</visible>
+				<visible>Control.HasFocus(8000) | Substring(Control.GetLabel(4321),featured) | Substring(Control.GetLabel(4321),weather) | Substring(Control.GetLabel(4321),panel)</visible>
+				<include>Animation_VisibleChangeDelayed</include>
+			</control>
+			<control type="image">
+				<width>1920</width>
+				<height>545</height>
+				<texture flipy="true">home/nowplaying_shadow.png</texture>
+				<include>Animation_VisibleChangeDelayed</include>
+				<visible>Control.IsVisible(5000) | Substring(Control.GetLabel(4321),weather)</visible>
+			</control>
+		</control>
+		<include>HomePanelWidget_1124</include>
+		<include>HomePanelWidget2_1124</include>
+		<!-- Alternate Stats + Time -->
+		<control type="group" id="8996">
+			<posy>472</posy>
+			<animation effect="slide" end="0,338" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="200" tween="quadratic" />
+				<effect type="slide" end="0,45" time="200" tween="quadratic" />
+			</animation>
+			<animation type="WindowOpen" condition="!Skin.HasSetting(timehomehigh)">
+				<effect type="zoom" start="150" end="100" center="960,540" time="240" tween="cubic" />
+				<effect type="fade" start="50" end="100" time="240" />
+			</animation>
+			<animation effect="slide" start="-1260,0" end="0,0" delay="WidgetSlideDelay" time="240" condition="Skin.HasSetting(timehomehigh)">WindowOpen</animation>
+			<control type="image">
+				<posy>-46</posy>
+				<width>1920</width>
+				<height>87</height>
+				<texture>$VAR[NavBarImageVar]</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
+			<control type="grouplist" id="8992">
+				<posx>704</posx>
+				<width>513</width>
+				<height>58</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<scrolltime tween="quadratic">200</scrolltime>
+				<control type="image">
+					<posy>2</posy>
+					<width>35</width>
+					<height>35</height>
+					<texture>Back.png</texture>
+					<animation effect="rotate" end="-90" center="auto" time="0" condition="true">Conditional</animation>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+				</control>
+				<control type="label">
+					<width min="15" max="1920">auto</width>
+					<height>36</height>
+					<label>$LOCALIZE[31176]</label>
+					<font>Font_Reg28_Caps</font>
+					<textcolor>$VAR[FontColorVar]</textcolor>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<posy>468</posy>
+			<include>TimePanel</include>
+		</control>
+		<control type="group">
+			<include>Animation_OpenCloseZoom</include>
+			<include>RecentWidget_1124</include>
+			<include>RecentWidget2_1124</include>
+			<include condition="!IsEmpty(Weather.Plugin)">Weather_Widget</include>
+			<include condition="!IsEmpty(Weather.Plugin)">Weather_Widget2</include>
+		</control>
+		<!--Main Menu-->
+		<control type="group">
+			<include>FullscreenDimensions</include>
+			<animation effect="slide" end="0,338" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
+			<animation effect="zoom" end="80" center="960,520" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(smallermainmenu)">Conditional</animation>
+			<include>Animation_OpenCloseZoom</include>
+			<!-- Submenu -->
+			<control type="group" id="9001">
+				<posx>240</posx>
+				<posy>609</posy>
+				<animation effect="fade" start="100" end="0" time="240" condition="!IntegerGreaterThan(Container(9010).NumItems,0)">conditional</animation>
+				<animation effect="slide" end="0,-60" time="240" tween="cubic" easing="inout" condition="!IntegerGreaterThan(Container(9010).NumItems,0)">conditional</animation>
+				<control type="image">
+					<posx>90</posx>
+					<posy>3</posy>
+					<width>1260</width>
+					<height>40</height>
+					<texture border="51,3,51,3">tab.png</texture>
+					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+				</control>
+				<include condition="Skin.HasSetting(submenufixedlist)">SubMenuFixedList</include>
+				<include condition="!Skin.HasSetting(submenufixedlist)">SubMenuWrapList</include>
+			</control>
+			<control type="button">
+				<posx>0</posx>
+				<posy>600</posy>
+				<width>1920</width>
+				<height>100</height>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>-</label>
+				<font>-</font>
+				<hitrect x="0" y="610" w="1920" h="100" />
+				<onfocus>SetFocus(9010)</onfocus>
+				<visible>!Control.HasFocus(9010)</visible>
+			</control>
+			<!-- Home Menu Bar -->
+			<control type="image">
+				<posy>442</posy>
+				<width>1920</width>
+				<height>241</height>
+				<texture border="1,75,1,75">homemenu-bar-mid.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+				<animation effect="zoom" end="125,100" center="960,500" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(smallermainmenu)">Conditional</animation>
+			</control>
+			<control type="image">
+				<posy>442</posy>
+				<width>1920</width>
+				<height>241</height>
+				<texture border="1,75,1,75">homemenu-bar-shadow.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+				<animation effect="zoom" end="125,100" center="960,500" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(smallermainmenu)">Conditional</animation>
+			</control>
+			<!-- Home Menu -->
+			<include condition="Skin.HasSetting(mainmenufixedlist)">MainMenuFixedList</include>
+			<include condition="!Skin.HasSetting(mainmenufixedlist)">MainMenuWrapList</include>
+			<control type="group">
+				<animation effect="zoom" end="125,100" center="960,500" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(smallermainmenu)">Conditional</animation>
+			</control>
+		</control>
+	</controls>
+</window>

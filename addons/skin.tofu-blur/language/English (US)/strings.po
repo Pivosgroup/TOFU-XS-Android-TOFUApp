@@ -1,0 +1,10 @@
+# TOFU Media Center language file
+# Addon Name: TOFU+
+# Addon id: skin.tofu-plus
+# Addon Provider: Pivos Technology Group, Inc.
+msgid ""
+msgstr ""
+
+msgctxt "#31110"
+msgid "Record"
+msgstr "Record"

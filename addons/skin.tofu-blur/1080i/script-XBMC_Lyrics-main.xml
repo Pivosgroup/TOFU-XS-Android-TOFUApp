@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<allowoverlay>no</allowoverlay>
+	<coordinates>
+		<posx>0</posx>
+		<posy>0</posy>
+		<system>1</system>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<control type="image">
+				<width>1920</width>
+				<height>620</height>
+				<texture flipy="true" border="3">panel-bottom.png</texture>
+				<animation effect="slide" start="0,-489" end="0,0" time="400" tween="cubic" delay="160">windowopen</animation>
+				<animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>82</posx>
+				<posy>15</posy>
+				<width>1754</width>
+				<height>45</height>
+				<align>center</align>
+				<label>24013</label>
+				<font>Font_Reg57_Caps</font>
+				<textcolor>$VAR[FontColorVar]</textcolor>
+				<animation effect="fade" time="800">WindowOpen</animation>
+				<animation effect="fade" time="160">WindowClose</animation>
+			</control>
+			<control type="list" id="110">
+				<posx>82</posx>
+				<posy>90</posy>
+				<width>1754</width>
+				<height>460</height>
+				<onleft>111</onleft>
+				<onright>111</onright>
+				<onup>110</onup>
+				<ondown>110</ondown>
+				<pagecontrol>111</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<animation effect="fade" time="800">WindowOpen</animation>
+				<animation effect="fade" time="160">WindowClose</animation>
+				<itemlayout height="38">
+					<control type="label">
+						<posx>878</posx>
+						<width>1754</width>
+						<height>38</height>
+						<align>center</align>
+						<font>Font_Reg32</font>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="38">
+					<control type="image">
+						<posy>2</posy>
+						<width>1754</width>
+						<height>38</height>
+						<texture border="3">button-focus2.png</texture>
+					</control>
+					<control type="label">
+						<posx>878</posx>
+						<width>1754</width>
+						<height>38</height>
+						<align>center</align>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Font_Reg32</font>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="spincontrol" id="111">
+				<posx>1800</posx>
+				<posy>6</posy>
+				<height>98</height>
+				<textoffsetx>0</textoffsetx>
+				<textcolor>$VAR[FontColorVar]</textcolor>
+				<spinposx>-4</spinposx>
+				<subtype>page</subtype>
+				<onleft>110</onleft>
+				<onright>110</onright>
+				<ondown>110</ondown>
+				<onup>110</onup>
+				<spinwidth>60</spinwidth>
+				<spinheight>92</spinheight>
+				<visible>Control.IsVisible(110)</visible>
+				<animation effect="fade" time="800">WindowOpen</animation>
+				<animation effect="fade" time="160">WindowClose</animation>
+			</control>
+			<control type="label">
+				<posx>82</posx>
+				<posy>150</posy>
+				<width>1754</width>
+				<height>478</height>
+				<align>center</align>
+				<label>31733</label>
+				<font>Font_Reg57_Caps</font>
+				<visible>Control.IsVisible(120) + !Control.IsVisible(110)</visible>
+			</control>
+			<control type="list" id="120">
+				<posx>82</posx>
+				<posy>90</posy>
+				<width>1754</width>
+				<height>450</height>
+				<onleft>121</onleft>
+				<onright>121</onright>
+				<onup>120</onup>
+				<ondown>120</ondown>
+				<pagecontrol>121</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<animation effect="fade" time="800">WindowOpen</animation>
+				<animation effect="fade" time="160">WindowClose</animation>
+				<itemlayout height="38">
+					<control type="label">
+						<posx>878</posx>
+						<width>1754</width>
+						<height>38</height>
+						<align>center</align>
+						<font>Font_Reg32</font>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="38">
+					<control type="image">
+						<posy>2</posy>
+						<width>1754</width>
+						<height>38</height>
+						<texture border="3">list-focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>878</posx>
+						<width>1754</width>
+						<height>38</height>
+						<align>center</align>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Font_Reg32</font>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="spincontrol" id="121">
+				<posx>1800</posx>
+				<posy>6</posy>
+				<height>98</height>
+				<textoffsetx>0</textoffsetx>
+				<textcolor>$VAR[FontColorVar]</textcolor>
+				<spinposx>-4</spinposx>
+				<subtype>page</subtype>
+				<onleft>120</onleft>
+				<onright>120</onright>
+				<ondown>120</ondown>
+				<onup>120</onup>
+				<visible>Control.IsVisible(120)</visible>
+				<spinwidth>60</spinwidth>
+				<spinheight>92</spinheight>
+				<animation effect="fade" time="800">WindowOpen</animation>
+				<animation effect="fade" time="160">WindowClose</animation>
+			</control>
+			<control type="label" id="130">
+				<posx>75</posx>
+				<posy>15</posy>
+				<width>600</width>
+				<height>45</height>
+				<textoffsetx>30</textoffsetx>
+				<label>$INFO[Control.GetLabel(200)]</label>
+				<font>Font_Bold34_Caps</font>
+				<animation effect="fade" time="800">WindowOpen</animation>
+				<animation effect="fade" time="160">WindowClose</animation>
+			</control>
+			<control type="label" id="200">
+				<include>HiddenObject</include>
+			</control>
+		</control>
+	</controls>
+</window>

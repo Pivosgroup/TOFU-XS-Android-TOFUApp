@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1190">
+	<defaultcontrol>411</defaultcontrol>
+	<coordinates>
+		<posx>399</posx>
+		<posy>114</posy>
+		<system>1</system>
+	</coordinates>
+	<include>Animation_DialogPopup2</include>
+	<controls>
+		<control type="group">
+			<posx>-639</posx>
+			<posy>-249</posy>
+			<include>DialogBackFade</include>
+		</control>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" time="320" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
+			<control type="image">
+				<posx>18</posx>
+				<width>1086</width>
+				<height>852</height>
+				<texture border="5">panel.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>22</posx>
+				<posy>42</posy>
+				<width>1078</width>
+				<height>60</height>
+				<texture border="3">list-nofocus.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>60</posx>
+				<posy>35</posy>
+				<width>1080</width>
+				<height>60</height>
+				<label>$LOCALIZE[36501]</label>
+				<font>Font_Bold33</font>
+				<textcolor>$VAR[FontColorVar]</textcolor>
+			</control>
+			<control type="image">
+				<posx>40</posx>
+				<posy>78</posy>
+				<width>720</width>
+				<height>2</height>
+				<texture>separator.png</texture>
+			</control>
+			<control type="grouplist" id="400">
+				<posx>23</posx>
+				<posy>102</posy>
+				<width>1075</width>
+				<height>700</height>
+				<aligny>center</aligny>
+				<control type="radiobutton" id="411">
+					<width>1172</width>
+					<height>60</height>
+					<textoffsetx>45</textoffsetx>
+					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturenofocus border="3">list-nofocus.png</texturenofocus>
+					<font>Font_Reg32</font>
+					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+					<radioposx>934</radioposx>
+					<selected>IntegerGreaterThan(System.StereoscopicMode,0)</selected>
+					<label>$LOCALIZE[305]</label>
+					<onclick>ToggleStereoMode</onclick>
+				</control>
+				<control type="button" id="412">
+					<width>1172</width>
+					<height>60</height>
+					<textoffsetx>45</textoffsetx>
+					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturenofocus border="3">list-nofocus.png</texturenofocus>
+					<font>Font_Reg32</font>
+					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+					<label>$LOCALIZE[36528]</label>
+					<onclick>StereoMode</onclick>
+				</control>
+				<control type="radiobutton" id="413">
+					<width>1172</width>
+					<height>60</height>
+					<textoffsetx>45</textoffsetx>
+					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturenofocus border="3">list-nofocus.png</texturenofocus>
+					<font>Font_Reg32</font>
+					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+					<radioposx>934</radioposx>
+					<label>$LOCALIZE[36529]</label>
+					<selected>StringCompare(System.StereoscopicMode,7)</selected>
+					<onclick>StereoModeToMono</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
