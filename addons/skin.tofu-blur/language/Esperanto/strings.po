@@ -1,0 +1,94 @@
+# TOFU Media Center language file
+# Addon Name: TOFU+
+# Addon id: skin.tofu-plus
+# Addon Provider: Pivos Technology Group, Inc.
+msgid ""
+msgstr ""
+
+msgctxt "#31008"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "#31072"
+msgid "System info"
+msgstr "Sistemo Info"
+
+msgctxt "#31085"
+msgid "Light"
+msgstr "KROTALOJ"
+
+msgctxt "#31110"
+msgid "Record"
+msgstr "Registri"
+
+msgctxt "#31221"
+msgid "Default"
+msgstr "Default"
+
+msgctxt "#31358"
+msgid "System info"
+msgstr "Informoj de sistemo"
+
+msgctxt "#31390"
+msgid "Skin default"
+msgstr "Skin Default"
+
+msgctxt "#31478"
+msgid "Setup"
+msgstr "Preferoj"
+
+msgctxt "#31500"
+msgid "Pictures"
+msgstr "Bildoj"
+
+msgctxt "#31501"
+msgid "Music"
+msgstr "Muziko"
+
+msgctxt "#31502"
+msgid "Movies"
+msgstr "Filmoj"
+
+msgctxt "#31504"
+msgid "Videos"
+msgstr "Videoj"
+
+msgctxt "#31505"
+msgid "Programs"
+msgstr "Applications"
+
+msgctxt "#31506"
+msgid "System"
+msgstr "System"
+
+msgctxt "#31508"
+msgid "Shutdown"
+msgstr "Shutdown"
+
+msgctxt "#31510"
+msgid "Weather"
+msgstr "Mia Wealar"
+
+msgctxt "#31611"
+msgid "Fullscreen video"
+msgstr "Fullekrano filmoj"
+
+msgctxt "#31615"
+msgid "Audio visualization"
+msgstr "Soni visualisation"
+
+msgctxt "#31616"
+msgid "Low"
+msgstr "Malnobla"
+
+msgctxt "#31617"
+msgid "High"
+msgstr "Nobla"
+
+msgctxt "#31630"
+msgid "Custom"
+msgstr "Custom"
+
+msgctxt "#31951"
+msgid "Custom"
+msgstr "Custom"

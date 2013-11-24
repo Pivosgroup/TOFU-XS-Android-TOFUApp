@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="1146" type="dialog">
+	<defaultcontrol>5400</defaultcontrol>
+	<onunload>ClearProperty(CustomYesNoDialog,1124)</onunload>
+	<onunload>ClearProperty(WidgetType,1124)</onunload>
+	<onunload>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title)</onunload>
+	<onload>Dialog.Close(1133)</onload>
+	<zorder>4</zorder>
+	<coordinates>
+		<posx>0</posx>
+		<posy>0</posy>
+		<system>1</system>
+	</coordinates>
+	<include>Animation_DialogPopup</include>
+	<controls>
+		<include>DialogBackFade</include>
+		<control type="label" id="12112">
+			<label>$INFO[Window(1124).Property(CustomYesNoDialog)]$INFO[Window(1124).Property(WidgetType)]$INFO[Window(1124).Property(Transparency)] </label>
+			<animation effect="fade" start="100" end="0" time="0" condition="true">conditional</animation>
+		</control>
+		<control type="group">
+			<posx>589</posx>
+			<posy>37</posy>
+			<control type="group">
+				<animation effect="zoom" end="100,130" center="960,0" time="0" condition="SubString(Window(1124).Property(CustomYesNoDialog),movie) | SubString(Window(1124).Property(CustomYesNoDialog),tv)">Conditional</animation>
+				<control type="image">
+					<posx>19</posx>
+					<posy>20</posy>
+					<width>742</width>
+					<height>300</height>
+					<texture border="5">panel.png</texture>
+					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+				</control>
+			</control>
+			<control type="image">
+				<posx>23</posx>
+				<width>734</width>
+				<height>60</height>
+				<texture border="3">list-nofocus.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
+			<control type="label" id="4">
+				<posy>15</posy>
+				<width>780</width>
+				<height>45</height>
+				<align>center</align>
+				<label>$LOCALIZE[31063]</label>
+				<textcolor>$VAR[FontColorVar]</textcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="grouplist" id="5400">
+				<posx>23</posx>
+				<posy>205</posy>
+				<width>740</width>
+				<height>200</height>
+				<align>center</align>
+				<onleft>5400</onleft>
+				<onright>5400</onright>
+				<ondown>5401</ondown>
+				<onup>5401</onup>
+				<orientation>horizontal</orientation>
+				<control type="button" id="11">
+					<width>175</width>
+					<height>45</height>
+					<textoffsetx>15</textoffsetx>
+					<align>center</align>
+					<label>31684</label>
+					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+					<texturefocus border="3">button-focus.png</texturefocus>
+					<texturenofocus border="3">button-nofocus.png</texturenofocus>
+					<onfocus>SetProperty(Transparency,glass,1124)</onfocus>
+					<onfocus>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],$INFO[Control.GetLabel(12112)])</onfocus>
+					<onclick>Dialog.Close(1146)</onclick>
+				</control>
+				<control type="button" id="12">
+					<width>175</width>
+					<height>45</height>
+					<textoffsetx>15</textoffsetx>
+					<align>center</align>
+					<label>31685</label>
+					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+					<texturefocus border="3">button-focus.png</texturefocus>
+					<texturenofocus border="3">button-nofocus.png</texturenofocus>
+					<onfocus>SetProperty(Transparency,default,1124)</onfocus>
+					<onfocus>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],$INFO[Control.GetLabel(12112)])</onfocus>
+					<onclick>Dialog.Close(1146)</onclick>
+				</control>
+				<control type="button" id="13">
+					<width>175</width>
+					<height>45</height>
+					<textoffsetx>15</textoffsetx>
+					<align>center</align>
+					<label>16018</label>
+					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+					<texturefocus border="3">button-focus.png</texturefocus>
+					<texturenofocus border="3">button-nofocus.png</texturenofocus>
+					<onfocus>ClearProperty(Transparency,1124)</onfocus>
+					<onfocus>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],$INFO[Control.GetLabel(12112)])</onfocus>
+					<onclick>Dialog.Close(1146)</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<zorder>1</zorder>
+	<coordinates>
+		<posx>0</posx>
+		<posy>0</posy>
+		<system>1</system>
+	</coordinates>
+	<include>Animation_DialogPopup</include>
+	<controls>
+		<include>DialogBackFade</include>
+		<control type="group">
+			<posx>589</posx>
+			<posy>375</posy>
+			<animation effect="slide" end="0,-300" time="0" condition="[Window.IsActive(home) + Skin.HasSetting(lowermainmenu)]">Conditional</animation>
+			<animation effect="slide" end="0,-900" time="320" easing="inout" tween="circle" condition="Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation) | Window.IsVisible(slideshow)">Conditional</animation>
+			<control type="image">
+				<posx>19</posx>
+				<posy>20</posy>
+				<width>742</width>
+				<height>300</height>
+				<texture border="5">panel.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>23</posx>
+				<width>734</width>
+				<height>60</height>
+				<texture border="3">list-nofocus.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
+			<control type="label" id="1">
+				<visible>false</visible>
+			</control>
+			<control type="label">
+				<width>780</width>
+				<height>78</height>
+				<textoffsetx>45</textoffsetx>
+				<align>center</align>
+				<label>$INFO[Control.GetLabel(1)] $INFO[System.Progressbar,- ,%]</label>
+				<textcolor>$VAR[FontColorVar]</textcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="grouplist">
+				<posy>68</posy>
+				<control type="label" id="2">
+					<width>780</width>
+					<height>45</height>
+					<textoffsetx>45</textoffsetx>
+					<scroll>true</scroll>
+				</control>
+				<control type="label" id="3">
+					<width>780</width>
+					<height>45</height>
+					<textoffsetx>45</textoffsetx>
+					<scroll>true</scroll>
+				</control>
+				<control type="label" id="4">
+					<width>780</width>
+					<height>45</height>
+					<textoffsetx>45</textoffsetx>
+					<scroll>true</scroll>
+				</control>
+			</control>
+			<control type="progress" id="20">
+				<posx>45</posx>
+				<posy>225</posy>
+				<width>690</width>
+				<height>21</height>
+				<texturebg border="12,0,12,0">dialogs/progress/progress_back.png</texturebg>
+				<lefttexture border="12,0,0,0">-</lefttexture>
+				<righttexture border="0,0,12,0">-</righttexture>
+				<info>System.Progressbar</info>
+			</control>
+			<control type="button" id="10">
+				<textoffsety></textoffsety>
+				<posx>278</posx>
+				<posy>258</posy>
+				<width>225</width>
+				<height>45</height>
+				<textoffsetx>30</textoffsetx>
+				<align>center</align>
+				<label>222</label>
+				<textcolor>$VAR[FontColorVar]</textcolor>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+				<texturefocus border="3">button-focus.png</texturefocus>
+				<texturenofocus border="3">button-nofocus.png</texturenofocus>
+				<onup>10</onup>
+				<ondown>10</ondown>
+				<onleft>11</onleft>
+				<onright>11</onright>
+			</control>
+		</control>
+	</controls>
+</window>

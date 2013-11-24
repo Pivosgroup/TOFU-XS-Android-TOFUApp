@@ -1,0 +1,13 @@
+<colors>
+	<color name="white">FFFFFFFF</color>
+	<color name="fade">A0FFFFFF</color>
+	<color name="colorize">FFFFFFFF</color>
+	<color name="focused">FFFFFFFF</color>
+	<color name="disabled">33FFFFFF</color>
+	<color name="alternate">FFA5A5A5</color>
+	<color name="selected">FFA5A5A5</color>
+	<color name="mainmenu">FF454545</color>
+	<color name="black">FF000000</color>
+	<color name="red">FFCE4421</color>
+	<color name="textshadow">99454545</color>
+</colors>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol></defaultcontrol>
+	<include>Animation_DialogPopup</include>
+	<controls>
+		<control type="group">
+			<posx>1372</posx>
+			<posy>57</posy>
+			<width>764</width>
+			<height>136</height>
+			<control type="image">
+				<posx>6</posx>
+				<posy>6</posy>
+				<width>526</width>
+				<height>84</height>
+				<texture border="5">panel.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>94</posx>
+				<posy>6</posy>
+				<width>4</width>
+				<height>84</height>
+				<texture>divider-vertical.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>514</posx>
+				<posy>6</posy>
+				<width>4</width>
+				<height>84</height>
+				<texture>divider-vertical.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
+			<animation effect="fade" start="100" end="0" time="240" condition="Window.IsActive(startup)">Conditional</animation>
+			<animation effect="slide" end="0,-900" time="320" easing="inout" tween="circle" condition="Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation) | Window.IsVisible(slideshow)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="160" condition="Window.Next(videolibrary) | Window.Next(musiclibrary) | Window.Next(videofiles) | Window.Next(musicfiles) | Window.Next(pictures) | Window.Next(scripts) | Window.Next(musicplaylist) | Window.Next(videoplaylist) | Window.Next(programs) | Window.Next(home) |[Window.Next(settings) + Window.IsActive(home)]" reversible="false">Conditional</animation>
+			<control type="label" id="30">
+				<posx>18</posx>
+				<posy>13</posy>
+				<width>500</width>
+				<height>22</height>
+				<font>Font_Reg19_Caps</font>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="31">
+				<posx>18</posx>
+				<posy>38</posy>
+				<width>500</width>
+				<height>22</height>
+				<font>Font_Reg19_Caps</font>
+				<scroll>true</scroll>
+			</control>
+			<control type="progress" id="32">
+				<posx>15</posx>
+				<posy>67</posy>
+				<width>506</width>
+				<height>15</height>
+			</control>
+		</control>
+	</controls>
+</window>

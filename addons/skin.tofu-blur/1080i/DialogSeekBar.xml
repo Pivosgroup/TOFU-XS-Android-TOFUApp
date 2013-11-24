@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol>1</defaultcontrol>
+	<visible>[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding] + ![Window.IsVisible(videoosd) | Window.IsVisible(fullscreeninfo) | Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(SubtitleSearch) | Window.IsActive(script-XBMC_Lyrics-main.xml)] + [Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)]</visible>
+	<coordinates>
+		<posx>0</posx>
+		<posy>0</posy>
+		<system>1</system>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<visible>!VideoPlayer.Content(LiveTV)</visible>
+			<control type="group">
+				<visible>Player.Paused</visible>
+				<include>Animation_CommonFade</include>
+				<control type="image">
+					<posx>1470</posx>
+					<posy>826</posy>
+					<width>450</width>
+					<height>254</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture background="true">$VAR[PlayerArtworkVar]</texture>
+				</control>
+			</control>
+			<control type="group">
+				<animation type="WindowOpen">
+					<effect type="fade" time="160" end="100" />
+					<effect type="slide" time="160" start="0,-98" end="0,0" tween="cubic" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="fade" time="160" start="100" end="0" />
+					<effect type="slide" time="160" end="0,-98" easing="in" tween="cubic" />
+				</animation>
+				<animation type="Visible">
+					<effect type="fade" time="160" end="100" />
+					<effect type="slide" time="160" start="0,-98" end="0,0" tween="cubic" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" time="160" start="100" end="0" />
+					<effect type="slide" time="160" end="0,-98" easing="in" tween="cubic" />
+				</animation>
+				<visible>![Player.Forwarding|Player.Seeking]</visible>
+				<control type="image">
+					<posx>704</posx>
+					<posy>-2</posy>
+					<width>513</width>
+					<height>46</height>
+					<texture border="51,3,51,3">tab.png</texture>
+					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+					<visible>[[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek] | [[Player.Paused + Player.Caching] + !Player.Seeking] | Player.Seeking|[Player.DisplayAfterSeek + ![player.forwarding | player.rewinding] + !IsEmpty(Player.SeekOffset)]</visible>
+				</control>
+				<control type="label">
+					<posx>750</posx>
+					<width>420</width>
+					<height>42</height>
+					<align>center</align>
+					<label>$VAR[VideoPlayerSeekVar]</label>
+					<font>Font_Reg33_Caps</font>
+				</control>
+			</control>
+			<control type="group">
+				<posy>993</posy>
+				<decscription>bottom bar</decscription>
+				<animation type="Visible">
+					<effect type="fade" time="160" end="100" />
+					<effect type="slide" time="160" start="0,98" end="0,0" tween="cubic" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" time="160" start="100" end="0" />
+					<effect type="slide" time="160" end="0,98" easing="in" tween="cubic" />
+				</animation>
+				<animation type="WindowOpen">
+					<effect type="fade" time="160" end="100" />
+					<effect type="slide" time="160" start="0,98" end="0,0" tween="cubic" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="fade" time="160" start="100" end="0" />
+					<effect type="slide" time="160" end="0,98" easing="in" tween="cubic" />
+				</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>35</posy>
+					<width>1920</width>
+					<height>50</height>
+					<texture border="3">panel-bottom.png</texture>
+					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+				</control>
+				<control type="progress" id="20">
+					<posx>645</posx>
+					<posy>57</posy>
+					<width>630</width>
+					<height>20</height>
+					<midtexture border="12,0,12,0" colordiffuse="$VAR[DefaultColorVar]">dialogs/progress/progress_cache.png</midtexture>
+					<info>Player.ProgressCache</info>
+				</control>
+				<control type="progress" id="20">
+					<posx>645</posx>
+					<posy>57</posy>
+					<width>630</width>
+					<height>20</height>
+					<info>Player.Progress</info>
+				</control>
+				<control type="label">
+					<posx>630</posx>
+					<posy>45</posy>
+					<width>300</width>
+					<height>42</height>
+					<align>right</align>
+					<label>$INFO[Player.Time]</label>
+					<font>Font_Reg30_2</font>
+				</control>
+				<control type="label">
+					<posx>1290</posx>
+					<posy>45</posy>
+					<width>300</width>
+					<height>42</height>
+					<label>$INFO[Player.Duration]</label>
+					<font>Font_Reg30_2</font>
+					<visible>!Skin.HasSetting(PreferRemaining)</visible>
+				</control>
+				<control type="label">
+					<posx>1281</posx>
+					<posy>45</posy>
+					<width>300</width>
+					<height>42</height>
+					<label>$INFO[Player.TimeRemaining,- ]</label>
+					<font>Font_Reg30_2</font>
+					<visible>Skin.HasSetting(PreferRemaining)</visible>
+				</control>
+			</control>
+			<control type="grouplist">
+				<posx>30</posx>
+				<posy>935</posy>
+				<width>748</width>
+				<height>150</height>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<visible>Player.Forwarding | Player.Rewinding</visible>
+				<include>Animation_CommonFade</include>
+				<usecontrolcoords>true</usecontrolcoords>
+				<control type="image">
+					<posy>3</posy>
+					<width>90</width>
+					<height>87</height>
+					<aspectratio>keep</aspectratio>
+					<texture flipx="true">osd/ff.png</texture>
+					<animation effect="fade" start="100" end="60" time="800" pulse="true" condition="true">Conditional</animation>
+					<visible>Player.Rewinding</visible>
+				</control>
+				<control type="label">
+					<label>$VAR[VideoPlayerForwardRewindVar]</label>
+					<include>Objects_OSDSeekForward</include>
+				</control>
+				<control type="image">
+					<posy>3</posy>
+					<width>90</width>
+					<height>87</height>
+					<aspectratio>keep</aspectratio>
+					<texture>osd/ff.png</texture>
+					<animation effect="fade" start="100" end="60" time="800" pulse="true" condition="true">Conditional</animation>
+					<visible>Player.Forwarding</visible>
+				</control>
+			</control>
+			<control type="group">
+				<posx>-390</posx>
+				<posy>1038</posy>
+				<width>748</width>
+				<height>42</height>
+				<animation effect="slide" start="-225,0" end="0,0" time="160">WindowOpen</animation>
+				<animation effect="slide" end="-225,0" time="160">WindowClose</animation>
+				<animation effect="slide" start="-225,0" end="0,0" time="160">Visible</animation>
+				<animation effect="slide" end="-225,0" time="160">Hidden</animation>
+				<visible>player.chaptercount + ![Player.Forwarding | Player.Rewinding]</visible>
+				<control type="image">
+					<posx>240</posx>
+					<posy>-53</posy>
+					<width>513</width>
+					<height>46</height>
+					<texture flipy="true" border="51,3,51,3">tab.png</texture>
+					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+				</control>
+				<control type="label" id="1">
+					<posx>668</posx>
+					<posy>-53</posy>
+					<width>748</width>
+					<height>42</height>
+					<align>right</align>
+					<label>$LOCALIZE[21396]: $INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
+					<font>Font_Reg33_Caps</font>
+					<visible>player.chaptercount + ![Player.Forwarding | Player.Rewinding]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<visible>VideoPlayer.Content(LiveTV)</visible>
+			<control type="group">
+				<animation type="WindowOpen">
+					<effect type="fade" time="160" end="100" />
+					<effect type="slide" time="160" start="0,-98" end="0,0" tween="cubic" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="fade" time="160" start="100" end="0" />
+					<effect type="slide" time="160" end="0,-98" easing="in" tween="cubic" />
+				</animation>
+				<animation type="Visible">
+					<effect type="fade" time="160" end="100" />
+					<effect type="slide" time="160" start="0,-98" end="0,0" tween="cubic" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" time="160" start="100" end="0" />
+					<effect type="slide" time="160" end="0,-98" easing="in" tween="cubic" />
+				</animation>
+				<visible>![Player.Forwarding|Player.Seeking]</visible>
+				<control type="image">
+					<posx>704</posx>
+					<posy>-2</posy>
+					<width>513</width>
+					<height>46</height>
+					<texture border="51,3,51,3">tab.png</texture>
+					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+					<visible>[[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek] | [[Player.Paused + Player.Caching] + !Player.Seeking] | Player.Seeking|[Player.DisplayAfterSeek + ![player.forwarding | player.rewinding] + !IsEmpty(Player.SeekOffset)]</visible>
+				</control>
+				<control type="label">
+					<posx>750</posx>
+					<width>420</width>
+					<height>42</height>
+					<align>center</align>
+					<label>$VAR[VideoPlayerSeekVar]</label>
+					<font>Font_Reg33_Caps</font>
+				</control>
+			</control>
+			<control type="group" id="4001">
+				<decscription>bottom bar</decscription>
+				<visible>[Player.ShowInfo | [Player.Paused + !Player.Caching]] + ![Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
+				<animation type="Visible">
+					<effect type="fade" time="320" end="100" />
+					<effect type="slide" time="320" start="0,135" end="0,0" tween="cubic" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" time="320" start="100" end="0" />
+					<effect type="slide" time="320" end="0,135" easing="in" tween="cubic" />
+				</animation>
+				<animation type="WindowOpen">
+					<effect type="fade" time="320" end="100" />
+					<effect type="slide" time="320" start="0,135" end="0,0" tween="cubic" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="fade" time="320" start="100" end="0" />
+					<effect type="slide" time="320" end="0,135" easing="in" tween="cubic" />
+				</animation>
+				<include>FullScreenInfoBarLiveTV</include>
+			</control>
+		</control>
+		<include>AlaskaPausedLabel</include>
+	</controls>
+</window>

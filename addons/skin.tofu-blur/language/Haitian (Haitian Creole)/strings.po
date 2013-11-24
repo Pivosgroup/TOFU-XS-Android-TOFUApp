@@ -1,0 +1,34 @@
+# TOFU Media Center language file
+# Addon Name: TOFU+
+# Addon id: skin.tofu-plus
+# Addon Provider: Pivos Technology Group, Inc.
+msgid ""
+msgstr ""
+
+msgctxt "#31072"
+msgid "System info"
+msgstr "enformasyon sistem la"
+
+msgctxt "#31334"
+msgid "Latest"
+msgstr "Denye film"
+
+msgctxt "#31500"
+msgid "Pictures"
+msgstr "foto"
+
+msgctxt "#31501"
+msgid "Music"
+msgstr "Mizik"
+
+msgctxt "#31504"
+msgid "Videos"
+msgstr "Video"
+
+msgctxt "#31505"
+msgid "Programs"
+msgstr "Pwogram"
+
+msgctxt "#31510"
+msgid "Weather"
+msgstr "Meteo"
