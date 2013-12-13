@@ -86,6 +86,7 @@
 #include "windowing/WindowingFactory.h"
 #if defined(TARGET_ANDROID)
 #include "android/activity/AndroidFeatures.h"
+#include "android/activity/AndroidSettings.h"
 #endif
 
 #if defined(HAS_LIBAMCODEC)
@@ -1187,6 +1188,12 @@ void CSettings::InitializeISettingCallbacks()
   settingSet.insert("network.connection");
   settingSet.insert("network.apply");
   m_settingsManager->RegisterCallback(&CNetworkSettings::Get(), settingSet);
+
+#if defined(TARGET_ANDROID)
+  settingSet.clear();
+  settingSet.insert("android.settings");
+  m_settingsManager->RegisterCallback(&CAndroidSettings::Get(), settingSet);
+#endif
 }
 
 bool CSettings::Reset()
