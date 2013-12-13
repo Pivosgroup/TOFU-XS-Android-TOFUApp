@@ -507,8 +507,7 @@ bool CXBMCApp::HasLaunchIntent(const string &package)
 bool CXBMCApp::StartActivity(const string &package, const string &intent, const string &dataType, const string &dataURI)
 {
   CJNIIntent newIntent = intent.empty() ?
-    GetPackageManager().getLaunchIntentForPackage(package) :
-    CJNIIntent(intent);
+    GetPackageManager().getLaunchIntentForPackage(package) : CJNIIntent(intent);
 
   if (!newIntent)
     return false;
@@ -528,6 +527,26 @@ bool CXBMCApp::StartActivity(const string &package, const string &intent, const 
   if (xbmc_jnienv()->ExceptionOccurred())
   {
     CLog::Log(LOGERROR, "CXBMCApp::StartActivity - ExceptionOccurred launching %s", package.c_str());
+    xbmc_jnienv()->ExceptionClear();
+    return false;
+  }
+
+  return true;
+}
+
+bool CXBMCApp::StartActivityByComponent(const string &package, const string &component)
+{
+  CJNIIntent newIntent = CJNIIntent();
+  if (!newIntent)
+    return false;
+
+  CJNIComponentName componentName(package, component);
+  newIntent.setComponent(componentName);
+  startActivity(newIntent);
+  if (xbmc_jnienv()->ExceptionOccurred())
+  {
+    CLog::Log(LOGERROR, "CXBMCApp::StartActivityByComponent - ExceptionOccurred launching %s:%s",
+      package.c_str(), component.c_str());
     xbmc_jnienv()->ExceptionClear();
     return false;
   }

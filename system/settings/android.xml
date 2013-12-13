@@ -7,6 +7,20 @@
       </group>
     </category>
   </section>
+  <section id="system">
+    <category id="android" label="13254" help="36545">
+      <group id="1">
+        <setting id="android.settings" type="string" label="13255" help="36546">
+          <level>1</level>
+          <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="button" format="action" />
+        </setting>
+      </group>
+    </category>
+  </section>
   <section id="videos">
     <category id="videoacceleration">
       <group id="3">

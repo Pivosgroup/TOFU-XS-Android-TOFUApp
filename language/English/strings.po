@@ -5349,7 +5349,15 @@ msgctxt "#13253"
 msgid "Cancel move"
 msgstr ""
 
-#empty strings from id 13254 to 13269
+msgctxt "#13254"
+msgid "Android"
+msgstr ""
+
+msgctxt "#13255"
+msgid "Settings"
+msgstr ""
+
+#empty strings from id 13256 to 13269
 
 msgctxt "#13270"
 msgid "Hardware:"
