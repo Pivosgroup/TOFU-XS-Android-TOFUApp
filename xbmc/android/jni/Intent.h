@@ -21,6 +21,7 @@
 
 #include "JNIBase.h"
 #include "Parcel.h"
+#include "ComponentName.h"
 
 class CJNIURI;
 class CJNIIntent : public CJNIBase
@@ -51,6 +52,7 @@ public:
   void setDataAndType(const CJNIURI &uri, const std::string &type);
   void setData(const std::string &uri);
 
+  void setComponent(const CJNIComponentName &componentName);
   void setPackage(const std::string &packageName);
   void setType(const std::string &type);
   CJNIURI getData() const;
