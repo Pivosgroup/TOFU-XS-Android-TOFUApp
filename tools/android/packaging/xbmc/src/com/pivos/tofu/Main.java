@@ -3,6 +3,7 @@ package com.pivos.tofu;
 import android.app.NativeActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnSystemUiVisibilityChangeListener;
 
@@ -26,7 +27,11 @@ public class Main extends NativeActivity implements View.OnSystemUiVisibilityCha
   protected void onNewIntent(Intent intent)
   {
     super.onNewIntent(intent);
-    _onNewIntent(intent);
+    try {
+      _onNewIntent(intent);
+    } catch (UnsatisfiedLinkError e) {
+      Log.e("Main", "Native not registered");
+    }
   }
 
   @Override
