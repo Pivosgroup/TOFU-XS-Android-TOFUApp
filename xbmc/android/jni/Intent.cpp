@@ -135,6 +135,13 @@ void CJNIIntent::setFlags(int flags)
     flags);
 }
 
+void CJNIIntent::setComponent(const CJNIComponentName &componentName)
+{
+  call_method<jhobject>(m_object,
+    "setComponent", "(Landroid/content/ComponentName;)Landroid/content/Intent;",
+    componentName.get_raw());
+}
+
 void CJNIIntent::setPackage(const std::string &packageName)
 {
   call_method<jhobject>(m_object,

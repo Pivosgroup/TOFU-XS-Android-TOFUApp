@@ -1,6 +1,7 @@
 SRCS      += JNIBase.cpp
 SRCS      += JNIThreading.cpp
 SRCS      += Context.cpp
+SRCS      += ComponentName.cpp
 SRCS      += BroadcastReceiver.cpp
 SRCS      += Intent.cpp
 SRCS      += PackageManager.cpp
