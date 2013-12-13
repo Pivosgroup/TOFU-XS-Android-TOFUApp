@@ -33,4 +33,15 @@ CJNIApplicationInfo::CJNIApplicationInfo(const jhobject &object) : CJNIBase(obje
   ,targetSdkVersion(get_field<int>(m_object, "targetSdkVersion"))
   ,enabled(         get_field<jboolean>(m_object, "enabled"))
 {
+  // if we are installed in /system/app, then nativeLibraryDir is wrong
+  // and we need to re-point it to /system/lib
+  int flags = get_field<int>(m_object, "flags");
+  int FLAG_SYSTEM = (get_static_field<int>(m_object, "FLAG_SYSTEM"));
+  int FLAG_UPDATED_SYSTEM_APP = (get_static_field<int>(m_object, "FLAG_UPDATED_SYSTEM_APP"));
+
+  if ((flags & FLAG_UPDATED_SYSTEM_APP) == 0 &&
+      (flags & FLAG_SYSTEM) != 0)
+  {
+    nativeLibraryDir = "/system/lib/";
+  }
 }
