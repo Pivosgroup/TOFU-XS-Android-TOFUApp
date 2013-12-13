@@ -4,6 +4,7 @@
     package="com.pivos.tofu"
     android:versionCode="23"
     android:versionName="13.0-BETA4" >
+    <!-- android:sharedUserId="android.uid.system" -->
 
     <!-- This is the platform API where NativeActivity was introduced. -->
     <uses-sdk android:minSdkVersion="14" />
