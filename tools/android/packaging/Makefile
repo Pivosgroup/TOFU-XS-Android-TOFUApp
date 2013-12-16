@@ -19,7 +19,14 @@ OBJS += libxbmodplug.so
 OBJS += libxbmp3lame.so
 
 PLATFORM_OBJS =
-EXCLUDED_ADDONS = screensaver.rsxs.euphoria visualization.dxspectrum visualization.milkdrop visualization.projectm
+EXCLUDED_ADDONS  = screensaver.rsxs.euphoria
+EXCLUDED_ADDONS += visualization.dxspectrum
+EXCLUDED_ADDONS += visualization.milkdrop
+EXCLUDED_ADDONS += visualization.projectm
+EXCLUDED_ADDONS += repository.addons.pivoscdn.com
+EXCLUDED_ADDONS += repository.pivos-addons.pivoscdn.com
+EXCLUDED_ADDONS += repository.pvr-android.addons.pivoscdn.com
+EXCLUDED_ADDONS += repository.pvr-android.xbmc.org
 
 # android branding
 XBMCAPP = TOFUApp
