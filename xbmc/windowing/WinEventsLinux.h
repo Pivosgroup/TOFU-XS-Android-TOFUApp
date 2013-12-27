@@ -24,7 +24,7 @@
 
 #include <map>
 
-class CWinEventsLinux : public CWinEventsBase
+class CWinEventsLinux : public IWinEvents
 {
 public:
   CWinEventsLinux();
