@@ -23,4 +23,19 @@
       </group>
     </category>
   </section>
+  <section id="videos">
+    <category id="videoplayer">
+      <group id="2">
+        <setting id="videoplayer.useamcodec" type="boolean" label="13438" help="36422">
+          <requirement>HAVE_AMCODEC</requirement>
+          <level>2</level>
+          <default>true</default>
+          <updates>
+            <update type="change" />
+          </updates>
+          <control type="toggle" />
+        </setting>
+      </group>
+    </category>
+  </section>
 </settings>
