@@ -335,6 +335,11 @@ void CXBMCApp::XBMC_Pause(bool pause)
   // Only send the PAUSE action if we are pausing XBMC and something is currently playing
   if (pause && g_application.m_pPlayer->IsPlaying() && !g_application.m_pPlayer->IsPaused())
     CApplicationMessenger::Get().SendAction(CAction(ACTION_PAUSE), WINDOW_INVALID, true);
+  else
+  {
+    if (!pause && g_application.m_pPlayer->IsPaused())
+      CApplicationMessenger::Get().SendAction(CAction(ACTION_PLAYER_PLAYPAUSE), WINDOW_INVALID, true);
+  }
 }
 
 void CXBMCApp::XBMC_Stop()
