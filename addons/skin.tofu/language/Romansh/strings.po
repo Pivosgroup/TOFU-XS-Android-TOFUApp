@@ -1,0 +1,37 @@
+# TOFU Media Center language file
+# Addon Name: Confluence
+# Addon id: skin.tofu
+# Addon Provider: Pivos
+msgid ""
+msgstr ""
+"Project-Id-Version: TOFU Main\n"
+"Report-Msgid-Bugs-To: http://www.pivosforums.com/\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: TOFU Translation Team\n"
+"Language-Team: Romansh (/rm/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: rm\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#31024"
+msgid "Page"
+msgstr "Pagina"
+
+msgctxt "#31027"
+msgid "Location"
+msgstr "Liug"
+
+msgctxt "#31033"
+msgid "Info"
+msgstr "Info"
+
+msgctxt "#31043"
+msgid "PAUSED"
+msgstr "PAUSA"
+
+msgctxt "#31112"
+msgid "Options"
+msgstr "Opziuns"
