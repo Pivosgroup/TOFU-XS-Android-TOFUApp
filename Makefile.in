@@ -260,8 +260,8 @@ LIBADDON_DIRS=\
 	lib/addons/library.xbmc.pvr \
 	lib/addons/library.xbmc.gui \
 
-CONFLUENCE_MEDIA=addons/skin.confluence/media
-SKIN_DIRS=$(CONFLUENCE_MEDIA)
+TOFU_MEDIA=addons/skin.tofu/media
+SKIN_DIRS=$(TOFU_MEDIA)
 
 TOFU_BLUR_MEDIA=addons/skin.tofu-blur/media
 SKIN_DIRS+=$(TOFU_BLUR_MEDIA)
@@ -346,7 +346,7 @@ config.status: configure
 # skin textures
 ifeq (@USE_TEXTUREPACKER@,1)
 skins: tools/TexturePacker/TexturePacker force
-	 $(MAKE) -C $(CONFLUENCE_MEDIA)
+	 $(MAKE) -C $(TOFU_MEDIA)
 	 $(MAKE) -C $(TOFU_BLUR_MEDIA)
 ifeq (@USE_SKIN_TOUCHED@,1)
 	 $(MAKE) -C $(TOUCHED_MEDIA)
