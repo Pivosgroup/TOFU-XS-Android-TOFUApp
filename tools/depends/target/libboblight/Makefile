@@ -2,7 +2,7 @@ include ../../Makefile.include
 DEPS= ../../Makefile.include Makefile
 
 LIBNAME=boblight
-VERSION=e1667a77a89d6d877fb6d15a3b11322e1bdf8775
+VERSION=0aed41bac923cc917649e3fba68d8b70e801eb68
 GIT_DIR=$(TARBALLS_LOCATION)/$(LIBNAME).git
 BASE_URL=git@github.com:Pivosgroup/$(LIBNAME).git
 DYLIB=$(PLATFORM)/src/.libs/libboblight.so
