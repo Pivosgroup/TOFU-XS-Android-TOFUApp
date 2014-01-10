@@ -11,12 +11,11 @@ PLATFORM_OBJS =
 EXCLUDED_ADDONS = screensaver.rsxs.euphoria visualization.dxspectrum visualization.milkdrop visualization.projectm
 
 # android branding
-XBMCAPP = tofuapp
+XBMCAPP = TOFUApp
 XBMCLIB = libtofu.so
 XBMCANDROID  = com/pivos/tofu
 
 XBMCROOT = $(shell cd $(CURDIR)/../../..; pwd)
-COPYDIRS = system addons language media
 AAPT = $(SDKROOT)/platform-tools/aapt
 DX = $(SDKROOT)/platform-tools/dx
 GCC_VERSION=$(shell $(CC) -dumpversion)
