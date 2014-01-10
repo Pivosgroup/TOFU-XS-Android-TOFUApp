@@ -86,6 +86,7 @@ void* thread_run(void* obj)
   return NULL;
 }
 CEvent CXBMCApp::m_windowCreated;
+bool CXBMCApp::m_runAsLauncher = false;
 ANativeActivity *CXBMCApp::m_activity = NULL;
 ANativeWindow* CXBMCApp::m_window = NULL;
 int CXBMCApp::m_batteryLevel = 0;
@@ -146,10 +147,11 @@ void CXBMCApp::onResume()
   // back, so do the ShowStatusBar call again to take affect.
   ShowStatusBar(false);
 
-  CJNIIntentFilter batteryFilter;
-  batteryFilter.addAction("android.intent.action.BATTERY_CHANGED");
-  registerReceiver(*this, batteryFilter);
-
+  CJNIIntentFilter intentFilter;
+  intentFilter.addAction("android.intent.action.BATTERY_CHANGED");
+  intentFilter.addAction("android.intent.action.MEDIA_MOUNTED");
+  registerReceiver(*this, intentFilter);
+  
   // Clear the applications cache. We could have installed/deinstalled apps
   {
     CSingleLock lock(m_applicationsMutex);
@@ -240,7 +242,8 @@ void CXBMCApp::onResizeWindow()
 void CXBMCApp::onDestroyWindow()
 {
   android_printf("%s: ", __PRETTY_FUNCTION__);
-
+  m_window=NULL;
+  m_windowCreated.Reset();
   // If we have exited XBMC, it no longer exists.
   if (!m_exiting)
   {
@@ -299,6 +302,12 @@ void CXBMCApp::run()
     appParamParser.Parse((const char **)argv, argc);
 
     free(argv);
+  }
+
+  if (startIntent.hasCategory("android.intent.category.HOME"))
+  {
+    m_runAsLauncher = true;
+    WaitForMedia(30000);
   }
 
   m_firstrun=false;
@@ -646,6 +655,8 @@ void CXBMCApp::onReceive(CJNIIntent intent)
   android_printf("CXBMCApp::onReceive Got intent. Action: %s", action.c_str());
   if (action == "android.intent.action.BATTERY_CHANGED")
     m_batteryLevel = intent.getIntExtra("level",-1);
+  else if (action == "android.intent.action.MEDIA_MOUNTED")
+    m_mediaMounted.Set();
 }
 
 void CXBMCApp::onNewIntent(CJNIIntent intent)
@@ -711,6 +722,15 @@ std::string CXBMCApp::GetFilenameFromIntent(const CJNIIntent &intent)
       ret = data.toString();
   return ret;
 }
+
+bool CXBMCApp::WaitForMedia(int timeout)
+{
+  android_printf("CXBMCApp::WaitForMedia Waiting for storage");
+  if (CJNIEnvironment::getExternalStorageState() == "mounted")
+    return true;
+  m_mediaMounted.WaitMSec(timeout);
+  return CJNIEnvironment::getExternalStorageState() == "mounted";
+ }
 
 const ANativeWindow** CXBMCApp::GetNativeWindow(int timeout)
 {
