@@ -104,6 +104,9 @@ public:
   static void SetSystemVolume(int val);
 
   static int GetDPI();
+  static bool WaitForNativeWindow(int timeout);
+  bool WaitForMedia(int timeout);
+  static bool IsLauncher() { return m_runAsLauncher;};
   static void ShowStatusBar(bool show);
 
 protected:
@@ -127,10 +130,11 @@ private:
   bool m_firstrun;
   bool m_exiting;
   pthread_t m_thread;
-  
+  CEvent m_mediaMounted;
   static ANativeWindow* m_window;
   static CEvent m_windowCreated;
-
+  static bool m_runAsLauncher;
+  
   void XBMC_Pause(bool pause);
   void XBMC_Stop();
   bool XBMC_DestroyDisplay();
