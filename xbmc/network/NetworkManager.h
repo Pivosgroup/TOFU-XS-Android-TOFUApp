@@ -55,7 +55,7 @@ public:
   IPConfigMethod  GetDefaultConnectionMethod();
 
   bool            IsConnected();
-  bool            IsAvailable(bool wait = false);
+  bool            HasInternet(bool checkDNS);
   bool            CanManageConnections();
 
   ConnectionList  GetConnections();

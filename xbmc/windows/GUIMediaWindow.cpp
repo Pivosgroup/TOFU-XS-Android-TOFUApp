@@ -30,7 +30,6 @@
 #include "GUIPassword.h"
 #include "Application.h"
 #include "ApplicationMessenger.h"
-#include "network/Network.h"
 #include "utils/RegExp.h"
 #include "PartyModeManager.h"
 #include "dialogs/GUIDialogMediaSource.h"
@@ -1634,7 +1633,7 @@ const CFileItemList& CGUIMediaWindow::CurrentDirectory() const
 
 bool CGUIMediaWindow::WaitForNetwork() const
 {
-  if (g_application.getNetwork().IsAvailable())
+  if (g_application.getNetwork().IsConnected())
     return true;
 
   CGUIDialogProgress *progress = (CGUIDialogProgress *)g_windowManager.GetWindow(WINDOW_DIALOG_PROGRESS);
@@ -1646,7 +1645,7 @@ bool CGUIMediaWindow::WaitForNetwork() const
   progress->SetLine(1, url.GetWithoutUserDetails());
   progress->ShowProgressBar(false);
   progress->StartModal();
-  while (!g_application.getNetwork().IsAvailable())
+  while (!g_application.getNetwork().IsConnected())
   {
     progress->Progress();
     if (progress->IsCanceled())

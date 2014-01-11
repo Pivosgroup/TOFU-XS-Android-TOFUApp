@@ -1,0 +1,17 @@
+#SRCS  = ConnmanConnection.cpp
+#SRCS += ConnmanNetworkManager.cpp
+SRCS += PosixConnection.cpp
+SRCS += PosixNetworkManager.cpp
+SRCS += ZeroconfAvahi.cpp
+SRCS += ZeroconfBrowserAvahi.cpp
+
+ifeq (@USE_ANDROID@,1) 
+SRCS += AndroidConnection.cpp
+SRCS += AndroidNetworkManager.cpp
+SRCS += AndroidPassphraseStorage.cpp
+endif
+
+LIB = network_linux.a
+
+include ../../../Makefile.include
+-include $(patsubst %.cpp,%.P,$(patsubst %.c,%.P,$(SRCS)))

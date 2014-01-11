@@ -51,6 +51,7 @@
 #include "linux/LinuxTimezone.h"
 #endif // defined(TARGET_POSIX)
 #include "network/NetworkServices.h"
+#include "network/NetworkSettings.h"
 #include "network/upnp/UPnPSettings.h"
 #include "network/WakeOnAccess.h"
 #if defined(TARGET_DARWIN_OSX)
@@ -226,6 +227,11 @@ bool ProfileLockMode(const std::string &condition, const std::string &value, con
     return false;
 
   return CProfilesManager::Get().GetCurrentProfile().getLockMode() == lock;
+}
+
+bool CanManageConnections(const std::string &condition, const std::string &value, const std::string &settingId)
+{
+  return g_application.getNetwork().CanManageConnections();
 }
 
 CSettings::CSettings()
@@ -449,6 +455,7 @@ void CSettings::Uninitialize()
 #if defined(TARGET_DARWIN_OSX)
   m_settingsManager->UnregisterCallback(&XBMCHelper::GetInstance());
 #endif
+  m_settingsManager->UnregisterCallback(&CNetworkSettings::Get());
 
   // cleanup the settings manager
   m_settingsManager->Clear();
@@ -968,6 +975,7 @@ void CSettings::InitializeConditions()
   m_settingsManager->AddCondition("profilelockmode", ProfileLockMode);
   m_settingsManager->AddCondition("aesettingvisible", CAEFactory::IsSettingVisible);
   m_settingsManager->AddCondition("codecoptionvisible", CDVDVideoCodec::IsSettingVisible);
+  m_settingsManager->AddCondition("canmanageconnections", CanManageConnections);
 }
 
 void CSettings::InitializeISettingsHandlers()
@@ -1174,6 +1182,11 @@ void CSettings::InitializeISettingCallbacks()
   settingSet.insert("input.appleremotemode");
   m_settingsManager->RegisterCallback(&XBMCHelper::GetInstance(), settingSet);
 #endif
+
+  settingSet.clear();
+  settingSet.insert("network.connection");
+  settingSet.insert("network.apply");
+  m_settingsManager->RegisterCallback(&CNetworkSettings::Get(), settingSet);
 }
 
 bool CSettings::Reset()

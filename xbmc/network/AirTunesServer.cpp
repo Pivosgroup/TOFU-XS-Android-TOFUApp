@@ -21,7 +21,6 @@
  *
  */
 
-#include "network/Network.h"
 #if !defined(TARGET_WINDOWS)
 #pragma GCC diagnostic ignored "-Wwrite-strings"
 #endif
@@ -543,21 +542,13 @@ bool CAirTunesServer::StartServer(int port, bool nonlocal, bool usePassword, con
 {
   bool success = false;
   CStdString pw = password;
-  CNetworkInterface *net = g_application.getNetwork().GetFirstConnectedInterface();
   StopServer(true);
 
-  if (net)
+  m_macAddress = g_application.getNetwork().GetDefaultConnectionMacAddress();
+  StringUtils::Replace(m_macAddress, ":","");
+  while (m_macAddress.size() < 12)
   {
-    m_macAddress = net->GetMacAddress();
-    StringUtils::Replace(m_macAddress, ":","");
-    while (m_macAddress.size() < 12)
-    {
-      m_macAddress = CStdString("0") + m_macAddress;
-    }
-  }
-  else
-  {
-    m_macAddress = "000102030405";
+    m_macAddress = "0" + m_macAddress;
   }
 
   if (!usePassword)
@@ -713,12 +704,7 @@ bool CAirTunesServer::Initialize(const CStdString &password)
 
       m_pLibShairplay->raop_set_log_callback(m_pRaop, shairplay_log, NULL);
 
-      CNetworkInterface *net = g_application.getNetwork().GetFirstConnectedInterface();
-
-      if (net)
-      {
-        net->GetMacAddressRaw(macAdr);
-      }
+      g_application.getNetwork().GetDefaultConnectionMacAddressRaw(macAdr);
 
       ret = m_pLibShairplay->raop_start(m_pRaop, &port, macAdr, 6, password.c_str()) >= 0;
     }

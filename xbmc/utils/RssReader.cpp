@@ -18,7 +18,6 @@
  *
  */
 
-#include "network/Network.h"
 #include "threads/SystemClock.h"
 #include "RssReader.h"
 #include "utils/HTMLUtil.h"
@@ -146,7 +145,7 @@ void CRssReader::Process()
 
     // we wait for the network to come up
     if ((url.GetProtocol() == "http" || url.GetProtocol() == "https") &&
-        !g_application.getNetwork().IsAvailable(true))
+        !g_application.getNetwork().IsConnected())
       strXML = "<rss><item><title>"+g_localizeStrings.Get(15301)+"</title></item></rss>";
     else
     {

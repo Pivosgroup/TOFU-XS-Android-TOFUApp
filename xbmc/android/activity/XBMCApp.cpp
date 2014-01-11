@@ -150,6 +150,13 @@ void CXBMCApp::onResume()
   CJNIIntentFilter intentFilter;
   intentFilter.addAction("android.intent.action.BATTERY_CHANGED");
   intentFilter.addAction("android.intent.action.MEDIA_MOUNTED");
+  intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
+  intentFilter.addAction("android.net.ethernet.ETH_STATE_CHANGED");
+  intentFilter.addAction("android.net.wifi.STATE_CHANGE");
+  intentFilter.addAction("android.net.wifi.RSSI_CHANGED");
+  intentFilter.addAction("android.net.wifi.SCAN_RESULTS");
+  intentFilter.addAction("android.net.wifi.NETWORK_IDS_CHANGED");
+  intentFilter.addAction("android.net.wifi.supplicant.STATE_CHANGE");
   registerReceiver(*this, intentFilter);
   
   // Clear the applications cache. We could have installed/deinstalled apps
@@ -657,6 +664,17 @@ void CXBMCApp::onReceive(CJNIIntent intent)
     m_batteryLevel = intent.getIntExtra("level",-1);
   else if (action == "android.intent.action.MEDIA_MOUNTED")
     m_mediaMounted.Set();
+  else if (action == "android.net.wifi.STATE_CHANGE"  ||
+           action == "android.net.conn.CONNECTIVITY_CHANGE" ||
+           action == "android.net.ethernet.ETH_STATE_CHANGED" ||
+           action == "android.net.wifi.RSSI_CHANGED"        ||
+           action == "android.net.wifi.SCAN_RESULTS"        ||
+           action == "android.net.wifi.supplicant.STATE_CHANGE" ||
+           action == "android.net.wifi.NETWORK_IDS_CHANGED")
+  {
+    const NetworkEventDataPtr intentPtr = NetworkEventDataPtr(new CJNIIntent(intent));
+    g_application.getNetwork().ReceiveNetworkEvent(intentPtr);
+  }
 }
 
 void CXBMCApp::onNewIntent(CJNIIntent intent)

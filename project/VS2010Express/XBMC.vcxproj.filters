@@ -312,6 +312,8 @@
     </Filter>
     <Filter Include="settings\lib">
       <UniqueIdentifier>{4de9ae04-448d-4ebe-bde5-5ec2a61270c0}</UniqueIdentifier>
+    <Filter Include="security">
+      <UniqueIdentifier>{c6269a6c-7e39-4370-bc47-230d4cdbb8f3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1312,9 +1314,6 @@
     <ClCompile Include="..\..\xbmc\network\GUIDialogNetworkSetup.cpp">
       <Filter>network</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\xbmc\network\Network.cpp">
-      <Filter>network</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\xbmc\network\Socket.cpp">
       <Filter>network</Filter>
     </ClCompile>
@@ -1332,9 +1331,6 @@
     </ClCompile>
     <ClCompile Include="..\..\xbmc\network\Zeroconf.cpp">
       <Filter>network</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\xbmc\network\windows\NetworkWin32.cpp">
-      <Filter>network\windows</Filter>
     </ClCompile>
     <ClCompile Include="..\..\xbmc\pictures\GUIDialogPictureInfo.cpp">
       <Filter>pictures</Filter>
@@ -1629,6 +1625,41 @@
     </ClCompile>
     <ClCompile Include="..\..\xbmc\windowing\WinSystem.cpp">
       <Filter>windowing</Filter>
+    <ClCompile Include="..\..\xbmc\network\NetworkManager.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xbmc\network\NetworkSettings.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xbmc\network\windows\WinConnection.cpp">
+      <Filter>network\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xbmc\network\windows\WinNetworkManager.cpp">
+      <Filter>network\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xbmc\security\KeyringManager.cpp">
+      <Filter>security</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xbmc\security\MemoryKeyringManager.cpp">
+      <Filter>security</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xbmc\security\XMLKeyringManager.cpp">
+      <Filter>security</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xbmc\utils\XMLVariantParser.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xbmc\utils\XMLVariantWriter.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xbmc\network\NullNetworkManager.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xbmc\network\ConnectionJob.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xbmc\network\NetworkUtils.cpp">
+      <Filter>network</Filter>
     </ClCompile>
     <ClCompile Include="..\..\xbmc\windowing\windows\WinEventsWin32.cpp">
       <Filter>windowing\windows</Filter>
@@ -4308,9 +4339,6 @@
     <ClInclude Include="..\..\xbmc\network\GUIDialogNetworkSetup.h">
       <Filter>network</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\xbmc\network\Network.h">
-      <Filter>network</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\xbmc\network\Socket.h">
       <Filter>network</Filter>
     </ClInclude>
@@ -4328,9 +4356,6 @@
     </ClInclude>
     <ClInclude Include="..\..\xbmc\network\Zeroconf.h">
       <Filter>network</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\xbmc\network\windows\NetworkWin32.h">
-      <Filter>network\windows</Filter>
     </ClInclude>
     <ClInclude Include="..\..\xbmc\pictures\DllImageLib.h">
       <Filter>pictures</Filter>
@@ -6087,6 +6112,53 @@
     </ClInclude>
     <ClInclude Include="..\..\xbmc\utils\Utf8Utils.h">
       <Filter>utils</Filter>
+    <ClInclude Include="..\..\xbmc\network\IConnection.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xbmc\network\INetworkManager.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xbmc\network\IPassphraseStorage.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xbmc\network\NetworkManager.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xbmc\network\NetworkSettings.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xbmc\network\windows\WinConnection.h">
+      <Filter>network\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xbmc\network\windows\WinNetworkManager.h">
+      <Filter>network\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xbmc\security\IKeyringManager.h">
+      <Filter>security</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xbmc\security\KeyringManager.h">
+      <Filter>security</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xbmc\security\MemoryKeyringManager.h">
+      <Filter>security</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xbmc\security\XMLKeyringManager.h">
+      <Filter>security</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xbmc\utils\XMLVariantParser.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xbmc\utils\XMLVariantWriter.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xbmc\network\NullNetworkManager.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xbmc\network\ConnectionJob.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xbmc\network\NetworkUtils.h">
+      <Filter>network</Filter>
     </ClInclude>
     <ClInclude Include="..\..\xbmc\utils\XSLTUtils.h">
       <Filter>utils</Filter>
