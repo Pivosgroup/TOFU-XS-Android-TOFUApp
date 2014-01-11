@@ -21,7 +21,6 @@
 #if (defined HAVE_CONFIG_H) && (!defined TARGET_WINDOWS)
   #include "config.h"
 #endif
-#include "network/Network.h"
 #include "system.h"
 #include "DirectoryFactory.h"
 #include "HDDirectory.h"
@@ -174,7 +173,7 @@ IDirectory* CDirectoryFactory::Create(const CStdString& strPath)
   if (strProtocol == "androidapp") return new CAndroidAppDirectory();
 #endif
 
-  if( g_application.getNetwork().IsAvailable(true) )  // true to wait for the network (if possible)
+  if( g_application.getNetwork().IsConnected() )
   {
     if (strProtocol == "tuxbox") return new CTuxBoxDirectory();
     if (strProtocol == "ftp" || strProtocol == "ftps") return new CFTPDirectory();

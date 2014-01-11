@@ -21,7 +21,6 @@
 #if (defined HAVE_CONFIG_H) && (!defined TARGET_WINDOWS)
   #include "config.h"
 #endif
-#include "network/Network.h"
 #include "system.h"
 #include "FileFactory.h"
 #include "HDFile.h"
@@ -151,7 +150,7 @@ IFile* CFileFactory::CreateLoader(const CURL& url)
   else if (strProtocol == "androidapp") return new CFileAndroidApp();
 #endif
 
-  if( g_application.getNetwork().IsAvailable() )
+  if( g_application.getNetwork().IsConnected() )
   {
     if (strProtocol == "ftp"
     ||  strProtocol == "ftps"

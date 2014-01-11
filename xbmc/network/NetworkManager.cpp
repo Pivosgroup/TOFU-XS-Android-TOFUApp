@@ -26,6 +26,8 @@
 #include "NetworkServices.h"
 #include "NetworkSettings.h"
 #include "NullNetworkManager.h"
+#include "URL.h"
+#include "filesystem/CurlFile.h"
 #include "guilib/Key.h"
 #include "guilib/GUIWindowManager.h"
 #include "linux/ConnmanNetworkManager.h"
@@ -211,9 +213,16 @@ bool CNetworkManager::IsConnected()
   return GetDefaultConnectionState() == NETWORK_CONNECTION_STATE_CONNECTED;
 }
 
-bool CNetworkManager::IsAvailable(bool wait)
+bool CNetworkManager::HasInternet(bool checkDNS)
 {
-  return true;
+  if (!IsConnected())
+    return false;
+
+  XFILE::CCurlFile http;
+  if (checkDNS)
+    return http.Exists(CURL("http://www.google.com"));
+  else
+    return http.Exists(CURL("http://74.125.19.103"));
 }
 
 bool CNetworkManager::CanManageConnections()

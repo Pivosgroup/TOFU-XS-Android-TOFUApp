@@ -29,7 +29,6 @@
 #include "dialogs/GUIDialogOK.h"
 #include "dialogs/GUIDialogYesNo.h"
 #include "guilib/LocalizeStrings.h"
-#include "network/Network.h"
 
 #ifdef HAS_AIRPLAY
 #include "network/AirPlayServer.h"
@@ -438,7 +437,7 @@ void CNetworkServices::Stop(bool bWait)
 bool CNetworkServices::StartWebserver()
 {
 #ifdef HAS_WEB_SERVER
-  if (!g_application.getNetwork().IsAvailable())
+  if (!g_application.getNetwork().IsConnected())
     return false;
 
   if (!CSettings::Get().GetBool("services.webserver"))
@@ -513,7 +512,7 @@ bool CNetworkServices::StopWebserver()
 bool CNetworkServices::StartAirPlayServer()
 {
 #ifdef HAS_AIRPLAY
-  if (!g_application.getNetwork().IsAvailable() || !CSettings::Get().GetBool("services.airplay"))
+  if (!g_application.getNetwork().IsConnected() || !CSettings::Get().GetBool("services.airplay"))
     return false;
 
   if (IsAirPlayServerRunning())
@@ -528,8 +527,7 @@ bool CNetworkServices::StartAirPlayServer()
   
 #ifdef HAS_ZEROCONF
   std::vector<std::pair<std::string, std::string> > txt;
-  CNetworkInterface* iface = g_application.getNetwork().GetFirstConnectedInterface();
-  txt.push_back(make_pair("deviceid", iface != NULL ? iface->GetMacAddress() : "FF:FF:FF:FF:FF:F2"));
+  txt.push_back(make_pair("deviceid", g_application.getNetwork().GetDefaultConnectionMacAddress()));
   txt.push_back(make_pair("features", "0x77"));
   txt.push_back(make_pair("model", "Xbmc,1"));
   txt.push_back(make_pair("srcvers", AIRPLAY_SERVER_VERSION_STR));
@@ -569,7 +567,7 @@ bool CNetworkServices::StopAirPlayServer(bool bWait)
 bool CNetworkServices::StartAirTunesServer()
 {
 #ifdef HAS_AIRTUNES
-  if (!g_application.getNetwork().IsAvailable() || !CSettings::Get().GetBool("services.airplay"))
+  if (!g_application.getNetwork().IsConnected() || !CSettings::Get().GetBool("services.airplay"))
     return false;
 
   if (IsAirTunesServerRunning())
