@@ -43,6 +43,15 @@
       <visible>false</visible>
     </category>
   </section>
+  <section id="services">
+    <category id="general">
+      <group id="1">
+        <setting id="services.devicename">
+          <default>TOFU</default>
+        </setting>
+      </group>
+    </category>
+  </section>
   <section id="system">
     <category id="videoscreen">
       <group id="1">
