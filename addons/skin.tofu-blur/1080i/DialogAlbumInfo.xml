@@ -13,7 +13,7 @@
 		<control type="group">
 			<control type="image">
 				<aspectratio>scale</aspectratio>
-				<texture background="true" fallback="special://skin/backgrounds/music/music.jpg">$INFO[ListItem.Art(fanart)]</texture>
+				<texture background="true" fallback="fallback.jpg">$INFO[ListItem.Art(fanart)]</texture>
 				<include>FullscreenDimensions</include>
 			</control>
 			<control type="image">

@@ -457,7 +457,7 @@
 						<control type="image">
 							<width>573</width>
 							<height>322</height>
-							<texture background="true" fallback="special://skin/backgrounds/videos/videos.jpg">$VAR[InfoWallPreviewTextureVar]</texture>
+							<texture background="true" fallback="fallback.jpg">$VAR[InfoWallPreviewTextureVar]</texture>
 							<fadetime>IconCrossfadeTime</fadetime>
 							<include condition="Window.IsActive(pictures)">Aspectratio_Keep</include>
 							<include condition="!Window.IsActive(pictures)">Aspectratio_Scale</include>

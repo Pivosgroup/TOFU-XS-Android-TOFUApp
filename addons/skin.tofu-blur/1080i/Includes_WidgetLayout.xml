@@ -365,10 +365,10 @@
 	</include>
 	<include name="Furniture_HomeNowPlaying">
 		<control type="group">
-			<posy>14</posy>
+			<posy>30</posy>
 			<visible>IsEmpty(Window(home).Property(PanelWidgetInfo)) + IsEmpty(Window(home).Property(PanelWidget2Info))</visible>
 			<visible>[IsEmpty(Control.GetLabel(4325)) + !Skin.HasSetting(movenowplayingwidget)] | [IsEmpty(Control.GetLabel(4321)) + Skin.HasSetting(movenowplayingwidget)] | !IsEmpty(Window(home).Property(DisableWidgets))</visible>
-			<animation effect="slide" end="0,35" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
+			<animation effect="slide" end="0,20" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
 			<include>Animation_Widgets</include>
 			<animation effect="slide" end="0,390" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(movenowplayingwidget) + Skin.HasSetting(lowermainmenu)">Conditional</animation>
 			<animation effect="slide" end="0,210" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(movenowplayingwidget) + Skin.HasSetting(lowermainmenu) + Window.IsActive(1158)">Conditional</animation>
@@ -1121,7 +1121,7 @@
 						<width>345</width>
 						<height>194</height>
 						<aspectratio aligny="top" align="center">scale</aspectratio>
-						<texture background="true" fallback="special://skin/backgrounds/videos/videos.jpg">$VAR[ClassicWidgetImageVar]</texture>
+						<texture background="true" fallback="fallback.jpg">$VAR[ClassicWidgetImageVar]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
 						<animation effect="fade" time="240">Visible</animation>
@@ -2864,7 +2864,7 @@
 					<width>345</width>
 					<height>194</height>
 					<aspectratio aligny="top" align="center">scale</aspectratio>
-					<texture background="true" fallback="special://skin/backgrounds/videos/videos.jpg">$VAR[ClassicWidget2ImageVar]</texture>
+					<texture background="true" fallback="fallback.jpg">$VAR[ClassicWidget2ImageVar]</texture>
 					<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 					<bordersize>7</bordersize>
 					<animation effect="fade" time="240">Visible</animation>

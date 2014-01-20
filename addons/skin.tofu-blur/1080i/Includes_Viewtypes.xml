@@ -347,7 +347,7 @@
 				<width>798</width>
 				<height>454</height>
 				<aspectratio align="center">scale</aspectratio>
-				<texture background="true" fallback="special://skin/backgrounds/movies/movies.jpg">$VAR[FanartTextureVar]</texture>
+				<texture background="true" fallback="fallback.jpg">$VAR[FanartTextureVar]</texture>
 				<fadetime>FanartCrossfadeTime</fadetime>
 				<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 				<bordersize>7</bordersize>
