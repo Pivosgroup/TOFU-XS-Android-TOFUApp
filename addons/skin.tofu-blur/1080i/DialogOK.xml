@@ -37,32 +37,12 @@
 				<textcolor>$VAR[FontColorVar]</textcolor>
 				<scroll>true</scroll>
 			</control>
-			<control type="grouplist">
+			<control type="textbox" id="9">
+				<posx>45</posx>
 				<posy>68</posy>
-				<control type="label" id="2">
-					<width>780</width>
-					<height>60</height>
-					<textoffsetx>45</textoffsetx>
-					<align>center</align>
-					<scroll>true</scroll>
-					<wrapmultiline>true</wrapmultiline>
-				</control>
-				<control type="label" id="3">
-					<width>780</width>
-					<height>60</height>
-					<textoffsetx>45</textoffsetx>
-					<align>center</align>
-					<wrapmultiline>true</wrapmultiline>
-					<scroll>true</scroll>
-				</control>
-				<control type="label" id="4">
-					<width>780</width>
-					<height>60</height>
-					<textoffsetx>45</textoffsetx>
-					<align>center</align>
-					<wrapmultiline>true</wrapmultiline>
-					<scroll>true</scroll>
-				</control>
+				<width>652</width>
+				<height>60</height>
+				<align>center</align>
 			</control>
 			<control type="button" id="10">
 				<posx>278</posx>

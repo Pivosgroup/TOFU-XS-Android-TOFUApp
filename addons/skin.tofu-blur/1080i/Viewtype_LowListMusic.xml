@@ -132,7 +132,7 @@
 						<width>628</width>
 						<height>360</height>
 						<aspectratio>scale</aspectratio>
-						<texture background="true" fallback="special://skin/backgrounds/music/music.jpg">$INFO[ListItem.Art(fanart)]</texture>
+						<texture background="true" fallback="fallback.jpg">$INFO[ListItem.Art(fanart)]</texture>
 						<fadetime>400</fadetime>
 						<bordersize>7</bordersize>
 					</control>

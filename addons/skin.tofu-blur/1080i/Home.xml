@@ -533,16 +533,16 @@
 		<include condition="!Skin.HasSetting(nohomepageMusicinfo) | !Skin.HasSetting(homepageVideoinfo)">Furniture_HomeNowPlaying</include>
 		<control type="group">
 			<posx>0</posx>
-			<posy>20</posy>
+			<posy>40</posy>
 			<visible>!IsEmpty(Window(home).Property(DisableWidgets)) + !Player.HasMedia</visible>
 			<include>Animation_WindowFade200</include>
 			<animation type="Visible">
-				<effect type="zoom" start="150" end="100" center="960,540" time="400" tween="cubic" />
+				<effect type="zoom" start="150" end="100" center="960,40" time="400" tween="cubic" />
 				<effect type="fade" end="100" time="240" />
 			</animation>
 			<animation type="Hidden">
 				<effect type="fade" start="100" end="0" time="240" />
-				<effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
+				<effect type="zoom" start="100" end="130" center="960,40" time="240" tween="cubic" easing="in" />
 			</animation>
 			<control type="image">
 				<posx>0</posx>

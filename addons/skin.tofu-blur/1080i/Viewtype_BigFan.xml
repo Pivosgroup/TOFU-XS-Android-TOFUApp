@@ -20,7 +20,7 @@
 				<visible>Window.IsActive(videos) + [Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(genres) | Container.Content(sets)]</visible>
 				<itemlayout height="1080" width="1920">
 					<control type="image">
-						<texture background="true" fallback="special://skin/backgrounds/movies/movies.jpg">$INFO[ListItem.Art(fanart)]</texture>
+						<texture background="true" fallback="fallback.jpg">$INFO[ListItem.Art(fanart)]</texture>
 						<include>FullscreenDimensions</include>
 					</control>
 					<control type="multiimage">
@@ -34,7 +34,7 @@
 				</itemlayout>
 				<focusedlayout height="1080" width="1920">
 					<control type="image">
-						<texture background="true" fallback="special://skin/backgrounds/movies/movies.jpg">$INFO[ListItem.Art(fanart)]</texture>
+						<texture background="true" fallback="fallback.jpg">$INFO[ListItem.Art(fanart)]</texture>
 						<include>FullscreenDimensions</include>
 					</control>
 					<control type="multiimage">

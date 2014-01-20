@@ -251,12 +251,12 @@
 		<value>$LOCALIZE[208]</value>
 	</variable>
 	<variable name="InfoWallPreviewTextureVar">
-		<value condition="[Window.IsActive(musicfiles) | Window.IsActive(musiclibrary) | Window.IsActive(musicplaylist)] + IsEmpty(ListItem.Art(fanart))">special://skin/backgrounds/music/music.jpg</value>
-		<value condition="Container.Content(addons) + IsEmpty(ListItem.Art(fanart))">special://skin/backgrounds/programs/programs.jpg</value>
-		<value condition="Container.Content(movies) + IsEmpty(ListItem.Art(fanart))">special://skin/backgrounds/movies/movies.jpg</value>
-		<value condition="[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + IsEmpty(ListItem.Art(fanart))">special://skin/backgrounds/tvshows/tvshows.jpg</value>
-		<value condition="Window.IsActive(pictures) + IsEmpty(Listitem.Thumb)">special://skin/backgrounds/pictures/pictures.jpg</value>
-		<value condition="Window.IsActive(programs) + !Container.Content(addons) + IsEmpty(ListItem.Art(fanart))">special://skin/backgrounds/programs/programs.jpg</value>
+		<value condition="[Window.IsActive(musicfiles) | Window.IsActive(musiclibrary) | Window.IsActive(musicplaylist)] + IsEmpty(ListItem.Art(fanart))">fallback.jpg</value>
+		<value condition="Container.Content(addons) + IsEmpty(ListItem.Art(fanart))">fallback.jpg</value>
+		<value condition="Container.Content(movies) + IsEmpty(ListItem.Art(fanart))">fallback.jpg</value>
+		<value condition="[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + IsEmpty(ListItem.Art(fanart))">fallback.jpg</value>
+		<value condition="Window.IsActive(pictures) + IsEmpty(Listitem.Thumb)">fallback.jpg</value>
+		<value condition="Window.IsActive(programs) + !Container.Content(addons) + IsEmpty(ListItem.Art(fanart))">fallback.jpg</value>
 		<value condition="Window.IsActive(pictures) + | Container.Content(files)">$INFO[Listitem.Thumb]</value>
 		<value condition="Control.IsVisible(52) + Container.Content(episodes)">$INFO[Listitem.Thumb]</value>
 		<value>$INFO[ListItem.Art(fanart)]</value>
