@@ -347,7 +347,7 @@
 			<size>31</size>
 		</font>
 	</fontset>
-	<fontset id="Default" idloc="31999" unicode="true">
+	<fontset id="Extended" idloc="31999" unicode="true">
 		<font>
 			<name>Font_Reg57_Caps</name>
 			<filename>Arial.ttf</filename>
