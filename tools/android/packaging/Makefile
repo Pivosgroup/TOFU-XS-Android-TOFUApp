@@ -94,6 +94,10 @@ extras: libs
 	rm -rf xbmc/assets
 	mkdir -p xbmc/assets xbmc/res xbmc/res/raw xbmc/assets/python2.6/lib/
 	cp -rfp $(PREFIX)/share/xbmc/* ./xbmc/assets
+	# remove osx junk files
+	find `pwd`/xbmc/assets/ -depth -name ".DS_Store" -exec rm {} \;
+	find `pwd`/xbmc/assets/ -depth -name "._*" -exec rm {} \;
+	# remove git and any stale *.so files
 	find `pwd`/xbmc/assets/ -depth -name ".git" -exec rm -rf {} \;
 	find `pwd`/xbmc/assets/system/ -name "*.so" -exec rm {} \;
 	find `pwd`/xbmc/assets/addons/skin.*/media/* -depth -not -iname "Textures.xbt" -exec rm -rf {} \;
