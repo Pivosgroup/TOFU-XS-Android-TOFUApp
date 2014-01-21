@@ -35,6 +35,7 @@
 		<control type="group">
 			<posx>920</posx>
 			<posy>756</posy>
+			<animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -69,31 +70,13 @@
 				<width>15</width>
 				<height>15</height>
 				<texture>dot-on.png</texture>
-				<animation effect="fade" start="0" end="100" time="50" delay="2000" condition="true">Conditional</animation>
-			</control>
-			<control type="image">
-				<posx>22</posx>
-				<posy>0</posy>
-				<width>15</width>
-				<height>15</height>
-				<texture>dot-on.png</texture>
-				<animation effect="fade" start="0" end="100" time="50" delay="2500" condition="true">Conditional</animation>
-			</control>
-			<control type="image">
-				<posx>44</posx>
-				<posy>0</posy>
-				<width>15</width>
-				<height>15</height>
-				<texture>dot-on.png</texture>
-				<animation effect="fade" start="0" end="100" time="50" delay="3000" condition="true">Conditional</animation>
-			</control>
-			<control type="image">
-				<posx>66</posx>
-				<posy>0</posy>
-				<width>15</width>
-				<height>15</height>
-				<texture>dot-on.png</texture>
-				<animation effect="fade" start="0" end="100" time="50" delay="3500" condition="true">Conditional</animation>
+				<animation type="Conditional" condition="true" pulse="true">
+					<effect type="slide" start="0,0" end="0,0" time="0"/>
+					<effect type="slide" start="0,0" end="22,0" time="0" delay="250"/>
+					<effect type="slide" start="0,0" end="22,0" time="0" delay="750"/>
+					<effect type="slide" start="0,0" end="22,0" time="0" delay="1250"/>
+					<effect type="slide" start="0,0" end="0,0" time="0" delay="1500"/>
+				</animation>
 			</control>
 		</control>
 	</controls>
