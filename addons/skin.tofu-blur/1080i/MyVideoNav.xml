@@ -4,7 +4,7 @@
 	<onload condition="System.HasAddon(script.tvtunes) + IsEmpty(Window(Home).Property(DontRunTVShowScripts))">RunScript(script.tvtunes,backend=True)</onload>
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + IsEmpty(Window(Home).Property(DontRunTVShowScripts))">RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onload>ClearProperty(BrowseActors,home)</onload>
-	<include condition="!Skin.HasSetting(setup-0.1.3)">AutoConfig</include>
+	<include condition="!Skin.HasSetting(setup-0.1.6)">AutoConfig</include>
 	<onload condition="!Skin.HasSetting(ExplainMediaMenu)">ActivateWindow(1123)</onload>
 	<allowoverlay>no</allowoverlay>
 	<views>50,52,53,57,500,501,503,550,508,509,510,511,512,514,516,518</views>

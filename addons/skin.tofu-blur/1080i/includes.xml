@@ -565,7 +565,7 @@
 		<onload>Skin.SetString(CustomSub9_3.Disable,1)</onload>
 		<onload>Skin.SetString(CustomSub9_4.Disable,1)</onload>
 		<onload>Skin.SetString(CustomSub9_5.Disable,1)</onload>
-		<onload>Skin.SetBool(setup-0.1.3)</onload>
+		<onload>Skin.SetBool(setup-0.1.6)</onload>
 	</include>
 	<include name="DelayAnimations">
 		<animation effect="fade" end="100" time="120" delay="1000" condition="Stringcompare(Skin.String(InfopanelDelay),1)">Visible</animation>

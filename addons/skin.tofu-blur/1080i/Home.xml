@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">9004</defaultcontrol>
-	<include condition="!Skin.HasSetting(setup-0.1.3)">AutoConfig</include>
+	<include condition="!Skin.HasSetting(setup-0.1.6)">AutoConfig</include>
 	<onload condition="!Window.Previous(startup) + Skin.HasSetting(randomizehome) + [Substring(Skin.String(widgetlist),random) | Substring(Skin.String(widget2list),random) | Substring(Skin.String(backgroundlist),random)]">SetProperty(SkinWidgets_RandomItems_Update,true)</onload>
 	<onload>ClearProperty(DontRunTVShowScripts,Home)</onload>
 	<onload>AlarmClock(WidgetMove,Control.Move(8000,1),00:07,silent,loop)</onload>

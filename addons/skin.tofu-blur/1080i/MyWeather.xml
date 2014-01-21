@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">7510</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<include condition="!Skin.HasSetting(setup-0.1.3)">AutoConfig</include>
+	<include condition="!Skin.HasSetting(setup-0.1.6)">AutoConfig</include>
 	<onload condition="!Skin.HasSetting(ExplainMediaMenu)">ActivateWindow(1123)</onload>
 	<onunload>ClearProperty(FSMap,weather)</onunload>
 	<onload>SetProperty(CurrentPhaseImage,$ESCINFO[Window(Weather).Property(Current.Earth.Phase.Image)])</onload>

@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">95</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<include condition="!Skin.HasSetting(setup-0.1.3)">AutoConfig</include>
+	<include condition="!Skin.HasSetting(setup-0.1.6)">AutoConfig</include>
 	<animation type="WindowOpen" reversible="false" condition="!Window.Previous(settings)">
 		<effect type="zoom" start="150" end="100" center="960,540" time="720" tween="cubic" />
 		<effect type="fade" end="100" time="720" />
