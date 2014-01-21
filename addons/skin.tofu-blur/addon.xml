@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<addon id="skin.tofu-blur" version="0.1.5" name="TOFU Blur" provider-name="Pivos Technology Group, Inc.">
+<addon id="skin.tofu-blur" version="0.1.6" name="TOFU Blur" provider-name="Pivos Technology Group, Inc.">
 	<requires>
 		<import addon="xbmc.gui" version="5.0.1"/>
 	</requires>
