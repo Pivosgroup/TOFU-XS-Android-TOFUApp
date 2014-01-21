@@ -9,9 +9,9 @@
 			<include>Animation_OpenCloseZoom</include>
 			<control type="image">
 				<posx>249</posx>
-				<posy>210</posy>
+				<posy>100</posy>
 				<width>908</width>
-				<height>540</height>
+				<height>650</height>
 				<texture border="5">panel.png</texture>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			</control>

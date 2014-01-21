@@ -442,7 +442,7 @@
 		<textoffsety>8</textoffsety>
 		<aligny>top</aligny>
 		<font>Font_Reg28</font>
-		<textcolor>$VAR[FontColorVar]</textcolor>
+		<textcolor>alternate</textcolor>
 	</include>
 	<include name="Objects_CommonSettingsScrollbar">
 		<posx>1524</posx>
@@ -2109,7 +2109,7 @@
 			<posy>0</posy>
 			<animation effect="slide" start="0,0" end="140,0" condition="!Skin.HasSetting(breadcrumbsweather)">Conditional</animation>
 			<control type="grouplist">
-				<posx>0</posx>
+				<posx>120</posx>
 				<posy>0</posy>
 				<height>38</height>
 				<width>240</width>
@@ -2137,7 +2137,7 @@
 				</control>
 			</control>
 			<control type="image">
-				<posx>250</posx>
+				<posx>369</posx>
 				<posy>6</posy>
 				<width>2</width>
 				<height>29</height>
@@ -2151,6 +2151,7 @@
 				<width>32</width>
 				<height>32</height>
 				<texture>$VAR[IconNetwork]</texture>
+				<visible>false</visible><!--FIXME-->
 			</control>
 			<control type="multiimage">
 				<posx>270</posx>
@@ -2167,6 +2168,7 @@
 				<width>32</width>
 				<height>32</height>
 				<texture>$VAR[IconUSB]</texture>
+				<visible>false</visible><!--FIXME-->
 			</control>
 			<control type="image">
 				<posx>369</posx>
@@ -2175,6 +2177,7 @@
 				<height>29</height>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				<texture>white-line.png</texture>
+				<visible>false</visible><!--FIXME-->
 			</control>
 			<control type="label">
 				<posx>624</posx>
