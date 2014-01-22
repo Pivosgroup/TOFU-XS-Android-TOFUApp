@@ -45,7 +45,7 @@
 			<onup>450</onup>
 			<ondown>450</ondown>
 			<control type="radiobutton" id="453">
-				<label>31994</label>
+				<label>31621</label>
 				<include>Objects_CommonSettingsButton</include>
 				<onclick>Skin.ToggleSetting(AlaskaPausedLabel)</onclick>
 				<selected>Skin.HasSetting(AlaskaPausedLabel)</selected>
@@ -69,7 +69,7 @@
 				<selected>Skin.HasSetting(PreferRemaining)</selected>
 			</control>
 			<control type="radiobutton" id="457">
-				<label>31995</label>
+				<label>31097</label>
 				<include>Objects_CommonSettingsButton</include>
 				<onclick>Skin.ToggleSetting(morefullscreeninfo)</onclick>
 				<selected>Skin.HasSetting(morefullscreeninfo)</selected>

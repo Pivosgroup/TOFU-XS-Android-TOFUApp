@@ -81,7 +81,7 @@
 					<!-- Toggle Fanart -->
 					<include>Objects_MediaBackgroundsButton</include>
 					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartTVShows) + !Skin.HasSetting(extrafanartseasons)">Skin.SetBool(extrafanartseasons)</onclick>
-					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartTVShows) + !Skin.HasSetting(extrafanartseasons)">Notification($LOCALIZE[31902],$LOCALIZE[31992])</onclick>
+					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartTVShows) + !Skin.HasSetting(extrafanartseasons)">Notification($LOCALIZE[31902],$LOCALIZE[31904])</onclick>
 					<onclick condition="Skin.HasSetting(extrafanartseasons)">Skin.SetBool(NoVideoLibraryFanartTVShows)</onclick>
 					<onclick condition="Skin.HasSetting(extrafanartseasons)">Skin.Reset(extrafanartseasons)</onclick>
 					<onclick condition="Skin.HasSetting(NoVideoLibraryFanartTVShows)">Skin.Reset(NoVideoLibraryFanartTVShows)</onclick>
@@ -93,7 +93,7 @@
 					<!-- Toggle Fanart -->
 					<include>Objects_MediaBackgroundsButton</include>
 					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartTVShows) + !Skin.HasSetting(extrafanartepisodes)">Skin.SetBool(extrafanartepisodes)</onclick>
-					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartTVShows) + !Skin.HasSetting(extrafanartepisodes)">Notification($LOCALIZE[31902],$LOCALIZE[31992])</onclick>
+					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartTVShows) + !Skin.HasSetting(extrafanartepisodes)">Notification($LOCALIZE[31902],$LOCALIZE[31904])</onclick>
 					<onclick condition="Skin.HasSetting(extrafanartepisodes)">Skin.SetBool(NoVideoLibraryFanartTVShows)</onclick>
 					<onclick condition="Skin.HasSetting(extrafanartepisodes)">Skin.Reset(extrafanartepisodes)</onclick>
 					<onclick condition="Skin.HasSetting(NoVideoLibraryFanartTVShows)">Skin.Reset(NoVideoLibraryFanartTVShows)</onclick>
@@ -105,7 +105,7 @@
 					<!-- Toggle Fanart -->
 					<include>Objects_MediaBackgroundsButton</include>
 					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanart) + !Skin.HasSetting(extrafanartmovies)">Skin.SetBool(extrafanartmovies)</onclick>
-					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanart) + !Skin.HasSetting(extrafanartmovies)">Notification($LOCALIZE[31902],$LOCALIZE[31992])</onclick>
+					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanart) + !Skin.HasSetting(extrafanartmovies)">Notification($LOCALIZE[31902],$LOCALIZE[31904])</onclick>
 					<onclick condition="Skin.HasSetting(extrafanartmovies)">Skin.SetBool(NoVideoLibraryFanart)</onclick>
 					<onclick condition="Skin.HasSetting(extrafanartmovies)">Skin.Reset(extrafanartmovies)</onclick>
 					<onclick condition="Skin.HasSetting(NoVideoLibraryFanart)">Skin.Reset(NoVideoLibraryFanart)</onclick>
@@ -117,7 +117,7 @@
 					<!-- Toggle Fanart -->
 					<include>Objects_MediaBackgroundsButton</include>
 					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartMusicVideos) + !Skin.HasSetting(extrafanartmusicvideos)">Skin.SetBool(extrafanartmusicvideos)</onclick>
-					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartMusicVideos) + !Skin.HasSetting(extrafanartmusicvideos)">Notification($LOCALIZE[31902],$LOCALIZE[31992])</onclick>
+					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartMusicVideos) + !Skin.HasSetting(extrafanartmusicvideos)">Notification($LOCALIZE[31902],$LOCALIZE[31904])</onclick>
 					<onclick condition="Skin.HasSetting(extrafanartmusicvideos)">Skin.SetBool(NoVideoLibraryFanartMusicVideos)</onclick>
 					<onclick condition="Skin.HasSetting(extrafanartmusicvideos)">Skin.Reset(extrafanartmusicvideos)</onclick>
 					<onclick condition="Skin.HasSetting(NoVideoLibraryFanartMusicVideos)">Skin.Reset(NoVideoLibraryFanartMusicVideos)</onclick>
@@ -135,7 +135,7 @@
 					<label>$LOCALIZE[20445]: [COLOR $VAR[FontColorVar]]$VAR[VideoFanArtLabelVar][/COLOR]</label>
 					<include>Objects_MediaBackgroundsButton</include>
 					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartTVShows) + !Skin.HasSetting(extrafanarttvshows)">Skin.SetBool(extrafanarttvshows)</onclick>
-					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartTVShows) + !Skin.HasSetting(extrafanarttvshows)">Notification($LOCALIZE[31902],$LOCALIZE[31992])</onclick>
+					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartTVShows) + !Skin.HasSetting(extrafanarttvshows)">Notification($LOCALIZE[31902],$LOCALIZE[31904])</onclick>
 					<onclick condition="Skin.HasSetting(extrafanarttvshows)">Skin.SetBool(NoVideoLibraryFanartTVShows)</onclick>
 					<onclick condition="Skin.HasSetting(extrafanarttvshows)">Skin.Reset(extrafanarttvshows)</onclick>
 					<onclick condition="Skin.HasSetting(NoVideoLibraryFanartTVShows)">Skin.Reset(NoVideoLibraryFanartTVShows)</onclick>

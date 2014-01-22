@@ -95,13 +95,13 @@
 					<item id="6">
 						<label>24001</label>
 						<label2>31411</label2>
-						<property name="description">$LOCALIZE[31988]</property>
+						<property name="description">$LOCALIZE[31408]</property>
 						<onclick>ActivateWindow(AddonBrowser)</onclick>
 						<icon>special://skin/backgrounds/programs/programs.jpg</icon>
 					</item>
 					<item id="7">
 						<label>14036</label>
-						<property name="description">$LOCALIZE[31986]</property>
+						<property name="description">$LOCALIZE[31405]</property>
 						<onclick>ActivateWindow(ServiceSettings)</onclick>
 						<icon>special://skin/backgrounds/network.jpg</icon>
 					</item>
@@ -121,13 +121,13 @@
 					<item id="10">
 						<label>13281</label>
 						<label2>31413</label2>
-						<property name="description">$LOCALIZE[31989]</property>
+						<property name="description">$LOCALIZE[31409]</property>
 						<onclick>ActivateWindow(systeminfo)</onclick>
 						<icon>special://skin/backgrounds/systeminfo.jpg</icon>
 					</item>
 					<item id="9">
 						<label>166</label>
-						<property name="description">$LOCALIZE[31987]</property>
+						<property name="description">$LOCALIZE[31407]</property>
 						<onclick>ActivateWindow(skinsettings)</onclick>
 						<icon>special://skin/backgrounds/skinsetting.jpg</icon>
 					</item>

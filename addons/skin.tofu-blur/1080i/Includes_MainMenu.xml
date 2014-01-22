@@ -472,19 +472,14 @@
 	</include>
 	<include name="DefaultMusicSubMenu">
 		<item>
-			<label>31970</label>
-			<onclick>RunPlugin()</onclick>
+			<label>133</label>
+			<onclick>ActivateWindow(MusicLibrary,Artists)</onclick>
+			<visible>Library.HasContent(Music)</visible>
 			<visible>Substring(Control.GetLabel(4327),music) + IsEmpty(Skin.String(MusicSub1))</visible>
 		</item>
 		<item>
-			<label>31971</label>
+			<label>744</label>
 			<onclick>ActivateWindow(MusicFiles)</onclick>
-			<visible>!Library.HasContent(Music)</visible>
-			<visible>Substring(Control.GetLabel(4327),music) + IsEmpty(Skin.String(MusicSub2))</visible>
-		</item>
-		<item>
-			<label>31971</label>
-			<onclick>ActivateWindow(MusicLibrary)</onclick>
 			<visible>Substring(Control.GetLabel(4327),music) + IsEmpty(Skin.String(MusicSub2))</visible>
 		</item>
 		<item>
@@ -499,15 +494,22 @@
 			<visible>Library.HasContent(Music)</visible>
 			<visible>Substring(Control.GetLabel(4327),music) + IsEmpty(Skin.String(MusicSub4))</visible>
 		</item>
+		<item>
+			<label>132</label>
+			<onclick>ActivateWindow(MusicLibrary,Albums)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+			<visible>Substring(Control.GetLabel(4327),music) + IsEmpty(Skin.String(MusicSub5))</visible>
+		</item>
+		<item>
+			<label>134</label>
+			<onclick>ActivateWindow(MusicLibrary,Songs)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+			<visible>Substring(Control.GetLabel(4327),music) + IsEmpty(Skin.String(MusicSub6))</visible>
+		</item>
 	</include>
 	<include name="DefaultVideosSubMenu">
 		<item>
-			<label>31970</label>
-			<onclick>RunPlugin()</onclick>
-			<visible>Substring(Control.GetLabel(4327),videos) + IsEmpty(Skin.String(VideosSub1))</visible>
-		</item>
-		<item>
-			<label>31971</label>
+			<label>744</label>
 			<onclick>SetProperty(DontRunTVShowScripts,True,Home)</onclick>
 			<onclick>ActivateWindow(Videos,Files,return)</onclick>
 			<visible>Substring(Control.GetLabel(4327),videos) + IsEmpty(Skin.String(VideosSub2))</visible>
@@ -1095,7 +1097,7 @@
 		</item>
 	</include>
 	<include name="MainMenuLabels">
-		<posy>-3</posy>
+		<posy>0</posy>
 		<height>225</height>
 		<align>center</align>
 		<label>$INFO[ListItem.Label]</label>
