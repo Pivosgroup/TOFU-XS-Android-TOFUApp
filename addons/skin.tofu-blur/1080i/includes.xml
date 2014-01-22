@@ -2109,7 +2109,7 @@
 			<posy>0</posy>
 			<animation effect="slide" start="0,0" end="140,0" condition="!Skin.HasSetting(breadcrumbsweather)">Conditional</animation>
 			<control type="grouplist">
-				<posx>120</posx>
+				<posx>95</posx>
 				<posy>0</posy>
 				<height>38</height>
 				<width>240</width>
@@ -2137,7 +2137,7 @@
 				</control>
 			</control>
 			<control type="image">
-				<posx>369</posx>
+				<posx>344</posx>
 				<posy>6</posy>
 				<width>2</width>
 				<height>29</height>
@@ -2180,16 +2180,16 @@
 				<visible>false</visible><!--FIXME-->
 			</control>
 			<control type="label">
-				<posx>624</posx>
+				<posx>619</posx>
 				<posy>8</posy>
-				<width>240</width>
+				<width>260</width>
 				<height>22</height>
 				<label>$INFO[System.Date]</label>
 				<font>Font_Reg26_Caps</font>
 				<align>right</align>
 			</control>
 			<control type="image">
-				<posx>634</posx>
+				<posx>629</posx>
 				<posy>6</posy>
 				<width>2</width>
 				<height>29</height>
@@ -2197,7 +2197,7 @@
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			</control>
 			<control type="group">
-				<posx>680</posx>
+				<posx>675</posx>
 				<animation effect="slide" start="0,0" end="40,0" condition="IsEmpty(System.Time(xx))">Conditional</animation>
 				<visible>Skin.HasSetting(breadcrumbsweather)</visible>
 				<control type="label">
@@ -2227,7 +2227,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>680</posx>
+				<posx>675</posx>
 				<animation effect="slide" start="0,0" end="40,0" condition="IsEmpty(System.Time(xx))">Conditional</animation>
 				<visible>!Skin.HasSetting(breadcrumbsweather)</visible>
 				<control type="label">

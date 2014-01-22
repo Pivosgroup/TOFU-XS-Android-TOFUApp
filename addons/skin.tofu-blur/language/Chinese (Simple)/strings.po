@@ -2040,3 +2040,13 @@ msgstr "备选"
 msgctxt "#31965"
 msgid "Playlist widget"
 msgstr "播放列表小部件"
+
+# TOFU additions
+
+msgctxt "#31972"
+msgid "Apps"
+msgstr "应用程序"
+
+msgctxt "#31974"
+msgid "View:"
+msgstr "视图："

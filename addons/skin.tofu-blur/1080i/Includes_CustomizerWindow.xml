@@ -1504,14 +1504,7 @@
 		<content>
 			<!--Videos-->
 			<item>
-				<label>31970</label>
-				<property name="DisableIcon">$INFO[Skin.String(VideosSub1)]</property>
-				<onclick condition="IsEmpty(Skin.String(VideosSub1))">Skin.SetString(VideosSub1,1)</onclick>
-				<onclick condition="!IsEmpty(Skin.String(VideosSub1))">Skin.Reset(VideosSub1)</onclick>
-				<visible>Substring(Control.GetLabel(4327),videos)</visible>
-			</item>
-			<item>
-				<label>31971</label>
+				<label>744</label>
 				<property name="DisableIcon">$INFO[Skin.String(VideosSub2)]</property>
 				<onclick condition="IsEmpty(Skin.String(VideosSub2))">Skin.SetString(VideosSub2,1)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(VideosSub2))">Skin.Reset(VideosSub2)</onclick>
@@ -1536,7 +1529,7 @@
 			</item>
 			<!--Music-->
 			<item>
-				<label>31970</label>
+				<label>133</label>
 				<property name="DisableIcon">$INFO[Skin.String(MusicSub1)]</property>
 				<onclick condition="IsEmpty(Skin.String(MusicSub1))">Skin.SetString(MusicSub1,1)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(MusicSub1))">Skin.Reset(MusicSub1)</onclick>
@@ -1544,11 +1537,10 @@
 				<visible>Substring(Control.GetLabel(4327),music)</visible>
 			</item>
 			<item>
-				<label>31971</label>
+				<label>744</label>
 				<property name="DisableIcon">$INFO[Skin.String(MusicSub2)]</property>
 				<onclick condition="IsEmpty(Skin.String(MusicSub2))">Skin.SetString(MusicSub2,1)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(MusicSub2))">Skin.Reset(MusicSub2)</onclick>
-				<visible>Library.HasContent(Music)</visible>
 				<visible>Substring(Control.GetLabel(4327),music)</visible>
 			</item>
 			<item>
@@ -1564,6 +1556,22 @@
 				<property name="DisableIcon">$INFO[Skin.String(MusicSub4)]</property>
 				<onclick condition="IsEmpty(Skin.String(MusicSub4))">Skin.SetString(MusicSub4,1)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(MusicSub4))">Skin.Reset(MusicSub4)</onclick>
+				<visible>Substring(Control.GetLabel(4327),music)</visible>
+			</item>
+			<item>
+				<label>132</label>
+				<property name="DisableIcon">$INFO[Skin.String(MusicSub5)]</property>
+				<onclick condition="IsEmpty(Skin.String(MusicSub5))">Skin.SetString(MusicSub5,1)</onclick>
+				<onclick condition="!IsEmpty(Skin.String(MusicSub5))">Skin.Reset(MusicSub5)</onclick>
+				<visible>Library.HasContent(Music)</visible>
+				<visible>Substring(Control.GetLabel(4327),music)</visible>
+			</item>
+			<item>
+				<label>134</label>
+				<property name="DisableIcon">$INFO[Skin.String(MusicSub6)]</property>
+				<onclick condition="IsEmpty(Skin.String(MusicSub6))">Skin.SetString(MusicSub6,1)</onclick>
+				<onclick condition="!IsEmpty(Skin.String(MusicSub6))">Skin.Reset(MusicSub6)</onclick>
+				<visible>Library.HasContent(Music)</visible>
 				<visible>Substring(Control.GetLabel(4327),music)</visible>
 			</item>
 			<!--System-->
