@@ -247,7 +247,10 @@ void CNetworkManager::OnConnectionStateChange(ConnectionState state)
     CLog::Log(LOGDEBUG, "NetworkManager: State changed to %s", ConnectionStateToString(m_state));
 
   if (oldState != NETWORK_CONNECTION_STATE_CONNECTED && m_state == NETWORK_CONNECTION_STATE_CONNECTED)
+  {
+    CNetworkSettings::Get().FillInNetworkConnection();
     StartServices();
+  }
   else if (oldState == NETWORK_CONNECTION_STATE_CONNECTED && oldState != m_state)
     StopServices();
 
