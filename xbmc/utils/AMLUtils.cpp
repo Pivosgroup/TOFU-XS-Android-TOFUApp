@@ -78,7 +78,7 @@ int aml_get_sysfs_int(const char *path)
   {
     char bcmd[16];
     read(fd, bcmd, sizeof(bcmd));
-    val = strtol(bcmd, NULL, 16);
+    val = strtol(bcmd, NULL, 0);
     close(fd);
   }
   return val;
