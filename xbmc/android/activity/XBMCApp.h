@@ -130,6 +130,7 @@ private:
   CJNIWakeLock *m_wakeLock;
   static int m_batteryLevel;  
   static int m_initialVolume;  
+  static int m_savedVolume;
   bool m_firstrun;
   bool m_exiting;
   pthread_t m_thread;
