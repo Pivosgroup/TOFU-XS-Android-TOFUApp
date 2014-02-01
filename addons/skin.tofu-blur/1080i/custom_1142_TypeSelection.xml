@@ -115,6 +115,7 @@
 						<onclick>Skin.SetString(ItemToEdit.Type,6)</onclick>
 						<onclick>Dialog.Close(1142)</onclick>
 						<onclick>RunScript(script.favourites,property=ItemToEdit)</onclick>
+						<visible>System.HasAddon(script.favourites)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[31951]</label>

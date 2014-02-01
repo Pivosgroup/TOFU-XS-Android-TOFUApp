@@ -260,16 +260,16 @@
 				</item>
 				<item>
 					<label>31381</label>
-					<thumb>$INFO[Skin.String(DisableInfoWallVL)]</thumb>
-					<onclick condition="IsEmpty(Skin.String(DisableInfoWallVL))">Skin.SetString(DisableInfoWallVL,true)</onclick>
-					<onclick condition="!IsEmpty(Skin.String(DisableInfoWallVL)) + !StringCompare(ListItem.Label,Container.Viewmode)">Skin.Reset(DisableInfoWallVL)</onclick>
+					<thumb>$INFO[Skin.String(DisableInfoPanelVL)]</thumb>
+					<onclick condition="IsEmpty(Skin.String(DisableInfoPanelVL))">Skin.SetString(DisableInfoPanelVL,true)</onclick>
+					<onclick condition="!IsEmpty(Skin.String(DisableInfoPanelVL)) + !StringCompare(ListItem.Label,Container.Viewmode)">Skin.Reset(DisableInfoPanelVL)</onclick>
 					<visible>!IsEmpty(Window(home).Property(quicknavsetup))</visible>
 				</item>
 				<item>
 					<label>$LOCALIZE[31283]</label>
-					<thumb>$INFO[Skin.String(DisableInfoPanelVL)]</thumb>
-					<onclick condition="IsEmpty(Skin.String(DisableInfoPanelVL))">Skin.SetString(DisableInfoPanelVL,true)</onclick>
-					<onclick condition="!IsEmpty(Skin.String(DisableInfoPanelVL)) + !StringCompare(ListItem.Label,Container.Viewmode)">Skin.Reset(DisableInfoPanelVL)</onclick>
+					<thumb>$INFO[Skin.String(DisableInfoWallVL)]</thumb>
+					<onclick condition="IsEmpty(Skin.String(DisableInfoWallVL))">Skin.SetString(DisableInfoWallVL,true)</onclick>
+					<onclick condition="!IsEmpty(Skin.String(DisableInfoWallVL)) + !StringCompare(ListItem.Label,Container.Viewmode)">Skin.Reset(DisableInfoWallVL)</onclick>
 					<visible>!IsEmpty(Window(home).Property(quicknavsetup))</visible>
 				</item>
 				<item>

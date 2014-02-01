@@ -78,12 +78,6 @@
 					<onclick condition="Skin.HasSetting(CDArtinVis) + !Skin.HasSetting(blurayart) + Skin.HasSetting(vinylart)">Skin.Reset(vinylart)</onclick>
 					<onclick condition="Skin.HasSetting(CDArtinVis) + !Skin.HasSetting(blurayart) + Skin.HasSetting(vinylart)">Skin.Reset(CDArtinVis)</onclick>
 				</control>
-				<control type="radiobutton" id="463">
-					<label>31887</label>
-					<include>Objects_CommonSettingsButton</include>
-					<onclick>Skin.ToggleSetting(musicvisinfomode)</onclick>
-					<selected>Skin.HasSetting(musicvisinfomode)</selected>
-				</control>
 				<control type="button" id="462">
 					<label>$LOCALIZE[31632]:</label>
 					<label2>[COLOR $VAR[FontColorVar]]$VAR[VisPanelLabelVar][/COLOR]</label2>
@@ -93,7 +87,6 @@
 					<onclick condition="Skin.HasSetting(activatepanelrotation)">Skin.SetBool(DisablePanelWidgetVis)</onclick>
 					<onclick condition="Skin.HasSetting(activatepanelrotation)">Skin.Reset(activatepanelrotation)</onclick>
 					<onclick condition="Skin.HasSetting(DisablePanelWidgetVis)">Skin.Reset(DisablePanelWidgetVis)</onclick>
-					<enable>!Skin.HasSetting(musicvisinfomode)</enable>
 				</control>
 				<control type="radiobutton" id="453">
 					<label>31627</label>

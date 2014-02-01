@@ -1428,10 +1428,6 @@ msgctxt "#31882"
 msgid "Disable option to hide widgets by pressing \"Back\""
 msgstr ""
 
-msgctxt "#31887"
-msgid "Music Info Mode"
-msgstr ""
-
 msgctxt "#31888"
 msgid "PRESS ANY KEY"
 msgstr ""

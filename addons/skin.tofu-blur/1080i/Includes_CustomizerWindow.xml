@@ -19,8 +19,9 @@
 				<include>Animation_VisibleChange200</include>
 				<visible>Substring(Control.GetLabel(4321),default) | Substring(Control.GetLabel(4321),glass)</visible>
 				<control type="image">
+					<posy>24</posy>
 					<width>1650</width>
-					<height>402</height>
+					<height>376</height>
 					<texture border="50">$VAR[PanelWidgetBackVar]</texture>
 					<animation type="Conditional" condition="true">
 						<effect type="fade" start="100" end="75" time="400" tween="cubic" easing="inout" />
@@ -348,7 +349,7 @@
 	<include name="HomePanelWidget2_1124">
 		<control type="group" id="6000">
 			<posx>135</posx>
-			<posy>-7</posy>
+			<posy>-4</posy>
 			<width>1920</width>
 			<height>825</height>
 			<animation effect="slide" end="0,35" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
@@ -363,8 +364,9 @@
 				<visible>Substring(Control.GetLabel(4325),default) | Substring(Control.GetLabel(4325),glass)</visible>
 				<include>Animation_VisibleChange200</include>
 				<control type="image">
+					<posy>24</posy>
 					<width>1650</width>
-					<height>402</height>
+					<height>372</height>
 					<texture border="50">$VAR[PanelWidget2BackVar]</texture>
 					<animation type="Conditional" condition="true">
 						<effect type="fade" start="100" end="75" time="400" tween="cubic" easing="inout" />
@@ -700,9 +702,9 @@
 					<include>Animation_VisibleChange200</include>
 					<control type="image">
 						<posx>-12</posx>
-						<posy>-5</posy>
-						<width>385</width>
-						<height>370</height>
+						<posy>20</posy>
+						<width>375</width>
+						<height>330</height>
 						<texture border="20">$VAR[WidgetBackVar]</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
@@ -982,9 +984,9 @@
 					<include>Animation_VisibleChange200</include>
 					<control type="image">
 						<posx>-12</posx>
-						<posy>-5</posy>
+						<posy>20</posy>
 						<width>385</width>
-						<height>370</height>
+						<height>330</height>
 						<texture border="20">$VAR[Widget2BackVar]</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
