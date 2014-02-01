@@ -485,6 +485,7 @@
 		<onload>Skin.SetBool(watchedoverlay)</onload>
 		<onload>Skin.SetBool(preferplot)</onload>
 		<onload>Skin.SetBool(infopanellauncher)</onload>
+		<onload>Skin.SetBool(slimlist)</onload>
 		<onload>Skin.SetBool(lowlist)</onload>
 		<onload>Skin.SetBool(timehomehigh)</onload>
 		<onload>Skin.SetBool(GlobalNowPlaying)</onload>

@@ -2,16 +2,18 @@
 <includes>
 	<include name="weatherwidgetback">
 		<control type="image">
+			<posy>30</posy>
 			<width>284</width>
-			<height>396</height>
+			<height>336</height>
 			<texture border="20">$VAR[WeatherWidgetBackVar]</texture>
 			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 		</control>
 	</include>
 	<include name="weatherwidget2back">
 		<control type="image">
+			<posy>30</posy>
 			<width>284</width>
-			<height>396</height>
+			<height>336</height>
 			<texture border="20">$VAR[WeatherWidget2BackVar]</texture>
 			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 		</control>

@@ -16,7 +16,7 @@
 				<posx>396</posx>
 				<posy>210</posy>
 				<width>908</width>
-				<height>660</height>
+				<height>480</height>
 				<texture border="5">panel.png</texture>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			</control>

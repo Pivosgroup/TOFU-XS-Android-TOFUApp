@@ -3,8 +3,7 @@
 	<defaultcontrol always="true">380</defaultcontrol>
 	<controls>
 		<control type="button" id="380">
-			<onfocus condition="Skin.HasSetting(musicvisinfomode)">SetFocus(5000)</onfocus>
-			<onfocus condition="!Skin.HasSetting(musicvisinfomode)">SetFocus(602)</onfocus>
+			<onfocus>SetFocus(602)</onfocus>
 			<include>HiddenObject</include>
 		</control>
 		<control type="group">

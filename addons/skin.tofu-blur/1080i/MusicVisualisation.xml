@@ -10,7 +10,6 @@
 	<onunload>CancelAlarm(Vis3,true)</onunload>
 	<onunload>CancelAlarm(Vis4,true)</onunload>
 	<onunload>Skin.Reset(vispanelrotate)</onunload>
-	<onload condition="Skin.HasSetting(musicvisinfomode)">ActivateWindow(musicosd)</onload>
 	<controls>
 		<control type="label" id="4322">
 			<label>$INFO[Skin.String(MusicViz.MultiFanart)]</label>
