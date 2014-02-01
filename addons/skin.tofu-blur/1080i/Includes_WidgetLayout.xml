@@ -1062,6 +1062,7 @@
 						<posx>-12</posx>
 						<posy>20</posy>
 						<width>385</width>
+						<height>330</height>
 						<texture border="20">$VAR[WidgetBackVar]</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
