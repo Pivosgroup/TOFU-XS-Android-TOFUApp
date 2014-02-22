@@ -124,3 +124,25 @@ extern "C" JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserved)
 
   return version;
 }
+
+extern "C" JNIEXPORT void JNICALL JNI_OnUnload( JavaVM *vm, void *pvt)
+{
+  jint version = JNI_VERSION_1_6;
+  JNIEnv* env;
+  if (vm->GetEnv(reinterpret_cast<void**>(&env), version) != JNI_OK)
+    return;
+
+  // normally, we do not have to do this but there can be a race
+  // between exit and _onSystemUiVisibilityChange. So we unregister them all.
+  jclass cFrameAvailableListener = env->FindClass("com/pivos/tofu/XBMCOnFrameAvailableListener");
+  if (cFrameAvailableListener)
+    env->UnregisterNatives(cFrameAvailableListener);
+
+  jclass cBroadcastReceiver = env->FindClass("com/pivos/tofu/XBMCBroadcastReceiver");
+  if (cBroadcastReceiver)
+    env->UnregisterNatives(cBroadcastReceiver);
+
+  jclass cMain = env->FindClass("com/pivos/tofu/Main");
+  if (cMain)
+    env->UnregisterNatives(cMain);
+}
