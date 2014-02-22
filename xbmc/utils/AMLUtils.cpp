@@ -131,7 +131,7 @@ void aml_permissions()
 {
   if (!aml_present())
     return;
-  
+
   // most all aml devices are already rooted.
   int ret = system("ls /system/xbin/su");
   if (ret != 0)
