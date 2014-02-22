@@ -206,6 +206,11 @@ bool CRenderSystemGLES::ClearBuffers(color_t color)
   if (!m_bRenderCreated)
     return false;
 
+  // clear is not affected by stipple pattern,
+  // so we can only clear on first frame
+  if(m_stereoMode == RENDER_STEREO_MODE_INTERLACED && m_stereoView == RENDER_STEREO_VIEW_RIGHT)
+    return true;
+
   float r = GET_R(color) / 255.0f;
   float g = GET_G(color) / 255.0f;
   float b = GET_B(color) / 255.0f;
