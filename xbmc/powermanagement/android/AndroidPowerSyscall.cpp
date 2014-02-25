@@ -52,6 +52,7 @@ bool CAndroidPowerSyscall::Suspend(void)
 {
   int64_t timestamp = CJNISystemClock::uptimeMillis();
   CJNIPowerManager(CXBMCApp::getSystemService("power")).goToSleep(timestamp);
+  CPowerSyscallWithoutEvents::Suspend();
   return true;
 }
 
@@ -60,11 +61,5 @@ bool CAndroidPowerSyscall::Reboot(void)
   CJNIPowerManager(CXBMCApp::getSystemService("power")).reboot("user initiated");
   return true;
 }
-
-bool CAndroidPowerSyscall::PumpPowerEvents(IPowerEventsCallback *callback)
-{    
-  return true;
-}
-
 
 #endif

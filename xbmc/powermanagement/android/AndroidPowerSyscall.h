@@ -38,7 +38,5 @@ public:
   virtual bool CanHibernate(void) { return false; }
   virtual bool CanReboot(void);
   virtual int  BatteryLevel(void);
-
-  virtual bool PumpPowerEvents(IPowerEventsCallback *callback);
 };
 #endif
