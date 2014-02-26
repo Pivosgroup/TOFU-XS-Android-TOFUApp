@@ -4941,6 +4941,9 @@ bool CApplication::OnMessage(CGUIMessage& message)
         g_windowManager.PreviousWindow();
       }
 
+#if defined(TARGET_ANDROID)
+      CXBMCApp::PlayBackEnded();
+#endif
       if (IsEnableTestMode())
         CApplicationMessenger::Get().Quit();
       return true;

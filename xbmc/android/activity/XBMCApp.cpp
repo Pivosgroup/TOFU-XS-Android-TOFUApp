@@ -95,7 +95,7 @@ int CXBMCApp::m_savedVolume = -1;
 int CXBMCApp::m_initialVolume = 0;
 CCriticalSection CXBMCApp::m_applicationsMutex;
 std::vector<androidPackage> CXBMCApp::m_applications;
-
+bool CXBMCApp::m_moveTaskToBackWhenDone = false;
 
 CXBMCApp::CXBMCApp(ANativeActivity* nativeActivity)
   : CJNIContext(nativeActivity)
@@ -464,6 +464,16 @@ void CXBMCApp::ShowStatusBar(bool show)
   }
 }
 
+void CXBMCApp::PlayBackEnded()
+{
+  if (m_runAsLauncher && m_moveTaskToBackWhenDone)
+  {
+    android_printf("%s: moveTaskToBack", __PRETTY_FUNCTION__);
+    m_moveTaskToBackWhenDone = false;
+    moveTaskToBack(true);
+  }
+}
+
 void CXBMCApp::onSystemUiVisibilityChange(int visibility)
 {
   android_printf("%s: visibility(%i)", __PRETTY_FUNCTION__, visibility);
@@ -477,17 +487,20 @@ std::vector<androidPackage> CXBMCApp::GetApplications()
   if (m_applications.empty())
   {
     CJNIList<CJNIApplicationInfo> packageList = GetPackageManager().getInstalledApplications(CJNIPackageManager::GET_ACTIVITIES);
-    int numPackages = packageList.size();
-    for (int i = 0; i < numPackages; i++)
+    if (packageList)
     {
-      androidPackage newPackage;
-      newPackage.packageName = packageList.get(i).packageName;
-      newPackage.packageLabel = GetPackageManager().getApplicationLabel(packageList.get(i)).toString();
-      CJNIIntent intent = GetPackageManager().getLaunchIntentForPackage(newPackage.packageName);
-      if (!intent || !intent.hasCategory("android.intent.category.LAUNCHER"))
-        continue;
+      int numPackages = packageList.size();
+      for (int i = 0; i < numPackages; i++)
+      {
+        androidPackage newPackage;
+        newPackage.packageName = packageList.get(i).packageName;
+        newPackage.packageLabel = GetPackageManager().getApplicationLabel(packageList.get(i)).toString();
+        CJNIIntent intent = GetPackageManager().getLaunchIntentForPackage(newPackage.packageName);
+        if (!intent || !intent.hasCategory("android.intent.category.LAUNCHER"))
+          continue;
 
-      m_applications.push_back(newPackage);
+        m_applications.push_back(newPackage);
+      }
     }
   }
 
@@ -741,7 +754,21 @@ void CXBMCApp::onNewIntent(CJNIIntent intent)
   if (action == "android.intent.action.VIEW")
   {
     std::string playFile = GetFilenameFromIntent(intent);
-    CApplicationMessenger::Get().MediaPlay(playFile);
+    if (!playFile.empty())
+    {
+      android_printf("CXBMCApp::onNewIntent: filename(%s)", playFile.c_str());
+      CApplicationMessenger::Get().MediaPlay(playFile);
+      // if we are a launcher, push us into the back of the activity stack when done.
+      // this acts like a 'finish' but does not cause us to exit.
+      if (m_runAsLauncher)
+        m_moveTaskToBackWhenDone = true;
+    }
+    else if (m_runAsLauncher)
+    {
+      // if we are a launcher, and someone told us to play something but
+      // we could not resolve it, just return back to them.
+      moveTaskToBack(true);
+    }
   }
 }
 
