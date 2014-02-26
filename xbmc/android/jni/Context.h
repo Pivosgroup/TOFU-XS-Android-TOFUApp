@@ -57,6 +57,7 @@ public:
   static CJNIContext* GetAppInstance() { return m_appInstance; };
   static void _onNewIntent(JNIEnv *env, jobject context, jobject intent);
   static void _onSystemUiVisibilityChange(JNIEnv *env, jobject context, int visibility);
+  static bool moveTaskToBack(bool nonRoot);
 
 protected:
   CJNIContext(const ANativeActivity *nativeActivity);

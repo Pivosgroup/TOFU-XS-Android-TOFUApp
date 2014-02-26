@@ -93,6 +93,7 @@ ANativeWindow* CXBMCApp::m_window = NULL;
 int CXBMCApp::m_batteryLevel = 0;
 int CXBMCApp::m_savedVolume = -1;
 int CXBMCApp::m_initialVolume = 0;
+bool CXBMCApp::m_moveTaskToBackWhenDone = false;
 
 CXBMCApp::CXBMCApp(ANativeActivity* nativeActivity)
   : CJNIContext(nativeActivity)
@@ -456,6 +457,16 @@ void CXBMCApp::ShowStatusBar(bool show)
   }
 }
 
+void CXBMCApp::PlayBackEnded()
+{
+  if (m_runAsLauncher && m_moveTaskToBackWhenDone)
+  {
+    android_printf("%s: moveTaskToBack", __PRETTY_FUNCTION__);
+    m_moveTaskToBackWhenDone = false;
+    moveTaskToBack(true);
+  }
+}
+
 void CXBMCApp::onSystemUiVisibilityChange(int visibility)
 {
   android_printf("%s: visibility(%i)", __PRETTY_FUNCTION__, visibility);
@@ -466,6 +477,9 @@ void CXBMCApp::onSystemUiVisibilityChange(int visibility)
 bool CXBMCApp::ListApplications(vector<androidPackage> *applications)
 {
   CJNIList<CJNIApplicationInfo> packageList = GetPackageManager().getInstalledApplications(CJNIPackageManager::GET_ACTIVITIES);
+  if (!packageList)
+    return false;
+
   int numPackages = packageList.size();
   for (int i = 0; i < numPackages; i++)
   {
@@ -478,6 +492,7 @@ bool CXBMCApp::ListApplications(vector<androidPackage> *applications)
 
     applications->push_back(newPackage);
   }
+
   return true;
 }
 
@@ -728,7 +743,21 @@ void CXBMCApp::onNewIntent(CJNIIntent intent)
   if (action == "android.intent.action.VIEW")
   {
     std::string playFile = GetFilenameFromIntent(intent);
-    CApplicationMessenger::Get().MediaPlay(playFile);
+    if (!playFile.empty())
+    {
+      android_printf("CXBMCApp::onNewIntent: filename(%s)", playFile.c_str());
+      CApplicationMessenger::Get().MediaPlay(playFile);
+      // if we are a launcher, push us into the back of the activity stack when done.
+      // this acts like a 'finish' but does not cause us to exit.
+      if (m_runAsLauncher)
+        m_moveTaskToBackWhenDone = true;
+    }
+    else if (m_runAsLauncher)
+    {
+      // if we are a launcher, and someone told us to play something but
+      // we could not resolve it, just return back to them.
+      moveTaskToBack(true);
+    }
   }
 }
 

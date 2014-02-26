@@ -111,6 +111,7 @@ public:
   bool WaitForMedia(int timeout);
   static bool IsLauncher() { return m_runAsLauncher;};
   static void ShowStatusBar(bool show);
+  static void PlayBackEnded();
 
 protected:
   // limit who can access Volume
@@ -138,7 +139,8 @@ private:
   static ANativeWindow* m_window;
   static CEvent m_windowCreated;
   static bool m_runAsLauncher;
-  
+  static bool m_moveTaskToBackWhenDone;
+
   void XBMC_Pause(bool pause);
   void XBMC_Stop();
   bool XBMC_DestroyDisplay();

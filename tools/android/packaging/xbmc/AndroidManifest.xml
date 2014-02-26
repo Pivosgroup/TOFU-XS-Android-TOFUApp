@@ -26,6 +26,7 @@
             android:name=".Splash"
             android:configChanges="orientation|keyboard|keyboardHidden|navigation|touchscreen"
             android:finishOnTaskLaunch="true"
+            android:noHistory="true"
             android:launchMode="singleInstance"
             android:screenOrientation="sensorLandscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >

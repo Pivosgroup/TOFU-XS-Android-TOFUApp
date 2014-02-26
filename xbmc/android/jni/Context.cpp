@@ -65,6 +65,7 @@ CJNIContext::CJNIContext(const ANativeActivity *nativeActivity)
 
 CJNIContext::~CJNIContext()
 {
+  m_context.reset(NULL);
   m_appInstance = NULL;
   xbmc_jni_on_unload();
 }
@@ -217,4 +218,10 @@ void CJNIContext::_onSystemUiVisibilityChange(JNIEnv *env, jobject context, int 
   (void)context;
   if(m_appInstance)
     m_appInstance->onSystemUiVisibilityChange(visibility);
+}
+
+bool CJNIContext::moveTaskToBack(bool nonRoot)
+{
+  return call_method<jboolean>(m_context,
+    "moveTaskToBack", "(Z)Z", nonRoot);
 }
