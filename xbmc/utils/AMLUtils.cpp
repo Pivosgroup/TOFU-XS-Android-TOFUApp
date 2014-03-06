@@ -25,6 +25,7 @@
 #include <fcntl.h>
 #include <string>
 
+#include "rendering/RenderSystem.h"
 #include "utils/CPUInfo.h"
 #include "utils/log.h"
 #include "utils/StringUtils.h"
@@ -111,6 +112,22 @@ bool aml_hw3d_present()
       has_hw3d = 0;
   }
   return has_hw3d == 1;
+}
+
+bool aml_3dmode_present(int stereo_mode)
+{
+  char disp_cap_3d[256] = {};
+  if (aml_get_sysfs_str("/sys/class/amhdmitx/amhdmitx0/disp_cap_3d", disp_cap_3d, 255) == -1)
+    return false;
+
+  if (stereo_mode == RENDER_STEREO_MODE_INTERLACED && strstr(disp_cap_3d,"FramePacking"))
+    return true;
+  else if (stereo_mode == RENDER_STEREO_MODE_SPLIT_HORIZONTAL && strstr(disp_cap_3d,"TopBottom"))
+    return true;
+  else if (stereo_mode == RENDER_STEREO_MODE_SPLIT_VERTICAL && strstr(disp_cap_3d,"SidebySide"))
+    return true;
+
+  return false;
 }
 
 bool aml_wired_present()

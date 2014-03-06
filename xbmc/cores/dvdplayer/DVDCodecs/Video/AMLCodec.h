@@ -60,6 +60,7 @@ private:
   void          SetVideoSaturation(const int saturation);
   void          GetRenderFeatures(Features &renderFeatures);
   void          SetVideo3dMode(const int mode3d);
+  void          SetHDMI3dMode(const char *mode3d);
   std::string   GetStereoMode();
   static void   RenderFeaturesCallBack(const void *ctx, Features &renderFeatures);
   void          SetVideoRect(const CRect &SrcRect, const CRect &DestRect);
@@ -87,4 +88,5 @@ private:
   float            m_zoom;
   int              m_contrast;
   int              m_brightness;
+  bool             m_hdmi3dmode;
 };
