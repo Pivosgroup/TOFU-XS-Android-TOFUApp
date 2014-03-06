@@ -254,6 +254,12 @@ public class Splash extends Activity {
     finish();
   }
 
+  // block escaping from 1st run, it can bork the lib extraction
+  // and require a reinstall of the app.
+  @Override
+  public void onBackPressed() {
+  }
+
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
