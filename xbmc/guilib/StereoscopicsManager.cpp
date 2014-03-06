@@ -41,6 +41,7 @@
 #include "settings/lib/Setting.h"
 #include "settings/Settings.h"
 #include "rendering/RenderSystem.h"
+#include "utils/AMLUtils.h"
 #include "utils/log.h"
 #include "utils/RegExp.h"
 #include "utils/StringUtils.h"
@@ -204,6 +205,17 @@ RENDER_STEREO_MODE CStereoscopicsManager::GetStereoModeByUserChoice(const CStdSt
     RENDER_STEREO_MODE selectableMode = (RENDER_STEREO_MODE) i;
     if (g_Windowing.SupportsStereo(selectableMode))
     {
+      if (aml_hw3d_present())
+      {
+        // disallow switch modes that require gles games
+        if (selectableMode == RENDER_STEREO_MODE_MONO)
+          continue;
+        if (selectableMode == RENDER_STEREO_MODE_SPLIT_VERTICAL)
+          continue;
+        if (selectableMode == RENDER_STEREO_MODE_SPLIT_HORIZONTAL)
+          continue;
+      }
+
       selectableModes.push_back(selectableMode);
       CStdString label = g_localizeStrings.Get(36502+i);
       pDlgSelect->Add( label );
