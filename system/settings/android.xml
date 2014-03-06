@@ -20,6 +20,25 @@
         </setting>
       </group>
     </category>
+    <category id="audiooutput">
+      <group id="1">
+        <setting id="audiooutput.channels">
+          <constraints>
+            <options>
+              <option label="34101">1</option> <!-- AE_CH_LAYOUT_2_0 -->
+            </options>
+          </constraints>
+        </setting>
+        <setting id="audiooutput.config">
+          <constraints>
+            <options>
+              <option label="339">2</option>
+              <option label="420">3</option>
+            </options>
+          </constraints>
+        </setting>
+      </group>
+    </category>
   </section>
   <section id="videos">
     <category id="videoacceleration">
