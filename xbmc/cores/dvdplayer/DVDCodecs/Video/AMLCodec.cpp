@@ -1420,8 +1420,6 @@ CAMLCodec::CAMLCodec() : CThread("CAMLCodec")
 CAMLCodec::~CAMLCodec()
 {
   StopThread();
-  if (m_hdmi3dmode)
-    SetHDMI3dMode("3doff");
 
   delete am_private;
   am_private = NULL;
@@ -1660,6 +1658,13 @@ bool CAMLCodec::OpenDecoder(CDVDStreamInfo &hints)
 void CAMLCodec::CloseDecoder()
 {
   CLog::Log(LOGDEBUG, "CAMLCodec::CloseDecoder");
+
+  if (m_hdmi3dmode)
+  {
+    SetHDMI3dMode("3doff");
+    m_hdmi3dmode = false;
+  }
+
   StopThread();
 
   g_renderManager.RegisterRenderUpdateCallBack((const void*)NULL, NULL);
@@ -2075,14 +2080,14 @@ void CAMLCodec::SetVideo3dMode(const int mode3d)
 
 void CAMLCodec::SetHDMI3dMode(const char *mode3d)
 {
-  CLog::Log(LOGDEBUG, "CAMLCodec::SetVideo3dMode:mode3d(%s)", mode3d);
+  CLog::Log(LOGDEBUG, "CAMLCodec::SetHDMI3dMode:mode3d(%s)", mode3d);
   aml_set_sysfs_str("/sys/class/amhdmitx/amhdmitx0/config", mode3d);
   if (strstr(mode3d, "3doff"))
   {
     // Some 3D HDTVs will not exit from 3D mode with 3doff
     char disp_mode[256] = {};
     if (aml_get_sysfs_str("/sys/class/display/mode", disp_mode, 255) != -1)
-      aml_set_sysfs_str("/sys/class/amhdmitx/amhdmitx0/", disp_mode);
+      aml_set_sysfs_str("/sys/class/amhdmitx/amhdmitx0/disp_mode", disp_mode);
   }
   else
   {
