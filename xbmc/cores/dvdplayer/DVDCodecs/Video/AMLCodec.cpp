@@ -1413,12 +1413,16 @@ CAMLCodec::CAMLCodec() : CThread("CAMLCodec")
   m_dll = new DllLibAmCodec;
   m_dll->Load();
   am_private->m_dll = m_dll;
+  m_hdmi3dmode = false;
 }
 
 
 CAMLCodec::~CAMLCodec()
 {
   StopThread();
+  if (m_hdmi3dmode)
+    SetHDMI3dMode("3doff");
+
   delete am_private;
   am_private = NULL;
   delete m_dll, m_dll = NULL;
@@ -2080,6 +2084,23 @@ void CAMLCodec::SetVideo3dMode(const int mode3d)
   aml_set_sysfs_int("/sys/class/ppmgr/ppmgr_3d_mode", mode3d);
 }
 
+void CAMLCodec::SetHDMI3dMode(const char *mode3d)
+{
+  CLog::Log(LOGDEBUG, "CAMLCodec::SetVideo3dMode:mode3d(%s)", mode3d);
+  aml_set_sysfs_str("/sys/class/amhdmitx/amhdmitx0/config", mode3d);
+  if (strstr(mode3d, "3doff"))
+  {
+    // Some 3D HDTVs will not exit from 3D mode with 3doff
+    char disp_mode[256] = {};
+    if (aml_get_sysfs_str("/sys/class/display/mode", disp_mode, 255) != -1)
+      aml_set_sysfs_str("/sys/class/amhdmitx/amhdmitx0/", disp_mode);
+  }
+  else
+  {
+    m_hdmi3dmode = true;
+  }
+}
+
 std::string CAMLCodec::GetStereoMode()
 {
   std::string  stereo_mode;
@@ -2213,23 +2234,43 @@ void CAMLCodec::SetVideoRect(const CRect &SrcRect, const CRect &DestRect)
   {
     dst_rect.x2 *= 2.0;
     SetVideo3dMode(MODE_3D_DISABLE);
+    if (aml_3dmode_present(m_stereo_mode))
+      SetHDMI3dMode("3dlr");
   }
   else if (m_stereo_mode == RENDER_STEREO_MODE_SPLIT_HORIZONTAL)
   {
     dst_rect.y2 *= 2.0;
     SetVideo3dMode(MODE_3D_DISABLE);
+    if (aml_3dmode_present(m_stereo_mode))
+      SetHDMI3dMode("3dtb");
   }
   else if (m_stereo_mode == RENDER_STEREO_MODE_INTERLACED)
   {
     std::string mode = GetStereoMode();
     if (mode == "left_right")
+    {
       SetVideo3dMode(MODE_3D_LR);
+      if (aml_3dmode_present(m_stereo_mode))
+        SetHDMI3dMode("3dlr");
+    }
     else if (mode == "right_left")
+    {
       SetVideo3dMode(MODE_3D_LR_SWITCH);
+      if (aml_3dmode_present(m_stereo_mode))
+        SetHDMI3dMode("3dlr");
+    }
     else if (mode == "row_interleaved_lr")
+    {
       SetVideo3dMode(MODE_3D_LR);
+      if (aml_3dmode_present(m_stereo_mode))
+        SetHDMI3dMode("3dtb");
+    }
     else if (mode == "row_interleaved_rl")
+    {
       SetVideo3dMode(MODE_3D_LR_SWITCH);
+      if (aml_3dmode_present(m_stereo_mode))
+        SetHDMI3dMode("3dtb");
+    }
     else
       SetVideo3dMode(MODE_3D_DISABLE);
   }
