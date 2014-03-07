@@ -86,6 +86,10 @@
         <setting id="audiooutput.channels">
           <visible>false</visible>
         </setting>
+        <setting id="audiooutput.stereoupmix">
+          <default>false</default>
+          <visible>false</visible>
+        </setting>
         <setting id="audiooutput.config">
           <constraints>
             <options>
