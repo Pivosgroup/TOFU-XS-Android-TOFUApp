@@ -86,6 +86,14 @@
         <setting id="audiooutput.channels">
           <visible>false</visible>
         </setting>
+        <setting id="audiooutput.config">
+          <constraints>
+            <options>
+              <option label="339">2</option>
+              <option label="420">3</option>
+            </options>
+          </constraints>
+        </setting>
       </group>
       <group id="3">
         <setting id="audiooutput.ac3passthrough">
