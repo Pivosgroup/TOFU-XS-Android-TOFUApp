@@ -154,7 +154,7 @@ double CAESinkAUDIOTRACK::GetDelay()
 
   double delay = (double)(m_frames_written - head_pos) / m_format.m_sampleRate;
 
-  return delay;
+  return std::min(delay, m_audiotrackbuffer_sec);
 }
 
 double CAESinkAUDIOTRACK::GetLatency()
