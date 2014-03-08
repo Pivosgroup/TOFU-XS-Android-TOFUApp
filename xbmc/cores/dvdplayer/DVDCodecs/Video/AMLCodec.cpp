@@ -48,6 +48,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/ioctl.h>
+#include <cstring>
 
 // amcodec include
 extern "C" {
@@ -2066,8 +2067,10 @@ void CAMLCodec::GetRenderFeatures(Features &renderFeatures)
 
 void CAMLCodec::SetVideo3dMode(const int mode3d)
 {
-  CLog::Log(LOGDEBUG, "CAMLCodec::SetVideo3dMode:mode3d(0x%x)", mode3d);
-  aml_set_sysfs_int("/sys/class/ppmgr/ppmgr_3d_mode", mode3d);
+  char mode[16] = {};
+  snprintf(mode, sizeof(mode), "0x%08x", mode3d);
+  CLog::Log(LOGDEBUG, "CAMLCodec::SetVideo3dMode:mode3d(%s)", mode);
+  aml_set_sysfs_str("/sys/class/ppmgr/ppmgr_3d_mode", mode);
 }
 
 std::string CAMLCodec::GetStereoMode()
