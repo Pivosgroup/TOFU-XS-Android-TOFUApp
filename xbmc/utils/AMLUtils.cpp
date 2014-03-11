@@ -159,6 +159,9 @@ bool aml_supports_stereo(const int mode)
     last_rtn = true;
   else if (mode == RENDER_STEREO_MODE_SPLIT_VERTICAL && strstr(disp_cap_3d,"SidebySide"))
     last_rtn = true;
+  else if ( mode == RENDER_STEREO_MODE_MONO ||
+            mode == RENDER_STEREO_MODE_OFF)
+    last_rtn = true;
 
   last_mode = mode;
 
