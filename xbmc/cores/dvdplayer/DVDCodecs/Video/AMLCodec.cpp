@@ -2055,14 +2055,6 @@ void CAMLCodec::GetRenderFeatures(Features &renderFeatures)
   return;
 }
 
-void CAMLCodec::SetVideo3dMode(const int mode3d)
-{
-  char mode[16] = {};
-  snprintf(mode, sizeof(mode), "0x%08x", mode3d);
-  CLog::Log(LOGDEBUG, "CAMLCodec::SetVideo3dMode:mode3d(%s)", mode);
-  aml_set_sysfs_str("/sys/class/ppmgr/ppmgr_3d_mode", mode);
-}
-
 std::string CAMLCodec::GetStereoMode()
 {
   std::string  stereo_mode;
