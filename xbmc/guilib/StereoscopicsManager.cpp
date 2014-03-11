@@ -440,6 +440,7 @@ bool CStereoscopicsManager::OnAction(const CAction &action)
     {
       SetStereoMode(RENDER_STEREO_MODE_MONO);
     }
+    return true;
   }
   else if (action.GetID() == ACTION_STEREOMODE_SET)
   {
