@@ -200,14 +200,12 @@ void aml_set_stereo_mode(const int mode, const int view)
       last_invert == invert)
     return;
 
+  last_mode   = mode;
   last_invert = invert;
 
   CLog::Log(LOGDEBUG, "aml_set_stereo_mode:mode(0x%x)", mode);
   if (!aml_supports_stereo(mode))
-  {
-    last_mode = mode;
     return;
-  }
 
   switch(mode)
   {
