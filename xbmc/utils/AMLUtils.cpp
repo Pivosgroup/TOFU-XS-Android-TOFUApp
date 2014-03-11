@@ -31,6 +31,25 @@
 #include "utils/CPUInfo.h"
 #include "utils/log.h"
 #include "utils/StringUtils.h"
+#include "guilib/StereoscopicsManager.h"
+
+#define MODE_3D_DISABLE         0x00000000
+#define MODE_3D_LR              0x00000101
+#define MODE_3D_LR_SWITCH       0x00000501
+#define MODE_3D_BT              0x00000201
+#define MODE_3D_BT_SWITCH       0x00000601
+#define MODE_3D_TO_2D_L         0x00000102
+#define MODE_3D_TO_2D_R         0x00000902
+#define MODE_3D_TO_2D_T         0x00000202
+#define MODE_3D_TO_2D_B         0x00000a02
+
+static void aml_set_video_3d_mode(const int mode3d)
+{
+  char mode[16] = {};
+  snprintf(mode, sizeof(mode), "0x%08x", mode3d);
+  CLog::Log(LOGDEBUG, "aml_set_video_3d_mode: %s", mode);
+  aml_set_sysfs_str("/sys/class/ppmgr/ppmgr_3d_mode", mode);
+}
 
 static void aml_hdmi_3D_mode(const char *mode3d)
 {
@@ -172,10 +191,16 @@ bool aml_supports_stereo(const int mode)
 
 void aml_set_stereo_mode(const int mode, const int view)
 {
-  static int last_mode = -1;
+  static int  last_mode   = -1;
+  static bool last_invert = false;
+  bool        invert      = CMediaSettings::Get().GetCurrentVideoSettings().m_StereoInvert;
+
   // do nothing if mode matches last time someone called us.
-  if (last_mode == mode)
+  if (last_mode == mode &&
+      last_invert == invert)
     return;
+
+  last_invert = invert;
 
   CLog::Log(LOGDEBUG, "aml_set_stereo_mode:mode(0x%x)", mode);
   if (!aml_supports_stereo(mode))
@@ -186,32 +211,68 @@ void aml_set_stereo_mode(const int mode, const int view)
 
   switch(mode)
   {
-    default:
-      aml_hdmi_3D_mode("3doff");
-      break;
     case RENDER_STEREO_MODE_SPLIT_VERTICAL:
+      aml_set_video_3d_mode(MODE_3D_DISABLE);
       aml_hdmi_3D_mode("3dlr");
       break;
     case RENDER_STEREO_MODE_SPLIT_HORIZONTAL:
+      aml_set_video_3d_mode(MODE_3D_DISABLE);
       aml_hdmi_3D_mode("3dtb");
       break;
 
     case RENDER_STEREO_MODE_INTERLACED:
       {
-        std::string  stereo_mode;
         switch(CMediaSettings::Get().GetCurrentVideoSettings().m_StereoMode)
         {
           case RENDER_STEREO_MODE_SPLIT_VERTICAL:
+            if (invert)
+              aml_set_video_3d_mode(MODE_3D_LR_SWITCH);
+            else
+              aml_set_video_3d_mode(MODE_3D_LR);
             aml_hdmi_3D_mode("3dlr");
             break;
           case RENDER_STEREO_MODE_SPLIT_HORIZONTAL:
+            if (invert)
+              aml_set_video_3d_mode(MODE_3D_BT_SWITCH);
+            else
+              aml_set_video_3d_mode(MODE_3D_BT);
             aml_hdmi_3D_mode("3dtb");
             break;
           default:
+            aml_set_video_3d_mode(MODE_3D_DISABLE);
             aml_hdmi_3D_mode("3doff");
             break;
         }
       }
+      break;
+    case RENDER_STEREO_MODE_MONO:
+      {
+        int   stream_mode = (int)CStereoscopicsManager::Get().GetStereoModeOfPlayingVideo();
+        
+        switch (stream_mode)
+        {
+          case RENDER_STEREO_MODE_SPLIT_VERTICAL:
+            if (invert)
+              aml_set_video_3d_mode(MODE_3D_TO_2D_R);
+            else
+              aml_set_video_3d_mode(MODE_3D_TO_2D_L);
+            break;
+          case RENDER_STEREO_MODE_SPLIT_HORIZONTAL:
+            if (invert)
+              aml_set_video_3d_mode(MODE_3D_TO_2D_B);
+            else
+              aml_set_video_3d_mode(MODE_3D_TO_2D_T);
+            break;
+          default:
+            aml_set_video_3d_mode(MODE_3D_DISABLE);
+            break;
+        }
+        aml_hdmi_3D_mode("3doff");
+      }
+      break;
+    default:
+      aml_set_video_3d_mode(MODE_3D_DISABLE);
+      aml_hdmi_3D_mode("3doff");
       break;
   }
 
