@@ -35,6 +35,7 @@
 #include "settings/MediaSettings.h"
 #include "addons/Skin.h"
 #include "pvr/PVRManager.h"
+#include "guilib/StereoscopicsManager.h"
 
 using namespace std;
 using namespace PVR;
@@ -194,10 +195,8 @@ void CGUIDialogVideoSettings::CreateSettings()
     AddBool(VIDEO_SETTINGS_NONLIN_STRETCH, 659, &CMediaSettings::Get().GetCurrentVideoSettings().m_CustomNonLinStretch);
 #endif
 
-  vector<pair<int, int> > stereomode;
-  stereomode.push_back(make_pair(RENDER_STEREO_MODE_OFF             , 16316));
-  stereomode.push_back(make_pair(RENDER_STEREO_MODE_SPLIT_HORIZONTAL, 36503));
-  stereomode.push_back(make_pair(RENDER_STEREO_MODE_SPLIT_VERTICAL  , 36504));
+  std::vector<std::pair<int, int> > stereomode;
+  CStereoscopicsManager::GetSupportedModes(stereomode, true);
   AddSpin(VIDEO_SETTINGS_STEREOSCOPICMODE  , 36535, &CMediaSettings::Get().GetCurrentVideoSettings().m_StereoMode, stereomode);
   AddBool(VIDEO_SETTINGS_STEREOSCOPICINVERT, 36536, &CMediaSettings::Get().GetCurrentVideoSettings().m_StereoInvert);
 
