@@ -50,10 +50,7 @@ public:
   RENDER_STEREO_MODE GetNextSupportedStereoMode(const RENDER_STEREO_MODE &currentMode, int step = 1);
   std::string DetectStereoModeByString(const std::string &needle);
   RENDER_STEREO_MODE GetStereoModeByUserChoice(const CStdString &heading = "");
-  RENDER_STEREO_MODE GetStereoModeOfPlayingVideo(void);
-  CStdString GetLabelForStereoMode(const RENDER_STEREO_MODE &mode);
   RENDER_STEREO_MODE GetPreferredPlaybackMode(void);
-  int ConvertVideoToGuiStereoMode(const std::string &mode);
   /**
    * @brief will convert a string representation into a GUI stereo mode
    * @param mode The string to convert
@@ -77,6 +74,11 @@ public:
    * @return True if action could be handled, false otherwise.
    */
   bool OnAction(const CAction &action);
+
+  static RENDER_STEREO_MODE GetStereoModeOfPlayingVideo(void);
+  static CStdString GetLabelForStereoMode(const RENDER_STEREO_MODE &mode);
+  static int ConvertVideoToGuiStereoMode(const std::string &mode);
+  static void GetSupportedModes(std::vector<std::pair<int, int> >& modes, bool omitIncompatibleWithCurrentVideo);
 
 private:
   void ApplyStereoMode(const RENDER_STEREO_MODE &mode, bool notify = true);

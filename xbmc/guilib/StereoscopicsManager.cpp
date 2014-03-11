@@ -184,12 +184,35 @@ std::string CStereoscopicsManager::DetectStereoModeByString(const std::string &n
   return stereoMode;
 }
 
+void CStereoscopicsManager::GetSupportedModes(std::vector<std::pair<int, int> >& modes, bool omitIncompatibleWithCurrentVideo)
+{
+  RENDER_STEREO_MODE omitIncompatible = RENDER_STEREO_MODE_INVALID;
+
+  if (omitIncompatibleWithCurrentVideo)
+    omitIncompatible = GetStereoModeOfPlayingVideo();
+
+  for (int i = RENDER_STEREO_MODE_OFF; i < RENDER_STEREO_MODE_COUNT; ++i)
+  {
+    if (g_Windowing.SupportsStereo((RENDER_STEREO_MODE)i))
+    {
+      if (omitIncompatibleWithCurrentVideo &&
+          (i == RENDER_STEREO_MODE_SPLIT_VERTICAL ||
+           i == RENDER_STEREO_MODE_SPLIT_HORIZONTAL) &&
+          i != omitIncompatible)
+        continue;
+      modes.push_back(make_pair(i, 36502 + i));
+    }
+  }
+}
+
 RENDER_STEREO_MODE CStereoscopicsManager::GetStereoModeByUserChoice(const CStdString &heading)
 {
-  RENDER_STEREO_MODE mode = GetStereoMode();
+  RENDER_STEREO_MODE mode           = GetStereoMode();
+  RENDER_STEREO_MODE streamMode     = GetStereoModeOfPlayingVideo();
+  RENDER_STEREO_MODE suggestedMode  = mode;
   // if no stereo mode is set already, suggest mode of current video by preselecting it
-  if (mode == RENDER_STEREO_MODE_OFF && g_infoManager.EvaluateBool("videoplayer.isstereoscopic"))
-    mode = GetStereoModeOfPlayingVideo();
+  if (mode == RENDER_STEREO_MODE_OFF)
+    suggestedMode = streamMode;
 
   CGUIDialogSelect* pDlgSelect = (CGUIDialogSelect*)g_windowManager.GetWindow(WINDOW_DIALOG_SELECT);
   pDlgSelect->Reset();
@@ -199,38 +222,23 @@ RENDER_STEREO_MODE CStereoscopicsManager::GetStereoModeByUserChoice(const CStdSt
     pDlgSelect->SetHeading(heading.c_str());
 
   // prepare selectable stereo modes
-  std::vector<RENDER_STEREO_MODE> selectableModes;
-  for (int i = RENDER_STEREO_MODE_OFF; i < RENDER_STEREO_MODE_COUNT; i++)
-  {
-    RENDER_STEREO_MODE selectableMode = (RENDER_STEREO_MODE) i;
-    if (g_Windowing.SupportsStereo(selectableMode))
-    {
-      if (aml_hw3d_present())
-      {
-        // disallow switch modes that require gles games
-        if (selectableMode == RENDER_STEREO_MODE_MONO)
-          continue;
-        if (selectableMode == RENDER_STEREO_MODE_SPLIT_VERTICAL)
-          continue;
-        if (selectableMode == RENDER_STEREO_MODE_SPLIT_HORIZONTAL)
-          continue;
-      }
+  std::vector<std::pair<int, int> > selectableModes;
+  GetSupportedModes(selectableModes, true);
 
-      selectableModes.push_back(selectableMode);
-      CStdString label = g_localizeStrings.Get(36502+i);
-      pDlgSelect->Add( label );
-      if (mode == selectableMode)
-        pDlgSelect->SetSelected( label );
-    }
+  std::vector<std::pair<int, int> >::const_iterator i;
+  for (i = selectableModes.begin(); i != selectableModes.end(); ++i)
+  {
+    CStdString label = g_localizeStrings.Get(i->second);
+    pDlgSelect->Add( label );
+    if (suggestedMode == i->first)
+      pDlgSelect->SetSelected( label );
   }
 
   pDlgSelect->DoModal();
 
   int iItem = pDlgSelect->GetSelectedLabel();
   if (iItem > -1 && pDlgSelect->IsConfirmed())
-    mode = (RENDER_STEREO_MODE) selectableModes[iItem];
-  else
-    mode = GetStereoMode();
+    mode = (RENDER_STEREO_MODE)selectableModes[iItem].first;
 
   return mode;
 }
