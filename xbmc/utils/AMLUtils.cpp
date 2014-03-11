@@ -34,15 +34,23 @@
 
 static void aml_hdmi_3D_mode(const char *mode3d)
 {
+  static bool reset_disp_mode = false;
   CLog::Log(LOGDEBUG, "aml_hdmi_3D_mode: %s", mode3d);
   aml_set_sysfs_str("/sys/class/amhdmitx/amhdmitx0/config", mode3d);
   if (strstr(mode3d, "3doff"))
   {
-    // Some 3D HDTVs will not exit from 3D mode with 3doff
-    char disp_mode[256] = {};
-    if (aml_get_sysfs_str("/sys/class/display/mode", disp_mode, 255) != -1)
-      aml_set_sysfs_str("/sys/class/amhdmitx/amhdmitx0/disp_mode", disp_mode);
+    if (reset_disp_mode)
+    {
+      // Some 3D HDTVs will not exit from 3D mode with 3doff
+      char disp_mode[256] = {};
+      if (aml_get_sysfs_str("/sys/class/display/mode", disp_mode, 255) != -1)
+        aml_set_sysfs_str("/sys/class/amhdmitx/amhdmitx0/disp_mode", disp_mode);
+
+      reset_disp_mode = false;
+    }
   }
+  else
+    reset_disp_mode = true;
 }
 
 int aml_set_sysfs_str(const char *path, const char *val)
