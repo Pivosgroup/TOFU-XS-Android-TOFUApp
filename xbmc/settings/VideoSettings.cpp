@@ -22,6 +22,7 @@
 //////////////////////////////////////////////////////////////////////
 
 #include "VideoSettings.h"
+#include "rendering/RenderSystem.h"
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
@@ -57,6 +58,8 @@ CVideoSettings::CVideoSettings()
   m_CropBottom = 0;
   m_CropLeft = 0;
   m_CropRight = 0;
+  m_StereoMode = RENDER_STEREO_MODE_OFF;
+  m_StereoInvert = false;
 }
 
 bool CVideoSettings::operator!=(const CVideoSettings &right) const
