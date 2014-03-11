@@ -162,6 +162,8 @@ bool aml_supports_stereo(const int mode)
   else if ( mode == RENDER_STEREO_MODE_MONO ||
             mode == RENDER_STEREO_MODE_OFF)
     last_rtn = true;
+  else
+    last_rtn = false;
 
   last_mode = mode;
 
