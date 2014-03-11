@@ -410,6 +410,8 @@ bool CStereoscopicsManager::OnAction(const CAction &action)
       RENDER_STEREO_MODE targetMode = m_lastStereoMode;
       if (targetMode == RENDER_STEREO_MODE_OFF)
         targetMode = GetPreferredPlaybackMode();
+      if (targetMode == RENDER_STEREO_MODE_OFF)
+        targetMode = GetStereoModeOfPlayingVideo();
       SetStereoMode(targetMode);
     }
     else
@@ -430,6 +432,8 @@ bool CStereoscopicsManager::OnAction(const CAction &action)
       RENDER_STEREO_MODE targetMode = m_lastStereoMode;
       if (targetMode == RENDER_STEREO_MODE_OFF)
         targetMode = GetPreferredPlaybackMode();
+      if (targetMode == RENDER_STEREO_MODE_OFF)
+        targetMode = GetStereoModeOfPlayingVideo();
       SetStereoMode(targetMode);
     }
     else
