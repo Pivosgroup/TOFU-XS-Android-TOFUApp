@@ -243,16 +243,6 @@ public:
 //-----------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
 // AppContext - Application state
-#define MODE_3D_DISABLE         0x00000000
-#define MODE_3D_LR              0x00000101
-#define MODE_3D_LR_SWITCH       0x00000501
-#define MODE_3D_BT              0x00000201
-#define MODE_3D_BT_SWITCH       0x00000601
-#define MODE_3D_TO_2D_L         0x00000102
-#define MODE_3D_TO_2D_R         0x00000902
-#define MODE_3D_TO_2D_T         0x00000202
-#define MODE_3D_TO_2D_B         0x00000a02
-
 #define PTS_FREQ        90000
 #define UNIT_FREQ       96000
 #define AV_SYNC_THRESH  PTS_FREQ*30
@@ -2095,6 +2085,9 @@ std::string CAMLCodec::GetStereoMode()
     default:                                  stereo_mode = m_hints.stereo_mode; break;
   }
 
+  if (CMediaSettings::Get().GetCurrentVideoSettings().m_StereoInvert)
+    stereo_mode = RenderManager::GetStereoModeInvert(stereo_mode);
+
   return stereo_mode;
 }
 
@@ -2197,48 +2190,11 @@ void CAMLCodec::SetVideoRect(const CRect &SrcRect, const CRect &DestRect)
   CLog::Log(LOGDEBUG, "CAMLCodec::SetVideoRect:m_stereo_view(%d)", m_stereo_view);
 #endif
 
-  if (m_stereo_mode == RENDER_STEREO_MODE_MONO)
-  {
-    std::string mode = GetStereoMode();
-    if (mode == "left_right")
-      SetVideo3dMode(MODE_3D_TO_2D_L);
-    else if (mode == "right_left")
-      SetVideo3dMode(MODE_3D_TO_2D_R);
-    else if (mode == "top_bottom")
-      SetVideo3dMode(MODE_3D_TO_2D_T);
-    else if (mode == "bottom_top")
-      SetVideo3dMode(MODE_3D_TO_2D_B);
-    else
-      SetVideo3dMode(MODE_3D_DISABLE);
-  }
-  else if (m_stereo_mode == RENDER_STEREO_MODE_SPLIT_VERTICAL)
-  {
+
+  if (m_stereo_mode == RENDER_STEREO_MODE_SPLIT_VERTICAL)
     dst_rect.x2 *= 2.0;
-    SetVideo3dMode(MODE_3D_DISABLE);
-  }
   else if (m_stereo_mode == RENDER_STEREO_MODE_SPLIT_HORIZONTAL)
-  {
     dst_rect.y2 *= 2.0;
-    SetVideo3dMode(MODE_3D_DISABLE);
-  }
-  else if (m_stereo_mode == RENDER_STEREO_MODE_INTERLACED)
-  {
-    std::string mode = GetStereoMode();
-    if (mode == "left_right")
-      SetVideo3dMode(MODE_3D_LR);
-    else if (mode == "right_left")
-      SetVideo3dMode(MODE_3D_LR_SWITCH);
-    else if (mode == "row_interleaved_lr")
-      SetVideo3dMode(MODE_3D_LR);
-    else if (mode == "row_interleaved_rl")
-      SetVideo3dMode(MODE_3D_LR_SWITCH);
-    else
-      SetVideo3dMode(MODE_3D_DISABLE);
-  }
-  else
-  {
-    SetVideo3dMode(MODE_3D_DISABLE);
-  }
 
   // goofy 0/1 based difference in aml axis coordinates.
   // fix them.
