@@ -9,10 +9,6 @@ msgctxt "#31003"
 msgid "N/A"
 msgstr "无"
 
-msgctxt "#31004"
-msgid "Month"
-msgstr "月"
-
 msgctxt "#31005"
 msgid "Premiered"
 msgstr "首映"
@@ -36,10 +32,6 @@ msgstr "定时器"
 msgctxt "#31010"
 msgid "General main menu settings"
 msgstr "常用主菜单设置"
-
-msgctxt "#31011"
-msgid "RottenTomatoes Trailers"
-msgstr "RottenTomatoes预告片"
 
 msgctxt "#31012"
 msgid "Add group"
@@ -68,18 +60,6 @@ msgstr "直播电视"
 msgctxt "#31018"
 msgid "Big covers"
 msgstr "大封面"
-
-msgctxt "#31019"
-msgid "Channel4 News"
-msgstr "Channel4新闻"
-
-msgctxt "#31020"
-msgid "Extras"
-msgstr "其他"
-
-msgctxt "#31021"
-msgid "Search TOFU for"
-msgstr "TOFU搜索"
 
 msgctxt "#31022"
 msgid "Music - Files"
@@ -113,17 +93,9 @@ msgctxt "#31029"
 msgid "Showcase2"
 msgstr "陈列2"
 
-msgctxt "#31030"
-msgid "Change info labels"
-msgstr "更改信息标签"
-
 msgctxt "#31032"
 msgid "Nothing"
 msgstr "无"
-
-msgctxt "#31033"
-msgid "Play item on startup"
-msgstr "启动时播放项目"
 
 msgctxt "#31034"
 msgid "Move tooltip to top bar"
@@ -132,18 +104,6 @@ msgstr "移动工具提示到顶部栏"
 msgctxt "#31035"
 msgid "Conditional weather"
 msgstr "天气情况"
-
-msgctxt "#31036"
-msgid "Breadcrumbs classic"
-msgstr "经典 Breadcrumbs"
-
-msgctxt "#31037"
-msgid "Default breadcrumbs"
-msgstr "默认 Breadcrumbs"
-
-msgctxt "#31038"
-msgid "Classic top panels"
-msgstr "经典置顶面板"
 
 msgctxt "#31039"
 msgid "CD-Wall"
@@ -177,14 +137,6 @@ msgctxt "#31048"
 msgid "Visualization presets"
 msgstr "可视化效果设置"
 
-msgctxt "#31053"
-msgid "Fullscreen"
-msgstr "全屏"
-
-msgctxt "#31054"
-msgid "Shadow"
-msgstr "阴影"
-
 msgctxt "#31055"
 msgid "Open playlist"
 msgstr "打开播放列表"
@@ -217,10 +169,6 @@ msgctxt "#31063"
 msgid "Choose style"
 msgstr "选择样式"
 
-msgctxt "#31064"
-msgid "Press SELECT for alternative layout"
-msgstr "按选择键切换布局"
-
 msgctxt "#31065"
 msgid "Info"
 msgstr "信息"
@@ -249,22 +197,6 @@ msgctxt "#31072"
 msgid "System info"
 msgstr "系统信息"
 
-msgctxt "#31073"
-msgid "Actor information"
-msgstr "演员信息"
-
-msgctxt "#31074"
-msgid "Filmography"
-msgstr "电影作品"
-
-msgctxt "#31075"
-msgid "Press SELECT to switch between now/next EPG"
-msgstr "按选择键切换当前/下一电子节目单"
-
-msgctxt "#31080"
-msgid "Director information"
-msgstr "导演信息"
-
 msgctxt "#31081"
 msgid "Latest MusicVids"
 msgstr "最新原声音乐"
@@ -281,10 +213,6 @@ msgctxt "#31084"
 msgid "Panels"
 msgstr "面板"
 
-msgctxt "#31085"
-msgid "Light"
-msgstr "发光"
-
 msgctxt "#31086"
 msgid "ClearART"
 msgstr "ClearART"
@@ -293,17 +221,9 @@ msgctxt "#31087"
 msgid "Randomize All"
 msgstr "全部随机"
 
-msgctxt "#31088"
-msgid "Use color for all areas"
-msgstr "全局颜色"
-
 msgctxt "#31089"
 msgid "Both"
 msgstr "两者都"
-
-msgctxt "#31090"
-msgid "Adjust Transparency"
-msgstr "透明度"
 
 msgctxt "#31091"
 msgid "Random MusicVids"
@@ -313,10 +233,6 @@ msgctxt "#31092"
 msgid "Artist fanart (Extrafanart, fanart.jpg, default fanart)"
 msgstr "艺人同人画（扩展同人画、fanart.jpg、默认同人画）"
 
-msgctxt "#31093"
-msgid "Actors born today"
-msgstr "今日出生的演员"
-
 msgctxt "#31094"
 msgid "Widget fanart"
 msgstr "同人画部件"
@@ -325,10 +241,6 @@ msgctxt "#31095"
 msgid "Rating"
 msgstr "评分"
 
-msgctxt "#31096"
-msgid "Search on YouTube"
-msgstr "YouTube搜索"
-
 msgctxt "#31097"
 msgid "Classic OSD style"
 msgstr "经典OSD样式"
@@ -336,10 +248,6 @@ msgstr "经典OSD样式"
 msgctxt "#31098"
 msgid "Background path"
 msgstr "背景目录"
-
-msgctxt "#31099"
-msgid "Top bar style"
-msgstr "顶部栏风格"
 
 msgctxt "#31102"
 msgid "Background"
@@ -381,10 +289,6 @@ msgctxt "#31111"
 msgid "Recording"
 msgstr "正在录制"
 
-msgctxt "#31112"
-msgid "Coloured"
-msgstr "彩色"
-
 msgctxt "#31113"
 msgid "Single Image"
 msgstr "单一图片"
@@ -401,53 +305,13 @@ msgctxt "#31116"
 msgid "Show"
 msgstr "显示"
 
-msgctxt "#31117"
-msgid "CNN International"
-msgstr "CNN国际"
-
-msgctxt "#31118"
-msgid "Radio 105"
-msgstr "105电台"
-
-msgctxt "#31119"
-msgid "Radio Montecarlo"
-msgstr "蒙特卡洛电台"
-
-msgctxt "#31120"
-msgid "Tom & Jerry"
-msgstr "猫和老鼠"
-
-msgctxt "#31121"
-msgid "Virgin Music"
-msgstr "维京唱片"
-
 msgctxt "#31127"
 msgid "Lyrics add-on"
 msgstr "歌词插件"
 
-msgctxt "#31128"
-msgid "Lyrics"
-msgstr "歌词"
-
-msgctxt "#31129"
-msgid "Video Stream"
-msgstr "视频流"
-
-msgctxt "#31130"
-msgid "Subtitle add-on"
-msgstr "字幕插件"
-
 msgctxt "#31143"
 msgid "Animated fanart in music visualization"
 msgstr "音乐可视化效果中显示动态同人画"
-
-msgctxt "#31148"
-msgid "Show timepanel"
-msgstr "显示时间"
-
-msgctxt "#31149"
-msgid "This will shutdown TOFU! [CR]Are you sure?"
-msgstr "即将关闭TOFU! [CR]确定?"
 
 msgctxt "#31150"
 msgid "Landscape"
@@ -485,10 +349,6 @@ msgctxt "#31166"
 msgid "Infopanel"
 msgstr "信息面板"
 
-msgctxt "#31167"
-msgid "Playlists for Widget 2"
-msgstr "播放列表部件2"
-
 msgctxt "#31168"
 msgid "No CoverFlow"
 msgstr "无封面流"
@@ -525,14 +385,6 @@ msgctxt "#31176"
 msgid "General options"
 msgstr "常规选项"
 
-msgctxt "#31177"
-msgid "Random color mode"
-msgstr "随机颜色"
-
-msgctxt "#31178"
-msgid "Choose main color"
-msgstr "设置主色调"
-
 msgctxt "#31179"
 msgid "Disable media menu and hide options in video info"
 msgstr "禁用媒体菜单和视频信息选项"
@@ -540,10 +392,6 @@ msgstr "禁用媒体菜单和视频信息选项"
 msgctxt "#31180"
 msgid "Hide options in media menu"
 msgstr "隐藏媒体菜单选项"
-
-msgctxt "#31181"
-msgid "Activate 'Glow Mode'"
-msgstr "激活“Glow模式”"
 
 msgctxt "#31182"
 msgid "Colored"
@@ -581,10 +429,6 @@ msgctxt "#31191"
 msgid "Use as icon"
 msgstr "启用图标"
 
-msgctxt "#31192"
-msgid "Choose font color"
-msgstr "选择字体颜色"
-
 msgctxt "#31194"
 msgid "Delayed"
 msgstr "延时"
@@ -601,45 +445,9 @@ msgctxt "#31198"
 msgid "Extrathumbs"
 msgstr "扩展缩略图"
 
-msgctxt "#31199"
-msgid "News"
-msgstr "新闻"
-
-msgctxt "#31200"
-msgid "TOFU Cinema"
-msgstr "TOFU电影"
-
-msgctxt "#31201"
-msgid "TOFU Trailer"
-msgstr "TOFU预告片"
-
-msgctxt "#31202"
-msgid "DailyMotion"
-msgstr "每日运动"
-
-msgctxt "#31203"
-msgid "YouTube User Uploads"
-msgstr "YouTube用户上载"
-
-msgctxt "#31204"
-msgid "YouTube User Favorites"
-msgstr "YouTube用户最爱"
-
-msgctxt "#31205"
-msgid "Youtube Most Viewed"
-msgstr "YouTube最多观看"
-
-msgctxt "#31206"
-msgid "Youtube Most Popular"
-msgstr "YouTube最热门"
-
 msgctxt "#31220"
 msgid "Random episodes"
 msgstr "随机剧集"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "默认"
 
 msgctxt "#31222"
 msgid "Random movies"
@@ -664,10 +472,6 @@ msgstr "垂直"
 msgctxt "#31229"
 msgid "Horizontal"
 msgstr "水平"
-
-msgctxt "#31230"
-msgid "Viewtypes"
-msgstr "视图类型"
 
 msgctxt "#31231"
 msgid "Navigation"
@@ -729,18 +533,6 @@ msgctxt "#31255"
 msgid "Blu-ray Disc"
 msgstr "蓝光盘"
 
-msgctxt "#31256"
-msgid "Include already watched Items?"
-msgstr "包含已观看项目吗？"
-
-msgctxt "#31265"
-msgid "Smaller pop-up dialogs"
-msgstr "更小的弹出框"
-
-msgctxt "#31269"
-msgid "Enable background effect [I](Can increase CPU usage!)   [/I]"
-msgstr "启用背景特效[I]（会增加CPU占用率！）[/I]"
-
 msgctxt "#31271"
 msgid "Posters"
 msgstr "海报"
@@ -752,10 +544,6 @@ msgstr "布局"
 msgctxt "#31279"
 msgid "Play trailers in fullscreen"
 msgstr "全屏播放预告片"
-
-msgctxt "#31281"
-msgid "Show video info when player is paused"
-msgstr "播放暂停时显示视频"
 
 msgctxt "#31282"
 msgid "Clear Cases"
@@ -792,10 +580,6 @@ msgstr "保持"
 msgctxt "#31295"
 msgid "Widget"
 msgstr "部件"
-
-msgctxt "#31298"
-msgid "Set area color"
-msgstr "选区色彩"
 
 msgctxt "#31299"
 msgid "Data provider"
@@ -837,30 +621,6 @@ msgctxt "#31326"
 msgid "Most played albums"
 msgstr "最常播放的专辑"
 
-msgctxt "#31327"
-msgid "Most played ROMs"
-msgstr "常用ROM"
-
-msgctxt "#31329"
-msgid "In-progress TV Shows"
-msgstr "正播出剧集"
-
-msgctxt "#31330"
-msgid "Random music"
-msgstr "随机音乐"
-
-msgctxt "#31331"
-msgid "Latest Music"
-msgstr "最新音乐"
-
-msgctxt "#31332"
-msgid "Play Video"
-msgstr "播放视频"
-
-msgctxt "#31333"
-msgid "Recent"
-msgstr "最近"
-
 msgctxt "#31334"
 msgid "Latest"
 msgstr "最新"
@@ -897,10 +657,6 @@ msgctxt "#31356"
 msgid "Download Subtitles"
 msgstr "下载字幕"
 
-msgctxt "#31357"
-msgid "Mixed info"
-msgstr "混合信息"
-
 msgctxt "#31358"
 msgid "System info"
 msgstr "系统信息"
@@ -908,10 +664,6 @@ msgstr "系统信息"
 msgctxt "#31359"
 msgid "Latest albums"
 msgstr "最新专辑"
-
-msgctxt "#31360"
-msgid "Upcoming"
-msgstr "即将上映"
 
 msgctxt "#31362"
 msgid "Rounded covers"
@@ -957,10 +709,6 @@ msgctxt "#31383"
 msgid "Backdrop"
 msgstr "背景"
 
-msgctxt "#31387"
-msgid "Darken"
-msgstr "暗化"
-
 msgctxt "#31388"
 msgid "Floor label"
 msgstr "底部标签:"
@@ -1004,10 +752,6 @@ msgstr "[B]设置网络配置[/B][CR][CR]设置通过UPnP和HTTP控制TOFU·配�
 msgctxt "#31406"
 msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]设置系统配置[/B][CR][CR]设置和校准显示器·配置音频输出·设置遥控器[CR]设置省电选项·开启调试功能·设置锁定功能"
-
-msgctxt "#31407"
-msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the TOFU+ skin · Customize the home menu · Adjust the skin colors[CR]Change skin backgrounds"
-msgstr "[B]设置皮肤选项[/B][CR][CR]设置TOFU+皮肤·增加和删除主菜单项目[CR]更改皮肤背景"
 
 msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from pivos.com[CR]Modify Add-on settings"
@@ -1101,10 +845,6 @@ msgctxt "#31483"
 msgid "Show icon label"
 msgstr "显示图标标签"
 
-msgctxt "#31484"
-msgid "Play trailer"
-msgstr "播放预告片"
-
 msgctxt "#31500"
 msgid "Pictures"
 msgstr "图片"
@@ -1125,10 +865,6 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "视频"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "程序"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "系统设置"
@@ -1136,10 +872,6 @@ msgstr "系统设置"
 msgctxt "#31507"
 msgid "Add-Ons"
 msgstr "扩展功能"
-
-msgctxt "#31508"
-msgid "Shutdown"
-msgstr "关机"
 
 msgctxt "#31509"
 msgid "Favorites"
@@ -1149,10 +881,6 @@ msgctxt "#31510"
 msgid "Weather"
 msgstr "天气"
 
-msgctxt "#31511"
-msgid "Play Disc"
-msgstr "播放光盘"
-
 msgctxt "#31600"
 msgid "Main menu item customizer (backgrounds,widgets)"
 msgstr "主菜单项目设定（背景、部件）"
@@ -1160,14 +888,6 @@ msgstr "主菜单项目设定（背景、部件）"
 msgctxt "#31601"
 msgid "CDWall"
 msgstr "唱片墙"
-
-msgctxt "#31602"
-msgid "Choose main menu style"
-msgstr "主菜单样式选择"
-
-msgctxt "#31610"
-msgid "Set area color for Home window"
-msgstr "主界面颜色"
 
 msgctxt "#31611"
 msgid "Fullscreen video"
@@ -1181,10 +901,6 @@ msgctxt "#31613"
 msgid "Enable custom startup focus position of main menu"
 msgstr "启用自定义主菜单启动焦点"
 
-msgctxt "#31614"
-msgid "CDArt Manager"
-msgstr "CDArt管理"
-
 msgctxt "#31615"
 msgid "Audio visualization"
 msgstr "音频可视化"
@@ -1193,25 +909,13 @@ msgctxt "#31616"
 msgid "Low"
 msgstr "低"
 
-msgctxt "#31617"
-msgid "High"
-msgstr "高"
-
 msgctxt "#31619"
 msgid "Fullscreen video options"
 msgstr "全屏视频选项"
 
-msgctxt "#31620"
-msgid "Add to icon panel"
-msgstr "增加到图标面板"
-
 msgctxt "#31621"
 msgid "Use Alaska paused label for video OSD"
 msgstr "视频OSD使用Alaska暂停标签"
-
-msgctxt "#31622"
-msgid "Label"
-msgstr "标签"
 
 msgctxt "#31623"
 msgid "Slot"
@@ -1224,10 +928,6 @@ msgstr "隐藏OSD播放控制"
 msgctxt "#31628"
 msgid "Current position"
 msgstr "当前位置"
-
-msgctxt "#31629"
-msgid "Channels"
-msgstr "频道"
 
 msgctxt "#31630"
 msgid "Custom"
@@ -1249,10 +949,6 @@ msgctxt "#31634"
 msgid "Main Menu"
 msgstr "主菜单"
 
-msgctxt "#31635"
-msgid "Similar Artists"
-msgstr "相似艺人"
-
 msgctxt "#31636"
 msgid "Rotating"
 msgstr "滚动"
@@ -1260,10 +956,6 @@ msgstr "滚动"
 msgctxt "#31637"
 msgid "Video OSD Settings"
 msgstr "视频OSD设置"
-
-msgctxt "#31638"
-msgid "Show 'Next Aired' info"
-msgstr "显示“下一播出”信息"
 
 msgctxt "#31639"
 msgid "Hide video thumb on info screen"
@@ -1288,14 +980,6 @@ msgstr "图标面板管理"
 msgctxt "#31645"
 msgid "Background Setup"
 msgstr "背景设置"
-
-msgctxt "#31646"
-msgid "Do you want to download all available [CR]artwork without user interaction?"
-msgstr "不通过交互选择而下载所有[CR]可用的艺术图片吗？"
-
-msgctxt "#31673"
-msgid "Most Played ROMs"
-msgstr "热门游戏ROM"
 
 msgctxt "#31674"
 msgid "Switch panel layout"
@@ -1345,10 +1029,6 @@ msgctxt "#31685"
 msgid "Classic"
 msgstr "经典"
 
-msgctxt "#31686"
-msgid "Nox"
-msgstr "Nox"
-
 msgctxt "#31687"
 msgid "Furniture settings"
 msgstr "部件设置"
@@ -1357,10 +1037,6 @@ msgctxt "#31688"
 msgid "Disable timepanel"
 msgstr "禁用时间信息"
 
-msgctxt "#31689"
-msgid "Disable library stats"
-msgstr "禁用资料库状态"
-
 msgctxt "#31690"
 msgid "Disable rss panel"
 msgstr "禁用rss信息"
@@ -1368,10 +1044,6 @@ msgstr "禁用rss信息"
 msgctxt "#31691"
 msgid "Toggle position"
 msgstr "切换位置"
-
-msgctxt "#31692"
-msgid "Shorter time and library stats panel"
-msgstr "短时间和资料库状态显示"
 
 msgctxt "#31694"
 msgid "Fixed list"
@@ -1388,10 +1060,6 @@ msgstr "替换布局"
 msgctxt "#31697"
 msgid "Choose cover type"
 msgstr "选择封面类型"
-
-msgctxt "#31698"
-msgid "Show list of actors/artists birthdays"
-msgstr "显示演员/艺人生日"
 
 msgctxt "#31699"
 msgid "Smaller main menu"
@@ -1429,10 +1097,6 @@ msgctxt "#31708"
 msgid "Background Customizer"
 msgstr "背景定制"
 
-msgctxt "#31709"
-msgid "Set Delay"
-msgstr "设置延时"
-
 msgctxt "#31710"
 msgid "Show ExtraFanart"
 msgstr "显示扩展同人画"
@@ -1448,10 +1112,6 @@ msgstr "推荐电影原声音乐"
 msgctxt "#31714"
 msgid "Video Library Node"
 msgstr "视频资料库节点"
-
-msgctxt "#31715"
-msgid "Smart Playlist Manager"
-msgstr "智能播放列表管理"
 
 msgctxt "#31716"
 msgid "Default Sets"
@@ -1485,10 +1145,6 @@ msgctxt "#31723"
 msgid "Default Settings Items"
 msgstr "默认设置项"
 
-msgctxt "#31724"
-msgid "Default Shutdown Items"
-msgstr "默认关机项"
-
 msgctxt "#31725"
 msgid "Default PVR Items"
 msgstr "默认PVR项"
@@ -1497,21 +1153,9 @@ msgctxt "#31726"
 msgid "Default Video Items"
 msgstr "默认视频项"
 
-msgctxt "#31727"
-msgid "Remaining Cities"
-msgstr "其余城市"
-
-msgctxt "#31728"
-msgid "Show Cities"
-msgstr "显示城市"
-
 msgctxt "#31729"
 msgid "Move NowPlaying widget to bottom"
 msgstr "将当前播放部件移到底部"
-
-msgctxt "#31730"
-msgid "Script features"
-msgstr "脚本功能"
 
 msgctxt "#31731"
 msgid "Skin Settings"
@@ -1528,34 +1172,6 @@ msgstr "选择歌曲"
 msgctxt "#31734"
 msgid "Use QuickList instead of default shutdown menu"
 msgstr "用快速列表代替默认关机菜单"
-
-msgctxt "#31735"
-msgid "[B]CREDITS TO:[/B]"
-msgstr "[B]致谢：[/B]"
-
-msgctxt "#31736"
-msgid "[B]N.O.W.A.L.L.[/B] for creating Artwork"
-msgstr "[B]N.O.W.A.L.L.[/B] 制作艺术图片"
-
-msgctxt "#31737"
-msgid "[B]Fional88[/B] for creating the tutorial videos"
-msgstr "[B]Fional88[/B] 制作演示视频"
-
-msgctxt "#31738"
-msgid "[B]www.webdesignerdepot.com[/B] for permission to include the iconpack \"Reflection\""
-msgstr "[B]www.webdesignerdepot.com[/B] 授权使用“Reflection”图标组"
-
-msgctxt "#31739"
-msgid "[B]DJH_ [/B]for creating Aeon, [B]Jezz_X [/B]for creating Confluence, [B]black[/B] for creating Xperience1080"
-msgstr "[B]DJH_ [/B]设计Aeon, [B]Jezz_X [/B]设计Confluence, [B]black[/B] 设计Xperience1080"
-
-msgctxt "#31740"
-msgid "Translators: [B]CutSickAss[/B], [B]epoke[/B], [B]frodo19[/B], [B]mindweaver[/B], [B]Passer[/B], [B]PatOso[/B], [B]peppe_sr[/B], [B]Rififi77[/B][CR][B]Roman_V_M[/B], [B]lijack[/B]"
-msgstr "翻译人员：[B]CutSickAss[/B], [B]epoke[/B], [B]frodo19[/B], [B]mindweaver[/B], [B]Passer[/B], [B]PatOso[/B], [B]peppe_sr[/B], [B]Rififi77[/B][CR][B]Roman_V_M[/B], [B]lijack[/B]"
-
-msgctxt "#31741"
-msgid "[CR]Also to: [B]Martijn[/B], [B]Deano316[/B], [B]defluo[/B], [B]fmronan[/B], [B]thrak76[/B], [B]xhaggi[/B] and [CR]all other people who contributed to this project"
-msgstr "[CR]还要感谢：[B]Martijn[/B], [B]Deano316[/B], [B]defluo[/B], [B]fmronan[/B], [B]thrak76[/B], [B]xhaggi[/B] 和 [CR]所有对本项目提供帮助的朋友"
 
 msgctxt "#31800"
 msgid "Fade background in visualisation"
@@ -1577,10 +1193,6 @@ msgctxt "#31804"
 msgid "Panel"
 msgstr "面板"
 
-msgctxt "#31807"
-msgid "Choose Icon"
-msgstr "选择图标"
-
 msgctxt "#31808"
 msgid "Exchange Position"
 msgstr "选择位置"
@@ -1592,10 +1204,6 @@ msgstr "音乐可视化设置"
 msgctxt "#31810"
 msgid "Show ClearArt instead of Logo"
 msgstr "显示 ClearArt 替代 Logo"
-
-msgctxt "#31811"
-msgid "Use Alt Floor"
-msgstr "使用ALT层"
 
 msgctxt "#31812"
 msgid "Show CDArt"
@@ -1609,33 +1217,13 @@ msgctxt "#31814"
 msgid "Always show Submenu"
 msgstr "总是显示子菜单"
 
-msgctxt "#31815"
-msgid "Latest Pics"
-msgstr "最新图片"
-
-msgctxt "#31816"
-msgid "Random Pics"
-msgstr "随机图片"
-
 msgctxt "#31817"
 msgid "Random Artists"
 msgstr "随机艺术家"
 
-msgctxt "#31818"
-msgid "Near Concerts"
-msgstr "最近音乐会"
-
 msgctxt "#31819"
 msgid "Next Aired"
 msgstr "即将播映"
-
-msgctxt "#31820"
-msgid "Daily Babes"
-msgstr "每日一看"
-
-msgctxt "#31823"
-msgid "World Map + Icons"
-msgstr "世界地图 + 图标"
 
 msgctxt "#31824"
 msgid "Live DVD cases"
@@ -1697,14 +1285,6 @@ msgctxt "#31839"
 msgid "Restart TOFU"
 msgstr "重启TOFU"
 
-msgctxt "#31840"
-msgid "Random Movie (Genre)"
-msgstr "随机电影（类型）"
-
-msgctxt "#31841"
-msgid "Random Movie"
-msgstr "随机电影"
-
 msgctxt "#31842"
 msgid "Movies (Cinema Exp.)"
 msgstr "电影 (Cinema Exp.)"
@@ -1720,10 +1300,6 @@ msgstr "清除视频资料库"
 msgctxt "#31845"
 msgid "Movie Sets"
 msgstr "电影设置"
-
-msgctxt "#31846"
-msgid "Around the world"
-msgstr "全局"
 
 msgctxt "#31847"
 msgid "Video Files"
@@ -1753,10 +1329,6 @@ msgctxt "#31854"
 msgid "PVR Area"
 msgstr "PVR区"
 
-msgctxt "#31855"
-msgid "Featured Area"
-msgstr "功能区"
-
 msgctxt "#31856"
 msgid "NowPlaying"
 msgstr "正在播放"
@@ -1781,10 +1353,6 @@ msgctxt "#31863"
 msgid "Two Columns"
 msgstr "两栏"
 
-msgctxt "#31864"
-msgid "Show Widgets"
-msgstr "显示小部件"
-
 msgctxt "#31865"
 msgid "WakeOnLAN"
 msgstr "网络唤醒"
@@ -1801,18 +1369,6 @@ msgctxt "#31868"
 msgid "Enter MAC Address"
 msgstr "输入MAC 地址"
 
-msgctxt "#31869"
-msgid "Online Video Help"
-msgstr "在线视频帮助"
-
-msgctxt "#31870"
-msgid "Help"
-msgstr "帮助"
-
-msgctxt "#31871"
-msgid "Available at Passion-XBMC repository"
-msgstr "可用热门TOFU扩展功能库"
-
 msgctxt "#31872"
 msgid "Mixed Movies"
 msgstr "混合电影"
@@ -1824,10 +1380,6 @@ msgstr "混合电视"
 msgctxt "#31874"
 msgid "Mixed Music"
 msgstr "混合音乐"
-
-msgctxt "#31875"
-msgid "No Content for this Area"
-msgstr "该区无内容"
 
 msgctxt "#31876"
 msgid "Appearance Setup"
@@ -1849,14 +1401,6 @@ msgctxt "#31882"
 msgid "Disable option to hide widgets by pressing \"Back\""
 msgstr "按照“退格”键取消选项隐藏小部件"
 
-msgctxt "#31885"
-msgid "Area-specific Options"
-msgstr "区域相关选项"
-
-msgctxt "#31886"
-msgid "Search Trailer on Youtube"
-msgstr "Youtube中搜索预告片"
-
 msgctxt "#31888"
 msgid "PRESS ANY KEY"
 msgstr "按任意键"
@@ -1865,29 +1409,9 @@ msgctxt "#31889"
 msgid "Next Tracks"
 msgstr "下一首"
 
-msgctxt "#31890"
-msgid "Collections"
-msgstr "系列"
-
-msgctxt "#31891"
-msgid "Folders"
-msgstr "文件夹"
-
-msgctxt "#31892"
-msgid "Categories"
-msgstr "分类"
-
-msgctxt "#31895"
-msgid "No library content for this media type"
-msgstr "无此媒体类型的资料库内容"
-
 msgctxt "#31896"
 msgid "10 Day"
 msgstr "10天"
-
-msgctxt "#31897"
-msgid "Press DOWN for extended info"
-msgstr "按下键显示扩展信息"
 
 msgctxt "#31898"
 msgid "Visibility"
@@ -1913,18 +1437,6 @@ msgctxt "#31905"
 msgid "Needs script.cinema.experience to be available"
 msgstr "需要script.cinema.experience脚本插件可用"
 
-msgctxt "#31906"
-msgid "Needs script.randommovie to be available"
-msgstr "需要script.randommovie脚本插件可用"
-
-msgctxt "#31909"
-msgid "Bar Style"
-msgstr "条形栏风格"
-
-msgctxt "#31910"
-msgid "This feature requires the ColorPicker add-on"
-msgstr "此功能需要ColorPicker扩展功能"
-
 msgctxt "#31911"
 msgid "Updating add-on repos"
 msgstr "更新扩展功能库"
@@ -1940,10 +1452,6 @@ msgstr "点击部件查看可用选项"
 msgctxt "#31914"
 msgid "Click on menu items to see available options"
 msgstr "点击菜单项查看可用选项"
-
-msgctxt "#31915"
-msgid "Play some Music to get live Preview of Settings"
-msgstr "实时预览设置时播放音乐"
 
 msgctxt "#31916"
 msgid "Needs \"Additional Artist Info\" activated in Artistslideshow Plugin"
@@ -1997,10 +1505,6 @@ msgctxt "#31954"
 msgid "Function"
 msgstr "功能"
 
-msgctxt "#31955"
-msgid "Activate Bottom Menu (Play DVD, toggle widgets)"
-msgstr "激活底部菜单（播放DVD、切换部件）"
-
 msgctxt "#31956"
 msgid "Choose Type"
 msgstr "选择类型"
@@ -2021,14 +1525,6 @@ msgctxt "#31960"
 msgid "Set icon"
 msgstr "设置图标"
 
-msgctxt "#31961"
-msgid "Set up 'Featured' window appearance"
-msgstr "设置“特性”窗口外观"
-
-msgctxt "#31962"
-msgid "Set up 'Settings' window appearance"
-msgstr "设置“设置”窗口外观"
-
 msgctxt "#31963"
 msgid "Fallback settings"
 msgstr "备选设置"
@@ -2043,10 +1539,66 @@ msgstr "播放列表小部件"
 
 # TOFU additions
 
+msgctxt "#31971"
+msgid "Local subtitle available"
+msgstr "有本地字幕"
+
 msgctxt "#31972"
 msgid "Apps"
-msgstr "应用程序"
+msgstr "应用"
+
+msgctxt "#31973"
+msgid "Recent"
+msgstr "最近"
 
 msgctxt "#31974"
 msgid "View:"
-msgstr "视图："
+msgstr "查看"
+
+msgctxt "#31975"
+msgid "Choose colours"
+msgstr "颜色选择"
+
+msgctxt "#31976"
+msgid "Set colour"
+msgstr "设置颜色"
+
+msgctxt "#31977"
+msgid "Select colour"
+msgstr "选中颜色"
+
+msgctxt "#31978"
+msgid "Select settings background"
+msgstr "选择设置页背景图"
+
+msgctxt "#31980"
+msgid "Pivos Technology Group, Inc."
+msgstr "Pivos技术有限公司"
+
+msgctxt "#31981"
+msgid "CREDITS TO:"
+msgstr "归功于"
+
+msgctxt "#31982"
+msgid "BigNoid and phil65 - for creating Aeon Nox"
+msgstr "BigNoid and phil65 - 开发的Aeon Nox皮肤"
+
+msgctxt "#31983"
+msgid "DJH_ - for creating Aeon"
+msgstr "DJH_ - 开发的Aeon皮肤"
+
+msgctxt "#31984"
+msgid "Jezz_X  - for creating Confluence"
+msgstr "Jezz_X-开发的Confluence皮肤"
+
+msgctxt "#31985"
+msgid "www.webdesignerdepot.com - for the Reflection iconpack"
+msgstr "www.webdesignerdepot.com 提供的图标"
+
+msgctxt "#31993"
+msgid "...and all other people who contributed to this project!"
+msgstr "和其他为此项目做出贡献的人"
+
+msgctxt "#31999"
+msgid "International"
+msgstr "界面语言"

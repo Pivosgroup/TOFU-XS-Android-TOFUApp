@@ -3,11 +3,11 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<views>50,53,57,506,500,509,512</views>
-	<include condition="!Skin.HasSetting(setup-0.1.6)">AutoConfig</include>
+	<include condition="!Skin.HasSetting(setup-0.2.2)">AutoConfig</include>
 	<onload condition="!Skin.HasSetting(ExplainMediaMenu)">ActivateWindow(1123)</onload>
 	<controls>
 		<control type="multiimage">
-			<imagepath background="true" fallback="special://skin/backgrounds/music/">$VAR[MusicFanartVar]</imagepath>
+			<imagepath background="true" fallback="special://skin/background/">$VAR[MusicFanartVar]</imagepath>
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
 			<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
@@ -23,6 +23,7 @@
 			<visible>[Skin.HasSetting(musicextrafanart) + !IsEmpty(Skin.String(ArtistsLogosPath))] | Container.Content(genres)</visible>
 		</control>
 		<include>CommonMediaPlayingBackground</include>
+		<include>BackgroundDiffuse</include>
 		<include>Furniture_Showcase</include>
 		<include>WallPanel</include>
 		<control type="group">

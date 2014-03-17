@@ -4,12 +4,6 @@
 		<control type="group">
 			<visible>Control.IsVisible(511)</visible>
 			<animation effect="slide" tween="cubic" easing="out" time="480" start="0,806" end="0,0">VisibleChange</animation>
-			<control type="image">
-				<texture>views/list_filter.png</texture>
-				<include>FullscreenDimensions</include>
-				<include>Animation_WindowFade200</include>
-				<animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
-			</control>
 			<control type="group">
 				<animation effect="slide" tween="cubic" easing="in" time="320" start="0,606" end="0,0">WindowOpen</animation>
 				<animation effect="slide" tween="cubic" easing="in" time="240" end="0,740">WindowClose</animation>
@@ -50,9 +44,9 @@
 							<width>1920</width>
 							<height>651</height>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<texture border="3">panel-bottom.png</texture>
-							<animation effect="fade" start="100" end="40" time="40" condition="!Skin.HasSetting(listpanelthin)">Conditional</animation>
-							<animation effect="fade" start="100" end="20" time="40" condition="Skin.HasSetting(listpanelthin)">Conditional</animation>
+							<texture border="3">panel-top2.png</texture>
+							<animation effect="fade" start="100" end="80" time="40" condition="!Skin.HasSetting(listpanelthin)">Conditional</animation>
+							<animation effect="fade" start="100" end="40" time="40" condition="Skin.HasSetting(listpanelthin)">Conditional</animation>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						</control>
 						<control type="image">
@@ -92,7 +86,7 @@
 				</control>
 				<control type="spincontrol" id="7002">
 					<posx>1815</posx>
-					<posy>525</posy>
+					<posy>555</posy>
 					<onup>Control.Move(511,-1)</onup>
 					<onleft>50</onleft>
 					<onright condition="!Skin.HasSetting(kioskmode)">9000</onright>
@@ -193,6 +187,7 @@
 						<height>60</height>
 						<align>center</align>
 						<label>$INFO[ListItem.Title]</label>
+						<textcolor>$VAR[FontColorVar]</textcolor>
 						<font>Font_Reg42_Caps</font>
 					</control>
 					<control type="label">
@@ -211,6 +206,7 @@
 						<height>38</height>
 						<aligny>top</aligny>
 						<label fallback="31006">$VAR[FanartPanelValue1Var]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -229,6 +225,7 @@
 						<height>38</height>
 						<aligny>top</aligny>
 						<label fallback="31006">$VAR[FanartPanelValue2Var]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -247,6 +244,7 @@
 						<height>38</height>
 						<aligny>top</aligny>
 						<label fallback="31006">$VAR[FanartPanelValue4Var]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 						<visible>IsEmpty(ListItem.Top250)</visible>
 					</control>
@@ -277,6 +275,7 @@
 						<height>38</height>
 						<aligny>top</aligny>
 						<label fallback="31006">$VAR[FanartPanelValue5Var]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -295,6 +294,7 @@
 						<height>38</height>
 						<aligny>top</aligny>
 						<label fallback="31006">$VAR[FanartPanelValue6Var]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="textbox">
@@ -303,6 +303,7 @@
 						<width>405</width>
 						<height>367</height>
 						<label>$VAR[GlobalPlotVar]</label>
+						<textcolor>grey</textcolor>
 						<font>Font_Reg30_2</font>
 						<pagecontrol>7002</pagecontrol>
 						<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
@@ -346,6 +347,7 @@
 							<width>420</width>
 							<height>20</height>
 							<label fallback="31006">$VAR[FanartPanelValue1Var]</label>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -363,6 +365,7 @@
 							<width>420</width>
 							<height>20</height>
 							<label fallback="31006">$VAR[FanartPanelValue2Var]</label>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -380,6 +383,7 @@
 							<width>420</width>
 							<height>20</height>
 							<label fallback="31006">$VAR[LowListInfoValue3]</label>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -397,6 +401,7 @@
 							<width>420</width>
 							<height>20</height>
 							<label fallback="31006">$VAR[LowListInfoValue5]</label>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -414,6 +419,7 @@
 							<width>420</width>
 							<height>20</height>
 							<label fallback="31006">$VAR[LowListInfoValue4]</label>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -425,6 +431,7 @@
 							<width>633</width>
 							<height>237</height>
 							<label>$VAR[GlobalPlotVar]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg30</font>
 							<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 							<visible>Skin.HasSetting(nohighlist)</visible>
@@ -435,6 +442,7 @@
 							<width>633</width>
 							<height>196</height>
 							<label>$VAR[GlobalPlotVar]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg30_2</font>
 							<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 							<visible>Skin.HasSetting(LowListPlotOnly) + !Skin.HasSetting(nohighlist)</visible>
@@ -445,6 +453,7 @@
 							<width>633</width>
 							<height>399</height>
 							<label>$VAR[GlobalPlotVar]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg30_2</font>
 							<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 							<visible>!Skin.HasSetting(LowListPlotOnly) + !Skin.HasSetting(nohighlist)</visible>
@@ -605,6 +614,7 @@
 						<height>66</height>
 						<label>$INFO[ListItem.Label]</label>
 						<font>Font_Bold28_Caps</font>
+						<textcolor>grey</textcolor>
 					</control>
 					<control type="label">
 						<posx>710</posx>
@@ -613,6 +623,7 @@
 						<align>center</align>
 						<label>$INFO[ListItem.Rating]</label>
 						<font>Font_Bold28</font>
+						<textcolor>$VAR[FontColorVar]</textcolor>
 					</control>
 					<control type="image">
 						<posx>750</posx>
@@ -620,7 +631,7 @@
 						<width>52</width>
 						<height>52</height>
 						<texture>$VAR[WatchedIconVar]</texture>
-						<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+						<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 					</control>
 				</itemlayout>
 				<focusedlayout height="66" width="825" condition="![Skin.HasSetting(lowlistbanner) + Container.Content(tvshows)]">
@@ -634,7 +645,7 @@
 					<control type="image">
 						<width>814</width>
 						<height>66</height>
-						<texture border="3">list-focus.png</texture>
+						<texture border="3,0,0,20">list-focus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<include>PanelGlowFade</include>
 						<animation effect="fade" start="100" end="60" tween="sine" easing="inout" time="240" condition="!Control.HasFocus(511)">Conditional</animation>
@@ -697,6 +708,7 @@
 							<height>146</height>
 							<align>center</align>
 							<label>$INFO[ListItem.Label]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Bold40</font>
 						</control>
 						<control type="image">

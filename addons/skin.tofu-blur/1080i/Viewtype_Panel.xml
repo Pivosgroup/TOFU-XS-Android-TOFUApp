@@ -116,6 +116,7 @@
 						<posy>-45</posy>
 						<width>800</width>
 						<label>$INFO[ListItem.Label]</label>
+						<textcolor>$VAR[FontColorVar]</textcolor>
 						<font>Font_ShowcaseMainLabel2_Caps</font>
 						<scroll>true</scroll>
 					</control>
@@ -127,6 +128,7 @@
 							<width min="50" max="800">auto</width>
 							<aligny>bottom</aligny>
 							<label>$INFO[ListItem.Tagline]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg29</font>
 							<scroll>true</scroll>
 						</control>
@@ -147,6 +149,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[ListItem.Genre]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg32</font>
 							<scroll>true</scroll>
 						</control>
@@ -167,6 +170,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[ListItem.Director]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg32</font>
 							<scroll>true</scroll>
 						</control>
@@ -187,6 +191,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[ListItem.Writer]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg32</font>
 							<scroll>true</scroll>
 						</control>
@@ -207,6 +212,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[ListItem.Rating]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg32</font>
 							<scroll>true</scroll>
 						</control>
@@ -227,6 +233,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[ListItem.Year]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg32</font>
 							<scroll>true</scroll>
 						</control>
@@ -247,6 +254,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg32</font>
 							<scroll>true</scroll>
 						</control>
@@ -267,6 +275,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[ListItem.Studio]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg32</font>
 							<scroll>true</scroll>
 						</control>
@@ -287,6 +296,7 @@
 							<width>600</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[ListItem.Mpaa]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg32</font>
 							<scroll>true</scroll>
 							<wrapmultiline>true</wrapmultiline>
@@ -310,6 +320,7 @@
 					<width>1200</width>
 					<height>228</height>
 					<label>$VAR[GlobalPlotVar]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg32</font>
 					<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
@@ -333,6 +344,7 @@
 						<width>365</width>
 						<height>73</height>
 						<label>$VAR[FirstLabelVar]</label>
+						<textcolor>grey</textcolor>
 						<font>Font_Bold30_Caps</font>
 					</control>
 					<control type="label">
@@ -350,14 +362,14 @@
 						<width>42</width>
 						<height>42</height>
 						<texture>$VAR[WatchedIconVar]</texture>
-						<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+						<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 					</control>
 				</itemlayout>
 				<focusedlayout height="103" width="570" condition="![Skin.HasSetting(panellogo) + [Container.Content(movies) | Container.Content(tvshows)]]">
 					<control type="image">
 						<width>432</width>
 						<height>103</height>
-						<texture border="3">list-focus.png</texture>
+						<texture border="3,0,0,20">list-focus.png</texture>
 						<include>PanelGlowFade</include>
 						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(550)">Conditional</animation>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
@@ -392,7 +404,7 @@
 					<control type="image">
 						<width>432</width>
 						<height>174</height>
-						<texture border="3">list-focus.png</texture>
+						<texture border="3,0,0,20">list-focus.png</texture>
 						<include>PanelGlowFade</include>
 						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(550)">Conditional</animation>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>

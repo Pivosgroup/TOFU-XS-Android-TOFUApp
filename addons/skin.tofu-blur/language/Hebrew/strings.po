@@ -37,14 +37,6 @@ msgctxt "#31017"
 msgid "Live TV"
 msgstr "טלוויזיה חיה"
 
-msgctxt "#31020"
-msgid "Extras"
-msgstr "פינוקים"
-
-msgctxt "#31021"
-msgid "Search TOFU for"
-msgstr "חפש בTOFU ..."
-
 msgctxt "#31022"
 msgid "Music - Files"
 msgstr "קבצי מוזיקה"
@@ -84,10 +76,6 @@ msgstr "הפסקה"
 msgctxt "#31045"
 msgid "Entries"
 msgstr "פוסטר"
-
-msgctxt "#31053"
-msgid "Fullscreen"
-msgstr "מסך מלא"
 
 msgctxt "#31055"
 msgid "Open playlist"
@@ -133,10 +121,6 @@ msgctxt "#31072"
 msgid "System info"
 msgstr "פרטי מערכת"
 
-msgctxt "#31085"
-msgid "Light"
-msgstr "קל"
-
 msgctxt "#31095"
 msgid "Rating"
 msgstr "דירוג"
@@ -177,10 +161,6 @@ msgctxt "#31115"
 msgid "Customizer"
 msgstr "Customizer"
 
-msgctxt "#31128"
-msgid "Lyrics"
-msgstr "מילות שירים"
-
 msgctxt "#31162"
 msgid "Trailers"
 msgstr "כותרות"
@@ -188,10 +168,6 @@ msgstr "כותרות"
 msgctxt "#31175"
 msgid "Big list"
 msgstr "רשימה גדולה"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "ברירת מחדל"
 
 msgctxt "#31234"
 msgid "Wall"
@@ -305,17 +281,9 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "וידאו"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "תוכנות"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "מערכת"
-
-msgctxt "#31508"
-msgid "Shutdown"
-msgstr "כיבוי"
 
 msgctxt "#31509"
 msgid "Favorites"
@@ -336,18 +304,6 @@ msgstr "חיזוי אודיו"
 msgctxt "#31616"
 msgid "Low"
 msgstr "נמוך"
-
-msgctxt "#31617"
-msgid "High"
-msgstr "גבוה"
-
-msgctxt "#31622"
-msgid "Label"
-msgstr "חברת הפקה"
-
-msgctxt "#31629"
-msgid "Channels"
-msgstr "ערוצים"
 
 msgctxt "#31630"
 msgid "Custom"
@@ -372,14 +328,6 @@ msgstr "מוזיקה קבצים"
 msgctxt "#31889"
 msgid "Next Tracks"
 msgstr "רשימת השמעה"
-
-msgctxt "#31891"
-msgid "Folders"
-msgstr "תיקיות"
-
-msgctxt "#31892"
-msgid "Categories"
-msgstr "קטגוריות"
 
 msgctxt "#31896"
 msgid "10 Day"

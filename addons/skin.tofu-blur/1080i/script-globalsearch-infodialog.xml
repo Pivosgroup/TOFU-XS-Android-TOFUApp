@@ -20,9 +20,10 @@
 		</control>
 		<control type="label">
 			<posx>580</posx>
-			<posy>143</posy>
+			<posy>123</posy>
 			<width>1160</width>
 			<label>$INFO[Container(100).ListItem.Label]</label>
+			<textcolor>$VAR[FontColorVar]</textcolor>
 			<font>Font_Reg57_Caps</font>
 		</control>
 		<control type="image">
@@ -45,7 +46,6 @@
 					<width>894</width>
 					<height>540</height>
 					<control type="grouplist">
-						<posy>-20</posy>
 						<width>780</width>
 						<orientation>horizontal</orientation>
 						<itemgap>10</itemgap>
@@ -72,7 +72,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Genre)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -91,7 +91,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Director)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -110,7 +110,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Writer)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -129,7 +129,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Rating)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -148,7 +148,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Year)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -167,7 +167,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -186,7 +186,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Studio)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -205,7 +205,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Mpaa)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -228,7 +228,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Episode)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -247,7 +247,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Genre)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -266,7 +266,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Premiered)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -285,7 +285,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Studio)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -304,7 +304,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Rating)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -323,7 +323,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Mpaa)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -346,7 +346,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(TvShowTitle)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -365,7 +365,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Episode)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -388,7 +388,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(TvShowTitle)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -407,7 +407,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Season)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -426,7 +426,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Episode)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -445,7 +445,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Director)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -464,7 +464,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Rating)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -483,7 +483,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Premiered)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -502,7 +502,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -525,7 +525,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -544,7 +544,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Genre)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -563,7 +563,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Album)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -582,7 +582,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Director)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -601,7 +601,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Year)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -620,7 +620,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Studio)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -639,7 +639,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -658,7 +658,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Studio)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -681,7 +681,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Born)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -700,7 +700,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Died)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -719,7 +719,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Formed)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -738,7 +738,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Disbanded)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -757,7 +757,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_YearsActive)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -776,7 +776,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Genre)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -795,7 +795,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Mood)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -814,7 +814,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Style)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -837,7 +837,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -856,7 +856,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Genre)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -875,7 +875,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Year)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -894,7 +894,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Album_Label)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -913,7 +913,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Album_Type)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -932,7 +932,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Album_Style)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -951,7 +951,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Album_Mood)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -989,7 +989,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Album_Theme)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -1012,7 +1012,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -1031,7 +1031,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Album)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -1050,7 +1050,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Genre)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -1069,7 +1069,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Track)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -1088,7 +1088,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Duration)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -1107,7 +1107,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Year)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -1126,7 +1126,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Playcount)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -1164,7 +1164,7 @@
 							<width min="50" max="720">auto</width>
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Container(100).ListItem.Property(Path)]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -1214,7 +1214,7 @@
 				<posy>397</posy>
 				<width>1160</width>
 				<height>260</height>
-				<label>$INFO[Container(100).ListItem.Property(Plot),$LOCALIZE[207]: [COLOR white],[/COLOR]]</label>
+				<label>$INFO[Container(100).ListItem.Property(Plot),$LOCALIZE[207]: [COLOR grey],[/COLOR]]</label>
 				<textcolor>$VAR[FontColorVar]</textcolor>
 				<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 				<visible>Control.IsVisible(110) | Control.IsVisible(120) | Control.IsVisible(150)</visible>
@@ -1223,7 +1223,7 @@
 				<posy>307</posy>
 				<width>1160</width>
 				<height>338</height>
-				<label>$INFO[Container(100).ListItem.Property(Plot),$LOCALIZE[207]: [COLOR white],[/COLOR]]</label>
+				<label>$INFO[Container(100).ListItem.Property(Plot),$LOCALIZE[207]: [COLOR grey],[/COLOR]]</label>
 				<textcolor>$VAR[FontColorVar]</textcolor>
 				<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 				<visible>Control.IsVisible(140)</visible>
@@ -1232,7 +1232,7 @@
 				<posy>396</posy>
 				<width>1160</width>
 				<height>338</height>
-				<label>$INFO[Container(100).ListItem.Property(Artist_Description),$LOCALIZE[207]: [COLOR white],[/COLOR]]</label>
+				<label>$INFO[Container(100).ListItem.Property(Artist_Description),$LOCALIZE[207]: [COLOR grey],[/COLOR]]</label>
 				<textcolor>$VAR[FontColorVar]</textcolor>
 				<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 				<visible>Control.IsVisible(160)</visible>
@@ -1241,7 +1241,7 @@
 				<posy>396</posy>
 				<width>1160</width>
 				<height>338</height>
-				<label>$INFO[Container(100).ListItem.Property(Comment),$LOCALIZE[569]: [COLOR white],[/COLOR]]</label>
+				<label>$INFO[Container(100).ListItem.Property(Comment),$LOCALIZE[569]: [COLOR grey],[/COLOR]]</label>
 				<textcolor>$VAR[FontColorVar]</textcolor>
 				<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 				<visible>Control.IsVisible(180)</visible>
@@ -1250,7 +1250,7 @@
 				<posy>396</posy>
 				<width>1160</width>
 				<height>338</height>
-				<label>$INFO[Container(100).ListItem.Property(Album_Description),$LOCALIZE[183]: [COLOR white],[/COLOR]]</label>
+				<label>$INFO[Container(100).ListItem.Property(Album_Description),$LOCALIZE[183]: [COLOR grey],[/COLOR]]</label>
 				<textcolor>$VAR[FontColorVar]</textcolor>
 				<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 				<visible>Control.IsVisible(170)</visible>
@@ -1269,9 +1269,10 @@
 			<control type="button" id="191">
 				<width>434</width>
 				<height>74</height>
+				<textcolor>grey</textcolor>
 				<textoffsetx>20</textoffsetx>
 				<textoffsety>18</textoffsety>
-				<texturefocus border="3">list-focus.png</texturefocus>
+				<texturefocus border="3">button-focus.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<label>$LOCALIZE[186]</label>
 				<font>Font_Bold34</font>white
@@ -1280,9 +1281,10 @@
 			<control type="button" id="192">
 				<width>434</width>
 				<height>74</height>
+				<textcolor>grey</textcolor>
 				<textoffsetx>20</textoffsetx>
 				<textoffsety>18</textoffsety>
-				<texturefocus border="3">list-focus.png</texturefocus>
+				<texturefocus border="3">button-focus.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<label>-</label>
 				<font>Font_Bold34</font>white
@@ -1291,9 +1293,10 @@
 			<control type="button" id="193">
 				<width>434</width>
 				<height>74</height>
+				<textcolor>grey</textcolor>
 				<textoffsetx>20</textoffsetx>
 				<textoffsety>18</textoffsety>
-				<texturefocus border="3">list-focus.png</texturefocus>
+				<texturefocus border="3">button-focus.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<label>-</label>
 				<font>Font_Bold34</font>white

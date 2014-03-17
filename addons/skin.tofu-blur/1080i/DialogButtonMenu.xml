@@ -30,8 +30,8 @@
 				<align>center</align>
 				<onleft>800</onleft>
 				<onright>800</onright>
-				<onup>800</onup>
-				<ondown>800</ondown>
+				<onup>8</onup>
+				<ondown>1</ondown>
 				<orientation>vertical</orientation>
 				<control type="image" id="991">
 					<posx>0</posx>
@@ -43,18 +43,21 @@
 				</control>
 				<control type="button" id="1">
 					<label>$LOCALIZE[13012]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<include>Objects_ShutdownMenuButton</include>
 					<onclick>Quit()</onclick>
 					<visible>System.ShowExitButton</visible>
 				</control>
 				<control type="button" id="2">
 					<label>$LOCALIZE[13005]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<include>Objects_ShutdownMenuButton</include>
 					<onclick>Powerdown()</onclick>
 					<visible>System.CanPowerDown</visible>
 				</control>
 				<control type="button" id="3">
 					<label>$LOCALIZE[31899]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<include>Objects_ShutdownMenuButton</include>
 					<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
 					<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
@@ -62,30 +65,35 @@
 				</control>
 				<control type="button" id="15">
 					<label>$LOCALIZE[31428] [B]$INFO[System.Alarmpos][/B]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<include>Objects_ShutdownMenuButton</include>
 					<onclick>CancelAlarm(shutdowntimer)</onclick>
 					<visible>System.HasAlarm(shutdowntimer)</visible>
 				</control>
 				<control type="button" id="5">
 					<label>$LOCALIZE[13011]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<include>Objects_ShutdownMenuButton</include>
 					<onclick>Suspend()</onclick>
 					<visible>System.CanSuspend</visible>
 				</control>
 				<control type="button" id="10">
 					<label>$LOCALIZE[13010]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<include>Objects_ShutdownMenuButton</include>
 					<onclick>Hibernate()</onclick>
 					<visible>System.CanHibernate</visible>
 				</control>
 				<control type="button" id="6">
 					<label>$LOCALIZE[13013]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<include>Objects_ShutdownMenuButton</include>
 					<onclick>Reset()</onclick>
 					<visible>System.CanReboot</visible>
 				</control>
 				<control type="button" id="7">
 					<label>$INFO[system.profilename,$LOCALIZE[20126] ]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<include>Objects_ShutdownMenuButton</include>
 					<onclick>Dialog.Close(all,true)</onclick>
 					<onclick>System.LogOff</onclick>
@@ -95,6 +103,7 @@
 				<control type="togglebutton" id="8">
 					<label>$LOCALIZE[20046]</label>
 					<altlabel>$LOCALIZE[20045]</altlabel>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<include>Objects_ShutdownMenuButton</include>
 					<onclick>xbmc.mastermode</onclick>
 					<usealttexture>!System.IsMaster</usealttexture>
@@ -122,51 +131,92 @@
 					<height>63</height>
 					<aspectratio aligny="top">scale</aspectratio>
 					<texture>BigIcons/exit.png</texture>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(1)">Conditional</animation>
-					<visible>System.ShowExitButton</visible>
+					<visible>System.ShowExitButton + Control.HasFocus(1)</visible>
+				</control>
+				<control type="image">
+					<width>63</width>
+					<height>63</height>
+					<aspectratio aligny="top">scale</aspectratio>
+					<texture>BigIcons/exit.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<visible>System.ShowExitButton + !Control.HasFocus(1)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Power.png</texture>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(2)">Conditional</animation>
 					<include>Objects_ShutdownMenuIcon</include>
-					<visible>System.CanPowerDown</visible>
+					<visible>System.CanPowerDown + Control.HasFocus(2)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Power.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>Objects_ShutdownMenuIcon</include>
+					<visible>System.CanPowerDown + !Control.HasFocus(2)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/AlarmClock.png</texture>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(3) + !Control.HasFocus(15)">Conditional</animation>
 					<include>Objects_ShutdownMenuIcon</include>
-					<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
+					<visible>[System.CanPowerDown | System.CanSuspend | System.CanHibernate] + [Control.HasFocus(3) | Control.HasFocus(15)]</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/AlarmClock.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>Objects_ShutdownMenuIcon</include>
+					<visible>[System.CanPowerDown | System.CanSuspend | System.CanHibernate] + ![Control.HasFocus(3) | Control.HasFocus(15)]</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Battery.png</texture>
 					<include>Objects_ShutdownMenuIcon</include>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(10) + !Control.HasFocus(5)">Conditional</animation>
-					<visible>System.CanSuspend</visible>
+					<visible>System.CanSuspend + [Control.HasFocus(10) | Control.HasFocus(5)]</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Battery.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>Objects_ShutdownMenuIcon</include>
+					<visible>System.CanSuspend + ![Control.HasFocus(10) | Control.HasFocus(5)]</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Battery.png</texture>
 					<include>Objects_ShutdownMenuIcon</include>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(10) + !Control.HasFocus(5)">Conditional</animation>
-					<visible>System.CanHibernate</visible>
+					<visible>System.CanHibernate + [Control.HasFocus(10) | Control.HasFocus(5)]</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Battery.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>Objects_ShutdownMenuIcon</include>
+					<visible>System.CanHibernate + ![Control.HasFocus(10) | Control.HasFocus(5)]</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/pre.png</texture>
 					<include>Objects_ShutdownMenuIcon</include>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(6)">Conditional</animation>
-					<visible>System.CanReboot</visible>
+					<visible>System.CanReboot + Control.HasFocus(6)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/pre.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>Objects_ShutdownMenuIcon</include>
+					<visible>System.CanReboot + !Control.HasFocus(6)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Lock.png</texture>
 					<include>Objects_ShutdownMenuIcon</include>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(7)">Conditional</animation>
-					<visible>System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)</visible>
-					<visible>System.Loggedon</visible>
+					<visible>[System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)] + System.Loggedon + Control.HasFocus(7)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Lock.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>Objects_ShutdownMenuIcon</include>
+					<visible>[System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)] + System.Loggedon + !Control.HasFocus(7)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Key.png</texture>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(8)">Conditional</animation>
 					<include>Objects_ShutdownMenuIcon</include>
-					<visible>System.HasLocks</visible>
+					<visible>System.HasLocks + Control.HasFocus(8)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Key.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>Objects_ShutdownMenuIcon</include>
+					<visible>System.HasLocks + !Control.HasFocus(8)</visible>
 				</control>
 			</control>
 		</control>

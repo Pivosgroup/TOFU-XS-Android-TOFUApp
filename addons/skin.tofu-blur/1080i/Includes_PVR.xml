@@ -14,7 +14,7 @@
 				<control type="image">
 					<width>804</width>
 					<height>100</height>
-					<texture>common/black.png</texture>
+					<texture>common/white.png</texture>
 					<animation effect="fade" end="60" condition="true">conditional</animation>
 				</control>
 				<control type="label">
@@ -34,6 +34,7 @@
 					<height>30</height>
 					<align>center</align>
 					<label>$LOCALIZE[19031]: $INFO[Container(11).ListItem.NextTitle]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Reg26</font>
 					<scroll>yes</scroll>
 					<visible>!IsEmpty(Container(11).ListItem.NextTitle)</visible>
@@ -44,6 +45,7 @@
 					<width>100</width>
 					<height>30</height>
 					<label>$INFO[Container(11).ListItem.StartTime]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Reg25</font>
 					<visible>Container(11).ListItem.HasEpg</visible>
 				</control>
@@ -54,7 +56,7 @@
 					<height>21</height>
 					<texturebg border="12,0,12,0">dialogs/progress/progress_back.png</texturebg>
 					<lefttexture border="12,0,0,0">-</lefttexture>
-					<midtexture border="12,0,12,0" colordiffuse="$VAR[DefaultColorVar]">dialogs/progress/progress_mid.png</midtexture>
+					<midtexture border="12,0,12,0" colordiffuse="$VAR[FontColorVar]">dialogs/progress/progress_mid.png</midtexture>
 					<righttexture border="0,0,12,0">-</righttexture>
 					<visible>Container(11).ListItem.HasEpg</visible>
 					<info>Container(11).ListItem.Progress</info>
@@ -66,6 +68,7 @@
 					<height>30</height>
 					<align>right</align>
 					<label>$INFO[Container(11).ListItem.EndTime]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Reg25</font>
 					<visible>Container(11).ListItem.HasEpg</visible>
 				</control>
@@ -80,6 +83,7 @@
 					<width>800</width>
 					<height>340</height>
 					<label>$INFO[Container(11).ListItem.Plot]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg30_2</font>
 					<autoscroll time="5000" delay="2000" repeat="5000">true</autoscroll>
 				</control>
@@ -103,7 +107,7 @@
 				<control type="image">
 					<width>804</width>
 					<height>100</height>
-					<texture>common/darkgrey.png</texture>
+					<texture>common/white.png</texture>
 					<animation effect="fade" end="60" condition="true">conditional</animation>
 				</control>
 				<control type="label">
@@ -123,6 +127,7 @@
 					<height>30</height>
 					<align>center</align>
 					<label>$LOCALIZE[19031]: $INFO[Container(12).ListItem.NextTitle]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Reg26</font>
 					<scroll>yes</scroll>
 					<visible>!IsEmpty(Container(12).ListItem.NextTitle)</visible>
@@ -133,6 +138,7 @@
 					<width>100</width>
 					<height>30</height>
 					<label>$INFO[Container(12).ListItem.StartTime]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Reg25</font>
 					<visible>Container(12).ListItem.HasEpg</visible>
 				</control>
@@ -143,7 +149,7 @@
 					<height>21</height>
 					<texturebg border="12,0,12,0">dialogs/progress/progress_back.png</texturebg>
 					<lefttexture border="12,0,0,0">-</lefttexture>
-					<midtexture border="12,0,12,0" colordiffuse="$VAR[DefaultColorVar]">dialogs/progress/progress_mid.png</midtexture>
+					<midtexture border="12,0,12,0" colordiffuse="$VAR[FontColorVar]">dialogs/progress/progress_mid.png</midtexture>
 					<righttexture border="0,0,12,0">-</righttexture>
 					<visible>Container(12).ListItem.HasEpg</visible>
 					<info>Container(12).ListItem.Progress</info>
@@ -155,6 +161,7 @@
 					<height>30</height>
 					<align>right</align>
 					<label>$INFO[Container(12).ListItem.EndTime]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Reg25</font>
 					<visible>Container(12).ListItem.HasEpg</visible>
 				</control>
@@ -169,6 +176,7 @@
 					<width>800</width>
 					<height>340</height>
 					<label>$INFO[Container(12).ListItem.Plot]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg30_2</font>
 					<autoscroll time="5000" delay="2000" repeat="5000">true</autoscroll>
 				</control>
@@ -217,6 +225,7 @@
 				<height>45</height>
 				<align>center</align>
 				<label>$INFO[ListItem.ChannelNumber]</label>
+				<textcolor>grey</textcolor>
 				<font>Font_Bold19_Caps</font>
 			</control>
 			<control type="image">
@@ -242,6 +251,7 @@
 				<width>720</width>
 				<height>40</height>
 				<label>$INFO[ListItem.Label]</label>
+				<textcolor>grey</textcolor>
 				<font>Font_Bold33</font>
 				<animation effect="slide" end="0,30" condition="!ListItem.HasEpg">Conditional</animation>
 			</control>
@@ -262,6 +272,7 @@
 					<width>120</width>
 					<height>40</height>
 					<label>$INFO[ListItem.StartTime]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg25</font>
 				</control>
 				<control type="progress">
@@ -271,7 +282,7 @@
 					<height>15</height>
 					<texturebg border="12,0,12,0">dialogs/progress/progress_back.png</texturebg>
 					<lefttexture border="12,0,0,0">-</lefttexture>
-					<midtexture border="12,0,12,0" colordiffuse="$VAR[DefaultColorVar]">dialogs/progress/progress_mid.png</midtexture>
+					<midtexture border="12,0,12,0" colordiffuse="$VAR[FontColorVar]">dialogs/progress/progress_mid.png</midtexture>
 					<righttexture border="0,0,12,0">-</righttexture>
 					<info>ListItem.Progress</info>
 				</control>
@@ -281,6 +292,7 @@
 					<width>120</width>
 					<height>40</height>
 					<label>$INFO[ListItem.EndTime]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg25</font>
 				</control>
 			</control>
@@ -296,7 +308,7 @@
 			<control type="image">
 				<width>923</width>
 				<height>103</height>
-				<texture border="3">list-focus.png</texture>
+				<texture border="3,0,0,20">list-focus.png</texture>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				<animation effect="fade" start="100" end="50" time="40" condition="Control.IsVisible(10) + !Control.HasFocus(10)">Conditional</animation>
 				<animation effect="fade" start="100" end="50" time="40" condition="Control.IsVisible(11) + !Control.HasFocus(11)">Conditional</animation>
@@ -345,7 +357,6 @@
 					<height>22</height>
 					<label>$INFO[ListItem.Title]</label>
 					<font>Font_Reg30_2</font>
-					<textcolor>$VAR[FontColorVar]</textcolor>
 				</control>
 				<control type="label">
 					<posx>170</posx>
@@ -362,7 +373,7 @@
 					<height>15</height>
 					<texturebg border="12,0,12,0">dialogs/progress/progress_back.png</texturebg>
 					<lefttexture border="12,0,0,0">-</lefttexture>
-					<midtexture border="12,0,12,0" colordiffuse="$VAR[DefaultColorVar]">dialogs/progress/progress_mid.png</midtexture>
+					<midtexture border="12,0,12,0" colordiffuse="$VAR[FontColorVar]">dialogs/progress/progress_mid.png</midtexture>
 					<righttexture border="0,0,12,0">-</righttexture>
 					<info>ListItem.Progress</info>
 				</control>
@@ -392,6 +403,7 @@
 				<align>center</align>
 				<font>Font_Bold19_Caps</font>
 				<info>ListItem.ChannelNumber</info>
+				<textcolor>grey</textcolor>
 			</control>
 			<control type="image">
 				<posx>58</posx>
@@ -416,7 +428,7 @@
 				<posy>12</posy>
 				<width>460</width>
 				<height>40</height>
-				<label>[B][COLOR white]$INFO[ListItem.Label][/COLOR][/B]$INFO[ListItem.Title, - ]</label>
+				<label>[B][COLOR grey]$INFO[ListItem.Label][/COLOR][/B]$INFO[ListItem.Title, - ]</label>
 				<font>Font_Reg32</font>
 				<textcolor>$VAR[FontColorVar]</textcolor>
 			</control>
@@ -426,6 +438,7 @@
 				<width>120</width>
 				<height>40</height>
 				<label>$INFO[ListItem.StartTime]</label>
+				<textcolor>grey</textcolor>
 				<font>Font_Reg26</font>
 				<visible>ListItem.HasEpg</visible>
 			</control>
@@ -443,6 +456,7 @@
 				<width>120</width>
 				<height>40</height>
 				<label>$INFO[ListItem.EndTime]</label>
+				<textcolor>grey</textcolor>
 				<font>Font_Reg26</font>
 				<visible>ListItem.HasEpg</visible>
 			</control>
@@ -459,7 +473,7 @@
 				<posy>9</posy>
 				<width>923</width>
 				<height>54</height>
-				<texture border="3">list-focus.png</texture>
+				<texture border="3,0,0,20">list-focus.png</texture>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			</control>
 			<control type="label">
@@ -496,7 +510,6 @@
 				<height>40</height>
 				<label>[B][COLOR white]$INFO[ListItem.Label][/COLOR][/B]$INFO[ListItem.Title, - ]</label>
 				<font>Font_Reg32</font>
-				<textcolor>$VAR[FontColorVar]</textcolor>
 			</control>
 			<control type="label">
 				<posx>590</posx>
@@ -539,7 +552,7 @@
 				<control type="image">
 					<width>804</width>
 					<height>80</height>
-					<texture>common/black.png</texture>
+					<texture>common/white.png</texture>
 					<animation effect="fade" end="60" condition="true">conditional</animation>
 				</control>
 				<control type="label">
@@ -560,6 +573,7 @@
 					<height>30</height>
 					<align>center</align>
 					<label>$INFO[Container(13).ListItem.StartDate] - $INFO[Container(13).ListItem.StartTime]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Reg25</font>
 					<visible>Container(13).ListItem.HasEpg</visible>
 				</control>
@@ -574,6 +588,7 @@
 					<width>800</width>
 					<height>340</height>
 					<label>$INFO[Container(13).ListItem.Plot]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg30_2</font>
 					<autoscroll time="5000" delay="2000" repeat="5000">true</autoscroll>
 				</control>
@@ -610,6 +625,7 @@
 						<width>550</width>
 						<height>38</height>
 						<label>[B]$INFO[ListItem.ChannelName][/B]</label>
+						<textcolor>grey</textcolor>
 						<font>Font_Reg32</font>
 					</control>
 					<control type="label">
@@ -626,6 +642,7 @@
 						<width>550</width>
 						<height>30</height>
 						<label>$INFO[ListItem.StartDate] - $INFO[ListItem.StartTime]</label>
+						<textcolor>grey</textcolor>
 						<font>Font_Reg25</font>
 						<visible>!IsEmpty(ListItem.StartDate) + !IsEmpty(ListItem.StartTime)</visible>
 					</control>
@@ -641,7 +658,7 @@
 					<control type="image">
 						<width>923</width>
 						<height>103</height>
-						<texture border="3">list-focus.png</texture>
+						<texture border="3,0,0,20">list-focus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<animation effect="fade" start="100" end="50" time="40" condition="Control.IsVisible(13) + !Control.HasFocus(13)">Conditional</animation>
 					</control>
@@ -666,7 +683,6 @@
 						<width>550</width>
 						<height>30</height>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>$VAR[FontColorVar]</textcolor>
 					</control>
 					<control type="label">
 						<posx>130</posx>
@@ -700,7 +716,7 @@
 						<posy>12</posy>
 						<width>550</width>
 						<height>40</height>
-						<label>[B][COLOR white]$INFO[ListItem.Label][/COLOR][/B]$INFO[ListItem.Title, - ]</label>
+						<label>[B][COLOR grey]$INFO[ListItem.Label][/COLOR][/B]$INFO[ListItem.Title, - ]</label>
 						<font>Font_Reg32</font>
 						<textcolor>$VAR[FontColorVar]</textcolor>
 					</control>
@@ -726,7 +742,7 @@
 						<posy>9</posy>
 						<width>923</width>
 						<height>54</height>
-						<texture border="3">list-focus.png</texture>
+						<texture border="3,0,0,20">list-focus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
 					<control type="image">
@@ -745,7 +761,6 @@
 						<height>40</height>
 						<label>[B][COLOR white]$INFO[ListItem.Label][/COLOR][/B]$INFO[ListItem.Title, - ]</label>
 						<font>Font_Reg32</font>
-						<textcolor>$VAR[FontColorVar]</textcolor>
 					</control>
 					<control type="label">
 						<posx>630</posx>
@@ -794,6 +809,7 @@
 						<height>45</height>
 						<textoffsetx>10</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
+						<textcolor>grey</textcolor>
 						<font>Font_Reg29</font>
 					</control>
 				</rulerlayout>
@@ -817,6 +833,7 @@
 						<textoffsetx>10</textoffsetx>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.ChannelName]</label>
+						<textcolor>grey</textcolor>
 						<font>Font_Reg32</font>
 						<visible>IsEmpty(ListItem.Icon)</visible>
 					</control>
@@ -900,7 +917,7 @@
 						<posy>0</posy>
 						<width>60</width>
 						<height>80</height>
-						<texture border="3">list-focus.png</texture>
+						<texture border="3">button-focus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
 					<control type="image" id="2">
@@ -1004,9 +1021,10 @@
 						<posx>6</posx>
 						<posy>-10</posy>
 						<width>1430</width>
-						<height>135</height>
+						<height>155</height>
 						<align>justify</align>
 						<label>$INFO[ListItem.Plot]</label>
+						<textcolor>grey</textcolor>
 						<font>Font_Reg29</font>
 						<pagecontrol>-</pagecontrol>
 						<autoscroll time="4000" delay="5000" repeat="5000">true</autoscroll>
@@ -1028,6 +1046,7 @@
 					<width>330</width>
 					<height>30</height>
 					<label>19029</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Bold34_Caps</font>
 				</control>
 				<control type="label">
@@ -1036,6 +1055,7 @@
 					<width>450</width>
 					<height>30</height>
 					<label>369</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Bold34_Caps</font>
 				</control>
 				<control type="label">
@@ -1044,6 +1064,7 @@
 					<width>450</width>
 					<height>30</height>
 					<label>31009</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Bold34_Caps</font>
 				</control>
 				<control type="label">
@@ -1052,6 +1073,7 @@
 					<width>225</width>
 					<height>30</height>
 					<label>126</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Bold34_Caps</font>
 				</control>
 				<control type="image">
@@ -1094,6 +1116,7 @@
 								<width>285</width>
 								<height>52</height>
 								<font>Font_Reg32</font>
+								<textcolor>grey</textcolor>
 								<info>ListItem.Label</info>
 							</control>
 						</control>
@@ -1113,6 +1136,7 @@
 								<height>52</height>
 								<font>Font_Reg32</font>
 								<info>ListItem.ChannelName</info>
+								<textcolor>grey</textcolor>
 							</control>
 							<control type="label">
 								<posx>378</posx>
@@ -1128,6 +1152,7 @@
 								<height>52</height>
 								<font>Font_Reg32</font>
 								<info>ListItem.Date</info>
+								<textcolor>grey</textcolor>
 							</control>
 							<control type="label">
 								<posx>1400</posx>
@@ -1151,7 +1176,7 @@
 							<posx>0</posx>
 							<width>1665</width>
 							<height>59</height>
-							<texture border="3">list-focus.png</texture>
+							<texture border="3,0,0,20">list-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						</control>
 						<control type="group">
@@ -1194,7 +1219,6 @@
 								<width>500</width>
 								<height>52</height>
 								<font>Font_Reg32</font>
-								<textcolor>$VAR[FontColorVar]</textcolor>
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
@@ -1209,7 +1233,6 @@
 								<width>255</width>
 								<height>52</height>
 								<font>Font_Reg32</font>
-								<textcolor>$VAR[FontColorVar]</textcolor>
 								<info>ListItem.Comment</info>
 							</control>
 						</control>
@@ -1252,6 +1275,7 @@
 					<width>330</width>
 					<height>30</height>
 					<label>19029</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Bold34_Caps</font>
 				</control>
 				<control type="label">
@@ -1260,6 +1284,7 @@
 					<width>450</width>
 					<height>30</height>
 					<label>369</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Bold34_Caps</font>
 				</control>
 				<control type="label">
@@ -1268,6 +1293,7 @@
 					<width>450</width>
 					<height>30</height>
 					<label>31009</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Bold34_Caps</font>
 				</control>
 				<control type="label">
@@ -1276,6 +1302,7 @@
 					<width>225</width>
 					<height>30</height>
 					<label>126</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Bold34_Caps</font>
 				</control>
 				<control type="image">
@@ -1319,6 +1346,7 @@
 								<height>52</height>
 								<font>Font_Reg32</font>
 								<info>ListItem.Label</info>
+								<textcolor>grey</textcolor>
 							</control>
 						</control>
 						<control type="group">
@@ -1345,6 +1373,7 @@
 								<height>52</height>
 								<font>Font_Reg32</font>
 								<info>ListItem.Label</info>
+								<textcolor>grey</textcolor>
 							</control>
 							<control type="label">
 								<posx>880</posx>
@@ -1352,6 +1381,7 @@
 								<height>52</height>
 								<font>Font_Reg32</font>
 								<info>ListItem.Date</info>
+								<textcolor>grey</textcolor>
 							</control>
 							<control type="image">
 								<posx>1598</posx>
@@ -1367,6 +1397,7 @@
 								<height>52</height>
 								<label>19043</label>
 								<font>Font_Reg32</font>
+								<textcolor>grey</textcolor>
 								<visible>ListItem.IsRecording</visible>
 							</control>
 							<control type="image">
@@ -1383,6 +1414,7 @@
 								<height>52</height>
 								<label>31015</label>
 								<font>Font_Reg32</font>
+								<textcolor>grey</textcolor>
 								<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 							</control>
 						</control>
@@ -1399,7 +1431,7 @@
 							<posx>0</posx>
 							<width>1665</width>
 							<height>59</height>
-							<texture border="3">list-focus.png</texture>
+							<texture border="3,0,0,20">list-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						</control>
 						<control type="group">
@@ -1435,7 +1467,6 @@
 								<width>285</width>
 								<height>52</height>
 								<font>Font_Reg32</font>
-								<textcolor>$VAR[FontColorVar]</textcolor>
 								<info>ListItem.ChannelName</info>
 							</control>
 							<control type="label">
@@ -1512,6 +1543,7 @@
 					<width>300</width>
 					<height>30</height>
 					<label>555</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Bold34_Caps</font>
 				</control>
 				<control type="label">
@@ -1520,6 +1552,7 @@
 					<width>825</width>
 					<height>30</height>
 					<label>369</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Bold34_Caps</font>
 				</control>
 				<control type="label">
@@ -1528,6 +1561,7 @@
 					<width>210</width>
 					<height>30</height>
 					<label>126</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Bold34_Caps</font>
 				</control>
 				<control type="image">
@@ -1560,6 +1594,7 @@
 							<width>300</width>
 							<height>52</height>
 							<label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg32</font>
 						</control>
 						<control type="label">
@@ -1584,6 +1619,7 @@
 							<width>200</width>
 							<height>60</height>
 							<label>31111</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg32</font>
 							<visible>ListItem.IsRecording</visible>
 						</control>
@@ -1600,6 +1636,7 @@
 							<width>200</width>
 							<height>60</height>
 							<label>31104</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg32</font>
 							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
@@ -1616,7 +1653,7 @@
 							<posx>0</posx>
 							<width>1665</width>
 							<height>59</height>
-							<texture border="3">list-focus.png</texture>
+							<texture border="3,0,0,20">list-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						</control>
 						<control type="label">
@@ -1631,7 +1668,6 @@
 							<width>825</width>
 							<height>52</height>
 							<font>Font_Reg32</font>
-							<textcolor>$VAR[FontColorVar]</textcolor>
 							<info>ListItem.Label</info>
 						</control>
 						<control type="textbox">
@@ -1641,7 +1677,6 @@
 							<height>200</height>
 							<label>$INFO[ListItem.Plot]</label>
 							<font>Font_Reg32</font>
-							<textcolor>$VAR[FontColorVar]</textcolor>
 						</control>
 						<control type="image">
 							<posx>1400</posx>
@@ -1703,6 +1738,7 @@
 					<width>375</width>
 					<height>30</height>
 					<label>19148</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Bold34_Caps</font>
 				</control>
 				<control type="label">
@@ -1711,6 +1747,7 @@
 					<width>300</width>
 					<height>30</height>
 					<label>555</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Bold34_Caps</font>
 				</control>
 				<control type="label">
@@ -1719,6 +1756,7 @@
 					<width>825</width>
 					<height>30</height>
 					<label>369</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Bold34_Caps</font>
 				</control>
 				<control type="label">
@@ -1727,6 +1765,7 @@
 					<width>210</width>
 					<height>30</height>
 					<label>126</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Bold34_Caps</font>
 				</control>
 				<control type="image">
@@ -1768,12 +1807,14 @@
 							<height>52</height>
 							<font>Font_Reg32</font>
 							<info>ListItem.ChannelName</info>
+							<textcolor>grey</textcolor>
 						</control>
 						<control type="label">
 							<posx>378</posx>
 							<width>300</width>
 							<height>52</height>
 							<label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg32</font>
 						</control>
 						<control type="label">
@@ -1799,6 +1840,7 @@
 							<height>60</height>
 							<label>31111</label>
 							<font>Font_Reg32</font>
+							<textcolor>grey</textcolor>
 							<visible>ListItem.IsRecording</visible>
 						</control>
 						<control type="image">
@@ -1815,6 +1857,7 @@
 							<height>60</height>
 							<label>31104</label>
 							<font>Font_Reg32</font>
+							<textcolor>grey</textcolor>
 							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
 					</itemlayout>
@@ -1830,7 +1873,7 @@
 							<posx>0</posx>
 							<width>1665</width>
 							<height>59</height>
-							<texture border="3">list-focus.png</texture>
+							<texture border="3,0,0,20">list-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						</control>
 						<control type="image">
@@ -1860,7 +1903,6 @@
 							<width>825</width>
 							<height>52</height>
 							<font>Font_Reg32</font>
-							<textcolor>$VAR[FontColorVar]</textcolor>
 							<info>ListItem.Label</info>
 						</control>
 						<control type="textbox">
@@ -1869,6 +1911,7 @@
 							<width>1540</width>
 							<height>196</height>
 							<label>$INFO[ListItem.Plot]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg32</font>
 						</control>
 						<control type="image">
@@ -1964,6 +2007,7 @@
 					<width>1320</width>
 					<height>57</height>
 					<label>$INFO[ListItem.Title]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Reg57_Caps</font>
 					<scroll>true</scroll>
 				</control>
@@ -1980,6 +2024,7 @@
 					<width>1000</width>
 					<height>38</height>
 					<label fallback="31006">$INFO[ListItem.Genre]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg34_Caps</font>
 				</control>
 				<control type="label">
@@ -1989,6 +2034,7 @@
 					<height>44</height>
 					<label>$LOCALIZE[555]:</label>
 					<font>Font_Reg30</font>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 				</control>
 				<control type="label">
 					<posx>180</posx>
@@ -1996,6 +2042,7 @@
 					<width>750</width>
 					<height>44</height>
 					<label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg30</font>
 					<visible>Window.IsActive(pvrguideinfo)</visible>
 				</control>
@@ -2005,6 +2052,7 @@
 					<width>750</width>
 					<height>44</height>
 					<label>$INFO[ListItem.StartDate,, - ]$INFO[ListItem.StartTime]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg30</font>
 					<visible>Window.IsActive(pvrrecordinginfo)</visible>
 				</control>
@@ -2015,6 +2063,7 @@
 					<height>44</height>
 					<label>$LOCALIZE[180]:</label>
 					<font>Font_Reg30</font>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 				</control>
 				<control type="label">
 					<posx>180</posx>
@@ -2022,6 +2071,7 @@
 					<width>750</width>
 					<height>44</height>
 					<label>$INFO[ListItem.Duration]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg30</font>
 				</control>
 				<control type="textbox">
@@ -2030,6 +2080,7 @@
 					<width>1320</width>
 					<height>330</height>
 					<label fallback="31006">$INFO[ListItem.Plot]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg35</font>
 					<pagecontrol>60</pagecontrol>
 					<autoscroll delay="15000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
@@ -2052,6 +2103,7 @@
 						<height>52</height>
 						<align>center</align>
 						<label>19165</label>
+						<textcolor>grey</textcolor>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<texturefocus border="3">button-focus.png</texturefocus>
 						<texturenofocus border="3">button-nofocus.png</texturenofocus>
@@ -2061,6 +2113,7 @@
 						<height>52</height>
 						<align>center</align>
 						<label>-</label>
+						<textcolor>grey</textcolor>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<texturefocus border="3">button-focus.png</texturefocus>
 						<texturenofocus border="3">button-nofocus.png</texturenofocus>
@@ -2070,6 +2123,7 @@
 						<height>52</height>
 						<align>center</align>
 						<label>186</label>
+						<textcolor>grey</textcolor>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<texturefocus border="3">button-focus.png</texturefocus>
 						<texturenofocus border="3">button-nofocus.png</texturenofocus>
@@ -2093,6 +2147,7 @@
 						<height>52</height>
 						<align>center</align>
 						<label>186</label>
+						<textcolor>grey</textcolor>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<texturefocus border="3">button-focus.png</texturefocus>
 						<texturenofocus border="3">button-nofocus.png</texturenofocus>

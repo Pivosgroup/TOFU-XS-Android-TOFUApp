@@ -27,7 +27,7 @@
 				<width>510</width>
 				<height>30</height>
 				<font>Font_Reg29</font>
-				<textcolor>$VAR[PanelColorVar]</textcolor>
+				<textcolor>grey</textcolor>
 			</control>
 		</control>
 	</controls>

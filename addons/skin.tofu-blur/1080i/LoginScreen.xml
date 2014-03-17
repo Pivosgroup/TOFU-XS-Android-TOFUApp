@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">52</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<include condition="!Skin.HasSetting(setup-0.1.6)">AutoConfig</include>
+	<include condition="!Skin.HasSetting(setup-0.2.2)">AutoConfig</include>
 	<coordinates>
 		<posx>0</posx>
 		<posy>0</posy>
@@ -13,6 +13,7 @@
 			<imagepath background="true" fallback="fallback.jpg">$INFO[Skin.String(LoginBackdrop)]</imagepath>
 		</control>
 		<include>CommonMediaPlayingBackground</include>
+		<include>BackgroundDiffuse</include>
 		<!-- Furniture -->
 		<control type="group">
 			<include>Animation_OpenClose_Furniture</include>
@@ -22,19 +23,6 @@
 				<height>608</height>
 				<texture>views/showcase_floor.png</texture>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-			</control>
-			<control type="image">
-				<width>696</width>
-				<height>1080</height>
-				<texture>views/showcase_vignette.png</texture>
-				<colordiffuse>white</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>1224</posx>
-				<width>696</width>
-				<height>1080</height>
-				<texture flipx="true">views/showcase_vignette.png</texture>
-				<colordiffuse>white</colordiffuse>
 			</control>
 		</control>
 		<control type="fixedlist" id="52">

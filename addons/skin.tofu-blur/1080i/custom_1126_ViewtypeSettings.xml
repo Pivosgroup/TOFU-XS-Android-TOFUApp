@@ -217,13 +217,6 @@
 					<selected>Skin.HasSetting(landscapeonelogo)</selected>
 					<visible>Stringcompare(Window(home).Property(actualViewtype),Landscape) + Container.Content(artists)</visible>
 				</control>
-				<control type="radiobutton" id="1636">
-					<label>31811</label>
-					<include>Objects_MediaMenuButtonAlt2</include>
-					<onclick>Skin.ToggleSetting(altfloor)</onclick>
-					<selected>Skin.HasSetting(altfloor)</selected>
-					<visible>Stringcompare(Window(home).Property(actualViewtype),Landscape) + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists)] + [Skin.HasSetting(landscapelogo) | Skin.HasSetting(landscapeonelogo)]</visible>
-				</control>
 				<control type="radiobutton" id="1634">
 					<label>$LOCALIZE[31285]</label>
 					<include>Objects_MediaMenuButtonAlt2</include>
@@ -424,7 +417,7 @@
 					<onclick>Skin.ToggleSetting(showcasecdart)</onclick>
 					<selected>Skin.HasSetting(showcasecdart)</selected>
 					<visible>Container.Content(movies)</visible>
-					<visible>[Substring(Window(home).Property(actualViewtype),Showcase) | [Stringcompare(Window(home).Property(actualViewtype),TriPanel) + !Stringcompare(Skin.String(TriPanelPosition),3)]]</visible>
+					<visible>Substring(Window(home).Property(actualViewtype),Showcase)</visible>
 				</control>
 				<control type="radiobutton" id="16840">
 					<label>31812</label>
@@ -478,14 +471,11 @@
 					<selected>Skin.HasSetting(smallshiftview)</selected>
 					<visible>Stringcompare(Window(home).Property(actualViewtype),Shift) + !Window.IsActive(programs)</visible>
 				</control>
-				<control type="button" id="16571">
-					<label>$LOCALIZE[31956]:</label>
-					<label2>[COLOR $VAR[FontColorVar]]$VAR[InfoPanelTypeVar][/COLOR]</label2>
+				<control type="radiobutton" id="16571">
+					<label>$LOCALIZE[31863]</label>
 					<include>Objects_MediaMenuButtonAlt2</include>
-					<onclick condition="!Skin.HasSetting(infopanel2columns) + !Skin.HasSetting(infopanelfanart)">Skin.SetBool(infopanelfanart)</onclick>
-					<onclick condition="Skin.HasSetting(infopanelfanart)">Skin.SetBool(infopanel2columns)</onclick>
-					<onclick condition="Skin.HasSetting(infopanelfanart)">Skin.Reset(infopanelfanart)</onclick>
-					<onclick condition="Skin.HasSetting(infopanel2columns)">Skin.Reset(infopanel2columns)</onclick>
+					<onclick>Skin.ToggleSetting(infopanel2columns)</onclick>
+					<selected>Skin.HasSetting(infopanel2columns)</selected>
 					<visible>Stringcompare(Window(home).Property(actualViewtype),InfoPanel)</visible>
 				</control>
 				<control type="radiobutton" id="16572">
@@ -603,7 +593,7 @@
 					<include>Objects_MediaMenuButtonAlt2</include>
 					<onclick>Skin.ToggleSetting(tripanelextrafanart)</onclick>
 					<selected>Skin.HasSetting(tripanelextrafanart)</selected>
-					<visible>Stringcompare(Window(home).Property(actualViewtype),TriPanel)</visible>
+					<visible>Stringcompare(Window(home).Property(actualViewtype),TriPanel) + !Stringcompare(Skin.String(TriPanelPosition),4)</visible>
 				</control>
 				<control type="radiobutton" id="1631">
 					<label>31396</label>

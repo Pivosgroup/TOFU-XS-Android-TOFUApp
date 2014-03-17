@@ -9,10 +9,6 @@ msgctxt "#31003"
 msgid "N/A"
 msgstr "Άγνωστο"
 
-msgctxt "#31004"
-msgid "Month"
-msgstr "Μήνας"
-
 msgctxt "#31005"
 msgid "Premiered"
 msgstr "Πρεμιέρα"
@@ -36,10 +32,6 @@ msgstr "Χρονοδιακόπτης"
 msgctxt "#31010"
 msgid "General main menu settings"
 msgstr "Γενικές ρυθμίσεις κεντρικού μενού"
-
-msgctxt "#31011"
-msgid "RottenTomatoes Trailers"
-msgstr "Διαφημιστικά από RottenTomatoes"
 
 msgctxt "#31012"
 msgid "Add group"
@@ -68,18 +60,6 @@ msgstr "Live TV"
 msgctxt "#31018"
 msgid "Big covers"
 msgstr "Μεγάλα Εξώφυλλα"
-
-msgctxt "#31019"
-msgid "Channel4 News"
-msgstr "Ειδήσεις Channel4"
-
-msgctxt "#31020"
-msgid "Extras"
-msgstr "Επιπλέον"
-
-msgctxt "#31021"
-msgid "Search TOFU for"
-msgstr "Αναζήτηση στο TOFU:"
 
 msgctxt "#31022"
 msgid "Music - Files"
@@ -113,17 +93,9 @@ msgctxt "#31029"
 msgid "Showcase2"
 msgstr "Βιτρίνα2"
 
-msgctxt "#31030"
-msgid "Change info labels"
-msgstr "Αλλαγή ιδιοτήτων"
-
 msgctxt "#31032"
 msgid "Nothing"
 msgstr "Τίποτα"
-
-msgctxt "#31033"
-msgid "Play item on startup"
-msgstr "Αναπαραγωγή αντικειμένου κατά την εκκίνηση"
 
 msgctxt "#31034"
 msgid "Move tooltip to top bar"
@@ -132,18 +104,6 @@ msgstr "Μεταφορά της ετικέτας επάνω"
 msgctxt "#31035"
 msgid "Conditional weather"
 msgstr "Τρέχουσες καιρικές συνθήκες"
-
-msgctxt "#31036"
-msgid "Breadcrumbs classic"
-msgstr "Κλασικά breadcrumbs"
-
-msgctxt "#31037"
-msgid "Default breadcrumbs"
-msgstr "Προεπιλεγμένα breadcrumbs"
-
-msgctxt "#31038"
-msgid "Classic top panels"
-msgstr "Κλασικό πάνω πάνελ"
 
 msgctxt "#31039"
 msgid "CD-Wall"
@@ -177,14 +137,6 @@ msgctxt "#31048"
 msgid "Visualization presets"
 msgstr "Προρυθμίσεις οπτικοποιητή"
 
-msgctxt "#31053"
-msgid "Fullscreen"
-msgstr "Πλήρης οθόνη"
-
-msgctxt "#31054"
-msgid "Shadow"
-msgstr "Σκιά"
-
 msgctxt "#31055"
 msgid "Open playlist"
 msgstr "Άνοιγμα λίστας αναπ/γής"
@@ -217,10 +169,6 @@ msgctxt "#31063"
 msgid "Choose style"
 msgstr "Επιλογή στυλ"
 
-msgctxt "#31064"
-msgid "Press SELECT for alternative layout"
-msgstr "Πιέστε ΕΠΙΛΟΓΗ για εναλλακτική διάταξη"
-
 msgctxt "#31065"
 msgid "Info"
 msgstr "Πληροφορίες"
@@ -249,22 +197,6 @@ msgctxt "#31072"
 msgid "System info"
 msgstr "Πληροφορίες συστήματος"
 
-msgctxt "#31073"
-msgid "Actor information"
-msgstr "Πληροφορίες ηθοποιού"
-
-msgctxt "#31074"
-msgid "Filmography"
-msgstr "Φιλμογραφία"
-
-msgctxt "#31075"
-msgid "Press SELECT to switch between now/next EPG"
-msgstr "Πιέστε ΕΠΙΛΟΓΗ για εναλλαγή μεταξύ τωρινού/επόμενου EPG"
-
-msgctxt "#31080"
-msgid "Director information"
-msgstr "Πληροφορίες σκηνοθέτη"
-
 msgctxt "#31081"
 msgid "Latest MusicVids"
 msgstr "Νεώτερα Μουσικά Βίντεο"
@@ -281,10 +213,6 @@ msgctxt "#31084"
 msgid "Panels"
 msgstr "Πάνελ"
 
-msgctxt "#31085"
-msgid "Light"
-msgstr "Περιορισμένος"
-
 msgctxt "#31086"
 msgid "ClearART"
 msgstr "ClearART"
@@ -293,17 +221,9 @@ msgctxt "#31087"
 msgid "Randomize All"
 msgstr "Όλα τυχαία"
 
-msgctxt "#31088"
-msgid "Use color for all areas"
-msgstr "Χρήση χρώματος σε όλες τις επιφάνειες"
-
 msgctxt "#31089"
 msgid "Both"
 msgstr "Και οι δύο"
-
-msgctxt "#31090"
-msgid "Adjust Transparency"
-msgstr "Ρύθμιση Διαφάνειας"
 
 msgctxt "#31091"
 msgid "Random MusicVids"
@@ -313,10 +233,6 @@ msgctxt "#31092"
 msgid "Artist fanart (Extrafanart, fanart.jpg, default fanart)"
 msgstr "Fanart καλλιτέχνη (Extrafanart, fanart.jpg, προεπιλεγμένο fanart)"
 
-msgctxt "#31093"
-msgid "Actors born today"
-msgstr "Ηθοποιοί με γενέθλια σήμερα"
-
 msgctxt "#31094"
 msgid "Widget fanart"
 msgstr "Fanart του widget"
@@ -325,10 +241,6 @@ msgctxt "#31095"
 msgid "Rating"
 msgstr "Αξιολόγηση"
 
-msgctxt "#31096"
-msgid "Search on YouTube"
-msgstr "Αναζήτηση στο YouTube"
-
 msgctxt "#31097"
 msgid "Classic OSD style"
 msgstr "Κλασικό στυλ OSD"
@@ -336,10 +248,6 @@ msgstr "Κλασικό στυλ OSD"
 msgctxt "#31098"
 msgid "Background path"
 msgstr "Διαδρομή υποβάθρου"
-
-msgctxt "#31099"
-msgid "Top bar style"
-msgstr "Στυλ πάνω μπάρας"
 
 msgctxt "#31102"
 msgid "Background"
@@ -381,10 +289,6 @@ msgctxt "#31111"
 msgid "Recording"
 msgstr "Γίνεται εγγραφή"
 
-msgctxt "#31112"
-msgid "Coloured"
-msgstr "Έγχρωμο"
-
 msgctxt "#31113"
 msgid "Single Image"
 msgstr "Μία εικόνα"
@@ -401,53 +305,13 @@ msgctxt "#31116"
 msgid "Show"
 msgstr "Εμφάνιση"
 
-msgctxt "#31117"
-msgid "CNN International"
-msgstr "CNN International"
-
-msgctxt "#31118"
-msgid "Radio 105"
-msgstr "Radio 105"
-
-msgctxt "#31119"
-msgid "Radio Montecarlo"
-msgstr "Radio Montecarlo"
-
-msgctxt "#31120"
-msgid "Tom & Jerry"
-msgstr "Τομ & Τζέρι"
-
-msgctxt "#31121"
-msgid "Virgin Music"
-msgstr "Virgin Music"
-
 msgctxt "#31127"
 msgid "Lyrics add-on"
 msgstr "Πρόσθετο Στίχων"
 
-msgctxt "#31128"
-msgid "Lyrics"
-msgstr "Στίχοι"
-
-msgctxt "#31129"
-msgid "Video Stream"
-msgstr "Ροή Βίντεο"
-
-msgctxt "#31130"
-msgid "Subtitle add-on"
-msgstr "Πρόσθετο Υποτίτλων"
-
 msgctxt "#31143"
 msgid "Animated fanart in music visualization"
 msgstr "Κινούμενο fanart στη μουσική οπτικοποίηση"
-
-msgctxt "#31148"
-msgid "Show timepanel"
-msgstr "Εμφάνιση πάνελ χρόνου"
-
-msgctxt "#31149"
-msgid "This will shutdown TOFU! [CR]Are you sure?"
-msgstr "Θα τερματιστεί το TOFU! [CR]Είστε σίγουροι;"
 
 msgctxt "#31150"
 msgid "Landscape"
@@ -485,10 +349,6 @@ msgctxt "#31166"
 msgid "Infopanel"
 msgstr "InfoΠάνελ"
 
-msgctxt "#31167"
-msgid "Playlists for Widget 2"
-msgstr "Λίστες αναπ/γής για Widget 2"
-
 msgctxt "#31168"
 msgid "No CoverFlow"
 msgstr "Χωρίς ροή εξωφύλλων"
@@ -525,14 +385,6 @@ msgctxt "#31176"
 msgid "General options"
 msgstr "Γενικές επιλογές"
 
-msgctxt "#31177"
-msgid "Random color mode"
-msgstr "Τυχαία χρώματα"
-
-msgctxt "#31178"
-msgid "Choose main color"
-msgstr "Επιλογή βασικού χρώματος"
-
 msgctxt "#31179"
 msgid "Disable media menu and hide options in video info"
 msgstr "Απενεργοποίηση μενού πολυμέσων και απόκρυψη επιλογών στις πληροφορίες βίντεο"
@@ -540,10 +392,6 @@ msgstr "Απενεργοποίηση μενού πολυμέσων και από
 msgctxt "#31180"
 msgid "Hide options in media menu"
 msgstr "Απόκρυψη επιλογών στα μενού πολυμέσων"
-
-msgctxt "#31181"
-msgid "Activate 'Glow Mode'"
-msgstr "Φωτισμός τύπου 'Glow'"
 
 msgctxt "#31182"
 msgid "Colored"
@@ -581,10 +429,6 @@ msgctxt "#31191"
 msgid "Use as icon"
 msgstr "Χρήση ως εικονίδιο"
 
-msgctxt "#31192"
-msgid "Choose font color"
-msgstr "Επιλογή χρώματος γραμματοσειράς"
-
 msgctxt "#31194"
 msgid "Delayed"
 msgstr "Καθυστέρηση"
@@ -601,45 +445,9 @@ msgctxt "#31198"
 msgid "Extrathumbs"
 msgstr "Επιπλέον μικρογραφίες (extrathumbs)"
 
-msgctxt "#31199"
-msgid "News"
-msgstr "Ειδήσεις"
-
-msgctxt "#31200"
-msgid "TOFU Cinema"
-msgstr "Κινηματογράφος TOFU"
-
-msgctxt "#31201"
-msgid "TOFU Trailer"
-msgstr "Διαφημιστικά TOFU"
-
-msgctxt "#31202"
-msgid "DailyMotion"
-msgstr "DailyMotion"
-
-msgctxt "#31203"
-msgid "YouTube User Uploads"
-msgstr "Μεταφορτώσεις Χρήστη YouTube"
-
-msgctxt "#31204"
-msgid "YouTube User Favorites"
-msgstr "Αγαπημένα Χρήστη YouTube"
-
-msgctxt "#31205"
-msgid "Youtube Most Viewed"
-msgstr "Πιο Προβεβλημένα YouTube"
-
-msgctxt "#31206"
-msgid "Youtube Most Popular"
-msgstr "Πιο Δημοφιλή YouTube"
-
 msgctxt "#31220"
 msgid "Random episodes"
 msgstr "Τυχαία επεισόδια"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "Προεπιλογή"
 
 msgctxt "#31222"
 msgid "Random movies"
@@ -664,10 +472,6 @@ msgstr "Κάθετα"
 msgctxt "#31229"
 msgid "Horizontal"
 msgstr "Οριζόντια"
-
-msgctxt "#31230"
-msgid "Viewtypes"
-msgstr "Τύποι Προβολής"
 
 msgctxt "#31231"
 msgid "Navigation"
@@ -729,18 +533,6 @@ msgctxt "#31255"
 msgid "Blu-ray Disc"
 msgstr "Δίσκος Blu-ray"
 
-msgctxt "#31256"
-msgid "Include already watched Items?"
-msgstr "Συμπερίληψη προβληθέντων αντικειμένων;"
-
-msgctxt "#31265"
-msgid "Smaller pop-up dialogs"
-msgstr "Μικρότερα αναδιδόμενα παράθυρα"
-
-msgctxt "#31269"
-msgid "Enable background effect [I](Can increase CPU usage!)   [/I]"
-msgstr "Εφέ υποβάθρου [I](Μπορεί να αυξήσει τη λειτουργία του επεξεργαστή!) [/I]"
-
 msgctxt "#31271"
 msgid "Posters"
 msgstr "Αφίσες"
@@ -752,10 +544,6 @@ msgstr "Διάταξη"
 msgctxt "#31279"
 msgid "Play trailers in fullscreen"
 msgstr "Προβολή διαφημιστικού σε πλήρη οθόνη"
-
-msgctxt "#31281"
-msgid "Show video info when player is paused"
-msgstr "Εμφάνιση πληροφοριών βίντεο κατά την παύση"
 
 msgctxt "#31282"
 msgid "Clear Cases"
@@ -792,10 +580,6 @@ msgstr "Διατήρηση"
 msgctxt "#31295"
 msgid "Widget"
 msgstr "Widget"
-
-msgctxt "#31298"
-msgid "Set area color"
-msgstr "Χρώμα επιφάνειας"
 
 msgctxt "#31299"
 msgid "Data provider"
@@ -837,30 +621,6 @@ msgctxt "#31326"
 msgid "Most played albums"
 msgstr "Περισσότερο αναπαραχθέντα άλμπουμ"
 
-msgctxt "#31327"
-msgid "Most played ROMs"
-msgstr "Δημοφιλέστερες ROM"
-
-msgctxt "#31329"
-msgid "In-progress TV Shows"
-msgstr "Σειρές σε εξέλιξη"
-
-msgctxt "#31330"
-msgid "Random music"
-msgstr "Τυχαία Μουσική"
-
-msgctxt "#31331"
-msgid "Latest Music"
-msgstr "Πρόσφατη Μουσική"
-
-msgctxt "#31332"
-msgid "Play Video"
-msgstr "Εκκίνηση Βίντεο"
-
-msgctxt "#31333"
-msgid "Recent"
-msgstr "Πρόσφατα"
-
 msgctxt "#31334"
 msgid "Latest"
 msgstr "Νεώτερα"
@@ -897,10 +657,6 @@ msgctxt "#31356"
 msgid "Download Subtitles"
 msgstr "Λήψη υποτίτλων"
 
-msgctxt "#31357"
-msgid "Mixed info"
-msgstr "Ανάμικτες πληροφορίες"
-
 msgctxt "#31358"
 msgid "System info"
 msgstr "Πληροφορίες συστήματος"
@@ -908,10 +664,6 @@ msgstr "Πληροφορίες συστήματος"
 msgctxt "#31359"
 msgid "Latest albums"
 msgstr "Νεώτερα άλμπουμ"
-
-msgctxt "#31360"
-msgid "Upcoming"
-msgstr "Επερχόμενο"
 
 msgctxt "#31362"
 msgid "Rounded covers"
@@ -957,10 +709,6 @@ msgctxt "#31383"
 msgid "Backdrop"
 msgstr "Σκηνικό"
 
-msgctxt "#31387"
-msgid "Darken"
-msgstr "Αμαύρωση"
-
 msgctxt "#31388"
 msgid "Floor label"
 msgstr "Δάπεδο"
@@ -1004,10 +752,6 @@ msgstr "[B]ΡΥΘΜΙΣΕΙΣ ΥΠΗΡΕΣΙΩΝ[/B][CR][CR]Χειρισμός �
 msgctxt "#31406"
 msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]ΡΥΘΜΙΣΕΙΣ ΣΥΣΤΗΜΑΤΟΣ[/B][CR][CR]Διαμόρφωση και βαθμονόμηση οθονών · Ρύθμιση εξόδου ήχου · Τηλεχειριστήρια · Εξοικονόμηση ενέργειας · Καταγραφή σφαλμάτων (debug) · Κεντρικό κλείδωμα"
-
-msgctxt "#31407"
-msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the TOFU+ skin · Customize the home menu · Adjust the skin colors[CR]Change skin backgrounds"
-msgstr "[B]ΡΥΘΜΙΣΕΙΣ ΚΕΛΥΦΟΥΣ[/B][CR][CR]Ρύθμιση του κελύφους TOFU+ · Προσαρμογή Κεντρικού Μενού · Ρύθμιση χρωμάτων κελύφους · Αλλαγή υποβάθρων κελύφους"
 
 msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from pivos.com[CR]Modify Add-on settings"
@@ -1101,10 +845,6 @@ msgctxt "#31483"
 msgid "Show icon label"
 msgstr "Εμφάνιση ετικέτας εικονιδίου"
 
-msgctxt "#31484"
-msgid "Play trailer"
-msgstr "Διαφημιστικό"
-
 msgctxt "#31500"
 msgid "Pictures"
 msgstr "Εικόνες"
@@ -1125,10 +865,6 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "Βίντεο"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "Εφαρμογές"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "Σύστημα"
@@ -1136,10 +872,6 @@ msgstr "Σύστημα"
 msgctxt "#31507"
 msgid "Add-Ons"
 msgstr "Πρόσθετα"
-
-msgctxt "#31508"
-msgid "Shutdown"
-msgstr "Τερματισμός"
 
 msgctxt "#31509"
 msgid "Favorites"
@@ -1149,10 +881,6 @@ msgctxt "#31510"
 msgid "Weather"
 msgstr "Καιρός"
 
-msgctxt "#31511"
-msgid "Play Disc"
-msgstr "Δίσκος"
-
 msgctxt "#31600"
 msgid "Main menu item customizer (backgrounds,widgets)"
 msgstr "Προσαρμογή αντικειμένων Κεντρικού Μενού (υπόβαθρα, widget)"
@@ -1160,14 +888,6 @@ msgstr "Προσαρμογή αντικειμένων Κεντρικού Μεν�
 msgctxt "#31601"
 msgid "CDWall"
 msgstr "Τοίχος CD"
-
-msgctxt "#31602"
-msgid "Choose main menu style"
-msgstr "Επιλογή στυλ Κεντρικού Μενού"
-
-msgctxt "#31610"
-msgid "Set area color for Home window"
-msgstr "Χρώμα επιφάνειας για την Αρχική Οθόνη"
 
 msgctxt "#31611"
 msgid "Fullscreen video"
@@ -1181,10 +901,6 @@ msgctxt "#31613"
 msgid "Enable custom startup focus position of main menu"
 msgstr "Ρύθμιση της αρχικής θέσης στο Κεντρικό Μενού"
 
-msgctxt "#31614"
-msgid "CDArt Manager"
-msgstr "Διαχείριση CDArt"
-
 msgctxt "#31615"
 msgid "Audio visualization"
 msgstr "Ηχητική οπτικοποίηση"
@@ -1193,25 +909,13 @@ msgctxt "#31616"
 msgid "Low"
 msgstr "Κάτω"
 
-msgctxt "#31617"
-msgid "High"
-msgstr "Πάνω"
-
 msgctxt "#31619"
 msgid "Fullscreen video options"
 msgstr "Επιλογές βίντεο πλήρους οθόνης"
 
-msgctxt "#31620"
-msgid "Add to icon panel"
-msgstr "Προσθήκη στο Πάνελ Εικονιδίων"
-
 msgctxt "#31621"
 msgid "Use Alaska paused label for video OSD"
 msgstr "Παύση τύπου Alaska στις απεικονίσεις οθόνης (OSD) βίντεο"
-
-msgctxt "#31622"
-msgid "Label"
-msgstr "Ετικέτα"
 
 msgctxt "#31623"
 msgid "Slot"
@@ -1224,10 +928,6 @@ msgstr "Απόκρυψη χειριστηρίων κατά την αναπαρα
 msgctxt "#31628"
 msgid "Current position"
 msgstr "Τρέχουσα θέση"
-
-msgctxt "#31629"
-msgid "Channels"
-msgstr "Κανάλια"
 
 msgctxt "#31630"
 msgid "Custom"
@@ -1249,10 +949,6 @@ msgctxt "#31634"
 msgid "Main Menu"
 msgstr "Κεντρικό Μενού"
 
-msgctxt "#31635"
-msgid "Similar Artists"
-msgstr "Παρόμοιοι Καλλιτέχνες"
-
 msgctxt "#31636"
 msgid "Rotating"
 msgstr "Περιστρεφόμενο"
@@ -1260,10 +956,6 @@ msgstr "Περιστρεφόμενο"
 msgctxt "#31637"
 msgid "Video OSD Settings"
 msgstr "Ρυθμίσεις απεικονίσεων οθόνης (OSD) βίντεο"
-
-msgctxt "#31638"
-msgid "Show 'Next Aired' info"
-msgstr "Πληροφορίες επόμενης προβολής"
 
 msgctxt "#31639"
 msgid "Hide video thumb on info screen"
@@ -1288,14 +980,6 @@ msgstr "Διαχείριση Πάνελ Εικονιδίων"
 msgctxt "#31645"
 msgid "Background Setup"
 msgstr "Διαμόρφωση Υποβάθρου"
-
-msgctxt "#31646"
-msgid "Do you want to download all available [CR]artwork without user interaction?"
-msgstr "Θέλετε να κατεβάσετε όλες τις διαθέσιμες [CR]εικόνες χωρίς καμία παρέμβαση;"
-
-msgctxt "#31673"
-msgid "Most Played ROMs"
-msgstr "Δημοφιλέστερες ROM"
 
 msgctxt "#31674"
 msgid "Switch panel layout"
@@ -1345,10 +1029,6 @@ msgctxt "#31685"
 msgid "Classic"
 msgstr "Κλασικό"
 
-msgctxt "#31686"
-msgid "Nox"
-msgstr "Nox"
-
 msgctxt "#31687"
 msgid "Furniture settings"
 msgstr "Ρυθμίσεις επίπλων"
@@ -1357,10 +1037,6 @@ msgctxt "#31688"
 msgid "Disable timepanel"
 msgstr "Απενεργοποίηση πάνελ χρόνου"
 
-msgctxt "#31689"
-msgid "Disable library stats"
-msgstr "Απενεργοποίηση στατιστικών συλλογής"
-
 msgctxt "#31690"
 msgid "Disable rss panel"
 msgstr "Απενεργοποίηση ροής τίτλων ειδήσεων (RSS)"
@@ -1368,10 +1044,6 @@ msgstr "Απενεργοποίηση ροής τίτλων ειδήσεων (RSS
 msgctxt "#31691"
 msgid "Toggle position"
 msgstr "Αλλαγή θέσης"
-
-msgctxt "#31692"
-msgid "Shorter time and library stats panel"
-msgstr "Μικρότερο πάνελ χρόνου και στατιστικά συλλογής"
 
 msgctxt "#31694"
 msgid "Fixed list"
@@ -1388,10 +1060,6 @@ msgstr "Εναλλακτική διάταξη"
 msgctxt "#31697"
 msgid "Choose cover type"
 msgstr "Επιλογή τύπου εξωφύλλου"
-
-msgctxt "#31698"
-msgid "Show list of actors/artists birthdays"
-msgstr "Εμφάνιση λίστας γενεθλίων ηθοποιών/καλλιτεχνών"
 
 msgctxt "#31699"
 msgid "Smaller main menu"
@@ -1429,10 +1097,6 @@ msgctxt "#31708"
 msgid "Background Customizer"
 msgstr "Προσαρμογή Υποβάθρου"
 
-msgctxt "#31709"
-msgid "Set Delay"
-msgstr "Καθυστέρηση"
-
 msgctxt "#31710"
 msgid "Show ExtraFanart"
 msgstr "Εμφάνιση ExtraFanart"
@@ -1448,10 +1112,6 @@ msgstr "Προτεινόμενα Μουσικά Βίντεο"
 msgctxt "#31714"
 msgid "Video Library Node"
 msgstr "Κόμβος Συλλογής Βίντεο"
-
-msgctxt "#31715"
-msgid "Smart Playlist Manager"
-msgstr "Διαχείριση Έξυπνης Λίστας Αναπ/γής"
 
 msgctxt "#31716"
 msgid "Default Sets"
@@ -1485,10 +1145,6 @@ msgctxt "#31723"
 msgid "Default Settings Items"
 msgstr "Βασικά Αντικείμενα Ρυθμίσεων"
 
-msgctxt "#31724"
-msgid "Default Shutdown Items"
-msgstr "Βασικά Αντικείμενα Τερματισμού"
-
 msgctxt "#31725"
 msgid "Default PVR Items"
 msgstr "Βασικά Αντικείμενα PVR"
@@ -1497,21 +1153,9 @@ msgctxt "#31726"
 msgid "Default Video Items"
 msgstr "Βασικά Αντικείμενα Βίντεο"
 
-msgctxt "#31727"
-msgid "Remaining Cities"
-msgstr "Πόλεις που απομένουν"
-
-msgctxt "#31728"
-msgid "Show Cities"
-msgstr "Εμφάνιση Πόλεων"
-
 msgctxt "#31729"
 msgid "Move NowPlaying widget to bottom"
 msgstr "Μετακίνηση του widget 'Τώρα Εκτελείται' κάτω"
-
-msgctxt "#31730"
-msgid "Script features"
-msgstr "Λειτουργίες Script"
 
 msgctxt "#31731"
 msgid "Skin Settings"
@@ -1528,34 +1172,6 @@ msgstr "Επιλογή τραγουδιού"
 msgctxt "#31734"
 msgid "Use QuickList instead of default shutdown menu"
 msgstr "Χρήση Ταχείας Λίστας αντί του παραθύρου τερματισμού"
-
-msgctxt "#31735"
-msgid "[B]CREDITS TO:[/B]"
-msgstr "[B]ΕΥΧΑΡΙΣΤΟΥΜΕ ΤΟΥΣ:[/B]"
-
-msgctxt "#31736"
-msgid "[B]N.O.W.A.L.L.[/B] for creating Artwork"
-msgstr "[B]N.O.W.A.L.L.[/B] για τη δημιουργία των υποβάθρων/εικόνων"
-
-msgctxt "#31737"
-msgid "[B]Fional88[/B] for creating the tutorial videos"
-msgstr "[B]Fional88[/B] για τη δημιουργία των βοηθητικών βίντεο"
-
-msgctxt "#31738"
-msgid "[B]www.webdesignerdepot.com[/B] for permission to include the iconpack \"Reflection\""
-msgstr "[B]www.webdesignerdepot.com[/B] για την άδεια χρήσης του πακέτου εικόνων \"Reflection\""
-
-msgctxt "#31739"
-msgid "[B]DJH_ [/B]for creating Aeon, [B]Jezz_X [/B]for creating Confluence, [B]black[/B] for creating Xperience1080"
-msgstr "[B]DJH_ [/B]δημιουργό του Aeon, [B]Jezz_X [/B]δημιουργό του Confluence, [B]`Black[/B] δημιουργό του Xperience1080"
-
-msgctxt "#31740"
-msgid "Translators: [B]CutSickAss[/B], [B]epoke[/B], [B]frodo19[/B], [B]mindweaver[/B], [B]Passer[/B], [B]PatOso[/B], [B]peppe_sr[/B], [B]Rififi77[/B][CR][B]Roman_V_M[/B], [B]lijack[/B]"
-msgstr "Μεταφραστές: [B]CutSickAss[/B], [B]epoke[/B], [B]frodo19[/B], [B]mindweaver[/B], [B]Passer[/B], [B]PatOso[/B], [B]peppe_sr[/B], [B]Rififi77[/B][CR][B]Roman_V_M[/B], [B]lijack[/B]"
-
-msgctxt "#31741"
-msgid "[CR]Also to: [B]Martijn[/B], [B]Deano316[/B], [B]defluo[/B], [B]fmronan[/B], [B]thrak76[/B], [B]xhaggi[/B] and [CR]all other people who contributed to this project"
-msgstr "[CR]Επίσης τους: [B]Martijn[/B], [B]Deano316[/B], [B]defluo[/B], [B]fmronan[/B], [B]thrak76[/B], [B]xhaggi[/B] και [CR]όλους εκείνους οι οποίοι συνεισέφεραν σε αυτό το έργο"
 
 msgctxt "#31800"
 msgid "Fade background in visualisation"
@@ -1577,10 +1193,6 @@ msgctxt "#31804"
 msgid "Panel"
 msgstr "Πάνελ"
 
-msgctxt "#31807"
-msgid "Choose Icon"
-msgstr "Επιλογή εικονιδίου"
-
 msgctxt "#31808"
 msgid "Exchange Position"
 msgstr "Εναλλαγή Θέσης"
@@ -1592,10 +1204,6 @@ msgstr "Ρυθμίσεις μουσικής οπτικοποίησης"
 msgctxt "#31810"
 msgid "Show ClearArt instead of Logo"
 msgstr "Εμφάνιση ClearArt αντί Λογότυπου"
-
-msgctxt "#31811"
-msgid "Use Alt Floor"
-msgstr "Χρήση Εναλλακτικής Βάσης"
 
 msgctxt "#31812"
 msgid "Show CDArt"
@@ -1609,33 +1217,13 @@ msgctxt "#31814"
 msgid "Always show Submenu"
 msgstr "Πάντα να φαίνεται το Υπομενού"
 
-msgctxt "#31815"
-msgid "Latest Pics"
-msgstr "Νεώτερες Εικόνες"
-
-msgctxt "#31816"
-msgid "Random Pics"
-msgstr "Τυχαίες Εικόνες"
-
 msgctxt "#31817"
 msgid "Random Artists"
 msgstr "Τυχαίοι Καλλιτέχνες"
 
-msgctxt "#31818"
-msgid "Near Concerts"
-msgstr "Κοντινές Συναυλίες"
-
 msgctxt "#31819"
 msgid "Next Aired"
 msgstr "Επόμενη Προβολή"
-
-msgctxt "#31820"
-msgid "Daily Babes"
-msgstr "Μωρό της Ημέρας"
-
-msgctxt "#31823"
-msgid "World Map + Icons"
-msgstr "Παγκόσμιος Χάρτης + Εικονίδια"
 
 msgctxt "#31824"
 msgid "Live DVD cases"
@@ -1697,14 +1285,6 @@ msgctxt "#31839"
 msgid "Restart TOFU"
 msgstr "Επανεκκίνηση TOFU"
 
-msgctxt "#31840"
-msgid "Random Movie (Genre)"
-msgstr "Τυχαία Ταινία (Είδος)"
-
-msgctxt "#31841"
-msgid "Random Movie"
-msgstr "Τυχαία Ταινία"
-
 msgctxt "#31842"
 msgid "Movies (Cinema Exp.)"
 msgstr "Ταινίες (Cinema Exp.)"
@@ -1720,10 +1300,6 @@ msgstr "Εκκαθάριση βάσης Βίντεο"
 msgctxt "#31845"
 msgid "Movie Sets"
 msgstr "Ομάδες Ταινιών"
-
-msgctxt "#31846"
-msgid "Around the world"
-msgstr "Ανά τον Κόσμο"
 
 msgctxt "#31847"
 msgid "Video Files"
@@ -1753,10 +1329,6 @@ msgctxt "#31854"
 msgid "PVR Area"
 msgstr "Περιοχή PVR"
 
-msgctxt "#31855"
-msgid "Featured Area"
-msgstr "Περιοχή Προτάσεων"
-
 msgctxt "#31856"
 msgid "NowPlaying"
 msgstr "Τώρα Εκτελείται"
@@ -1781,10 +1353,6 @@ msgctxt "#31863"
 msgid "Two Columns"
 msgstr "Δύο Στήλες"
 
-msgctxt "#31864"
-msgid "Show Widgets"
-msgstr "Προβολή widget"
-
 msgctxt "#31865"
 msgid "WakeOnLAN"
 msgstr "WakeOnLAN"
@@ -1801,18 +1369,6 @@ msgctxt "#31868"
 msgid "Enter MAC Address"
 msgstr "Εισαγωγή διεύθυνσης MAC"
 
-msgctxt "#31869"
-msgid "Online Video Help"
-msgstr "ΒΟΗΘΗΤΙΚΑ ΒΙΝΤΕΟ ΣΤΟ ΔΙΑΔΙΚΤΥΟ"
-
-msgctxt "#31870"
-msgid "Help"
-msgstr "Βοήθεια"
-
-msgctxt "#31871"
-msgid "Available at Passion-XBMC repository"
-msgstr "Διαθέσιμο στο αποθετήριο Passion-XBMC"
-
 msgctxt "#31872"
 msgid "Mixed Movies"
 msgstr "Ανάμικτες Ταινίες"
@@ -1824,10 +1380,6 @@ msgstr "Ανάμικτη Τηλεόραση"
 msgctxt "#31874"
 msgid "Mixed Music"
 msgstr "Ανάμικτη Μουσική"
-
-msgctxt "#31875"
-msgid "No Content for this Area"
-msgstr "Δεν υπάρχει περιεχόμενο για αυτήν την Περιοχή"
 
 msgctxt "#31876"
 msgid "Appearance Setup"
@@ -1849,14 +1401,6 @@ msgctxt "#31882"
 msgid "Disable option to hide widgets by pressing \"Back\""
 msgstr "Να μη γίνεται απόκρυψη των widget πιέζοντας 'Πίσω'"
 
-msgctxt "#31885"
-msgid "Area-specific Options"
-msgstr "Επιλογές ανά Περιοχή"
-
-msgctxt "#31886"
-msgid "Search Trailer on Youtube"
-msgstr "Αναζήτηση Διαφημιστικού στο Youtube"
-
 msgctxt "#31888"
 msgid "PRESS ANY KEY"
 msgstr "ΠΙΕΣΤΕ ΚΑΠΟΙΟ ΠΛΗΚΤΡΟ"
@@ -1865,29 +1409,9 @@ msgctxt "#31889"
 msgid "Next Tracks"
 msgstr "Επόμενα Κομμάτια"
 
-msgctxt "#31890"
-msgid "Collections"
-msgstr "Συλλογές"
-
-msgctxt "#31891"
-msgid "Folders"
-msgstr "Φάκελοι"
-
-msgctxt "#31892"
-msgid "Categories"
-msgstr "Κατηγορίες"
-
-msgctxt "#31895"
-msgid "No library content for this media type"
-msgstr "Δεν υπάρχει περιεχόμενο για αυτόν τον τύπο πολυμέσων"
-
 msgctxt "#31896"
 msgid "10 Day"
 msgstr "10ήμερη"
-
-msgctxt "#31897"
-msgid "Press DOWN for extended info"
-msgstr "Πιέστε ΚΑΤΩ για εκτενείς πληροφορίες"
 
 msgctxt "#31898"
 msgid "Visibility"
@@ -1913,18 +1437,6 @@ msgctxt "#31905"
 msgid "Needs script.cinema.experience to be available"
 msgstr "Απαιτείται το script.cinema.experience"
 
-msgctxt "#31906"
-msgid "Needs script.randommovie to be available"
-msgstr "Απαιτείται το script.randommovie"
-
-msgctxt "#31909"
-msgid "Bar Style"
-msgstr "Στυλ Μπάρας"
-
-msgctxt "#31910"
-msgid "This feature requires the ColorPicker add-on"
-msgstr "Αυτή η λειτουργία απαιτεί το πρόσθετο ColorPicker"
-
 msgctxt "#31911"
 msgid "Updating add-on repos"
 msgstr "Ανανεώνονται τα αποθετήρια πρόσθετων"
@@ -1940,10 +1452,6 @@ msgstr "Πιέστε πάνω στα έπιπλα για τις επιλογές
 msgctxt "#31914"
 msgid "Click on menu items to see available options"
 msgstr "Πιέστε πάνω στα αντικείμενα για τις επιλογές τους"
-
-msgctxt "#31915"
-msgid "Play some Music to get live Preview of Settings"
-msgstr "Βάλτε μουσική για να δείτε ζωντανά τις αλλαγές"
 
 msgctxt "#31916"
 msgid "Needs \"Additional Artist Info\" activated in Artistslideshow Plugin"
@@ -1997,10 +1505,6 @@ msgctxt "#31954"
 msgid "Function"
 msgstr "Λειτουργία"
 
-msgctxt "#31955"
-msgid "Activate Bottom Menu (Play DVD, toggle widgets)"
-msgstr "Ενεργοποίηση Κάτω Μενού (Αναπ/γή DVD, εναλλαγή widget)"
-
 msgctxt "#31956"
 msgid "Choose Type"
 msgstr "Επιλογή Τύπου"
@@ -2020,14 +1524,6 @@ msgstr "Εικονίδιο"
 msgctxt "#31960"
 msgid "Set icon"
 msgstr "Ορισμός εικονιδίου"
-
-msgctxt "#31961"
-msgid "Set up 'Featured' window appearance"
-msgstr "Διαμόρφωση εμφάνισης του παραθύρου 'Προτάσεων'"
-
-msgctxt "#31962"
-msgid "Set up 'Settings' window appearance"
-msgstr "Διαμόρφωση εμφάνισης του παραθύρου 'Ρυθμίσεων'"
 
 msgctxt "#31963"
 msgid "Fallback settings"

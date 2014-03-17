@@ -24,10 +24,11 @@
 		<control type="button" id="1000">
 			<width>431</width>
 			<height>59</height>
+			<textcolor>grey</textcolor>
 			<textoffsety>8</textoffsety>
 			<align>center</align>
 			<aligny>top</aligny>
-			<texturefocus border="3">list-focus.png</texturefocus>
+			<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 			<texturenofocus border="3">list-nofocus.png</texturenofocus>
 			<font>Font_Reg30_2</font>
 		</control>

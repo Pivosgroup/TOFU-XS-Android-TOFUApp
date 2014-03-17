@@ -57,10 +57,12 @@
 			<control type="sliderex" id="10">
 				<width>600</width>
 				<font>Font_Info</font>
+				<textcolor>grey</textcolor>
 			</control>
 			<control type="button" id="7">
+				<textcolor>grey</textcolor>
 				<textoffsetx>40</textoffsetx>
-				<texturefocus border="3">list-focus.png</texturefocus>
+				<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 				<texturenofocus border="3">list-nofocus.png</texturenofocus>
 				<font>Font_Info</font>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
@@ -68,8 +70,9 @@
 			<control type="radiobutton" id="8">
 				<width>420</width>
 				<height>62</height>
+				<textcolor>grey</textcolor>
 				<textoffsetx>40</textoffsetx>
-				<texturefocus border="3">list-focus.png</texturefocus>
+				<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 				<texturenofocus border="3">list-nofocus.png</texturenofocus>
 				<font>Font_Info</font>
 				<radioposx>1005</radioposx>
@@ -77,8 +80,9 @@
 			</control>
 			<control type="spincontrolex" id="9">
 				<height>62</height>
+				<textcolor>grey</textcolor>
 				<textoffsetx>40</textoffsetx>
-				<texturefocus border="3">list-focus.png</texturefocus>
+				<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 				<texturenofocus border="3">list-nofocus.png</texturenofocus>
 				<font>Font_Info</font>
 				<spinposx>8</spinposx>
@@ -97,10 +101,11 @@
 					<posy>39</posy>
 					<width>246</width>
 					<height>96</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>40</textoffsetx>
 					<textoffsety>18</textoffsety>
 					<align>left</align>
-					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>186</label>
 					<font>Font_Bold37</font>
@@ -115,10 +120,11 @@
 					<posy>124</posy>
 					<width>246</width>
 					<height>96</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>40</textoffsetx>
 					<textoffsety>18</textoffsety>
 					<align>left</align>
-					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>222</label>
 					<font>Font_Bold37</font>
@@ -133,10 +139,11 @@
 					<posy>210</posy>
 					<width>246</width>
 					<height>96</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>40</textoffsetx>
 					<textoffsety>18</textoffsety>
 					<align>left</align>
-					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>409</label>
 					<font>Font_Bold37</font>

@@ -15,7 +15,7 @@
 				<control type="image">
 					<width>1920</width>
 					<height>130</height>
-					<texture flipy="true" border="5">panel-bottom.png</texture>
+					<texture flipy="true" border="5">panel-top.png</texture>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				</control>
 				<include>DefaultMusicOSD</include>

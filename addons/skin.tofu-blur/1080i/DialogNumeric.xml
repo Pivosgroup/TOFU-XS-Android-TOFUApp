@@ -17,6 +17,7 @@
 		<control type="group">
 			<width>284</width>
 			<height>394</height>
+			<animation effect="slide" end="-534,0" condition="!Window.IsVisible(virtualkeyboard)">Conditional</animation>
 			<control type="image" id="0">
 				<posx>30</posx>
 				<posy>20</posy>
@@ -32,6 +33,7 @@
 				<height>46</height>
 				<align>center</align>
 				<font>Font_Reg30_2</font>
+				<textcolor>$VAR[FontColorVar]</textcolor>
 			</control>
 			<control type="group">
 				<posx>26</posx>

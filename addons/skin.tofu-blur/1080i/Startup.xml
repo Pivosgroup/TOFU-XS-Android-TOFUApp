@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol>10</defaultcontrol>
-	<include condition="!Skin.HasSetting(setup-0.1.6)">AutoConfig</include>
+	<include condition="!Skin.HasSetting(setup-0.2.2)">AutoConfig</include>
 	<onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onload>
 	<onunload>Skin.SetString(widgetlist,$INFO[Control.GetLabel(11111)])</onunload>
 	<onunload>Skin.SetString(widget2list,$INFO[Control.GetLabel(11112)])</onunload>

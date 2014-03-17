@@ -46,48 +46,48 @@
 					<include>Animation_VisibleChange200</include>
 					<control type="button">
 						<label>$LOCALIZE[31008]:</label>
-						<label2>[COLOR white]$VAR[CustomItemTypeNameVar][/COLOR]</label2>
+						<label2>[COLOR grey]$VAR[CustomItemTypeNameVar][/COLOR]</label2>
 						<include>Objects_CustomizerInfoButton</include>
 					</control>
 					<control type="button">
 						<label>$LOCALIZE[31954]:</label>
-						<label2>[COLOR white]$INFO[Skin.String(ItemToEdit.Path)][/COLOR]</label2>
+						<label2>[COLOR grey]$INFO[Skin.String(ItemToEdit.Path)][/COLOR]</label2>
 						<include>Objects_CustomizerInfoButton</include>
 					</control>
 					<control type="button">
 						<label>$LOCALIZE[31958]:</label>
-						<label2>[COLOR white]$INFO[Skin.String(ItemToEdit.Label)][/COLOR]</label2>
+						<label2>[COLOR grey]$INFO[Skin.String(ItemToEdit.Label)][/COLOR]</label2>
 						<include>Objects_CustomizerInfoButton</include>
 					</control>
 					<control type="button">
 						<label>$LOCALIZE[31295]:</label>
-						<label2>[COLOR white]$INFO[Skin.String(ItemToEdit.WidgetTitle)][/COLOR]</label2>
+						<label2>[COLOR grey]$INFO[Skin.String(ItemToEdit.WidgetTitle)][/COLOR]</label2>
 						<include>Objects_CustomizerInfoButton</include>
 					</control>
 					<control type="button">
 						<label>$LOCALIZE[31295] 2:</label>
-						<label2>[COLOR white]$INFO[Skin.String(ItemToEdit.Widget2Title)][/COLOR]</label2>
+						<label2>[COLOR grey]$INFO[Skin.String(ItemToEdit.Widget2Title)][/COLOR]</label2>
 						<include>Objects_CustomizerInfoButton</include>
 					</control>
 					<control type="button">
 						<label>$LOCALIZE[31102]:</label>
-						<label2>[COLOR white]$VAR[CustomItemFanartLabelVar][/COLOR]</label2>
+						<label2>[COLOR grey]$VAR[CustomItemFanartLabelVar][/COLOR]</label2>
 						<include>Objects_CustomizerInfoButton</include>
 					</control>
 					<control type="button">
 						<label>$LOCALIZE[31098]:</label>
-						<label2>[COLOR white]$INFO[Skin.String(ItemToEdit.MultiFanart)][/COLOR]</label2>
+						<label2>[COLOR grey]$INFO[Skin.String(ItemToEdit.MultiFanart)][/COLOR]</label2>
 						<include>Objects_CustomizerInfoButton</include>
 						<visible>![Substring(Skin.String(ItemToEdit.MultiFanart),recent,left) | Substring(Skin.String(ItemToEdit.MultiFanart),widgetfanart,left) | Substring(Skin.String(ItemToEdit.MultiFanart),random,left) | Substring(Skin.String(ItemToEdit.MultiFanart),dvdcase,left) | Substring(Skin.String(ItemToEdit.MultiFanart),nocase,left) | Substring(Skin.String(ItemToEdit.MultiFanart),case,left) | Substring(Skin.String(ItemToEdit.MultiFanart),watchlist,left) | IsEmpty(Skin.String(ItemToEdit.MultiFanart))]</visible>
 					</control>
 					<control type="button">
 						<label>$LOCALIZE[31683]:</label>
-						<label2>[COLOR white]$INFO[Skin.String(ItemToEdit.InfoLine)][/COLOR]</label2>
+						<label2>[COLOR grey]$INFO[Skin.String(ItemToEdit.InfoLine)][/COLOR]</label2>
 						<include>Objects_CustomizerInfoButton</include>
 					</control>
 					<control type="button">
 						<label>$LOCALIZE[31695]:</label>
-						<label2>[COLOR white]$VAR[CustomItemSubmenuLabelVar] $VAR[CustomSubMenuItemsVar][/COLOR]</label2>
+						<label2>[COLOR grey]$VAR[CustomItemSubmenuLabelVar] $VAR[CustomSubMenuItemsVar][/COLOR]</label2>
 						<include>Objects_CustomizerInfoButton</include>
 					</control>
 					<control type="image">
@@ -123,6 +123,7 @@
 					<include>Animation_VisibleChange200</include>
 					<control type="radiobutton" id="7">
 						<label>$LOCALIZE[24021]</label>
+						<textcolor>grey</textcolor>
 						<include>Objects_CustomizerSettingsButton</include>
 						<onclick condition="IsEmpty(Skin.String(ItemToEdit.Disable))">Skin.SetString(ItemToEdit.Disable,1)</onclick>
 						<onclick condition="!IsEmpty(Skin.String(ItemToEdit.Disable))">Skin.Reset(ItemToEdit.Disable)</onclick>
@@ -132,49 +133,58 @@
 					</control>
 					<control type="button" id="20">
 						<label>$LOCALIZE[31956]</label>
+						<textcolor>grey</textcolor>
 						<include>Objects_CustomizerSettingsButton</include>
 						<onclick>ActivateWindow(1142)</onclick>
 					</control>
 					<control type="button" id="23">
 						<label>$LOCALIZE[31679]</label>
+						<textcolor>grey</textcolor>
 						<include>Objects_CustomizerSettingsButton</include>
 						<onclick>Skin.SetString(ItemToEdit.Label)</onclick>
 						<onclick>Skin.SetString($INFO[Window(home).Property(MenuItem)].Label,$ESCINFO[Skin.String(ItemToEdit.Label)])</onclick>
 					</control>
 					<control type="button" id="24">
 						<label>$LOCALIZE[31681]</label>
+						<textcolor>grey</textcolor>
 						<include>Objects_CustomizerSettingsButton</include>
 						<onclick>Setproperty(WidgetSelection,Widget,1124)</onclick>
 						<onclick>ActivateWindow(1133)</onclick>
 					</control>
 					<control type="button" id="25">
 						<label>$LOCALIZE[31957]</label>
+						<textcolor>grey</textcolor>
 						<include>Objects_CustomizerSettingsButton</include>
 						<onclick>Setproperty(WidgetSelection,Widget2,1124)</onclick>
 						<onclick>ActivateWindow(1133)</onclick>
 					</control>
 					<control type="button" id="26">
 						<label>$LOCALIZE[31680]</label>
+						<textcolor>grey</textcolor>
 						<include>Objects_CustomizerSettingsButton</include>
 						<onclick>ActivateWindow(1134)</onclick>
 					</control>
 					<control type="button" id="27">
 						<label>31703</label>
+						<textcolor>grey</textcolor>
 						<include>Objects_CustomizerSettingsButton</include>
 						<onclick>ActivateWindow(1161)</onclick>
 					</control>
 					<control type="button" id="270">
 						<label>31704</label>
+						<textcolor>grey</textcolor>
 						<include>Objects_CustomizerSettingsButton</include>
 						<onclick>ActivateWindow(1150)</onclick>
 					</control>
 					<control type="button" id="30">
 						<label>31808</label>
+						<textcolor>grey</textcolor>
 						<include>Objects_CustomizerSettingsButton</include>
 						<onclick>ActivateWindow(1151)</onclick>
 					</control>
 					<control type="button" id="31">
 						<label>$LOCALIZE[31027]</label>
+						<textcolor>grey</textcolor>
 						<include>Objects_CustomizerSettingsButton</include>
 						<onclick>Skin.Reset(ItemToEdit.Type)</onclick>
 						<onclick>Skin.Reset(ItemToEdit.Label)</onclick>

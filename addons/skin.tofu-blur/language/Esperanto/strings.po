@@ -13,17 +13,9 @@ msgctxt "#31072"
 msgid "System info"
 msgstr "Sistemo Info"
 
-msgctxt "#31085"
-msgid "Light"
-msgstr "KROTALOJ"
-
 msgctxt "#31110"
 msgid "Record"
 msgstr "Registri"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "Default"
 
 msgctxt "#31358"
 msgid "System info"
@@ -53,17 +45,9 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "Videoj"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "Applications"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "System"
-
-msgctxt "#31508"
-msgid "Shutdown"
-msgstr "Shutdown"
 
 msgctxt "#31510"
 msgid "Weather"
@@ -80,10 +64,6 @@ msgstr "Soni visualisation"
 msgctxt "#31616"
 msgid "Low"
 msgstr "Malnobla"
-
-msgctxt "#31617"
-msgid "High"
-msgstr "Nobla"
 
 msgctxt "#31630"
 msgid "Custom"

@@ -16,14 +16,52 @@
 	</animation>
 	<controls>
 		<include>DialogBackFade</include>
-		<control type="image">
-			<posx>923</posx>
-			<posy>503</posy>
-			<width>74</width>
-			<height>74</height>
-			<texture>loader.gif</texture>
-			<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
-			<animation effect="fade" start="70" time="1200" condition="true" pulse="true">Conditional</animation>
+		<control type="group">
+			<posx>879</posx>
+			<posy>525</posy>
+			<animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>30</width>
+				<height>30</height>
+				<texture>busy-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<posx>44</posx>
+				<posy>0</posy>
+				<width>30</width>
+				<height>30</height>
+				<texture>busy-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<posx>88</posx>
+				<posy>0</posy>
+				<width>30</width>
+				<height>30</height>
+				<texture>busy-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<posx>132</posx>
+				<posy>0</posy>
+				<width>30</width>
+				<height>30</height>
+				<texture>busy-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>30</width>
+				<height>30</height>
+				<texture>busy-focus.png</texture>
+				<animation type="Conditional" condition="true" pulse="true">
+					<effect type="slide" start="0,0" end="0,0" time="0"/>
+					<effect type="slide" start="0,0" end="44,0" time="0" delay="250"/>
+					<effect type="slide" start="0,0" end="44,0" time="0" delay="750"/>
+					<effect type="slide" start="0,0" end="44,0" time="0" delay="1250"/>
+					<effect type="slide" start="0,0" end="0,0" time="0" delay="1500"/>
+				</animation>
+			</control>
 		</control>
 	</controls>
 </window>

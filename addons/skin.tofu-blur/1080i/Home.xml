@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">9004</defaultcontrol>
-	<include condition="!Skin.HasSetting(setup-0.1.6)">AutoConfig</include>
+	<include condition="!Skin.HasSetting(setup-0.2.2)">AutoConfig</include>
 	<onload condition="!Window.Previous(startup) + Skin.HasSetting(randomizehome) + [Substring(Skin.String(widgetlist),random) | Substring(Skin.String(widget2list),random) | Substring(Skin.String(backgroundlist),random)]">SetProperty(SkinWidgets_RandomItems_Update,true)</onload>
 	<onload>ClearProperty(DontRunTVShowScripts,Home)</onload>
 	<onload>AlarmClock(WidgetMove,Control.Move(8000,1),00:07,silent,loop)</onload>
@@ -41,7 +41,8 @@
 			<onfocus condition="Stringcompare(Container(9000).ListItem.Property(Path),ActivateWindow(Videos,MovieTitles,return)) | Stringcompare(Container(9000).ListItem.Property(Path),ActivateWindow(Videos,MusicVideoTitles,return)) | Substring(Container(9000).ListItem.Property(Path),videodb://movies/)">SetProperty(DontRunTVShowScripts,True,Home)</onfocus>
 			<onfocus condition="stringcompare(Container(9000).ListItem.Property(Type),0) | stringcompare(Container(9000).ListItem.Property(Type),1) | stringcompare(Container(9000).ListItem.Property(Type),2) | stringcompare(Container(9000).ListItem.Property(Type),3)">RunAddon($INFO[Container(9000).ListItem.Property(Path)])</onfocus>
 			<onfocus condition="stringcompare(Container(9000).ListItem.Property(Type),4)">ActivateWindow(Videos,$ESCINFO[Container(9000).ListItem.Property(Path)],return)</onfocus>
-			<onfocus condition="stringcompare(Container(9000).ListItem.Property(Type),5)">ActivateWindow(MusicLibrary,$ESCINFO[Container(9000).ListItem.Property(Path)],return)</onfocus>
+			<onfocus condition="stringcompare(Container(9000).ListItem.Property(Type),5) + Library.HasContent(Music)">ActivateWindow(MusicLibrary,$ESCINFO[Container(9000).ListItem.Property(Path)],return)</onfocus>
+			<onfocus condition="stringcompare(Container(9000).ListItem.Property(Type),5) + !Library.HasContent(Music)">ActivateWindow(MusicFiles)</onfocus>
 			<onfocus condition="stringcompare(Container(9000).ListItem.Property(Type),6) | Stringcompare(Container(9000).ListItem.Property(Type),7) | Stringcompare(Container(9000).ListItem.Property(Type),custom)">$INFO[Container(9000).ListItem.Property(Path)]</onfocus>
 		</control>
 		<control type="button" id="9007">
@@ -50,14 +51,16 @@
 			<onfocus condition="Control.IsVisible(5000) + [Stringcompare(Container(5010).ListItem.Property(Path),ActivateWindow(Videos,MovieTitles,return)) | Stringcompare(Container(5010).ListItem.Property(Path),ActivateWindow(Videos,MusicVideoTitles,return)) | Substring(Container(5010).ListItem.Property(Path),videodb://movies/)]">SetProperty(DontRunTVShowScripts,True,Home)</onfocus>
 			<onfocus condition="Control.IsVisible(5000) + [stringcompare(Container(5010).ListItem.Property(Type),0) | stringcompare(Container(5010).ListItem.Property(Type),1) | stringcompare(Container(5010).ListItem.Property(Type),2) | stringcompare(Container(5010).ListItem.Property(Type),3)]">RunAddon($INFO[Container(5010).ListItem.Property(Path)])</onfocus>
 			<onfocus condition="Control.IsVisible(5000) + stringcompare(Container(5010).ListItem.Property(Type),4)">ActivateWindow(Videos,$ESCINFO[Container(5010).ListItem.Property(Path)],return)</onfocus>
-			<onfocus condition="Control.IsVisible(5000) + stringcompare(Container(5010).ListItem.Property(Type),5)">ActivateWindow(MusicLibrary,$ESCINFO[Container(5010).ListItem.Property(Path)],return)</onfocus>
+			<onfocus condition="Control.IsVisible(5000) + stringcompare(Container(5010).ListItem.Property(Type),5) + Library.HasContent(Music)">ActivateWindow(MusicLibrary,$ESCINFO[Container(5010).ListItem.Property(Path)],return)</onfocus>
+			<onfocus condition="Control.IsVisible(5000) + stringcompare(Container(5010).ListItem.Property(Type),5) + !Library.HasContent(Music)">ActivateWindow(MusicFiles)</onfocus>
 			<onfocus condition="Control.IsVisible(5000) + [stringcompare(Container(5010).ListItem.Property(Type),6) | Stringcompare(Container(5010).ListItem.Property(Type),7) | Stringcompare(Container(5010).ListItem.Property(Type),custom)]">$INFO[Container(5010).ListItem.Property(Path)]</onfocus>
 			<onfocus condition="Control.IsVisible(5000) + IsEmpty(Container(5010).ListItem.Property(Type))">ActivateWindow(1135)</onfocus>
 			<onfocus condition="Control.IsVisible(8998)">SetFocus(8000)</onfocus>
 			<onfocus condition="Control.IsVisible(8998) + [Stringcompare(Container(8000).ListItem.Property(Path),ActivateWindow(Videos,MovieTitles,return)) | Stringcompare(Container(8000).ListItem.Property(Path),ActivateWindow(Videos,MusicVideoTitles,return)) | Substring(Container(8000).ListItem.Property(Path),videodb://movies/)]">SetProperty(DontRunTVShowScripts,True,Home)</onfocus>
 			<onfocus condition="Control.IsVisible(8998) + [stringcompare(Container(8000).ListItem.Property(Type),0) | stringcompare(Container(8000).ListItem.Property(Type),1) | stringcompare(Container(8000).ListItem.Property(Type),2) | stringcompare(Container(8000).ListItem.Property(Type),3)]">RunAddon($INFO[Container(8000).ListItem.Property(Path)])</onfocus>
 			<onfocus condition="Control.IsVisible(8998) + stringcompare(Container(8000).ListItem.Property(Type),4)">ActivateWindow(Videos,$ESCINFO[Container(8000).ListItem.Property(Path)],return)</onfocus>
-			<onfocus condition="Control.IsVisible(8998) + stringcompare(Container(8000).ListItem.Property(Type),5)">ActivateWindow(MusicLibrary,$ESCINFO[Container(8000).ListItem.Property(Path)],return)</onfocus>
+			<onfocus condition="Control.IsVisible(8998) + stringcompare(Container(8000).ListItem.Property(Type),5) + Library.HasContent(Music)">ActivateWindow(MusicLibrary,$ESCINFO[Container(8000).ListItem.Property(Path)],return)</onfocus>
+			<onfocus condition="Control.IsVisible(8998) + stringcompare(Container(8000).ListItem.Property(Type),5) + !Library.HasContent(Music)">ActivateWindow(MusicFiles)</onfocus>
 			<onfocus condition="Control.IsVisible(8998) + [stringcompare(Container(8000).ListItem.Property(Type),6) | Stringcompare(Container(8000).ListItem.Property(Type),7) | Stringcompare(Container(8000).ListItem.Property(Type),custom)]">$INFO[Container(8000).ListItem.Property(Path)]</onfocus>
 			<onfocus condition="Control.IsVisible(8998) + IsEmpty(Container(8000).ListItem.Property(Type))">ActivateWindow(1135)</onfocus>
 		</control>
@@ -68,14 +71,16 @@
 			<onfocus condition="Control.IsVisible(6000) + [Stringcompare(Container(6010).ListItem.Property(Path),ActivateWindow(Videos,MovieTitles,return)) | Stringcompare(Container(6010).ListItem.Property(Path),ActivateWindow(Videos,MusicVideoTitles,return)) | Substring(Container(6010).ListItem.Property(Path),videodb://movies/)]">SetProperty(DontRunTVShowScripts,True,Home)</onfocus>
 			<onfocus condition="Control.IsVisible(6000) + [stringcompare(Container(6010).ListItem.Property(Type),0) | stringcompare(Container(6010).ListItem.Property(Type),1) | stringcompare(Container(6010).ListItem.Property(Type),2) | stringcompare(Container(6010).ListItem.Property(Type),3)]">RunAddon($INFO[Container(6010).ListItem.Property(Path)])</onfocus>
 			<onfocus condition="Control.IsVisible(6000) + stringcompare(Container(6010).ListItem.Property(Type),4)">ActivateWindow(Videos,$ESCINFO[Container(6010).ListItem.Property(Path)],return)</onfocus>
-			<onfocus condition="Control.IsVisible(6000) + stringcompare(Container(6010).ListItem.Property(Type),5)">ActivateWindow(MusicLibrary,$ESCINFO[Container(6010).ListItem.Property(Path)],return)</onfocus>
+			<onfocus condition="Control.IsVisible(6000) + stringcompare(Container(6010).ListItem.Property(Type),5) + Library.HasContent(Music)">ActivateWindow(MusicLibrary,$ESCINFO[Container(6010).ListItem.Property(Path)],return)</onfocus>
+			<onfocus condition="Control.IsVisible(6000) + stringcompare(Container(6010).ListItem.Property(Type),5) + !Library.HasContent(Music)">ActivateWindow(MusicFiles)</onfocus>
 			<onfocus condition="Control.IsVisible(6000) + [stringcompare(Container(6010).ListItem.Property(Type),6) | Stringcompare(Container(6010).ListItem.Property(Type),7) | Stringcompare(Container(6010).ListItem.Property(Type),custom)]">$INFO[Container(6010).ListItem.Property(Path)]</onfocus>
 			<onfocus condition="Control.IsVisible(6000) + IsEmpty(Container(6010).ListItem.Property(Type))">ActivateWindow(1135)</onfocus>
 			<onfocus condition="Control.IsVisible(7998)">SetFocus(7000)</onfocus>
 			<onfocus condition="Control.IsVisible(7998) + [Stringcompare(Container(7000).ListItem.Property(Path),ActivateWindow(Videos,MovieTitles,return)) | Stringcompare(Container(7000).ListItem.Property(Path),ActivateWindow(Videos,MusicVideoTitles,return)) | Substring(Container(7000).ListItem.Property(Path),videodb://movies/)]">SetProperty(DontRunTVShowScripts,True,Home)</onfocus>
 			<onfocus condition="Control.IsVisible(7998) + [stringcompare(Container(7000).ListItem.Property(Type),0) | stringcompare(Container(7000).ListItem.Property(Type),1) | stringcompare(Container(7000).ListItem.Property(Type),2) | stringcompare(Container(7000).ListItem.Property(Type),3)]">RunAddon($INFO[Container(7000).ListItem.Property(Path)])</onfocus>
 			<onfocus condition="Control.IsVisible(7998) + stringcompare(Container(7000).ListItem.Property(Type),4)">ActivateWindow(Videos,$ESCINFO[Container(7000).ListItem.Property(Path)],return)</onfocus>
-			<onfocus condition="Control.IsVisible(7998) + stringcompare(Container(7000).ListItem.Property(Type),5)">ActivateWindow(MusicLibrary,$ESCINFO[Container(7000).ListItem.Property(Path)],return)</onfocus>
+			<onfocus condition="Control.IsVisible(7998) + stringcompare(Container(7000).ListItem.Property(Type),5) + Library.HasContent(Music)">ActivateWindow(MusicLibrary,$ESCINFO[Container(7000).ListItem.Property(Path)],return)</onfocus>
+			<onfocus condition="Control.IsVisible(7998) + stringcompare(Container(7000).ListItem.Property(Type),5) + !Library.HasContent(Music)">ActivateWindow(MusicFiles)</onfocus>
 			<onfocus condition="Control.IsVisible(7998) + [stringcompare(Container(7000).ListItem.Property(Type),6) | Stringcompare(Container(7000).ListItem.Property(Type),7) | Stringcompare(Container(7000).ListItem.Property(Type),custom)]">$INFO[Container(7000).ListItem.Property(Path)]</onfocus>
 			<onfocus condition="Control.IsVisible(7998) + IsEmpty(Container(7000).ListItem.Property(Type))">ActivateWindow(1135)</onfocus>
 		</control>
@@ -266,7 +271,7 @@
 		<control type="group">
 			<control type="multiimage">
 				<aspectratio align="center" aligny="top">scale</aspectratio>
-				<imagepath background="true" fallback="special://skin/backgrounds/videos">$VAR[HomeMainFanartVar]</imagepath>
+				<imagepath background="true" fallback="special://skin/background/">$VAR[HomeMainFanartVar]</imagepath>
 				<fadetime>600</fadetime>
 				<animation effect="fade" time="480">Visible</animation>
 				<animation effect="fade" time="480">Hidden</animation>
@@ -276,7 +281,7 @@
 			</control>
 			<control type="image">
 				<aspectratio align="center" aligny="top">scale</aspectratio>
-				<texture background="true" fallback="special://skin/backgrounds/music/music.jpg">$INFO[Skin.String(LiveBG)]</texture>
+				<texture background="true" fallback="special://skin/background/default.jpg">$INFO[Skin.String(LiveBG)]</texture>
 				<fadetime>600</fadetime>
 				<include>FullscreenDimensions</include>
 				<include>Animation_WindowFade250</include>
@@ -303,27 +308,7 @@
 			<include condition="!IsEmpty(Skin.String(ArtistsLogosPath))">MusicExtraFanartHome</include>
 			<include condition="Skin.HasSetting(artistslideshowhome)">MusicArtistSlideshowHome</include>
 			<include>CommonMediaPlayingBackground</include>
-		</control>
-		<!-- LiveTV Info -->
-		<control type="group">
-			<include>Animation_VisibleChangeDelayed</include>
-			<include>Animation_WindowFade200</include>
-			<control type="image">
-				<posy>480</posy>
-				<width>1920</width>
-				<height>600</height>
-				<texture>home/nowplaying_shadow.png</texture>
-				<visible>[Control.IsVisible(8995) + Skin.HasSetting(movenowplayingwidget)] | Control.HasFocus(8000) | Control.HasFocus(8020) | Control.IsVisible(5000) | Substring(Control.GetLabel(4321),weather)</visible>
-				<include>Animation_VisibleChangeDelayed</include>
-				<animation effect="slide" time="320" tween="cubic" easing="inout" end="0,-225" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
-			</control>
-			<control type="image">
-				<width>1920</width>
-				<height>600</height>
-				<texture flipy="true">home/nowplaying_shadow.png</texture>
-				<include>Animation_VisibleChangeDelayed</include>
-				<visible>[Control.IsVisible(8995) + !Skin.HasSetting(movenowplayingwidget)] | Control.HasFocus(7000) | Control.HasFocus(7020) | Control.IsVisible(6000) | Substring(Control.GetLabel(4325),weather)</visible>
-			</control>
+			<include>BackgroundDiffuse</include>
 		</control>
 		<include>RSSPanel</include>
 		<control type="group">
@@ -398,20 +383,20 @@
 							<info>Player.Progress</info>
 							<texturebg>dialogs/progress/progress_clear.png</texturebg>
 							<lefttexture>-</lefttexture>
-							<midtexture colordiffuse="$VAR[DefaultColorVar]">dialogs/progress/progress_mid_large.png</midtexture>
+							<midtexture colordiffuse="$VAR[FontColorVar]">dialogs/progress/progress_mid_large.png</midtexture>
 							<righttexture>-</righttexture>
 							<animation effect="fade" end="30" condition="true">Conditional</animation>
 						</control>
 					</control>
 					<!-- Home Menu Bar -->
 					<control type="image">
-						<posy>442</posy>
+						<posy>510</posy>
 						<width>1920</width>
-						<height>241</height>
-						<texture border="1,75,1,75">homemenu-bar-mid.png</texture>
+						<height>104</height>
+						<texture border="0,6,0,0">menu-bar.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<animation effect="zoom" end="125,100" center="960,500" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(smallermainmenu)">Conditional</animation>
-						<animation effect="fade" start="100" end="30" time="320" reversible="true" condition="!Control.HasFocus(9000)">Conditional</animation>
+						<animation effect="fade" start="100" end="0" time="320" reversible="true" condition="!Control.HasFocus(9000)">Conditional</animation>
 					</control>
 					<control type="image">
 						<posy>442</posy>
@@ -471,6 +456,16 @@
 					</control>
 					<include condition="Skin.HasSetting(mainmenufixedlist)">MainMenuFixedList</include>
 					<include condition="!Skin.HasSetting(mainmenufixedlist)">MainMenuWrapList</include>
+					<control type="image">
+						<posx>1650</posx>
+						<posy>516</posy>
+						<width>270</width>
+						<height>98</height>
+						<texture>menu-bar-highlight.png</texture>
+						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+						<animation effect="zoom" end="125,100" center="960,500" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(smallermainmenu)">Conditional</animation>
+						<animation effect="fade" start="100" end="30" time="320" reversible="true" condition="!Control.HasFocus(9000)">Conditional</animation>
+					</control>
 				</control>
 			</control>
 		</control>
@@ -615,6 +610,18 @@
 					<aspectratio>keep</aspectratio>
 					<texture>weather/key2.png</texture>
 				</control>
+			</control>
+			<control type="button" id="7654">
+				<posx>20</posx>
+				<posy>1000</posy>
+				<width>80</width>
+				<height>80</height>
+				<texturefocus>exit-focus.png</texturefocus>
+				<texturenofocus>exit-nofocus.png</texturenofocus>
+				<include>Animation_OpenCloseZoom</include>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onclick>ActivateWindow(shutdownmenu)</onclick>
 			</control>
 			<control type="button" id="22222">
 				<include>HiddenObject</include>

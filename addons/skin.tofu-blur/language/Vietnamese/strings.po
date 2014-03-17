@@ -37,10 +37,6 @@ msgctxt "#31043"
 msgid "PAUSED"
 msgstr "ĐÃ DỪNG"
 
-msgctxt "#31053"
-msgid "Fullscreen"
-msgstr "Toàn Màn Hình"
-
 msgctxt "#31055"
 msgid "Open playlist"
 msgstr "Mở Playlist"
@@ -68,10 +64,6 @@ msgstr "Lùi"
 msgctxt "#31072"
 msgid "System info"
 msgstr "Thông tin hệ thống"
-
-msgctxt "#31085"
-msgid "Light"
-msgstr "Ánh sáng"
 
 msgctxt "#31095"
 msgid "Rating"
@@ -105,10 +97,6 @@ msgctxt "#31115"
 msgid "Customizer"
 msgstr "Tùy chỉnh"
 
-msgctxt "#31128"
-msgid "Lyrics"
-msgstr "Lời Bài Hát"
-
 msgctxt "#31162"
 msgid "Trailers"
 msgstr "Phim giới thiệu"
@@ -116,10 +104,6 @@ msgstr "Phim giới thiệu"
 msgctxt "#31175"
 msgid "Big list"
 msgstr "Danh sách lớn"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "Mặc định"
 
 msgctxt "#31299"
 msgid "Data provider"
@@ -209,17 +193,9 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "Video"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "Chương Trình"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "Hệ thống"
-
-msgctxt "#31508"
-msgid "Shutdown"
-msgstr "Tắt máy"
 
 msgctxt "#31509"
 msgid "Favorites"
@@ -233,22 +209,7 @@ msgctxt "#31616"
 msgid "Low"
 msgstr "Thấp"
 
-msgctxt "#31617"
-msgid "High"
-msgstr "Cao"
-
-msgctxt "#31629"
-msgid "Channels"
-msgstr "Kênh"
-
 msgctxt "#31706"
 msgid "First run help...."
 msgstr "Trợ giúp lần đầu tiên...."
 
-msgctxt "#31891"
-msgid "Folders"
-msgstr "Các thư mục"
-
-msgctxt "#31892"
-msgid "Categories"
-msgstr "Mục"

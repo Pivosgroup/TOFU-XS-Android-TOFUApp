@@ -37,7 +37,7 @@
 							<height>261</height>
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$VAR[ThumbnailVar]</texture>
-							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+							<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 							<bordertexture border="6">views/addonwall_select.png</bordertexture>
 							<bordersize>6</bordersize>
 						</control>
@@ -79,7 +79,7 @@
 							<height>268</height>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<texture border="6">views/addonwall_select.png</texture>
-							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+							<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 						</control>
 						<control type="image">
 							<width>189</width>
@@ -220,7 +220,7 @@
 									<width>285</width>
 									<height>161</height>
 									<texture border="6">views/addonwall_select.png</texture>
-									<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+									<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 								</control>
 								<control type="image">
 									<posy>116</posy>
@@ -252,7 +252,7 @@
 								<width>285</width>
 								<height>161</height>
 								<texture border="6">views/addonwall_select.png</texture>
-								<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+								<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 								<include>Animation_VisibleChange200</include>
 								<visible>Container.Content(tvshows)</visible>
 							</control>
@@ -304,7 +304,7 @@
 								<height>112</height>
 								<aspectratio align="center">stretch</aspectratio>
 								<texture border="6">views/addonwall_select.png</texture>
-								<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+								<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 							</control>
 							<control type="image">
 								<posx>11</posx>
@@ -411,10 +411,11 @@
 						<control type="label">
 							<posx>1260</posx>
 							<posy>154</posy>
-							<width>570</width>
+							<width>610</width>
 							<height>20</height>
 							<aligny>top</aligny>
 							<label>$INFO[ListItem.Label]</label>
+							<textcolor>$VAR[FontColorVar]</textcolor>
 							<font>Font_Bold42_Caps</font>
 							<scroll>true</scroll>
 							<animation effect="fade" end="100" time="80" delay="80" reversible="false">Visible</animation>
@@ -422,41 +423,41 @@
 						</control>
 						<control type="label">
 							<posx>1260</posx>
-							<posy>202</posy>
-							<width>570</width>
+							<posy>198</posy>
+							<width>610</width>
 							<height>20</height>
 							<aligny>top</aligny>
 							<label>$VAR[InfoWallSubTitleVar]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 							<animation effect="fade" end="100" time="80" delay="80" reversible="false">Visible</animation>
 							<animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
 						</control>
 						<control type="image">
-							<posx>1245</posx>
-							<posy>190</posy>
-							<width>600</width>
-							<height>60</height>
-							<texture border="3">list-nofocus.png</texture>
+							<posx>1256</posx>
+							<posy>235</posy>
+							<width>630</width>
+							<height>730</height>
+							<texture border="12">text-back.png</texture>
 						</control>
 					</control>
 					<control type="group">
 						<control type="textbox">
-							<posx>1260</posx>
-							<posy>260</posy>
-							<width>570</width>
-							<height>338</height>
+							<posx>1278</posx>
+							<posy>253</posy>
+							<width>576</width>
+							<height>337</height>
 							<label>$VAR[InfoWallTextboxVar]</label>
-							<font>Font_Reg30_2</font>
+							<font>Font_Reg28</font>
 							<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 						</control>
 					</control>
 					<control type="group">
-						<posx>1252</posx>
-						<posy>622</posy>
+						<posx>1278</posx>
+						<posy>612</posy>
 						<control type="image">
-							<width>573</width>
-							<height>322</height>
+							<width>576</width>
+							<height>319</height>
 							<texture background="true" fallback="fallback.jpg">$VAR[InfoWallPreviewTextureVar]</texture>
 							<fadetime>IconCrossfadeTime</fadetime>
 							<include condition="Window.IsActive(pictures)">Aspectratio_Keep</include>
@@ -465,8 +466,8 @@
 							<include>Animation_VisibleChange200</include>
 						</control>
 						<control type="videowindow" id="40001">
-							<width>573</width>
-							<height>322</height>
+							<width>576</width>
+							<height>320</height>
 							<visible>Player.Hasvideo + !VideoPlayer.IsFullscreen</visible>
 						</control>
 					</control>

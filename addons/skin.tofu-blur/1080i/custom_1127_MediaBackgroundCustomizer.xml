@@ -67,6 +67,7 @@
 				<control type="button" id="1674">
 					<label>$LOCALIZE[20445]:</label>
 					<label2>[COLOR $VAR[FontColorVar]]$VAR[MusicFanArtLabelVar][/COLOR]</label2>
+					<textcolor>grey</textcolor>
 					<!-- Toggle Fanart -->
 					<include>Objects_MediaBackgroundsButton</include>
 					<onclick condition="!Skin.HasSetting(NoMusicLibraryFanart) + !Skin.HasSetting(musicextrafanart)">Skin.SetBool(musicextrafanart)</onclick>
@@ -78,10 +79,11 @@
 				<control type="button" id="1675">
 					<label>$LOCALIZE[20445]:</label>
 					<label2>[COLOR $VAR[FontColorVar]]$VAR[VideoFanArtLabelVar][/COLOR]</label2>
+					<textcolor>grey</textcolor>
 					<!-- Toggle Fanart -->
 					<include>Objects_MediaBackgroundsButton</include>
 					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartTVShows) + !Skin.HasSetting(extrafanartseasons)">Skin.SetBool(extrafanartseasons)</onclick>
-					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartTVShows) + !Skin.HasSetting(extrafanartseasons)">Notification($LOCALIZE[31902],$LOCALIZE[31904])</onclick>
+					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartTVShows) + !Skin.HasSetting(extrafanartseasons)">Notification($LOCALIZE[31902],$LOCALIZE[31904],,dialogs/exclamation.png)</onclick>
 					<onclick condition="Skin.HasSetting(extrafanartseasons)">Skin.SetBool(NoVideoLibraryFanartTVShows)</onclick>
 					<onclick condition="Skin.HasSetting(extrafanartseasons)">Skin.Reset(extrafanartseasons)</onclick>
 					<onclick condition="Skin.HasSetting(NoVideoLibraryFanartTVShows)">Skin.Reset(NoVideoLibraryFanartTVShows)</onclick>
@@ -90,10 +92,11 @@
 				<control type="button" id="1692">
 					<label>$LOCALIZE[20445]:</label>
 					<label2>[COLOR $VAR[FontColorVar]]$VAR[VideoFanArtLabelVar][/COLOR]</label2>
+					<textcolor>grey</textcolor>
 					<!-- Toggle Fanart -->
 					<include>Objects_MediaBackgroundsButton</include>
 					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartTVShows) + !Skin.HasSetting(extrafanartepisodes)">Skin.SetBool(extrafanartepisodes)</onclick>
-					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartTVShows) + !Skin.HasSetting(extrafanartepisodes)">Notification($LOCALIZE[31902],$LOCALIZE[31904])</onclick>
+					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartTVShows) + !Skin.HasSetting(extrafanartepisodes)">Notification($LOCALIZE[31902],$LOCALIZE[31904],,dialogs/exclamation.png)</onclick>
 					<onclick condition="Skin.HasSetting(extrafanartepisodes)">Skin.SetBool(NoVideoLibraryFanartTVShows)</onclick>
 					<onclick condition="Skin.HasSetting(extrafanartepisodes)">Skin.Reset(extrafanartepisodes)</onclick>
 					<onclick condition="Skin.HasSetting(NoVideoLibraryFanartTVShows)">Skin.Reset(NoVideoLibraryFanartTVShows)</onclick>
@@ -102,10 +105,11 @@
 				<control type="button" id="1672">
 					<label>$LOCALIZE[20445]:</label>
 					<label2>[COLOR $VAR[FontColorVar]]$VAR[VideoFanArtLabelVar][/COLOR]</label2>
+					<textcolor>grey</textcolor>
 					<!-- Toggle Fanart -->
 					<include>Objects_MediaBackgroundsButton</include>
 					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanart) + !Skin.HasSetting(extrafanartmovies)">Skin.SetBool(extrafanartmovies)</onclick>
-					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanart) + !Skin.HasSetting(extrafanartmovies)">Notification($LOCALIZE[31902],$LOCALIZE[31904])</onclick>
+					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanart) + !Skin.HasSetting(extrafanartmovies)">Notification($LOCALIZE[31902],$LOCALIZE[31904],,dialogs/exclamation.png)</onclick>
 					<onclick condition="Skin.HasSetting(extrafanartmovies)">Skin.SetBool(NoVideoLibraryFanart)</onclick>
 					<onclick condition="Skin.HasSetting(extrafanartmovies)">Skin.Reset(extrafanartmovies)</onclick>
 					<onclick condition="Skin.HasSetting(NoVideoLibraryFanart)">Skin.Reset(NoVideoLibraryFanart)</onclick>
@@ -114,10 +118,11 @@
 				<control type="button" id="1673">
 					<label>$LOCALIZE[20445]:</label>
 					<label2>[COLOR $VAR[FontColorVar]]$VAR[VideoFanArtLabelVar][/COLOR]</label2>
+					<textcolor>grey</textcolor>
 					<!-- Toggle Fanart -->
 					<include>Objects_MediaBackgroundsButton</include>
 					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartMusicVideos) + !Skin.HasSetting(extrafanartmusicvideos)">Skin.SetBool(extrafanartmusicvideos)</onclick>
-					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartMusicVideos) + !Skin.HasSetting(extrafanartmusicvideos)">Notification($LOCALIZE[31902],$LOCALIZE[31904])</onclick>
+					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartMusicVideos) + !Skin.HasSetting(extrafanartmusicvideos)">Notification($LOCALIZE[31902],$LOCALIZE[31904],,dialogs/exclamation.png)</onclick>
 					<onclick condition="Skin.HasSetting(extrafanartmusicvideos)">Skin.SetBool(NoVideoLibraryFanartMusicVideos)</onclick>
 					<onclick condition="Skin.HasSetting(extrafanartmusicvideos)">Skin.Reset(extrafanartmusicvideos)</onclick>
 					<onclick condition="Skin.HasSetting(NoVideoLibraryFanartMusicVideos)">Skin.Reset(NoVideoLibraryFanartMusicVideos)</onclick>
@@ -125,6 +130,7 @@
 				</control>
 				<control type="radiobutton" id="1603">
 					<label>$LOCALIZE[31307]</label>
+					<textcolor>grey</textcolor>
 					<!--Media_Menu_BackdropVideo-->
 					<onclick>Skin.ToggleSetting(NoVideoLibraryFanart)</onclick>
 					<selected>Skin.HasSetting(NoVideoLibraryFanart)</selected>
@@ -133,9 +139,10 @@
 				</control>
 				<control type="button" id="1690">
 					<label>$LOCALIZE[20445]: [COLOR $VAR[FontColorVar]]$VAR[VideoFanArtLabelVar][/COLOR]</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_MediaBackgroundsButton</include>
 					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartTVShows) + !Skin.HasSetting(extrafanarttvshows)">Skin.SetBool(extrafanarttvshows)</onclick>
-					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartTVShows) + !Skin.HasSetting(extrafanarttvshows)">Notification($LOCALIZE[31902],$LOCALIZE[31904])</onclick>
+					<onclick condition="!Skin.HasSetting(NoVideoLibraryFanartTVShows) + !Skin.HasSetting(extrafanarttvshows)">Notification($LOCALIZE[31902],$LOCALIZE[31904],,dialogs/exclamation.png)</onclick>
 					<onclick condition="Skin.HasSetting(extrafanarttvshows)">Skin.SetBool(NoVideoLibraryFanartTVShows)</onclick>
 					<onclick condition="Skin.HasSetting(extrafanarttvshows)">Skin.Reset(extrafanarttvshows)</onclick>
 					<onclick condition="Skin.HasSetting(NoVideoLibraryFanartTVShows)">Skin.Reset(NoVideoLibraryFanartTVShows)</onclick>
@@ -144,6 +151,7 @@
 				<control type="togglebutton" id="1666">
 					<label>$LOCALIZE[31102] [COLOR $VAR[FontColorVar]]1[/COLOR]</label>
 					<altlabel>$LOCALIZE[31102] [COLOR $VAR[FontColorVar]]2[/COLOR]</altlabel>
+					<textcolor>grey</textcolor>
 					<include>Objects_MediaBackgroundsButton</include>
 					<onclick>Skin.ToggleSetting(altoverlayinfowall)</onclick>
 					<usealttexture>Skin.HasSetting(altoverlayinfowall)</usealttexture>
@@ -151,21 +159,15 @@
 				</control>
 				<control type="radiobutton" id="1679">
 					<label>31825</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_MediaBackgroundsButton</include>
 					<onclick>Skin.ToggleSetting(livebackgroundmusic)</onclick>
 					<selected>Skin.HasSetting(livebackgroundmusic)</selected>
 					<visible>Container.Content(artists)</visible>
 				</control>
-				<control type="radiobutton" id="1678">
-					<label>31387</label>
-					<include>Objects_MediaBackgroundsButton</include>
-					<onclick>Skin.ToggleSetting(darkinfopane)</onclick>
-					<selected>Skin.HasSetting(darkinfopane)</selected>
-					<enable>![stringcompare(Window(home).Property(actualViewtype),wall) + Skin.HasSetting(wallfullscreen)]</enable>
-					<visible>![stringcompare(Window(home).Property(actualViewtype),BigFan) | Stringcompare(Window(home).Property(actualViewtype),Episode) | Substring(Window(home).Property(actualViewtype),LowList) | Stringcompare(Window(home).Property(actualViewtype),Shift) | Stringcompare(Window(home).Property(actualViewtype),AddonWall) | [Substring(Window(home).Property(actualViewtype),TriPanel) + !Window.IsActive(videolibrary)]]</visible>
-				</control>
 				<control type="radiobutton" id="1703">
 					<label>$LOCALIZE[31375]</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_MediaBackgroundsButton</include>
 					<onclick>Skin.ToggleSetting(animatedbg)</onclick>
 					<selected>Skin.HasSetting(animatedbg)</selected>
@@ -174,29 +176,34 @@
 				</control>
 				<control type="button" id="1601">
 					<label>31963</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_MediaMenuLabelAlt2</include>
 					<enable>no</enable>
 				</control>
 				<control type="button" id="460">
 					<label>$LOCALIZE[31023]</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_MediaBackgroundsButton</include>
 					<onclick>Skin.Reset($INFO[Window(home).Property(BackgroundArea)]Background)</onclick>
 					<onclick>Dialog.Close(1127)</onclick>
 				</control>
 				<control type="button" id="461">
 					<label>$LOCALIZE[31113]</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_MediaBackgroundsButton</include>
 					<onclick>Skin.SetImage($INFO[Window(home).Property(BackgroundArea)]Background)</onclick>
 					<onclick>Dialog.Close(1127)</onclick>
 				</control>
 				<control type="button" id="462">
 					<label>$LOCALIZE[31114]</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_MediaBackgroundsButton</include>
 					<onclick>Skin.SetPath($INFO[Window(home).Property(BackgroundArea)]Background)</onclick>
 					<onclick>Dialog.Close(1127)</onclick>
 				</control>
 				<control type="button" id="463">
 					<label>31035</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_MediaBackgroundsButton</include>
 					<onclick>Skin.SetString($INFO[Window(home).Property(BackgroundArea)]Background,weather)</onclick>
 					<visible>Window.IsActive(weather) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>

@@ -16,25 +16,23 @@
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			</control>
 			<include>Animation_OpenCloseZoom</include>
-			<control type="button">
-				<posx>348</posx>
+			<control type="label">
+				<posx>361</posx>
 				<posy>120</posy>
 				<width>1195</width>
 				<height>60</height>
-				<texturefocus>-</texturefocus>
-				<texturenofocus>-</texturenofocus>
 				<label>31700</label>
-				<font>Font_Bold33</font>
-				<onclick>Dialog.Close(1155)</onclick>
-				<enable>no</enable>
+				<textcolor>$VAR[FontColorVar]</textcolor>
+				<font>Font_Reg36_Caps</font>
 			</control>
 			<control type="button" id="5">
 				<posx>348</posx>
 				<posy>180</posy>
 				<width>1195</width>
 				<height>60</height>
-				<texturefocus border="3">list-focus.png</texturefocus>
-				<texturenofocus>button-nofocus.png</texturenofocus>
+				<textcolor>grey</textcolor>
+				<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
 				<label>571</label>
 				<font>Font_Reg30_2</font>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
@@ -48,8 +46,9 @@
 				<posy>240</posy>
 				<width>1195</width>
 				<height>60</height>
-				<texturefocus border="3">list-focus.png</texturefocus>
-				<texturenofocus>button-nofocus.png</texturenofocus>
+				<textcolor>grey</textcolor>
+				<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
 				<label>1030</label>
 				<font>Font_Reg30_2</font>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
@@ -63,12 +62,13 @@
 				<posy>360</posy>
 				<width>1195</width>
 				<height>60</height>
+				<textcolor>grey</textcolor>
 				<font>Font_Reg30_2</font>
 				<label>31697</label>
 				<label2>$VAR[LiveBGCaseLib]</label2>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-				<texturenofocus>button-nofocus.png</texturenofocus>
-				<texturefocus border="3">list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 				<onup>6</onup>
 				<visible>IsEmpty(Window(Home).Property(LiveCasesType))</visible>
 				<ondown>8</ondown>
@@ -82,11 +82,12 @@
 				<posy>360</posy>
 				<width>1195</width>
 				<height>60</height>
+				<textcolor>grey</textcolor>
 				<font>Font_Reg30_2</font>
 				<label>31282</label>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-				<texturenofocus>button-nofocus.png</texturenofocus>
-				<texturefocus border="3">list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 				<onup>7</onup>
 				<visible>Stringcompare(Window(Home).Property(LiveCasesType),CDs)</visible>
 				<ondown>4</ondown>
@@ -101,6 +102,7 @@
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<label>31702</label>
+				<textcolor>$VAR[FontColorVar]</textcolor>
 				<font>Font_Bold33</font>
 				<disabledcolor>$VAR[FontColorVar]</disabledcolor>
 				<onclick>Skin.SetImage(LiveBG)</onclick>
@@ -115,6 +117,7 @@
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<label>20333</label>
+				<textcolor>$VAR[FontColorVar]</textcolor>
 				<font>Font_Bold33</font>
 				<disabledcolor>$VAR[FontColorVar]</disabledcolor>
 				<onclick>Skin.SetImage(LiveBG)</onclick>
@@ -122,7 +125,7 @@
 				<onclick>Dialog.Close(1155)</onclick>
 			</control>
 			<control type="panel" id="4">
-				<posx>348</posx>
+				<posx>351</posx>
 				<posy>480</posy>
 				<width>1195</width>
 				<height>900</height>
@@ -131,32 +134,33 @@
 				<onup>8</onup>
 				<ondown>4</ondown>
 				<orientation>vertical</orientation>
-				<itemlayout height="60" width="298">
+				<itemlayout height="60" width="297">
 					<control type="image">
-						<width>300</width>
+						<width>297</width>
 						<height>60</height>
 						<texture border="3">button-nofocus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
 					<control type="label">
-						<width>300</width>
+						<width>297</width>
 						<height>60</height>
 						<textoffsetx>10</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
 						<font>Font_Reg30_2</font>
+						<textcolor>grey</textcolor>
 					</control>
 				</itemlayout>
 				<focusedlayout height="60" width="298">
 					<control type="group">
 						<visible>Control.HasFocus(4)</visible>
 						<control type="image">
-							<width>300</width>
+							<width>297</width>
 							<height>60</height>
 							<texture border="3">button-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						</control>
 						<control type="label">
-							<width>300</width>
+							<width>297</width>
 							<height>60</height>
 							<textoffsetx>10</textoffsetx>
 							<label>$INFO[ListItem.Label]</label>
@@ -167,13 +171,13 @@
 					<control type="group">
 						<visible>!Control.HasFocus(4)</visible>
 						<control type="image">
-							<width>300</width>
+							<width>297</width>
 							<height>60</height>
 							<texture border="3">button-nofocus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						</control>
 						<control type="label">
-							<width>300</width>
+							<width>297</width>
 							<textoffsetx>10</textoffsetx>
 							<label>$INFO[ListItem.Label]</label>
 							<font>Font_Reg30_2</font>

@@ -4,7 +4,7 @@
 	<onload condition="System.HasAddon(script.tvtunes) + IsEmpty(Window(Home).Property(DontRunTVShowScripts))">RunScript(script.tvtunes,backend=True)</onload>
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + IsEmpty(Window(Home).Property(DontRunTVShowScripts))">RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onload>ClearProperty(BrowseActors,home)</onload>
-	<include condition="!Skin.HasSetting(setup-0.1.6)">AutoConfig</include>
+	<include condition="!Skin.HasSetting(setup-0.2.2)">AutoConfig</include>
 	<onload condition="!Skin.HasSetting(ExplainMediaMenu)">ActivateWindow(1123)</onload>
 	<allowoverlay>no</allowoverlay>
 	<views>50,52,53,57,500,501,503,550,508,509,510,511,512,514,516,518</views>
@@ -66,7 +66,7 @@
 		<control type="group">
 			<visible>!Control.IsVisible(516) + !Window.IsActive(movieinformation)</visible>
 			<control type="multiimage">
-				<imagepath background="true" fallback="special://skin/backgrounds/videos/">$VAR[VideoFanartVar]</imagepath>
+				<imagepath background="true" fallback="special://skin/background/">$VAR[VideoFanartVar]</imagepath>
 				<fadetime>FanartCrossfadeTime</fadetime>
 				<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
 				<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
@@ -74,7 +74,7 @@
 				<visible>!Control.IsVisible(4200) + !Control.IsVisible(4201)</visible>
 			</control>
 			<control type="multiimage" id="4201">
-				<imagepath background="true" fallback="special://skin/backgrounds/movies/">$VAR[MovieFanartVar]</imagepath>
+				<imagepath background="true" fallback="special://skin/background/">$VAR[MovieFanartVar]</imagepath>
 				<fadetime>FanartCrossfadeTime</fadetime>
 				<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
 				<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
@@ -82,7 +82,7 @@
 				<visible>Container.Content(movies) | Container.Content(sets)</visible>
 			</control>
 			 <control type="multiimage" id="4200">
-				<imagepath background="true" fallback="special://skin/backgrounds/tvshows/">$VAR[TVShowFanartVar]</imagepath>
+				<imagepath background="true" fallback="special://skin/background/">$VAR[TVShowFanartVar]</imagepath>
 				<fadetime>FanartCrossfadeTime</fadetime>
 				<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
 				<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
@@ -101,24 +101,20 @@
 		<!-- view id = 516-->
 		<include condition="!Skin.HasSetting(DisableBigFanVL)">BigFan</include>
 		<include>VideoBackground</include>
+		<include>BackgroundDiffuse</include>
 		<include condition="!Skin.HasSetting(DisableBigFanVL)">BigFanFurniture</include>
 		<control type="button" id="197">
 			<include>HiddenObject</include>
 			<visible>!Container.OnNext + !Container.OnPrevious + StringCompare(Control.GetLabel(4421),infopanelonauto)</visible>
 			<include>DelayAnimations</include>
 		</control>
-		<control type="button" id="5999">
-			<include>HiddenObject</include>
-			<visible>!Control.HasFocus(109)</visible>
-			<visible>Skin.HasSetting(darkinfopane) + [Control.IsVisible(7550) | Control.IsVisible(510) | Control.IsVisible(50) | Control.IsVisible(518) | [Control.IsVisible(500) + !Skin.HasSetting(wallfullscreen)] | Control.IsVisible(52) | Control.IsVisible(550)]</visible>
-		</control>
 		<control type="image">
-			<texture>diffuseoverlay.png</texture>
+			<texture>diffuse.jpg</texture>
 			<include>FullscreenDimensions</include>
-			<animation effect="fade" time="200">WindowOpen</animation>
-			<animation effect="fade" time="200">WindowClose</animation>
-			<animation effect="fade" end="100" time="440" delay="160">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="320">Hidden</animation>
+			<animation effect="fade" end="80" time="200">WindowOpen</animation>
+			<animation effect="fade" start="80" end="0" time="200">WindowClose</animation>
+			<animation effect="fade" end="80" time="320" delay="80">Visible</animation>
+			<animation effect="fade" start="80" end="0" time="320">Hidden</animation>
 			<visible>!Control.HasFocus(109)</visible>
 			<visible>[Control.IsVisible(512) + Skin.HasSetting(addonwallaltbackground)] | [Control.IsVisible(500) + Skin.HasSetting(wallfullscreen)] | [Skin.HasSetting(no_infopane_panel) + Control.IsVisible(7550)] | Control.IsVisible(5999)</visible>
 		</control>
@@ -208,7 +204,7 @@
 				<control type="button" id="7000">
 					<include>HiddenObject</include>
 					<onfocus condition="[Stringcompare(Control.GetLabel(4421),infopanelon) | Control.IsVisible(508)] + [Control.IsVisible(501) | Control.IsVisible(503) | Control.IsVisible(508)]">SetFocus(9000)</onfocus>
-					<onfocus condition="[Stringcompare(Control.GetLabel(4421),infopanelon) + Container.Content(movies) + !IsEmpty(ListItem.Trailer)] + [Control.IsVisible(501) | Control.IsVisible(503)]">SetFocus(9000)</onfocus>
+					<onfocus condition="[Stringcompare(Control.GetLabel(4421),infopanelon) + Container.Content(movies) + !IsEmpty(ListItem.Trailer)] + [Control.IsVisible(57) | Control.IsVisible(501) | Control.IsVisible(503)]">SetFocus(9000)</onfocus>
 					<onup>SetFocus(9000)</onup>
 					<onleft condition="Control.IsVisible(501)">Control.Move(501,-1)</onleft>
 					<onleft condition="Control.IsVisible(503)">Control.Move(503,-1)</onleft>

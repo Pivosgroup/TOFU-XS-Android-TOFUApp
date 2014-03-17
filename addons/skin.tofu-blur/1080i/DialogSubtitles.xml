@@ -14,6 +14,14 @@
 					<effect type="slide" end="-90,0" time="320" />
 				</animation>
 				<control type="image">
+					<posx>325</posx>
+					<posy>205</posy>
+					<width>1271</width>
+					<height>672</height>
+					<texture>common/white.png</texture>
+					<animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
 					<posx>319</posx>
 					<posy>200</posy>
 					<width>1283</width>
@@ -34,7 +42,7 @@
 					<posy>225</posy>
 					<width>600</width>
 					<height>60</height>
-					<label>$LOCALIZE[24012]</label>
+					<label>$INFO[Player.Filename]</label>
 					<font>Font_Bold33</font>
 					<textcolor>$VAR[FontColorVar]</textcolor>
 				</control>
@@ -46,23 +54,16 @@
 					<align>right</align>
 					<aligny>top</aligny>
 					<label>$INFO[Container(120).NumItems,, $LOCALIZE[31025]]$INFO[Container(120).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(120).NumPages,/,)]</label>
-					<font>Font_Reg25</font>
-				</control>
-				<control type="label" id="100">
-					<posx>390</posx>
-					<posy>842</posy>
-					<width>930</width>
-					<height>60</height>
-					<aligny>top</aligny>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Reg25</font>
 				</control>
 				<control type="image">
 					<posx>1544</posx>
 					<posy>844</posy>
-					<width>30</width>
-					<height>30</height>
+					<width>25</width>
+					<height>25</height>
 					<texture>arrowright.png</texture>
-					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 					<animation effect="rotate" end="180" center="auto" delay="40" time="320" condition="Control.HasFocus(150)">Conditional</animation>
 				</control>
 				<control type="group">
@@ -73,25 +74,25 @@
 						<height>60</height>
 						<aspectratio align="right">keep</aspectratio>
 					</control>
-					<control type="group" id="111">
+					<control type="group" id="130">
 						<control type="grouplist">
-							<posy>230</posy>
-							<width>1920</width>
-							<height>48</height>
-							<align>center</align>
+							<posx>390</posx>
+							<posy>842</posy>
+							<width>930</width>
+							<height>32</height>
 							<orientation>horizontal</orientation>
 							<itemgap>5</itemgap>
 							<control type="image">
-								<width>48</width>
-								<height>48</height>
+								<width>32</width>
+								<height>32</height>
 								<texture>subtitles/default_icon_info.png</texture>
 							</control>
 							<control type="label">
-								<width min="10" max="393">auto</width>
-								<height>48</height>
-								<label>$LOCALIZE[287]</label>
-								<font>Font_Reg32</font>
-								<wrapmultiline>true</wrapmultiline>
+								<width min="10" max="870">auto</width>
+								<height>32</height>
+								<label>$LOCALIZE[31971]</label>
+								<font>Font_Reg28</font>
+								<textcolor>$VAR[FontColorVar]</textcolor>
 							</control>
 						</control>
 					</control>
@@ -127,6 +128,7 @@
 							<height>54</height>
 							<font>Font_Reg30_2</font>
 							<info>ListItem.Label</info>
+							<textcolor>$VAR[FontColorVar]</textcolor>
 						</control>
 						<control type="image">
 							<posx>195</posx>
@@ -134,6 +136,7 @@
 							<width>60</width>
 							<height>18</height>
 							<texture>subtitles/icon_sync.png</texture>
+							<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 							<visible>ListItem.property(sync)</visible>
 						</control>
 						<control type="label">
@@ -142,6 +145,7 @@
 							<height>54</height>
 							<font>Font_Reg30_2</font>
 							<info>ListItem.Label2</info>
+							<textcolor>grey</textcolor>
 						</control>
 						<control type="image">
 							<posx>1025</posx>
@@ -149,6 +153,7 @@
 							<width>30</width>
 							<height>18</height>
 							<texture>subtitles/icon_close_caption.png</texture>
+							<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 							<visible>ListItem.property(hearing_imp)</visible>
 						</control>
 						<control type="image">
@@ -163,7 +168,7 @@
 						<control type="image">
 							<width>1275</width>
 							<height>60</height>
-							<texture border="3">list-focus.png</texture>
+							<texture border="3,0,0,20">list-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						</control>
 						<control type="label">
@@ -218,6 +223,14 @@
 				<posy>172</posy>
 				<animation effect="slide" end="-418,0" time="320" condition="Control.HasFocus(150)">Conditional</animation>
 				<control type="image">
+					<posx>1552</posx>
+					<posy>197</posy>
+					<width>413</width>
+					<height>412</height>
+					<texture>common/white.png</texture>
+					<animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
 					<posx>1546</posx>
 					<posy>192</posy>
 					<width>425</width>
@@ -266,6 +279,7 @@
 							<textoffsetx>15</textoffsetx>
 							<font>Font_Reg28</font>
 							<info>ListItem.Label</info>
+							<textcolor>grey</textcolor>
 						</control>
 					</itemlayout>
 					<focusedlayout width="417" height="60">
@@ -278,7 +292,7 @@
 						<control type="image">
 							<width>417</width>
 							<height>60</height>
-							<texture border="3">list-focus.png</texture>
+							<texture border="3,0,0,20">list-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 							<visible>Control.HasFocus(150)</visible>
 						</control>

@@ -11,12 +11,11 @@
 	<controls>
 		<include>DialogBackFade</include>
 		<control type="group">
-			<posy>-100</posy>
 			<control type="image">
 				<posx>372</posx>
 				<posy>190</posy>
 				<width>1178</width>
-				<height>622</height>
+				<height>500</height>
 				<texture border="5">panel.png</texture>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			</control>
@@ -56,13 +55,12 @@
 				<width>1170</width>
 				<height>480</height>
 				<aligny>center</aligny>
-				<onleft>60</onleft>
-				<onright>60</onright>
-				<onup>450</onup>
-				<ondown>450</ondown>
+				<onup>465</onup>
+				<ondown>465</ondown>
 				<onback>Dialog.Close(1116)</onback>
 				<control type="radiobutton" id="460">
 					<label>$LOCALIZE[24021] $LOCALIZE[31676]</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_CommonSettingsButton</include>
 					<onclick>Skin.ToggleSetting(disabletopbar)</onclick>
 					<onclick>Skin.Reset(GlobalNowPlaying)</onclick>
@@ -73,6 +71,7 @@
 				<control type="button" id="462">
 					<label>$LOCALIZE[31677]:</label>
 					<label2>[COLOR $VAR[FontColorVar]]$VAR[TopBarLeftSideLabelVar][/COLOR]</label2>
+					<textcolor>grey</textcolor>
 					<include>Objects_CommonSettingsButton</include>
 					<onclick condition="!Skin.HasSetting(breadcrumbslabel)">Skin.SetBool(breadcrumbslabel)</onclick>
 					<onclick condition="Skin.HasSetting(breadcrumbslabel)">Skin.Reset(GlobalNowPlaying)</onclick>
@@ -81,6 +80,7 @@
 				</control>
 				<control type="radiobutton" id="463">
 					<label>$LOCALIZE[31116] '$LOCALIZE[31040]'</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_CommonSettingsButton</include>
 					<onclick>Skin.ToggleSetting(GlobalNowPlaying)</onclick>
 					<selected>Skin.HasSetting(GlobalNowPlaying)</selected>
@@ -89,17 +89,26 @@
 				</control>
 				<control type="radiobutton" id="464">
 					<label>$LOCALIZE[31116] $LOCALIZE[20088]</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_CommonSettingsButton</include>
 					<onclick>Skin.ToggleSetting(breadcrumbsweather)</onclick>
 					<selected>Skin.HasSetting(breadcrumbsweather)</selected>
 					<visible>!Skin.HasSetting(disabletopbar)</visible>
 				</control>
-				<control type="button" id="465">
-					<align>center</align>
-					<label>13012</label>
-					<include>Objects_CommonSettingsButton</include>
-					<onclick>Dialog.Close(1116)</onclick>
-				</control>
+			</control>
+			<control type="button" id="465">
+				<posx>812</posx>
+				<posy>600</posy>
+				<width>300</width>
+				<texturefocus border="3">button-focus.png</texturefocus>
+				<texturenofocus border="3">button-nofocus.png</texturenofocus>
+				<align>center</align>
+				<label>13012</label>
+				<textcolor>grey</textcolor>
+				<include>Objects_CommonSettingsButton</include>
+				<onup>450</onup>
+				<ondown>450</ondown>
+				<onclick>Dialog.Close(1116)</onclick>
 			</control>
 		</control>
 	</controls>

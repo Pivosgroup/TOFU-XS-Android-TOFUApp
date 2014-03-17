@@ -53,6 +53,7 @@
 				<ondown>450</ondown>
 				<control type="radiobutton" id="460">
 					<label>$LOCALIZE[31688]</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_CommonSettingsButton</include>
 					<onclick>Skin.ToggleSetting(DisableTimePanel)</onclick>
 					<selected>Skin.HasSetting(DisableTimePanel)</selected>
@@ -60,6 +61,7 @@
 				</control>
 				<control type="radiobutton" id="462">
 					<label>$LOCALIZE[31690]</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_CommonSettingsButton</include>
 					<onclick>Skin.ToggleSetting(DisableRSS)</onclick>
 					<selected>Skin.HasSetting(DisableRSS)</selected>
@@ -67,7 +69,8 @@
 				</control>
 				<control type="button" id="463">
 					<label>$LOCALIZE[31691]</label>
-					<label2>[COLOR $VAR[FontColorVar]] $LOCALIZE[31628]: $VAR[FurniturePositionVar][/COLOR]</label2>
+					<label2>$LOCALIZE[31628]: $VAR[FurniturePositionVar]</label2>
+					<textcolor>grey</textcolor>
 					<include>Objects_CommonSettingsButton</include>
 					<enable>!Skin.HasSetting(DisableTimePanel)</enable>
 					<onclick>Skin.ToggleSetting(timehomehigh)</onclick>
@@ -75,14 +78,16 @@
 				</control>
 				<control type="button" id="465">
 					<label>$LOCALIZE[31691]</label>
-					<label2>[COLOR $VAR[FontColorVar]] $LOCALIZE[31628]: $VAR[FurniturePositionVar][/COLOR]</label2>
+					<label2>$LOCALIZE[31628]: $VAR[FurniturePositionVar]</label2>
+					<textcolor>grey</textcolor>
 					<include>Objects_CommonSettingsButton</include>
 					<onclick>Skin.ToggleSetting(lowermainmenu)</onclick>
 					<visible>Stringcompare(Window.Property(actualItem),MainMenu)</visible>
 				</control>
 				<control type="button" id="466">
 					<label>$LOCALIZE[31813]:</label>
-					<label2>[COLOR $VAR[FontColorVar]]$VAR[MainMenuTypeVar][/COLOR]</label2>
+					<label2>$VAR[MainMenuTypeVar]</label2>
+					<textcolor>grey</textcolor>
 					<include>Objects_CommonSettingsButton</include>
 					<onclick condition="!Skin.HasSetting(biggergap) + !Skin.HasSetting(mainmenuicons)">Skin.SetBool(mainmenuicons)</onclick>
 					<onclick condition="Skin.HasSetting(mainmenuicons)">Skin.SetBool(biggergap)</onclick>
@@ -92,6 +97,7 @@
 				</control>
 				<control type="radiobutton" id="468">
 					<label>$LOCALIZE[31699]</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_CommonSettingsButton</include>
 					<selected>Skin.HasSetting(smallermainmenu)</selected>
 					<onclick>Skin.ToggleSetting(smallermainmenu)</onclick>
@@ -99,7 +105,8 @@
 				</control>
 				<control type="button" id="456">
 					<label>$LOCALIZE[31694]:</label>
-					<label2>[COLOR $VAR[FontColorVar]]$VAR[MainMenuFixedListVar][/COLOR]</label2>
+					<textcolor>grey</textcolor>
+					<label2>$VAR[MainMenuFixedListVar]</label2>
 					<include>Objects_CommonSettingsButton</include>
 					<onclick condition="!Skin.HasSetting(mainmenufixedlist) + !Skin.HasSetting(submenufixedlist)">Skin.SetBool(submenufixedlist)</onclick>
 					<onclick condition="Skin.HasSetting(submenufixedlist)">Skin.SetBool(mainmenufixedlist)</onclick>
@@ -111,6 +118,7 @@
 				</control>
 				<control type="radiobutton" id="457">
 					<label>31814</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_CommonSettingsButton</include>
 					<onclick>Skin.ToggleSetting(showsubmenu)</onclick>
 					<selected>Skin.HasSetting(showsubmenu)</selected>
@@ -118,7 +126,8 @@
 				</control>
 				<control type="button" id="470">
 					<label>$LOCALIZE[31691]</label>
-					<label2>[COLOR $VAR[FontColorVar]] $LOCALIZE[31628]: $VAR[FurniturePositionVar][/COLOR]</label2>
+					<textcolor>grey</textcolor>
+					<label2>$LOCALIZE[31628]: $VAR[FurniturePositionVar]</label2>
 					<include>Objects_CommonSettingsButton</include>
 					<enable>!Skin.HasSetting(DisableRSS)</enable>
 					<onclick>Skin.ToggleSetting(rsshomelow)</onclick>

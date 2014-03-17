@@ -15,11 +15,10 @@
 				<texture background="true" fallback="fallback.jpg">$VAR[DialogVideoInfoFanartVar]</texture>
 			</control>
 			<control type="image">
-				<posx>729</posx>
-				<width>1192</width>
+				<posx>650</posx>
+				<width>1270</width>
 				<height>1080</height>
-				<texture>common/black.png</texture>
-				<animation effect="fade" end="70" condition="true">Conditional</animation>
+				<texture>panel-top.png</texture>
 			</control>
 			<!-- Buttons -->
 			<control type="group">
@@ -29,7 +28,7 @@
 					<posy>284</posy>
 					<width>854</width>
 					<height>42</height>
-					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>-</label>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
@@ -42,7 +41,7 @@
 						<posy>242</posy>
 						<width>960</width>
 						<height>42</height>
-						<texturefocus border="3">list-focus.png</texturefocus>
+						<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<label>-</label>
 						<onclick>SendClick(2003,13)</onclick>
@@ -55,7 +54,7 @@
 						<posy>283</posy>
 						<width>960</width>
 						<height>42</height>
-						<texturefocus border="3">list-focus.png</texturefocus>
+						<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<label>-</label>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
@@ -379,7 +378,7 @@
 								<height>45</height>
 								<posy>2</posy>
 								<aspectratio align="center">keep</aspectratio>
-								<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+								<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 								<texture>defaulticons/DefaultCountry.png</texture>
 							</control>
 							<control type="label">
@@ -402,7 +401,7 @@
 								<width>50</width>
 								<height>50</height>
 								<aspectratio align="right">keep</aspectratio>
-								<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+								<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 								<texture>common/director-icon.png</texture>
 							</control>
 							<control type="label">
@@ -426,7 +425,7 @@
 								<posy>2</posy>
 								<height>45</height>
 								<aspectratio align="center">keep</aspectratio>
-								<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+								<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 								<texture>defaulticons/DefaultInProgressShows.png</texture>
 							</control>
 							<control type="label">
@@ -447,7 +446,7 @@
 								<width>50</width>
 								<height>50</height>
 								<aspectratio align="right">keep</aspectratio>
-								<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+								<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 								<texture>common/writer-icon.png</texture>
 							</control>
 							<control type="label">
@@ -465,7 +464,7 @@
 						<width>40</width>
 						<height>40</height>
 						<aspectratio align="right">keep</aspectratio>
-						<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+						<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 						<texture>defaulticons/DefaultActor.png</texture>
 					</control>
 					<control type="group">
@@ -761,12 +760,12 @@
 					</control>
 				</control>
 				<control type="spincontrol" id="60">
-					<posx>1820</posx>
+					<posx>1860</posx>
 					<animation effect="slide" start="0,0" end="-260,0" time="0" condition="!IsEmpty(ListItem.Art(discart)) | !IsEmpty(ListItem.Art(characterart)) | !IsEmpty(ListItem.Art(tvshow.characterart))">Conditional</animation>
 					<animation effect="slide" start="0,0" end="0,30" time="0" condition="!IsEmpty(ListItem.Tagline)">Conditional</animation>
 					<posy>600</posy>
-					<width>50</width>
-					<height>88</height>
+					<width>40</width>
+					<height>40</height>
 					<onup>5000</onup>
 					<onleft>5000</onleft>
 					<onright>5000</onright>
@@ -832,7 +831,7 @@
 						<control type="image">
 							<width>190</width>
 							<height>217</height>
-							<texture border="3">list-focus.png</texture>
+							<texture border="3,0,0,20">list-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 							<visible>Control.HasFocus(50)</visible>
 						</control>
@@ -850,7 +849,7 @@
 							<posx>0</posx>
 							<height>51</height>
 							<posy>160</posy>
-							<texture>common/bgcolor.png</texture>
+							<texture border="3">button-focus.png</texture>
 							<animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
 							<animation effect="fade" start="100" end="80" time="40" condition="Control.HasFocus(50)">Conditional</animation>
 						</control>
@@ -880,7 +879,7 @@
 					<width>1018</width>
 					<height>400</height>
 					<onleft>5000</onleft>
-					<onright>5000</onright>
+					<onright>60</onright>
 					<onup>50</onup>
 					<ondown>5055</ondown>
 					<orientation>horizontal</orientation>
@@ -930,6 +929,7 @@
 							<include>DialogVideoInfoButton</include>
 						</control>
 						<control type="button" id="5052">
+							<textcolor>white</textcolor>
 							<include>DialogVideoInfoButtonSolid</include>
 							<label>413</label>
 							<visible>ControlGroup(6000).HasFocus</visible>
@@ -939,6 +939,7 @@
 							<onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader,mode=gui,mediatype=movie,dbid=$INFO[ListItem.DBID])</onclick>
 						</control>
 						<control type="button" id="5053">
+							<textcolor>white</textcolor>
 							<include>DialogVideoInfoButtonSolid</include>
 							<label>14061</label>
 							<animation effect="zoom" start="100,0" end="100,100" time="300" easing="out" tween="cubic">VisibleChange</animation>
@@ -948,6 +949,7 @@
 							<onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
 						</control>
 						<control type="button" id="21">
+							<textcolor>white</textcolor>
 							<label>$LOCALIZE[31467]</label>
 							<include>DialogVideoInfoButtonSolid</include>
 							<onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader,mode=custom,mediatype=movie,dbid=$INFO[ListItem.DBID],extrafanart)</onclick>
@@ -957,6 +959,7 @@
 							<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
 						</control>
 						<control type="button" id="23">
+							<textcolor>white</textcolor>
 							<label>$LOCALIZE[31365]</label>
 							<include>DialogVideoInfoButtonSolid</include>
 							<onclick>RunScript(script.tvtunes,mode=solo&amp;tvpath=$ESCINFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
@@ -965,6 +968,7 @@
 							<visible>Container.Content(tvshows) + system.hasaddon(script.tvtunes)</visible>
 						</control>
 						<control type="button" id="24">
+							<textcolor>white</textcolor>
 							<label>$LOCALIZE[31468]</label>
 							<include>DialogVideoInfoButtonSolid</include>
 							<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=movie,dbid=$INFO[ListItem.DBID],extrathumbs)</onclick>
@@ -991,7 +995,7 @@
 					<width>30</width>
 					<height>30</height>
 					<texture flipx="true">arrowright.png</texture>
-					<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 					<include>Animation_VisibleChange200</include>
 					<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 					<visible>Container(5000).HasPrevious+ ControlGroup(5000).HasFocus</visible>
@@ -1002,7 +1006,7 @@
 					<width>30</width>
 					<height>30</height>
 					<texture>arrowright.png</texture>
-					<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 					<include>Animation_VisibleChange200</include>
 					<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
 					<visible>Container(5000).HasNext+ ControlGroup(5000).HasFocus</visible>

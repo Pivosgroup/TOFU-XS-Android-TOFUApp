@@ -30,35 +30,28 @@
 			<texture>common/black.png</texture>
 			<animation effect="fade" end="20" condition="true">Conditional</animation>
 		</control>
-		<control type="image">
-			<posx>1034</posx>
-			<posy>34</posy>
-			<width>4</width>
-			<height>406</height>
-			<texture>divider-vertical.png</texture>
-			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-		</control>
 		<control type="group" id="9000">
 			<control type="spincontrolex" id="10">
 				<posx>20</posx>
 				<posy>51</posy>
 				<width>1014</width>
 				<height>62</height>
+				<textcolor>grey</textcolor>
 				<textoffsetx>30</textoffsetx>
-				<texturefocus border="3">list-focus.png</texturefocus>
+				<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 				<texturenofocus border="3">list-nofocus.png</texturenofocus>
 				<onup>16</onup>
 				<ondown>11</ondown>
 				<onright>9001</onright>
-				<spinposx>-4</spinposx>
 			</control>
 			<control type="button" id="11">
 				<posx>20</posx>
 				<posy>113</posy>
 				<width>1014</width>
 				<height>62</height>
+				<textcolor>grey</textcolor>
 				<textoffsetx>30</textoffsetx>
-				<texturefocus border="3">list-focus.png</texturefocus>
+				<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 				<texturenofocus border="3">list-nofocus.png</texturenofocus>
 				<onup>10</onup>
 				<ondown>13</ondown>
@@ -70,8 +63,9 @@
 				<posy>175</posy>
 				<width>1014</width>
 				<height>62</height>
+				<textcolor>grey</textcolor>
 				<textoffsetx>30</textoffsetx>
-				<texturefocus border="3">list-focus.png</texturefocus>
+				<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 				<texturenofocus border="3">list-nofocus.png</texturenofocus>
 				<onup>11</onup>
 				<ondown>14</ondown>
@@ -83,8 +77,9 @@
 				<posy>237</posy>
 				<width>1014</width>
 				<height>62</height>
+				<textcolor>grey</textcolor>
 				<textoffsetx>30</textoffsetx>
-				<texturefocus border="3">list-focus.png</texturefocus>
+				<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 				<texturenofocus border="3">list-nofocus.png</texturenofocus>
 				<label>1203</label>
 				<onup>13</onup>
@@ -97,8 +92,9 @@
 				<posy>299</posy>
 				<width>1014</width>
 				<height>62</height>
+				<textcolor>grey</textcolor>
 				<textoffsetx>30</textoffsetx>
-				<texturefocus border="3">list-focus.png</texturefocus>
+				<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 				<texturenofocus border="3">list-nofocus.png</texturenofocus>
 				<label>1204</label>
 				<onup>14</onup>
@@ -111,8 +107,9 @@
 				<posy>361</posy>
 				<width>1014</width>
 				<height>62</height>
+				<textcolor>grey</textcolor>
 				<textoffsetx>30</textoffsetx>
-				<texturefocus border="3">list-focus.png</texturefocus>
+				<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 				<texturenofocus border="3">list-nofocus.png</texturenofocus>
 				<onup>15</onup>
 				<ondown>10</ondown>
@@ -121,7 +118,7 @@
 			</control>
 		</control>
 		<control type="grouplist" id="9001">
-			<posx>1038</posx>
+			<posx>1036</posx>
 			<posy>237</posy>
 			<width>228</width>
 			<height>186</height>
@@ -134,8 +131,9 @@
 			<control type="button" id="12">
 				<width>234</width>
 				<height>62</height>
+				<textcolor>grey</textcolor>
 				<textoffsetx>30</textoffsetx>
-				<texturefocus border="3">button-focus2.png</texturefocus>
+				<texturefocus border="3">button-focus.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<label>1024</label>
 				<font>Font_Reg32</font>
@@ -144,8 +142,9 @@
 			<control type="button" id="18">
 				<width>234</width>
 				<height>62</height>
+				<textcolor>grey</textcolor>
 				<textoffsetx>30</textoffsetx>
-				<texturefocus border="3">button-focus2.png</texturefocus>
+				<texturefocus border="3">button-focus.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<label>186</label>
 				<font>Font_Reg30_2</font>
@@ -154,8 +153,9 @@
 			<control type="button" id="19">
 				<width>234</width>
 				<height>62</height>
+				<textcolor>grey</textcolor>
 				<textoffsetx>30</textoffsetx>
-				<texturefocus border="3">button-focus2.png</texturefocus>
+				<texturefocus border="3">button-focus.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<label>222</label>
 				<font>Font_Reg30_2</font>

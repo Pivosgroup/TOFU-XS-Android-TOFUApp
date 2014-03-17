@@ -20,7 +20,7 @@
 	</include>
 	<include name="BreadcrumbsContent">
 		<control type="grouplist">
-			<posx>5</posx>
+			<posx>25</posx>
 			<include>TopBarWidthLeftSide</include>
 			<orientation>horizontal</orientation>
 			<visible>Skin.HasSetting(breadcrumbslabel)</visible>
@@ -36,17 +36,20 @@
 				<animation effect="rotate" end="-180" center="auto" delay="240" time="640" condition="ControlGroup(9000).HasFocus">Conditional</animation>
 				<animation effect="rotate" start="-90" end="180" center="auto" delay="240" time="640" condition="Control.IsVisible(503) + [Skin.HasSetting(landscapeonelogo) + Container.Content(movies)]">Conditional</animation>
 				<include>Animation_VisibleChange400</include>
-				<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+				<colordiffuse>$VAR[TopBarColorVar]</colordiffuse>
 				<visible>Skin.HasSetting(TopBarToolTip)</visible>
 			</control>
-			<control type="image">
-				<width>54</width>
-				<height>38</height>
-				<aspectratio>keep</aspectratio>
-				<texture>$VAR[BreadcrumbsIconVar]</texture>
-				<include condition="![Window.IsActive(skinsettings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(systeminfo) | Window.IsActive(settings)]">Animation_WindowFade200</include>
-				<colordiffuse>$VAR[FontColorVar]</colordiffuse>
-				<visible>Skin.HasSetting(breadcrumbslabel) + ![Skin.HasSetting(GlobalNowPlaying) + Player.HasMedia]</visible>
+			<control type="group">
+				<width>48</width>
+				<control type="image">
+					<posy>8</posy>
+					<width>26</width>
+					<height>26</height>
+					<texture>Pivos_Logo.png</texture>
+					<include condition="![Window.IsActive(skinsettings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(systeminfo) | Window.IsActive(settings)]">Animation_WindowFade200</include>
+					<colordiffuse>$VAR[TopBarColorVar]</colordiffuse>
+					<visible>Skin.HasSetting(breadcrumbslabel) + ![Skin.HasSetting(GlobalNowPlaying) + Player.HasMedia]</visible>
+				</control>
 			</control>
 			<control type="label">
 				<label>$VAR[BreadcrumbsVideoVar]</label>
@@ -78,8 +81,8 @@
 				<timeperimage>100</timeperimage>
 				<randomize>true</randomize>
 				<include condition="![Window.IsActive(skinsettings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(systeminfo) | Window.IsActive(settings)]">Animation_WindowFade200</include>
-				<visible>Player.HasAudio + Player.Playing</visible>
-				<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+				<visible>[Player.HasVideo | Player.HasAudio] + Player.Playing</visible>
+				<colordiffuse>$VAR[TopBarColorVar]</colordiffuse>
 			</control>
 			<control type="image">
 				<posx>12</posx>
@@ -88,17 +91,8 @@
 				<height>24</height>
 				<texture>VisualEqu/static/0.png</texture>
 				<include condition="![Window.IsActive(skinsettings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(systeminfo) | Window.IsActive(settings)]">Animation_WindowFade200</include>
-				<visible>Player.HasAudio + !Player.Playing</visible>
-				<colordiffuse>$VAR[FontColorVar]</colordiffuse>
-			</control>
-			<control type="image">
-				<width>54</width>
-				<height>38</height>
-				<aspectratio>keep</aspectratio>
-				<texture>common/logo_movies.png</texture>
-				<colordiffuse>$VAR[FontColorVar]</colordiffuse>
-				<visible>Player.HasVideo</visible>
-				<include condition="![Window.IsActive(skinsettings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(systeminfo) | Window.IsActive(settings)]">Animation_WindowFade200</include>
+				<visible>[Player.HasVideo | Player.HasAudio] + !Player.Playing</visible>
+				<colordiffuse>$VAR[TopBarColorVar]</colordiffuse>
 			</control>
 			<control type="grouplist">
 				<posx>68</posx>
@@ -183,7 +177,7 @@
 						<height>42</height>
 						<aspectratio>keep</aspectratio>
 						<texture>breadcrumbs/items.png</texture>
-						<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+						<colordiffuse>$VAR[TopBarColorVar]</colordiffuse>
 						<include>Animation_WindowFade200</include>
 					</control>
 					<control type="label">
@@ -195,7 +189,7 @@
 						<height>42</height>
 						<aspectratio>keep</aspectratio>
 						<texture>breadcrumbs/pages.png</texture>
-						<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+						<colordiffuse>$VAR[TopBarColorVar]</colordiffuse>
 						<include>Animation_WindowFade200</include>
 						<visible>!Stringcompare(Container.NumPages,1)</visible>
 					</control>

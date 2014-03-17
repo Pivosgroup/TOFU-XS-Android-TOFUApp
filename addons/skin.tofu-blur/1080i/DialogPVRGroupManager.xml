@@ -31,8 +31,8 @@
 						<height>60</height>
 						<textoffsetx>15</textoffsetx>
 						<label>31103</label>
-						<font>Font_Bold37_Caps</font>
 						<textcolor>$VAR[FontColorVar]</textcolor>
+						<font>Font_Bold37_Caps</font>
 					</control>
 					<control type="list" id="13">
 						<posx>0</posx>
@@ -60,6 +60,7 @@
 								<textoffsetx>30</textoffsetx>
 								<font>Font_Reg32</font>
 								<info>ListItem.Label</info>
+								<textcolor>grey</textcolor>
 							</control>
 						</itemlayout>
 						<focusedlayout height="74">
@@ -68,15 +69,7 @@
 								<posy>0</posy>
 								<width>489</width>
 								<height>74</height>
-								<texture border="3">list-nofocus.png</texture>
-								<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-							</control>
-							<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>489</width>
-								<height>74</height>
-								<texture border="3">list-focus.png</texture>
+								<texture border="3,0,0,20">list-focus.png</texture>
 								<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 								<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(13)">Conditional</animation>
 							</control>
@@ -100,6 +93,7 @@
 						<height>60</height>
 						<textoffsetx>15</textoffsetx>
 						<font>Font_Bold34_Caps</font>
+						<textcolor>$VAR[FontColorVar]</textcolor>
 					</control>
 					<control type="list" id="11">
 						<posx>0</posx>
@@ -137,6 +131,7 @@
 								<height>74</height>
 								<textoffsetx>15</textoffsetx>
 								<label>$INFO[ListItem.ChannelNumber,, - ]$INFO[ListItem.ChannelName]</label>
+								<textcolor>grey</textcolor>
 								<font>Font_Reg32</font>
 							</control>
 						</itemlayout>
@@ -146,17 +141,9 @@
 								<posy>0</posy>
 								<width>489</width>
 								<height>74</height>
-								<texture border="3">list-nofocus.png</texture>
+								<texture border="3,0,0,20">list-focus.png</texture>
+								<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(11)">Conditional</animation>
 								<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-							</control>
-							<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>489</width>
-								<height>74</height>
-								<texture border="3">list-focus.png</texture>
-								<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-								<visible>Control.HasFocus(11)</visible>
 							</control>
 							<control type="image">
 								<posx>0</posx>
@@ -188,11 +175,12 @@
 						<height>60</height>
 						<textoffsetx>15</textoffsetx>
 						<font>Font_Bold34_Caps</font>
+						<textcolor>$VAR[FontColorVar]</textcolor>
 					</control>
 					<control type="list" id="12">
 						<posx>0</posx>
 						<posy>180</posy>
-						<width>493</width>
+						<width>490</width>
 						<height>741</height>
 						<onup>12</onup>
 						<ondown>12</ondown>
@@ -203,7 +191,7 @@
 							<control type="image">
 								<posx>0</posx>
 								<posy>0</posy>
-								<width>495</width>
+								<width>490</width>
 								<height>74</height>
 								<texture border="3">list-nofocus.png</texture>
 								<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
@@ -225,6 +213,7 @@
 								<height>74</height>
 								<textoffsetx>15</textoffsetx>
 								<label>$INFO[ListItem.ChannelNumber,, - ]$INFO[ListItem.ChannelName]</label>
+								<textcolor>grey</textcolor>
 								<font>Font_Reg32</font>
 							</control>
 						</itemlayout>
@@ -234,17 +223,9 @@
 								<posy>0</posy>
 								<width>495</width>
 								<height>74</height>
-								<texture border="3">list-nofocus.png</texture>
+								<texture border="3,0,0,20">list-focus.png</texture>
+								<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(12)">Conditional</animation>
 								<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-							</control>
-							<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>495</width>
-								<height>74</height>
-								<texture border="3">list-focus.png</texture>
-								<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-								<visible>Control.HasFocus(12)</visible>
 							</control>
 							<control type="image">
 								<posx>0</posx>
@@ -268,53 +249,57 @@
 					</control>
 				</control>
 				<control type="grouplist" id="9000">
-					<posx>63</posx>
+					<posx>65</posx>
 					<posy>180</posy>
-					<width>323</width>
+					<width>322</width>
 					<height>768</height>
 					<onleft>12</onleft>
 					<onright>13</onright>
 					<onup>9000</onup>
 					<ondown>9000</ondown>
 					<control type="button" id="26">
-						<width>334</width>
+						<width>322</width>
 						<height>74</height>
+						<textcolor>grey</textcolor>
 						<textoffsetx>20</textoffsetx>
 						<textoffsety>18</textoffsety>
-						<texturefocus border="3">button-focus2.png</texturefocus>
+						<texturefocus border="3">button-focus.png</texturefocus>
 						<texturenofocus border="3">-</texturenofocus>
 						<label>31012</label>
 						<font>Font_Bold34</font>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
 					<control type="button" id="27">
-						<width>334</width>
+						<width>322</width>
 						<height>74</height>
+						<textcolor>grey</textcolor>
 						<textoffsetx>20</textoffsetx>
 						<textoffsety>18</textoffsety>
-						<texturefocus border="3">button-focus2.png</texturefocus>
+						<texturefocus border="3">button-focus.png</texturefocus>
 						<texturenofocus border="3">-</texturenofocus>
 						<label>31013</label>
 						<font>Font_Bold34</font>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
 					<control type="button" id="28">
-						<width>334</width>
+						<width>322</width>
 						<height>74</height>
+						<textcolor>grey</textcolor>
 						<textoffsetx>20</textoffsetx>
 						<textoffsety>18</textoffsety>
-						<texturefocus border="3">button-focus2.png</texturefocus>
+						<texturefocus border="3">button-focus.png</texturefocus>
 						<texturenofocus border="3">-</texturenofocus>
 						<label>31014</label>
 						<font>Font_Bold34</font>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
 					<control type="button" id="29">
-						<width>334</width>
+						<width>322</width>
 						<height>74</height>
+						<textcolor>grey</textcolor>
 						<textoffsetx>20</textoffsetx>
 						<textoffsety>18</textoffsety>
-						<texturefocus border="3">button-focus2.png</texturefocus>
+						<texturefocus border="3">button-focus.png</texturefocus>
 						<texturenofocus border="3">-</texturenofocus>
 						<label>186</label>
 						<font>Font_Bold34</font>

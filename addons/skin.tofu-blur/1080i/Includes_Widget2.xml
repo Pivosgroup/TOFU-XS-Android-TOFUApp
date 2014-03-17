@@ -3590,6 +3590,7 @@
 						<align>center</align>
 						<font>Font_Info</font>
 						<info>Window(weather).Property(Current.Condition)</info>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
@@ -3633,6 +3634,7 @@
 						<align>center</align>
 						<font>Font_Info</font>
 						<info>Window(weather).Property(Day0.Outlook)</info>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
@@ -3706,6 +3708,7 @@
 						<align>center</align>
 						<font>Font_Info</font>
 						<info>Window(weather).Property(Day1.Outlook)</info>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
@@ -3779,6 +3782,7 @@
 						<align>center</align>
 						<font>Font_Info</font>
 						<info>Window(weather).Property(Day2.Outlook)</info>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
@@ -3852,6 +3856,7 @@
 						<align>center</align>
 						<font>Font_Info</font>
 						<info>Window(weather).Property(Day3.Outlook)</info>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="image">

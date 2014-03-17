@@ -39,23 +39,26 @@
 			<texturefocus>calibration/calibrate-subtitles-focus.png</texturefocus>
 			<texturenofocus>calibration/calibrate-subtitles.png</texturenofocus>
 		</control>
-		<control type="resize" id="11"></control>
+		<control type="resize" id="11">
+		</control>
 		<control type="group">
 			<posx>30</posx>
-			<posy>120</posy>
+			<posy>-900</posy>
 			<control type="fadelabel" id="2">
-				<posy>15</posy>
+				<posy>0</posy>
 				<width>1860</width>
 				<align>center</align>
 				<label>-</label>
 				<font>Font_Bold34</font>
+				<textcolor>$VAR[FontColorVar]</textcolor>
 			</control>
 			<control type="fadelabel" id="3">
-				<posy>60</posy>
+				<posy>150</posy>
 				<width>1860</width>
 				<align>center</align>
 				<label>-</label>
 				<font>Font_Bold34</font>
+				<textcolor>$VAR[FontColorVar]</textcolor>
 			</control>
 		</control>
 	</controls>

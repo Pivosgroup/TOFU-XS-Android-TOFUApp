@@ -18,7 +18,7 @@
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			</control>
 			<control type="panel" id="4">
-				<posx>252</posx>
+				<posx>254</posx>
 				<posy>240</posy>
 				<width>896</width>
 				<height>500</height>
@@ -26,32 +26,33 @@
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<onright>20</onright>
-				<itemlayout height="60" width="448">
+				<itemlayout height="60" width="446">
 					<control type="image">
-						<width>448</width>
+						<width>446</width>
 						<height>60</height>
 						<texture border="3">button-nofocus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
 					<control type="label">
-						<width>448</width>
+						<width>446</width>
 						<height>60</height>
 						<textoffsetx>10</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
+						<textcolor>grey</textcolor>
 						<font>Font_Reg30_2</font>
 					</control>
 				</itemlayout>
-				<focusedlayout height="60" width="448">
+				<focusedlayout height="60" width="446">
 					<control type="group">
 						<visible>Control.HasFocus(4)</visible>
 						<control type="image">
-							<width>448</width>
+							<width>446</width>
 							<height>60</height>
 							<texture border="3">button-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						</control>
 						<control type="label">
-							<width>448</width>
+							<width>446</width>
 							<height>60</height>
 							<textoffsetx>10</textoffsetx>
 							<label>$INFO[ListItem.Label]</label>
@@ -62,13 +63,13 @@
 					<control type="group">
 						<visible>!Control.HasFocus(4)</visible>
 						<control type="image">
-							<width>448</width>
+							<width>446</width>
 							<height>60</height>
 							<texture border="3">button-nofocus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						</control>
 						<control type="label">
-							<width>448</width>
+							<width>446</width>
 							<textoffsetx>10</textoffsetx>
 							<label>$INFO[ListItem.Label]</label>
 							<font>Font_Reg30_2</font>
@@ -130,11 +131,6 @@
 					<item>
 						<label>31358</label>
 						<onclick>Skin.SetString(ItemToEdit.InfoLine,system)</onclick>
-						<onclick>Dialog.Close(1161)</onclick>
-					</item>
-					<item>
-						<label>12390</label>
-						<onclick>Skin.SetString(ItemToEdit.InfoLine,shutdown)</onclick>
 						<onclick>Dialog.Close(1161)</onclick>
 					</item>
 				</content>

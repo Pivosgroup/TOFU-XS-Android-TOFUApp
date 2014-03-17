@@ -45,26 +45,20 @@
 			<ondown>9012</ondown>
 			<onright>Dialog.CLose(1121)</onright>
 			<itemlayout width="214" height="60">
-				<control type="image">
-					<width>214</width>
-					<height>60</height>
-					<texture border="3">list-nofocus.png</texture>
-					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-				</control>
 				<control type="label">
 					<posx>15</posx>
 					<width>214</width>
 					<height>60</height>
 					<font>Font_Reg30_2</font>
 					<info>ListItem.Label</info>
-					<textcolor>$VAR[DefaultColorVar]</textcolor>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 				</control>
 				<control type="image">
 					<width>214</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
 					<texture>close.png</texture>
-					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 			</itemlayout>
@@ -72,14 +66,7 @@
 				<control type="image">
 					<width>214</width>
 					<height>60</height>
-					<texture border="3">list-nofocus.png</texture>
-					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-					<visible>!Control.HasFocus(9011)</visible>
-				</control>
-				<control type="image">
-					<width>214</width>
-					<height>60</height>
-					<texture border="3">list-focus.png</texture>
+					<texture border="3">button-focus.png</texture>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					<include>PanelGlowFade</include>
 					<visible>Control.HasFocus(9011)</visible>
@@ -90,16 +77,6 @@
 					<height>60</height>
 					<font>Font_Reg30_2</font>
 					<info>ListItem.Label</info>
-					<textcolor>$VAR[FontColorVar]</textcolor>
-					<visible>!Control.HasFocus(9011)</visible>
-				</control>
-				<control type="label">
-					<posx>15</posx>
-					<width>214</width>
-					<height>60</height>
-					<font>Font_Reg30_2</font>
-					<info>ListItem.Label</info>
-					<visible>Control.HasFocus(9011)</visible>
 				</control>
 				<control type="image">
 					<width>214</width>
@@ -365,18 +342,13 @@
 			<onright>Dialog.Close(1121)</onright>
 			<itemlayout width="214" height="115">
 				<control type="image">
-					<width>214</width>
-					<height>115</height>
-					<texture border="3">list-nofocus.png</texture>
-					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-				</control>
-				<control type="image">
 					<posx>72</posx>
 					<posy>5</posy>
 					<width>75</width>
 					<height>75</height>
 					<aspectratio align="center">keep</aspectratio>
 					<texture>$INFO[ListItem.Thumb]</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 				</control>
 				<control type="label">
 					<posx>110</posx>
@@ -386,20 +358,14 @@
 					<align>center</align>
 					<font>Font_Reg26_Caps</font>
 					<info>ListItem.Label</info>
-					<textcolor>$VAR[DefaultColorVar]</textcolor>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 				</control>
 			</itemlayout>
 			<focusedlayout width="214" height="115">
 				<control type="image">
 					<width>214</width>
 					<height>115</height>
-					<texture border="3">list-nofocus.png</texture>
-					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-				</control>
-				<control type="image">
-					<width>214</width>
-					<height>115</height>
-					<texture border="3">list-focus.png</texture>
+					<texture border="3">button-focus.png</texture>
 					<visible>Control.HasFocus(9011)</visible>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					<include>PanelGlowFade</include>
@@ -432,13 +398,13 @@
 			<width>53</width>
 			<height>40</height>
 			<align>center</align>
-			<texturefocus border="3">button-focus2.png</texturefocus>
+			<texturefocus border="3">button-focus.png</texturefocus>
 			<texturenofocus border="3">-</texturenofocus>
 			<label>-</label>
 			<textcolor>$VAR[FontColorVar]</textcolor>
 			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			<onclick condition="IsEmpty(Window(home).Property(quicknavsetup))">SetProperty(quicknavsetup,1,home)</onclick>
-			<onclick condition="IsEmpty(Window(home).Property(quicknavsetup))">Notification($LOCALIZE[31902],$LOCALIZE[31881])</onclick>
+			<onclick condition="IsEmpty(Window(home).Property(quicknavsetup))">Notification($LOCALIZE[31902],$LOCALIZE[31881],,dialogs/exclamation.png)</onclick>
 			<onclick condition="!IsEmpty(Window(home).Property(quicknavsetup))">ClearProperty(quicknavsetup,home)</onclick>
 			<onleft>Dialog.Close(1121)</onleft>
 			<onright>9013</onright>
@@ -454,7 +420,16 @@
 			<width>42</width>
 			<height>42</height>
 			<texture>$VAR[QuickConfigIconVar]</texture>
-			<visible>Control.IsVisible(9012)</visible>
+			<visible>Control.IsVisible(9012) + Control.HasFocus(9012)</visible>
+		</control>
+		<control type="image">
+			<posx>6</posx>
+			<posy>1043</posy>
+			<width>42</width>
+			<height>42</height>
+			<texture>$VAR[QuickConfigIconVar]</texture>
+			<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+			<visible>Control.IsVisible(9012) + !Control.HasFocus(9012)</visible>
 		</control>
 		<control type="button" id="9013">
 			<posx>54</posx>
@@ -462,7 +437,7 @@
 			<width>53</width>
 			<height>40</height>
 			<align>center</align>
-			<texturefocus border="3">button-focus2.png</texturefocus>
+			<texturefocus border="3">button-focus.png</texturefocus>
 			<texturenofocus border="3">-</texturenofocus>
 			<label>-</label>
 			<textcolor>$VAR[FontColorVar]</textcolor>
@@ -483,7 +458,16 @@
 			<width>42</width>
 			<height>42</height>
 			<texture>BigIcons/Fullscreen2.png</texture>
-			<visible>Control.IsVisible(9013)</visible>
+			<visible>Control.IsVisible(9013) + Control.HasFocus(9013)</visible>
+		</control>
+		<control type="image">
+			<posx>59</posx>
+			<posy>1043</posy>
+			<width>42</width>
+			<height>42</height>
+			<texture>BigIcons/Fullscreen2.png</texture>
+			<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+			<visible>Control.IsVisible(9013) + !Control.HasFocus(9013)</visible>
 		</control>
 		<control type="button" id="9014">
 			<posx>107</posx>
@@ -491,7 +475,7 @@
 			<width>53</width>
 			<height>40</height>
 			<align>center</align>
-			<texturefocus border="3">button-focus2.png</texturefocus>
+			<texturefocus border="3">button-focus.png</texturefocus>
 			<texturenofocus border="3">-</texturenofocus>
 			<label>-</label>
 			<textcolor>$VAR[FontColorVar]</textcolor>
@@ -512,7 +496,16 @@
 			<width>42</width>
 			<height>42</height>
 			<texture>BigIcons/Format.png</texture>
-			<visible>Control.IsVisible(9014)</visible>
+			<visible>Control.IsVisible(9014) + Control.HasFocus(9014)</visible>
+		</control>
+		<control type="image">
+			<posx>112</posx>
+			<posy>1043</posy>
+			<width>42</width>
+			<height>42</height>
+			<texture>BigIcons/Format.png</texture>
+			<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+			<visible>Control.IsVisible(9014) + !Control.HasFocus(9014)</visible>
 		</control>
 		<control type="button" id="9015">
 			<posx>160</posx>
@@ -520,7 +513,7 @@
 			<width>53</width>
 			<height>40</height>
 			<align>center</align>
-			<texturefocus border="3">button-focus2.png</texturefocus>
+			<texturefocus border="3">button-focus.png</texturefocus>
 			<texturenofocus border="3">-</texturenofocus>
 			<label>-</label>
 			<textcolor>$VAR[FontColorVar]</textcolor>
@@ -541,7 +534,16 @@
 			<width>42</width>
 			<height>42</height>
 			<texture>BigIcons/CD-DVD.png</texture>
-			<visible>Control.IsVisible(9015)</visible>
+			<visible>Control.IsVisible(9015) + Control.HasFocus(9015)</visible>
+		</control>
+		<control type="image">
+			<posx>165</posx>
+			<posy>1043</posy>
+			<width>42</width>
+			<height>42</height>
+			<texture>BigIcons/CD-DVD.png</texture>
+			<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+			<visible>Control.IsVisible(9015) + !Control.HasFocus(9015)</visible>
 		</control>
 	</controls>
 </window>

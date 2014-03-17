@@ -81,14 +81,14 @@
 			<include>Objects_MediaMenuButtonIcons</include>
 			<visible>Window.IsActive(Addonbrowser)</visible>
 			<onclick>UpdateAddonRepos</onclick>
-			<onclick>Notification($LOCALIZE[31902],$LOCALIZE[31911])</onclick>
+			<onclick>Notification($LOCALIZE[31902],$LOCALIZE[31911],,dialogs/exclamation.png)</onclick>
 		</control>
 		<control type="button" id="224">
 			<label>$LOCALIZE[31174]</label>
 			<include>Objects_MediaMenuButtonIcons</include>
 			<visible>Window.IsActive(Addonbrowser)</visible>
 			<onclick>UpdateLocalAddons</onclick>
-			<onclick>Notification($LOCALIZE[31902],$LOCALIZE[31912])</onclick>
+			<onclick>Notification($LOCALIZE[31902],$LOCALIZE[31912],,dialogs/exclamation.png)</onclick>
 		</control>
 	</include>
 	<include name="MusicLibraryButtons_Left">
@@ -110,7 +110,6 @@
 		<control type="togglebutton" id="20">
 			<label>653</label>
 			<include>Objects_MediaMenuButtonIcons</include>
-			<label>653</label>
 			<altlabel>13353</altlabel>
 			<usealttexture>library.isscanningmusic</usealttexture> 
 		</control>
@@ -141,9 +140,8 @@
 		<control type="togglebutton" id="20">
 			<label>653</label>
 			<include>Objects_MediaMenuButtonIcons</include>
-			<label>653</label>
 			<altlabel>13353</altlabel>
-			<usealttexture>library.isscanningmusic</usealttexture> 
+			<usealttexture>library.isscanningvideo</usealttexture> 
 		</control>
 		<control type="button" id="1667">
 			<label>13350</label>
@@ -385,188 +383,409 @@
 				<control type="image">
 					<texture>BigIcons/Presentation.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>!Window.IsActive(musicplaylisteditor)</visible>
+					<visible>Control.IsVisible(1802) + Control.HasFocus(1802)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Presentation.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>Control.IsVisible(1802) + !Control.HasFocus(1802)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Format.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(3)</visible>
+					<visible>Control.IsVisible(3) + Control.HasFocus(3)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Format.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>Control.IsVisible(3) + !Control.HasFocus(3)</visible>
 				</control>
 				<control type="image">
 					<texture>$VAR[SortImageVar]</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(4)</visible>
+					<visible>Control.IsVisible(4) + Control.HasFocus(4)</visible>
+				</control>
+				<control type="image">
+					<texture>$VAR[SortImageVar]</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>Control.IsVisible(4) + !Control.HasFocus(4)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Magicwand.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(19) | [Control.IsVisible(1668) + !Window.IsActive(musicplaylist) + !Window.IsActive(videoplaylist)]</visible>
+					<visible>[[Control.IsVisible(19) + Control.HasFocus(19)] | [[Control.IsVisible(1668) + Control.HasFocus(1668)] + !Window.IsActive(musicplaylist) + !Window.IsActive(videoplaylist)]]</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Magicwand.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[[Control.IsVisible(19) + !Control.HasFocus(19)] | [[Control.IsVisible(1668) + !Control.HasFocus(1668)] + !Window.IsActive(musicplaylist) + !Window.IsActive(videoplaylist)]]</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Format.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(7) + Window.IsActive(musicfiles)</visible>
+					<visible>[Control.IsVisible(7) + Window.IsActive(musicfiles)] + Control.HasFocus(7)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Format.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(7) + Window.IsActive(musicfiles)] + !Control.HasFocus(7)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Search.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(9) + Window.IsActive(musicfiles)</visible>
+					<visible>[Control.IsVisible(9) + Window.IsActive(musicfiles)] + Control.HasFocus(9)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Search.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(9) + Window.IsActive(musicfiles)] + !Control.HasFocus(9)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Microphone.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(10) + Window.IsActive(musicfiles)</visible>
+					<visible>[Control.IsVisible(10) + Window.IsActive(musicfiles)] + Control.HasFocus(10)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Microphone.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(10) + Window.IsActive(musicfiles)] + !Control.HasFocus(10)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Search.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(8) + !Window.IsActive(musicplaylisteditor)</visible>
+					<visible>[Control.IsVisible(8) + !Window.IsActive(musicplaylisteditor)] + Control.HasFocus(8)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Search.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(8) + !Window.IsActive(musicplaylisteditor)] + !Control.HasFocus(8)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Music.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(16)</visible>
+					<visible>Control.IsVisible(16) + Control.HasFocus(16)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Music.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>Control.IsVisible(16) + !Control.HasFocus(16)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Folder.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(17) + Window.IsActive(videolibrary) + Container.Content()</visible>
+					<visible>[Control.IsVisible(17) + Window.IsActive(videolibrary) + Container.Content()] + Control.HasFocus(17)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Folder.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(17) + Window.IsActive(videolibrary) + Container.Content()] + !Control.HasFocus(17)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Image.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(6) + Window.IsActive(pictures)</visible>
+					<visible>[Control.IsVisible(6) + Window.IsActive(pictures)] + Control.HasFocus(6)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Image.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(6) + Window.IsActive(pictures)] + !Control.HasFocus(6)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Image.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(7) + Window.IsActive(pictures)</visible>
+					<visible>[Control.IsVisible(7) + Window.IsActive(pictures)] + Control.HasFocus(7)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Image.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(7) + Window.IsActive(pictures)] + !Control.HasFocus(7)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/ButtonShuffle.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(9) + Window.IsActive(pictures)</visible>
+					<visible>[Control.IsVisible(9) + Window.IsActive(pictures)] + Control.HasFocus(9)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/ButtonShuffle.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(9) + Window.IsActive(pictures)] + !Control.HasFocus(9)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/book2.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(100) | Control.IsVisible(102)</visible>
-					<visible>!Window.IsActive(musicplaylisteditor)</visible>
+					<visible>[[[Control.IsVisible(100) + Control.HasFocus(100)] | [Control.IsVisible(102) + Control.HasFocus(102)]] + !Window.IsActive(musicplaylisteditor)]</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/book2.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[[[Control.IsVisible(100) + !Control.HasFocus(100)] | [Control.IsVisible(102) + !Control.HasFocus(102)]] + !Window.IsActive(musicplaylisteditor)]</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Paperclip.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(6) + Window.IsActive(musicplaylisteditor)</visible>
+					<visible>[Control.IsVisible(6) + Window.IsActive(musicplaylisteditor)] + Control.HasFocus(6)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Paperclip.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(6) + Window.IsActive(musicplaylisteditor)] + !Control.HasFocus(6)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/flpp.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(7) + Window.IsActive(musicplaylisteditor)</visible>
+					<visible>[Control.IsVisible(7) + Window.IsActive(musicplaylisteditor)] + Control.HasFocus(7)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/flpp.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(7) + Window.IsActive(musicplaylisteditor)] + !Control.HasFocus(7)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/tf.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(8) + Window.IsActive(musicplaylisteditor)</visible>
+					<visible>[Control.IsVisible(8) + Window.IsActive(musicplaylisteditor)] + Control.HasFocus(8)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/tf.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(8) + Window.IsActive(musicplaylisteditor)] + !Control.HasFocus(8)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/ButtonShuffle.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(20) + [Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist)]</visible>
+					<visible>[Control.IsVisible(20) + [Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist)]] + Control.HasFocus(20)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/ButtonShuffle.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(20) + [Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist)]] + !Control.HasFocus(20)</visible>
 				</control>
 				<control type="image">
 					<texture>$VAR[RepeatImageVar]</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(26) + [Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist)]</visible>
+					<visible>[Control.IsVisible(26) + [Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist)]] + Control.HasFocus(26)</visible>
+				</control>
+				<control type="image">
+					<texture>$VAR[RepeatImageVar]</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(26) + [Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist)]] + !Control.HasFocus(26)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/flpp.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(21) + [Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist)]</visible>
+					<visible>[Control.IsVisible(21) + [Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist)]] + Control.HasFocus(21)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/flpp.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(21) + [Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist)]] + !Control.HasFocus(21)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/tf.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(22) + [Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist)]</visible>
+					<visible>[Control.IsVisible(22) + [Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist)]] + Control.HasFocus(22)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/tf.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(22) + [Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist)]] + !Control.HasFocus(22)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/flpp.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(17) + Window.IsActive(musicfiles)</visible>
+					<visible>[Control.IsVisible(17) + Window.IsActive(musicfiles)] + Control.HasFocus(17)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/flpp.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(17) + Window.IsActive(musicfiles)] + !Control.HasFocus(17)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/ButtonCheck.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(10) + Window.IsActive(videos) + StringCompare(Control.GetLabel(10),$LOCALIZE[16102])</visible>
+					<visible>[Control.IsVisible(10) + Window.IsActive(videos) + StringCompare(Control.GetLabel(10),$LOCALIZE[16102])] + Control.HasFocus(10)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/ButtonCheck.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(10) + Window.IsActive(videos) + StringCompare(Control.GetLabel(10),$LOCALIZE[16102])] + !Control.HasFocus(10)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/ButtonRemove.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(10) + Window.IsActive(videos) + StringCompare(Control.GetLabel(10),$LOCALIZE[16101])</visible>
+					<visible>[Control.IsVisible(10) + Window.IsActive(videos) + StringCompare(Control.GetLabel(10),$LOCALIZE[16101])] + Control.HasFocus(10)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/ButtonRemove.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(10) + Window.IsActive(videos) + StringCompare(Control.GetLabel(10),$LOCALIZE[16101])] + !Control.HasFocus(10)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/ButtonAdd.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(10) + Window.IsActive(videos) + StringCompare(Control.GetLabel(10),$LOCALIZE[16100])</visible>
+					<visible>[Control.IsVisible(10) + Window.IsActive(videos) + StringCompare(Control.GetLabel(10),$LOCALIZE[16100])] + Control.HasFocus(10)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/ButtonAdd.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(10) + Window.IsActive(videos) + StringCompare(Control.GetLabel(10),$LOCALIZE[16100])] + !Control.HasFocus(10)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/QUICKPAR.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(7) + Window.IsActive(videolibrary)</visible>
+					<visible>[Control.IsVisible(7) + Window.IsActive(videolibrary)] + Control.HasFocus(7)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/QUICKPAR.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(7) + Window.IsActive(videolibrary)] + !Control.HasFocus(7)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Key.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(11) + Window.IsActive(videolibrary)</visible>
+					<visible>[Control.IsVisible(11) + Window.IsActive(videolibrary)] + Control.HasFocus(11)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Key.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(11) + Window.IsActive(videolibrary)] + !Control.HasFocus(11)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Application.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(1666)</visible>
+					<visible>Control.IsVisible(1666) + Control.HasFocus(1666)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Application.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>Control.IsVisible(1666) + !Control.HasFocus(1666)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/ButtonReload.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(20) + ![Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist)]</visible>
+					<visible>[Control.IsVisible(20) + ![Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist)]] + Control.HasFocus(20)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/ButtonReload.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(20) + ![Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist)]] + !Control.HasFocus(20)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Media.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(1667)</visible>
+					<visible>Control.IsVisible(1667) + Control.HasFocus(1667)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Media.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>Control.IsVisible(1667) + !Control.HasFocus(1667)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/AlarmClock.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(5) + Window.IsActive(addonbrowser)</visible>
+					<visible>[Control.IsVisible(5) + Window.IsActive(addonbrowser)] + Control.HasFocus(5)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/AlarmClock.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(5) + Window.IsActive(addonbrowser)] + !Control.HasFocus(5)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Message.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(6) + Window.IsActive(addonbrowser)</visible>
+					<visible>[Control.IsVisible(6) + Window.IsActive(addonbrowser)] + Control.HasFocus(6)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Message.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(6) + Window.IsActive(addonbrowser)] + !Control.HasFocus(6)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/CHAT.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(7) + Window.IsActive(addonbrowser)</visible>
+					<visible>[Control.IsVisible(7) + Window.IsActive(addonbrowser)] + Control.HasFocus(7)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/CHAT.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(7) + Window.IsActive(addonbrowser)] + !Control.HasFocus(7)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Inbox.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(223) + Window.IsActive(addonbrowser)</visible>
+					<visible>[Control.IsVisible(223) + Window.IsActive(addonbrowser)] + Control.HasFocus(223)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Inbox.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(223) + Window.IsActive(addonbrowser)] + !Control.HasFocus(223)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/so.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(224) + Window.IsActive(addonbrowser)</visible>
+					<visible>[Control.IsVisible(224) + Window.IsActive(addonbrowser)] + Control.HasFocus(224)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/so.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>[Control.IsVisible(224) + Window.IsActive(addonbrowser)] + !Control.HasFocus(224)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Drivedownload.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(1800)</visible>
+					<visible>Control.IsVisible(1800) + Control.HasFocus(1800)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Drivedownload.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>Control.IsVisible(1800) + !Control.HasFocus(1800)</visible>
 				</control>
 				<control type="image">
 					<texture>BigIcons/Controlpanel.png</texture>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(1665)</visible>
+					<visible>Control.IsVisible(1665) + Control.HasFocus(1665)</visible>
+				</control>
+				<control type="image">
+					<texture>BigIcons/Controlpanel.png</texture>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+					<include>MediaMenuIcons</include>
+					<visible>Control.IsVisible(1665) + !Control.HasFocus(1665)</visible>
 				</control>
 			</control>
 			<include>QuickNavLabel</include>
@@ -626,18 +845,18 @@
 			<textoffsetx>0</textoffsetx>
 			<textoffsety>2</textoffsety>
 			<align>center</align>
-			<texturefocus border="3">list-focus.png</texturefocus>
-			<texturenofocus border="3">list-nofocus.png</texturenofocus>
 			<label>$LOCALIZE[31633]</label>
 			<font>Font_Reg26_Caps</font>
-			<textcolor>$VAR[FontColorVar]</textcolor>
+			<disabledcolor>grey</disabledcolor>
 			<enable>false</enable>
 			<radiowidth>30</radiowidth>
 			<radioheight>30</radioheight>
 			<radioposx>18</radioposx>
 			<colordiffuse>$VAR[FontColorVar]</colordiffuse>
-			<textureradioon>Back.png</textureradioon>
-			<textureradiooff>Back.png</textureradiooff>
+			<textureradioonfocus>Back.png</textureradioonfocus>
+			<textureradioonnofocus>Back.png</textureradioonnofocus>
+			<textureradioofffocus>Back.png</textureradioofffocus>
+			<textureradiooffnofocus>Back.png</textureradiooffnofocus>
 		</control>
 	</include>
 </includes>

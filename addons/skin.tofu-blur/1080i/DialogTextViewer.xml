@@ -20,6 +20,7 @@
 				<width>1344</width>
 				<height>789</height>
 				<label>-</label>
+				<textcolor>grey</textcolor>
 				<font>Font_Reg32</font>
 				<pagecontrol>61</pagecontrol>
 			</control>

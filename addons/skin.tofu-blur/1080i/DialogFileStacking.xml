@@ -22,9 +22,9 @@
 		</control>
 		<include>Dialogs_Tablet</include>
 		<control type="list" id="450">
-			<posx>352</posx>
+			<posx>326</posx>
 			<posy>18</posy>
-			<width>720</width>
+			<width>716</width>
 			<height>150</height>
 			<align>center</align>
 			<onleft>450</onleft>
@@ -51,12 +51,14 @@
 			</focusedlayout>
 		</control>
 		<control type="label">
+			<posx>26</posx>
 			<posy>82</posy>
-			<width>855</width>
+			<width>716</width>
 			<height>33</height>
 			<align>center</align>
 			<font>Font_Reg38</font>
 			<info>Container(450).ListItem.Label</info>
+			<textcolor>grey</textcolor>
 		</control>
 	</controls>
 </window>

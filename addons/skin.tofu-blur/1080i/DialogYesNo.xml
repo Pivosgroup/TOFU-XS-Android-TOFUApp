@@ -22,27 +22,31 @@
 				<texture border="5">panel.png</texture>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			</control>
-			<control type="image">
-				<posx>23</posx>
-				<width>734</width>
-				<height>60</height>
-				<texture border="3">list-nofocus.png</texture>
-				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-			</control>
 			<control type="label" id="1">
+				<posy>25</posy>
 				<width>780</width>
 				<height>78</height>
 				<textoffsetx>45</textoffsetx>
 				<align>center</align>
 				<textcolor>$VAR[FontColorVar]</textcolor>
+				<font>Font_Reg36_Caps</font>
 				<scroll>true</scroll>
+			</control>
+			<control type="image">
+				<posx>23</posx>
+				<posy>90</posy>
+				<width>734</width>
+				<height>2</height>
+				<texture>line.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			</control>
 			<control type="textbox" id="9">
 				<posx>45</posx>
-				<posy>68</posy>
+				<posy>100</posy>
 				<width>652</width>
-				<height>60</height>
+				<height>125</height>
 				<align>center</align>
+				<textcolor>grey</textcolor>
 			</control>
 			<control type="button" id="10">
 				<textoffsety></textoffsety>
@@ -53,6 +57,7 @@
 				<textoffsetx>30</textoffsetx>
 				<align>center</align>
 				<label>106</label>
+				<textcolor>grey</textcolor>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				<texturefocus border="3">button-focus.png</texturefocus>
 				<texturenofocus border="3">button-nofocus.png</texturenofocus>
@@ -70,6 +75,7 @@
 				<textoffsetx>30</textoffsetx>
 				<align>center</align>
 				<label>107</label>
+				<textcolor>grey</textcolor>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				<texturefocus border="3">button-focus.png</texturefocus>
 				<texturenofocus border="3">button-nofocus.png</texturenofocus>

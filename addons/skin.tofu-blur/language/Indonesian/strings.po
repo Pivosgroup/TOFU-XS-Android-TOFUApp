@@ -37,10 +37,6 @@ msgctxt "#31043"
 msgid "PAUSED"
 msgstr "JEDA"
 
-msgctxt "#31053"
-msgid "Fullscreen"
-msgstr "Tampilan Penuh"
-
 msgctxt "#31055"
 msgid "Open playlist"
 msgstr "Buka daftar putar"
@@ -60,10 +56,6 @@ msgstr "Info"
 msgctxt "#31072"
 msgid "System info"
 msgstr "Informasi Sistem"
-
-msgctxt "#31085"
-msgid "Light"
-msgstr "Ringan"
 
 msgctxt "#31095"
 msgid "Rating"
@@ -89,17 +81,9 @@ msgctxt "#31111"
 msgid "Recording"
 msgstr "Merekam"
 
-msgctxt "#31128"
-msgid "Lyrics"
-msgstr "Lirik"
-
 msgctxt "#31175"
 msgid "Big list"
 msgstr "Daftar besar"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "Standar"
 
 msgctxt "#31235"
 msgid "Shift"
@@ -137,17 +121,9 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "Video"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "Program"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "Sistem"
-
-msgctxt "#31508"
-msgid "Shutdown"
-msgstr "Matikan"
 
 msgctxt "#31510"
 msgid "Weather"
@@ -164,18 +140,6 @@ msgstr "Visualisasi Audio"
 msgctxt "#31616"
 msgid "Low"
 msgstr "Video/Aliran"
-
-msgctxt "#31617"
-msgid "High"
-msgstr "Tinggi"
-
-msgctxt "#31622"
-msgid "Label"
-msgstr "Label"
-
-msgctxt "#31629"
-msgid "Channels"
-msgstr "Saluran"
 
 msgctxt "#31630"
 msgid "Custom"

@@ -41,10 +41,6 @@ msgctxt "#31017"
 msgid "Live TV"
 msgstr "Canlı TV"
 
-msgctxt "#31020"
-msgid "Extras"
-msgstr "Ekstralar"
-
 msgctxt "#31022"
 msgid "Music - Files"
 msgstr "Müzik - Dosyalar"
@@ -64,10 +60,6 @@ msgstr "Şimdi Çalınıyor"
 msgctxt "#31043"
 msgid "PAUSED"
 msgstr "DURAKLATILDI"
-
-msgctxt "#31053"
-msgid "Fullscreen"
-msgstr "Tam ekran"
 
 msgctxt "#31055"
 msgid "Open playlist"
@@ -92,10 +84,6 @@ msgstr "Geri"
 msgctxt "#31072"
 msgid "System info"
 msgstr "Sistem bilgisi"
-
-msgctxt "#31085"
-msgid "Light"
-msgstr "Hafif"
 
 msgctxt "#31095"
 msgid "Rating"
@@ -137,10 +125,6 @@ msgctxt "#31115"
 msgid "Customizer"
 msgstr "Özelleştir"
 
-msgctxt "#31128"
-msgid "Lyrics"
-msgstr "Şakı Sözleri"
-
 msgctxt "#31162"
 msgid "Trailers"
 msgstr "Fragmanlar"
@@ -148,10 +132,6 @@ msgstr "Fragmanlar"
 msgctxt "#31175"
 msgid "Big list"
 msgstr "Büyük liste"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "Varsayılan"
 
 msgctxt "#31235"
 msgid "Shift"
@@ -249,17 +229,9 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "Videolar"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "Programlar"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "Sistem"
-
-msgctxt "#31508"
-msgid "Shutdown"
-msgstr "Kapat"
 
 msgctxt "#31510"
 msgid "Weather"
@@ -276,18 +248,6 @@ msgstr "Müzik görsel öğesi"
 msgctxt "#31616"
 msgid "Low"
 msgstr "Düşük"
-
-msgctxt "#31617"
-msgid "High"
-msgstr "Yüksek"
-
-msgctxt "#31622"
-msgid "Label"
-msgstr "Etiket"
-
-msgctxt "#31629"
-msgid "Channels"
-msgstr "Kanallar"
 
 msgctxt "#31630"
 msgid "Custom"
@@ -312,10 +272,6 @@ msgstr "Müzik Dosyalar"
 msgctxt "#31889"
 msgid "Next Tracks"
 msgstr "Çalma listesi"
-
-msgctxt "#31892"
-msgid "Categories"
-msgstr "Kategoriler"
 
 msgctxt "#31896"
 msgid "10 Day"

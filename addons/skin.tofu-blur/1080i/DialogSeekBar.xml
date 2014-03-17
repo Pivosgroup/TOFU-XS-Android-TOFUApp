@@ -82,7 +82,7 @@
 					<posy>35</posy>
 					<width>1920</width>
 					<height>50</height>
-					<texture border="3">panel-bottom.png</texture>
+					<texture border="3">panel-top.png</texture>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				</control>
 				<control type="progress" id="20">
@@ -90,7 +90,7 @@
 					<posy>57</posy>
 					<width>630</width>
 					<height>20</height>
-					<midtexture border="12,0,12,0" colordiffuse="$VAR[DefaultColorVar]">dialogs/progress/progress_cache.png</midtexture>
+					<midtexture border="12,0,12,0" colordiffuse="$VAR[FontColorVar]">dialogs/progress/progress_cache.png</midtexture>
 					<info>Player.ProgressCache</info>
 				</control>
 				<control type="progress" id="20">

@@ -57,6 +57,7 @@
 						<width>520</width>
 						<height>74</height>
 						<label>$INFO[ListItem.Property(Number)]$INFO[ListItem.Property(Name), - ]</label>
+						<textcolor>grey</textcolor>
 						<font>Font_Reg32</font>
 					</control>
 					<control type="image">
@@ -74,7 +75,7 @@
 						<posy>0</posy>
 						<width>733</width>
 						<height>74</height>
-						<texture border="3">list-focus.png</texture>
+						<texture border="3,0,0,20">list-focus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
 					<control type="image">
@@ -134,49 +135,57 @@
 						<textoffsetx>30</textoffsetx>
 						<label>$LOCALIZE[19210]: $INFO[ListItem.Property(ClientName)]</label>
 						<font>Font_Reg32</font>
-						<textcolor>$VAR[PanelColorVar]</textcolor>
+						<textcolor>$VAR[FontColorVar]</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="radiobutton" id="7">
 						<label>19074</label>
-						<radioposx>575</radioposx>
+						<textcolor>grey</textcolor>
+						<radioposx>630</radioposx>
 						<include>Default_SettingRadioButtonShort</include>
 					</control>
 					<control type="edit" id="8">
 						<label>19201</label>
+						<textcolor>grey</textcolor>
 						<include>Default_SettingButtonShort</include>
 					</control>
 					<control type="button" id="9">
 						<label>19202</label>
+						<textcolor>grey</textcolor>
 						<include>Default_SettingButtonShort</include>
 					</control>
 					<control type="radiobutton" id="12">
 						<label>19206</label>
-						<radioposx>575</radioposx>
+						<textcolor>grey</textcolor>
+						<radioposx>630</radioposx>
 						<include>Default_SettingRadioButtonShort</include>
 					</control>
 					<control type="spincontrolex" id="13">
 						<textoffsetx>30</textoffsetx>
 						<label>19200</label>
+						<textcolor>grey</textcolor>
 						<include>Default_SettingButtonShort</include>
 						<spinposx>25</spinposx>
 					</control>
 					<control type="button" id="31">
 						<label>19203</label>
+						<textcolor>grey</textcolor>
 						<include>Default_SettingButtonShort</include>
 					</control>
 					<control type="button" id="32">
 						<label>19211</label>
+						<textcolor>grey</textcolor>
 						<include>Default_SettingButtonShort</include>
 					</control>
 					<control type="button" id="33">
 						<label>19204</label>
+						<textcolor>grey</textcolor>
 						<include>Default_SettingButtonShort</include>
 					</control>
 				</control>
 				<control type="image" id="10">
 					<posx>610</posx>
-					<posy>222</posy>
+					<posy>196</posy>
 					<width>74</width>
 					<height>74</height>
 					<aspectratio>keep</aspectratio>
@@ -198,11 +207,12 @@
 					<height>74</height>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
-					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<alttexturenofocus>-</alttexturenofocus>
 					<label>19024</label>
 					<altlabel>19023</altlabel>
+					<textcolor>grey</textcolor>
 					<font>Font_Bold34</font>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					<usealttexture>IsEmpty(Window.Property(IsRadio))</usealttexture>
@@ -210,9 +220,10 @@
 				<control type="button" id="30">
 					<width>334</width>
 					<height>74</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
-					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>19205</label>
 					<font>Font_Bold34</font>
@@ -221,9 +232,10 @@
 				<control type="button" id="5">
 					<width>334</width>
 					<height>74</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
-					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>14070</label>
 					<font>Font_Bold34</font>
@@ -232,9 +244,10 @@
 				<control type="button" id="6">
 					<width>334</width>
 					<height>74</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
-					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>222</label>
 					<font>Font_Bold34</font>
@@ -243,9 +256,10 @@
 				<control type="button" id="4">
 					<width>334</width>
 					<height>74</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
-					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>186</label>
 					<font>Font_Bold34</font>

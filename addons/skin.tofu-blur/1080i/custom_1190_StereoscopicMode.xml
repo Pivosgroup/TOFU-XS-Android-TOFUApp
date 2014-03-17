@@ -53,23 +53,25 @@
 				<height>700</height>
 				<aligny>center</aligny>
 				<control type="radiobutton" id="411">
-					<width>1172</width>
+					<width>1075</width>
 					<height>60</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>45</textoffsetx>
-					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 					<texturenofocus border="3">list-nofocus.png</texturenofocus>
 					<font>Font_Reg32</font>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-					<radioposx>934</radioposx>
+					<radioposx>1000</radioposx>
 					<selected>IntegerGreaterThan(System.StereoscopicMode,0)</selected>
 					<label>$LOCALIZE[305]</label>
 					<onclick>ToggleStereoMode</onclick>
 				</control>
 				<control type="button" id="412">
-					<width>1172</width>
+					<width>1075</width>
 					<height>60</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>45</textoffsetx>
-					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 					<texturenofocus border="3">list-nofocus.png</texturenofocus>
 					<font>Font_Reg32</font>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
@@ -77,14 +79,15 @@
 					<onclick>StereoMode</onclick>
 				</control>
 				<control type="radiobutton" id="413">
-					<width>1172</width>
+					<width>1075</width>
 					<height>60</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>45</textoffsetx>
-					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 					<texturenofocus border="3">list-nofocus.png</texturenofocus>
 					<font>Font_Reg32</font>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-					<radioposx>934</radioposx>
+					<radioposx>1000</radioposx>
 					<label>$LOCALIZE[36529]</label>
 					<selected>StringCompare(System.StereoscopicMode,7)</selected>
 					<onclick>StereoModeToMono</onclick>

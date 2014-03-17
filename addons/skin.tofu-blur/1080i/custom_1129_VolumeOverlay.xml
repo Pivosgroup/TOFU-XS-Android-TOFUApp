@@ -11,7 +11,6 @@
 		<effect type="fade" start="100" end="0" time="240" />
 	</animation>
 	<controls>
-		<include>DialogBackFade</include>
 		<control type="group">
 			<posx>808</posx>
 			<posy>900</posy>
@@ -47,7 +46,7 @@
 					<width>55</width>
 					<height>55</height>
 					<texture>dialogs/volume.png</texture>
-					<colordiffuse>fade</colordiffuse>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 				</control>
 			</control>
 			<control type="group">
@@ -63,14 +62,21 @@
 					<height>200</height>
 					<align>left</align>
 					<label>$INFO[Control.GetLabel(20)] %</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_MainClassic3</font>
 					<scroll>true</scroll>
 					<visible>!Window.IsVisible(mutebug)</visible>
 				</control>
 			</control>
 			<control type="label">
+				<posx>100</posx>
+				<posy>40</posy>
+				<width>180</width>
 				<label>29802</label>
-				<include>Dialogs_Label2</include>
+				<font>Font_Reg28</font>
+				<textcolor>alternate</textcolor>
+				<align>center</align>
+				<wrapmultiline>true</wrapmultiline>
 				<visible>player.passthrough</visible>
 			</control>
 			<control type="group">
@@ -81,7 +87,7 @@
 					<width>100</width>
 					<height>100</height>
 					<texture>dialogs/mute.png</texture>
-					<colordiffuse>fade</colordiffuse>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 				</control>
 				<control type="label">
 					<posx>153</posx>
@@ -90,8 +96,10 @@
 					<height>200</height>
 					<align>left</align>
 					<label>31832</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_MainClassic3</font>
 					<scroll>true</scroll>
+					<visible>!player.passthrough</visible>
 				</control>
 			</control>
 		</control>

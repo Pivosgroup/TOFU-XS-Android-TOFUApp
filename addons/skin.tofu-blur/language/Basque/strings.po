@@ -45,10 +45,6 @@ msgctxt "#31043"
 msgid "PAUSED"
 msgstr "PAUSATUA"
 
-msgctxt "#31053"
-msgid "Fullscreen"
-msgstr "Pantaila-osoa"
-
 msgctxt "#31055"
 msgid "Open playlist"
 msgstr "Ireki erreprodukzio-zerrenda"
@@ -68,10 +64,6 @@ msgstr "Argb"
 msgctxt "#31072"
 msgid "System info"
 msgstr "Sistemaren info"
-
-msgctxt "#31085"
-msgid "Light"
-msgstr "Argia"
 
 msgctxt "#31089"
 msgid "Both"
@@ -97,17 +89,9 @@ msgctxt "#31111"
 msgid "Recording"
 msgstr "Grabatzen"
 
-msgctxt "#31128"
-msgid "Lyrics"
-msgstr "Letrak"
-
 msgctxt "#31175"
 msgid "Big list"
 msgstr "Zerrenda handia"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "Lehenetsia"
 
 msgctxt "#31235"
 msgid "Shift"
@@ -181,17 +165,9 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "Bideoak"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "Programak"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "Sistema"
-
-msgctxt "#31508"
-msgid "Shutdown"
-msgstr "Itzali"
 
 msgctxt "#31509"
 msgid "Favorites"
@@ -212,18 +188,6 @@ msgstr "Audioaren bisualizazioa"
 msgctxt "#31616"
 msgid "Low"
 msgstr "Baxua"
-
-msgctxt "#31617"
-msgid "High"
-msgstr "Handia"
-
-msgctxt "#31622"
-msgid "Label"
-msgstr "Etiketa"
-
-msgctxt "#31629"
-msgid "Channels"
-msgstr "Kateak"
 
 msgctxt "#31630"
 msgid "Custom"

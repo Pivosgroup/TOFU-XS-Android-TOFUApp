@@ -8,7 +8,7 @@
 		<system>1</system>
 	</coordinates>
 	<include>Animation_DialogPopup</include>
-	<onload>Notification($LOCALIZE[31902],$LOCALIZE[31913])</onload>
+	<onload>Notification($LOCALIZE[31902],$LOCALIZE[31913],,dialogs/exclamation.png)</onload>
 	<onunload>ActivateWindow(skinsettings)</onunload>
 	<controls>
 		<control type="group">

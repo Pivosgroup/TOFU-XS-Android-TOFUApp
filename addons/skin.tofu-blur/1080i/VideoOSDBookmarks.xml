@@ -9,6 +9,14 @@
 	<include>Animation_DialogPopup2</include>
 	<controls>
 		<control type="image">
+			<posx>24</posx>
+			<posy>25</posy>
+			<width>1272</width>
+			<height>672</height>
+			<texture>common/white.png</texture>
+			<animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
+		</control>
+		<control type="image">
 			<posx>18</posx>
 			<posy>20</posy>
 			<width>1284</width>
@@ -17,33 +25,26 @@
 			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 		</control>
 		<control type="image">
-			<posx>22</posx>
-			<posy>52</posy>
-			<width>1276</width>
-			<height>60</height>
-			<texture border="3">list-nofocus.png</texture>
-			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-		</control>
-		<control type="image">
 			<posx>23</posx>
-			<posy>578</posy>
-			<width>1276</width>
-			<height>60</height>
-			<texture border="3">list-nofocus.png</texture>
+			<posy>90</posy>
+			<width>1274</width>
+			<height>2</height>
+			<texture>line.png</texture>
 			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 		</control>
 		<control type="label">
-			<posx>120</posx>
+			<posx>40</posx>
 			<posy>45</posy>
 			<width>1322</width>
 			<height>45</height>
 			<label>$LOCALIZE[298]</label>
-			<font>Font_Bold33</font>
+			<align>center</align>
 			<textcolor>$VAR[FontColorVar]</textcolor>
+			<font>Font_Reg36_Caps</font>
 		</control>
 		<control type="grouplist" id="450">
 			<posx>-40</posx>
-			<posy>639</posy>
+			<posy>630</posy>
 			<width>960</width>
 			<height>135</height>
 			<align>center</align>
@@ -57,6 +58,7 @@
 			<control type="button" id="2">
 				<width>315</width>
 				<height>60</height>
+				<textcolor>grey</textcolor>
 				<textoffsetx>0</textoffsetx>
 				<align>center</align>
 				<label>294</label>
@@ -68,6 +70,7 @@
 			<control type="button" id="4">
 				<width>315</width>
 				<height>60</height>
+				<textcolor>grey</textcolor>
 				<textoffsetx>0</textoffsetx>
 				<align>center</align>
 				<label>20406</label>
@@ -79,6 +82,7 @@
 			<control type="button" id="3">
 				<width>315</width>
 				<height>60</height>
+				<textcolor>grey</textcolor>
 				<align>center</align>
 				<label>296</label>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
@@ -86,19 +90,9 @@
 				<texturenofocus border="3">button-nofocus.png</texturenofocus>
 			</control>
 		</control>
-		<control type="label">
-			<posx>1214</posx>
-			<posy>658</posy>
-			<width>315</width>
-			<height>60</height>
-			<align>right</align>
-			<aligny>bottom</aligny>
-			<label>$INFO[Container(11).NumItems,, $LOCALIZE[31025]]$INFO[Container(11).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(11).NumPages,/,)]</label>
-			<font>Font_Reg25</font>
-		</control>
 		<control type="panel" id="11">
 			<posx>124</posx>
-			<posy>114</posy>
+			<posy>100</posy>
 			<width>1080</width>
 			<height>525</height>
 			<onleft>450</onleft>
@@ -124,6 +118,7 @@
 					<height>22</height>
 					<align>center</align>
 					<info>ListItem.Label</info>
+					<textcolor>grey</textcolor>
 				</control>
 			</itemlayout>
 			<focusedlayout height="262" width="360">
@@ -139,7 +134,7 @@
 					<width>345</width>
 					<height>225</height>
 					<texture border="6">views/addonwall_select.png</texture>
-					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 				</control>
 				<control type="label">
 					<posx>168</posx>
@@ -148,11 +143,12 @@
 					<height>22</height>
 					<align>center</align>
 					<info>ListItem.Label</info>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 				</control>
 			</focusedlayout>
 		</control>
 		<control type="scrollbar" id="61">
-			<posx>1283</posx>
+			<posx>1281</posx>
 			<posy>105</posy>
 			<width>42</width>
 			<height>540</height>

@@ -76,6 +76,7 @@
 					<height>60</height>
 					<font>Font_Reg30_2</font>
 					<label>$INFO[ListItem.Label]</label>
+					<textcolor>grey</textcolor>
 				</control>
 				<control type="image">
 					<posx>1064</posx>
@@ -103,7 +104,7 @@
 				<control type="image">
 					<width>1172</width>
 					<height>60</height>
-					<texture border="3">list-focus.png</texture>
+					<texture border="3,0,0,20">list-focus.png</texture>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(3)">Conditional</animation>
 				</control>

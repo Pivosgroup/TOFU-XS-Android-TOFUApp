@@ -9,10 +9,6 @@ msgctxt "#31003"
 msgid "N/A"
 msgstr "N/A"
 
-msgctxt "#31004"
-msgid "Month"
-msgstr "Mėnuo"
-
 msgctxt "#31005"
 msgid "Premiered"
 msgstr "Premjera"
@@ -61,14 +57,6 @@ msgctxt "#31018"
 msgid "Big covers"
 msgstr "Dideli viršeliai"
 
-msgctxt "#31020"
-msgid "Extras"
-msgstr "Ypatumai"
-
-msgctxt "#31021"
-msgid "Search TOFU for"
-msgstr "Ieškoti TOFU"
-
 msgctxt "#31022"
 msgid "Music - Files"
 msgstr "Muzikos - Failai"
@@ -105,10 +93,6 @@ msgctxt "#31032"
 msgid "Nothing"
 msgstr "Nieko"
 
-msgctxt "#31033"
-msgid "Play item on startup"
-msgstr "Atkūrti elementą startuojant"
-
 msgctxt "#31034"
 msgid "Move tooltip to top bar"
 msgstr "Perkelti paaiškinimą viršutinėje juostoje"
@@ -116,18 +100,6 @@ msgstr "Perkelti paaiškinimą viršutinėje juostoje"
 msgctxt "#31035"
 msgid "Conditional weather"
 msgstr "Sąlyginiai orai"
-
-msgctxt "#31036"
-msgid "Breadcrumbs classic"
-msgstr "Klasikinis breadcrumbs"
-
-msgctxt "#31037"
-msgid "Default breadcrumbs"
-msgstr "Numatytasis breadcrumbs"
-
-msgctxt "#31038"
-msgid "Classic top panels"
-msgstr "Klasikinė viršutinė panelė"
 
 msgctxt "#31039"
 msgid "CD-Wall"
@@ -161,14 +133,6 @@ msgctxt "#31048"
 msgid "Visualization presets"
 msgstr "Vizualizacijos nustatymas"
 
-msgctxt "#31053"
-msgid "Fullscreen"
-msgstr "Visame ekrane"
-
-msgctxt "#31054"
-msgid "Shadow"
-msgstr "Šešėlis"
-
 msgctxt "#31055"
 msgid "Open playlist"
 msgstr "Atidaryti grojaraštį"
@@ -201,10 +165,6 @@ msgctxt "#31063"
 msgid "Choose style"
 msgstr "Išsirinkti stilių"
 
-msgctxt "#31064"
-msgid "Press SELECT for alternative layout"
-msgstr "Paspauskite RINKTIS alternatyvių išdėstymą"
-
 msgctxt "#31065"
 msgid "Info"
 msgstr "Informacija"
@@ -233,22 +193,6 @@ msgctxt "#31072"
 msgid "System info"
 msgstr "Sistemos informacija"
 
-msgctxt "#31073"
-msgid "Actor information"
-msgstr "Informacija apie aktorius"
-
-msgctxt "#31074"
-msgid "Filmography"
-msgstr "Filmografija"
-
-msgctxt "#31075"
-msgid "Press SELECT to switch between now/next EPG"
-msgstr "Paspauskite 'Pasirinkti', jei norite perjungti dabar/sekantis EPG"
-
-msgctxt "#31080"
-msgid "Director information"
-msgstr "Informacija apie režisierių"
-
 msgctxt "#31081"
 msgid "Latest MusicVids"
 msgstr "Paskutiniai MusicVids"
@@ -265,10 +209,6 @@ msgctxt "#31084"
 msgid "Panels"
 msgstr "Panelė"
 
-msgctxt "#31085"
-msgid "Light"
-msgstr "Nedidelis"
-
 msgctxt "#31086"
 msgid "ClearART"
 msgstr "Aiškus ART"
@@ -277,17 +217,9 @@ msgctxt "#31087"
 msgid "Randomize All"
 msgstr "Atsistiktiniai visi"
 
-msgctxt "#31088"
-msgid "Use color for all areas"
-msgstr "Naudoti spalvas visoms sritims"
-
 msgctxt "#31089"
 msgid "Both"
 msgstr "Abu"
-
-msgctxt "#31090"
-msgid "Adjust Transparency"
-msgstr "Nustatykite skaidrumą"
 
 msgctxt "#31091"
 msgid "Random MusicVids"
@@ -297,10 +229,6 @@ msgctxt "#31092"
 msgid "Artist fanart (Extrafanart, fanart.jpg, default fanart)"
 msgstr "Atlikėjo fanart (Extrafanart, fanart.jpg, kaip yra fanart)"
 
-msgctxt "#31093"
-msgid "Actors born today"
-msgstr "Atlikėjų gimtadienis"
-
 msgctxt "#31094"
 msgid "Widget fanart"
 msgstr "FanArt valdiklis"
@@ -309,10 +237,6 @@ msgctxt "#31095"
 msgid "Rating"
 msgstr "Reitingas"
 
-msgctxt "#31096"
-msgid "Search on YouTube"
-msgstr "Ieškoti YouTube"
-
 msgctxt "#31097"
 msgid "Classic OSD style"
 msgstr "Klasikinis OSD stilius"
@@ -320,10 +244,6 @@ msgstr "Klasikinis OSD stilius"
 msgctxt "#31098"
 msgid "Background path"
 msgstr "Fono kelias"
-
-msgctxt "#31099"
-msgid "Top bar style"
-msgstr "Į viršų 'Baro stiliaus;"
 
 msgctxt "#31102"
 msgid "Background"
@@ -365,10 +285,6 @@ msgctxt "#31111"
 msgid "Recording"
 msgstr "Įrašymas"
 
-msgctxt "#31112"
-msgid "Coloured"
-msgstr "Spalvotas"
-
 msgctxt "#31113"
 msgid "Single Image"
 msgstr "Vienas paveikslėlis"
@@ -385,49 +301,13 @@ msgctxt "#31116"
 msgid "Show"
 msgstr "Rodyti"
 
-msgctxt "#31117"
-msgid "CNN International"
-msgstr "CNN International"
-
-msgctxt "#31118"
-msgid "Radio 105"
-msgstr "Radio 105"
-
-msgctxt "#31119"
-msgid "Radio Montecarlo"
-msgstr "Radio Montecarlo"
-
-msgctxt "#31120"
-msgid "Tom & Jerry"
-msgstr "Tom & Jerry"
-
-msgctxt "#31121"
-msgid "Virgin Music"
-msgstr "Virgin Music"
-
 msgctxt "#31127"
 msgid "Lyrics add-on"
 msgstr "Dainų tekstų priedas"
 
-msgctxt "#31128"
-msgid "Lyrics"
-msgstr "Dainų tekstas"
-
-msgctxt "#31130"
-msgid "Subtitle add-on"
-msgstr "Subtitrų priedas"
-
 msgctxt "#31143"
 msgid "Animated fanart in music visualization"
 msgstr "Animuoti FanArt muzikos vizualizacijai"
-
-msgctxt "#31148"
-msgid "Show timepanel"
-msgstr "Rodyti laiko skydelį"
-
-msgctxt "#31149"
-msgid "This will shutdown TOFU! [CR]Are you sure?"
-msgstr "TOFU bus išjungtas![CR]Ar tikrai to norite?"
 
 msgctxt "#31150"
 msgid "Landscape"
@@ -465,10 +345,6 @@ msgctxt "#31166"
 msgid "Infopanel"
 msgstr "Informacinė panelė"
 
-msgctxt "#31167"
-msgid "Playlists for Widget 2"
-msgstr "Grojaraščiai pagal valdiklį 2"
-
 msgctxt "#31168"
 msgid "No CoverFlow"
 msgstr "Be CoverFlow"
@@ -505,14 +381,6 @@ msgctxt "#31176"
 msgid "General options"
 msgstr "Pagrindinės parinktys"
 
-msgctxt "#31177"
-msgid "Random color mode"
-msgstr "Atsitiktinis spalvų metodas"
-
-msgctxt "#31178"
-msgid "Choose main color"
-msgstr "Pasirinkti pagrindinę spalvą"
-
 msgctxt "#31179"
 msgid "Disable media menu and hide options in video info"
 msgstr "Išjungti medijos meniu ir slėpti vaizdo informacijos parinktis"
@@ -520,10 +388,6 @@ msgstr "Išjungti medijos meniu ir slėpti vaizdo informacijos parinktis"
 msgctxt "#31180"
 msgid "Hide options in media menu"
 msgstr "Slėpti medios meniu parinktis"
-
-msgctxt "#31181"
-msgid "Activate 'Glow Mode'"
-msgstr "Aktyvinti 'Švietčiantis metodas'"
 
 msgctxt "#31182"
 msgid "Colored"
@@ -561,10 +425,6 @@ msgctxt "#31191"
 msgid "Use as icon"
 msgstr "Naudoti kaip piktogramą"
 
-msgctxt "#31192"
-msgid "Choose font color"
-msgstr "Pasirinkite spalvą"
-
 msgctxt "#31194"
 msgid "Delayed"
 msgstr "Atidėtas"
@@ -581,45 +441,9 @@ msgctxt "#31198"
 msgid "Extrathumbs"
 msgstr "Extrathumbs"
 
-msgctxt "#31199"
-msgid "News"
-msgstr "Naujas"
-
-msgctxt "#31200"
-msgid "TOFU Cinema"
-msgstr "TOFU Kinas"
-
-msgctxt "#31201"
-msgid "TOFU Trailer"
-msgstr "TOFU filmo anonsas"
-
-msgctxt "#31202"
-msgid "DailyMotion"
-msgstr "Dienos pasiūlymas"
-
-msgctxt "#31203"
-msgid "YouTube User Uploads"
-msgstr "YouTube naudotojo įkėlimai"
-
-msgctxt "#31204"
-msgid "YouTube User Favorites"
-msgstr "YouTube naudotojui patinkantys"
-
-msgctxt "#31205"
-msgid "Youtube Most Viewed"
-msgstr "YouTube labiausiai žiūrima"
-
-msgctxt "#31206"
-msgid "Youtube Most Popular"
-msgstr "YouTube populiariausi"
-
 msgctxt "#31220"
 msgid "Random episodes"
 msgstr "Atsitiktiniai epizodai"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "Numatytas"
 
 msgctxt "#31222"
 msgid "Random movies"
@@ -644,10 +468,6 @@ msgstr "Vertikalus"
 msgctxt "#31229"
 msgid "Horizontal"
 msgstr "Horizontalus"
-
-msgctxt "#31230"
-msgid "Viewtypes"
-msgstr "Peržiūra"
 
 msgctxt "#31231"
 msgid "Navigation"
@@ -709,18 +529,6 @@ msgctxt "#31255"
 msgid "Blu-ray Disc"
 msgstr "Blu-ray diskas"
 
-msgctxt "#31256"
-msgid "Include already watched Items?"
-msgstr "Įtraukti 'Peržiūrėti elementai' jau yra?"
-
-msgctxt "#31265"
-msgid "Smaller pop-up dialogs"
-msgstr "Mažesni iššokantys dialogai"
-
-msgctxt "#31269"
-msgid "Enable background effect [I](Can increase CPU usage!)   [/I]"
-msgstr "Įjungti fono efektus [I](Gali padidėti CPU naudojimas!)   [/I]"
-
 msgctxt "#31271"
 msgid "Posters"
 msgstr "Plakatai"
@@ -732,10 +540,6 @@ msgstr "Išdėstymas"
 msgctxt "#31279"
 msgid "Play trailers in fullscreen"
 msgstr "Atkūrti filmo anonsą visame ekrane"
-
-msgctxt "#31281"
-msgid "Show video info when player is paused"
-msgstr "Atkūrti vaizdo informaciją, kai grotuvas sustabdytas"
 
 msgctxt "#31282"
 msgid "Clear Cases"
@@ -772,10 +576,6 @@ msgstr "Išlaikyti"
 msgctxt "#31295"
 msgid "Widget"
 msgstr "Valdiklis"
-
-msgctxt "#31298"
-msgid "Set area color"
-msgstr "Nustatykite srities spalvą"
 
 msgctxt "#31299"
 msgid "Data provider"
@@ -817,30 +617,6 @@ msgctxt "#31326"
 msgid "Most played albums"
 msgstr "Dažniausiai atkūriami albumai"
 
-msgctxt "#31327"
-msgid "Most played ROMs"
-msgstr "Labiausiai rodomi ROMs"
-
-msgctxt "#31329"
-msgid "In-progress TV Shows"
-msgstr "Nebaigtos TV laidos"
-
-msgctxt "#31330"
-msgid "Random music"
-msgstr "Atsitiktinė muzika"
-
-msgctxt "#31331"
-msgid "Latest Music"
-msgstr "Naujausia muzika"
-
-msgctxt "#31332"
-msgid "Play Video"
-msgstr "Atkūrti video"
-
-msgctxt "#31333"
-msgid "Recent"
-msgstr "Naujausi"
-
 msgctxt "#31334"
 msgid "Latest"
 msgstr "Naujausias"
@@ -877,10 +653,6 @@ msgctxt "#31356"
 msgid "Download Subtitles"
 msgstr "Atsisiųsti subtitrus"
 
-msgctxt "#31357"
-msgid "Mixed info"
-msgstr "Mišri informacija"
-
 msgctxt "#31358"
 msgid "System info"
 msgstr "Sistemos informcija"
@@ -888,10 +660,6 @@ msgstr "Sistemos informcija"
 msgctxt "#31359"
 msgid "Latest albums"
 msgstr "Naujausi albumai"
-
-msgctxt "#31360"
-msgid "Upcoming"
-msgstr "Artimiausi"
 
 msgctxt "#31362"
 msgid "Rounded covers"
@@ -937,10 +705,6 @@ msgctxt "#31383"
 msgid "Backdrop"
 msgstr "Fonas"
 
-msgctxt "#31387"
-msgid "Darken"
-msgstr "Tamsinti"
-
 msgctxt "#31388"
 msgid "Floor label"
 msgstr "Aukšta etiketė"
@@ -984,10 +748,6 @@ msgstr "[B][COLOR=blue]TINKLO PARAMETRŲ NUSTATYMAI[/COLOR][/B][CR]TOFU sąranko
 msgctxt "#31406"
 msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B][COLOR=blue]SISTEMOS PARAMETRŲ NUSTATYMAI[/COLOR][/B][CR]Nustatyti ekrano kalibravimą · Nustatyti audio išėjimą · Nustatyti distancinį pultą"
-
-msgctxt "#31407"
-msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the TOFU+ skin · Customize the home menu · Adjust the skin colors[CR]Change skin backgrounds"
-msgstr "[B][COLOR=blue]TEMINĖS IŠVAIZDOS PARAMETRŲ NUSTATYMAI[/COLOR][/B][CR]Nustatyti Aeon-nox teminę išvaizdą · Pridėti ir/arba pašalinti namų meniu elementus · Keisti teminės išvaizdos foną"
 
 msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from pivos.com[CR]Modify Add-on settings"
@@ -1081,10 +841,6 @@ msgctxt "#31483"
 msgid "Show icon label"
 msgstr "Rodyti piktogramų etiketes"
 
-msgctxt "#31484"
-msgid "Play trailer"
-msgstr "Atkūrti filmo anonsą"
-
 msgctxt "#31500"
 msgid "Pictures"
 msgstr "Nuotraukos"
@@ -1105,10 +861,6 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "Video"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "Programos"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "Sistema"
@@ -1116,10 +868,6 @@ msgstr "Sistema"
 msgctxt "#31507"
 msgid "Add-Ons"
 msgstr "Priedai"
-
-msgctxt "#31508"
-msgid "Shutdown"
-msgstr "Išjungimas"
 
 msgctxt "#31509"
 msgid "Favorites"
@@ -1129,10 +877,6 @@ msgctxt "#31510"
 msgid "Weather"
 msgstr "Orai"
 
-msgctxt "#31511"
-msgid "Play Disc"
-msgstr "Atkūrti diską"
-
 msgctxt "#31600"
 msgid "Main menu item customizer (backgrounds,widgets)"
 msgstr "Pagrindinio meniu elementų prisitaikymas (fonas, valdikliai)"
@@ -1140,14 +884,6 @@ msgstr "Pagrindinio meniu elementų prisitaikymas (fonas, valdikliai)"
 msgctxt "#31601"
 msgid "CDWall"
 msgstr "CD-skyrius"
-
-msgctxt "#31602"
-msgid "Choose main menu style"
-msgstr "Pasirinkite pagrindinio meniu stilių"
-
-msgctxt "#31610"
-msgid "Set area color for Home window"
-msgstr "Nustatyti srities spalvą pagrindiniame lange"
 
 msgctxt "#31611"
 msgid "Fullscreen video"
@@ -1161,10 +897,6 @@ msgctxt "#31613"
 msgid "Enable custom startup focus position of main menu"
 msgstr "Įjungti įkrovos fokusavimo pozicijos mygtuką pagrindiniame meniu"
 
-msgctxt "#31614"
-msgid "CDArt Manager"
-msgstr "CDArt menedžeris"
-
 msgctxt "#31615"
 msgid "Audio visualization"
 msgstr "Audio vizualūs efektai"
@@ -1173,25 +905,13 @@ msgctxt "#31616"
 msgid "Low"
 msgstr "Žemas"
 
-msgctxt "#31617"
-msgid "High"
-msgstr "Aukštas"
-
 msgctxt "#31619"
 msgid "Fullscreen video options"
 msgstr "Vaizdo galimybės visame ekrane"
 
-msgctxt "#31620"
-msgid "Add to icon panel"
-msgstr "Iki piktogramos skydelyje"
-
 msgctxt "#31621"
 msgid "Use Alaska paused label for video OSD"
 msgstr "Naudoti Alaska pristabdant vaizdo OSD etiketę"
-
-msgctxt "#31622"
-msgid "Label"
-msgstr "Etiketė"
 
 msgctxt "#31623"
 msgid "Slot"
@@ -1204,10 +924,6 @@ msgstr "Slėpti OSD grotuvo valdiklius"
 msgctxt "#31628"
 msgid "Current position"
 msgstr "Dabartinė padėtis"
-
-msgctxt "#31629"
-msgid "Channels"
-msgstr "Kanalai"
 
 msgctxt "#31630"
 msgid "Custom"
@@ -1229,10 +945,6 @@ msgctxt "#31634"
 msgid "Main Menu"
 msgstr "Pagrindinis meniu"
 
-msgctxt "#31635"
-msgid "Similar Artists"
-msgstr "Panašūs atlikėjai"
-
 msgctxt "#31636"
 msgid "Rotating"
 msgstr "Rotating (kartoti)"
@@ -1240,10 +952,6 @@ msgstr "Rotating (kartoti)"
 msgctxt "#31637"
 msgid "Video OSD Settings"
 msgstr "Video OSD nustatymai"
-
-msgctxt "#31638"
-msgid "Show 'Next Aired' info"
-msgstr "Šou 'Sekantis eteryje' informacija"
 
 msgctxt "#31639"
 msgid "Hide video thumb on info screen"
@@ -1268,14 +976,6 @@ msgstr "Piktograma 'Skydelio menedžeris'"
 msgctxt "#31645"
 msgid "Background Setup"
 msgstr "Fono sąranka"
-
-msgctxt "#31646"
-msgid "Do you want to download all available [CR]artwork without user interaction?"
-msgstr "Ar norite atsisiųsti visą ArtWork[CR]informaciją, be vartotojo įsikišimo?"
-
-msgctxt "#31673"
-msgid "Most Played ROMs"
-msgstr "Labiausia atkūriami diskai"
 
 msgctxt "#31674"
 msgid "Switch panel layout"
@@ -1325,10 +1025,6 @@ msgctxt "#31685"
 msgid "Classic"
 msgstr "Klasikinis"
 
-msgctxt "#31686"
-msgid "Nox"
-msgstr "Nox"
-
 msgctxt "#31687"
 msgid "Furniture settings"
 msgstr "Išdėstymo nustatymai"
@@ -1337,10 +1033,6 @@ msgctxt "#31688"
 msgid "Disable timepanel"
 msgstr "Išjungti laiko skydelį"
 
-msgctxt "#31689"
-msgid "Disable library stats"
-msgstr "Išjungti bibliotekos statistiką"
-
 msgctxt "#31690"
 msgid "Disable rss panel"
 msgstr "Išjungti RSS skydelį"
@@ -1348,10 +1040,6 @@ msgstr "Išjungti RSS skydelį"
 msgctxt "#31691"
 msgid "Toggle position"
 msgstr "Perjungti poziciją"
-
-msgctxt "#31692"
-msgid "Shorter time and library stats panel"
-msgstr "Trumpesnį laiką ir bibliotekų statistikos skydelį"
 
 msgctxt "#31694"
 msgid "Fixed list"
@@ -1364,10 +1052,6 @@ msgstr "Submeniu"
 msgctxt "#31696"
 msgid "Alternative layout"
 msgstr "Alternatyvus išdėstymas"
-
-msgctxt "#31698"
-msgid "Show list of actors/artists birthdays"
-msgstr "Rodyti Aktoriai/Menininkai gimtadienių sąrašą"
 
 msgctxt "#31699"
 msgid "Smaller main menu"
@@ -1401,10 +1085,6 @@ msgctxt "#31708"
 msgid "Background Customizer"
 msgstr "Konfigūruoti foną"
 
-msgctxt "#31709"
-msgid "Set Delay"
-msgstr "Užlaikymo nustatymas"
-
 msgctxt "#31710"
 msgid "Show ExtraFanart"
 msgstr "Rodyti ExtraFanart"
@@ -1420,10 +1100,6 @@ msgstr "Rekomenduojamas MusicVids"
 msgctxt "#31714"
 msgid "Video Library Node"
 msgstr "Vaizdo įrašų bibliotekos vieta"
-
-msgctxt "#31715"
-msgid "Smart Playlist Manager"
-msgstr "Smart grojaraščio turinys"
 
 msgctxt "#31716"
 msgid "Default Sets"
@@ -1457,10 +1133,6 @@ msgctxt "#31723"
 msgid "Default Settings Items"
 msgstr "Numatytieji nustatymų elementai"
 
-msgctxt "#31724"
-msgid "Default Shutdown Items"
-msgstr "Numatytieji išjungimo elementai"
-
 msgctxt "#31725"
 msgid "Default PVR Items"
 msgstr "Numatytieji PVR elementai"
@@ -1469,21 +1141,9 @@ msgctxt "#31726"
 msgid "Default Video Items"
 msgstr "Numatytieji video elementai"
 
-msgctxt "#31727"
-msgid "Remaining Cities"
-msgstr "Likusieji miestai"
-
-msgctxt "#31728"
-msgid "Show Cities"
-msgstr "Rodyti miestus"
-
 msgctxt "#31729"
 msgid "Move NowPlaying widget to bottom"
 msgstr "Dabar rodomo filmo valdiklį perkelti į apačią"
-
-msgctxt "#31730"
-msgid "Script features"
-msgstr "Scenarijaus ypatybės"
 
 msgctxt "#31731"
 msgid "Skin Settings"
@@ -1500,34 +1160,6 @@ msgstr "Pasirinkti dainą"
 msgctxt "#31734"
 msgid "Use QuickList instead of default shutdown menu"
 msgstr "Naudoti greitą sąrašą, o ne pagal nutylėjimą išjungimo meniu"
-
-msgctxt "#31735"
-msgid "[B]CREDITS TO:[/B]"
-msgstr "[B]CREDITS TO:[/B]"
-
-msgctxt "#31736"
-msgid "[B]N.O.W.A.L.L.[/B] for creating Artwork"
-msgstr "[B]N.O.W.A.L.L.[/B] for creating Artwor"
-
-msgctxt "#31737"
-msgid "[B]Fional88[/B] for creating the tutorial videos"
-msgstr "[B]Fional88[/B] for creating the tutorial videos"
-
-msgctxt "#31738"
-msgid "[B]www.webdesignerdepot.com[/B] for permission to include the iconpack \"Reflection\""
-msgstr "[B]www.webdesignerdepot.com[/B] for permission to include the iconpack \"Reflection\""
-
-msgctxt "#31739"
-msgid "[B]DJH_ [/B]for creating Aeon, [B]Jezz_X [/B]for creating Confluence, [B]black[/B] for creating Xperience1080"
-msgstr "[B]DJH_ [/B]for creating Aeon, [B]Jezz_X [/B]for creating Confluence, [B]black[/B] for creating Xperience1080"
-
-msgctxt "#31740"
-msgid "Translators: [B]CutSickAss[/B], [B]epoke[/B], [B]frodo19[/B], [B]mindweaver[/B], [B]Passer[/B], [B]PatOso[/B], [B]peppe_sr[/B], [B]Rififi77[/B][CR][B]Roman_V_M[/B], [B]lijack[/B]"
-msgstr "Vertėjai: [B]ArtX38[/B], [B]CutSickAss[/B], [B]epoke[/B], [B]frodo19[/B], [B]mindweaver[/B], [B]Passer[/B], [B]PatOso[/B], [B]peppe_sr[/B], [B]Rififi77[/B][CR][B]Roman_V_M[/B], [B]lijack[/B]"
-
-msgctxt "#31741"
-msgid "[CR]Also to: [B]Martijn[/B], [B]Deano316[/B], [B]defluo[/B], [B]fmronan[/B], [B]thrak76[/B], [B]xhaggi[/B] and [CR]all other people who contributed to this project"
-msgstr "[CR]Also to: [B]Martijn[/B], [B]Deano316[/B], [B]defluo[/B], [B]fmronan[/B], [B]thrak76[/B], [B]xhaggi[/B] and [CR]all other people who contributed to this project"
 
 msgctxt "#31800"
 msgid "Fade background in visualisation"
@@ -1573,10 +1205,6 @@ msgctxt "#31856"
 msgid "NowPlaying"
 msgstr "Dabar atkūriama"
 
-msgctxt "#31870"
-msgid "Help"
-msgstr "Pagalba"
-
 msgctxt "#31876"
 msgid "Appearance Setup"
 msgstr "Išvaizdos sąranka"
@@ -1593,18 +1221,6 @@ msgctxt "#31889"
 msgid "Next Tracks"
 msgstr "Kitas takelis"
 
-msgctxt "#31890"
-msgid "Collections"
-msgstr "Kolekcijos"
-
-msgctxt "#31891"
-msgid "Folders"
-msgstr "Aplankai"
-
-msgctxt "#31892"
-msgid "Categories"
-msgstr "Kategorijos"
-
 msgctxt "#31896"
 msgid "10 Day"
 msgstr "10 dienų"
@@ -1616,10 +1232,6 @@ msgstr "Matomumas"
 msgctxt "#31899"
 msgid "Shutdown timer"
 msgstr "Išjungimo laikmatis"
-
-msgctxt "#31909"
-msgid "Bar Style"
-msgstr "Juostos stilius"
 
 msgctxt "#31929"
 msgid "Moon phase"
@@ -1645,21 +1257,9 @@ msgctxt "#31953"
 msgid "Favourite"
 msgstr "Mėgstami"
 
-msgctxt "#31955"
-msgid "Activate Bottom Menu (Play DVD, toggle widgets)"
-msgstr "Aktyvuoti apatinį menių (Groti DVD, perjungiant valdiklius)"
-
 msgctxt "#31959"
 msgid "Icon"
 msgstr "Piktograma"
-
-msgctxt "#31961"
-msgid "Set up 'Featured' window appearance"
-msgstr "Nustatyti 'Teminiai' lango išvaizdą"
-
-msgctxt "#31962"
-msgid "Set up 'Settings' window appearance"
-msgstr "Nustatyti 'Nustatymai' lango išvaizdą"
 
 msgctxt "#31963"
 msgid "Fallback settings"

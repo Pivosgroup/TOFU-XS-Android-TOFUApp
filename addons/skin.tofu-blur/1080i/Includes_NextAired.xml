@@ -7,8 +7,8 @@
 		<height>84</height>
 		<textoffsetx>30</textoffsetx>
 		<align>left</align>
-		<texturefocus border="3">list-focus.png</texturefocus>
-		<texturenofocus border="3">list-focus.png</texturenofocus>
+		<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
+		<texturenofocus border="3,0,0,20">list-focus.png</texturenofocus>
 		<alttexturefocus>-</alttexturefocus>
 		<alttexturenofocus>-</alttexturenofocus>
 		<font>Font-Condensed-S34</font>
@@ -112,15 +112,36 @@
 				<width>415</width>
 				<height>30</height>
 				<label>$INFO[ListItem.Property(NextTitle)]</label>
+				<textcolor>grey</textcolor>
 				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<posx>22</posx>
+				<posy>508</posy>
+				<width>415</width>
+				<height>20</height>
+				<label>$LOCALIZE[31189]:</label>
 			</control>
 			<control type="label">
 				<posx>22</posx>
 				<posy>538</posy>
 				<width>415</width>
-				<height>80</height>
-				<label>$LOCALIZE[31189]:[CR]S$INFO[ListItem.Property(LatestSeasonNumber)]E$INFO[ListItem.Property(LatestEpisodeNumber)] ($LOCALIZE[31322]: $INFO[ListItem.Property(LatestDate)]):[CR] $INFO[ListItem.Property(LatestTitle)]</label>
-				<textcolor>$VAR[FontColorVar]</textcolor>
+				<height>20</height>
+				<label>S$INFO[ListItem.Property(LatestSeasonNumber)]E$INFO[ListItem.Property(LatestEpisodeNumber)]</label>
+			</control>
+			<control type="label">
+				<posx>22</posx>
+				<posy>568</posy>
+				<width>415</width>
+				<height>20</height>
+				<label>$LOCALIZE[31322]: $INFO[ListItem.Property(LatestDate)]</label>
+			</control>
+			<control type="label">
+				<posx>22</posx>
+				<posy>598</posy>
+				<width>415</width>
+				<height>20</height>
+				<label>$INFO[ListItem.Property(LatestTitle)]</label>
 			</control>
 			<control type="label">
 				<label></label>
@@ -179,10 +200,159 @@
 		<control type="image">
 			<width>435</width>
 			<height>955</height>
-			<texture border="3">list-focus.png</texture>
+			<texture border="3">button-focus.png</texture>
 			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 		</control>
-		<include>NextAiredItemLayout</include>
+		<control type="group">
+			<posy>-30</posy>
+			<control type="image">
+				<posx>10</posx>
+				<posy>290</posy>
+				<width>411</width>
+				<height>247</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Property(Art(fanart))]</texture>
+				<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
+				<bordersize>7</bordersize>
+			</control>
+			<control type="image">
+				<posx>10</posx>
+				<posy>290</posy>
+				<width>411</width>
+				<height>247</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Property(Art(landscape))]</texture>
+				<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
+				<bordersize>7</bordersize>
+				<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+			</control>
+			<control type="image">
+				<posx>17</posx>
+				<posy>492</posy>
+				<width>397</width>
+				<height>34</height>
+				<texture>common/bgcolor.png</texture>
+				<colordiffuse>fade</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>131</posx>
+				<posy>864</posy>
+				<width>120</width>
+				<height>62</height>
+				<aspectratio>keep</aspectratio>
+				<texture>tvguide/$INFO[ListItem.Property(StatusID)].png</texture>
+				<colordiffuse>white</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>20</posx>
+				<posy>491</posy>
+				<width>35</width>
+				<height>35</height>
+				<texture>tvguide/clock.png</texture>
+				<colordiffuse>white</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>215</posx>
+				<posy>468</posy>
+				<width>370</width>
+				<height>80</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Property(ShortTime)] ($INFO[ListItem.Property(Runtime),, $LOCALIZE[12391]])</label>
+				<font>Font_Reg28</font>
+			</control>
+		</control>
+		<control type="label">
+			<posx>22</posx>
+			<posy>200</posy>
+			<width>370</width>
+			<height>30</height>
+			<label>S$INFO[ListItem.Property(NextSeasonNumber)]E$INFO[ListItem.Property(NextEpisodeNumber)]</label>
+			<font>Font_Bold37</font>
+		</control>
+		<control type="label">
+			<posx>22</posx>
+			<posy>229</posy>
+			<width>415</width>
+			<height>30</height>
+			<label>$INFO[ListItem.Property(NextTitle)]</label>
+			<scroll>true</scroll>
+		</control>
+		<control type="label">
+			<posx>22</posx>
+			<posy>508</posy>
+			<width>415</width>
+			<height>20</height>
+			<label>$LOCALIZE[31189]:</label>
+		</control>
+		<control type="label">
+			<posx>22</posx>
+			<posy>538</posy>
+			<width>415</width>
+			<height>20</height>
+			<label>S$INFO[ListItem.Property(LatestSeasonNumber)]E$INFO[ListItem.Property(LatestEpisodeNumber)]</label>
+		</control>
+		<control type="label">
+			<posx>22</posx>
+			<posy>568</posy>
+			<width>415</width>
+			<height>20</height>
+			<label>$LOCALIZE[31322]: $INFO[ListItem.Property(LatestDate)]</label>
+		</control>
+		<control type="label">
+			<posx>22</posx>
+			<posy>598</posy>
+			<width>415</width>
+			<height>20</height>
+			<label>$INFO[ListItem.Property(LatestTitle)]</label>
+		</control>
+		<control type="label">
+			<label></label>
+			<posx>22</posx>
+			<posy>618</posy>
+			<width>415</width>
+			<height>80</height>
+		</control>
+		<control type="label">
+			<posx>22</posx>
+			<posy>638</posy>
+			<width>415</width>
+			<height>80</height>
+			<label>$LOCALIZE[515]: [CR]$INFO[ListItem.Property(Genre)]</label>
+		</control>
+		<control type="label">
+			<posx>22</posx>
+			<posy>722</posy>
+			<width>170</width>
+			<height>80</height>
+			<label>$LOCALIZE[31005]:[CR]$INFO[ListItem.Property(Premiered)]</label>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>822</posy>
+			<width>135</width>
+			<height>90</height>
+			<aspectratio>keep</aspectratio>
+			<texture fallback="flags/studios/default-studio.png">$INFO[ListItem.Property(Network),flags/studios/,.png]</texture>
+			<colordiffuse>white</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>240</posx>
+			<posy>710</posy>
+			<width>185</width>
+			<height>240</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.Property(Art(characterart))]</texture>
+			<fadetime>IconCrossfadeTime2</fadetime>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<posx>435</posx>
+			<posy>100</posy>
+			<width>1</width>
+			<height>789</height>
+			<texture>dialogs/weatherline.png</texture>
+			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+		</control>
 	</include>
 	<include name="NextAiredListVars">
 		<posx>495</posx>
@@ -236,7 +406,7 @@
 		<width>172</width>
 		<height>164</height>
 		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-		<texture border="3">list-focus.png</texture>
+		<texture border="3">button-focus.png</texture>
 	</include>
 	<include name="NextAired_Layout1">
 		<control type="group">
@@ -272,9 +442,10 @@
 					<width>172</width>
 					<height>38</height>
 					<font>Font_Reg37_Caps</font>
-					<label>$LOCALIZE[41]</label>
-					<align>center</align>
 					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[41])">Conditional</animation>
+					<label>$LOCALIZE[41]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
+					<align>center</align>
 				</control>
 				<control type="label">
 					<posx>304</posx>
@@ -284,6 +455,7 @@
 					<font>Font_Reg37_Caps</font>
 					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[42])">Conditional</animation>
 					<label>$LOCALIZE[42]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<align>center</align>
 				</control>
 				<control type="label">
@@ -294,6 +466,7 @@
 					<font>Font_Reg37_Caps</font>
 					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[43])">Conditional</animation>
 					<label>$LOCALIZE[43]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<align>center</align>
 				</control>
 				<control type="label">
@@ -304,6 +477,7 @@
 					<font>Font_Reg37_Caps</font>
 					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[44])">Conditional</animation>
 					<label>$LOCALIZE[44]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<align>center</align>
 				</control>
 				<control type="label">
@@ -314,6 +488,7 @@
 					<font>Font_Reg37_Caps</font>
 					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[45])">Conditional</animation>
 					<label>$LOCALIZE[45]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<align>center</align>
 				</control>
 				<control type="label">
@@ -324,6 +499,7 @@
 					<font>Font_Reg37_Caps</font>
 					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[46])">Conditional</animation>
 					<label>$LOCALIZE[46]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<align>center</align>
 				</control>
 				<control type="label">
@@ -334,6 +510,7 @@
 					<font>Font_Reg37_Caps</font>
 					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[47])">Conditional</animation>
 					<label>$LOCALIZE[47]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<align>center</align>
 				</control>
 				<control type="label">
@@ -342,9 +519,10 @@
 					<width>172</width>
 					<height>38</height>
 					<font>Font_Reg28</font>
-					<label>$INFO[Window(Home).Property(NextAired.1.Date)]</label>
-					<align>center</align>
 					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[41])">Conditional</animation>
+					<label>$INFO[Window(Home).Property(NextAired.1.Date)]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
+					<align>center</align>
 				</control>
 				<control type="label">
 					<posx>304</posx>
@@ -354,6 +532,7 @@
 					<font>Font_Reg28</font>
 					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[42])">Conditional</animation>
 					<label>$INFO[Window(Home).Property(NextAired.2.Date)]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<align>center</align>
 				</control>
 				<control type="label">
@@ -364,6 +543,7 @@
 					<font>Font_Reg28</font>
 					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[43])">Conditional</animation>
 					<label>$INFO[Window(Home).Property(NextAired.3.Date)]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<align>center</align>
 				</control>
 				<control type="label">
@@ -374,6 +554,7 @@
 					<font>Font_Reg28</font>
 					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[44])">Conditional</animation>
 					<label>$INFO[Window(Home).Property(NextAired.4.Date)]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<align>center</align>
 				</control>
 				<control type="label">
@@ -384,6 +565,7 @@
 					<font>Font_Reg28</font>
 					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[45])">Conditional</animation>
 					<label>$INFO[Window(Home).Property(NextAired.5.Date)]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<align>center</align>
 				</control>
 				<control type="label">
@@ -394,6 +576,7 @@
 					<font>Font_Reg28</font>
 					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[46])">Conditional</animation>
 					<label>$INFO[Window(Home).Property(NextAired.6.Date)]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<align>center</align>
 				</control>
 				<control type="label">
@@ -404,11 +587,12 @@
 					<font>Font_Reg28</font>
 					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[47])">Conditional</animation>
 					<label>$INFO[Window(Home).Property(NextAired.7.Date)]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<align>center</align>
 				</control>
 				<control type="group" id="9001">
 					<control type="list" id="200">
-						<posx>126</posx>
+						<posx>136</posx>
 						<posy>136</posy>
 						<width>178</width>
 						<height>825</height>
@@ -420,54 +604,42 @@
 						<onright>201</onright>
 						<itemgap>5</itemgap>
 						<itemlayout height="162" width="172">
-							<control type="group">
-								<posx>6</posx>
-								<control type="label">
-									<include>NextAiredLabelVars</include>
-								</control>
-								<control type="image">
-									<include>NextAiredThumbVars</include>
-								</control>
-								<control type="image">
-									<include>NextAiredBannerVars</include>
-								</control>
-								<control type="image">
-									<include>NextAiredLogoVars</include>
-								</control>
+							<control type="image">
+								<include>NextAiredThumbVars</include>
+							</control>
+							<control type="image">
+								<include>NextAiredBannerVars</include>
+							</control>
+							<control type="image">
+								<include>NextAiredLogoVars</include>
+							</control>
+							<control type="label">
+								<include>NextAiredLabelVars</include>
+								<shadowcolor>black</shadowcolor>
 							</control>
 						</itemlayout>
 						<focusedlayout height="162" width="172">
-							<control type="group">
-								<posx>6</posx>
-								<control type="image">
-									<posx>-6</posx>
-									<width>178</width>
-									<include>NextAiredListpanel</include>
-									<visible>Control.HasFocus(200)</visible>
-								</control>
-								<control type="image">
-									<include>NextAiredThumbVars</include>
-								</control>
-								<control type="image">
-									<include>NextAiredBannerVars</include>
-								</control>
-								<control type="label">
-									<include>NextAiredLabelVars</include>
-									<visible>!Control.HasFocus(200)</visible>
-								</control>
-								<control type="label">
-									<textcolor>$VAR[FontColorVar]</textcolor>
-									<include>NextAiredLabelVars</include>
-									<visible>Control.HasFocus(200)</visible>
-								</control>
-								<control type="image">
-									<include>NextAiredLogoVars</include>
-								</control>
+							<control type="image">
+								<include>NextAiredListpanel</include>
+								<visible>Control.HasFocus(200)</visible>
+							</control>
+							<control type="image">
+								<include>NextAiredThumbVars</include>
+							</control>
+							<control type="image">
+								<include>NextAiredBannerVars</include>
+							</control>
+							<control type="image">
+								<include>NextAiredLogoVars</include>
+							</control>
+							<control type="label">
+								<include>NextAiredLabelVars</include>
+								<shadowcolor>black</shadowcolor>
 							</control>
 						</focusedlayout>
 					</control>
 					<control type="list" id="201">
-						<posx>304</posx>
+						<posx>314</posx>
 						<posy>136</posy>
 						<width>171</width>
 						<height>818</height>
@@ -479,9 +651,6 @@
 						<onright>202</onright>
 						<itemgap>5</itemgap>
 						<itemlayout height="162" width="172">
-							<control type="label">
-								<include>NextAiredLabelVars</include>
-							</control>
 							<control type="image">
 								<include>NextAiredThumbVars</include>
 							</control>
@@ -490,6 +659,10 @@
 							</control>
 							<control type="image">
 								<include>NextAiredLogoVars</include>
+							</control>
+							<control type="label">
+								<include>NextAiredLabelVars</include>
+								<shadowcolor>black</shadowcolor>
 							</control>
 						</itemlayout>
 						<focusedlayout height="162" width="172">
@@ -497,15 +670,6 @@
 								<include>NextAiredListpanel</include>
 								<visible>Control.HasFocus(201)</visible>
 							</control>
-							<control type="label">
-								<include>NextAiredLabelVars</include>
-								<visible>!Control.HasFocus(201)</visible>
-							</control>
-							<control type="label">
-								<textcolor>$VAR[FontColorVar]</textcolor>
-								<include>NextAiredLabelVars</include>
-								<visible>Control.HasFocus(201)</visible>
-							</control>
 							<control type="image">
 								<include>NextAiredThumbVars</include>
 							</control>
@@ -515,10 +679,14 @@
 							<control type="image">
 								<include>NextAiredLogoVars</include>
 							</control>
+							<control type="label">
+								<include>NextAiredLabelVars</include>
+								<shadowcolor>black</shadowcolor>
+							</control>
 						</focusedlayout>
 					</control>
 					<control type="list" id="202">
-						<posx>477</posx>
+						<posx>487</posx>
 						<posy>136</posy>
 						<width>171</width>
 						<height>825</height>
@@ -530,9 +698,6 @@
 						<onright>203</onright>
 						<itemgap>5</itemgap>
 						<itemlayout height="162" width="180">
-							<control type="label">
-								<include>NextAiredLabelVars</include>
-							</control>
 							<control type="image">
 								<include>NextAiredThumbVars</include>
 							</control>
@@ -541,6 +706,10 @@
 							</control>
 							<control type="image">
 								<include>NextAiredLogoVars</include>
+							</control>
+							<control type="label">
+								<include>NextAiredLabelVars</include>
+								<shadowcolor>black</shadowcolor>
 							</control>
 						</itemlayout>
 						<focusedlayout height="162" width="180">
@@ -548,15 +717,6 @@
 								<include>NextAiredListpanel</include>
 								<visible>Control.HasFocus(202)</visible>
 							</control>
-							<control type="label">
-								<include>NextAiredLabelVars</include>
-								<visible>!Control.HasFocus(202)</visible>
-							</control>
-							<control type="label">
-								<textcolor>$VAR[FontColorVar]</textcolor>
-								<include>NextAiredLabelVars</include>
-								<visible>Control.HasFocus(202)</visible>
-							</control>
 							<control type="image">
 								<include>NextAiredThumbVars</include>
 							</control>
@@ -566,10 +726,14 @@
 							<control type="image">
 								<include>NextAiredLogoVars</include>
 							</control>
+							<control type="label">
+								<include>NextAiredLabelVars</include>
+								<shadowcolor>black</shadowcolor>
+							</control>
 						</focusedlayout>
 					</control>
 					<control type="list" id="203">
-						<posx>650</posx>
+						<posx>660</posx>
 						<posy>136</posy>
 						<width>171</width>
 						<height>825</height>
@@ -581,9 +745,6 @@
 						<onright>204</onright>
 						<itemgap>5</itemgap>
 						<itemlayout height="162" width="180">
-							<control type="label">
-								<include>NextAiredLabelVars</include>
-							</control>
 							<control type="image">
 								<include>NextAiredThumbVars</include>
 							</control>
@@ -592,6 +753,10 @@
 							</control>
 							<control type="image">
 								<include>NextAiredLogoVars</include>
+							</control>
+							<control type="label">
+								<include>NextAiredLabelVars</include>
+								<shadowcolor>black</shadowcolor>
 							</control>
 						</itemlayout>
 						<focusedlayout height="162" width="180">
@@ -599,15 +764,6 @@
 								<include>NextAiredListpanel</include>
 								<visible>Control.HasFocus(203)</visible>
 							</control>
-							<control type="label">
-								<include>NextAiredLabelVars</include>
-								<visible>!Control.HasFocus(203)</visible>
-							</control>
-							<control type="label">
-								<textcolor>$VAR[FontColorVar]</textcolor>
-								<include>NextAiredLabelVars</include>
-								<visible>Control.HasFocus(203)</visible>
-							</control>
 							<control type="image">
 								<include>NextAiredThumbVars</include>
 							</control>
@@ -617,10 +773,14 @@
 							<control type="image">
 								<include>NextAiredLogoVars</include>
 							</control>
+							<control type="label">
+								<include>NextAiredLabelVars</include>
+								<shadowcolor>black</shadowcolor>
+							</control>
 						</focusedlayout>
 					</control>
 					<control type="list" id="204">
-						<posx>822</posx>
+						<posx>832</posx>
 						<posy>136</posy>
 						<width>171</width>
 						<height>825</height>
@@ -632,9 +792,6 @@
 						<onright>205</onright>
 						<itemgap>5</itemgap>
 						<itemlayout height="162" width="180">
-							<control type="label">
-								<include>NextAiredLabelVars</include>
-							</control>
 							<control type="image">
 								<include>NextAiredThumbVars</include>
 							</control>
@@ -643,6 +800,10 @@
 							</control>
 							<control type="image">
 								<include>NextAiredLogoVars</include>
+							</control>
+							<control type="label">
+								<include>NextAiredLabelVars</include>
+								<shadowcolor>black</shadowcolor>
 							</control>
 						</itemlayout>
 						<focusedlayout height="162" width="180">
@@ -650,15 +811,6 @@
 								<include>NextAiredListpanel</include>
 								<visible>Control.HasFocus(204)</visible>
 							</control>
-							<control type="label">
-								<include>NextAiredLabelVars</include>
-								<visible>!Control.HasFocus(204)</visible>
-							</control>
-							<control type="label">
-								<textcolor>$VAR[FontColorVar]</textcolor>
-								<include>NextAiredLabelVars</include>
-								<visible>Control.HasFocus(204)</visible>
-							</control>
 							<control type="image">
 								<include>NextAiredThumbVars</include>
 							</control>
@@ -668,10 +820,14 @@
 							<control type="image">
 								<include>NextAiredLogoVars</include>
 							</control>
+							<control type="label">
+								<include>NextAiredLabelVars</include>
+								<shadowcolor>black</shadowcolor>
+							</control>
 						</focusedlayout>
 					</control>
 					<control type="list" id="205">
-						<posx>993</posx>
+						<posx>1003</posx>
 						<posy>136</posy>
 						<width>171</width>
 						<height>825</height>
@@ -683,9 +839,6 @@
 						<onright>206</onright>
 						<itemgap>5</itemgap>
 						<itemlayout height="162" width="180">
-							<control type="label">
-								<include>NextAiredLabelVars</include>
-							</control>
 							<control type="image">
 								<include>NextAiredThumbVars</include>
 							</control>
@@ -694,6 +847,10 @@
 							</control>
 							<control type="image">
 								<include>NextAiredLogoVars</include>
+							</control>
+							<control type="label">
+								<include>NextAiredLabelVars</include>
+								<shadowcolor>black</shadowcolor>
 							</control>
 						</itemlayout>
 						<focusedlayout height="162" width="180">
@@ -701,15 +858,6 @@
 								<include>NextAiredListpanel</include>
 								<visible>Control.HasFocus(205)</visible>
 							</control>
-							<control type="label">
-								<include>NextAiredLabelVars</include>
-								<visible>!Control.HasFocus(205)</visible>
-							</control>
-							<control type="label">
-								<textcolor>$VAR[FontColorVar]</textcolor>
-								<include>NextAiredLabelVars</include>
-								<visible>Control.HasFocus(205)</visible>
-							</control>
 							<control type="image">
 								<include>NextAiredThumbVars</include>
 							</control>
@@ -719,10 +867,14 @@
 							<control type="image">
 								<include>NextAiredLogoVars</include>
 							</control>
+							<control type="label">
+								<include>NextAiredLabelVars</include>
+								<shadowcolor>black</shadowcolor>
+							</control>
 						</focusedlayout>
 					</control>
 					<control type="list" id="206">
-						<posx>1166</posx>
+						<posx>1176</posx>
 						<posy>136</posy>
 						<width>171</width>
 						<height>825</height>
@@ -734,9 +886,6 @@
 						<onright>200</onright>
 						<itemgap>5</itemgap>
 						<itemlayout height="162" width="180">
-							<control type="label">
-								<include>NextAiredLabelVars</include>
-							</control>
 							<control type="image">
 								<include>NextAiredThumbVars</include>
 							</control>
@@ -745,6 +894,10 @@
 							</control>
 							<control type="image">
 								<include>NextAiredLogoVars</include>
+							</control>
+							<control type="label">
+								<include>NextAiredLabelVars</include>
+								<shadowcolor>black</shadowcolor>
 							</control>
 						</itemlayout>
 						<focusedlayout height="162" width="180">
@@ -752,15 +905,6 @@
 								<include>NextAiredListpanel</include>
 								<visible>Control.HasFocus(206)</visible>
 							</control>
-							<control type="label">
-								<include>NextAiredLabelVars</include>
-								<visible>!Control.HasFocus(206)</visible>
-							</control>
-							<control type="label">
-								<textcolor>$VAR[FontColorVar]</textcolor>
-								<include>NextAiredLabelVars</include>
-								<visible>Control.HasFocus(206)</visible>
-							</control>
 							<control type="image">
 								<include>NextAiredThumbVars</include>
 							</control>
@@ -769,6 +913,10 @@
 							</control>
 							<control type="image">
 								<include>NextAiredLogoVars</include>
+							</control>
+							<control type="label">
+								<include>NextAiredLabelVars</include>
+								<shadowcolor>black</shadowcolor>
 							</control>
 						</focusedlayout>
 					</control>
@@ -824,6 +972,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(200).ListItem.Property(NextNumber)]: $INFO[Container(200).ListItem.Property(NextTitle)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -840,6 +989,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(200).ListItem.Property(LatestNumber)]: $INFO[Container(200).ListItem.Property(LatestTitle)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -856,6 +1006,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(200).ListItem.Property(LatestDate)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -872,6 +1023,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(200).ListItem.Property(Status)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -888,6 +1040,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(200).ListItem.Property(Genre)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -904,6 +1057,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(200).ListItem.Property(AirTime)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -920,6 +1074,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(200).ListItem.Property(Runtime),, $LOCALIZE[12391]]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -936,6 +1091,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(200).ListItem.Property(Premiered)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
@@ -998,6 +1154,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(201).ListItem.Property(NextNumber)]: $INFO[Container(201).ListItem.Property(NextTitle)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1014,6 +1171,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(201).ListItem.Property(LatestNumber)]: $INFO[Container(201).ListItem.Property(LatestTitle)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1030,6 +1188,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(201).ListItem.Property(LatestDate)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1046,6 +1205,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(201).ListItem.Property(Status)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1062,6 +1222,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(201).ListItem.Property(Genre)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1078,6 +1239,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(201).ListItem.Property(AirTime)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1094,6 +1256,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(201).ListItem.Property(Runtime),, $LOCALIZE[12391]]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1110,6 +1273,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(201).ListItem.Property(Premiered)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
@@ -1172,6 +1336,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(202).ListItem.Property(NextNumber)]: $INFO[Container(202).ListItem.Property(NextTitle)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1188,6 +1353,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(202).ListItem.Property(LatestNumber)]: $INFO[Container(202).ListItem.Property(LatestTitle)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1204,6 +1370,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(202).ListItem.Property(LatestDate)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1220,6 +1387,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(202).ListItem.Property(Status)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1236,6 +1404,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(202).ListItem.Property(Genre)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1252,6 +1421,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(202).ListItem.Property(AirTime)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1268,6 +1438,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(202).ListItem.Property(Runtime),, $LOCALIZE[12391]]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1284,6 +1455,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(202).ListItem.Property(Premiered)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
@@ -1346,6 +1518,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(203).ListItem.Property(NextNumber)]: $INFO[Container(203).ListItem.Property(NextTitle)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1362,6 +1535,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(203).ListItem.Property(LatestNumber)]: $INFO[Container(203).ListItem.Property(LatestTitle)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1378,6 +1552,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(203).ListItem.Property(LatestDate)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1394,6 +1569,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(203).ListItem.Property(Status)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1410,6 +1586,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(203).ListItem.Property(Genre)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1426,6 +1603,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(203).ListItem.Property(AirTime)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1442,6 +1620,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(203).ListItem.Property(Runtime),, $LOCALIZE[12391]]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1458,6 +1637,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(203).ListItem.Property(Premiered)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
@@ -1520,6 +1700,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(204).ListItem.Property(NextNumber)]: $INFO[Container(204).ListItem.Property(NextTitle)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1536,6 +1717,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(204).ListItem.Property(LatestNumber)]: $INFO[Container(204).ListItem.Property(LatestTitle)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1552,6 +1734,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(204).ListItem.Property(LatestDate)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1568,6 +1751,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(204).ListItem.Property(Status)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1584,6 +1768,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(204).ListItem.Property(Genre)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1600,6 +1785,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(204).ListItem.Property(AirTime)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1616,6 +1802,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(204).ListItem.Property(Runtime),, $LOCALIZE[12391]]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1632,6 +1819,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(204).ListItem.Property(Premiered)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
@@ -1694,6 +1882,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(205).ListItem.Property(NextNumber)]: $INFO[Container(205).ListItem.Property(NextTitle)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1710,6 +1899,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(205).ListItem.Property(LatestNumber)]: $INFO[Container(205).ListItem.Property(LatestTitle)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1726,6 +1916,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(205).ListItem.Property(LatestDate)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1742,6 +1933,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(205).ListItem.Property(Status)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1758,6 +1950,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(205).ListItem.Property(Genre)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1774,6 +1967,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(205).ListItem.Property(AirTime)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1790,6 +1984,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(205).ListItem.Property(Runtime),, $LOCALIZE[12391]]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1806,6 +2001,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(205).ListItem.Property(Premiered)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
@@ -1868,6 +2064,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(206).ListItem.Property(NextNumber)]: $INFO[Container(206).ListItem.Property(NextTitle)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1884,6 +2081,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(206).ListItem.Property(LatestNumber)]: $INFO[Container(206).ListItem.Property(LatestTitle)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1900,6 +2098,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(206).ListItem.Property(LatestDate)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1916,6 +2115,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(206).ListItem.Property(Status)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1932,6 +2132,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(206).ListItem.Property(Genre)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1948,6 +2149,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(206).ListItem.Property(AirTime)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1964,6 +2166,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(206).ListItem.Property(Runtime),, $LOCALIZE[12391]]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -1980,6 +2183,7 @@
 						<width>435</width>
 						<height>30</height>
 						<label>$INFO[Container(206).ListItem.Property(Premiered)]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
@@ -2133,7 +2337,6 @@
 						<label>[B]$VAR[TVDayLabelMon][/B]</label>
 						<label2>$INFO[Window(Home).Property(NextAired.1.Date)]</label2>
 						<include>TVGuideWeekdayButtonbackground</include>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[41])">Conditional</animation>
 						<animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(200)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2001)]]">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(200).NumItems,0)</enable>
 					</control>
@@ -2142,7 +2345,6 @@
 						<label2>$INFO[Window(Home).Property(NextAired.2.Date)]</label2>
 						<include>TVGuideWeekdayButtonbackground</include>
 						<animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(201)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2002)]]">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[42])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(201).NumItems,0)</enable>
 					</control>
 					<control type="button">
@@ -2150,7 +2352,6 @@
 						<label2>$INFO[Window(Home).Property(NextAired.3.Date)]</label2>
 						<include>TVGuideWeekdayButtonbackground</include>
 						<animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(202)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2003)]]">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[43])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(202).NumItems,0)</enable>
 					</control>
 					<control type="button">
@@ -2158,7 +2359,6 @@
 						<label2>$INFO[Window(Home).Property(NextAired.4.Date)]</label2>
 						<include>TVGuideWeekdayButtonbackground</include>
 						<animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(203)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2004)]]">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[44])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(203).NumItems,0)</enable>
 					</control>
 					<control type="button">
@@ -2166,7 +2366,6 @@
 						<label2>$INFO[Window(Home).Property(NextAired.5.Date)]</label2>
 						<include>TVGuideWeekdayButtonbackground</include>
 						<animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(204)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2005)]]">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[45])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(204).NumItems,0)</enable>
 					</control>
 					<control type="button">
@@ -2174,7 +2373,6 @@
 						<label2>$INFO[Window(Home).Property(NextAired.6.Date)]</label2>
 						<include>TVGuideWeekdayButtonbackground</include>
 						<animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(205)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2006)]]">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[46])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(205).NumItems,0)</enable>
 					</control>
 					<control type="button">
@@ -2182,7 +2380,6 @@
 						<label2>$INFO[Window(Home).Property(NextAired.7.Date)]</label2>
 						<include>TVGuideWeekdayButtonbackground</include>
 						<animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(206)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2007)]]">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[47])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(206).NumItems,0)</enable>
 					</control>
 				</control>
@@ -2195,7 +2392,6 @@
 						<label>[B]$VAR[TVDayLabelMon][/B]</label>
 						<label2>$INFO[Window(Home).Property(NextAired.1.Date)]</label2>
 						<include>TVGuideWeekdayButton</include>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[41])">Conditional</animation>
 						<animation effect="fade" start="100" end="50" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(200)">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(200).NumItems,0)</enable>
 					</control>
@@ -2204,7 +2400,6 @@
 						<label2>$INFO[Window(Home).Property(NextAired.2.Date)]</label2>
 						<include>TVGuideWeekdayButton</include>
 						<animation effect="fade" start="100" end="50" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(201)">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[42])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(201).NumItems,0)</enable>
 					</control>
 					<control type="button" id="2003">
@@ -2212,7 +2407,6 @@
 						<label2>$INFO[Window(Home).Property(NextAired.3.Date)]</label2>
 						<include>TVGuideWeekdayButton</include>
 						<animation effect="fade" start="100" end="50" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(202)">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[43])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(202).NumItems,0)</enable>
 					</control>
 					<control type="button" id="2004">
@@ -2220,7 +2414,6 @@
 						<label2>$INFO[Window(Home).Property(NextAired.4.Date)]</label2>
 						<include>TVGuideWeekdayButton</include>
 						<animation effect="fade" start="100" end="50" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(203)">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[44])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(203).NumItems,0)</enable>
 					</control>
 					<control type="button" id="2005">
@@ -2228,7 +2421,6 @@
 						<label2>$INFO[Window(Home).Property(NextAired.5.Date)]</label2>
 						<include>TVGuideWeekdayButton</include>
 						<animation effect="fade" start="100" end="50" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(204)">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[45])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(204).NumItems,0)</enable>
 					</control>
 					<control type="button" id="2006">
@@ -2236,7 +2428,6 @@
 						<label2>$INFO[Window(Home).Property(NextAired.6.Date)]</label2>
 						<include>TVGuideWeekdayButton</include>
 						<animation effect="fade" start="100" end="50" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(205)">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[46])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(205).NumItems,0)</enable>
 					</control>
 					<control type="button" id="2007">
@@ -2244,7 +2435,6 @@
 						<label2>$INFO[Window(Home).Property(NextAired.7.Date)]</label2>
 						<include>TVGuideWeekdayButton</include>
 						<animation effect="fade" start="100" end="50" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(206)">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[47])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(206).NumItems,0)</enable>
 					</control>
 				</control>

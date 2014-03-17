@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window id="1158" type="window">
 	<defaultcontrol always="true">450</defaultcontrol>
-	<onload>Notification($LOCALIZE[31902],$LOCALIZE[31878])</onload>
+	<onload>Notification($LOCALIZE[31902],$LOCALIZE[31878],,dialogs/exclamation.png)</onload>
 	<coordinates>
 		<posx>0</posx>
 		<posy>0</posy>
@@ -30,7 +30,7 @@
 			<include>MusicArtistSlideshowHome</include>
 		</control>
 		<include>CommonMediaPlayingBackground</include>
-		<include>DialogBackFade</include>
+		<include>BackgroundDiffuse</include>
 		<control type="image">
 			<width>1920</width>
 			<height>945</height>
@@ -88,13 +88,14 @@
 				<control type="togglebutton" id="440">
 					<width>100</width>
 					<height>100</height>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<texturefocus>BigIcons/ButtonPause.png</texturefocus>
 					<texturenofocus>BigIcons/ButtonPause.png</texturenofocus>
 					<alttexturefocus>BigIcons/ButtonPlay.png</alttexturefocus>
 					<alttexturenofocus>BigIcons/ButtonPlay.png</alttexturenofocus>
 					<animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
 					<usealttexture>[Player.Paused | Player.Forwarding | Player.Rewinding] | Player.HasVideo | !Player.HasMedia</usealttexture>
-					<colordiffuse>fade</colordiffuse>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 					<onclick>$INFO[Window(Home).Property(RecentAlbum.1.Play)]</onclick>
 					<ondown>450</ondown>
 					<onup>450</onup>
@@ -103,6 +104,7 @@
 				<control type="togglebutton">
 					<width>100</width>
 					<height>100</height>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>BigIcons/ButtonPause.png</texturenofocus>
 					<alttexturefocus>BigIcons/ButtonPlay.png</alttexturefocus>
@@ -119,13 +121,14 @@
 				<control type="togglebutton" id="441">
 					<width>100</width>
 					<height>100</height>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<texturefocus>BigIcons/ButtonPause.png</texturefocus>
 					<texturenofocus>BigIcons/ButtonPause.png</texturenofocus>
 					<alttexturefocus>BigIcons/ButtonPlay.png</alttexturefocus>
 					<alttexturenofocus>BigIcons/ButtonPlay.png</alttexturenofocus>
 					<animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
 					<usealttexture>[Player.Paused | Player.Forwarding | Player.Rewinding] | Player.HasAudio | !Player.HasMedia</usealttexture>
-					<colordiffuse>fade</colordiffuse>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 					<onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestMovie.1.Path)],1)</onclick>
 					<ondown>20</ondown>
 					<onup>20</onup>
@@ -133,6 +136,7 @@
 				</control>
 				<control type="togglebutton">
 					<width>100</width>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<height>100</height>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>BigIcons/ButtonPause.png</texturenofocus>
@@ -158,18 +162,21 @@
 				<onleft>20</onleft>
 				<control type="radiobutton" id="203">
 					<label>20083</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<include>Objects_NowPlayingSettingsButton</include>
 					<onclick>Skin.ToggleSetting(nohomepageMusicinfo)</onclick>
 					<selected>!Skin.HasSetting(nohomepageMusicinfo)</selected>
 				</control>
 				<control type="radiobutton" id="305">
 					<label>31615</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<include>Objects_NowPlayingSettingsButton</include>
 					<onclick>Skin.ToggleSetting(ShowBackgroundVis)</onclick>
 					<selected>!Skin.HasSetting(ShowBackgroundVis)</selected>
 				</control>
 				<control type="button" id="309">
 					<label>$LOCALIZE[31802]:</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<label2>[COLOR $VAR[FontColorVar]]$VAR[HomeMusicBGVar][/COLOR]</label2>
 					<include>Objects_NowPlayingSettingsButton</include>
 					<onclick condition="!Skin.HasSetting(musicfanarthome) + !Skin.HasSetting(homecdwall) + !Skin.HasSetting(artistslideshowhome)">Skin.SetBool(homecdwall)</onclick>
@@ -181,12 +188,14 @@
 				</control>
 				<control type="radiobutton" id="454">
 					<label>31244</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<include>Objects_NowPlayingSettingsButton</include>
 					<onclick>Skin.ToggleSetting(disablecdart)</onclick>
 					<selected>!Skin.HasSetting(disablecdart)</selected>
 				</control>
 				<control type="button" id="456">
 					<label>$LOCALIZE[31964]:</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<label2>[COLOR $VAR[FontColorVar]]$VAR[CDArtFallbackLabelVar][/COLOR]</label2>
 					<include>Objects_NowPlayingSettingsButton</include>
 					<onclick condition="!Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)">Skin.SetBool(blurayart)</onclick>
@@ -197,6 +206,7 @@
 				</control>
 				<control type="button" id="466">
 					<label>$LOCALIZE[31965]:</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<label2>[COLOR $VAR[FontColorVar]]$VAR[PlayListWidgetLabelVar][/COLOR]</label2>
 					<include>Objects_NowPlayingSettingsButton</include>
 					<enable>!Skin.HasSetting(nowplayingpanel)</enable>
@@ -221,12 +231,14 @@
 				<orientation>vertical</orientation>
 				<control type="radiobutton" id="202">
 					<label>20176</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<include>Objects_NowPlayingSettingsButton</include>
 					<onclick>Skin.ToggleSetting(homepageVideoinfo)</onclick>
 					<selected>!Skin.HasSetting(homepageVideoinfo)</selected>
 				</control>
 				<control type="radiobutton" id="306">
 					<label>31611</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<include>Objects_NowPlayingSettingsButton</include>
 					<onclick>Skin.ToggleSetting(ShowBackgroundVideo)</onclick>
 					<selected>!Skin.HasSetting(ShowBackgroundVideo)</selected>
@@ -239,31 +251,32 @@
 				<control type="label" id="333">
 					<width>672</width>
 					<height>60</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>10</textoffsetx>
 					<textoffsety>10</textoffsety>
 					<align>center</align>
 					<label>$LOCALIZE[31176]</label>
 					<font>Font_Reg32</font>
-					<textcolor>$VAR[FontColorVar]</textcolor>
 				</control>
 				<control type="label" id="334">
 					<label></label>
 					<height>30</height>
-					<font>Font_Reg32</font>
 					<include>Objects_NowPlayingSettingsButton</include>
 				</control>
 				<control type="button" id="452">
 					<label>$LOCALIZE[31632]:</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<label2>[COLOR $VAR[FontColorVar]]$VAR[HomePanelVar][/COLOR]</label2>
 					<include>Objects_NowPlayingSettingsButton</include>
 					<onclick condition="!Skin.HasSetting(nowplayingpanel) + !Skin.HasSetting(rotatenowplayingpanel)">Skin.SetBool(nowplayingpanel)</onclick>
-					<onclick condition="Skin.HasSetting(nowplayingpanel) + !Skin.HasSetting(rotatenowplayingpanel)">Notification($LOCALIZE[31902],$LOCALIZE[31916],10000)</onclick>
+					<onclick condition="Skin.HasSetting(nowplayingpanel) + !Skin.HasSetting(rotatenowplayingpanel)">Notification($LOCALIZE[31902],$LOCALIZE[31916],10000,dialogs/exclamation.png)</onclick>
 					<onclick condition="Skin.HasSetting(nowplayingpanel) + !Skin.HasSetting(rotatenowplayingpanel)">Skin.SetBool(rotatenowplayingpanel)</onclick>
 					<onclick condition="Skin.HasSetting(rotatenowplayingpanel) + Skin.HasSetting(nowplayingpanel)">Skin.Reset(rotatenowplayingpanel)</onclick>
 					<onclick condition="Skin.HasSetting(rotatenowplayingpanel) + Skin.HasSetting(nowplayingpanel)">Skin.Reset(nowplayingpanel)</onclick>
 				</control>
 				<control type="radiobutton" id="455">
 					<label>31729</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<include>Objects_NowPlayingSettingsButton</include>
 					<onclick>Skin.ToggleSetting(movenowplayingwidget)</onclick>
 					<selected>Skin.HasSetting(movenowplayingwidget)</selected>
