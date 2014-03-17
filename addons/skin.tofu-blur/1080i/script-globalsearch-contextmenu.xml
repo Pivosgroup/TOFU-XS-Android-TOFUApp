@@ -33,7 +33,8 @@
 			<height>58</height>
 			<textoffsety>12</textoffsety>
 			<align>center</align>
-			<texturefocus border="3">list-focus.png</texturefocus>
+			<textcolor>grey</textcolor>
+			<texturefocus border="3">button-focus.png</texturefocus>
 			<texturenofocus border="3">list-nofocus.png</texturenofocus>
 			<font>Font_Reg30_2</font>
 			<onleft>1001</onleft>
@@ -48,7 +49,8 @@
 			<height>58</height>
 			<textoffsety>12</textoffsety>
 			<align>center</align>
-			<texturefocus border="3">list-focus.png</texturefocus>
+			<textcolor>grey</textcolor>
+			<texturefocus border="3">button-focus.png</texturefocus>
 			<texturenofocus border="3">list-nofocus.png</texturenofocus>
 			<font>Font_Reg30_2</font>
 			<onleft>1002</onleft>
@@ -63,7 +65,8 @@
 			<height>58</height>
 			<textoffsety>12</textoffsety>
 			<align>center</align>
-			<texturefocus border="3">list-focus.png</texturefocus>
+			<textcolor>grey</textcolor>
+			<texturefocus border="3">button-focus.png</texturefocus>
 			<texturenofocus border="3">list-nofocus.png</texturenofocus>
 			<font>Font_Reg30_2</font>
 			<onleft>1003</onleft>

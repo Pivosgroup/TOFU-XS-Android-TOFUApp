@@ -26,34 +26,6 @@
 				<texture>views/showcase_floor.png</texture>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			</control>
-			<control type="group">
-				<visible>![Control.IsVisible(510) | Control.IsVisible(57) | Control.IsVisible(550)]</visible>
-				<visible>!Control.HasFocus(109)</visible>
-				<animation effect="slide" end="0,-400" time="560" tween="quadratic" condition="Control.HasFocus(109)">Conditional</animation>
-				<include>Animation_VisibleChange400</include>
-				<control type="image">
-					<width>696</width>
-					<height>1080</height>
-					<texture>views/showcase_vignette.png</texture>
-					<colordiffuse>white</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>1224</posx>
-					<width>696</width>
-					<height>1080</height>
-					<texture flipx="true">views/showcase_vignette.png</texture>
-					<colordiffuse>white</colordiffuse>
-				</control>
-			</control>
-		</control>
-		<control type="image" id="8858">
-			<posy>105</posy>
-			<texture>views/logo_back.png</texture>
-			<visible>[Control.IsVisible(503) + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists)] + [Skin.HasSetting(landscapelogo) | Skin.HasSetting(landscapeonelogo)] + Skin.HasSetting(altfloor)]</visible>
-			<include>Animation_CommonFade</include>
-			<animation effect="slide" time="160" end="0,100" tween="cubic" condition="Skin.HasSetting(landscapeonelogo)">Conditional</animation>
-			<include>FullscreenDimensions</include>
-			<colordiffuse>black</colordiffuse>
 		</control>
 	</include>
 	<include name="FloorLabels">
@@ -157,10 +129,6 @@
 			<include>Animation_Widgets</include>
 			<animation effect="fade" end="100" time="160">Visible</animation>
 			<animation effect="fade" start="100" end="0" time="160">Hidden</animation>
-			<animation type="Conditional" condition="Control.IsVisible(518) + Skin.HasSetting(infopanelfanart)">
-				<effect type="zoom" end="50,100" time="320" easing="in" tween="cubic" />
-				<effect type="slide" end="148" time="320" easing="in" tween="cubic" />
-			</animation>
 			<visible>[Control.IsVisible(512) + !Skin.HasSetting(addonwallaltbackground)] | [Control.IsVisible(500) + !Skin.HasSetting(wallfullscreen)] | [Control.IsVisible(518) + !Skin.HasSetting(infopanelbackground)]</visible>
 			<control type="group">
 				<control type="image">
@@ -328,7 +296,7 @@
 				<colordiffuse>fade</colordiffuse>
 			</control>
 			<control type="group">
-				<visible>Container.Content(movies) | [Container.Content(tvshows) + Control.isVisible(8858)]</visible>
+				<visible>Container.Content(movies)</visible>
 				<visible>!Skin.HasSetting(no_infopane_panel)</visible>
 				<include>Animation_VisibleChange400</include>
 				<control type="label">
@@ -338,6 +306,7 @@
 					<height>42</height>
 					<align>center</align>
 					<label>$VAR[LandscapeLogoPanelLabelVar]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<scroll>true</scroll>
 				</control>
 			</control>
@@ -379,6 +348,7 @@
 						<width>300</width>
 						<height>47</height>
 						<label fallback="31006">$VAR[FanartPanelValue1Var]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -391,6 +361,7 @@
 						<width>300</width>
 						<height>47</height>
 						<label fallback="31006">$VAR[FanartPanelValue3Var]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -403,6 +374,7 @@
 						<width>300</width>
 						<height>47</height>
 						<label fallback="31006">$VAR[FanartPanelValue5Var]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 				</control>
@@ -420,6 +392,7 @@
 						<width>300</width>
 						<height>47</height>
 						<label fallback="31006">$VAR[FanartPanelValue2Var]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -432,6 +405,7 @@
 						<width>300</width>
 						<height>47</height>
 						<label>$LOCALIZE[13409] #$INFO[ListItem.Top250]</label>
+						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.RatingAndVotes]</label>
 						<scrollspeed>200</scrollspeed>
 						<pauseatend>3000</pauseatend>
@@ -441,6 +415,7 @@
 						<width>300</width>
 						<height>47</height>
 						<label fallback="31006">$VAR[FanartPanelValue4Var]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 						<visible>IsEmpty(ListItem.Top250)</visible>
 					</control>
@@ -454,6 +429,7 @@
 						<width>300</width>
 						<height>47</height>
 						<label fallback="31006">$VAR[FanartPanelValue6Var]</label>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 				</control>
@@ -462,6 +438,7 @@
 					<width>652</width>
 					<height>249</height>
 					<label>$VAR[FanartPanelPlotVar]</label>
+					<textcolor>grey</textcolor>
 					<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 			</control>

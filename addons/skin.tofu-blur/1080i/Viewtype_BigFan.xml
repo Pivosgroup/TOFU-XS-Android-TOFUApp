@@ -69,11 +69,11 @@
 				<effect type="slide" time="240" end="0,135" easing="in" tween="cubic" />
 			</animation>
 			<control type="image">
-				<posy>180r</posy>
-				<width>1920</width>
-				<height>188</height>
-				<texture border="5">panel.png</texture>
-				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+				<posx>-15</posx>
+				<posy>350r</posy>
+				<width>1950</width>
+				<height>358</height>
+				<texture border="1,200,1,1">views/showcase_floor.png</texture>
 			</control>
 			<control type="image">
 				<posx>22</posx>
@@ -81,7 +81,6 @@
 				<width>40</width>
 				<height>40</height>
 				<texture flipx="true">arrowright.png</texture>
-				<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 			</control>
 			<control type="image">
 				<posx>74r</posx>
@@ -89,7 +88,6 @@
 				<width>40</width>
 				<height>40</height>
 				<texture>arrowright.png</texture>
-				<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 			</control>
 			<control type="group">
 				<posx>-54</posx>
@@ -157,7 +155,6 @@
 				<width>720</width>
 				<height>52</height>
 				<label>$VAR[TriPanelValue2Var]</label>
-				<textcolor>$VAR[FontColorVar]</textcolor>
 				<scroll>true</scroll>
 				<visible>!Container.Content(seasons)</visible>
 			</control>
@@ -167,7 +164,6 @@
 				<width>720</width>
 				<height>52</height>
 				<label>$INFO[ListItem.TvShowTitle]</label>
-				<textcolor>$VAR[FontColorVar]</textcolor>
 				<scroll>true</scroll>
 				<visible>Container.Content(seasons)</visible>
 			</control>

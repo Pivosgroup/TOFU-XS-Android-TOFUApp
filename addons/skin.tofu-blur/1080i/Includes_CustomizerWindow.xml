@@ -1268,7 +1268,6 @@
 		<include>ProgramsMainMenu</include>
 		<include>SettingsMainMenu</include>
 		<include>SearchMainMenu</include>
-		<include>ShutdownMainMenu</include>
 		<include>FavoritesMainMenu</include>
 		<include>WeatherMainMenu</include>
 	</include>
@@ -1308,7 +1307,7 @@
 			<control type="label">
 				<posx>260</posx>
 				<width>519</width>
-				<textcolor>$VAR[DefaultColorVar]</textcolor>
+				<textcolor>$VAR[FontColorVar]</textcolor>
 				<include>MainMenuLabels</include>
 			</control>
 			<control type="image">
@@ -1340,7 +1339,7 @@
 			<control type="label">
 				<posx>320</posx>
 				<width>639</width>
-				<textcolor>$VAR[DefaultColorVar]</textcolor>
+				<textcolor>$VAR[FontColorVar]</textcolor>
 				<include>MainMenuLabels</include>
 			</control>
 			<control type="image">
@@ -1400,7 +1399,7 @@
 					<width>88</width>
 					<height>88</height>
 					<texture background="true">$INFO[ListItem.Property(BigIcon)]</texture>
-					<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 					<visible>SubString(ListItem.Property(BigIcon),BigIcons/)</visible>
 				</control>
 				<control type="image">
@@ -1422,7 +1421,7 @@
 				<align>center</align>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
 				<font>Font_Reg30_Caps</font>
-				<textcolor>$VAR[DefaultColorVar]</textcolor>
+				<textcolor>$VAR[FontColorVar]</textcolor>
 			</control>
 			<control type="image">
 				<posx>266</posx>
@@ -1705,7 +1704,7 @@
 			<item>
 				<label>$LOCALIZE[31284]</label>
 				<property name="DisableIcon">$INFO[Skin.String(MoviesSub1)]</property>
-				<onclick condition="!System.HasAddon(script.cinema.experience)">Notification($LOCALIZE[31900],$LOCALIZE[31905])</onclick>
+				<onclick condition="!System.HasAddon(script.cinema.experience)">Notification($LOCALIZE[31900],$LOCALIZE[31905],,dialogs/exclamation.png)</onclick>
 				<onclick condition="IsEmpty(Skin.String(MoviesSub1))">Skin.SetString(MoviesSub1,1)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(MoviesSub1))">Skin.Reset(MoviesSub1)</onclick>
 				<visible>Substring(Control.GetLabel(4327),movie)</visible>
@@ -1904,49 +1903,7 @@
 				<onclick condition="!IsEmpty(Skin.String(TVShowsSub7))">Skin.Reset(TVShowsSub7)</onclick>
 				<visible>Substring(Control.GetLabel(4327),tv)</visible>
 			</item>
-			<!--Shutdown-->
-			<item>
-				<label>$LOCALIZE[20144]</label>
-				<property name="DisableIcon">$INFO[Skin.String(ShutdownSub1)]</property>
-				<onclick condition="IsEmpty(Skin.String(ShutdownSub1))">Skin.SetString(ShutdownSub1,1)</onclick>
-				<onclick condition="!IsEmpty(Skin.String(ShutdownSub1))">Skin.Reset(ShutdownSub1)</onclick>
-				<visible>Substring(Control.GetLabel(4327),shutdown)</visible>
-			</item>
-			<item>
-				<label>13013</label>
-				<property name="DisableIcon">$INFO[Skin.String(ShutdownSub2)]</property>
-				<onclick condition="IsEmpty(Skin.String(ShutdownSub2))">Skin.SetString(ShutdownSub2,1)</onclick>
-				<onclick condition="!IsEmpty(Skin.String(ShutdownSub2))">Skin.Reset(ShutdownSub2)</onclick>
-				<visible>Substring(Control.GetLabel(4327),shutdown)</visible>
-			</item>
-			<item>
-				<label>13010</label>
-				<property name="DisableIcon">$INFO[Skin.String(ShutdownSub5)]</property>
-				<onclick condition="IsEmpty(Skin.String(ShutdownSub5))">Skin.SetString(ShutdownSub5,1)</onclick>
-				<onclick condition="!IsEmpty(Skin.String(ShutdownSub5))">Skin.Reset(ShutdownSub5)</onclick>
-				<visible>Substring(Control.GetLabel(4327),shutdown)</visible>
-			</item>
-			<item>
-				<label>20126</label>
-				<property name="DisableIcon">$INFO[Skin.String(ShutdownSub6)]</property>
-				<onclick condition="IsEmpty(Skin.String(ShutdownSub6))">Skin.SetString(ShutdownSub6,1)</onclick>
-				<onclick condition="!IsEmpty(Skin.String(ShutdownSub6))">Skin.Reset(ShutdownSub6)</onclick>
-				<visible>Substring(Control.GetLabel(4327),shutdown) + [System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)] + System.Loggedon</visible>
-			</item>
-			<item>
-				<label>13009</label>
-				<property name="DisableIcon">$INFO[Skin.String(ShutdownSub7)]</property>
-				<onclick condition="IsEmpty(Skin.String(ShutdownSub7))">Skin.SetString(ShutdownSub7,1)</onclick>
-				<onclick condition="!IsEmpty(Skin.String(ShutdownSub7))">Skin.Reset(ShutdownSub7)</onclick>
-				<visible>Substring(Control.GetLabel(4327),shutdown) + System.ShowExitButton</visible>
-			</item>
-			<item>
-				<label>$LOCALIZE[13016]</label>
-				<property name="DisableIcon">$INFO[Skin.String(ShutdownSub8)]</property>
-				<onclick condition="IsEmpty(Skin.String(ShutdownSub8))">Skin.SetString(ShutdownSub8,1)</onclick>
-				<onclick condition="!IsEmpty(Skin.String(ShutdownSub8))">Skin.Reset(ShutdownSub8)</onclick>
-				<visible>Substring(Control.GetLabel(4327),shutdown)</visible>
-			</item>
+			<!--LiveTV-->
 			<item>
 				<label>19023</label>
 				<property name="DisableIcon">$INFO[Skin.String(LiveTVSub1)]</property>

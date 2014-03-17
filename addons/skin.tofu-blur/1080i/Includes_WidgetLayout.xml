@@ -55,8 +55,8 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1920</width>
-					<height>42</height>
-					<texture border="3">bar-top.png</texture>
+					<height>46</height>
+					<texture border="2,2,2,6">rss-bar.png</texture>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					<animation effect="rotatex" end="180" time="320" center="23" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow)">Conditional</animation>
 				</control>
@@ -66,10 +66,10 @@
 					<width>1920</width>
 					<height>86</height>
 					<font>Font_Reg26</font>
-					<textcolor>$VAR[DefaultColorVar]</textcolor>
+					<textcolor>white</textcolor>
 					<urlset>1</urlset>
 					<headlinecolor>white</headlinecolor>
-					<titlecolor>$VAR[DefaultColorVar]</titlecolor>
+					<titlecolor>white</titlecolor>
 					<scrollspeed>40</scrollspeed>
 				</control>
 			</control>
@@ -161,6 +161,7 @@
 					<width>800</width>
 					<height>34</height>
 					<label>$VAR[NowPlayingPlayLabelVar]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg31_Caps</font>
 				</control>
 				<control type="label">
@@ -302,6 +303,7 @@
 				<control type="label">
 					<posy>725</posy>
 					<label>$INFO[MusicPlayer.Artist]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg36_Caps</font>
 					<include>Furniture_HomeNowPlayingMetrics</include>
 					<visible>Substring(Control.GetLabel(8308),empty.png) | IsEmpty(Skin.String(ArtistsLogosPath))</visible>
@@ -329,6 +331,7 @@
 				<control type="label">
 					<posy>940</posy>
 					<label>$LOCALIZE[31040]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg28_Caps</font>
 					<include>Furniture_HomeNowPlayingMetrics</include>
 					<visible>!Player.Paused</visible>
@@ -399,21 +402,34 @@
 					<animation effect="zoom" start="100" end="95" time="640" easing="inout" tween="circle" center="960,500" condition="true">Conditional</animation>
 					<animation effect="fade" time="320">VisibleChange</animation>
 					<control type="image">
-						<posx>142</posx>
-						<posy>682</posy>
-						<width>1606</width>
-						<height>358</height>
+						<posx>-35</posx>
+						<posy>665</posy>
+						<width>1800</width>
+						<height>440</height>
 						<texture>common/black.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-						<animation effect="fade" end="40" condition="true">Conditional</animation>
+						<animation effect="fade" end="60" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
-						<posx>140</posx>
-						<posy>680</posy>
-						<width>1610</width>
-						<height>362</height>
+						<posx>-40</posx>
+						<posy>660</posy>
+						<width>1810</width>
+						<height>450</height>
 						<texture border="5">panel.png</texture>
 						<animation effect="fade" start="100" end="55" time="0" condition="Skin.HasSetting(nowplayingpanel)">Conditional</animation>
+						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+					</control>
+				</control>
+				<control type="group">
+					<visible>!Skin.HasSetting(nowplayingpanel)</visible>
+					<animation effect="zoom" start="100" end="95" time="640" easing="inout" tween="circle" center="960,500" condition="true">Conditional</animation>
+					<animation effect="fade" time="320">VisibleChange</animation>
+					<control type="image">
+						<posx>-80</posx>
+						<posy>640</posy>
+						<width>2042</width>
+						<height>600</height>
+						<texture flipy="true">home/nowplaying_shadow2.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
 				</control>
@@ -453,6 +469,7 @@
 							<height>260</height>
 							<align>left</align>
 							<label fallback="31006">$INFO[VideoPlayer.CastAndRole]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg30_2</font>
 							<autoscroll>false</autoscroll>
 							<animation effect="slide" time="320" tween="cubic" easing="inout" end="160" condition="Skin.HasSetting(ShowBackgroundVideo)">Conditional</animation>
@@ -465,6 +482,7 @@
 							<height>260</height>
 							<align>left</align>
 							<label fallback="31006">$INFO[VideoPlayer.CastAndRole]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg30_2</font>
 							<autoscroll>false</autoscroll>
 							<visible>VideoPlayer.Content(episodes)</visible>
@@ -476,6 +494,7 @@
 							<width>750</width>
 							<height>260</height>
 							<label fallback="31006">$INFO[VideoPlayer.Plot]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg30_2</font>
 							<autoscroll delay="5000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 						</control>
@@ -623,6 +642,7 @@
 						<align>center</align>
 						<font>Font_Info</font>
 						<info>Window(weather).Property(Current.Condition)</info>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
@@ -666,6 +686,7 @@
 						<align>center</align>
 						<font>Font_Info</font>
 						<info>Window(weather).Property(Day0.Outlook)</info>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
@@ -739,6 +760,7 @@
 						<align>center</align>
 						<font>Font_Info</font>
 						<info>Window(weather).Property(Day1.Outlook)</info>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
@@ -812,6 +834,7 @@
 						<align>center</align>
 						<font>Font_Info</font>
 						<info>Window(weather).Property(Day2.Outlook)</info>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
@@ -885,6 +908,7 @@
 						<align>center</align>
 						<font>Font_Info</font>
 						<info>Window(weather).Property(Day3.Outlook)</info>
+						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
@@ -965,6 +989,7 @@
 					<width>310</width>
 					<height>34</height>
 					<label>$INFO[ListItem.Label]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg26_Caps</font>
 					<scroll>true</scroll>
 				</control>
@@ -989,6 +1014,7 @@
 					<width>310</width>
 					<height>34</height>
 					<label>$INFO[ListItem.Label]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg28_Caps</font>
 					<scroll>true</scroll>
 				</control>
@@ -1221,6 +1247,7 @@
 						<label>$INFO[Container(8000).ListItem.Label]</label>
 						<font>Font_Reg40_Caps</font>
 						<scroll>true</scroll>
+						<textcolor>grey</textcolor>
 					</control>
 					<control type="textbox">
 						<posx>38</posx>
@@ -1312,6 +1339,7 @@
 						<width>675</width>
 						<height>30</height>
 						<label fallback="-">$INFO[Container(8000).ListItem.Label]</label>
+						<textcolor>grey</textcolor>
 						<font>Font_Reg36_Caps</font>
 					</control>
 					<control type="label">
@@ -1331,6 +1359,7 @@
 						<aligny>top</aligny>
 						<label>$INFO[Container(8000).ListItem.Property(Plot)]</label>
 						<font>Font_Reg32</font>
+						<textcolor>grey</textcolor>
 						<autoscroll delay="5000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
 				</control>
@@ -1361,6 +1390,7 @@
 						<width>800</width>
 						<height>38</height>
 						<label>$INFO[Container(8000).ListItem.Label2]</label>
+						<textcolor>grey</textcolor>
 						<font>Font_Reg40_Caps</font>
 					</control>
 					<control type="label">
@@ -1509,7 +1539,7 @@
 							<posx>1</posx>
 							<width>390</width>
 							<height>34</height>
-							<texture border="3">list-focus.png</texture>
+							<texture border="3,0,0,20">list-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 							<animation effect="fade" start="100" end="70" time="800" pulse="true" condition="!IsEmpty(Container(8000).ListItem.Property(Trailer))">Conditional</animation>
 						</control>
@@ -1589,7 +1619,7 @@
 							<posx>1</posx>
 							<width>390</width>
 							<height>68</height>
-							<texture border="3">list-focus.png</texture>
+							<texture border="3,0,0,20">list-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						</control>
 						<control type="label">
@@ -1665,9 +1695,9 @@
 					<include>Animation_VisibleChange200</include>
 					<visible>Substring(Control.GetLabel(4321),default) | Substring(Control.GetLabel(4321),glass)</visible>
 					<control type="image">
-						<posy>24</posy>
+						<posy>19</posy>
 						<width>1650</width>
-						<height>376</height>
+						<height>386</height>
 						<texture border="50">$VAR[PanelWidgetBackVar]</texture>
 						<animation type="Conditional" condition="true">
 							<effect type="fade" start="100" end="75" time="400" tween="cubic" easing="inout" />
@@ -2141,9 +2171,9 @@
 					</control>
 					<control type="spincontrol" id="5019">
 						<posx>0</posx>
-						<posy>-20</posy>
-						<width>50</width>
-						<height>88</height>
+						<posy>0</posy>
+						<width>40</width>
+						<height>40</height>
 					</control>
 				</control>
 				<control type="image">
@@ -2170,6 +2200,7 @@
 						<height>60</height>
 						<textoffsetx>15</textoffsetx>
 						<label>$INFO[Window(home).Property(Label)]</label>
+						<textcolor>grey</textcolor>
 						<font>Font_MainClassic3</font>
 						<visible>!IsEmpty(Window(home).Property(Logo))</visible>
 					</control>
@@ -2178,6 +2209,7 @@
 						<height>60</height>
 						<textoffsetx>15</textoffsetx>
 						<label>$INFO[Window(home).Property(Label)]</label>
+						<textcolor>grey</textcolor>
 						<font>Font_MainClassic3</font>
 						<visible>IsEmpty(Window(home).Property(Logo))</visible>
 					</control>
@@ -2472,6 +2504,7 @@
 							<align>center</align>
 							<label fallback="?">$INFO[Window(home).Property(RunningTime)]</label>
 							<font>Font_Bold34</font>
+							<textcolor>grey</textcolor>
 						</control>
 					</control>
 					<control type="image">
@@ -2494,6 +2527,7 @@
 							<align>center</align>
 							<label fallback="?">$INFO[Window(home).Property(Rating)]</label>
 							<font>Font_Bold34</font>
+							<textcolor>grey</textcolor>
 						</control>
 					</control>
 					<control type="image" id="13300">
@@ -2567,6 +2601,7 @@
 						<textoffsetx>15</textoffsetx>
 						<label>$INFO[Window(home).Property(Label)][COLOR $VAR[FontColorVar]]$INFO[Window(home).Property(Year), [,]][/COLOR]</label>
 						<font>Font_MainClassic3</font>
+						<textcolor>grey</textcolor>
 					</control>
 					<control type="label">
 						<width>1251</width>
@@ -2774,9 +2809,9 @@
 					</control>
 					<control type="spincontrol" id="5034">
 						<posx>0</posx>
-						<posy>-20</posy>
-						<width>50</width>
-						<height>88</height>
+						<posy>0</posy>
+						<width>40</width>
+						<height>40</height>
 					</control>
 				</control>
 			</control>
@@ -2964,6 +2999,7 @@
 						<label>$INFO[Container(7000).ListItem.Label]</label>
 						<font>Font_Reg40_Caps</font>
 						<scroll>true</scroll>
+						<textcolor>grey</textcolor>
 					</control>
 					<control type="textbox">
 						<posx>38</posx>
@@ -3056,6 +3092,7 @@
 						<height>30</height>
 						<label fallback="-">$INFO[Container(7000).ListItem.Label]</label>
 						<font>Font_Reg36_Caps</font>
+						<textcolor>grey</textcolor>
 					</control>
 					<control type="label">
 						<posx>38</posx>
@@ -3074,6 +3111,7 @@
 						<aligny>top</aligny>
 						<label>$INFO[Container(7000).ListItem.Property(Plot)]</label>
 						<font>Font_Reg32</font>
+						<textcolor>grey</textcolor>
 						<autoscroll delay="5000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
 				</control>
@@ -3237,6 +3275,7 @@
 							<height>34</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>Font_Reg28_Caps</font>
+							<textcolor>grey</textcolor>
 						</control>
 					</itemlayout>
 					<focusedlayout height="34" width="450">
@@ -3244,7 +3283,7 @@
 							<posx>1</posx>
 							<width>390</width>
 							<height>34</height>
-							<texture border="3">list-focus.png</texture>
+							<texture border="3,0,0,20">list-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 							<animation effect="fade" start="100" end="70" time="800" pulse="true" condition="!IsEmpty(Container(7000).ListItem.Property(Trailer))">Conditional</animation>
 						</control>
@@ -3315,7 +3354,7 @@
 							<height>68</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>Font_Reg33_Caps</font>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>grey</textcolor>
 						</control>
 					</itemlayout>
 					<focusedlayout height="68" width="450">
@@ -3323,7 +3362,7 @@
 							<posx>1</posx>
 							<width>390</width>
 							<height>68</height>
-							<texture border="3">list-focus.png</texture>
+							<texture border="3,0,0,20">list-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						</control>
 						<control type="label">
@@ -3369,9 +3408,9 @@
 					<visible>Substring(Control.GetLabel(4325),default) | Substring(Control.GetLabel(4325),glass)</visible>
 					<include>Animation_VisibleChange200</include>
 					<control type="image">
-						<posy>24</posy>
+						<posy>19</posy>
 						<width>1650</width>
-						<height>372</height>
+						<height>386</height>
 						<texture border="50">$VAR[PanelWidget2BackVar]</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<animation type="Conditional" condition="true">
@@ -3964,7 +4003,7 @@
 						<texture>common/black.png</texture>
 						<colordiffuse>fade</colordiffuse>
 						<include>Animation_VisibleChange400</include>
-						<visible>Control.HasFocus(5010)</visible>
+						<visible>Control.HasFocus(5010) + !Control.HasFocus(9000) + !Control.HasFocus(9010)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout width="399" height="340" condition="Substring(Control.GetLabel(4321),panelcoverepisode)">
@@ -4113,6 +4152,7 @@
 			<align>center</align>
 			<label>$VAR[WidgetTypeLabelVar]</label>
 			<font>Font_Reg22_Caps</font>
+			<textcolor>$VAR[FontColorVar]</textcolor>
 			<visible>SubString(Control.GetLabel(4321),panel)</visible>
 		</control>
 	</include>
@@ -4372,6 +4412,16 @@
 							<textcolor>$VAR[FontColorVar]</textcolor>
 						</control>
 					</control>
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>389</width>
+						<height>340</height>
+						<texture>common/black.png</texture>
+						<colordiffuse>fade</colordiffuse>
+						<include>Animation_VisibleChange400</include>
+						<visible>Control.HasFocus(6010) + !Control.HasFocus(9000) + !Control.HasFocus(9010)</visible>
+					</control>
 				</itemlayout>
 				<focusedlayout width="399" height="340" condition="Substring(Control.GetLabel(4325),panelcoverepisode)">
 					<control type="group">
@@ -4512,13 +4562,14 @@
 			</control>
 		</control>
 		<control type="label">
-			<posy>370</posy>
+			<posy>374</posy>
 			<width>1650</width>
 			<height>25</height>
 			<textoffsetx>15</textoffsetx>
 			<align>center</align>
 			<label>$VAR[Widget2TypeLabelVar]</label>
 			<font>Font_Reg22_Caps</font>
+			<textcolor>$VAR[FontColorVar]</textcolor>
 			<visible>SubString(Control.GetLabel(4325),panel)</visible>
 		</control>
 	</include>
@@ -4549,6 +4600,7 @@
 				<width>250</width>
 				<height>300</height>
 				<label>$INFO[Window(weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits][CR]$INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][CR]$INFO[Window(weather).Property(Current.Humidity)][CR]$INFO[Window(weather).Property(Current.UVIndex)][CR]$INFO[Window(weather).Property(Current.DewPoint)]$INFO[System.TemperatureUnits][CR]$INFO[Window(weather).Property(Current.Visibility)][CR]$INFO[Window(weather).Property(Current.Location.Latitude)] $INFO[Window(weather).Property(Current.Pressure)]</label>
+				<textcolor>grey</textcolor>
 			</control>
 			<control type="label">
 				<posx>640</posx>
@@ -4565,6 +4617,7 @@
 				<width>290</width>
 				<height>300</height>
 				<label>$INFO[Window(weather).Property(Current.Wind)][CR]$INFO[Window(weather).Property(Current.Condition)][CR]$INFO[Window(weather).Property(Today.Sunrise)][CR]$INFO[Window(weather).Property(Today.Sunset)][CR]$INFO[Window(weather).Property(Today.MoonPhase)][CR]$INFO[Window(weather).Property(Today.AvgLowTemperature)][CR]$INFO[Window(weather).Property(Today.AvgHighTemperature)]</label>
+				<textcolor>grey</textcolor>
 			</control>
 			<control type="image">
 				<posx>900</posx>
@@ -4625,6 +4678,7 @@
 				<textoffsetx>15</textoffsetx>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font_MainClassic4</font>
+				<textcolor>grey</textcolor>
 			</control>
 			<control type="label">
 				<posx>360</posx>
@@ -4643,6 +4697,7 @@
 				<height>210</height>
 				<label>$INFO[ListItem.Property(Description)]$INFO[ListItem.Property(Plot)]</label>
 				<font>Font_Reg28</font>
+				<textcolor>grey</textcolor>
 				<autoscroll time="AutoScrollTime" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
 			</control>
 			<control type="image">
@@ -4680,6 +4735,7 @@
 				<textoffsetx>15</textoffsetx>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font_Reg26</font>
+				<textcolor>grey</textcolor>
 			</control>
 			<control type="label">
 				<posx>415</posx>
@@ -4689,6 +4745,7 @@
 				<textoffsetx>15</textoffsetx>
 				<label>$INFO[ListItem.Label2]$INFO[ListItem.Property(Date)]</label>
 				<font>Font_MainClassic4</font>
+				<textcolor>grey</textcolor>
 			</control>
 			<control type="label">
 				<posx>415</posx>
@@ -4755,6 +4812,7 @@
 				<height>205</height>
 				<label>$INFO[ListItem.Property(Plot)]</label>
 				<font>Font_Reg28</font>
+				<textcolor>grey</textcolor>
 				<autoscroll time="AutoScrollTime" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
 			</control>
 		</control>
@@ -4780,6 +4838,7 @@
 			<textoffsetx>15</textoffsetx>
 			<label>$INFO[ListItem.Label]</label>
 			<font>Font_MainClassic4</font>
+			<textcolor>grey</textcolor>
 		</control>
 		<control type="progress">
 			<posx>15</posx>
@@ -4788,7 +4847,7 @@
 			<height>9</height>
 			<texturebg border="12,0,12,0">dialogs/progress/progress_back.png</texturebg>
 			<lefttexture border="12,0,0,0">-</lefttexture>
-			<midtexture border="12,0,12,0" colordiffuse="$VAR[DefaultColorVar]">dialogs/progress/progress_mid.png</midtexture>
+			<midtexture border="12,0,12,0" colordiffuse="$VAR[FontColorVar]">dialogs/progress/progress_mid.png</midtexture>
 			<righttexture border="0,0,12,0">-</righttexture>
 			<info>ListItem.Property(PercentPlayed)</info>
 			<visible>!IsEmpty(ListItem.Property(PercentPlayed)) + !Stringcompare(ListItem.Property(PercentPlayed),0%)</visible>
@@ -4832,6 +4891,7 @@
 			<height>170</height>
 			<label>$INFO[ListItem.Property(Plot)]</label>
 			<font>Font_Reg28</font>
+			<textcolor>grey</textcolor>
 			<autoscroll time="AutoScrollTime" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
 		</control>
 	</include>
@@ -4840,7 +4900,7 @@
 		<height>42</height>
 		<align>center</align>
 		<aligny>top</aligny>
-		<texturefocus border="3">list-focus.png</texturefocus>
+		<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 		<font>Font_Reg33_Caps</font>
 		<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 		<scroll>false</scroll>
@@ -4939,6 +4999,7 @@
 					<height>105</height>
 					<align>center</align>
 					<label>$INFO[ListItem.Label]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Bold40</font>
 					<visible>IsEmpty(ListItem.Property(Banner)) + IsEmpty(ListItem.Property(Logo)) + IsEmpty(ListItem.Property(EpisodeNumber))</visible>
 				</control>
@@ -4959,6 +5020,7 @@
 			<height>105</height>
 			<align>center</align>
 			<label>[UPPERCASE]$INFO[ListItem.Property(EpisodeNumber),,: ][/UPPERCASE]$INFO[ListItem.Label]</label>
+			<textcolor>grey</textcolor>
 			<font>Font_Reg28</font>
 			<visible>!IsEmpty(ListItem.Property(EpisodeNumber))</visible>
 		</control>
@@ -4988,6 +5050,7 @@
 			<align>center</align>
 			<label>$INFO[ListItem.Label]</label>
 			<font>Font_Reg29</font>
+			<textcolor>grey</textcolor>
 		</control>
 		<control type="label">
 			<posx>272</posx>
@@ -5027,6 +5090,7 @@
 			<textoffsetx>15</textoffsetx>
 			<align>center</align>
 			<label>$VAR[WidgetSubTitleVar]</label>
+			<textcolor>grey</textcolor>
 			<font>Font_Reg30_2</font>
 		</control>
 		<control type="label">
@@ -5090,6 +5154,7 @@
 			<textoffsetx>15</textoffsetx>
 			<align>center</align>
 			<label>$VAR[WidgetSubTitleVar]</label>
+			<textcolor>grey</textcolor>
 			<font>Font_Reg30_2</font>
 		</control>
 	</include>
@@ -5097,8 +5162,8 @@
 		<onup condition="Control.IsVisible(4445) + Skin.HasSetting(lowermainmenu)">SetFocus(4445)</onup>
 		<onup condition="!Skin.HasSetting(lowermainmenu)">SetFocus(8993)</onup>
 		<onup condition="!Control.IsVisible(4445) + Skin.HasSetting(lowermainmenu)">SetFocus(9009)</onup>
-		<ondown condition="!Skin.HasSetting(lowermainmenu)">SetFocus(9011)</ondown>
 		<ondown condition="Skin.HasSetting(lowermainmenu)">8993</ondown>
+		<ondown condition="!Skin.HasSetting(lowermainmenu)">7654</ondown>
 		<onback>8993</onback>
 	</include>
 	<include name="FeaturedWidgetSquareLayout">

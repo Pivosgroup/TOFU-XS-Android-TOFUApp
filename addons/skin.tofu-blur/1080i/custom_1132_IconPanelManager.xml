@@ -45,18 +45,22 @@
 			<control type="label">
 				<height>250</height>
 				<label>$LOCALIZE[31069] 1[CR]($LOCALIZE[31295] 1)</label>
+				<textcolor>grey</textcolor>
 			</control>
 			<control type="label">
 				<height>250</height>
 				<label>$LOCALIZE[31069] 2[CR]($LOCALIZE[31295] 1)</label>
+				<textcolor>grey</textcolor>
 			</control>
 			<control type="label">
 				<height>250</height>
 				<label>$LOCALIZE[31069] 1[CR]($LOCALIZE[31295] 2)</label>
+				<textcolor>grey</textcolor>
 			</control>
 			<control type="label">
 				<height>250</height>
 				<label>$LOCALIZE[31069] 2[CR]($LOCALIZE[31295] 2)</label>
+				<textcolor>grey</textcolor>
 			</control>
 		</control>
 		<control type="panel" id="5019">
@@ -97,7 +101,6 @@
 						<align>center</align>
 						<label>$INFO[ListItem.Label]</label>
 						<font>Font_Reg28</font>
-						<textcolor>$VAR[FontColorVar]</textcolor>
 					</control>
 					<control type="image">
 						<posx>5</posx>
@@ -137,7 +140,6 @@
 						<align>center</align>
 						<label>$INFO[ListItem.Label]</label>
 						<font>Font_Reg28</font>
-						<textcolor>$VAR[FontColorVar]</textcolor>
 					</control>
 				</control>
 				<control type="image">

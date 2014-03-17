@@ -61,6 +61,7 @@
 				<animation effect="fade" time="200" condition="[Window.Next(home) | Window.Next(fullscreenvideo) | Window.Next(visualisation) | Window.Next(slideshow)]">WindowClose</animation>
 				<animation effect="fade" time="200" delay="1120" condition="Control.IsVisible(510) + [Window.Next(home) | Window.Next(fullscreenvideo) | Window.Next(visualisation) | Window.Next(slideshow)]">WindowClose</animation>
 				<include>CommonMediaPlayingBackground</include>
+				<include>BackgroundDiffuse</include>
 			</control>
 			<control type="group">
 				<animation effect="fade" time="280" delay="800">WindowOpen</animation>
@@ -84,6 +85,7 @@
 								<width>389</width>
 								<height>74</height>
 								<label>$INFO[ListItem.Label]</label>
+								<textcolor>grey</textcolor>
 								<font>Font_Bold34</font>
 							</control>
 							<control type="label">
@@ -100,7 +102,7 @@
 							<control type="image">
 								<width>434</width>
 								<height>74</height>
-								<texture border="3">list-focus.png</texture>
+								<texture border="3">button-focus.png</texture>
 								<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
 								<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 							</control>
@@ -219,12 +221,12 @@
 									</control>
 									<control type="group">
 										<posx>250</posx>
-										<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
 										<control type="label">
 											<width>1108</width>
 											<height>45</height>
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Label]</label>
+											<textcolor>grey</textcolor>
 											<font>Font_Reg32</font>
 										</control>
 										<control type="label">
@@ -234,6 +236,7 @@
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Property(Genre)]</label>
 											<font>Font_Reg32</font>
+											<textcolor>$VAR[FontColorVar]</textcolor>
 										</control>
 										<control type="label">
 											<posy>98</posy>
@@ -242,6 +245,7 @@
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]$INFO[ListItem.Property(Rating), • ]</label>
 											<font>Font_Reg32</font>
+											<textcolor>$VAR[FontColorVar]</textcolor>
 										</control>
 										<control type="textbox">
 											<posx>22</posx>
@@ -250,6 +254,7 @@
 											<height>120</height>
 											<aligny>top</aligny>
 											<label>$INFO[ListItem.Property(Plot)]</label>
+											<textcolor>grey</textcolor>
 											<font>Font_Reg32</font>
 											<autoscroll>false</autoscroll>
 											<visible>IsEmpty(ListItem.Property(Plotoutline))</visible>
@@ -261,6 +266,7 @@
 											<height>120</height>
 											<aligny>top</aligny>
 											<label>$INFO[ListItem.Property(Plotoutline)]</label>
+											<textcolor>grey</textcolor>
 											<font>Font_Reg32</font>
 											<autoscroll>false</autoscroll>
 										</control>
@@ -278,9 +284,9 @@
 									<control type="image">
 										<width>1353</width>
 										<height>296</height>
-										<texture border="3">list-focus.png</texture>
+										<texture border="3,0,0,20">list-focus.png</texture>
+										<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(111)">Conditional</animation>
 										<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-										<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(111)">Conditional</animation>
 									</control>
 									<control type="image">
 										<posx>-8</posx>
@@ -294,7 +300,6 @@
 									</control>
 									<control type="group">
 										<posx>250</posx>
-										<animation effect="fade" start="100" end="60" time="40" condition="!Control.HasFocus(111)">Conditional</animation>
 										<control type="label">
 											<width>1108</width>
 											<height>45</height>
@@ -381,12 +386,12 @@
 									</control>
 									<control type="group">
 										<posx>250</posx>
-										<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
 										<control type="label">
 											<width>1108</width>
 											<height>45</height>
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Label]</label>
+											<textcolor>grey</textcolor>
 											<font>Font_Reg32</font>
 										</control>
 										<control type="label">
@@ -396,6 +401,7 @@
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Property(Genre)]</label>
 											<font>Font_Reg32</font>
+											<textcolor>$VAR[FontColorVar]</textcolor>
 										</control>
 										<control type="label">
 											<posy>98</posy>
@@ -403,6 +409,7 @@
 											<height>45</height>
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Episode), • , [LOWERCASE]$LOCALIZE[20360][/LOWERCASE]]$INFO[ListItem.Property(Rating), • ]</label>
+											<textcolor>$VAR[FontColorVar]</textcolor>
 											<font>Font_Reg32</font>
 										</control>
 										<control type="textbox">
@@ -412,6 +419,7 @@
 											<height>120</height>
 											<aligny>top</aligny>
 											<label>$INFO[ListItem.Property(Plot)]</label>
+											<textcolor>grey</textcolor>
 											<font>Font_Reg32</font>
 											<autoscroll>false</autoscroll>
 											<visible>IsEmpty(ListItem.Property(Plotoutline))</visible>
@@ -423,6 +431,7 @@
 											<height>120</height>
 											<aligny>top</aligny>
 											<label>$INFO[ListItem.Property(Plotoutline)]</label>
+											<textcolor>grey</textcolor>
 											<font>Font_Reg32</font>
 											<autoscroll>false</autoscroll>
 										</control>
@@ -440,9 +449,9 @@
 									<control type="image">
 										<width>1353</width>
 										<height>296</height>
-										<texture border="3">list-focus.png</texture>
+										<texture border="3,0,0,20">list-focus.png</texture>
 										<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-										<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(121)">Conditional</animation>
+										<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(121)">Conditional</animation>
 									</control>
 									<control type="image">
 										<posx>-8</posx>
@@ -456,7 +465,6 @@
 									</control>
 									<control type="group">
 										<posx>250</posx>
-										<animation effect="fade" start="100" end="60" time="40" condition="!Control.HasFocus(121)">Conditional</animation>
 										<control type="label">
 											<width>1108</width>
 											<height>45</height>
@@ -542,12 +550,12 @@
 									</control>
 									<control type="group">
 										<posx>150</posx>
-										<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
 										<control type="label">
 											<width>612</width>
 											<height>45</height>
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Label]</label>
+											<textcolor>grey</textcolor>
 											<font>Font_Reg32</font>
 										</control>
 										<control type="label">
@@ -557,6 +565,7 @@
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Property(Genre)]</label>
 											<font>Font_Reg32</font>
+											<textcolor>$VAR[FontColorVar]</textcolor>
 										</control>
 										<control type="label">
 											<posy>98</posy>
@@ -565,6 +574,7 @@
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]$INFO[ListItem.Property(Rating), • ]</label>
 											<font>Font_Reg32</font>
+											<textcolor>$VAR[FontColorVar]</textcolor>
 										</control>
 										<control type="textbox">
 											<posx>634</posx>
@@ -573,6 +583,7 @@
 											<height>120</height>
 											<aligny>top</aligny>
 											<label>$INFO[ListItem.Property(Plot)]</label>
+											<textcolor>grey</textcolor>
 											<font>Font_Reg32</font>
 											<autoscroll>false</autoscroll>
 										</control>
@@ -580,19 +591,19 @@
 								</itemlayout>
 								<focusedlayout width="1353" height="148">
 									<control type="image">
-										<width>1353</width>
-										<height>148</height>
-										<texture border="3">list-focus.png</texture>
-										<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-										<visible>Control.HasFocus(131)</visible>
-									</control>
-									<control type="image">
 										<posy>76</posy>
 										<width>1353</width>
 										<height>72</height>
 										<texture border="3">list-nofocus.png</texture>
 										<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 										<visible>!Control.HasFocus(131)</visible>
+									</control>
+									<control type="image">
+										<width>1353</width>
+										<height>148</height>
+										<texture border="3,0,0,20">list-focus.png</texture>
+										<animation effect="fade" start="100" end="60" time="30" condition="!Control.HasFocus(131)">Conditional</animation>
+										<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 									</control>
 									<control type="image">
 										<posx>8</posx>
@@ -605,7 +616,6 @@
 									</control>
 									<control type="group">
 										<posx>150</posx>
-										<animation effect="fade" start="100" end="60" time="40" condition="!Control.HasFocus(131)">Conditional</animation>
 										<control type="label">
 											<width>612</width>
 											<height>45</height>
@@ -681,12 +691,12 @@
 									</control>
 									<control type="group">
 										<posx>300</posx>
-										<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
 										<control type="label">
 											<width>1108</width>
 											<height>45</height>
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Label]</label>
+											<textcolor>grey</textcolor>
 											<font>Font_Reg32</font>
 										</control>
 										<control type="label">
@@ -696,6 +706,7 @@
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Property(TvShowTitle)]</label>
 											<font>Font_Reg32</font>
+											<textcolor>$VAR[FontColorVar]</textcolor>
 										</control>
 										<control type="label">
 											<posy>98</posy>
@@ -703,6 +714,7 @@
 											<height>45</height>
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Property(Premiered)]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]$INFO[ListItem.Property(Rating), • ]</label>
+											<textcolor>$VAR[FontColorVar]</textcolor>
 											<font>Font_Reg32</font>
 										</control>
 										<control type="textbox">
@@ -712,6 +724,7 @@
 											<height>120</height>
 											<aligny>top</aligny>
 											<label>$INFO[ListItem.Property(Plot)]</label>
+											<textcolor>grey</textcolor>
 											<font>Font_Reg32</font>
 											<autoscroll>false</autoscroll>
 										</control>
@@ -729,9 +742,9 @@
 									<control type="image">
 										<width>1353</width>
 										<height>296</height>
-										<texture border="3">list-focus.png</texture>
+										<texture border="3,0,0,20">list-focus.png</texture>
 										<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-										<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(141)">Conditional</animation>
+										<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(141)">Conditional</animation>
 									</control>
 									<control type="image">
 										<posx>15</posx>
@@ -745,7 +758,6 @@
 									</control>
 									<control type="group">
 										<posx>300</posx>
-										<animation effect="fade" start="100" end="60" time="40" condition="!Control.HasFocus(141)">Conditional</animation>
 										<control type="label">
 											<width>1108</width>
 											<height>45</height>
@@ -803,10 +815,9 @@
 								<preloaditems>2</preloaditems>
 								<itemlayout width="1353" height="296">
 									<control type="image">
-										<posx>-8</posx>
 										<posy>3</posy>
-										<width>290</width>
-										<height>290</height>
+										<width>270</width>
+										<height>270</height>
 										<aspectratio aligny="center">keep</aspectratio>
 										<texture>$INFO[ListItem.Icon]</texture>
 										<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
@@ -821,12 +832,12 @@
 									</control>
 									<control type="group">
 										<posx>250</posx>
-										<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
 										<control type="label">
 											<width>1108</width>
 											<height>45</height>
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Label]$INFO[ListItem.Property(Artist), - ]</label>
+											<textcolor>grey</textcolor>
 											<font>Font_Reg32</font>
 										</control>
 										<control type="label">
@@ -836,6 +847,7 @@
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Property(Genre)]</label>
 											<font>Font_Reg32</font>
+											<textcolor>$VAR[FontColorVar]</textcolor>
 										</control>
 										<control type="label">
 											<posy>98</posy>
@@ -843,6 +855,7 @@
 											<height>45</height>
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]$INFO[ListItem.Property(Rating), • ]</label>
+											<textcolor>$VAR[FontColorVar]</textcolor>
 											<font>Font_Reg32</font>
 										</control>
 										<control type="textbox">
@@ -852,6 +865,7 @@
 											<height>120</height>
 											<aligny>top</aligny>
 											<label>$INFO[ListItem.Property(Plot)]</label>
+											<textcolor>grey</textcolor>
 											<font>Font_Reg32</font>
 											<autoscroll>false</autoscroll>
 										</control>
@@ -869,15 +883,14 @@
 									<control type="image">
 										<width>1353</width>
 										<height>296</height>
-										<texture border="3">list-focus.png</texture>
+										<texture border="3,0,0,20">list-focus.png</texture>
 										<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-										<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(151)">Conditional</animation>
+										<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(151)">Conditional</animation>
 									</control>
 									<control type="image">
-										<posx>-8</posx>
 										<posy>3</posy>
-										<width>290</width>
-										<height>290</height>
+										<width>270</width>
+										<height>270</height>
 										<aspectratio aligny="center">keep</aspectratio>
 										<texture>$INFO[ListItem.Icon]</texture>
 										<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
@@ -885,7 +898,6 @@
 									</control>
 									<control type="group">
 										<posx>250</posx>
-										<animation effect="fade" start="100" end="60" time="40" condition="!Control.HasFocus(151)">Conditional</animation>
 										<control type="label">
 											<width>1108</width>
 											<height>45</height>
@@ -961,12 +973,12 @@
 									</control>
 									<control type="group">
 										<posx>300</posx>
-										<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
 										<control type="label">
 											<width>379</width>
 											<height>45</height>
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Label]</label>
+											<textcolor>grey</textcolor>
 											<font>Font_Reg32</font>
 										</control>
 										<control type="label">
@@ -976,6 +988,7 @@
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Property(Artist_Genre)]</label>
 											<font>Font_Reg32</font>
+											<textcolor>$VAR[FontColorVar]</textcolor>
 										</control>
 										<control type="label">
 											<posy>98</posy>
@@ -983,6 +996,7 @@
 											<height>45</height>
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Property(Artist_YearsActive)]</label>
+											<textcolor>grey</textcolor>
 											<font>Font_Reg32</font>
 										</control>
 									</control>
@@ -999,9 +1013,9 @@
 									<control type="image">
 										<width>679</width>
 										<height>296</height>
-										<texture border="3">list-focus.png</texture>
+										<texture border="3,0,0,20">list-focus.png</texture>
 										<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-										<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(161)">Conditional</animation>
+										<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(161)">Conditional</animation>
 									</control>
 									<control type="image">
 										<posx>15</posx>
@@ -1015,7 +1029,6 @@
 									</control>
 									<control type="group">
 										<posx>300</posx>
-										<animation effect="fade" start="100" end="60" time="40" condition="!Control.HasFocus(161)">Conditional</animation>
 										<control type="label">
 											<width>379</width>
 											<height>45</height>
@@ -1081,12 +1094,12 @@
 									</control>
 									<control type="group">
 										<posx>300</posx>
-										<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
 										<control type="label">
 											<width>379</width>
 											<height>45</height>
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Label]</label>
+											<textcolor>grey</textcolor>
 											<font>Font_Reg32</font>
 										</control>
 										<control type="label">
@@ -1095,6 +1108,7 @@
 											<height>45</height>
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Property(Artist)]</label>
+											<textcolor>grey</textcolor>
 											<font>Font_Reg32</font>
 										</control>
 										<control type="label">
@@ -1104,6 +1118,7 @@
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Property(Genre)]</label>
 											<font>Font_Reg32</font>
+											<textcolor>$VAR[FontColorVar]</textcolor>
 										</control>
 										<control type="label">
 											<posy>147</posy>
@@ -1120,6 +1135,7 @@
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Property(Album_label)]</label>
 											<font>Font_Reg32</font>
+											<textcolor>$VAR[FontColorVar]</textcolor>
 										</control>
 										<control type="image">
 											<posx>105</posx>
@@ -1144,9 +1160,9 @@
 									<control type="image">
 										<width>679</width>
 										<height>296</height>
-										<texture border="3">list-focus.png</texture>
+										<texture border="3,0,0,20">list-focus.png</texture>
 										<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-										<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(171)">Conditional</animation>
+										<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(171)">Conditional</animation>
 									</control>
 									<control type="image">
 										<posx>15</posx>
@@ -1160,7 +1176,6 @@
 									</control>
 									<control type="group">
 										<posx>300</posx>
-										<animation effect="fade" start="100" end="60" time="40" condition="!Control.HasFocus(171)">Conditional</animation>
 										<control type="label">
 											<width>379</width>
 											<height>45</height>
@@ -1251,12 +1266,12 @@
 									</control>
 									<control type="group">
 										<posx>300</posx>
-										<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
 										<control type="label">
 											<width>379</width>
 											<height>45</height>
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Label]</label>
+											<textcolor>grey</textcolor>
 											<font>Font_Reg32</font>
 										</control>
 										<control type="label">
@@ -1265,6 +1280,7 @@
 											<height>45</height>
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Property(Artist)]</label>
+											<textcolor>grey</textcolor>
 											<font>Font_Reg32</font>
 										</control>
 										<control type="label">
@@ -1273,6 +1289,7 @@
 											<height>45</height>
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Property(Album)]</label>
+											<textcolor>grey</textcolor>
 											<font>Font_Reg32</font>
 										</control>
 										<control type="label">
@@ -1281,6 +1298,7 @@
 											<height>45</height>
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Property(Year),, • ]</label>
+											<textcolor>grey</textcolor>
 											<font>Font_Reg32</font>
 										</control>
 										<control type="label">
@@ -1290,6 +1308,7 @@
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Property(Duration)]</label>
 											<font>Font_Reg32</font>
+											<textcolor>$VAR[FontColorVar]</textcolor>
 										</control>
 										<control type="image">
 											<posx>105</posx>
@@ -1307,6 +1326,7 @@
 											<textoffsetx>22</textoffsetx>
 											<label>$INFO[ListItem.Property(Genre)]</label>
 											<font>Font_Reg32</font>
+											<textcolor>$VAR[FontColorVar]</textcolor>
 										</control>
 									</control>
 								</itemlayout>
@@ -1322,9 +1342,9 @@
 									<control type="image">
 										<width>679</width>
 										<height>296</height>
-										<texture border="3">list-focus.png</texture>
+										<texture border="3,0,0,20">list-focus.png</texture>
+										<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(181)">Conditional</animation>
 										<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-										<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(181)">Conditional</animation>
 									</control>
 									<control type="image">
 										<posx>15</posx>
@@ -1338,7 +1358,6 @@
 									</control>
 									<control type="group">
 										<posx>300</posx>
-										<animation effect="fade" start="100" end="60" time="40" condition="!Control.HasFocus(181)">Conditional</animation>
 										<control type="label">
 											<width>379</width>
 											<height>45</height>

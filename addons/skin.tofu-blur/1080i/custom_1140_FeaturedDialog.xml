@@ -31,7 +31,7 @@
 			<onup>8001</onup>
 			<ondown>8001</ondown>
 			<texturenofocus>-</texturenofocus>
-			<texturefocus>button-focus2.png</texturefocus>
+			<texturefocus>button-focus.png</texturefocus>
 			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			<visible>Substring(Control.GetLabel(4321),random)</visible>
 		</control>
@@ -82,6 +82,7 @@
 						<textoffsetx>15</textoffsetx>
 						<align>center</align>
 						<label>$INFO[ListItem.Label]</label>
+						<textcolor>grey</textcolor>
 						<font>Font_Reg28</font>
 					</control>
 					<control type="label">
@@ -92,6 +93,7 @@
 						<textoffsetx>15</textoffsetx>
 						<align>center</align>
 						<label>$INFO[ListItem.Label2]</label>
+						<textcolor>grey</textcolor>
 						<font>Font_Reg28</font>
 					</control>
 				</control>
@@ -197,6 +199,7 @@
 					<textoffsetx>15</textoffsetx>
 					<align>center</align>
 					<label>$INFO[ListItem.Label]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg28</font>
 				</control>
 				<control type="image">
@@ -277,6 +280,7 @@
 					<textoffsetx>15</textoffsetx>
 					<align>center</align>
 					<label>$INFO[ListItem.Label]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg28</font>
 				</control>
 				<control type="image">
@@ -385,12 +389,14 @@
 				<orientation>vertical</orientation>
 				<control type="button" id="8032">
 					<label>$LOCALIZE[208]</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_ContextMenuButton</include>
 					<onclick>$INFO[Container(8001).ListItem.Property(Path)]</onclick>
 					<onclick>Action(Close)</onclick>
 				</control>
 				<control type="button" id="8016">
 					<label>$LOCALIZE[20410]</label>
+					<textcolor>grey</textcolor>
 					<onclick>Action(Close)</onclick>
 					<onclick condition="!IsEmpty(Container(8001).ListItem.Property(Trailer))">PlayMedia($ESCINFO[Container(8001).ListItem.Property(Trailer)])</onclick>
 					<onclick condition="IsEmpty(Container(8001).ListItem.Property(Trailer))">ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Container(8001).ListItem.Label] Trailer,return)</onclick>
@@ -423,6 +429,7 @@
 					<height>40</height>
 					<textoffsetx>15</textoffsetx>
 					<label>$INFO[Container(8001).ListItem.Label]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Bold40</font>
 				</control>
 				<control type="grouplist">
@@ -460,6 +467,7 @@
 					<aligny>top</aligny>
 					<label>$INFO[Container(8001).ListItem.Property(Tagline)]</label>
 					<font>Font_Reg30_2</font>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 				</control>
 				<control type="grouplist">
 					<posx>623</posx>
@@ -471,11 +479,13 @@
 						<height>30</height>
 						<textoffsetx>15</textoffsetx>
 						<label>$INFO[Container(8001).ListItem.Property(Year)]$INFO[Container(8001).ListItem.Property(RunningTime), • , $LOCALIZE[12391]]$INFO[Container(8001).ListItem.Property(Rating), • ]</label>
+						<textcolor>$VAR[FontColorVar]</textcolor>
 						<font>Font_Reg30_2</font>
 					</control>
 					<control type="label">
 						<width>623</width>
 						<height>30</height>
+						<textcolor>$VAR[FontColorVar]</textcolor>
 						<textoffsetx>15</textoffsetx>
 						<label>$INFO[Container(8001).ListItem.Property(Director),[COLOR bcicon]$LOCALIZE[31156] [/COLOR]]</label>
 						<font>Font_Reg30_2</font>
@@ -488,6 +498,7 @@
 					<height>198</height>
 					<aligny>top</aligny>
 					<label>$INFO[Container(8001).ListItem.Property(Plot)]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg30_2</font>
 					<autoscroll delay="5000" time="AutoScrollTime" repeat="8001">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
@@ -521,6 +532,7 @@
 					<height>50</height>
 					<textoffsetx>15</textoffsetx>
 					<label>$INFO[Container(8001).ListItem.Label]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Reg40</font>
 					<visible>Substring(Control.GetLabel(9308),empty.png)</visible>
 				</control>
@@ -531,6 +543,7 @@
 					<height>50</height>
 					<textoffsetx>15</textoffsetx>
 					<label>$INFO[Container(8001).ListItem.Label]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Reg40</font>
 					<visible>!Substring(Control.GetLabel(9308),empty.png)</visible>
 				</control>
@@ -541,6 +554,7 @@
 					<height>30</height>
 					<textoffsetx>15</textoffsetx>
 					<label>$INFO[Container(8001).ListItem.Label2]$INFO[Container(8001).ListItem.Property(EpisodeNumber), • [UPPERCASE],[/UPPERCASE]]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Reg30_2</font>
 				</control>
 				<control type="textbox">
@@ -550,6 +564,7 @@
 					<height>195</height>
 					<aligny>top</aligny>
 					<label>$INFO[Container(8001).ListItem.Property(Plot)]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg30_2</font>
 					<autoscroll delay="5000" time="AutoScrollTime" repeat="8001">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
@@ -583,6 +598,7 @@
 					<height>50</height>
 					<textoffsetx>15</textoffsetx>
 					<label>$INFO[Container(8001).ListItem.Label][COLOR $VAR[FontColorVar]]$INFO[Container(8001).ListItem.Property(Year), [,]][/COLOR]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Reg40</font>
 				</control>
 				<control type="label">
@@ -592,6 +608,7 @@
 					<height>30</height>
 					<textoffsetx>15</textoffsetx>
 					<label>$INFO[Container(8001).ListItem.Label2]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<font>Font_Reg30_2</font>
 				</control>
 				<control type="textbox">
@@ -601,6 +618,7 @@
 					<height>195</height>
 					<aligny>top</aligny>
 					<label fallback="414">$INFO[Container(8001).ListItem.Property(Plot)]$INFO[Container(8001).ListItem.Property(Description)]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg30_2</font>
 					<autoscroll delay="5000" time="AutoScrollTime" repeat="8001">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>

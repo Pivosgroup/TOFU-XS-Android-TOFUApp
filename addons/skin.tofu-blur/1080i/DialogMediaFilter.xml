@@ -22,9 +22,9 @@
 			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 		</control>
 		<control type="grouplist" id="5">
-			<posx>48</posx>
+			<posx>50</posx>
 			<posy>75</posy>
-			<width>696</width>
+			<width>693</width>
 			<height>540</height>
 			<pagecontrol>6</pagecontrol>
 			<onup>9001</onup>
@@ -34,13 +34,15 @@
 		</control>
 		<control type="button" id="7">
 			<height>50</height>
-			<texturefocus border="3">list-focus.png</texturefocus>
+			<textcolor>grey</textcolor>
+			<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 			<texturenofocus border="3">list-nofocus.png</texturenofocus>
 			<font>Font_Reg29</font>
 		</control>
 		<control type="radiobutton" id="8">
 			<height>50</height>
-			<texturefocus border="3">list-focus.png</texturefocus>
+			<textcolor>grey</textcolor>
+			<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 			<texturenofocus border="3">list-nofocus.png</texturenofocus>
 			<font>Font_Reg29</font>
 			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
@@ -48,7 +50,8 @@
 		<control type="spincontrolex" id="9">
 			<height>50</height>
 			<aligny>center</aligny>
-			<texturefocus border="3">list-focus.png</texturefocus>
+			<textcolor>grey</textcolor>
+			<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 			<texturenofocus border="3">list-nofocus.png</texturenofocus>
 			<font>Font_Reg29</font>
 		</control>
@@ -56,13 +59,15 @@
 			<height>50</height>
 			<textoffsetx>10</textoffsetx>
 			<aligny>center</aligny>
-			<texturefocus border="3">list-focus.png</texturefocus>
+			<textcolor>grey</textcolor>
+			<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 			<texturenofocus border="3">list-nofocus.png</texturenofocus>
 			<font>Font_Reg29</font>
 		</control>
 		<control type="edit" id="12">
 			<height>50</height>
-			<texturefocus border="3">list-focus.png</texturefocus>
+			<textcolor>grey</textcolor>
+			<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 			<texturenofocus border="3">list-nofocus.png</texturenofocus>
 			<font>Font_Reg29</font>
 		</control>
@@ -74,6 +79,7 @@
 				<height>60</height>
 				<align>center</align>
 				<aligny>center</aligny>
+				<textcolor>grey</textcolor>
 				<texturefocus border="3">button-focus.png</texturefocus>
 				<texturenofocus border="3">button-nofocus.png</texturenofocus>
 				<label>186</label>
@@ -90,6 +96,7 @@
 				<height>60</height>
 				<align>center</align>
 				<aligny>center</aligny>
+				<textcolor>grey</textcolor>
 				<texturefocus border="3">button-focus.png</texturefocus>
 				<texturenofocus border="3">button-nofocus.png</texturenofocus>
 				<label>192</label>

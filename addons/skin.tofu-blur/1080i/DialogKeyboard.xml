@@ -19,7 +19,7 @@
 			<width>880</width>
 			<height>33</height>
 			<align>center</align>
-			<font>Font_Reg30_2</font>
+			<font>Font_Reg36_Caps</font>
 			<textcolor>$VAR[FontColorVar]</textcolor>
 		</control>
 		<control type="label" id="310">
@@ -29,6 +29,7 @@
 			<height>33</height>
 			<align>center</align>
 			<font>Font_Reg35</font>
+			<textcolor>$VAR[FontColorVar]</textcolor>
 		</control>
 		<control type="group">
 			<posx>622</posx>

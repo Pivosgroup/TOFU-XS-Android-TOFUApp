@@ -41,10 +41,6 @@ msgctxt "#31017"
 msgid "Live TV"
 msgstr "Live TV"
 
-msgctxt "#31020"
-msgid "Extras"
-msgstr "Annet"
-
 msgctxt "#31022"
 msgid "Music - Files"
 msgstr "Musikk - Filer"
@@ -64,10 +60,6 @@ msgstr "Nå spilles"
 msgctxt "#31043"
 msgid "PAUSED"
 msgstr "PAUSE"
-
-msgctxt "#31053"
-msgid "Fullscreen"
-msgstr "Fullskjerm"
 
 msgctxt "#31055"
 msgid "Open playlist"
@@ -100,14 +92,6 @@ msgstr "Tilbake"
 msgctxt "#31072"
 msgid "System info"
 msgstr "Systeminformasjon"
-
-msgctxt "#31074"
-msgid "Filmography"
-msgstr "Filmografi"
-
-msgctxt "#31085"
-msgid "Light"
-msgstr "lett"
 
 msgctxt "#31095"
 msgid "Rating"
@@ -153,22 +137,6 @@ msgctxt "#31115"
 msgid "Customizer"
 msgstr "Tilpasser"
 
-msgctxt "#31117"
-msgid "CNN International"
-msgstr "CNN International"
-
-msgctxt "#31118"
-msgid "Radio 105"
-msgstr "Radio 105"
-
-msgctxt "#31120"
-msgid "Tom & Jerry"
-msgstr "Tom & Jerry"
-
-msgctxt "#31128"
-msgid "Lyrics"
-msgstr "Sangtekster"
-
 msgctxt "#31153"
 msgid "Low List"
 msgstr "Lav liste"
@@ -180,10 +148,6 @@ msgstr "Trailere"
 msgctxt "#31175"
 msgid "Big list"
 msgstr "Stor liste"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "Standard"
 
 msgctxt "#31234"
 msgid "Wall"
@@ -301,17 +265,9 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "Videoer"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "Programmer"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "System"
-
-msgctxt "#31508"
-msgid "Shutdown"
-msgstr "Slå av"
 
 msgctxt "#31509"
 msgid "Favorites"
@@ -332,18 +288,6 @@ msgstr "Lydvisualisering"
 msgctxt "#31616"
 msgid "Low"
 msgstr "Lav"
-
-msgctxt "#31617"
-msgid "High"
-msgstr "Høy"
-
-msgctxt "#31622"
-msgid "Label"
-msgstr "Plateselskap"
-
-msgctxt "#31629"
-msgid "Channels"
-msgstr "Kanaler"
 
 msgctxt "#31630"
 msgid "Custom"
@@ -380,14 +324,6 @@ msgstr "Musikkfiler"
 msgctxt "#31889"
 msgid "Next Tracks"
 msgstr "Neste sport"
-
-msgctxt "#31891"
-msgid "Folders"
-msgstr "Mapper"
-
-msgctxt "#31892"
-msgid "Categories"
-msgstr "Kategorier"
 
 msgctxt "#31896"
 msgid "10 Day"

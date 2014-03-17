@@ -20,8 +20,7 @@
 				<posx>650</posx>
 				<width>1270</width>
 				<height>1080</height>
-				<texture>common/black.png</texture>
-				<animation effect="fade" end="70" condition="true">Conditional</animation>
+				<texture>panel-top.png</texture>
 			</control>
 			<!-- Thumb -->
 			<control type="group">
@@ -452,7 +451,7 @@
 					<control type="image">
 						<width>390</width>
 						<height>40</height>
-						<texture border="3">list-focus.png</texture>
+						<texture border="3,0,0,20">list-focus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
 					<control type="label">
@@ -494,7 +493,7 @@
 					<control type="image">
 						<width>390</width>
 						<height>40</height>
-						<texture border="3">list-focus.png</texture>
+						<texture border="3,0,0,20">list-focus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
 					<control type="label">

@@ -9,10 +9,6 @@ msgctxt "#31003"
 msgid "N/A"
 msgstr "N/A"
 
-msgctxt "#31004"
-msgid "Month"
-msgstr "เดือน"
-
 msgctxt "#31005"
 msgid "Premiered"
 msgstr "เริ่มออกอากาศ"
@@ -36,10 +32,6 @@ msgstr "ตั้งเวลา"
 msgctxt "#31010"
 msgid "General main menu settings"
 msgstr "การตั้งค่าทั่วไปของเมนูหลัก"
-
-msgctxt "#31011"
-msgid "RottenTomatoes Trailers"
-msgstr "ตัวอย่างหนังจาก RottenTomatoes "
 
 msgctxt "#31012"
 msgid "Add group"
@@ -68,18 +60,6 @@ msgstr "ทีวี สด"
 msgctxt "#31018"
 msgid "Big covers"
 msgstr "ปกขนาดใหญ่"
-
-msgctxt "#31019"
-msgid "Channel4 News"
-msgstr "ข่าว Channel4"
-
-msgctxt "#31020"
-msgid "Extras"
-msgstr "ส่วนพิเศษ"
-
-msgctxt "#31021"
-msgid "Search TOFU for"
-msgstr "ค้น TOFU สำหรับ"
 
 msgctxt "#31022"
 msgid "Music - Files"
@@ -113,17 +93,9 @@ msgctxt "#31029"
 msgid "Showcase2"
 msgstr "ตู้โชว์2"
 
-msgctxt "#31030"
-msgid "Change info labels"
-msgstr "เปลี่ยนป้ายแสดงข้อมูล"
-
 msgctxt "#31032"
 msgid "Nothing"
 msgstr "ไม่มี"
-
-msgctxt "#31033"
-msgid "Play item on startup"
-msgstr "เล่นรายการ ในขณะเริ่มระบบ"
 
 msgctxt "#31034"
 msgid "Move tooltip to top bar"
@@ -132,18 +104,6 @@ msgstr "ย้ายคำแนะนำเครื่องมือไปย
 msgctxt "#31035"
 msgid "Conditional weather"
 msgstr "สภาวะอากาศ"
-
-msgctxt "#31036"
-msgid "Breadcrumbs classic"
-msgstr "แถบนำทาง คลาสสิก"
-
-msgctxt "#31037"
-msgid "Default breadcrumbs"
-msgstr "ค่าเริ่มต้น แถบนำทาง"
-
-msgctxt "#31038"
-msgid "Classic top panels"
-msgstr "แผงด้านบนคลาสสิก"
 
 msgctxt "#31039"
 msgid "CD-Wall"
@@ -177,14 +137,6 @@ msgctxt "#31048"
 msgid "Visualization presets"
 msgstr "รูปแบบ การแสดงแสงสี"
 
-msgctxt "#31053"
-msgid "Fullscreen"
-msgstr "เต็มหน้าจอ"
-
-msgctxt "#31054"
-msgid "Shadow"
-msgstr "เงา"
-
 msgctxt "#31055"
 msgid "Open playlist"
 msgstr "เปิด รายการเล่น"
@@ -217,10 +169,6 @@ msgctxt "#31063"
 msgid "Choose style"
 msgstr "เลือกลักษณะ"
 
-msgctxt "#31064"
-msgid "Press SELECT for alternative layout"
-msgstr "กดปุ่ม เลือก เพื่อใช้การจัดวางอีกแบบ"
-
 msgctxt "#31065"
 msgid "Info"
 msgstr "ข้อมูล"
@@ -249,22 +197,6 @@ msgctxt "#31072"
 msgid "System info"
 msgstr "ข้อมูลระบบ"
 
-msgctxt "#31073"
-msgid "Actor information"
-msgstr "ข้อมูลนักแสดง"
-
-msgctxt "#31074"
-msgid "Filmography"
-msgstr "ผลงานภาพยนตร์"
-
-msgctxt "#31075"
-msgid "Press SELECT to switch between now/next EPG"
-msgstr "กด เลือก เพื่อสลับไปมา ระหว่าง now/next EPG"
-
-msgctxt "#31080"
-msgid "Director information"
-msgstr "ข้อมูลผู้กำกับ"
-
 msgctxt "#31081"
 msgid "Latest MusicVids"
 msgstr "วิดีโอเพลง ล่าสุด"
@@ -281,10 +213,6 @@ msgctxt "#31084"
 msgid "Panels"
 msgstr "แผง"
 
-msgctxt "#31085"
-msgid "Light"
-msgstr "สว่าง"
-
 msgctxt "#31086"
 msgid "ClearART"
 msgstr "อาร์ตพื้นใส"
@@ -293,17 +221,9 @@ msgctxt "#31087"
 msgid "Randomize All"
 msgstr "ใช้การสุ่มทั้งหมด"
 
-msgctxt "#31088"
-msgid "Use color for all areas"
-msgstr "ใช้สีสำหรับทุกพื้นที่"
-
 msgctxt "#31089"
 msgid "Both"
 msgstr "ทั้งคู่"
-
-msgctxt "#31090"
-msgid "Adjust Transparency"
-msgstr "ปรับความโปร่งใส"
 
 msgctxt "#31091"
 msgid "Random MusicVids"
@@ -313,10 +233,6 @@ msgctxt "#31092"
 msgid "Artist fanart (Extrafanart, fanart.jpg, default fanart)"
 msgstr "แฟนอาร์ตศิลปิน (Extrafanart, fanart.jpg, เป็นค่าเริ่มต้นแฟนอาร์ต)"
 
-msgctxt "#31093"
-msgid "Actors born today"
-msgstr "ศิลปินที่เกิดวันนี้"
-
 msgctxt "#31094"
 msgid "Widget fanart"
 msgstr "ตัวแขวนแฟนอาร์ต"
@@ -325,10 +241,6 @@ msgctxt "#31095"
 msgid "Rating"
 msgstr "เรตติ้ง"
 
-msgctxt "#31096"
-msgid "Search on YouTube"
-msgstr "ค้นหาใน YouTube"
-
 msgctxt "#31097"
 msgid "Classic OSD style"
 msgstr "OSD แบบคลาสสิก"
@@ -336,10 +248,6 @@ msgstr "OSD แบบคลาสสิก"
 msgctxt "#31098"
 msgid "Background path"
 msgstr "เส้นทางของพื้นหลัง"
-
-msgctxt "#31099"
-msgid "Top bar style"
-msgstr "ลักษณะของแถบบน"
 
 msgctxt "#31102"
 msgid "Background"
@@ -381,10 +289,6 @@ msgctxt "#31111"
 msgid "Recording"
 msgstr "การบันทึก"
 
-msgctxt "#31112"
-msgid "Coloured"
-msgstr "ใส่สี"
-
 msgctxt "#31113"
 msgid "Single Image"
 msgstr "ภาพเดี่ยว"
@@ -401,53 +305,13 @@ msgctxt "#31116"
 msgid "Show"
 msgstr "แสดง"
 
-msgctxt "#31117"
-msgid "CNN International"
-msgstr "CNN International"
-
-msgctxt "#31118"
-msgid "Radio 105"
-msgstr "Radio 105"
-
-msgctxt "#31119"
-msgid "Radio Montecarlo"
-msgstr "Radio Montecarlo"
-
-msgctxt "#31120"
-msgid "Tom & Jerry"
-msgstr "Tom & Jerry"
-
-msgctxt "#31121"
-msgid "Virgin Music"
-msgstr "Virgin Music"
-
 msgctxt "#31127"
 msgid "Lyrics add-on"
 msgstr "ส่วนเสริม เนื้อเพลง"
 
-msgctxt "#31128"
-msgid "Lyrics"
-msgstr "เนื้อเพลง"
-
-msgctxt "#31129"
-msgid "Video Stream"
-msgstr "กระแส วิดีโอ"
-
-msgctxt "#31130"
-msgid "Subtitle add-on"
-msgstr "ส่วนเสริม คำบรรยาย"
-
 msgctxt "#31143"
 msgid "Animated fanart in music visualization"
 msgstr "เคลื่อนไหวแฟนอาร์ต ในการแสดงแสงสีของเพลง"
-
-msgctxt "#31148"
-msgid "Show timepanel"
-msgstr "แสดงแผงเวลา"
-
-msgctxt "#31149"
-msgid "This will shutdown TOFU! [CR]Are you sure?"
-msgstr "นี่จะเป็นการปิด TOFU! [CR]คุณแน่ใจหรือ?"
 
 msgctxt "#31150"
 msgid "Landscape"
@@ -485,10 +349,6 @@ msgctxt "#31166"
 msgid "Infopanel"
 msgstr "แผงข้อมูล"
 
-msgctxt "#31167"
-msgid "Playlists for Widget 2"
-msgstr "รายการเล่นของตัวแขวน 2"
-
 msgctxt "#31168"
 msgid "No CoverFlow"
 msgstr "ไม่ซ้อนปก"
@@ -525,14 +385,6 @@ msgctxt "#31176"
 msgid "General options"
 msgstr "ตัวเลือก ทั่วไป"
 
-msgctxt "#31177"
-msgid "Random color mode"
-msgstr "โหมด สีสันแบบสุ่ม"
-
-msgctxt "#31178"
-msgid "Choose main color"
-msgstr "เลือกสีหลัก"
-
 msgctxt "#31179"
 msgid "Disable media menu and hide options in video info"
 msgstr "ปิดการใช้งานเมนูสื่อ และ ซ่อนตัวเลือก ในข้อมูลวิดีโอ"
@@ -540,10 +392,6 @@ msgstr "ปิดการใช้งานเมนูสื่อ และ �
 msgctxt "#31180"
 msgid "Hide options in media menu"
 msgstr "ซ่อนตัวเลือกในเมนูสื่อ"
-
-msgctxt "#31181"
-msgid "Activate 'Glow Mode'"
-msgstr "เปิดใช้ 'โหมดเรืองแสง'"
 
 msgctxt "#31182"
 msgid "Colored"
@@ -581,10 +429,6 @@ msgctxt "#31191"
 msgid "Use as icon"
 msgstr "ใช้เป็นไอคอน"
 
-msgctxt "#31192"
-msgid "Choose font color"
-msgstr "เลือกสีแบบอักษร"
-
 msgctxt "#31194"
 msgid "Delayed"
 msgstr "หน่วงเวลา"
@@ -601,45 +445,9 @@ msgctxt "#31198"
 msgid "Extrathumbs"
 msgstr "รูปย่อพิเศษ"
 
-msgctxt "#31199"
-msgid "News"
-msgstr "ข่าว"
-
-msgctxt "#31200"
-msgid "TOFU Cinema"
-msgstr "โรงหนัง TOFU"
-
-msgctxt "#31201"
-msgid "TOFU Trailer"
-msgstr "หนังตัวอย่าง TOFU"
-
-msgctxt "#31202"
-msgid "DailyMotion"
-msgstr "DailyMotion"
-
-msgctxt "#31203"
-msgid "YouTube User Uploads"
-msgstr "อัพโหลดโดยผู้ใช้ YouTube"
-
-msgctxt "#31204"
-msgid "YouTube User Favorites"
-msgstr "ที่ชื่นชอบของผู้ใช้ YouTube"
-
-msgctxt "#31205"
-msgid "Youtube Most Viewed"
-msgstr "รับชมสูงสุดใน YouTube"
-
-msgctxt "#31206"
-msgid "Youtube Most Popular"
-msgstr "นิยมสูงสุดใน YouTube"
-
 msgctxt "#31220"
 msgid "Random episodes"
 msgstr "สุ่มตอน"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "ค่าเริ่มต้น"
 
 msgctxt "#31222"
 msgid "Random movies"
@@ -664,10 +472,6 @@ msgstr "แนวดิ่ง"
 msgctxt "#31229"
 msgid "Horizontal"
 msgstr "แนวขวาง"
-
-msgctxt "#31230"
-msgid "Viewtypes"
-msgstr "แบบมุมมอง"
 
 msgctxt "#31231"
 msgid "Navigation"
@@ -729,18 +533,6 @@ msgctxt "#31255"
 msgid "Blu-ray Disc"
 msgstr "แผ่นบลูเรย์"
 
-msgctxt "#31256"
-msgid "Include already watched Items?"
-msgstr "ประกอบด้วย รายการที่ดูไปแล้ว?"
-
-msgctxt "#31265"
-msgid "Smaller pop-up dialogs"
-msgstr "ทำให้กล่องโต้ดอบป๊อปอัพ เล็กลง"
-
-msgctxt "#31269"
-msgid "Enable background effect [I](Can increase CPU usage!)   [/I]"
-msgstr "เปิดใช้งานเอฟเฟ็คพื้นหลัง [I](จะเพิ่มการใช้ ซีพียู!)   [/I]"
-
 msgctxt "#31271"
 msgid "Posters"
 msgstr "โปสเตอร์"
@@ -752,10 +544,6 @@ msgstr "วางแบบ"
 msgctxt "#31279"
 msgid "Play trailers in fullscreen"
 msgstr "เล่นตัวอย่างหนังแบบเต็มจอ"
-
-msgctxt "#31281"
-msgid "Show video info when player is paused"
-msgstr "แสดงข้อมูลวิดีโอเมื่อ หยุดชั่วขณะ"
 
 msgctxt "#31282"
 msgid "Clear Cases"
@@ -792,10 +580,6 @@ msgstr "คงไว้"
 msgctxt "#31295"
 msgid "Widget"
 msgstr "ตัวแขวน"
-
-msgctxt "#31298"
-msgid "Set area color"
-msgstr "ตั้งสีพื้นที่"
 
 msgctxt "#31299"
 msgid "Data provider"
@@ -837,30 +621,6 @@ msgctxt "#31326"
 msgid "Most played albums"
 msgstr "อัลบั้ม ที่เล่นบ่อยสุด"
 
-msgctxt "#31327"
-msgid "Most played ROMs"
-msgstr "ROMs ที่เล่นบ่อย"
-
-msgctxt "#31329"
-msgid "In-progress TV Shows"
-msgstr "รายการทีวี ที่ดำเนินการอยู่"
-
-msgctxt "#31330"
-msgid "Random music"
-msgstr "สุ่ม เพลง"
-
-msgctxt "#31331"
-msgid "Latest Music"
-msgstr "เพลง ล่าสุด"
-
-msgctxt "#31332"
-msgid "Play Video"
-msgstr "เล่น วิดีโอ"
-
-msgctxt "#31333"
-msgid "Recent"
-msgstr "ก่อนนี้"
-
 msgctxt "#31334"
 msgid "Latest"
 msgstr "ล่าสุด"
@@ -897,10 +657,6 @@ msgctxt "#31356"
 msgid "Download Subtitles"
 msgstr "ดาวน์โหลด คำบรรยาย"
 
-msgctxt "#31357"
-msgid "Mixed info"
-msgstr "ข้อมูล แบบผสม"
-
 msgctxt "#31358"
 msgid "System info"
 msgstr "ข้อมูลระบบ"
@@ -908,10 +664,6 @@ msgstr "ข้อมูลระบบ"
 msgctxt "#31359"
 msgid "Latest albums"
 msgstr "อัลบั้มล่าสุด"
-
-msgctxt "#31360"
-msgid "Upcoming"
-msgstr "ที่กำลังมา"
 
 msgctxt "#31362"
 msgid "Rounded covers"
@@ -957,10 +709,6 @@ msgctxt "#31383"
 msgid "Backdrop"
 msgstr "ฉากหลัง"
 
-msgctxt "#31387"
-msgid "Darken"
-msgstr "มืดลง"
-
 msgctxt "#31388"
 msgid "Floor label"
 msgstr "ป้ายชื่อบนพื้น"
@@ -1004,10 +752,6 @@ msgstr "[B]ปรับเปลี่ยนการตั้งค่า บ�
 msgctxt "#31406"
 msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]ปรับเปลี่ยนการตั้งค่า ระบบ[/B][CR][CR]การติดตั้งและปรับเทียบการแสดงผล · กำหนดค่าการส่งออกสัญญาณเสียง · การติดตั้งรีโมทคอนโทรล[CR]ตั้งค่าตัวเลือกการประหยัดพลังงาน · เปิดใช้งานการแก้จุดบกพร่อง · ติดตั้ง กุญแจหลัก"
-
-msgctxt "#31407"
-msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the TOFU+ skin · Customize the home menu · Adjust the skin colors[CR]Change skin backgrounds"
-msgstr "[B]ปรับเปลี่ยนการตั้งค่า หน้าตา[/B][CR][CR]ตั้งค่าหน้าตา TOFU+ · ปรับแต่งเมนูหลักด้วยตนเอง · ปรับสีสันของหน้าตา[CR]เปลี่ยนพื้นหลังของหน้าตา"
 
 msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from pivos.com[CR]Modify Add-on settings"
@@ -1101,10 +845,6 @@ msgctxt "#31483"
 msgid "Show icon label"
 msgstr "แสดงป้ายชื่อไอคอน"
 
-msgctxt "#31484"
-msgid "Play trailer"
-msgstr "เล่น หนังตัวอย่าง"
-
 msgctxt "#31500"
 msgid "Pictures"
 msgstr "รูปภาพ"
@@ -1125,10 +865,6 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "วิดีโอ"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "โปรแกรม"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "ระบบ"
@@ -1136,10 +872,6 @@ msgstr "ระบบ"
 msgctxt "#31507"
 msgid "Add-Ons"
 msgstr "ส่วนเสริม"
-
-msgctxt "#31508"
-msgid "Shutdown"
-msgstr "ปิดระบบ"
 
 msgctxt "#31509"
 msgid "Favorites"
@@ -1149,10 +881,6 @@ msgctxt "#31510"
 msgid "Weather"
 msgstr "สภาพอากาศ"
 
-msgctxt "#31511"
-msgid "Play Disc"
-msgstr "เล่นแผ่น"
-
 msgctxt "#31600"
 msgid "Main menu item customizer (backgrounds,widgets)"
 msgstr "ปรับแต่งส่วนประกอบในเมนูหลัก (พื้นหลัง,ตัวแขวน)"
@@ -1160,14 +888,6 @@ msgstr "ปรับแต่งส่วนประกอบในเมนู
 msgctxt "#31601"
 msgid "CDWall"
 msgstr "ผนังซีดี"
-
-msgctxt "#31602"
-msgid "Choose main menu style"
-msgstr "เลือกลักษณะของเมนูหลัก"
-
-msgctxt "#31610"
-msgid "Set area color for Home window"
-msgstr "กำหนดสีพื้นที่ของหน้าต่างหลัก"
 
 msgctxt "#31611"
 msgid "Fullscreen video"
@@ -1181,10 +901,6 @@ msgctxt "#31613"
 msgid "Enable custom startup focus position of main menu"
 msgstr "เปิดใช้ ตำแหน่งจุดสนใจแรกเริ่ม ที่กำหนดเอง ของเมนูหลัก"
 
-msgctxt "#31614"
-msgid "CDArt Manager"
-msgstr "ตัวจัดการ ซีดีอาร์ต"
-
 msgctxt "#31615"
 msgid "Audio visualization"
 msgstr "แสดงแสงสีประกอบ เสียง"
@@ -1193,25 +909,13 @@ msgctxt "#31616"
 msgid "Low"
 msgstr "ต่ำ"
 
-msgctxt "#31617"
-msgid "High"
-msgstr "สูง"
-
 msgctxt "#31619"
 msgid "Fullscreen video options"
 msgstr "ตัวเลือก วิดีโอเต็มหน้าจอ"
 
-msgctxt "#31620"
-msgid "Add to icon panel"
-msgstr "เพิ่มไปยัง แผงไอคอน"
-
 msgctxt "#31621"
 msgid "Use Alaska paused label for video OSD"
 msgstr "ใช้ป้าย หยุดชั่วขณะ แบบ Alaska ใน OSD วิดีโอ"
-
-msgctxt "#31622"
-msgid "Label"
-msgstr "ป้ายชื่อ"
 
 msgctxt "#31623"
 msgid "Slot"
@@ -1224,10 +928,6 @@ msgstr "ซ่อน  OSD  ส่วนควบคุมตัวเล่น"
 msgctxt "#31628"
 msgid "Current position"
 msgstr "ตำแหน่งปัจจุบัน"
-
-msgctxt "#31629"
-msgid "Channels"
-msgstr "ช่องสัญญาณ"
 
 msgctxt "#31630"
 msgid "Custom"
@@ -1249,10 +949,6 @@ msgctxt "#31634"
 msgid "Main Menu"
 msgstr "เมนูหลัก"
 
-msgctxt "#31635"
-msgid "Similar Artists"
-msgstr "ศิลปินที่คล้ายกัน"
-
 msgctxt "#31636"
 msgid "Rotating"
 msgstr "หมุนเวียน"
@@ -1260,10 +956,6 @@ msgstr "หมุนเวียน"
 msgctxt "#31637"
 msgid "Video OSD Settings"
 msgstr "การตั้งค่า OSD วิด๊โอ"
-
-msgctxt "#31638"
-msgid "Show 'Next Aired' info"
-msgstr "แสดงข้อมูล 'ออกอากาศถัดไป'"
 
 msgctxt "#31639"
 msgid "Hide video thumb on info screen"
@@ -1288,14 +980,6 @@ msgstr "ตัวจัดการ แผงไอคอน"
 msgctxt "#31645"
 msgid "Background Setup"
 msgstr "ตั้งค่า พื้นหลัง"
-
-msgctxt "#31646"
-msgid "Do you want to download all available [CR]artwork without user interaction?"
-msgstr "คุณต้องการดาวน์โหลดทั้งหมดของ [CR]อาร์ตเวิร์ค โดยไม่ต้องถามผู้ใช้?"
-
-msgctxt "#31673"
-msgid "Most Played ROMs"
-msgstr "ROMs ที่เล่นบ่อย"
 
 msgctxt "#31674"
 msgid "Switch panel layout"
@@ -1345,10 +1029,6 @@ msgctxt "#31685"
 msgid "Classic"
 msgstr "คลาสสิก"
 
-msgctxt "#31686"
-msgid "Nox"
-msgstr "Nox"
-
 msgctxt "#31687"
 msgid "Furniture settings"
 msgstr "การตั้งค่าเครื่องตกแต่ง"
@@ -1357,10 +1037,6 @@ msgctxt "#31688"
 msgid "Disable timepanel"
 msgstr "ปิดการใช้ แผงเวลา"
 
-msgctxt "#31689"
-msgid "Disable library stats"
-msgstr "ปิดการใช้ สถานะคลังข้อมูล"
-
 msgctxt "#31690"
 msgid "Disable rss panel"
 msgstr "ปิดการใช้ แผง rss"
@@ -1368,10 +1044,6 @@ msgstr "ปิดการใช้ แผง rss"
 msgctxt "#31691"
 msgid "Toggle position"
 msgstr "สลับ ตำแหน่ง"
-
-msgctxt "#31692"
-msgid "Shorter time and library stats panel"
-msgstr "แผงเวลาและสถานะคลังข้อมูล สั้นลง"
 
 msgctxt "#31694"
 msgid "Fixed list"
@@ -1388,10 +1060,6 @@ msgstr "การจัดวางแบบทางเลือก"
 msgctxt "#31697"
 msgid "Choose cover type"
 msgstr "เลือกรูปแบบปก"
-
-msgctxt "#31698"
-msgid "Show list of actors/artists birthdays"
-msgstr "แสดงรายการวันเกิด นักแสดง/ศิลปิน"
 
 msgctxt "#31699"
 msgid "Smaller main menu"
@@ -1429,10 +1097,6 @@ msgctxt "#31708"
 msgid "Background Customizer"
 msgstr "ส่วนปรับแต่งพื้นหลัง"
 
-msgctxt "#31709"
-msgid "Set Delay"
-msgstr "ตั้งหน่วงเวลา"
-
 msgctxt "#31710"
 msgid "Show ExtraFanart"
 msgstr "แสดง แฟนอาร์ตพิเศษ"
@@ -1448,10 +1112,6 @@ msgstr "วิดีโอเพลง ที่แนะนำ"
 msgctxt "#31714"
 msgid "Video Library Node"
 msgstr "คลังวิดีโอ ย่อย"
-
-msgctxt "#31715"
-msgid "Smart Playlist Manager"
-msgstr "ส่วนจัดการ รายการเล่นอัจฉริยะ"
 
 msgctxt "#31716"
 msgid "Default Sets"
@@ -1485,10 +1145,6 @@ msgctxt "#31723"
 msgid "Default Settings Items"
 msgstr "รายการ ค่าเริ่มต้นการตั้งค่า"
 
-msgctxt "#31724"
-msgid "Default Shutdown Items"
-msgstr "รายการ ค่าเริ่มต้นการปิดระบบ"
-
 msgctxt "#31725"
 msgid "Default PVR Items"
 msgstr "รายการ ค่าเริ่มต้น PVR"
@@ -1497,21 +1153,9 @@ msgctxt "#31726"
 msgid "Default Video Items"
 msgstr "รายการ ค่าเริ่มต้นวิดีโอ"
 
-msgctxt "#31727"
-msgid "Remaining Cities"
-msgstr "เมืองที่เหลือ"
-
-msgctxt "#31728"
-msgid "Show Cities"
-msgstr "แสดงเมือง"
-
 msgctxt "#31729"
 msgid "Move NowPlaying widget to bottom"
 msgstr "ย้ายตัวแขวน กำลังเล่นขณะนี้ ไปยังด้านล่าง"
-
-msgctxt "#31730"
-msgid "Script features"
-msgstr "Script ที่แนะนำ"
 
 msgctxt "#31731"
 msgid "Skin Settings"
@@ -1528,34 +1172,6 @@ msgstr "เลือกเพลง"
 msgctxt "#31734"
 msgid "Use QuickList instead of default shutdown menu"
 msgstr "ใช้รายการด่วน แทน ค่าเริ่มต้นของเมนูปิดระบบ"
-
-msgctxt "#31735"
-msgid "[B]CREDITS TO:[/B]"
-msgstr "[B]เครดิต ให้:[/B]"
-
-msgctxt "#31736"
-msgid "[B]N.O.W.A.L.L.[/B] for creating Artwork"
-msgstr "[B]N.O.W.A.L.L.[/B] สำหรับการจัดทำอาร์คเวิร์ค"
-
-msgctxt "#31737"
-msgid "[B]Fional88[/B] for creating the tutorial videos"
-msgstr "[B]Fional88[/B] สำหรับการจัดทำ วิดีโอแนะนำการใช้งาน"
-
-msgctxt "#31738"
-msgid "[B]www.webdesignerdepot.com[/B] for permission to include the iconpack \"Reflection\""
-msgstr "[B]www.webdesignerdepot.com[/B] สำหรับการยินยอมให้ใช้ชุดไอคอน \"Reflection\""
-
-msgctxt "#31739"
-msgid "[B]DJH_ [/B]for creating Aeon, [B]Jezz_X [/B]for creating Confluence, [B]black[/B] for creating Xperience1080"
-msgstr "[B]DJH_ [/B]ผู้สร้างสกิน Aeon, [B]Jezz_X [/B]ผู้สร้างสกิน Confluence, [B]black[/B] ผู้สร้างสกิน Xperience1080"
-
-msgctxt "#31740"
-msgid "Translators: [B]CutSickAss[/B], [B]epoke[/B], [B]frodo19[/B], [B]mindweaver[/B], [B]Passer[/B], [B]PatOso[/B], [B]peppe_sr[/B], [B]Rififi77[/B][CR][B]Roman_V_M[/B], [B]lijack[/B]"
-msgstr "ผู้แปล: [B]CutSickAss[/B], [B]epoke[/B], [B]frodo19[/B], [B]mindweaver[/B], [B]Passer[/B], [B]PatOso[/B], [B]peppe_sr[/B], [B]Rififi77[/B][CR][B]Roman_V_M[/B], [B]lijack[/B]"
-
-msgctxt "#31741"
-msgid "[CR]Also to: [B]Martijn[/B], [B]Deano316[/B], [B]defluo[/B], [B]fmronan[/B], [B]thrak76[/B], [B]xhaggi[/B] and [CR]all other people who contributed to this project"
-msgstr "[CR]รวมถึง: [B]Martijn[/B], [B]Deano316[/B], [B]defluo[/B], [B]fmronan[/B], [B]thrak76[/B], [B]xhaggi[/B] และ [CR]คนอื่น ๆ ที่มีส่วนร่วมกับโครงการนี้"
 
 msgctxt "#31800"
 msgid "Fade background in visualisation"
@@ -1577,10 +1193,6 @@ msgctxt "#31804"
 msgid "Panel"
 msgstr "แผง"
 
-msgctxt "#31807"
-msgid "Choose Icon"
-msgstr "เลือก ไอคอน"
-
 msgctxt "#31808"
 msgid "Exchange Position"
 msgstr "สลับตำแหน่ง"
@@ -1592,10 +1204,6 @@ msgstr "การตั้งค่า แสดงแสงสีของเ�
 msgctxt "#31810"
 msgid "Show ClearArt instead of Logo"
 msgstr "แสดง อาร์ตพื้นใส แทน โลโก้"
-
-msgctxt "#31811"
-msgid "Use Alt Floor"
-msgstr "ใช้พื้นแบบทางเลือก"
 
 msgctxt "#31812"
 msgid "Show CDArt"
@@ -1609,33 +1217,13 @@ msgctxt "#31814"
 msgid "Always show Submenu"
 msgstr "แสดงเมนูย่อยเสมอ"
 
-msgctxt "#31815"
-msgid "Latest Pics"
-msgstr "รูปภาพ ล่าสุด"
-
-msgctxt "#31816"
-msgid "Random Pics"
-msgstr "สุ่ม รูปภาพ"
-
 msgctxt "#31817"
 msgid "Random Artists"
 msgstr "สุ่ม ศิลปิน"
 
-msgctxt "#31818"
-msgid "Near Concerts"
-msgstr "คอนเสิร์ตที่ใกล้เคียง"
-
 msgctxt "#31819"
 msgid "Next Aired"
 msgstr "ออกอากาศถัดไป"
-
-msgctxt "#31820"
-msgid "Daily Babes"
-msgstr "น้องหนู รายวัน"
-
-msgctxt "#31823"
-msgid "World Map + Icons"
-msgstr "แผนที่โลก + ไอคอน"
 
 msgctxt "#31824"
 msgid "Live DVD cases"
@@ -1697,14 +1285,6 @@ msgctxt "#31839"
 msgid "Restart TOFU"
 msgstr "เริ่ม TOFU ใหม่"
 
-msgctxt "#31840"
-msgid "Random Movie (Genre)"
-msgstr "สุ่ม ภาพยนตร์ (ประเภท)"
-
-msgctxt "#31841"
-msgid "Random Movie"
-msgstr "สุ่ม ภาพยนตร์"
-
 msgctxt "#31842"
 msgid "Movies (Cinema Exp.)"
 msgstr "ภาพยนตร์ (Cinema Exp.)"
@@ -1720,10 +1300,6 @@ msgstr "ล้าง ฐานข้อมูลวิดีโอ"
 msgctxt "#31845"
 msgid "Movie Sets"
 msgstr "ภาพยนตร์ชุด"
-
-msgctxt "#31846"
-msgid "Around the world"
-msgstr "ทั่วโลก"
 
 msgctxt "#31847"
 msgid "Video Files"
@@ -1753,10 +1329,6 @@ msgctxt "#31854"
 msgid "PVR Area"
 msgstr "หมวด PVR"
 
-msgctxt "#31855"
-msgid "Featured Area"
-msgstr "หมวด ที่แนะนำ"
-
 msgctxt "#31856"
 msgid "NowPlaying"
 msgstr "กำลังเล่นขณะนี้"
@@ -1781,10 +1353,6 @@ msgctxt "#31863"
 msgid "Two Columns"
 msgstr "สองคอลัมน์"
 
-msgctxt "#31864"
-msgid "Show Widgets"
-msgstr "แสดงตัวแขวน"
-
 msgctxt "#31865"
 msgid "WakeOnLAN"
 msgstr "ปลุกด้วยเครือข่าย"
@@ -1801,18 +1369,6 @@ msgctxt "#31868"
 msgid "Enter MAC Address"
 msgstr "ป้อนค่า MAC Address"
 
-msgctxt "#31869"
-msgid "Online Video Help"
-msgstr "ช่วยเหลือผ่านวิดีโอออนไลน์"
-
-msgctxt "#31870"
-msgid "Help"
-msgstr "ส่วนช่วยเหลือ"
-
-msgctxt "#31871"
-msgid "Available at Passion-XBMC repository"
-msgstr "หาได้จาก แหล่งข้อมูลโปรแกรม Passion-XBMC"
-
 msgctxt "#31872"
 msgid "Mixed Movies"
 msgstr "ภาพยนตร์ ผสม"
@@ -1824,10 +1380,6 @@ msgstr "รายการทีวี ผสม"
 msgctxt "#31874"
 msgid "Mixed Music"
 msgstr "เพลง ผสม"
-
-msgctxt "#31875"
-msgid "No Content for this Area"
-msgstr "ไม่มีเนื้อหาสำหรับหมวดนี้"
 
 msgctxt "#31876"
 msgid "Appearance Setup"
@@ -1849,14 +1401,6 @@ msgctxt "#31882"
 msgid "Disable option to hide widgets by pressing \"Back\""
 msgstr "ปิดใช้งาน ตัวเลือกในการซ่อนตัวแขวนโดยกด \"กลับ\""
 
-msgctxt "#31885"
-msgid "Area-specific Options"
-msgstr "ตัวเลือกเฉพาะหมวด"
-
-msgctxt "#31886"
-msgid "Search Trailer on Youtube"
-msgstr "ค้นหาหนังตัวอย่าง บน Youtube"
-
 msgctxt "#31888"
 msgid "PRESS ANY KEY"
 msgstr "กดปุ่มใดๆ"
@@ -1865,29 +1409,9 @@ msgctxt "#31889"
 msgid "Next Tracks"
 msgstr "แทร็ก ถัดไป"
 
-msgctxt "#31890"
-msgid "Collections"
-msgstr "ที่รวบรวม"
-
-msgctxt "#31891"
-msgid "Folders"
-msgstr "โฟลเดอร์"
-
-msgctxt "#31892"
-msgid "Categories"
-msgstr "หมวดหมู่"
-
-msgctxt "#31895"
-msgid "No library content for this media type"
-msgstr "ไม่มีเนื้อหาในคลังข้อมูล ของสื่อประเภทนี้"
-
 msgctxt "#31896"
 msgid "10 Day"
 msgstr "10 วัน"
-
-msgctxt "#31897"
-msgid "Press DOWN for extended info"
-msgstr "กด ล่าง สำหรับข้อมูลเพิ่มเติม"
 
 msgctxt "#31898"
 msgid "Visibility"
@@ -1913,18 +1437,6 @@ msgctxt "#31905"
 msgid "Needs script.cinema.experience to be available"
 msgstr "จำเป็นต้องใช้ script.cinema.experience ถึงจะสามารถใช้ได้"
 
-msgctxt "#31906"
-msgid "Needs script.randommovie to be available"
-msgstr "จำเป็นต้องใช้ script.randommovie ถึงจะสามารถใช้ได้"
-
-msgctxt "#31909"
-msgid "Bar Style"
-msgstr "ลักษณะแถบ"
-
-msgctxt "#31910"
-msgid "This feature requires the ColorPicker add-on"
-msgstr "คุณสมบัตินี้ต้องใช้ ส่วนเสริม ColorPicker"
-
 msgctxt "#31911"
 msgid "Updating add-on repos"
 msgstr "กำลังอัพเดท แหล่งข้อมูล ส่วนเสริม"
@@ -1940,10 +1452,6 @@ msgstr "คลิกที่เครื่องตกแต่ง เพื�
 msgctxt "#31914"
 msgid "Click on menu items to see available options"
 msgstr "คลิกที่รายการเมนู เพื่อดูตัวเลือกที่มี"
-
-msgctxt "#31915"
-msgid "Play some Music to get live Preview of Settings"
-msgstr "เล่นสักเพลงเพื่อให้สามารถเข้าถึง ตัวแสดงการตั้งค่าขณะเล่น"
 
 msgctxt "#31916"
 msgid "Needs \"Additional Artist Info\" activated in Artistslideshow Plugin"
@@ -1997,10 +1505,6 @@ msgctxt "#31954"
 msgid "Function"
 msgstr "การใช้งาน"
 
-msgctxt "#31955"
-msgid "Activate Bottom Menu (Play DVD, toggle widgets)"
-msgstr "เปิดใช้เมนูปุ่ม (เล่น ดีวีดี, สลับตัวแขวน)"
-
 msgctxt "#31956"
 msgid "Choose Type"
 msgstr "เลือก ประเภท"
@@ -2020,14 +1524,6 @@ msgstr "ไอคอน"
 msgctxt "#31960"
 msgid "Set icon"
 msgstr "กำหนด ไอคอน"
-
-msgctxt "#31961"
-msgid "Set up 'Featured' window appearance"
-msgstr "ตั้งค่าการแสดงผล หน้าต่าง 'ที่แนะนำ'"
-
-msgctxt "#31962"
-msgid "Set up 'Settings' window appearance"
-msgstr "ตั้งค่าการแสดงผล หน้าต่าง 'การตั้งค่า'"
 
 msgctxt "#31963"
 msgid "Fallback settings"

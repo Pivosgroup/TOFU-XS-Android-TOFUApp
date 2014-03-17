@@ -43,19 +43,20 @@
 		<control type="label" id="1">
 			<posx>420</posx>
 			<posy>225</posy>
-			<width>600</width>
+			<width>1077</width>
 			<height>60</height>
 			<label>$LOCALIZE[13406]</label>
-			<font>Font_Bold33</font>
 			<textcolor>$VAR[FontColorVar]</textcolor>
+			<font>Font_Bold33</font>
 		</control>
 		<control type="button" id="5">
 			<posx>1240</posx>
 			<posy>225</posy>
-			<width>305</width>
+			<width>300</width>
 			<height>60</height>
 			<align>center</align>
-			<texturefocus border="3">button-focus2.png</texturefocus>
+			<textcolor>grey</textcolor>
+			<texturefocus border="3">button-focus.png</texturefocus>
 			<texturenofocus border="3">-</texturenofocus>
 			<label>$LOCALIZE[31095]</label>
 			<label>186</label>
@@ -77,6 +78,7 @@
 			<align>right</align>
 			<aligny>bottom</aligny>
 			<label>$INFO[Container(3).NumItems,, $LOCALIZE[31025]]$INFO[Container(3).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(3).NumPages,/,)]</label>
+			<textcolor>$VAR[FontColorVar]</textcolor>
 			<font>Font_Reg25</font>
 			<visible>Control.IsVisible(3)</visible>
 		</control>
@@ -88,6 +90,7 @@
 			<align>right</align>
 			<aligny>bottom</aligny>
 			<label>$INFO[Container(6).NumItems,, $LOCALIZE[31025]]$INFO[Container(6).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(6).NumPages,/,)]</label>
+			<textcolor>$VAR[FontColorVar]</textcolor>
 			<font>Font_Reg25</font>
 			<visible>Control.IsVisible(6)</visible>
 		</control>
@@ -116,6 +119,7 @@
 					<height>60</height>
 					<font>Font_Reg30_2</font>
 					<info>ListItem.Label</info>
+					<textcolor>grey</textcolor>
 				</control>
 			</itemlayout>
 			<focusedlayout height="60">
@@ -123,7 +127,7 @@
 					<posx>0</posx>
 					<width>1169</width>
 					<height>60</height>
-					<texture border="3">list-focus.png</texture>
+					<texture border="3,0,0,20">list-focus.png</texture>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(3)">Conditional</animation>
 				</control>
@@ -139,7 +143,7 @@
 		<control type="list" id="6">
 			<posx>376</posx>
 			<posy>294</posy>
-			<width>1169</width>
+			<width>765</width>
 			<height>540</height>
 			<onup>6</onup>
 			<ondown>6</ondown>
@@ -147,7 +151,7 @@
 			<onright>5</onright>
 			<pagecontrol>61</pagecontrol>
 			<scrolltime tween="quadratic">200</scrolltime>
-			<itemlayout height="90" width="825">
+			<itemlayout height="90" width="765">
 				<control type="image">
 					<posx>0</posx>
 					<width>765</width>
@@ -161,6 +165,7 @@
 					<height>45</height>
 					<font>Font_Reg30_2</font>
 					<info>ListItem.Label</info>
+					<textcolor>grey</textcolor>
 				</control>
 				<control type="image">
 					<posx>52</posx>
@@ -177,9 +182,10 @@
 					<height>45</height>
 					<font>Font_Info</font>
 					<info>ListItem.Label2</info>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 				</control>
 			</itemlayout>
-			<focusedlayout height="90" width="825">
+			<focusedlayout height="90" width="765">
 				<control type="button">
 					<include>HiddenObject</include>
 					<onfocus condition="!IsEmpty(Window(selectdialog).Property(Property))">SetProperty(Label,$ESCINFO[Container(6).ListItem.Label])</onfocus>
@@ -196,7 +202,7 @@
 					<posx>0</posx>
 					<width>765</width>
 					<height>90</height>
-					<texture border="3">list-focus.png</texture>
+					<texture border="3,0,0,20">list-focus.png</texture>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					<animation effect="fade" start="100" end="50" time="160" condition="!Control.HasFocus(6)">Conditional</animation>
 				</control>

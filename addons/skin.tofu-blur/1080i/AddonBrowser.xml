@@ -3,7 +3,7 @@
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<views>50,57,500,505,509,511,512,53,518</views>
-	<include condition="!Skin.HasSetting(setup-0.1.6)">AutoConfig</include>
+	<include condition="!Skin.HasSetting(setup-0.2.2)">AutoConfig</include>
 	<onload condition="!Skin.HasSetting(ExplainMediaMenu)">ActivateWindow(1123)</onload>
 	<controls>
 		<control type="label" id="4420">
@@ -16,24 +16,7 @@
 		</control>
 		<include>CommonSettingsBackground</include>
 		<include>VideoBackground</include>
-		<control type="image">
-			<texture>diffuseoverlay.png</texture>
-			<include>FullscreenDimensions</include>
-			<include>Animation_WindowFade200</include>
-			<animation effect="fade" end="100" time="320" delay="80">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="320">Hidden</animation>
-			<visible>!Control.IsVisible(514) + !Control.IsVisible(516) + !Control.IsVisible(511) + !Control.IsVisible(518)</visible>
-			<visible>[Skin.HasSetting(darkinfopane) + [Control.IsVisible(7550) | Control.IsVisible(510) | Control.IsVisible(50) | [Control.IsVisible(500) + !Skin.HasSetting(wallfullscreen)] | Control.IsVisible(52) | Control.IsVisible(550)]]</visible>
-		</control>
-		<control type="image">
-			<texture>diffuseoverlay.png</texture>
-			<include>FullscreenDimensions</include>
-			<animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
-			<include>Animation_WindowFade200</include>
-			<animation effect="fade" end="100" time="440" delay="160">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="80">Hidden</animation>
-			<visible>[Control.IsVisible(512) + Skin.HasSetting(addonwallaltbackground)] | [Control.IsVisible(500) + Skin.HasSetting(wallfullscreen)]</visible>
-		</control>
+		<include>BackgroundDiffuse</include>
 		<include>ShowcaseInfoPaneMusic</include>
 		<include>Furniture_Showcase</include>
 		<include>WallPanel</include>

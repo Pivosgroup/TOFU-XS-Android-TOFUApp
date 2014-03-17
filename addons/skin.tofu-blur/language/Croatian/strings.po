@@ -37,10 +37,6 @@ msgctxt "#31017"
 msgid "Live TV"
 msgstr "TV u živo"
 
-msgctxt "#31021"
-msgid "Search TOFU for"
-msgstr "Traži TOFU za"
-
 msgctxt "#31022"
 msgid "Music - Files"
 msgstr "Glazba - Datoteke"
@@ -77,18 +73,6 @@ msgctxt "#31035"
 msgid "Conditional weather"
 msgstr "Vremenski Uvijeti"
 
-msgctxt "#31036"
-msgid "Breadcrumbs classic"
-msgstr "Klasične Mrvice"
-
-msgctxt "#31037"
-msgid "Default breadcrumbs"
-msgstr "Zadane Mrvice"
-
-msgctxt "#31038"
-msgid "Classic top panels"
-msgstr "Klasične Top ploče"
-
 msgctxt "#31039"
 msgid "CD-Wall"
 msgstr "CD Zid"
@@ -120,10 +104,6 @@ msgstr "Dodatni-Fanart"
 msgctxt "#31048"
 msgid "Visualization presets"
 msgstr "Vizualizacija Memorirana"
-
-msgctxt "#31053"
-msgid "Fullscreen"
-msgstr "Cijeli zaslon"
 
 msgctxt "#31055"
 msgid "Open playlist"
@@ -157,10 +137,6 @@ msgctxt "#31063"
 msgid "Choose style"
 msgstr "Odaberite stil"
 
-msgctxt "#31064"
-msgid "Press SELECT for alternative layout"
-msgstr "Pritisnite ODABERI za alternativni izgled"
-
 msgctxt "#31065"
 msgid "Info"
 msgstr "Info"
@@ -189,18 +165,6 @@ msgctxt "#31072"
 msgid "System info"
 msgstr "Sistem info"
 
-msgctxt "#31073"
-msgid "Actor information"
-msgstr "Informacije o izvođaču"
-
-msgctxt "#31074"
-msgid "Filmography"
-msgstr "Filmografija"
-
-msgctxt "#31080"
-msgid "Director information"
-msgstr "Informacije o Režiseru"
-
 msgctxt "#31081"
 msgid "Latest MusicVids"
 msgstr "Najnoviji  Video-spot"
@@ -217,10 +181,6 @@ msgctxt "#31084"
 msgid "Panels"
 msgstr "Ploče"
 
-msgctxt "#31085"
-msgid "Light"
-msgstr "Slab(a)"
-
 msgctxt "#31086"
 msgid "ClearART"
 msgstr "IzraženART"
@@ -229,17 +189,9 @@ msgctxt "#31087"
 msgid "Randomize All"
 msgstr "Nasumice Sve"
 
-msgctxt "#31088"
-msgid "Use color for all areas"
-msgstr "Koristite boju za sva područja"
-
 msgctxt "#31089"
 msgid "Both"
 msgstr "Oba"
-
-msgctxt "#31090"
-msgid "Adjust Transparency"
-msgstr "Prilagodi Providnost"
 
 msgctxt "#31091"
 msgid "Random MusicVids"
@@ -289,22 +241,6 @@ msgctxt "#31115"
 msgid "Customizer"
 msgstr "Prilagodi"
 
-msgctxt "#31117"
-msgid "CNN International"
-msgstr "CNN International"
-
-msgctxt "#31118"
-msgid "Radio 105"
-msgstr "Radio 105"
-
-msgctxt "#31120"
-msgid "Tom & Jerry"
-msgstr "Tom & Jerry"
-
-msgctxt "#31128"
-msgid "Lyrics"
-msgstr "Tekst"
-
 msgctxt "#31153"
 msgid "Low List"
 msgstr "Mala Lista"
@@ -316,10 +252,6 @@ msgstr "Najave"
 msgctxt "#31175"
 msgid "Big list"
 msgstr "Velika popis"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "Zadano"
 
 msgctxt "#31235"
 msgid "Shift"
@@ -441,17 +373,9 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "Video"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "Programi"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "Sistem"
-
-msgctxt "#31508"
-msgid "Shutdown"
-msgstr "Ugasi"
 
 msgctxt "#31509"
 msgid "Favorites"
@@ -472,18 +396,6 @@ msgstr "Audio vizualizacije"
 msgctxt "#31616"
 msgid "Low"
 msgstr "Min"
-
-msgctxt "#31617"
-msgid "High"
-msgstr "Visok"
-
-msgctxt "#31622"
-msgid "Label"
-msgstr "Oznaka"
-
-msgctxt "#31629"
-msgid "Channels"
-msgstr "Kanali"
 
 msgctxt "#31630"
 msgid "Custom"
@@ -512,10 +424,6 @@ msgstr "Glazbene Datoteke"
 msgctxt "#31889"
 msgid "Next Tracks"
 msgstr "Sljedeća Izvedba"
-
-msgctxt "#31892"
-msgid "Categories"
-msgstr "Kategorije"
 
 msgctxt "#31899"
 msgid "Shutdown timer"

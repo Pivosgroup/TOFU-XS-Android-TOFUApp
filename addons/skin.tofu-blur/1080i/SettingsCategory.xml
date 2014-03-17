@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol>3</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<include condition="!Skin.HasSetting(setup-0.1.6)">AutoConfig</include>
+	<include condition="!Skin.HasSetting(setup-0.2.2)">AutoConfig</include>
 	<animation type="WindowOpen" reversible="false" condition="![Window.Previous(settings) | Window.Previous(skinsettings)]">
 		<effect type="zoom" start="150" end="100" center="960,540" time="720" tween="cubic" />
 		<effect type="fade" end="100" time="720" />
@@ -15,34 +15,32 @@
 		<control type="group">
 			<include>CommonSettingsBackground</include>
 			<include>CommonMediaPlayingBackground</include>
-		</control>
-		<control type="image">
-			<posy>0</posy>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>common/bgcolor.png</texture>
-			<animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
-			<animation effect="fade" end="100" time="440" delay="160">VisibleChange</animation>
-			<visible>Skin.HasSetting(darkinfopane)</visible>
+			<include>BackgroundDiffuse</include>
 		</control>
 		<control type="group">
-			<animation effect="zoom" end="91" center="960,360" time="320" tween="cubic" easing="inout" condition="true">Conditional</animation>
-			<include>Furniture_SettingsBackPanel</include>
-			<include>Furniture_SettingsInternalBackPanel2</include>
 			<control type="group">
 				<animation effect="fade" start="100" end="0" time="160" tween="cubic" easing="inout" condition="Window.IsActive(DialogPVRChannelManager.xml)">Conditional</animation>
+				<control type="label">
+					<posx>215</posx>
+					<posy>200</posy>
+					<width>1200</width>
+					<height>57</height>
+					<label>[B]$LOCALIZE[5][/B]</label>
+					<font>Font_Reg57_Caps</font>
+					<textcolor>$VAR[FontColorVar]</textcolor>
+				</control>
 				<control type="grouplist" id="3">
-					<posx>66</posx>
-					<posy>190</posy>
-					<width>323</width>
-					<height>768</height>
+					<posx>215</posx>
+					<posy>320</posy>
+					<width>320</width>
+					<height>600</height>
 					<onleft>ActivateWindow(1121)</onleft>
 					<onright>5</onright>
-					<onup>20</onup>
+					<onup>3</onup>
 					<ondown>20</ondown>
 				</control>
 				<control type="label">
-					<posx>83</posx>
+					<posx>215</posx>
 					<posy>860</posy>
 					<width>306</width>
 					<height>74</height>
@@ -50,13 +48,14 @@
 					<textcolor>$VAR[FontColorVar]</textcolor>
 				</control>
 				<control type="button" id="20">
-					<posx>66</posx>
-					<posy>920</posy>
+					<posx>215</posx>
+					<posy>918</posy>
 					<width>323</width>
-					<height>74</height>
+					<height>50</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
-					<texturefocus border="3">button-focus2.png</texturefocus>
+					<texturefocus border="3">button-focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<font>Font_Bold34_Caps</font>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
@@ -67,19 +66,19 @@
 					<onclick>SettingsLevelChange</onclick>
 				</control>
 				<control type="label">
-					<posx>358</posx>
-					<posy>120</posy>
+					<posx>545</posx>
+					<posy>200</posy>
 					<width>1491</width>
-					<align>center</align>
-					<label>$INFO[Control.GetLabel(2)] - $LOCALIZE[5]</label>
-					<font>Font_ShowcaseMainLabel2</font>
-					<textcolor>$VAR[FontColorVar]</textcolor>
+					<height>57</height>
+					<label>$INFO[Control.GetLabel(2)]</label>
+					<textcolor>grey</textcolor>
+					<font>Font_Bold42_Caps</font>
 				</control>
 				<control type="grouplist" id="5">
-					<posx>390</posx>
-					<posy>180</posy>
-					<width>1462</width>
-					<height>668</height>
+					<posx>545</posx>
+					<posy>320</posy>
+					<width>1190</width>
+					<height>512</height>
 					<pagecontrol>60</pagecontrol>
 					<onleft>3</onleft>
 					<onright>60</onright>
@@ -87,8 +86,8 @@
 					<ondown>5</ondown>
 				</control>
 				<control type="image">
-					<posx>1000</posx>
-					<posy>847</posy>
+					<posx>1125</posx>
+					<posy>832</posy>
 					<width>30</width>
 					<height>20</height>
 					<texture>arrowdown.png</texture>
@@ -97,7 +96,7 @@
 					<visible>Container(5).HasNext</visible>
 				</control>
 				<control type="scrollbar" id="60">
-					<posx>1832</posx>
+					<posx>1715</posx>
 					<posy>150</posy>
 					<width>46</width>
 					<height>800</height>
@@ -108,12 +107,13 @@
 			</control>
 			<control type="button" id="10">
 				<width>334</width>
-				<height>74</height>
+				<height>64</height>
 				<textoffsetx>20</textoffsetx>
 				<textoffsety>18</textoffsety>
-				<texturefocus border="3">button-focus2.png</texturefocus>
+				<textcolor>grey</textcolor>
 				<texturenofocus>-</texturenofocus>
-				<font>Font_Bold34_Caps</font>
+				<texturefocus border="3">button-focus.png</texturefocus>
+				<font>Font_Bold30_Caps</font>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			</control>
 			<control type="button" id="7">
@@ -126,7 +126,7 @@
 			</control>
 			<control type="spincontrolex" id="9">
 				<include>Default_SettingButton</include>
-				<spinposx>40</spinposx>
+				<spinposx>30</spinposx>
 			</control>
 			<control type="image" id="11">
 				<include>HiddenObject</include>
@@ -135,12 +135,15 @@
 				<include>HiddenObject</include>
 			</control>
 			<control type="textbox" id="6">
-				<posx>417</posx>
-				<posy>890</posy>
-				<width>1409</width>
-				<height>100</height>
-				<font>Font_Reg32</font>
+				<posx>60</posx>
+				<posy>980</posy>
+				<width>1800</width>
+				<height>90</height>
+				<textcolor>grey</textcolor>
 				<animation effect="fade" start="100" end="0" time="160" tween="cubic" easing="inout" condition="Window.IsActive(DialogPVRChannelManager.xml)">Conditional</animation>
+				<font>Font_Bold26_Caps</font>
+				<align>center</align>
+				<autoscroll delay="15000" time="AutoScrollTime" repeat="10000">true</autoscroll>
 			</control>
 		</control>
 		<control type="group">

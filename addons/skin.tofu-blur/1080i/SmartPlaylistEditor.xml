@@ -9,7 +9,7 @@
 			<control type="grouplist" id="9000">
 				<posx>1490</posx>
 				<posy>400</posy>
-				<width>362</width>
+				<width>355</width>
 				<height>1080</height>
 				<onleft>10</onleft>
 				<onright>9001</onright>
@@ -18,37 +18,43 @@
 				<control type="button" id="13">
 					<posx>0</posx>
 					<posy>4</posy>
-					<width>365</width>
+					<width>355</width>
 					<height>74</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>30</textoffsetx>
-					<texturefocus border="3">list-focus.png</texturefocus>
-					<texturenofocus border="3">list-nofocus.png</texturenofocus>
+					<texturefocus border="3">button-focus.png</texturefocus>
+					<texturenofocus border="3">button-nofocus.png</texturenofocus>
 					<label>15019</label>
 					<font>Font_Reg32</font>
+					<align>center</align>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				</control>
 				<control type="button" id="14">
 					<posx>0</posx>
 					<posy>4</posy>
-					<width>365</width>
+					<width>355</width>
 					<height>74</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>30</textoffsetx>
-					<texturefocus border="3">list-focus.png</texturefocus>
-					<texturenofocus border="3">list-nofocus.png</texturenofocus>
+					<texturefocus border="3">button-focus.png</texturefocus>
+					<texturenofocus border="3">button-nofocus.png</texturenofocus>
 					<label>1210</label>
 					<font>Font_Reg32</font>
+					<align>center</align>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				</control>
 				<control type="button" id="15">
 					<posx>0</posx>
 					<posy>4</posy>
-					<width>365</width>
+					<width>355</width>
 					<height>74</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>30</textoffsetx>
-					<texturefocus border="3">list-focus.png</texturefocus>
-					<texturenofocus border="3">list-nofocus.png</texturenofocus>
+					<texturefocus border="3">button-focus.png</texturefocus>
+					<texturenofocus border="3">button-nofocus.png</texturenofocus>
 					<label>21435</label>
 					<font>Font_Reg32</font>
+					<align>center</align>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				</control>
 			</control>
@@ -74,13 +80,13 @@
 					<onup>23</onup>
 					<ondown>12</ondown>
 					<include>Default_SettingButton</include>
-					<spinposx>-2</spinposx>
 				</control>
 				<control type="edit" id="12">
 					<posx>390</posx>
 					<posy>254</posy>
 					<width>1462</width>
 					<label>-</label>
+					<textcolor>grey</textcolor>
 					<onleft>9002</onleft>
 					<onright>9002</onright>
 					<onup>22</onup>
@@ -123,6 +129,7 @@
 							<textoffsetx>40</textoffsetx>
 							<font>Font_Reg32</font>
 							<info>ListItem.Label</info>
+							<textcolor>grey</textcolor>
 						</control>
 					</itemlayout>
 					<focusedlayout width="840" height="74">
@@ -135,9 +142,9 @@
 						<control type="image">
 							<width>1104</width>
 							<height>74</height>
-							<texture border="3">list-focus.png</texture>
+							<texture border="3,0,0,20">list-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-							<visible>Control.HasFocus(10)</visible>
+							<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(10)">Conditional</animation>
 						</control>
 						<control type="label">
 							<posx>30</posx>
@@ -171,7 +178,6 @@
 					<onup>10</onup>
 					<ondown>17</ondown>
 					<include>Default_SettingButton</include>
-					<spinposx>-2</spinposx>
 				</control>
 				<control type="spincontrolex" id="17">
 					<posx>390</posx>
@@ -184,7 +190,6 @@
 					<onup>16</onup>
 					<ondown>18</ondown>
 					<include>Default_SettingButton</include>
-					<spinposx>-2</spinposx>
 					<invalidcolor>invalid</invalidcolor>
 				</control>
 				<control type="spincontrolex" id="18">
@@ -192,7 +197,7 @@
 					<posy>842</posy>
 					<width>1100</width>
 					<textoffsetx>75</textoffsetx>
-					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 					<texturenofocus border="3">list-nofocus.png</texturenofocus>
 					<label>21429</label>
 					<onleft>9002</onleft>
@@ -200,7 +205,6 @@
 					<onup>17</onup>
 					<ondown>23</ondown>
 					<include>Default_SettingButton</include>
-					<spinposx>-2</spinposx>
 				</control>
 				<control type="togglebutton" id="19">
 					<posx>1490</posx>
@@ -208,9 +212,9 @@
 					<width>362</width>
 					<height>74</height>
 					<textoffsetx>30</textoffsetx>
-					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 					<texturenofocus border="3">list-nofocus.png</texturenofocus>
-					<alttexturefocus border="3">list-focus.png</alttexturefocus>
+					<alttexturefocus border="3,0,0,20">list-focus.png</alttexturefocus>
 					<alttexturenofocus border="3">list-nofocus.png</alttexturenofocus>
 					<label>21431</label>
 					<altlabel>21430</altlabel>
@@ -227,14 +231,13 @@
 					<width>1100</width>
 					<textoffsetx>75</textoffsetx>
 					<label>21458</label>
-					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 					<texturenofocus border="3">list-nofocus.png</texturenofocus>
 					<onright>24</onright>
 					<onleft>24</onleft>
 					<onup>18</onup>
 					<ondown>22</ondown>
 					<include>Default_SettingButton</include>
-					<spinposx>-2</spinposx>
 				</control>
 				<control type="radiobutton" id="24">
 					<posx>1490</posx>
@@ -243,7 +246,7 @@
 					<height>74</height>
 					<label>21459</label>
 					<textoffsetx>30</textoffsetx>
-					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 					<texturenofocus border="3">list-nofocus.png</texturenofocus>
 					<onright>23</onright>
 					<onleft>23</onleft>
@@ -253,9 +256,9 @@
 				</control>
 			</control>
 			<control type="grouplist" id="9002">
-				<posx>65</posx>
+				<posx>78</posx>
 				<posy>180</posy>
-				<width>320</width>
+				<width>300</width>
 				<height>741</height>
 				<pagecontrol>60</pagecontrol>
 				<onleft>9001</onleft>
@@ -263,24 +266,28 @@
 				<onup>9002</onup>
 				<ondown>9002</ondown>
 				<control type="button" id="20">
-					<width>334</width>
+					<width>300</width>
 					<height>74</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
-					<texturefocus border="3">list-focus.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturefocus border="3">button-focus.png</texturefocus>
+					<texturenofocus border="3">button-nofocus.png</texturenofocus>
 					<label>186</label>
+					<align>center</align>
 					<font>Font_Bold34</font>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				</control>
 				<control type="button" id="21">
-					<width>334</width>
+					<width>300</width>
 					<height>74</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
-					<texturefocus border="3">list-focus.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturefocus border="3">button-focus.png</texturefocus>
+					<texturenofocus border="3">button-nofocus.png</texturenofocus>
 					<label>222</label>
+					<align>center</align>
 					<font>Font_Bold34</font>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				</control>

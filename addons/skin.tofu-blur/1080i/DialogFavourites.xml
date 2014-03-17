@@ -18,123 +18,60 @@
 			<texture border="5">panel.png</texture>
 			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 		</control>
+		<control type="label">
+			<posx>189</posx>
+			<posy>120</posy>
+			<width>1544</width>
+			<height>60</height>
+			<label>$LOCALIZE[1036]</label>
+			<textcolor>$VAR[FontColorVar]</textcolor>
+			<font>Font_ShowcaseMainLabel2</font>
+			<align>center</align>
+		</control>
 		<control type="image">
 			<posx>183</posx>
-			<posy>132</posy>
+			<posy>180</posy>
 			<width>1555</width>
-			<height>60</height>
-			<texture border="3">list-nofocus.png</texture>
+			<height>2</height>
+			<texture>line.png</texture>
 			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 		</control>
 		<control type="image">
 			<posx>183</posx>
-			<posy>132</posy>
+			<posy>180</posy>
 			<width>1555</width>
-			<height>60</height>
-			<texture border="3">list-nofocus.png</texture>
+			<height>2</height>
+			<texture>line.png</texture>
 			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			<visible>!Skin.HasSetting(ThumbsFavorites)</visible>
 		</control>
-		<control type="label">
-			<posx>220</posx>
-			<posy>125</posy>
-			<width>1000</width>
-			<height>60</height>
-			<label>$LOCALIZE[1036]</label>
-			<font>Font_Bold33</font>
-			<textcolor>$VAR[FontColorVar]</textcolor>
-		</control>
-		<control type="button" id="449">
-			<posx>1383</posx>
-			<posy>120</posy>
-			<width>346</width>
-			<height>60</height>
-			<textoffsetx>20</textoffsetx>
-			<texturefocus border="3">button-focus2.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<label>$LOCALIZE[31272]</label>
-			<label2>[COLOR $VAR[FontColorVar]]$VAR[FavoritesListTypeVar][/COLOR]</label2>
-			<font>Font_Bold33</font>
-			<onclick condition="Stringcompare(Skin.String(FavoritesListType),1) | IsEmpty(Skin.String(FavoritesListType))">Skin.SetString(FavoritesListType,2)</onclick>
-			<onclick condition="Stringcompare(Skin.String(FavoritesListType),3)">Skin.SetString(FavoritesListType,1)</onclick>
-			<onclick condition="Stringcompare(Skin.String(FavoritesListType),2)">Skin.SetString(FavoritesListType,3)</onclick>
-			<onclick condition="Stringcompare(Skin.String(FavoritesListType),1)">Skin.SetString(FavoritesListType,2)</onclick>
-			<onleft>450</onleft>
+		<control type="list" id="450">
+			<posx>185</posx>
+			<posy>210</posy>
+			<width>1556</width>
+			<height>725</height>
+			<onleft>61</onleft>
 			<onright>61</onright>
 			<onup>450</onup>
 			<ondown>450</ondown>
-			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-		</control>
-		<control type="panel" id="450">
-			<posx>183</posx>
-			<posy>192</posy>
-			<width>1599</width>
-			<height>740</height>
-			<onleft>61</onleft>
-			<onright>449</onright>
-			<onup>450</onup>
-			<ondown>450</ondown>
 			<pagecontrol>61</pagecontrol>
-			<scrolltime>0</scrolltime>
-			<orientation>vertical</orientation>
-			<itemlayout height="60" width="549" condition="Stringcompare(Skin.String(FavoritesListType),1) | IsEmpty(Skin.String(FavoritesListType))">
+			<scrolltime>300</scrolltime>
+			<itemlayout height="90" width="1000">
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>550</width>
-					<height>60</height>
-					<texture border="3">list-nofocus.png</texture>
-					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-				</control>
-				<control type="label">
-					<posx>45</posx>
-					<width>505</width>
-					<height>60</height>
-					<font>Font_Reg30_2</font>
-					<info>ListItem.Label</info>
-				</control>
-			</itemlayout>
-			<focusedlayout height="60" width="549" condition="Stringcompare(Skin.String(FavoritesListType),1) | IsEmpty(Skin.String(FavoritesListType))">
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>550</width>
-					<height>60</height>
-					<texture border="3">list-nofocus.png</texture>
-					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>550</width>
-					<height>60</height>
-					<texture border="3">list-focus.png</texture>
-					<visible>Control.HasFocus(450)</visible>
-					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-				</control>
-				<control type="label">
-					<posx>45</posx>
-					<width>505</width>
-					<height>60</height>
-					<font>Font_Reg30_2</font>
-					<info>ListItem.Label</info>
-				</control>
-			</focusedlayout>
-			<itemlayout height="90" width="800" condition="Stringcompare(Skin.String(FavoritesListType),2)">
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>750</width>
+					<width>1000</width>
 					<height>90</height>
 					<texture border="3">list-nofocus.png</texture>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				</control>
 				<control type="label">
 					<posx>150</posx>
-					<width>600</width>
+					<width>800</width>
 					<height>90</height>
 					<font>Font_Reg38</font>
 					<info>ListItem.Label</info>
+					<textcolor>grey</textcolor>
 				</control>
 				<control type="image">
 					<posx>52</posx>
@@ -145,11 +82,11 @@
 					<texture>$INFO[Listitem.Icon]</texture>
 				</control>
 			</itemlayout>
-			<focusedlayout height="90" width="800" condition="Stringcompare(Skin.String(FavoritesListType),2)">
+			<focusedlayout height="90" width="1000">
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>750</width>
+					<width>1000</width>
 					<height>90</height>
 					<texture border="3">list-nofocus.png</texture>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
@@ -157,15 +94,15 @@
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>750</width>
+					<width>1000</width>
 					<height>90</height>
-					<texture border="3">list-focus.png</texture>
+					<texture border="3,0,0,20">list-focus.png</texture>
 					<visible>Control.HasFocus(450)</visible>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				</control>
 				<control type="label">
 					<posx>150</posx>
-					<width>600</width>
+					<width>800</width>
 					<height>90</height>
 					<font>Font_Reg38</font>
 					<info>ListItem.Label</info>
@@ -179,77 +116,9 @@
 					<texture>$INFO[Listitem.Icon]</texture>
 				</control>
 			</focusedlayout>
-			<itemlayout height="185" width="778" condition="Stringcompare(Skin.String(FavoritesListType),3)">
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>778</width>
-					<height>185</height>
-					<texture border="3">list-nofocus.png</texture>
-					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-				</control>
-				<control type="label">
-					<posx>205</posx>
-					<width>545</width>
-					<height>185</height>
-					<font>Font_Reg38</font>
-					<info>ListItem.Label</info>
-				</control>
-				<control type="image">
-					<posx>15</posx>
-					<posy>5</posy>
-					<width>175</width>
-					<height>175</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$INFO[Listitem.Icon]</texture>
-				</control>
-			</itemlayout>
-			<focusedlayout height="185" width="778" condition="Stringcompare(Skin.String(FavoritesListType),3)">
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>778</width>
-					<height>185</height>
-					<texture border="3">list-nofocus.png</texture>
-					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-				</control>
-				<control type="image">
-					<width>778</width>
-					<height>185</height>
-					<texture border="3">list-focus.png</texture>
-					<visible>Control.HasFocus(450)</visible>
-					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-				</control>
-				<control type="label">
-					<posx>205</posx>
-					<width>545</width>
-					<height>185</height>
-					<font>Font_Reg38</font>
-					<info>ListItem.Label</info>
-				</control>
-				<control type="image">
-					<posx>15</posx>
-					<posy>5</posy>
-					<width>175</width>
-					<height>175</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$INFO[Listitem.Icon]</texture>
-				</control>
-			</focusedlayout>
 		</control>
 		<control type="image">
-			<posx>1069</posx>
-			<posy>275</posy>
-			<width>575</width>
-			<height>575</height>
-			<aspectratio>keep</aspectratio>
-			<texture background="true">$INFO[Container(450).Listitem.Icon]</texture>
-			<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
-			<bordersize>7</bordersize>
-			<visible>Stringcompare(Skin.String(FavoritesListType),2)</visible>
-		</control>
-		<control type="image">
-			<posx>1289</posx>
+			<posx>1250</posx>
 			<posy>275</posy>
 			<width>445</width>
 			<height>445</height>
@@ -257,7 +126,6 @@
 			<texture background="true">$INFO[Container(450).Listitem.Icon]</texture>
 			<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 			<bordersize>7</bordersize>
-			<visible>Stringcompare(Skin.String(FavoritesListType),1) | IsEmpty(Skin.String(FavoritesListType))</visible>
 		</control>
 		<control type="label">
 			<posx>1634</posx>
@@ -267,6 +135,7 @@
 			<align>right</align>
 			<aligny>bottom</aligny>
 			<label>$INFO[Container(450).NumItems,, $LOCALIZE[31025]]$INFO[Container(450).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(450).NumPages,/,)]</label>
+			<textcolor>$VAR[FontColorVar]</textcolor>
 			<font>Font_Reg25</font>
 		</control>
 		<control type="group">

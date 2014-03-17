@@ -10,6 +10,14 @@
 	<include>Animation_DialogZoom</include>
 	<controls>
 		<control type="image">
+			<posx>30</posx>
+			<posy>-95</posy>
+			<width>683</width>
+			<height>1270</height>
+			<texture>common/white.png</texture>
+			<animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
+		</control>
+		<control type="image">
 			<posx>24</posx>
 			<posy>-100</posy>
 			<width>695</width>
@@ -33,6 +41,7 @@
 				<width>705</width>
 				<height>30</height>
 				<label>$INFO[System.Date(DDD)], $INFO[System.Date(d)] $INFO[System.Date(mmm)] $INFO[System.Date(yyyy)] • $INFO[System.Time]</label>
+				<textcolor>grey</textcolor>
 				<font>Font_Reg25</font>
 			</control>
 		</control>
@@ -70,6 +79,7 @@
 					<height>80</height>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.StartTime]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg32</font>
 				</control>
 				<control type="label">
@@ -113,7 +123,7 @@
 					<posx>10</posx>
 					<width>640</width>
 					<height>80</height>
-					<texture border="3">list-focus.png</texture>
+					<texture border="3,0,0,20">list-focus.png</texture>
 					<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(11)">Conditional</animation>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				</control>
@@ -132,7 +142,6 @@
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
 					<font>Font_Reg35</font>
-					<textcolor>$VAR[FontColorVar]</textcolor>
 				</control>
 				<control type="image">
 					<posx>575</posx>

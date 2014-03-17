@@ -16,40 +16,41 @@
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			</control>
 			<control type="panel" id="4">
-				<posx>253</posx>
+				<posx>255</posx>
 				<posy>240</posy>
-				<width>900</width>
+				<width>897</width>
 				<height>540</height>
 				<aligny>center</aligny>
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<onright>20</onright>
-				<itemlayout height="60" width="300">
+				<itemlayout height="60" width="299">
 					<control type="image">
-						<width>300</width>
+						<width>299</width>
 						<height>60</height>
 						<texture border="3">button-nofocus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
 					<control type="label">
-						<width>300</width>
+						<width>299</width>
 						<height>60</height>
 						<textoffsetx>10</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
 						<font>Font_Reg30_2</font>
+						<textcolor>grey</textcolor>
 					</control>
 				</itemlayout>
-				<focusedlayout height="60" width="300">
+				<focusedlayout height="60" width="299">
 					<control type="group">
 						<visible>Control.HasFocus(4)</visible>
 						<control type="image">
-							<width>300</width>
+							<width>299</width>
 							<height>60</height>
 							<texture border="3">button-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						</control>
 						<control type="label">
-							<width>300</width>
+							<width>299</width>
 							<height>60</height>
 							<textoffsetx>10</textoffsetx>
 							<label>$INFO[ListItem.Label]</label>
@@ -60,13 +61,13 @@
 					<control type="group">
 						<visible>!Control.HasFocus(4)</visible>
 						<control type="image">
-							<width>300</width>
+							<width>299</width>
 							<height>60</height>
 							<texture border="3">button-nofocus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						</control>
 						<control type="label">
-							<width>300</width>
+							<width>299</width>
 							<textoffsetx>10</textoffsetx>
 							<label>$INFO[ListItem.Label]</label>
 							<font>Font_Reg30_2</font>

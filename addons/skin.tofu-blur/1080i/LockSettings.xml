@@ -9,7 +9,6 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<animation effect="zoom" end="91" center="960,360" time="320" tween="cubic" easing="inout" condition="true">Conditional</animation>
 			<include>Furniture_SettingsBackPanel</include>
 			<control type="label">
 				<posx>358</posx>
@@ -35,17 +34,16 @@
 				<include>Default_SettingButton</include>
 			</control>
 			<control type="radiobutton" id="8">
+				<radioposx>1392</radioposx>
 				<include>Default_SettingRadioButton</include>
 			</control>
 			<control type="spincontrolex" id="9">
-				<textoffsetx>75</textoffsetx>
 				<include>Default_SettingButton</include>
-				<spinposx>-2</spinposx>
 			</control>
 			<control type="grouplist" id="9000">
-				<posx>66</posx>
+				<posx>68</posx>
 				<posy>180</posy>
-				<width>319</width>
+				<width>316</width>
 				<height>741</height>
 				<pagecontrol>60</pagecontrol>
 				<onleft>5</onleft>
@@ -55,11 +53,12 @@
 				<control type="button" id="28">
 					<posx>3</posx>
 					<posy>4</posy>
-					<width>319</width>
+					<width>316</width>
 					<height>96</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>30</textoffsetx>
 					<textoffsety>18</textoffsety>
-					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturefocus border="3">button-focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>186</label>
 					<font>Font_Bold34_Caps</font>
@@ -68,11 +67,12 @@
 				<control type="button" id="29">
 					<posx>3</posx>
 					<posy>4</posy>
-					<width>319</width>
+					<width>316</width>
 					<height>96</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>30</textoffsetx>
 					<textoffsety>18</textoffsety>
-					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturefocus border="3">button-focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>222</label>
 					<font>Font_Bold34_Caps</font>

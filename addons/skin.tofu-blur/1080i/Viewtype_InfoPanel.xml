@@ -44,13 +44,7 @@
 					<focusedlayout height="350" width="954" condition="[Container.Content(artists) | Container.Content(albums) | Container.Content(addons)] + Skin.HasSetting(infopanel2columns)">
 						<include>FSPanelMusicFocusedlayout</include>
 					</focusedlayout>
-					<itemlayout height="350" width="1920" condition="[Container.Content(artists) | Container.Content(albums) | Container.Content(addons)] + Skin.HasSetting(infopanelfanart)">
-						<include condition="!Window.IsActive(videos)">FSPanelMusicItemlayout</include>
-					</itemlayout>
-					<focusedlayout height="350" width="1920" condition="[Container.Content(artists) | Container.Content(albums) | Container.Content(addons)] + Skin.HasSetting(infopanelfanart)">
-						<include condition="!Window.IsActive(videos)">FSPanelMusicFocusedlayout</include>
-					</focusedlayout>
-					<itemlayout height="350" width="1920" condition="[Container.Content(artists) | Container.Content(albums) | Container.Content(addons)] + !Skin.HasSetting(infopanel2columns) + !Skin.HasSetting(infopanelfanart)">
+					<itemlayout height="350" width="1920" condition="[Container.Content(artists) | Container.Content(albums) | Container.Content(addons)] + !Skin.HasSetting(infopanel2columns)">
 						<control type="group">
 							<posy>-9</posy>
 							<animation effect="zoom" center="100,150" start="95" end="100" time="480" tween="back" reversible="false">Focus</animation>
@@ -72,6 +66,7 @@
 								<height>50</height>
 								<textoffsetx>15</textoffsetx>
 								<label>$INFO[ListItem.Label]</label>
+								<textcolor>grey</textcolor>
 								<font>Font_Reg57_Caps</font>
 							</control>
 							<control type="label">
@@ -91,17 +86,18 @@
 								<height>195</height>
 								<aligny>top</aligny>
 								<label>$VAR[InfoWallTextboxVar]</label>
+								<textcolor>grey</textcolor>
 								<font>Font_Reg32</font>
 								<autoscroll>false</autoscroll>
 							</control>
 						</control>
 					</itemlayout>
-					<focusedlayout height="350" width="1920" condition="[Container.Content(artists) | Container.Content(albums) | Container.Content(addons)] + !Skin.HasSetting(infopanel2columns) + !Skin.HasSetting(infopanelfanart)">
+					<focusedlayout height="350" width="1920" condition="[Container.Content(artists) | Container.Content(albums) | Container.Content(addons)] + !Skin.HasSetting(infopanel2columns)">
 						<control type="image">
 							<posy>0</posy>
 							<width>1920</width>
 							<height>350</height>
-							<texture border="3">list-focus.png</texture>
+							<texture border="3,0,0,20">list-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 							<bordersize>5</bordersize>
 						</control>
@@ -149,13 +145,7 @@
 							</control>
 						</control>
 					</focusedlayout>
-					<itemlayout height="350" width="1920" condition="Container.Content(movies) + Skin.HasSetting(infopanelfanart)">
-						<include condition="Window.IsActive(videos)">FSPanelMoviesItemLayout</include>
-					</itemlayout>
-					<focusedlayout height="350" width="1920" condition="Container.Content(movies) + Skin.HasSetting(infopanelfanart)">
-						<include condition="Window.IsActive(videos)">FSPanelMoviesFocusedLayout</include>
-					</focusedlayout>
-					<itemlayout height="350" width="1920" condition="Container.Content(movies) + !Skin.HasSetting(infopanelfanart) + !Skin.HasSetting(infopanel2columns)">
+					<itemlayout height="350" width="1920" condition="Container.Content(movies) + !Skin.HasSetting(infopanel2columns)">
 						<control type="image">
 							<posx>691</posx>
 							<posy>60</posy>
@@ -194,6 +184,7 @@
 								<height>50</height>
 								<textoffsetx>15</textoffsetx>
 								<label>$INFO[ListItem.Label]</label>
+								<textcolor>grey</textcolor>
 								<font>Font_Reg57_Caps</font>
 							</control>
 							<control type="image">
@@ -203,7 +194,7 @@
 								<height>33</height>
 								<aspectratio>keep</aspectratio>
 								<texture fallback="rating0.png">$INFO[ListItem.Rating,stars/,.png]</texture>
-								<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+								<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 							</control>
 							<control type="label">
 								<posx>570</posx>
@@ -222,6 +213,7 @@
 								<height>210</height>
 								<aligny>top</aligny>
 								<label>$VAR[GlobalPlotVar]</label>
+								<textcolor>grey</textcolor>
 								<font>Font_Reg35</font>
 								<autoscroll>false</autoscroll>
 							</control>
@@ -236,6 +228,7 @@
 								<height>50</height>
 								<textoffsetx>15</textoffsetx>
 								<label>$INFO[ListItem.Label]</label>
+								<textcolor>grey</textcolor>
 								<font>Font_Reg57_Caps</font>
 							</control>
 							<control type="image">
@@ -245,7 +238,7 @@
 								<height>33</height>
 								<aspectratio>keep</aspectratio>
 								<texture fallback="rating0.png">$INFO[ListItem.Rating,stars/,.png]</texture>
-								<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+								<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 							</control>
 							<control type="label">
 								<posx>415</posx>
@@ -264,17 +257,18 @@
 								<height>210</height>
 								<aligny>top</aligny>
 								<label>$VAR[GlobalPlotVar]</label>
+								<textcolor>grey</textcolor>
 								<font>Font_Reg35</font>
 								<autoscroll>false</autoscroll>
 							</control>
 						</control>
 					</itemlayout>
-					<focusedlayout height="350" width="1920" condition="Container.Content(movies) + !Skin.HasSetting(infopanelfanart) + !Skin.HasSetting(infopanel2columns)">
+					<focusedlayout height="350" width="1920" condition="Container.Content(movies) + !Skin.HasSetting(infopanel2columns)">
 						<control type="image">
 							<posy>0</posy>
 							<width>1940</width>
 							<height>360</height>
-							<texture border="3">list-focus.png</texture>
+							<texture border="3,0,0,20">list-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 							<bordersize>5</bordersize>
 						</control>
@@ -392,7 +386,7 @@
 							</control>
 						</control>
 					</focusedlayout>
-					<itemlayout width="1920" height="220" condition="[Container.Content(episodes) | Container.Content(tvshows)] + !Skin.HasSetting(infopanel2columns) + !Skin.HasSetting(infopanelfanart)">
+					<itemlayout width="1920" height="220" condition="[Container.Content(episodes) | Container.Content(tvshows)] + !Skin.HasSetting(infopanel2columns)">
 						<control type="image">
 							<posx>5</posx>
 							<posy>5</posy>
@@ -446,6 +440,7 @@
 							<height>45</height>
 							<textoffsetx>10</textoffsetx>
 							<label>$INFO[ListItem.Label]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Bold40</font>
 						</control>
 						<control type="label">
@@ -474,6 +469,7 @@
 							<width>1470</width>
 							<height>95</height>
 							<label>$INFO[ListItem.Plot]</label>
+							<textcolor>grey</textcolor>
 							<visible>IsEmpty(ListItem.Art(characterart))</visible>
 							<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 						</control>
@@ -483,6 +479,7 @@
 							<width>1250</width>
 							<height>95</height>
 							<label>$INFO[ListItem.Plot]</label>
+							<textcolor>grey</textcolor>
 							<visible>!IsEmpty(ListItem.Art(characterart))</visible>
 							<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 						</control>
@@ -495,11 +492,11 @@
 							<texture background="true">$INFO[ListItem.Art(characterart)]</texture>
 						</control>
 					</itemlayout>
-					<focusedlayout width="1920" height="220" condition="[Container.Content(episodes) | Container.Content(tvshows)] + !Skin.HasSetting(infopanel2columns) + !Skin.HasSetting(infopanelfanart)">
+					<focusedlayout width="1920" height="220" condition="[Container.Content(episodes) | Container.Content(tvshows)] + !Skin.HasSetting(infopanel2columns)">
 						<control type="image">
 							<width>1940</width>
 							<height>220</height>
-							<texture border="3">list-focus.png</texture>
+							<texture border="3,0,0,20">list-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 							<bordersize>5</bordersize>
 						</control>
@@ -601,16 +598,9 @@
 					<focusedlayout width="954" height="220" condition="[Container.Content(episodes) | Container.Content(tvshows)] + Skin.HasSetting(infopanel2columns)">
 						<include condition="Window.IsActive(videos)">FSPanelTVFocusedLayout</include>
 					</focusedlayout>
-					<itemlayout width="1920" height="220" condition="[Container.Content(episodes) | Container.Content(tvshows)] + Skin.HasSetting(infopanelfanart)">
-						<include condition="Window.IsActive(videos)">FSPanelTVItemLayout</include>
-					</itemlayout>
-					<focusedlayout width="1920" height="220" condition="[Container.Content(episodes) | Container.Content(tvshows)] + Skin.HasSetting(infopanelfanart)">
-						<include condition="Window.IsActive(videos)">FSPanelTVFocusedLayout</include>
-					</focusedlayout>
 				</control>
 			</control>
 			<control type="group">
-				<animation effect="slide" end="-813" time="0" condition="Skin.HasSetting(infopanelfanart)">Conditional</animation>
 				<control type="scrollbar" id="68">
 					<posx>1756</posx>
 					<posy>120</posy>
@@ -645,7 +635,7 @@
 			<posy>0</posy>
 			<width>962</width>
 			<height>360</height>
-			<texture border="3">list-focus.png</texture>
+			<texture border="3,0,0,20">list-focus.png</texture>
 			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			<bordersize>5</bordersize>
 		</control>
@@ -813,6 +803,7 @@
 				<textoffsetx>15</textoffsetx>
 				<align>center</align>
 				<label>$INFO[ListItem.Label]</label>
+				<textcolor>grey</textcolor>
 				<font>Font_Reg40</font>
 			</control>
 			<control type="label">
@@ -832,7 +823,7 @@
 				<width>150</width>
 				<height>30</height>
 				<texture>$INFO[ListItem.Rating,stars/,.png]</texture>
-				<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+				<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 			</control>
 			<control type="label">
 				<posx>707</posx>
@@ -851,6 +842,7 @@
 				<height>197</height>
 				<aligny>top</aligny>
 				<label>$VAR[GlobalPlotOutlineVar]</label>
+				<textcolor>grey</textcolor>
 				<font>Font_Reg32</font>
 				<autoscroll>false</autoscroll>
 			</control>
@@ -865,6 +857,7 @@
 				<height>50</height>
 				<textoffsetx>15</textoffsetx>
 				<label>$INFO[ListItem.Label]</label>
+				<textcolor>grey</textcolor>
 				<font>Font_Reg57_Caps</font>
 			</control>
 			<control type="image">
@@ -874,7 +867,7 @@
 				<height>33</height>
 				<aspectratio>keep</aspectratio>
 				<texture fallback="rating0.png">$INFO[ListItem.Rating,stars/,.png]</texture>
-				<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+				<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 			</control>
 			<control type="label">
 				<posx>415</posx>
@@ -893,6 +886,7 @@
 				<height>197</height>
 				<aligny>top</aligny>
 				<label>$VAR[GlobalPlotVar]</label>
+				<textcolor>grey</textcolor>
 				<font>Font_Reg32</font>
 				<autoscroll>false</autoscroll>
 			</control>
@@ -903,7 +897,7 @@
 			<posy>0</posy>
 			<width>962</width>
 			<height>360</height>
-			<texture border="3">list-focus.png</texture>
+			<texture border="3,0,0,20">list-focus.png</texture>
 			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			<bordersize>5</bordersize>
 		</control>
@@ -973,6 +967,7 @@
 				<height>50</height>
 				<textoffsetx>15</textoffsetx>
 				<label>$INFO[ListItem.Label]</label>
+				<textcolor>grey</textcolor>
 				<font>Font_Reg57_Caps</font>
 			</control>
 			<control type="label">
@@ -992,6 +987,7 @@
 				<height>228</height>
 				<aligny>top</aligny>
 				<label>$VAR[InfoWallTextboxVar]</label>
+				<textcolor>grey</textcolor>
 				<font>Font_Reg32</font>
 				<autoscroll>false</autoscroll>
 			</control>
@@ -1002,7 +998,7 @@
 			<posy>0</posy>
 			<width>962</width>
 			<height>220</height>
-			<texture border="3">list-focus.png</texture>
+			<texture border="3,0,0,20">list-focus.png</texture>
 			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			<bordersize>5</bordersize>
 		</control>
@@ -1133,6 +1129,7 @@
 			<height>45</height>
 			<textoffsetx>10</textoffsetx>
 			<label>$INFO[ListItem.Label]</label>
+			<textcolor>grey</textcolor>
 			<font>Font_Bold40</font>
 		</control>
 		<control type="label">
@@ -1153,7 +1150,7 @@
 			<height>33</height>
 			<aspectratio>keep</aspectratio>
 			<texture fallback="rating0.png">$INFO[ListItem.Rating,stars/,.png]</texture>
-			<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+			<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 		</control>
 		<control type="textbox">
 			<posx>410</posx>
@@ -1161,6 +1158,7 @@
 			<width>500</width>
 			<height>125</height>
 			<label>$INFO[ListItem.Plot]</label>
+			<textcolor>grey</textcolor>
 		</control>
 	</include>
 </includes>

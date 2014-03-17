@@ -9,10 +9,6 @@ msgctxt "#31003"
 msgid "N/A"
 msgstr "N/A"
 
-msgctxt "#31004"
-msgid "Month"
-msgstr "Maand"
-
 msgctxt "#31005"
 msgid "Premiered"
 msgstr "Premiëre"
@@ -36,10 +32,6 @@ msgstr "Timer"
 msgctxt "#31010"
 msgid "General main menu settings"
 msgstr "Standaard hoofd menu instellingen"
-
-msgctxt "#31011"
-msgid "RottenTomatoes Trailers"
-msgstr "RottenTomatoes Trailers"
 
 msgctxt "#31012"
 msgid "Add group"
@@ -68,18 +60,6 @@ msgstr "Televisie"
 msgctxt "#31018"
 msgid "Big covers"
 msgstr "Grote hoezen"
-
-msgctxt "#31019"
-msgid "Channel4 News"
-msgstr "Channel4 Nieuws"
-
-msgctxt "#31020"
-msgid "Extras"
-msgstr "Extra's"
-
-msgctxt "#31021"
-msgid "Search TOFU for"
-msgstr "Zoeken in TOFU naar"
 
 msgctxt "#31022"
 msgid "Music - Files"
@@ -113,17 +93,9 @@ msgctxt "#31029"
 msgid "Showcase2"
 msgstr "Showcase2"
 
-msgctxt "#31030"
-msgid "Change info labels"
-msgstr "Wijzig info labels"
-
 msgctxt "#31032"
 msgid "Nothing"
 msgstr "Niets"
-
-msgctxt "#31033"
-msgid "Play item on startup"
-msgstr "Speel item bij opstarten"
 
 msgctxt "#31034"
 msgid "Move tooltip to top bar"
@@ -132,18 +104,6 @@ msgstr "Tooltips naar de top balk"
 msgctxt "#31035"
 msgid "Conditional weather"
 msgstr "Op weer gebaseerd"
-
-msgctxt "#31036"
-msgid "Breadcrumbs classic"
-msgstr "Klassiek Kruimelpad"
-
-msgctxt "#31037"
-msgid "Default breadcrumbs"
-msgstr "Standaard Kruimelpad"
-
-msgctxt "#31038"
-msgid "Classic top panels"
-msgstr "Klassiek Boven Paneel"
 
 msgctxt "#31039"
 msgid "CD-Wall"
@@ -177,14 +137,6 @@ msgctxt "#31048"
 msgid "Visualization presets"
 msgstr "Visualisatie Presets"
 
-msgctxt "#31053"
-msgid "Fullscreen"
-msgstr "Volledig scherm"
-
-msgctxt "#31054"
-msgid "Shadow"
-msgstr "Shaduw"
-
 msgctxt "#31055"
 msgid "Open playlist"
 msgstr "Open Afspeellijst"
@@ -217,10 +169,6 @@ msgctxt "#31063"
 msgid "Choose style"
 msgstr "Kies Stijl"
 
-msgctxt "#31064"
-msgid "Press SELECT for alternative layout"
-msgstr "Kies SELECTEER voor een alternatieve layout"
-
 msgctxt "#31065"
 msgid "Info"
 msgstr "Info"
@@ -249,22 +197,6 @@ msgctxt "#31072"
 msgid "System info"
 msgstr "Systeem info"
 
-msgctxt "#31073"
-msgid "Actor information"
-msgstr "Acteur informatie"
-
-msgctxt "#31074"
-msgid "Filmography"
-msgstr "Filmografie"
-
-msgctxt "#31075"
-msgid "Press SELECT to switch between now/next EPG"
-msgstr "Druk SELECT om te wisselen tussen nu/volgende EPG"
-
-msgctxt "#31080"
-msgid "Director information"
-msgstr "Regisseur informatie"
-
 msgctxt "#31081"
 msgid "Latest MusicVids"
 msgstr "Nieuwste MusicVids"
@@ -281,10 +213,6 @@ msgctxt "#31084"
 msgid "Panels"
 msgstr "Panelen"
 
-msgctxt "#31085"
-msgid "Light"
-msgstr "Licht"
-
 msgctxt "#31086"
 msgid "ClearART"
 msgstr "ClearART"
@@ -293,17 +221,9 @@ msgctxt "#31087"
 msgid "Randomize All"
 msgstr "Nieuwe selectie"
 
-msgctxt "#31088"
-msgid "Use color for all areas"
-msgstr "Gebruik overal dezelfde kleur"
-
 msgctxt "#31089"
 msgid "Both"
 msgstr "Beide"
-
-msgctxt "#31090"
-msgid "Adjust Transparency"
-msgstr "Pas transparantie aan"
 
 msgctxt "#31091"
 msgid "Random MusicVids"
@@ -313,10 +233,6 @@ msgctxt "#31092"
 msgid "Artist fanart (Extrafanart, fanart.jpg, default fanart)"
 msgstr "Artiest fanart (Extrafanart, fanart.jpg, standaard fanart)"
 
-msgctxt "#31093"
-msgid "Actors born today"
-msgstr "Jarige acteurs"
-
 msgctxt "#31094"
 msgid "Widget fanart"
 msgstr "Widget fanart"
@@ -325,10 +241,6 @@ msgctxt "#31095"
 msgid "Rating"
 msgstr "Score"
 
-msgctxt "#31096"
-msgid "Search on YouTube"
-msgstr "Zoek op YouTube"
-
 msgctxt "#31097"
 msgid "Classic OSD style"
 msgstr "Klassieke OSD stijl"
@@ -336,10 +248,6 @@ msgstr "Klassieke OSD stijl"
 msgctxt "#31098"
 msgid "Background path"
 msgstr "Achtergrond pad"
-
-msgctxt "#31099"
-msgid "Top bar style"
-msgstr "Top balk stijl"
 
 msgctxt "#31102"
 msgid "Background"
@@ -381,10 +289,6 @@ msgctxt "#31111"
 msgid "Recording"
 msgstr "Recording"
 
-msgctxt "#31112"
-msgid "Coloured"
-msgstr "Gekleurd"
-
 msgctxt "#31113"
 msgid "Single Image"
 msgstr "Enkele afbeelding"
@@ -401,53 +305,13 @@ msgctxt "#31116"
 msgid "Show"
 msgstr "Weergeven"
 
-msgctxt "#31117"
-msgid "CNN International"
-msgstr "CNN Internationaal"
-
-msgctxt "#31118"
-msgid "Radio 105"
-msgstr "Radio 105"
-
-msgctxt "#31119"
-msgid "Radio Montecarlo"
-msgstr "Radio Montecarlo"
-
-msgctxt "#31120"
-msgid "Tom & Jerry"
-msgstr "Tom & Jerry"
-
-msgctxt "#31121"
-msgid "Virgin Music"
-msgstr "Virgin Music"
-
 msgctxt "#31127"
 msgid "Lyrics add-on"
 msgstr "Songtekst add-on"
 
-msgctxt "#31128"
-msgid "Lyrics"
-msgstr "Songtekst"
-
-msgctxt "#31129"
-msgid "Video Stream"
-msgstr "Video Stream"
-
-msgctxt "#31130"
-msgid "Subtitle add-on"
-msgstr "Ondertiteling add-on"
-
 msgctxt "#31143"
 msgid "Animated fanart in music visualization"
 msgstr "Bewegend fanart in muziek visualizatie"
-
-msgctxt "#31148"
-msgid "Show timepanel"
-msgstr "Weergeven tijd"
-
-msgctxt "#31149"
-msgid "This will shutdown TOFU! [CR]Are you sure?"
-msgstr "Hiermee sluit u TOFU af! [CR]Weet u het zeker?"
 
 msgctxt "#31150"
 msgid "Landscape"
@@ -485,10 +349,6 @@ msgctxt "#31166"
 msgid "Infopanel"
 msgstr "Infopaneel"
 
-msgctxt "#31167"
-msgid "Playlists for Widget 2"
-msgstr "Afspeellijst voor Widget 2"
-
 msgctxt "#31168"
 msgid "No CoverFlow"
 msgstr "Geen CoverFlow"
@@ -525,14 +385,6 @@ msgctxt "#31176"
 msgid "General options"
 msgstr "Algemene instellingen"
 
-msgctxt "#31177"
-msgid "Random color mode"
-msgstr "Kleurstelling gebaseerd op tijd"
-
-msgctxt "#31178"
-msgid "Choose main color"
-msgstr "Stel kleur in"
-
 msgctxt "#31179"
 msgid "Disable media menu and hide options in video info"
 msgstr "Verberg media menu"
@@ -540,10 +392,6 @@ msgstr "Verberg media menu"
 msgctxt "#31180"
 msgid "Hide options in media menu"
 msgstr "Verberg opties in media menu"
-
-msgctxt "#31181"
-msgid "Activate 'Glow Mode'"
-msgstr "Activeer 'Glow Mode'"
 
 msgctxt "#31182"
 msgid "Colored"
@@ -581,10 +429,6 @@ msgctxt "#31191"
 msgid "Use as icon"
 msgstr "Gebruik voor icoon"
 
-msgctxt "#31192"
-msgid "Choose font color"
-msgstr "Kies font kleur"
-
 msgctxt "#31194"
 msgid "Delayed"
 msgstr "Vertraagd"
@@ -601,45 +445,9 @@ msgctxt "#31198"
 msgid "Extrathumbs"
 msgstr "Extrathumbs"
 
-msgctxt "#31199"
-msgid "News"
-msgstr "Nieuws"
-
-msgctxt "#31200"
-msgid "TOFU Cinema"
-msgstr "TOFU Cinema"
-
-msgctxt "#31201"
-msgid "TOFU Trailer"
-msgstr "TOFU Trailer"
-
-msgctxt "#31202"
-msgid "DailyMotion"
-msgstr "DailyMotion"
-
-msgctxt "#31203"
-msgid "YouTube User Uploads"
-msgstr "Youtube Gebruikers Uploads"
-
-msgctxt "#31204"
-msgid "YouTube User Favorites"
-msgstr "Youtube Gebruiker Favorieten"
-
-msgctxt "#31205"
-msgid "Youtube Most Viewed"
-msgstr "Youtube Meest Bekeken"
-
-msgctxt "#31206"
-msgid "Youtube Most Popular"
-msgstr "Youtube Meest Populair"
-
 msgctxt "#31220"
 msgid "Random episodes"
 msgstr "Aanbevolen Afleveringen"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "Standaard"
 
 msgctxt "#31222"
 msgid "Random movies"
@@ -664,10 +472,6 @@ msgstr "Navigatie: [B]Verticaal[/B]"
 msgctxt "#31229"
 msgid "Horizontal"
 msgstr "Navigatie: [B]Horizontaal[/B]"
-
-msgctxt "#31230"
-msgid "Viewtypes"
-msgstr "Opmaak"
 
 msgctxt "#31231"
 msgid "Navigation"
@@ -729,18 +533,6 @@ msgctxt "#31255"
 msgid "Blu-ray Disc"
 msgstr "- Gebruik Blu-ray Disc als standaard cdART disc"
 
-msgctxt "#31256"
-msgid "Include already watched Items?"
-msgstr "Inclusief afgespeelde items?"
-
-msgctxt "#31265"
-msgid "Smaller pop-up dialogs"
-msgstr "Kleinere pop-up dialogen"
-
-msgctxt "#31269"
-msgid "Enable background effect [I](Can increase CPU usage!)   [/I]"
-msgstr "Stel rook effect in op panelen [I](CPU gebruik stijgt hierdoor!)   [/I]"
-
 msgctxt "#31271"
 msgid "Posters"
 msgstr "Posters"
@@ -752,10 +544,6 @@ msgstr "Lay-out"
 msgctxt "#31279"
 msgid "Play trailers in fullscreen"
 msgstr "Speel trailers af op volledig scherm"
-
-msgctxt "#31281"
-msgid "Show video info when player is paused"
-msgstr "Alternatieve layout voor het pauze scherm"
 
 msgctxt "#31282"
 msgid "Clear Cases"
@@ -792,10 +580,6 @@ msgstr "Behouden"
 msgctxt "#31295"
 msgid "Widget"
 msgstr "Widget"
-
-msgctxt "#31298"
-msgid "Set area color"
-msgstr "Kleurstelling"
 
 msgctxt "#31299"
 msgid "Data provider"
@@ -837,30 +621,6 @@ msgctxt "#31326"
 msgid "Most played albums"
 msgstr "Meest gespeelde albums"
 
-msgctxt "#31327"
-msgid "Most played ROMs"
-msgstr "Meest gespeelde ROMs"
-
-msgctxt "#31329"
-msgid "In-progress TV Shows"
-msgstr "TV Shows die bezig zijn"
-
-msgctxt "#31330"
-msgid "Random music"
-msgstr "Willekeurige muziek"
-
-msgctxt "#31331"
-msgid "Latest Music"
-msgstr "Laatste muziek"
-
-msgctxt "#31332"
-msgid "Play Video"
-msgstr "Speel Video"
-
-msgctxt "#31333"
-msgid "Recent"
-msgstr "Recent"
-
 msgctxt "#31334"
 msgid "Latest"
 msgstr "Nieuw"
@@ -897,10 +657,6 @@ msgctxt "#31356"
 msgid "Download Subtitles"
 msgstr "Download Ondertiteling"
 
-msgctxt "#31357"
-msgid "Mixed info"
-msgstr "Gemengde info"
-
 msgctxt "#31358"
 msgid "System info"
 msgstr "Systeeminformatie"
@@ -908,10 +664,6 @@ msgstr "Systeeminformatie"
 msgctxt "#31359"
 msgid "Latest albums"
 msgstr "Laatste albums"
-
-msgctxt "#31360"
-msgid "Upcoming"
-msgstr "Komende"
 
 msgctxt "#31362"
 msgid "Rounded covers"
@@ -957,10 +709,6 @@ msgctxt "#31383"
 msgid "Backdrop"
 msgstr "Achtergrond"
 
-msgctxt "#31387"
-msgid "Darken"
-msgstr "Blinderen"
-
 msgctxt "#31388"
 msgid "Floor label"
 msgstr "Vloer label:"
@@ -1004,10 +752,6 @@ msgstr "[B]NETWERKINSTELLINGEN CONFIGUREREN[/B][CR][CR]Configureer de controle v
 msgctxt "#31406"
 msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]SYSTEEMINSTELLINGEN CONFIGUREREN[/B][CR][CR]Configureer en kalibreer schermgeluidsuitgang · Configureer invoerapparaten en energiebeheeropties · Schakel debugging in · Configureer vergrendelopties"
-
-msgctxt "#31407"
-msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the TOFU+ skin · Customize the home menu · Adjust the skin colors[CR]Change skin backgrounds"
-msgstr "[B]SKININSTELLINGEN CONFIGUREREN[/B][CR][CR]Configureer TOFU+ · Pas het beginscherm aan uw wensen aan · Activeer of de-activeer views[CR]Pas de kleurstelling van de skin aan"
 
 msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from pivos.com[CR]Modify Add-on settings"
@@ -1101,10 +845,6 @@ msgctxt "#31483"
 msgid "Show icon label"
 msgstr "Geef icoon label weer"
 
-msgctxt "#31484"
-msgid "Play trailer"
-msgstr "Trailer afspelen"
-
 msgctxt "#31500"
 msgid "Pictures"
 msgstr "FOTOS"
@@ -1125,10 +865,6 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "VIDEO'S"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "APPS"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "SYSTEEM"
@@ -1136,10 +872,6 @@ msgstr "SYSTEEM"
 msgctxt "#31507"
 msgid "Add-Ons"
 msgstr "ADD-ONS"
-
-msgctxt "#31508"
-msgid "Shutdown"
-msgstr "AFSLUITEN"
 
 msgctxt "#31509"
 msgid "Favorites"
@@ -1149,10 +881,6 @@ msgctxt "#31510"
 msgid "Weather"
 msgstr "WEER"
 
-msgctxt "#31511"
-msgid "Play Disc"
-msgstr "DISC SPELEN"
-
 msgctxt "#31600"
 msgid "Main menu item customizer (backgrounds,widgets)"
 msgstr "Hoofdmenu aanpassen (Achtergronden,Widgets)"
@@ -1160,14 +888,6 @@ msgstr "Hoofdmenu aanpassen (Achtergronden,Widgets)"
 msgctxt "#31601"
 msgid "CDWall"
 msgstr "CDWall"
-
-msgctxt "#31602"
-msgid "Choose main menu style"
-msgstr "Hoofdmenu stijl"
-
-msgctxt "#31610"
-msgid "Set area color for Home window"
-msgstr "Kleurstelling voor hoofdmenu"
 
 msgctxt "#31611"
 msgid "Fullscreen video"
@@ -1181,10 +901,6 @@ msgctxt "#31613"
 msgid "Enable custom startup focus position of main menu"
 msgstr "Stel in welke menu-item standaard als eerste getoond wordt"
 
-msgctxt "#31614"
-msgid "CDArt Manager"
-msgstr "CDArt Manager"
-
 msgctxt "#31615"
 msgid "Audio visualization"
 msgstr "Muziek visualizatie"
@@ -1193,25 +909,13 @@ msgctxt "#31616"
 msgid "Low"
 msgstr "Laag"
 
-msgctxt "#31617"
-msgid "High"
-msgstr "Hoog"
-
 msgctxt "#31619"
 msgid "Fullscreen video options"
 msgstr "Opties voor volledig scherm"
 
-msgctxt "#31620"
-msgid "Add to icon panel"
-msgstr "Voeg icon bij paneel"
-
 msgctxt "#31621"
 msgid "Use Alaska paused label for video OSD"
 msgstr "Laat groot 'PAUZE' zien op het scherm"
-
-msgctxt "#31622"
-msgid "Label"
-msgstr "Platenlabel"
 
 msgctxt "#31623"
 msgid "Slot"
@@ -1224,10 +928,6 @@ msgstr "Verberg OSD knoppen"
 msgctxt "#31628"
 msgid "Current position"
 msgstr "Huidige positie"
-
-msgctxt "#31629"
-msgid "Channels"
-msgstr "Kanalen"
 
 msgctxt "#31630"
 msgid "Custom"
@@ -1249,10 +949,6 @@ msgctxt "#31634"
 msgid "Main Menu"
 msgstr "Hoofdmenu"
 
-msgctxt "#31635"
-msgid "Similar Artists"
-msgstr "Soortgelijke artiesten"
-
 msgctxt "#31636"
 msgid "Rotating"
 msgstr "Roterend"
@@ -1260,10 +956,6 @@ msgstr "Roterend"
 msgctxt "#31637"
 msgid "Video OSD Settings"
 msgstr "Video OSD Instellingen"
-
-msgctxt "#31638"
-msgid "Show 'Next Aired' info"
-msgstr "Toon 'Next Aired' info"
 
 msgctxt "#31639"
 msgid "Hide video thumb on info screen"
@@ -1288,14 +980,6 @@ msgstr "Icon Paneel Manager"
 msgctxt "#31645"
 msgid "Background Setup"
 msgstr "Achtergrond Instellingen"
-
-msgctxt "#31646"
-msgid "Do you want to download all available [CR]artwork without user interaction?"
-msgstr "Wilt u alle beschikbare artwork downloaden[CR]zonder gebruikers interactie?"
-
-msgctxt "#31673"
-msgid "Most Played ROMs"
-msgstr "Meest Afgespeelde ROMs"
 
 msgctxt "#31674"
 msgid "Switch panel layout"
@@ -1345,10 +1029,6 @@ msgctxt "#31685"
 msgid "Classic"
 msgstr "Klassiek"
 
-msgctxt "#31686"
-msgid "Nox"
-msgstr "Nox"
-
 msgctxt "#31687"
 msgid "Furniture settings"
 msgstr "Pas de uitrusting aan"
@@ -1357,10 +1037,6 @@ msgctxt "#31688"
 msgid "Disable timepanel"
 msgstr "Verberg tijdpaneel"
 
-msgctxt "#31689"
-msgid "Disable library stats"
-msgstr "Verberg bibiliotheek statistieken"
-
 msgctxt "#31690"
 msgid "Disable rss panel"
 msgstr "Verberg RSS paneel"
@@ -1368,10 +1044,6 @@ msgstr "Verberg RSS paneel"
 msgctxt "#31691"
 msgid "Toggle position"
 msgstr "Schakel positie om"
-
-msgctxt "#31692"
-msgid "Shorter time and library stats panel"
-msgstr "Smallere tijd en statistieken paneel"
 
 msgctxt "#31694"
 msgid "Fixed list"
@@ -1388,10 +1060,6 @@ msgstr "Alternatieve lay-out"
 msgctxt "#31697"
 msgid "Choose cover type"
 msgstr "KIes cover type"
-
-msgctxt "#31698"
-msgid "Show list of actors/artists birthdays"
-msgstr "Lijst van jarige acteurs/artiesten ipv RSS feed"
 
 msgctxt "#31699"
 msgid "Smaller main menu"
@@ -1429,10 +1097,6 @@ msgctxt "#31708"
 msgid "Background Customizer"
 msgstr "Achtergrond Aanpassen"
 
-msgctxt "#31709"
-msgid "Set Delay"
-msgstr "Stel Vertraging In"
-
 msgctxt "#31710"
 msgid "Show ExtraFanart"
 msgstr "Toon ExtraFanart"
@@ -1448,10 +1112,6 @@ msgstr "Aangerade Muziek Video's"
 msgctxt "#31714"
 msgid "Video Library Node"
 msgstr "Video Bibliotheek Node"
-
-msgctxt "#31715"
-msgid "Smart Playlist Manager"
-msgstr "Slimme Afspeellijst Manager"
 
 msgctxt "#31716"
 msgid "Default Sets"
@@ -1485,10 +1145,6 @@ msgctxt "#31723"
 msgid "Default Settings Items"
 msgstr "Standaard Instellingen Items"
 
-msgctxt "#31724"
-msgid "Default Shutdown Items"
-msgstr "Standaard Afsluit Items"
-
 msgctxt "#31725"
 msgid "Default PVR Items"
 msgstr "Standaard PVR Items"
@@ -1497,21 +1153,9 @@ msgctxt "#31726"
 msgid "Default Video Items"
 msgstr "Standaard Video Items"
 
-msgctxt "#31727"
-msgid "Remaining Cities"
-msgstr "Overige Steden"
-
-msgctxt "#31728"
-msgid "Show Cities"
-msgstr "Toon Steden"
-
 msgctxt "#31729"
 msgid "Move NowPlaying widget to bottom"
 msgstr "Verplaats SpeelNu Widget naar onderen"
-
-msgctxt "#31730"
-msgid "Script features"
-msgstr "Script eigenschappen"
 
 msgctxt "#31731"
 msgid "Skin Settings"
@@ -1528,34 +1172,6 @@ msgstr "Kies nummer"
 msgctxt "#31734"
 msgid "Use QuickList instead of default shutdown menu"
 msgstr "Gebruik de snellijst in plaats van het standaard afsluit menu"
-
-msgctxt "#31735"
-msgid "[B]CREDITS TO:[/B]"
-msgstr "[B]CREDITS NAAR:[/B]"
-
-msgctxt "#31736"
-msgid "[B]N.O.W.A.L.L.[/B] for creating Artwork"
-msgstr "[B]N.O.W.A.L.L.[/B] voor het maken van de Artwork"
-
-msgctxt "#31737"
-msgid "[B]Fional88[/B] for creating the tutorial videos"
-msgstr "[B]Fional88[/B] voor het maken van de uitleg videos"
-
-msgctxt "#31738"
-msgid "[B]www.webdesignerdepot.com[/B] for permission to include the iconpack \"Reflection\""
-msgstr "[B]www.webdesignerdepot.com[/B] voor toestemming om iconpack 'Reflection' toe te voegen"
-
-msgctxt "#31739"
-msgid "[B]DJH_ [/B]for creating Aeon, [B]Jezz_X [/B]for creating Confluence, [B]black[/B] for creating Xperience1080"
-msgstr "[B]DJH_ [/B] voor Aeon, [B]Jezz_X [/B] voor Confluence, [B]black[/B] voor Xperience1080"
-
-msgctxt "#31740"
-msgid "Translators: [B]CutSickAss[/B], [B]epoke[/B], [B]frodo19[/B], [B]mindweaver[/B], [B]Passer[/B], [B]PatOso[/B], [B]peppe_sr[/B], [B]Rififi77[/B][CR][B]Roman_V_M[/B], [B]lijack[/B]"
-msgstr "Vertalers: [B]CutSickAss[/B], [B]epoke[/B], [B]frodo19[/B], [B]mindweaver[/B], [B]Passer[/B], [B]PatOso[/B], [B]peppe_sr[/B], [B]Rififi77[/B][CR][B]Roman_V_M[/B], [B]lijack[/B], [B]Bloksel[/B]"
-
-msgctxt "#31741"
-msgid "[CR]Also to: [B]Martijn[/B], [B]Deano316[/B], [B]defluo[/B], [B]fmronan[/B], [B]thrak76[/B], [B]xhaggi[/B] and [CR]all other people who contributed to this project"
-msgstr "[CR]Ook aan: [B]Martijn[/B], [B]Deano316[/B], [B]defluo[/B], [B]fmronan[/B], [B]thrak76[/B], [B]xhaggi[/B] en alle andere personen die iets hebben toegevoegd aan dit project"
 
 msgctxt "#31800"
 msgid "Fade background in visualisation"
@@ -1577,10 +1193,6 @@ msgctxt "#31804"
 msgid "Panel"
 msgstr "Paneel"
 
-msgctxt "#31807"
-msgid "Choose Icon"
-msgstr "Kies Icon"
-
 msgctxt "#31808"
 msgid "Exchange Position"
 msgstr "Wissel Positie"
@@ -1592,10 +1204,6 @@ msgstr "Muziek Visualisatie Instellingen"
 msgctxt "#31810"
 msgid "Show ClearArt instead of Logo"
 msgstr "Toon ClearArt ipv Logo"
-
-msgctxt "#31811"
-msgid "Use Alt Floor"
-msgstr "Gebruik Alt Ondergrond"
 
 msgctxt "#31812"
 msgid "Show CDArt"
@@ -1609,33 +1217,13 @@ msgctxt "#31814"
 msgid "Always show Submenu"
 msgstr "Tool het submenu altijd"
 
-msgctxt "#31815"
-msgid "Latest Pics"
-msgstr "Laatste Afbeeldingen"
-
-msgctxt "#31816"
-msgid "Random Pics"
-msgstr "Willekeurige Afbeeldingen"
-
 msgctxt "#31817"
 msgid "Random Artists"
 msgstr "Willekeurige Artiesten"
 
-msgctxt "#31818"
-msgid "Near Concerts"
-msgstr "Concerten in de buurt"
-
 msgctxt "#31819"
 msgid "Next Aired"
 msgstr "Volgende Afl."
-
-msgctxt "#31820"
-msgid "Daily Babes"
-msgstr "Dagelijkse Pinups"
-
-msgctxt "#31823"
-msgid "World Map + Icons"
-msgstr "Wereld Kaart+Iconen"
 
 msgctxt "#31824"
 msgid "Live DVD cases"
@@ -1697,14 +1285,6 @@ msgctxt "#31839"
 msgid "Restart TOFU"
 msgstr "Herstarten TOFU"
 
-msgctxt "#31840"
-msgid "Random Movie (Genre)"
-msgstr "Willekeurige Film (Genre)"
-
-msgctxt "#31841"
-msgid "Random Movie"
-msgstr "Willekeurige Film"
-
 msgctxt "#31842"
 msgid "Movies (Cinema Exp.)"
 msgstr "Films (Cinema Exp.)"
@@ -1720,10 +1300,6 @@ msgstr "Schoon VideoDB"
 msgctxt "#31845"
 msgid "Movie Sets"
 msgstr "Filmsets"
-
-msgctxt "#31846"
-msgid "Around the world"
-msgstr "Wereld kaart"
 
 msgctxt "#31847"
 msgid "Video Files"
@@ -1753,10 +1329,6 @@ msgctxt "#31854"
 msgid "PVR Area"
 msgstr "PVR Gebied"
 
-msgctxt "#31855"
-msgid "Featured Area"
-msgstr "Featured Gebied"
-
 msgctxt "#31856"
 msgid "NowPlaying"
 msgstr "Nu Spelend"
@@ -1781,10 +1353,6 @@ msgctxt "#31863"
 msgid "Two Columns"
 msgstr "Twee Kolommen"
 
-msgctxt "#31864"
-msgid "Show Widgets"
-msgstr "Toon Widgets"
-
 msgctxt "#31865"
 msgid "WakeOnLAN"
 msgstr "WakeOnLan"
@@ -1801,18 +1369,6 @@ msgctxt "#31868"
 msgid "Enter MAC Address"
 msgstr "Enter het MAC Address"
 
-msgctxt "#31869"
-msgid "Online Video Help"
-msgstr "Online Video Help"
-
-msgctxt "#31870"
-msgid "Help"
-msgstr "Help"
-
-msgctxt "#31871"
-msgid "Available at Passion-XBMC repository"
-msgstr "Beschikbaar in de Passion-XBMC repository"
-
 msgctxt "#31872"
 msgid "Mixed Movies"
 msgstr "Gemengde Films"
@@ -1824,10 +1380,6 @@ msgstr "Gemengde TV"
 msgctxt "#31874"
 msgid "Mixed Music"
 msgstr "Gemengde Muziek"
-
-msgctxt "#31875"
-msgid "No Content for this Area"
-msgstr "Geen Inhoud voor dit Gebied"
 
 msgctxt "#31876"
 msgid "Appearance Setup"
@@ -1849,14 +1401,6 @@ msgctxt "#31882"
 msgid "Disable option to hide widgets by pressing \"Back\""
 msgstr "Schakel de optie om widgets te verbergen door \"Terug\" te klikken uit"
 
-msgctxt "#31885"
-msgid "Area-specific Options"
-msgstr "Gebieds-specifieke Opties"
-
-msgctxt "#31886"
-msgid "Search Trailer on Youtube"
-msgstr "Zoek Trailer op Youtube"
-
 msgctxt "#31888"
 msgid "PRESS ANY KEY"
 msgstr "DRUK OP EEN WILLEKEURIGE KNOP"
@@ -1865,29 +1409,9 @@ msgctxt "#31889"
 msgid "Next Tracks"
 msgstr "Volgende nummer"
 
-msgctxt "#31890"
-msgid "Collections"
-msgstr "Collecties"
-
-msgctxt "#31891"
-msgid "Folders"
-msgstr "Mappen"
-
-msgctxt "#31892"
-msgid "Categories"
-msgstr "Categorieën"
-
-msgctxt "#31895"
-msgid "No library content for this media type"
-msgstr "Geen bibliotheek inhoud voor dit media type"
-
 msgctxt "#31896"
 msgid "10 Day"
 msgstr "10 dagen"
-
-msgctxt "#31897"
-msgid "Press DOWN for extended info"
-msgstr "Druk OMLAAG voor extra info"
 
 msgctxt "#31898"
 msgid "Visibility"
@@ -1913,18 +1437,6 @@ msgctxt "#31905"
 msgid "Needs script.cinema.experience to be available"
 msgstr "Heeft het script.cinema.experience nodig"
 
-msgctxt "#31906"
-msgid "Needs script.randommovie to be available"
-msgstr "Heeft het script.randommovie nodig"
-
-msgctxt "#31909"
-msgid "Bar Style"
-msgstr "Balk Stijl"
-
-msgctxt "#31910"
-msgid "This feature requires the ColorPicker add-on"
-msgstr "Deze toepassing vereist de ColorPicker add-on"
-
 msgctxt "#31911"
 msgid "Updating add-on repos"
 msgstr "Werk de add-on repro's bij"
@@ -1940,10 +1452,6 @@ msgstr "Klik op items om de aanwezige opties te zien"
 msgctxt "#31914"
 msgid "Click on menu items to see available options"
 msgstr "Klik op de menu items om de aanwezige opties te bekijken"
-
-msgctxt "#31915"
-msgid "Play some Music to get live Preview of Settings"
-msgstr "Speel muziek om een voorbeeld van de instellingen te krijgen"
 
 msgctxt "#31916"
 msgid "Needs \"Additional Artist Info\" activated in Artistslideshow Plugin"
@@ -1997,10 +1505,6 @@ msgctxt "#31954"
 msgid "Function"
 msgstr "Functie"
 
-msgctxt "#31955"
-msgid "Activate Bottom Menu (Play DVD, toggle widgets)"
-msgstr "Activeer het onderste menu (Speel DVD, wissel widgets)"
-
 msgctxt "#31956"
 msgid "Choose Type"
 msgstr "Kies type"
@@ -2020,14 +1524,6 @@ msgstr "Icoon"
 msgctxt "#31960"
 msgid "Set icon"
 msgstr "Kies Icon"
-
-msgctxt "#31961"
-msgid "Set up 'Featured' window appearance"
-msgstr "Stel 'Featured' scherm stijl in"
-
-msgctxt "#31962"
-msgid "Set up 'Settings' window appearance"
-msgstr "Stel 'Instellingen' scherm stijl in"
 
 msgctxt "#31963"
 msgid "Fallback settings"

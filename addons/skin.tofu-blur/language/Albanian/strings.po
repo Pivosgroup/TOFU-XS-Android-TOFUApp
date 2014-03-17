@@ -45,10 +45,6 @@ msgctxt "#31043"
 msgid "PAUSED"
 msgstr "PAUZUAR"
 
-msgctxt "#31053"
-msgid "Fullscreen"
-msgstr "Ekran i Plotë"
-
 msgctxt "#31055"
 msgid "Open playlist"
 msgstr "Hap playlist’ën"
@@ -72,10 +68,6 @@ msgstr "Mbrapa"
 msgctxt "#31072"
 msgid "System info"
 msgstr "Info i sistemit"
-
-msgctxt "#31085"
-msgid "Light"
-msgstr "Dritë"
 
 msgctxt "#31095"
 msgid "Rating"
@@ -105,17 +97,9 @@ msgctxt "#31111"
 msgid "Recording"
 msgstr "Regjistrim"
 
-msgctxt "#31128"
-msgid "Lyrics"
-msgstr "Tekst Kënge"
-
 msgctxt "#31175"
 msgid "Big list"
 msgstr "Listë e madhe"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "Prezgjedhuar"
 
 msgctxt "#31235"
 msgid "Shift"
@@ -209,17 +193,9 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "Video"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "Programe"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "Sistemi"
-
-msgctxt "#31508"
-msgid "Shutdown"
-msgstr "Fikje"
 
 msgctxt "#31510"
 msgid "Weather"
@@ -236,18 +212,6 @@ msgstr "Audio-vizualizim"
 msgctxt "#31616"
 msgid "Low"
 msgstr "Poshtë"
-
-msgctxt "#31617"
-msgid "High"
-msgstr "Lartë"
-
-msgctxt "#31622"
-msgid "Label"
-msgstr "Etiketë"
-
-msgctxt "#31629"
-msgid "Channels"
-msgstr "Kanalet"
 
 msgctxt "#31630"
 msgid "Custom"

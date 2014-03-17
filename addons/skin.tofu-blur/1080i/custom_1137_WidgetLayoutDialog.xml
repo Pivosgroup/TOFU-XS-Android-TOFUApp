@@ -31,22 +31,23 @@
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
 				</control>
-				<control type="image">
-					<posx>23</posx>
-					<posy>10</posy>
-					<width>734</width>
-					<height>60</height>
-					<texture border="3">list-nofocus.png</texture>
-					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-				</control>
 				<control type="label" id="4">
-					<posy>24</posy>
+					<posy>40</posy>
 					<width>780</width>
 					<height>45</height>
 					<align>center</align>
-					<label>$LOCALIZE[31272]</label>
+					<label>[B]$LOCALIZE[31272][/B]</label>
+					<font>Font_Reg35</font>
 					<textcolor>$VAR[FontColorVar]</textcolor>
 					<scroll>true</scroll>
+				</control>
+				<control type="image">
+					<posx>23</posx>
+					<posy>90</posy>
+					<width>734</width>
+					<height>2</height>
+					<texture>line.png</texture>
+					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				</control>
 				<control type="grouplist" id="5400">
 					<posx>23</posx>
@@ -65,6 +66,7 @@
 						<textoffsetx>15</textoffsetx>
 						<align>center</align>
 						<label>31804</label>
+						<textcolor>grey</textcolor>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<texturefocus border="3">button-focus.png</texturefocus>
 						<texturenofocus border="3">button-nofocus.png</texturenofocus>
@@ -80,6 +82,7 @@
 						<textoffsetx>15</textoffsetx>
 						<align>center</align>
 						<label>31060</label>
+						<textcolor>grey</textcolor>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<texturefocus border="3">button-focus.png</texturefocus>
 						<texturenofocus border="3">button-nofocus.png</texturenofocus>
@@ -95,6 +98,7 @@
 						<textoffsetx>15</textoffsetx>
 						<align>center</align>
 						<label>31685</label>
+						<textcolor>grey</textcolor>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<texturefocus border="3">button-focus.png</texturefocus>
 						<texturenofocus border="3">button-nofocus.png</texturenofocus>
@@ -109,6 +113,7 @@
 						<textoffsetx>15</textoffsetx>
 						<align>center</align>
 						<label>31065</label>
+						<textcolor>grey</textcolor>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<texturefocus border="3">button-focus.png</texturefocus>
 						<texturenofocus border="3">button-nofocus.png</texturenofocus>
@@ -127,6 +132,7 @@
 						<textoffsetx>15</textoffsetx>
 						<align>center</align>
 						<label>31150</label>
+						<textcolor>grey</textcolor>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<texturefocus border="3">button-focus.png</texturefocus>
 						<texturenofocus border="3">button-nofocus.png</texturenofocus>
@@ -154,6 +160,7 @@
 						<textoffsetx>15</textoffsetx>
 						<align>center</align>
 						<label>31059</label>
+						<textcolor>grey</textcolor>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<texturefocus border="3">button-focus.png</texturefocus>
 						<texturenofocus border="3">button-nofocus.png</texturenofocus>
@@ -170,6 +177,7 @@
 						<textoffsetx>15</textoffsetx>
 						<align>center</align>
 						<label>31086</label>
+						<textcolor>grey</textcolor>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<texturefocus border="3">button-focus.png</texturefocus>
 						<texturenofocus border="3">button-nofocus.png</texturenofocus>
@@ -186,6 +194,7 @@
 						<textoffsetx>15</textoffsetx>
 						<align>center</align>
 						<label>31058</label>
+						<textcolor>grey</textcolor>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<texturefocus border="3">button-focus.png</texturefocus>
 						<texturenofocus border="3">button-nofocus.png</texturenofocus>
@@ -202,6 +211,7 @@
 						<textoffsetx>15</textoffsetx>
 						<align>center</align>
 						<label>31150</label>
+						<textcolor>grey</textcolor>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<texturefocus border="3">button-focus.png</texturefocus>
 						<texturenofocus border="3">button-nofocus.png</texturenofocus>

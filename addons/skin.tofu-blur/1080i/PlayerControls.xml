@@ -3,6 +3,8 @@
 	<defaultcontrol always="true">9011</defaultcontrol>
 	<onload>Dialog.Close(1121)</onload>
 	<onunload>ClearProperty(quicknavsetup,home)</onunload>
+	<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+	<visible>Window.IsActive(PlayerControls) + ![Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)]</visible>
 	<controls>
 		<control type="image">
 			<texture>common/bgcolor.png</texture>
@@ -21,7 +23,7 @@
 				<control type="image">
 					<width>1920</width>
 					<height>586</height>
-					<texture flipy="true" border="3">panel-bottom.png</texture>
+					<texture flipy="true" border="3">panel-top2.png</texture>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				</control>
 				<control type="group">
@@ -51,6 +53,7 @@
 							<width>88</width>
 							<height>88</height>
 							<texture>$INFO[ListItem.Thumb]</texture>
+							<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 						</control>
 						<control type="label">
 							<posx>107</posx>
@@ -60,14 +63,14 @@
 							<align>center</align>
 							<label>$INFO[ListItem.Label]</label>
 							<font>Font_Reg30_Caps</font>
-						<textcolor>$VAR[DefaultColorVar]</textcolor>
+						<textcolor>$VAR[FontColorVar]</textcolor>
 						</control>
 					</itemlayout>
 					<focusedlayout height="112" width="209">
 						<control type="image">
 							<width>213</width>
 							<height>112</height>
-							<texture border="3">button-focus2.png</texture>
+							<texture border="3">button-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 							<visible>Control.HasFocus(9011)</visible>
 						</control>
@@ -98,7 +101,7 @@
 					<control type="button" id="9012">
 						<width>39</width>
 						<height>112</height>
-						<texturefocus border="3">button-focus2.png</texturefocus>
+						<texturefocus border="3">button-focus.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<onup>652</onup>
 						<ondown>Dialog.Close(114)</ondown>
@@ -107,7 +110,7 @@
 						<onleft>SetFocus(9011,20)</onleft>
 						<onleft>9011</onleft>
 						<onclick condition="IsEmpty(Window(home).Property(quicknavsetup))">SetProperty(quicknavsetup,1,home)</onclick>
-						<onclick condition="IsEmpty(Window(home).Property(quicknavsetup))">Notification($LOCALIZE[31902],$LOCALIZE[31881])</onclick>
+						<onclick condition="IsEmpty(Window(home).Property(quicknavsetup))">Notification($LOCALIZE[31902],$LOCALIZE[31881],,dialogs/exclamation.png)</onclick>
 						<onclick condition="!IsEmpty(Window(home).Property(quicknavsetup))">ClearProperty(quicknavsetup,home)</onclick>
 					</control>
 					<control type="image">
@@ -115,6 +118,15 @@
 						<width>39</width>
 						<height>39</height>
 						<texture>$VAR[QuickConfigIconVar]</texture>
+						<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+						<visible>!Control.HasFocus(9012)</visible>
+					</control>
+					<control type="image">
+						<posy>40</posy>
+						<width>39</width>
+						<height>39</height>
+						<texture>$VAR[QuickConfigIconVar]</texture>
+						<visible>Control.HasFocus(9012)</visible>
 					</control>
 				</control>
 				<control type="button" id="810">

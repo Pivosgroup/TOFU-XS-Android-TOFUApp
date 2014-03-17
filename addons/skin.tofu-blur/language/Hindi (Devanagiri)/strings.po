@@ -13,10 +13,6 @@ msgctxt "#31072"
 msgid "System info"
 msgstr "सिस्टम की सुकाना "
 
-msgctxt "#31085"
-msgid "Light"
-msgstr "प्रकासा"
-
 msgctxt "#31095"
 msgid "Rating"
 msgstr "रेटिंग"
@@ -29,17 +25,9 @@ msgctxt "#31110"
 msgid "Record"
 msgstr "लिखना"
 
-msgctxt "#31128"
-msgid "Lyrics"
-msgstr "गीत"
-
 msgctxt "#31175"
 msgid "Big list"
 msgstr "बिग सूची"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "डिफ़ॉल्ट"
 
 msgctxt "#31358"
 msgid "System info"
@@ -61,10 +49,6 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "विडियो"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "करिअक्रम"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "प्रणाली"
@@ -76,10 +60,6 @@ msgstr "मौसम"
 msgctxt "#31616"
 msgid "Low"
 msgstr "लो"
-
-msgctxt "#31617"
-msgid "High"
-msgstr "उच्च"
 
 msgctxt "#31630"
 msgid "Custom"

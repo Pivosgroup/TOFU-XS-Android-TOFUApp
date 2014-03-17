@@ -878,5 +878,13 @@
 			<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
 			<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
 		</control>
+	</include>
+	<include name="BackgroundDiffuse">
+		<control type="image">
+			<texture>diffuse.jpg</texture>
+			<include>FullscreenDimensions</include>
+			<animation effect="fade" end="75" condition="!Window.IsVisible(Home)">Conditional</animation>
+			<animation effect="fade" start="75" end="50" time="250" condition="Window.IsVisible(Home)">Conditional</animation>
+		</control>
 	</include>	
 </includes>

@@ -37,10 +37,6 @@ msgctxt "#31017"
 msgid "Live TV"
 msgstr "電視"
 
-msgctxt "#31021"
-msgid "Search TOFU for"
-msgstr "TOFU搜尋"
-
 msgctxt "#31022"
 msgid "Music - Files"
 msgstr "音樂 - 檔案"
@@ -77,18 +73,6 @@ msgctxt "#31035"
 msgid "Conditional weather"
 msgstr "天氣情況"
 
-msgctxt "#31036"
-msgid "Breadcrumbs classic"
-msgstr "Breadcrumbs經典"
-
-msgctxt "#31037"
-msgid "Default breadcrumbs"
-msgstr "預設的breadcrumbs"
-
-msgctxt "#31038"
-msgid "Classic top panels"
-msgstr "經典特選板面"
-
 msgctxt "#31039"
 msgid "CD-Wall"
 msgstr "CD展示牆"
@@ -120,10 +104,6 @@ msgstr "額外的－專輯資訊"
 msgctxt "#31048"
 msgid "Visualization presets"
 msgstr "視覺效果預置"
-
-msgctxt "#31053"
-msgid "Fullscreen"
-msgstr "全螢幕"
 
 msgctxt "#31055"
 msgid "Open playlist"
@@ -157,10 +137,6 @@ msgctxt "#31063"
 msgid "Choose style"
 msgstr "選擇風格"
 
-msgctxt "#31064"
-msgid "Press SELECT for alternative layout"
-msgstr "按SELECT鍵選擇替代版面"
-
 msgctxt "#31065"
 msgid "Info"
 msgstr "資訊"
@@ -189,18 +165,6 @@ msgctxt "#31072"
 msgid "System info"
 msgstr "系統資訊"
 
-msgctxt "#31073"
-msgid "Actor information"
-msgstr "演員資訊"
-
-msgctxt "#31074"
-msgid "Filmography"
-msgstr "電影作品"
-
-msgctxt "#31080"
-msgid "Director information"
-msgstr "導演資訊"
-
 msgctxt "#31081"
 msgid "Latest MusicVids"
 msgstr "最新音樂影片"
@@ -217,10 +181,6 @@ msgctxt "#31084"
 msgid "Panels"
 msgstr "面板"
 
-msgctxt "#31085"
-msgid "Light"
-msgstr "細"
-
 msgctxt "#31086"
 msgid "ClearART"
 msgstr "ClearART"
@@ -229,17 +189,9 @@ msgctxt "#31087"
 msgid "Randomize All"
 msgstr "全部隨機"
 
-msgctxt "#31088"
-msgid "Use color for all areas"
-msgstr "全區域顏色"
-
 msgctxt "#31089"
 msgid "Both"
 msgstr "兩者都"
-
-msgctxt "#31090"
-msgid "Adjust Transparency"
-msgstr "調整透明度"
 
 msgctxt "#31091"
 msgid "Random MusicVids"
@@ -249,10 +201,6 @@ msgctxt "#31092"
 msgid "Artist fanart (Extrafanart, fanart.jpg, default fanart)"
 msgstr "演出者資訊 (Extrafanart, fanart.jpg, default fanart)"
 
-msgctxt "#31093"
-msgid "Actors born today"
-msgstr "今日出生的演員"
-
 msgctxt "#31094"
 msgid "Widget fanart"
 msgstr "專輯資訊小工具"
@@ -260,10 +208,6 @@ msgstr "專輯資訊小工具"
 msgctxt "#31095"
 msgid "Rating"
 msgstr "評等"
-
-msgctxt "#31096"
-msgid "Search on YouTube"
-msgstr "在Youtube上搜尋"
 
 msgctxt "#31097"
 msgid "Classic OSD style"
@@ -309,41 +253,13 @@ msgctxt "#31116"
 msgid "Show"
 msgstr "顯示"
 
-msgctxt "#31117"
-msgid "CNN International"
-msgstr "CNN International"
-
-msgctxt "#31118"
-msgid "Radio 105"
-msgstr "Radio 105"
-
-msgctxt "#31120"
-msgid "Tom & Jerry"
-msgstr "Tom & Jerry"
-
 msgctxt "#31127"
 msgid "Lyrics add-on"
 msgstr "歌詞附加元件"
 
-msgctxt "#31128"
-msgid "Lyrics"
-msgstr "歌詞"
-
-msgctxt "#31130"
-msgid "Subtitle add-on"
-msgstr "字幕附加元件"
-
 msgctxt "#31143"
 msgid "Animated fanart in music visualization"
 msgstr "在音樂視覺效果中顯示動態專輯資訊"
-
-msgctxt "#31148"
-msgid "Show timepanel"
-msgstr "顯示時間面板"
-
-msgctxt "#31149"
-msgid "This will shutdown TOFU! [CR]Are you sure?"
-msgstr "即將關閉TOFU！ [CR]確定嗎？"
 
 msgctxt "#31150"
 msgid "Landscape"
@@ -417,14 +333,6 @@ msgctxt "#31176"
 msgid "General options"
 msgstr "一般選項"
 
-msgctxt "#31177"
-msgid "Random color mode"
-msgstr "隨機顏色模式"
-
-msgctxt "#31178"
-msgid "Choose main color"
-msgstr "選擇主要顏色"
-
 msgctxt "#31179"
 msgid "Disable media menu and hide options in video info"
 msgstr "停用媒體選單與影片資訊選項"
@@ -432,10 +340,6 @@ msgstr "停用媒體選單與影片資訊選項"
 msgctxt "#31180"
 msgid "Hide options in media menu"
 msgstr "隱藏媒體選單中選項"
-
-msgctxt "#31181"
-msgid "Activate 'Glow Mode'"
-msgstr "啟動 \"Glow模式\""
 
 msgctxt "#31182"
 msgid "Colored"
@@ -469,10 +373,6 @@ msgctxt "#31191"
 msgid "Use as icon"
 msgstr "使用為圖示"
 
-msgctxt "#31192"
-msgid "Choose font color"
-msgstr "選擇字型顏色"
-
 msgctxt "#31194"
 msgid "Delayed"
 msgstr "延遲"
@@ -493,10 +393,6 @@ msgctxt "#31220"
 msgid "Random episodes"
 msgstr "隨機劇集"
 
-msgctxt "#31221"
-msgid "Default"
-msgstr "預設"
-
 msgctxt "#31222"
 msgid "Random movies"
 msgstr "隨機電影"
@@ -512,10 +408,6 @@ msgstr "垂直"
 msgctxt "#31229"
 msgid "Horizontal"
 msgstr "水平"
-
-msgctxt "#31230"
-msgid "Viewtypes"
-msgstr "展示類型"
 
 msgctxt "#31231"
 msgid "Navigation"
@@ -565,14 +457,6 @@ msgctxt "#31255"
 msgid "Blu-ray Disc"
 msgstr "藍光碟片"
 
-msgctxt "#31265"
-msgid "Smaller pop-up dialogs"
-msgstr "較小的跳出式對話框"
-
-msgctxt "#31269"
-msgid "Enable background effect [I](Can increase CPU usage!)   [/I]"
-msgstr "啟用背景效果[I](會增加CPU使用量！) [/I]"
-
 msgctxt "#31271"
 msgid "Posters"
 msgstr "海報"
@@ -584,10 +468,6 @@ msgstr "版面"
 msgctxt "#31279"
 msgid "Play trailers in fullscreen"
 msgstr "以全螢幕撥放預告片"
-
-msgctxt "#31281"
-msgid "Show video info when player is paused"
-msgstr "播放暫停時顯示影片資訊"
 
 msgctxt "#31282"
 msgid "Clear Cases"
@@ -625,10 +505,6 @@ msgctxt "#31295"
 msgid "Widget"
 msgstr "小工具"
 
-msgctxt "#31298"
-msgid "Set area color"
-msgstr "設定區域顏色"
-
 msgctxt "#31299"
 msgid "Data provider"
 msgstr "資料提供者"
@@ -664,10 +540,6 @@ msgstr "播放清單選項"
 msgctxt "#31326"
 msgid "Most played albums"
 msgstr "最多播放的專輯"
-
-msgctxt "#31333"
-msgid "Recent"
-msgstr "最近"
 
 msgctxt "#31334"
 msgid "Latest"
@@ -709,10 +581,6 @@ msgctxt "#31358"
 msgid "System info"
 msgstr "系統資訊"
 
-msgctxt "#31360"
-msgid "Upcoming"
-msgstr "即將上映"
-
 msgctxt "#31362"
 msgid "Rounded covers"
 msgstr "Rounded covers"
@@ -736,10 +604,6 @@ msgstr "動畫的"
 msgctxt "#31377"
 msgid "cdART"
 msgstr "cdART"
-
-msgctxt "#31387"
-msgid "Darken"
-msgstr "暗化"
 
 msgctxt "#31390"
 msgid "Skin default"
@@ -801,17 +665,9 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "視訊"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "程式"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "系統設定"
-
-msgctxt "#31508"
-msgid "Shutdown"
-msgstr "關機"
 
 msgctxt "#31509"
 msgid "Favorites"
@@ -832,18 +688,6 @@ msgstr "音效視覺效果"
 msgctxt "#31616"
 msgid "Low"
 msgstr "低溫"
-
-msgctxt "#31617"
-msgid "High"
-msgstr "高"
-
-msgctxt "#31622"
-msgid "Label"
-msgstr "標籤"
-
-msgctxt "#31629"
-msgid "Channels"
-msgstr "頻道"
 
 msgctxt "#31630"
 msgid "Custom"
@@ -884,14 +728,6 @@ msgstr "音樂 檔案"
 msgctxt "#31889"
 msgid "Next Tracks"
 msgstr "播放列表"
-
-msgctxt "#31891"
-msgid "Folders"
-msgstr "資料夾"
-
-msgctxt "#31892"
-msgid "Categories"
-msgstr "分類"
 
 msgctxt "#31899"
 msgid "Shutdown timer"

@@ -565,49 +565,6 @@
 			<visible>Substring(Control.GetLabel(4327),settings) + IsEmpty(Skin.String(SystemSub5))</visible>
 		</item>
 	</include>
-	<include name="DefaultShutdownSubMenu">
-		<item>
-			<label>$LOCALIZE[31009]</label>
-			<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
-			<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
-			<visible>Substring(Control.GetLabel(4327),shutdown) + IsEmpty(Skin.String(ShutdownSub1)) + !System.HasAlarm(shutdowntimer)</visible>
-		</item>
-		<item>
-			<label>$LOCALIZE[222]</label>
-			<onclick>CancelAlarm(shutdowntimer)</onclick>
-			<visible>Substring(Control.GetLabel(4327),shutdown) + IsEmpty(Skin.String(ShutdownSub1)) + System.HasAlarm(shutdowntimer)</visible>
-		</item>
-		<item>
-			<label>$LOCALIZE[13016]</label>
-			<onclick>Powerdown()</onclick>
-			<visible>Substring(Control.GetLabel(4327),shutdown) + IsEmpty(Skin.String(ShutdownSub8)) + System.CanPowerDown</visible>
-		</item>
-		<item>
-			<label>13013</label>
-			<onclick>Reset()</onclick>
-			<visible>Substring(Control.GetLabel(4327),shutdown) + IsEmpty(Skin.String(ShutdownSub2)) + System.CanReboot</visible>
-		</item>
-		<item>
-			<label>13011</label>
-			<onclick>Suspend()</onclick>
-			<visible>Substring(Control.GetLabel(4327),shutdown) + IsEmpty(Skin.String(ShutdownSub4)) + System.CanSuspend</visible>
-		</item>
-		<item>
-			<label>13010</label>
-			<onclick>Hibernate()</onclick>
-			<visible>Substring(Control.GetLabel(4327),shutdown) + IsEmpty(Skin.String(ShutdownSub5)) + System.CanHibernate</visible>
-		</item>
-		<item>
-			<label>20126</label>
-			<onclick>System.LogOff</onclick>
-			<visible>Substring(Control.GetLabel(4327),shutdown) + IsEmpty(Skin.String(ShutdownSub6)) + [System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)] + System.Loggedon</visible>
-		</item>
-		<item>
-			<label>13009</label>
-			<onclick>Quit</onclick>
-			<visible>Substring(Control.GetLabel(4327),shutdown) + IsEmpty(Skin.String(ShutdownSub7)) + System.ShowExitButton</visible>
-		</item>
-	</include>
 	<include name="CinemaSubMenuItem">
 		<item>
 			<label>$LOCALIZE[31284]</label>
@@ -751,7 +708,7 @@
 			<property name="Widget">$INFO[Skin.String(WeatherHomeItem.Widget)]</property>
 			<onclick>SetProperty($INFO[Window(home).Property(MenuName)],WeatherHomeItem,home)</onclick>
 			<onclick>SetFocus(9006)</onclick>
-			<icon fallback="special://skin/backgrounds/weather/">$INFO[Skin.String(WeatherHomeItem.MultiFanart)]</icon>
+			<icon fallback="special://skin/background/">$INFO[Skin.String(WeatherHomeItem.MultiFanart)]</icon>
 		</item>
 	</include>
 	<include name="FavoritesMainMenu">
@@ -769,25 +726,7 @@
 			<property name="Widget">$INFO[Skin.String(FavouritesHomeItem.Widget)]</property>
 			<onclick>SetProperty($INFO[Window(home).Property(MenuName)],FavouritesHomeItem,home)</onclick>
 			<onclick>SetFocus(9006)</onclick>
-			<icon fallback="special://skin/backgrounds/favourites/">$INFO[Skin.String(FavouritesHomeItem.MultiFanart)]</icon>
-		</item>
-	</include>
-	<include name="ShutdownMainMenu">
-		<item id="12">
-			<label fallback="31508">$INFO[Skin.String(ShutdownHomeItem.Label)]</label>
-			<property name="Path" fallback="ActivateWindow(shutdownmenu)">$INFO[Skin.String(ShutdownHomeItem.Path)]</property>
-			<property name="Type" fallback="custom">$INFO[Skin.String(ShutdownHomeItem.Type)]</property>
-			<property name="SubMenu" fallback="shutdown">$INFO[Skin.String(ShutdownHomeItem.SubMenu)]</property>
-			<property name="InfoLine" fallback="shutdown">$INFO[Skin.String(ShutdownHomeItem.InfoLine)]</property>
-			<property name="BigIcon" fallback="BigIcons/Power.png">$INFO[Skin.String(ShutdownHomeItem.Icon)]</property>
-			<property name="DisableIcon">$INFO[Skin.String(ShutdownHomeItem.Disable)]</property>
-			<property name="Widget2Title">$INFO[Skin.String(ShutdownHomeItem.Widget2Title)]</property>
-			<property name="WidgetTitle">$INFO[Skin.String(ShutdownHomeItem.WidgetTitle)]</property>
-			<property name="Widget2">$INFO[Skin.String(ShutdownHomeItem.Widget2)]</property>
-			<property name="Widget">$INFO[Skin.String(ShutdownHomeItem.Widget)]</property>
-			<onclick>SetProperty($INFO[Window(home).Property(MenuName)],ShutdownHomeItem,home)</onclick>
-			<onclick>SetFocus(9006)</onclick>
-			<icon fallback="special://skin/backgrounds/shutdown/">$INFO[Skin.String(ShutdownHomeItem.MultiFanart)]</icon>
+			<icon fallback="special://skin/background/">$INFO[Skin.String(FavouritesHomeItem.MultiFanart)]</icon>
 		</item>
 	</include>
 	<include name="SearchMainMenu">
@@ -805,7 +744,7 @@
 			<property name="Widget">$INFO[Skin.String(SearchHomeItem.Widget)]</property>
 			<onclick>SetProperty($INFO[Window(home).Property(MenuName)],SearchHomeItem,home)</onclick>
 			<onclick>SetFocus(9006)</onclick>
-			<icon fallback="special://skin/backgrounds/search/">$INFO[Skin.String(SearchHomeItem.MultiFanart)]</icon>
+			<icon fallback="special://skin/background/">$INFO[Skin.String(SearchHomeItem.MultiFanart)]</icon>
 		</item>
 	</include>
 	<include name="SettingsMainMenu">
@@ -823,7 +762,7 @@
 			<property name="Widget">$INFO[Skin.String(SettingsHomeItem.Widget)]</property>
 			<onclick>SetProperty($INFO[Window(home).Property(MenuName)],SettingsHomeItem,home)</onclick>
 			<onclick>SetFocus(9006)</onclick>
-			<icon fallback="special://skin/backgrounds/system/">$INFO[Skin.String(SettingsHomeItem.MultiFanart)]</icon>
+			<icon fallback="special://skin/background/">$INFO[Skin.String(SettingsHomeItem.MultiFanart)]</icon>
 		</item>
 	</include>
 	<include name="ProgramsMainMenu">
@@ -841,7 +780,7 @@
 			<property name="Widget">$INFO[Skin.String(ProgramsHomeItem.Widget)]</property>
 			<onclick>SetProperty($INFO[Window(home).Property(MenuName)],ProgramsHomeItem,home)</onclick>
 			<onclick>SetFocus(9006)</onclick>
-			<icon fallback="special://skin/backgrounds/programs/">$INFO[Skin.String(ProgramsHomeItem.MultiFanart)]</icon>
+			<icon fallback="special://skin/background/">$INFO[Skin.String(ProgramsHomeItem.MultiFanart)]</icon>
 		</item>
 	</include>
 	<include name="VideosMainMenu">
@@ -859,7 +798,7 @@
 			<property name="Widget">$INFO[Skin.String(VideosHomeItem.Widget)]</property>
 			<onclick>SetProperty($INFO[Window(home).Property(MenuName)],VideosHomeItem,home)</onclick>
 			<onclick>SetFocus(9006)</onclick>
-			<icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(VideosHomeItem.MultiFanart)]</icon>
+			<icon fallback="special://skin/background/">$INFO[Skin.String(VideosHomeItem.MultiFanart)]</icon>
 		</item>
 	</include>
 	<include name="TVShowsMainMenu">
@@ -877,7 +816,8 @@
 			<property name="Widget">$INFO[Skin.String(TVShowHomeItem.Widget)]</property>
 			<onclick>SetProperty($INFO[Window(home).Property(MenuName)],TVShowHomeItem,home)</onclick>
 			<onclick>SetFocus(9006)</onclick>
-			<icon fallback="special://skin/backgrounds/tvshows/">$INFO[Skin.String(TVShowHomeItem.MultiFanart)]</icon>
+			<icon fallback="special://skin/background/">$INFO[Skin.String(TVShowHomeItem.MultiFanart)]</icon>
+			<visible>Library.HasContent(TVShows)</visible>
 		</item>
 	</include>
 	<include name="MoviesMainMenu">
@@ -895,7 +835,8 @@
 			<property name="Widget">$INFO[Skin.String(MovieHomeItem.Widget)]</property>
 			<onclick>SetProperty($INFO[Window(home).Property(MenuName)],MovieHomeItem,home)</onclick>
 			<onclick>SetFocus(9006)</onclick>
-			<icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MovieHomeItem.MultiFanart)]</icon>
+			<icon fallback="special://skin/background/">$INFO[Skin.String(MovieHomeItem.MultiFanart)]</icon>
+			<visible>Library.HasContent(Movies)</visible>
 		</item>
 	</include>
 	<include name="MusicMainMenu">
@@ -913,7 +854,7 @@
 			<property name="Widget">$INFO[Skin.String(MusicHomeItem.Widget)]</property>
 			<onclick>SetProperty($INFO[Window(home).Property(MenuName)],MusicHomeItem,home)</onclick>
 			<onclick>SetFocus(9006)</onclick>
-			<icon fallback="special://skin/backgrounds/music/">$INFO[Skin.String(MusicHomeItem.MultiFanart)]</icon>
+			<icon fallback="special://skin/background/">$INFO[Skin.String(MusicHomeItem.MultiFanart)]</icon>
 		</item>
 	</include>
 	<include name="MusicVideosMainMenu">
@@ -931,7 +872,8 @@
 			<property name="Widget">$INFO[Skin.String(MusicVideosHomeItem.Widget)]</property>
 			<onclick>SetProperty($INFO[Window(home).Property(MenuName)],MusicVideosHomeItem,home)</onclick>
 			<onclick>SetFocus(9006)</onclick>
-			<icon fallback="special://skin/backgrounds/musicvideos/">$INFO[Skin.String(MusicVideosHomeItem.MultiFanart)]</icon>
+			<icon fallback="special://skin/background/">$INFO[Skin.String(MusicVideosHomeItem.MultiFanart)]</icon>
+			<visible>Library.HasContent(MusicVideos)</visible>
 		</item>
 	</include>
 	<include name="PicturesMainMenu">
@@ -949,7 +891,7 @@
 			<property name="Widget">$INFO[Skin.String(PicturesHomeItem.Widget)]</property>
 			<onclick>SetProperty($INFO[Window(home).Property(MenuName)],PicturesHomeItem,home)</onclick>
 			<onclick>SetFocus(9006)</onclick>
-			<icon fallback="special://skin/backgrounds/pictures/">$INFO[Skin.String(PicturesHomeItem.MultiFanart)]</icon>
+			<icon fallback="special://skin/background/">$INFO[Skin.String(PicturesHomeItem.MultiFanart)]</icon>
 		</item>
 	</include>
 	<include name="TVMainMenu">
@@ -967,7 +909,7 @@
 			<property name="Widget">$INFO[Skin.String(LiveTVHomeItem.Widget)]</property>
 			<onclick>SetProperty($INFO[Window(home).Property(MenuName)],LiveTVHomeItem,home)</onclick>
 			<onclick>SetFocus(9006)</onclick>
-			<icon fallback="special://skin/backgrounds/livetv/">$INFO[Skin.String(LiveTVHomeItem.MultiFanart)]</icon>
+			<icon fallback="special://skin/background/">$INFO[Skin.String(LiveTVHomeItem.MultiFanart)]</icon>
 		</item>
 	</include>
 	<include name="InternetMainMenu">
@@ -985,7 +927,7 @@
 			<property name="Widget">$INFO[Skin.String(InternetHomeItem.Widget)]</property>
 			<onclick>SetProperty($INFO[Window(home).Property(MenuName)],InternetHomeItem,home)</onclick>
 			<onclick>SetFocus(9006)</onclick>
-			<icon fallback="special://skin/backgrounds/internet/">$INFO[Skin.String(InternetHomeItem.MultiFanart)]</icon>
+			<icon fallback="special://skin/background/">$INFO[Skin.String(InternetHomeItem.MultiFanart)]</icon>
 		</item>
 	</include>
 	<include name="CustomMainMenuItem1">
@@ -1003,7 +945,7 @@
 			<property name="Widget">$INFO[Skin.String(CustomHomeItem1.Widget)]</property>
 			<onclick>SetProperty($INFO[Window(home).Property(MenuName)],CustomHomeItem1,home)</onclick>
 			<onclick>SetFocus(9006)</onclick>
-			<icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(CustomHomeItem1.MultiFanart)]</icon>
+			<icon fallback="special://skin/background/">$INFO[Skin.String(CustomHomeItem1.MultiFanart)]</icon>
 		</item>
 	</include>
 	<include name="CustomMainMenuItem2">
@@ -1021,7 +963,7 @@
 			<property name="Widget">$INFO[Skin.String(CustomHomeItem2.Widget)]</property>
 			<onclick>SetProperty($INFO[Window(home).Property(MenuName)],CustomHomeItem2,home)</onclick>
 			<onclick>SetFocus(9006)</onclick>
-			<icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(CustomHomeItem2.MultiFanart)]</icon>
+			<icon fallback="special://skin/background/">$INFO[Skin.String(CustomHomeItem2.MultiFanart)]</icon>
 		</item>
 	</include>
 	<include name="CustomMainMenuItem3">
@@ -1039,7 +981,7 @@
 			<property name="Widget">$INFO[Skin.String(CustomHomeItem3.Widget)]</property>
 			<onclick>SetProperty($INFO[Window(home).Property(MenuName)],CustomHomeItem3,home)</onclick>
 			<onclick>SetFocus(9006)</onclick>
-			<icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(CustomHomeItem3.MultiFanart)]</icon>
+			<icon fallback="special://skin/background/">$INFO[Skin.String(CustomHomeItem3.MultiFanart)]</icon>
 		</item>
 	</include>
 	<include name="CustomMainMenuItem4">
@@ -1057,7 +999,7 @@
 			<property name="Widget">$INFO[Skin.String(CustomHomeItem4.Widget)]</property>
 			<onclick>SetProperty($INFO[Window(home).Property(MenuName)],CustomHomeItem4,home)</onclick>
 			<onclick>SetFocus(9006)</onclick>
-			<icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(CustomHomeItem4.MultiFanart)]</icon>
+			<icon fallback="special://skin/background/">$INFO[Skin.String(CustomHomeItem4.MultiFanart)]</icon>
 		</item>
 	</include>
 	<include name="CustomMainMenuItem5">
@@ -1075,7 +1017,7 @@
 			<property name="Widget">$INFO[Skin.String(CustomHomeItem5.Widget)]</property>
 			<onclick>SetProperty($INFO[Window(home).Property(MenuName)],CustomHomeItem5,home)</onclick>
 			<onclick>SetFocus(9006)</onclick>
-			<icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(CustomHomeItem5.MultiFanart)]</icon>
+			<icon fallback="special://skin/background/">$INFO[Skin.String(CustomHomeItem5.MultiFanart)]</icon>
 		</item>
 	</include>
 	<include name="CustomMainMenuItem6">
@@ -1093,7 +1035,7 @@
 			<property name="Widget">$INFO[Skin.String(CustomHomeItem6.Widget)]</property>
 			<onclick>SetProperty($INFO[Window(home).Property(MenuName)],CustomHomeItem6,home)</onclick>
 			<onclick>SetFocus(9006)</onclick>
-			<icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(CustomHomeItem6.MultiFanart)]</icon>
+			<icon fallback="special://skin/background/">$INFO[Skin.String(CustomHomeItem6.MultiFanart)]</icon>
 		</item>
 	</include>
 	<include name="MainMenuLabels">
@@ -1167,7 +1109,7 @@
 					<width>88</width>
 					<height>88</height>
 					<texture background="true">$INFO[ListItem.Property(BigIcon)]</texture>
-					<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 					<visible>SubString(ListItem.Property(BigIcon),BigIcons/)</visible>
 				</control>
 				<control type="image">
@@ -1189,8 +1131,8 @@
 				<align>center</align>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
 				<font>Font_Reg30_Caps</font>
-				<textcolor>$VAR[DefaultColorVar]</textcolor>
-				<shadowcolor>33454545</shadowcolor>
+				<textcolor>$VAR[FontColorVar]</textcolor>
+				<shadowcolor>90FFFFFF</shadowcolor>
 			</control>
 		</focusedlayout>
 		<itemlayout height="225" width="519" condition="!Skin.HasSetting(biggergap) + !Skin.HasSetting(mainmenuicons)">
@@ -1205,9 +1147,9 @@
 			<control type="label">
 				<posx>260</posx>
 				<width>519</width>
-				<textcolor>$VAR[DefaultColorVar]</textcolor>
+				<textcolor>$VAR[FontColorVar]</textcolor>
 				<include>MainMenuLabels</include>
-				<shadowcolor>33454545</shadowcolor>
+				<shadowcolor>90FFFFFF</shadowcolor>
 			</control>
 		</focusedlayout>
 		<itemlayout height="225" width="639" condition="Skin.HasSetting(biggergap)">
@@ -1222,9 +1164,9 @@
 			<control type="label">
 				<posx>320</posx>
 				<width>639</width>
-				<textcolor>$VAR[DefaultColorVar]</textcolor>
+				<textcolor>$VAR[FontColorVar]</textcolor>
 				<include>MainMenuLabels</include>
-				<shadowcolor>33454545</shadowcolor>
+				<shadowcolor>90FFFFFF</shadowcolor>
 			</control>
 		</focusedlayout>
 		<content>
@@ -1245,7 +1187,6 @@
 			<include condition="IsEmpty(Skin.String(ProgramsHomeItem.Disable))">ProgramsMainMenu</include>
 			<include condition="IsEmpty(Skin.String(SettingsHomeItem.Disable))">SettingsMainMenu</include>
 			<include condition="IsEmpty(Skin.String(SearchHomeItem.Disable))">SearchMainMenu</include>
-			<include condition="IsEmpty(Skin.String(ShutdownHomeItem.Disable))">ShutdownMainMenu</include>
 			<include condition="IsEmpty(Skin.String(FavouritesHomeItem.Disable))">FavoritesMainMenu</include>
 			<include condition="IsEmpty(Skin.String(WeatherHomeItem.Disable))">WeatherMainMenu</include>
 		</content>
@@ -1264,6 +1205,7 @@
 		<onup>9000</onup>
 		<onback>SetFocus(9000)</onback>
 		<ondown condition="!Skin.HasSetting(lowermainmenu) + Control.IsVisible(4444)">4444</ondown>
+		<ondown condition="![!Skin.HasSetting(lowermainmenu) + Control.IsVisible(4444)]">7654</ondown>
 		<itemlayout width="230" height="50">
 			<control type="label">
 				<posx>115</posx>
@@ -1272,7 +1214,7 @@
 				<align>center</align>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font_Reg28_Caps</font>
-				<textcolor>$VAR[FontColorVar]</textcolor>
+				<textcolor>lightpurple</textcolor>
 			</control>
 		</itemlayout>
 		<focusedlayout width="230" height="50">
@@ -1283,7 +1225,7 @@
 				<align>center</align>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font_Reg28_Caps</font>
-				<textcolor>$VAR[FontColorVar]</textcolor>
+				<textcolor>lightpurple</textcolor>
 				<animation effect="zoom" center="112,25" start="100" end="130" time="160" tween="quadratic">Focus</animation>
 				<animation effect="zoom" center="112,25" start="130" end="100" time="160" tween="quadratic">Unfocus</animation>
 				<scroll>true</scroll>
@@ -1318,8 +1260,6 @@
 			<!--settings-->
 			<!--TV Shows-->
 			<include condition="Substring(Skin.String(submenulist),tv) | IsEmpty(Skin.String(TVShowHomeItem.SubMenu))">DefaultTVShowsSubMenu</include>
-			<!--Shutdown-->
-			<include condition="Substring(Skin.String(submenulist),shutdown) | IsEmpty(Skin.String(ShutdownHomeItem.SubMenu))">DefaultShutdownSubMenu</include>
 			<!--CustomSubs-->
 			<include condition="Substring(Skin.String(submenulist),custom1)">Custom1Subs</include>
 			<include condition="Substring(Skin.String(submenulist),custom2)">Custom2Subs</include>

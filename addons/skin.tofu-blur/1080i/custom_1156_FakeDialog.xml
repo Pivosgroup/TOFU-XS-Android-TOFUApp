@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1156">
 	<defaultcontrol always="true">1000</defaultcontrol>
-	<onunload condition="Window.IsActive(1124) + [Skin.HasSetting(mainmenuicons) | !IsEmpty(Window(1124).Property(ResetItem))] + Stringcompare(Container(9000).NumItems,20)">Control.Move(9000,9)</onunload>
-	<onunload condition="Window.IsActive(1124) + [Skin.HasSetting(mainmenuicons) | !IsEmpty(Window(1124).Property(ResetItem))] + Stringcompare(Container(9000).NumItems,21)">Control.Move(9000,10)</onunload>
+	<onunload condition="Window.IsActive(1124) + [Skin.HasSetting(mainmenuicons) | !IsEmpty(Window(1124).Property(ResetItem))]">Control.Move(9000,5)</onunload>
+	<onunload condition="Window.IsActive(1124) + [Skin.HasSetting(mainmenuicons) | !IsEmpty(Window(1124).Property(ResetItem))] + Library.HasContent(Movies)">Control.Move(9000,1)</onunload>
+	<onunload condition="Window.IsActive(1124) + [Skin.HasSetting(mainmenuicons) | !IsEmpty(Window(1124).Property(ResetItem))] + Library.HasContent(TVShows)">Control.Move(9000,1)</onunload>
+	<onunload condition="Window.IsActive(1124) + [Skin.HasSetting(mainmenuicons) | !IsEmpty(Window(1124).Property(ResetItem))] + Library.HasContent(MusicVideos)">Control.Move(9000,1)</onunload>
 	<onunload condition="!IsEmpty(Window(1124).Property(ResetItem))">SetFocus(9006)</onunload>
 	<onunload>ClearProperty(ResetItem,1124)</onunload>
 	<zorder>5</zorder>
@@ -35,14 +37,52 @@
 				<effect type="fade" start="100" end="0" time="240" />
 			</animation>
 			<include>DialogBackFade</include>
-			<control type="image">
-				<posx>923</posx>
-				<posy>503</posy>
-				<width>74</width>
-				<height>74</height>
-				<texture>loader.gif</texture>
-				<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
-				<animation effect="fade" start="70" time="1200" condition="true" pulse="true">Conditional</animation>
+			<control type="group">
+				<posx>879</posx>
+				<posy>525</posy>
+				<animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>30</width>
+					<height>30</height>
+					<texture>busy-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>44</posx>
+					<posy>0</posy>
+					<width>30</width>
+					<height>30</height>
+					<texture>busy-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>88</posx>
+					<posy>0</posy>
+					<width>30</width>
+					<height>30</height>
+					<texture>busy-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>132</posx>
+					<posy>0</posy>
+					<width>30</width>
+					<height>30</height>
+					<texture>busy-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>30</width>
+					<height>30</height>
+					<texture>busy-focus.png</texture>
+					<animation type="Conditional" condition="true" pulse="true">
+						<effect type="slide" start="0,0" end="0,0" time="0"/>
+						<effect type="slide" start="0,0" end="44,0" time="0" delay="250"/>
+						<effect type="slide" start="0,0" end="44,0" time="0" delay="750"/>
+						<effect type="slide" start="0,0" end="44,0" time="0" delay="1250"/>
+						<effect type="slide" start="0,0" end="0,0" time="0" delay="1500"/>
+					</animation>
+				</control>
 			</control>
 		</control>
 	</controls>

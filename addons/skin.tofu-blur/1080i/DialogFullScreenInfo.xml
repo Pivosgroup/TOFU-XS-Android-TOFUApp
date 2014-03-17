@@ -43,7 +43,7 @@
 			<control type="image">
 				<width>1920</width>
 				<height>130</height>
-				<texture flipy="true" border="5">panel-bottom.png</texture>
+				<texture flipy="true" border="5">panel-top.png</texture>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			</control>
 			<control type="label">
@@ -67,7 +67,7 @@
 				<aligny>top</aligny>
 				<label>$VAR[VideoPlayerSubTitleVar]</label>
 				<font>Font_Reg30_2</font>
-				<textcolor>$VAR[FontColorVar]</textcolor>
+				<textcolor>$VAR[SettingsColorVar]</textcolor>
 				<scroll>true</scroll>
 			</control>
 			<control type="group">
@@ -232,7 +232,7 @@
 							<width>995</width>
 							<height>40</height>
 							<label>$INFO[VideoPlayer.Tagline]</label>
-							<textcolor>$VAR[FontColorVar]</textcolor>
+							<textcolor>$VAR[SettingsColorVar]</textcolor>
 							<font>Font_Reg32</font>
 							<scroll>true</scroll>
 						</control>
@@ -242,7 +242,7 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<label>$INFO[VideoPlayer.Artist]</label>
-						<textcolor>$VAR[FontColorVar]</textcolor>
+						<textcolor>$VAR[SettingsColorVar]</textcolor>
 						<font>Font_Reg32</font>
 						<scroll>true</scroll>
 						<visible>VideoPlayer.Content(musicvideos) + !IsEmpty(VideoPlayer.Artist)</visible>
@@ -252,7 +252,7 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<label>$INFO[VideoPlayer.TvShowTitle]</label>
-						<textcolor>$VAR[FontColorVar]</textcolor>
+						<textcolor>$VAR[SettingsColorVar]</textcolor>
 						<font>Font_Reg32</font>
 						<visible>VideoPlayer.Content(episodes) + !IsEmpty(VideoPlayer.TvShowTitle)</visible>
 					</control>
@@ -286,7 +286,7 @@
 						<height>30</height>
 						<align>center</align>
 						<label>$LOCALIZE[345]</label>
-						<textcolor>$VAR[FontColorVar]</textcolor>
+						<textcolor>$VAR[SettingsColorVar]</textcolor>
 						<font>Font_Reg19_Caps</font>
 					</control>
 				</control>
@@ -331,7 +331,7 @@
 						<height>30</height>
 						<align>center</align>
 						<label>$LOCALIZE[12391]</label>
-						<textcolor>$VAR[FontColorVar]</textcolor>
+						<textcolor>$VAR[SettingsColorVar]</textcolor>
 						<font>Font_Reg19_Caps</font>
 						<visible>!Skin.HasSetting(PreferRemaining)</visible>
 					</control>
@@ -406,7 +406,7 @@
 						<width>165</width>
 						<height>44</height>
 						<label>$LOCALIZE[515]:</label>
-						<textcolor>$VAR[FontColorVar]</textcolor>
+						<textcolor>$VAR[SettingsColorVar]</textcolor>
 						<font>Font_Reg30</font>
 					</control>
 					<control type="label">
@@ -428,7 +428,7 @@
 						<width>165</width>
 						<height>44</height>
 						<label>$LOCALIZE[31005]:</label>
-						<textcolor>$VAR[FontColorVar]</textcolor>
+						<textcolor>$VAR[SettingsColorVar]</textcolor>
 						<font>Font_Reg30</font>
 					</control>
 					<control type="label">
@@ -451,7 +451,7 @@
 						<width>165</width>
 						<height>44</height>
 						<label>$LOCALIZE[20339]:</label>
-						<textcolor>$VAR[FontColorVar]</textcolor>
+						<textcolor>$VAR[SettingsColorVar]</textcolor>
 						<font>Font_Reg30</font>
 					</control>
 					<control type="label">
@@ -474,7 +474,7 @@
 						<width>165</width>
 						<height>44</height>
 						<label>$LOCALIZE[20417]:</label>
-						<textcolor>$VAR[FontColorVar]</textcolor>
+						<textcolor>$VAR[SettingsColorVar]</textcolor>
 						<font>Font_Reg30</font>
 					</control>
 					<control type="label">
@@ -679,7 +679,7 @@
 						<width>165</width>
 						<height>44</height>
 						<label>$LOCALIZE[2050]:</label>
-						<textcolor>$VAR[FontColorVar]</textcolor>
+						<textcolor>$VAR[SettingsColorVar]</textcolor>
 						<font>Font_Reg30</font>
 					</control>
 					<control type="label">
@@ -697,7 +697,7 @@
 						<width>165</width>
 						<height>44</height>
 						<label>$LOCALIZE[19031]:</label>
-						<textcolor>$VAR[FontColorVar]</textcolor>
+						<textcolor>$VAR[SettingsColorVar]</textcolor>
 						<font>Font_Reg30</font>
 					</control>
 					<control type="label">
@@ -735,7 +735,7 @@
 					<height>38</height>
 					<label>$INFO[VideoPlayer.ChannelName]</label>
 					<font>Font_Reg38</font>
-					<textcolor>$VAR[FontColorVar]</textcolor>
+					<textcolor>$VAR[SettingsColorVar]</textcolor>
 				</control>
 				<control type="label">
 					<posx>4</posx>
@@ -744,7 +744,7 @@
 					<height>44</height>
 					<label>$LOCALIZE[555]:</label>
 					<font>Font_Reg30</font>
-					<textcolor>$VAR[FontColorVar]</textcolor>
+					<textcolor>$VAR[SettingsColorVar]</textcolor>
 				</control>
 				<control type="grouplist">
 					<posx>6</posx>

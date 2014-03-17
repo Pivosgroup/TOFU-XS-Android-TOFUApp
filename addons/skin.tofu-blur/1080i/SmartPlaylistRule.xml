@@ -30,14 +30,6 @@
 				<texture>common/black.png</texture>
 				<animation effect="fade" end="20" condition="true">Conditional</animation>
 			</control>
-			<control type="image">
-				<posx>266</posx>
-				<posy>34</posy>
-				<width>4</width>
-				<height>406</height>
-				<texture>divider-vertical.png</texture>
-				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-			</control>
 			<control type="label">
 				<posx>267</posx>
 				<posy>70</posy>
@@ -66,7 +58,7 @@
 					<posy>178</posy>
 					<width>476</width>
 					<textoffsetx>0</textoffsetx>
-					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 					<texturenofocus border="3">list-nofocus.png</texturenofocus>
 					<label>-</label>
 					<onleft>9000</onleft>
@@ -74,14 +66,14 @@
 					<onup>18</onup>
 					<ondown>17</ondown>
 					<include>Default_SettingButton</include>
-					<spinposx>-2</spinposx>
+					<spinposx>5</spinposx>
 				</control>
 				<control type="spincontrolex" id="16">
 					<posx>744</posx>
 					<posy>178</posy>
 					<width>529</width>
 					<textoffsetx>0</textoffsetx>
-					<texturefocus border="3">list-focus.png</texturefocus>
+					<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 					<texturenofocus border="3">list-nofocus.png</texturenofocus>
 					<label>-</label>
 					<onleft>15</onleft>
@@ -89,7 +81,7 @@
 					<onup>18</onup>
 					<ondown>17</ondown>
 					<include>Default_SettingButton</include>
-					<spinposx>-2</spinposx>
+					<spinposx>5</spinposx>
 				</control>
 			</control>
 			<control type="edit" id="17">
@@ -97,8 +89,9 @@
 				<posy>252</posy>
 				<width>1005</width>
 				<height>74</height>
+				<textcolor>grey</textcolor>
 				<textoffsetx>30</textoffsetx>
-				<texturefocus border="3">list-focus.png</texturefocus>
+				<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 				<texturenofocus border="3">list-nofocus.png</texturenofocus>
 				<font>Font_Reg32</font>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
@@ -113,8 +106,9 @@
 				<posy>326</posy>
 				<width>1005</width>
 				<height>74</height>
+				<textcolor>grey</textcolor>
 				<textoffsetx>30</textoffsetx>
-				<texturefocus border="3">list-focus.png</texturefocus>
+				<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 				<texturenofocus border="3">list-nofocus.png</texturenofocus>
 				<label>1024</label>
 				<font>Font_Reg32</font>
@@ -138,9 +132,10 @@
 					<posy>4</posy>
 					<width>228</width>
 					<height>96</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
-					<texturefocus border="3">button-focus2.png</texturefocus>
+					<texturefocus border="3">button-focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>186</label>
 					<font>Font_Bold34_Caps</font>
@@ -151,9 +146,10 @@
 					<posy>4</posy>
 					<width>228</width>
 					<height>96</height>
+					<textcolor>grey</textcolor>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
-					<texturefocus border="3">button-focus2.png</texturefocus>
+					<texturefocus border="3">button-focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>222</label>
 					<font>Font_Bold34_Caps</font>

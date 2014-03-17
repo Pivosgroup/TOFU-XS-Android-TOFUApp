@@ -21,14 +21,6 @@
 				<texture border="5">panel.png</texture>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			</control>
-			<control type="image">
-				<posx>278</posx>
-				<posy>28</posy>
-				<width>4</width>
-				<height>859</height>
-				<texture>divider-vertical.png</texture>
-				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-			</control>
 			<control type="group">
 				<animation effect="fade" start="100" end="0" time="160" condition="Window.IsVisible(DialogPeripheralSettings.xml)">Conditional</animation>
 				<control type="label">
@@ -39,7 +31,7 @@
 					<align>center</align>
 					<label>$LOCALIZE[35000]</label>
 					<font>Font_ShowcaseMainLabel2</font>
-					<textcolor>$VAR[FontColorVar]</textcolor>
+				<textcolor>$VAR[FontColorVar]</textcolor>
 				</control>
 				<control type="group">
 					<control type="scrollbar" id="60">
@@ -75,6 +67,7 @@
 								<height>60</height>
 								<font>Font_Info</font>
 								<info>ListItem.Label</info>
+								<textcolor>grey</textcolor>
 							</control>
 						</itemlayout>
 						<focusedlayout height="60" width="1144">
@@ -88,7 +81,7 @@
 							<control type="image">
 								<width>1144</width>
 								<height>60</height>
-								<texture border="3">list-focus.png</texture>
+								<texture border="3,0,0,20">list-focus.png</texture>
 								<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 								<visible>Control.HasFocus(20)</visible>
 							</control>
@@ -115,6 +108,7 @@
 						<height>30</height>
 						<align>right</align>
 						<label>$INFO[Container(20).NumItems,, $LOCALIZE[31025]]$INFO[Container(20).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(20).NumPages,/,)]</label>
+						<textcolor>$VAR[FontColorVar]</textcolor>
 						<font>Font_Reg25</font>
 						<scroll>false</scroll>
 					</control>
@@ -131,6 +125,7 @@
 							<height>30</height>
 							<align>right</align>
 							<label>$LOCALIZE[35502]:</label>
+							<textcolor>$VAR[FontColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<posx>18</posx>
@@ -138,6 +133,7 @@
 							<width>850</width>
 							<height>30</height>
 							<label fallback="13205">$INFO[Container(20).ListItem.Label]</label>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -146,6 +142,7 @@
 							<height>30</height>
 							<align>right</align>
 							<label>$LOCALIZE[35500]:</label>
+							<textcolor>$VAR[FontColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<posx>18</posx>
@@ -153,6 +150,7 @@
 							<width>850</width>
 							<height>30</height>
 							<label fallback="13205">$INFO[Container(20).ListItem.Property(Bus)] - $INFO[Container(20).ListItem.Property(Location)]</label>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -161,6 +159,7 @@
 							<height>30</height>
 							<align>right</align>
 							<label>$LOCALIZE[35501]:</label>
+							<textcolor>$VAR[FontColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<posx>18</posx>
@@ -168,6 +167,7 @@
 							<width>850</width>
 							<height>30</height>
 							<label fallback="13205">$INFO[Container(20).ListItem.Property(Class)]</label>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -176,6 +176,7 @@
 							<height>30</height>
 							<align>right</align>
 							<label>$LOCALIZE[35503]:</label>
+							<textcolor>$VAR[FontColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<posx>18</posx>
@@ -183,6 +184,7 @@
 							<width>850</width>
 							<height>30</height>
 							<label fallback="13205">$INFO[Container(20).ListItem.Property(Vendor)]</label>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -191,6 +193,7 @@
 							<height>30</height>
 							<align>right</align>
 							<label>$LOCALIZE[35504]:</label>
+							<textcolor>$VAR[FontColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<posx>18</posx>
@@ -198,6 +201,7 @@
 							<width>850</width>
 							<height>30</height>
 							<label fallback="13205">$INFO[Container(20).ListItem.Property(Product)]</label>
+							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -210,10 +214,11 @@
 						<posy>39</posy>
 						<width>246</width>
 						<height>96</height>
+						<textcolor>$VAR[FontColorVar]</textcolor>
 						<textoffsetx>40</textoffsetx>
 						<textoffsety>18</textoffsety>
 						<align>center</align>
-						<texturefocus border="3">button-focus2.png</texturefocus>
+						<texturefocus border="3">button-focus.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<label>186</label>
 						<font>Font_Bold37</font>
@@ -228,10 +233,11 @@
 						<posy>124</posy>
 						<width>246</width>
 						<height>96</height>
+						<textcolor>$VAR[FontColorVar]</textcolor>
 						<textoffsetx>40</textoffsetx>
 						<textoffsety>18</textoffsety>
 						<align>center</align>
-						<texturefocus border="3">button-focus2.png</texturefocus>
+						<texturefocus border="3">button-focus.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<label>5</label>
 						<font>Font_Bold37</font>

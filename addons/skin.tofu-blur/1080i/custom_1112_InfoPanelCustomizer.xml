@@ -9,6 +9,12 @@
 	</coordinates>
 	<include>Animation_DialogPopup</include>
 	<controls>
+		<control type="label" id="4421">
+			<posy>100</posy>
+			<label>$VAR[InfoPanelVar]</label>
+			<include>HiddenObject</include>
+			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
+		</control>
 		<include>DialogBackFade</include>
 		<control type="label" id="4420">
 			<label>$VAR[1112StyleVar]</label>
@@ -26,29 +32,29 @@
 			</control>
 			<control type="image">
 				<posx>307</posx>
-				<posy>622</posy>
+				<posy>650</posy>
 				<width>1305</width>
-				<height>30</height>
-				<texture border="3">list-nofocus.png</texture>
-				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+				<height>2</height>
+				<texture>line.png</texture>
 			</control>
 			<control type="grouplist" id="450">
 				<posx>1216</posx>
 				<posy>660</posy>
-				<width>396</width>
+				<width>394</width>
 				<height>540</height>
 				<aligny>center</aligny>
 				<onleft>1100</onleft>
 				<onright>451</onright>
 				<onup>450</onup>
 				<ondown>450</ondown>
-				<control type="button" id="900">
+				<control type="label" id="900">
 					<label>$LOCALIZE[31166]</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_MediaMenuLabelAlt2</include>
-					<enable>no</enable>
 				</control>
 				<control type="button" id="904">
 					<label>$LOCALIZE[31272]:</label>
+					<textcolor>grey</textcolor>
 					<label2>[COLOR $VAR[FontColorVar]]$VAR[LandscapeThumbSettingsVar][/COLOR]</label2>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.ToggleSetting(LandscapeThumb)</onclick>
@@ -57,6 +63,7 @@
 				</control>
 				<control type="button" id="905">
 					<label>$LOCALIZE[31959]:</label>
+					<textcolor>grey</textcolor>
 					<label2>[COLOR $VAR[FontColorVar]]$VAR[TVLandscapeThumbSettingsVar][/COLOR]</label2>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.ToggleSetting(TVLandscapeThumb)</onclick>
@@ -65,15 +72,17 @@
 				</control>
 				<control type="radiobutton" id="1625">
 					<label>31696</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.ToggleSetting(no_infopane_panel)</onclick>
 					<selected>Skin.HasSetting(no_infopane_panel)</selected>
+					<enable>Window.IsVisible(Videos)</enable>
 				</control>
 			</control>
 			<control type="panel" id="451">
-				<posx>308</posx>
+				<posx>310</posx>
 				<posy>660</posy>
-				<width>600</width>
+				<width>598</width>
 				<height>520</height>
 				<orientation>vertical</orientation>
 				<onleft>450</onleft>
@@ -83,15 +92,15 @@
 				<animation type="WindowClose">
 					<effect type="fade" start="100" end="0" time="320" />
 				</animation>
-				<itemlayout width="250" height="150">
+				<itemlayout width="249" height="150">
 					<control type="image">
-						<width>250</width>
+						<width>249</width>
 						<height>122</height>
 						<info>ListItem.ActualIcon</info>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="image">
-						<width>250</width>
+						<width>249</width>
 						<height>122</height>
 						<info>ListItem.Thumb</info>
 						<aspectratio>keep</aspectratio>
@@ -100,30 +109,31 @@
 					<control type="label">
 						<posx>125</posx>
 						<posy>115</posy>
-						<width>250</width>
+						<width>249</width>
 						<height>30</height>
 						<align>center</align>
 						<font>Font_Reg28</font>
 						<info>ListItem.Label</info>
+						<textcolor>grey</textcolor>
 					</control>
 				</itemlayout>
-				<focusedlayout width="250" height="150">
+				<focusedlayout width="249" height="150">
 					<control type="image">
-						<width>250</width>
+						<width>249</width>
 						<height>150</height>
-						<texture border="3">button-focus2.png</texture>
+						<texture border="3">button-focus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<include>PanelGlowFade</include>
 						<visible>Control.HasFocus(451)</visible>
 					</control>
 					<control type="image">
-						<width>250</width>
+						<width>249</width>
 						<height>122</height>
 						<info>ListItem.ActualIcon</info>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="image">
-						<width>250</width>
+						<width>249</width>
 						<height>122</height>
 						<info>ListItem.Thumb</info>
 						<aspectratio>keep</aspectratio>
@@ -132,7 +142,7 @@
 					<control type="label">
 						<posx>125</posx>
 						<posy>115</posy>
-						<width>250</width>
+						<width>249</width>
 						<height>30</height>
 						<align>center</align>
 						<font>Font_Reg28</font>
@@ -176,6 +186,7 @@
 				<posx>200</posx>
 				<width>720</width>
 				<label>31063</label>
+				<textcolor>$VAR[FontColorVar]</textcolor>
 				<include>Objects_MediaMenuLabelAlt2</include>
 				<align>center</align>
 			</control>
@@ -184,6 +195,7 @@
 				<posx>650</posx>
 				<width>720</width>
 				<label>31193</label>
+				<textcolor>$VAR[FontColorVar]</textcolor>
 				<include>Objects_MediaMenuLabelAlt2</include>
 				<align>center</align>
 			</control>
@@ -192,6 +204,7 @@
 				<posx>1050</posx>
 				<width>720</width>
 				<label>31176</label>
+				<textcolor>$VAR[FontColorVar]</textcolor>
 				<include>Objects_MediaMenuLabelAlt2</include>
 				<align>center</align>
 			</control>
@@ -202,8 +215,10 @@
 				<onleft>451</onleft>
 				<onright>450</onright>
 				<height>1080</height>
+				<width>522</width>
 				<control type="radiobutton" id="1200">
 					<label>1 $LOCALIZE[31007]</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.SetString(InfopanelDelay,1)</onclick>
 					<enable>Stringcompare(Control.GetLabel(4421),infopanelonauto)</enable>
@@ -211,6 +226,7 @@
 				</control>
 				<control type="radiobutton" id="1201">
 					<label>2 $LOCALIZE[31007]</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.SetString(InfopanelDelay,2)</onclick>
 					<enable>Stringcompare(Control.GetLabel(4421),infopanelonauto)</enable>
@@ -218,6 +234,7 @@
 				</control>
 				<control type="radiobutton" id="1202">
 					<label>3 $LOCALIZE[31007]</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.SetString(InfopanelDelay,3)</onclick>
 					<enable>Stringcompare(Control.GetLabel(4421),infopanelonauto)</enable>
@@ -225,6 +242,7 @@
 				</control>
 				<control type="radiobutton" id="1203">
 					<label>4 $LOCALIZE[31007]</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.SetString(InfopanelDelay,4)</onclick>
 					<enable>Stringcompare(Control.GetLabel(4421),infopanelonauto)</enable>
@@ -232,6 +250,7 @@
 				</control>
 				<control type="radiobutton" id="1204">
 					<label>5 $LOCALIZE[31007]</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.SetString(InfopanelDelay,5)</onclick>
 					<enable>Stringcompare(Control.GetLabel(4421),infopanelonauto)</enable>

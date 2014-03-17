@@ -40,6 +40,7 @@
 							<height>60</height>
 							<textoffsetx>10</textoffsetx>
 							<label>$INFO[ListItem.Label]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg30_2</font>
 						</control>
 					</itemlayout>
@@ -49,7 +50,7 @@
 							<control type="image">
 								<width>400</width>
 								<height>60</height>
-								<texture border="3">list-focus.png</texture>
+								<texture border="3,0,0,20">list-focus.png</texture>
 								<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 							</control>
 							<control type="label">

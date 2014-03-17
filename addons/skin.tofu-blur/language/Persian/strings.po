@@ -13,10 +13,6 @@ msgctxt "#31024"
 msgid "Page"
 msgstr "صفحه"
 
-msgctxt "#31053"
-msgid "Fullscreen"
-msgstr "تمام‌صفحه"
-
 msgctxt "#31072"
 msgid "System info"
 msgstr "اطلاعات سیستم"
@@ -24,10 +20,6 @@ msgstr "اطلاعات سیستم"
 msgctxt "#31102"
 msgid "Background"
 msgstr "پس‌زمینه"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "پیش فرض"
 
 msgctxt "#31334"
 msgid "Latest"
@@ -52,10 +44,6 @@ msgstr "موسیقی"
 msgctxt "#31504"
 msgid "Videos"
 msgstr "ویدئوها"
-
-msgctxt "#31505"
-msgid "Programs"
-msgstr "برنامه‌ها"
 
 msgctxt "#31509"
 msgid "Favorites"

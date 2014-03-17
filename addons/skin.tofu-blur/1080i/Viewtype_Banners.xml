@@ -84,6 +84,7 @@
 						<height>105</height>
 						<align>center</align>
 						<label>$INFO[ListItem.Label]</label>
+						<shadowcolor>black</shadowcolor>
 						<font>Font_Bold40</font>
 						<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
@@ -135,6 +136,7 @@
 							<height>105</height>
 							<align>center</align>
 							<label>$INFO[ListItem.Label]</label>
+							<shadowcolor>black</shadowcolor>
 							<font>Font_Bold40</font>
 							<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo))</visible>
 						</control>
@@ -183,6 +185,7 @@
 						<height>104</height>
 						<align>center</align>
 						<label>$INFO[ListItem.Label]</label>
+						<shadowcolor>black</shadowcolor>
 						<font>Font_Bold40</font>
 						<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
@@ -235,6 +238,7 @@
 							<height>104</height>
 							<align>center</align>
 							<label>$INFO[ListItem.Label]</label>
+							<shadowcolor>black</shadowcolor>
 							<font>Font_Bold40</font>
 							<textcolor>$VAR[FontColorVar]</textcolor>
 							<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo))</visible>

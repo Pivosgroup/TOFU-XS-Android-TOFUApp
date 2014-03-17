@@ -61,10 +61,6 @@ msgctxt "#31045"
 msgid "Entries"
 msgstr "Plakat"
 
-msgctxt "#31053"
-msgid "Fullscreen"
-msgstr "Celoten zaslon"
-
 msgctxt "#31055"
 msgid "Open playlist"
 msgstr "Odpri seznam predvajanja"
@@ -92,10 +88,6 @@ msgstr "Nazaj"
 msgctxt "#31072"
 msgid "System info"
 msgstr "Sistemske informacije"
-
-msgctxt "#31085"
-msgid "Light"
-msgstr "rahel"
 
 msgctxt "#31095"
 msgid "Rating"
@@ -137,10 +129,6 @@ msgctxt "#31115"
 msgid "Customizer"
 msgstr "Poljubno"
 
-msgctxt "#31128"
-msgid "Lyrics"
-msgstr "Besedilo pesmi"
-
 msgctxt "#31162"
 msgid "Trailers"
 msgstr "Napovedniki"
@@ -148,10 +136,6 @@ msgstr "Napovedniki"
 msgctxt "#31175"
 msgid "Big list"
 msgstr "Velik seznam"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "Privzeto"
 
 msgctxt "#31235"
 msgid "Shift"
@@ -253,17 +237,9 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "Video"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "Programi"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "Sistem"
-
-msgctxt "#31508"
-msgid "Shutdown"
-msgstr "Ugasni"
 
 msgctxt "#31509"
 msgid "Favorites"
@@ -285,18 +261,6 @@ msgctxt "#31616"
 msgid "Low"
 msgstr "Min."
 
-msgctxt "#31617"
-msgid "High"
-msgstr "Visoka"
-
-msgctxt "#31622"
-msgid "Label"
-msgstr "Založba"
-
-msgctxt "#31629"
-msgid "Channels"
-msgstr "Programi"
-
 msgctxt "#31630"
 msgid "Custom"
 msgstr "Poljubno"
@@ -312,10 +276,6 @@ msgstr "Pomoč ob prvem zagonu..."
 msgctxt "#31889"
 msgid "Next Tracks"
 msgstr "Seznam predvajanja"
-
-msgctxt "#31892"
-msgid "Categories"
-msgstr "Kategorije"
 
 msgctxt "#31899"
 msgid "Shutdown timer"

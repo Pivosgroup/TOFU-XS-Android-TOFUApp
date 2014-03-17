@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window id="1124" type="window">
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<onload>Notification($LOCALIZE[31902],$LOCALIZE[31914])</onload>
+	<onload>Notification($LOCALIZE[31902],$LOCALIZE[31914],,dialogs/exclamation.png)</onload>
 	<onload>AlarmClock(WidgetMove,Control.Move(8000,1),00:07,silent,loop)</onload>
 	<onload>AlarmClock(Widget2Move,Control.Move(7000,1),00:07,silent,loop)</onload>
 	<onload>AlarmClock(HomeTileLeft,Control.Move(5001,1),00:07,silent,loop)</onload>
@@ -155,14 +155,13 @@
 					<height>35</height>
 					<texture>Back.png</texture>
 					<animation effect="rotate" end="-90" center="auto" time="0" condition="true">Conditional</animation>
-					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 				</control>
 				<control type="label">
 					<width min="15" max="1920">auto</width>
 					<height>36</height>
 					<label>$LOCALIZE[31176]</label>
 					<font>Font_Reg28_Caps</font>
-					<textcolor>$VAR[FontColorVar]</textcolor>
+					<textcolor>white</textcolor>
 				</control>
 			</control>
 		</control>
@@ -215,10 +214,10 @@
 			</control>
 			<!-- Home Menu Bar -->
 			<control type="image">
-				<posy>442</posy>
+				<posy>510</posy>
 				<width>1920</width>
-				<height>241</height>
-				<texture border="1,75,1,75">homemenu-bar-mid.png</texture>
+				<height>104</height>
+				<texture border="0,6,0,0">menu-bar.png</texture>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				<animation effect="zoom" end="125,100" center="960,500" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(smallermainmenu)">Conditional</animation>
 			</control>
@@ -233,6 +232,16 @@
 			<!-- Home Menu -->
 			<include condition="Skin.HasSetting(mainmenufixedlist)">MainMenuFixedList</include>
 			<include condition="!Skin.HasSetting(mainmenufixedlist)">MainMenuWrapList</include>
+			<control type="image">
+				<posx>1650</posx>
+				<posy>516</posy>
+				<width>270</width>
+				<height>98</height>
+				<texture>menu-bar-highlight.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+				<animation effect="zoom" end="125,100" center="960,500" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(smallermainmenu)">Conditional</animation>
+				<animation effect="fade" start="100" end="30" time="320" reversible="true" condition="!Control.HasFocus(9000)">Conditional</animation>
+			</control>
 			<control type="group">
 				<animation effect="zoom" end="125,100" center="960,500" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(smallermainmenu)">Conditional</animation>
 			</control>

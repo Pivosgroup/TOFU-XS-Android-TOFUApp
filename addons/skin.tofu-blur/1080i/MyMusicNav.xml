@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<views>50,53,57,500,503,509,506,512,514,518</views>
-	<include condition="!Skin.HasSetting(setup-0.1.6)">AutoConfig</include>
+	<include condition="!Skin.HasSetting(setup-0.2.2)">AutoConfig</include>
 	<onload condition="!Skin.HasSetting(ExplainMediaMenu)">ActivateWindow(1123)</onload>
 	<controls>
 		<control type="label" id="4421">
@@ -17,7 +17,7 @@
 		<control type="group">
 			<control type="group">
 				<control type="multiimage">
-					<imagepath background="true" fallback="special://skin/backgrounds/music/">$VAR[MusicFanartVar]</imagepath>
+					<imagepath background="true" fallback="special://skin/background/">$VAR[MusicFanartVar]</imagepath>
 					<fadetime>FanartCrossfadeTime</fadetime>
 					<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
 					<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
@@ -337,29 +337,17 @@
 						</control>
 					</control>
 				</control>
-				<control type="image">
-					<texture>diffuseoverlay.png</texture>
-					<include>FullscreenDimensions</include>
-					<animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
-					<animation effect="fade" time="200">WindowOpen</animation>
-					<animation effect="fade" time="200">WindowClose</animation>
-					<animation effect="fade" end="100" time="320" delay="80">Visible</animation>
-					<animation effect="fade" start="100" end="0" time="320">Hidden</animation>
-					<visible>!Control.IsVisible(514) + !Control.IsVisible(516) + !Control.IsVisible(506)</visible>
-					<visible>!Control.IsVisible(5999)</visible>
-					<visible>[Skin.HasSetting(darkinfopane) + [Control.IsVisible(50) | [Control.IsVisible(500) + !Skin.HasSetting(wallfullscreen)] | Control.IsVisible(7679) | Control.IsVisible(512)]]</visible>
-				</control>
 				<control type="image" id="5999">
-					<texture>diffuseoverlay.png</texture>
+					<texture>diffuse.jpg</texture>
 					<include>FullscreenDimensions</include>
-					<animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
-					<animation effect="fade" time="200">WindowOpen</animation>
-					<animation effect="fade" time="200">WindowClose</animation>
-					<animation effect="fade" end="100" time="440" delay="160">Visible</animation>
-					<animation effect="fade" start="100" end="0" time="80">Hidden</animation>
+					<animation effect="fade" end="80" time="200">WindowOpen</animation>
+					<animation effect="fade" start="80" end="0" time="200">WindowClose</animation>
+					<animation effect="fade" end="80" time="440" delay="160">Visible</animation>
+					<animation effect="fade" start="80" end="0" time="80">Hidden</animation>
 					<visible>[Control.IsVisible(512) + Skin.HasSetting(addonwallaltbackground)] | [Control.IsVisible(500) + Skin.HasSetting(wallfullscreen)]</visible>
 				</control>
 				<include>VideoBackground</include>
+				<include>BackgroundDiffuse</include>
 			</control>
 			<control type="button" id="199">
 				<include>HiddenObject</include>

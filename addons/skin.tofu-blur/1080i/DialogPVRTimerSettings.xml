@@ -30,19 +30,11 @@
 				<texture>common/black.png</texture>
 				<animation effect="fade" end="20" condition="true">Conditional</animation>
 			</control>
-			<control type="image">
-				<posx>1034</posx>
-				<posy>34</posy>
-				<width>4</width>
-				<height>406</height>
-				<texture>divider-vertical.png</texture>
-				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-			</control>
 			<control type="grouplist" id="5">
-				<posx>20</posx>
+				<posx>22</posx>
 				<posy>52</posy>
-				<width>1012</width>
-				<height>369</height>
+				<width>1011</width>
+				<height>372</height>
 				<onup>5</onup>
 				<ondown>5</ondown>
 				<onleft>29</onleft>
@@ -52,7 +44,7 @@
 				<width>705</width>
 				<height>62</height>
 				<textoffsetx>30</textoffsetx>
-				<texturefocus border="3">list-focus.png</texturefocus>
+				<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 				<texturenofocus border="3">list-nofocus.png</texturenofocus>
 				<font>Font_ContextMenuButton</font>
 				<textcolor>$VAR[FontColorVar]</textcolor>
@@ -61,42 +53,40 @@
 				<width>705</width>
 				<height>62</height>
 				<textoffsetx>30</textoffsetx>
-				<texturefocus border="3">list-focus.png</texturefocus>
+				<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 				<texturenofocus border="3">list-nofocus.png</texturenofocus>
 				<font>Font_ContextMenuButton</font>
 				<textcolor>$VAR[FontColorVar]</textcolor>
-				<radioposx>892</radioposx>
+				<radioposx>902</radioposx>
 			</control>
 			<control type="spincontrolex" id="9">
 				<width>705</width>
 				<height>62</height>
 				<textoffsetx>30</textoffsetx>
-				<texturefocus border="3">list-focus.png</texturefocus>
+				<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 				<texturenofocus border="3">list-nofocus.png</texturenofocus>
 				<font>Font_ContextMenuButton</font>
 				<textcolor>$VAR[FontColorVar]</textcolor>
-				<spinposx>-4</spinposx>
 			</control>
 			<control type="sliderex" id="10">
 				<width>705</width>
 				<height>62</height>
-				<texturefocus border="3">list-focus.png</texturefocus>
+				<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 				<texturenofocus border="3">list-nofocus.png</texturenofocus>
 				<font>Font_ContextMenuButton</font>
 				<textureup>settings/spin-up.png</textureup>
 				<texturedown>settings/spin-down.png</texturedown>
 				<textureupfocus>settings/spin-up-focus.png</textureupfocus>
 				<texturedownfocus>settings/spin-down-focus.png</texturedownfocus>
-				<spinposx>-4</spinposx>
 			</control>
 			<control type="group" id="9001">
 				<control type="button" id="28">
 					<posx>1034</posx>
 					<posy>360</posy>
-					<width>234</width>
+					<width>230</width>
 					<height>62</height>
 					<textoffsetx>30</textoffsetx>
-					<texturefocus border="3">button-focus2.png</texturefocus>
+					<texturefocus border="3">button-focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>186</label>
 					<font>Font_SetContentMenu</font>
@@ -109,10 +99,10 @@
 				<control type="button" id="29">
 					<posx>1034</posx>
 					<posy>298</posy>
-					<width>234</width>
+					<width>230</width>
 					<height>62</height>
 					<textoffsetx>30</textoffsetx>
-					<texturefocus border="3">button-focus2.png</texturefocus>
+					<texturefocus border="3">button-focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>222</label>
 					<font>Font_SetContentMenu</font>

@@ -11,6 +11,14 @@
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="320" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
 			<control type="image">
+				<posx>24</posx>
+				<posy>15</posy>
+				<width>1074</width>
+				<height>790</height>
+				<texture>common/white.png</texture>
+				<animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
 				<posx>18</posx>
 				<posy>10</posy>
 				<width>1086</width>
@@ -59,7 +67,7 @@
 				<ondown>5</ondown>
 			</control>
 			<control type="scrollbar" id="60">
-				<posx>1080</posx>
+				<posx>1078</posx>
 				<posy>105</posy>
 				<width>46</width>
 				<height>540</height>
@@ -72,14 +80,16 @@
 		</control>
 		<control type="sliderex" id="10">
 			<width>1272</width>
+			<textcolor>grey</textcolor>
 			<textoffsetx>45</textoffsetx>
 			<font>Font_Reg32</font>
 		</control>
 		<control type="button" id="7">
 			<width>1172</width>
 			<height>60</height>
+			<textcolor>grey</textcolor>
 			<textoffsetx>45</textoffsetx>
-			<texturefocus border="3">list-focus.png</texturefocus>
+			<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 			<texturenofocus border="3">list-nofocus.png</texturenofocus>
 			<font>Font_Reg32</font>
 			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
@@ -87,20 +97,21 @@
 		<control type="radiobutton" id="8">
 			<width>1172</width>
 			<height>60</height>
+			<textcolor>grey</textcolor>
 			<textoffsetx>45</textoffsetx>
-			<texturefocus border="3">list-focus.png</texturefocus>
+			<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 			<texturenofocus border="3">list-nofocus.png</texturenofocus>
 			<font>Font_Reg32</font>
 			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-			<radioposx>934</radioposx>
+			<radioposx>992</radioposx>
 		</control>
 		<control type="spincontrolex" id="9">
 			<height>60</height>
+			<textcolor>grey</textcolor>
 			<textoffsetx>45</textoffsetx>
-			<texturefocus border="3">list-focus.png</texturefocus>
+			<texturefocus border="3,0,0,20">list-focus.png</texturefocus>
 			<texturenofocus border="3">list-nofocus.png</texturenofocus>
 			<font>Font_Reg32</font>
-			<spinposx>13</spinposx>
 		</control>
 	</controls>
 </window>

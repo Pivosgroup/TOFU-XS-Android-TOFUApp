@@ -18,7 +18,6 @@
 	<onload condition="SubString(Skin.String(ItemToEdit.SubMenu),tv)">SetProperty(SubmenuType,tv,1124)</onload>
 	<onload condition="SubString(Skin.String(ItemToEdit.SubMenu),music)">SetProperty(SubmenuType,music,1124)</onload>
 	<onload condition="SubString(Skin.String(ItemToEdit.SubMenu),settings)">SetProperty(SubmenuType,settings,1124)</onload>
-	<onload condition="SubString(Skin.String(ItemToEdit.SubMenu),shutdown)">SetProperty(SubmenuType,shutdown,1124)</onload>
 	<onload condition="SubString(Skin.String(ItemToEdit.SubMenu),pvr)">SetProperty(SubmenuType,pvr,1124)</onload>
 	<onload condition="SubString(Skin.String(ItemToEdit.SubMenu),videos)">SetProperty(SubmenuType,videos,1124)</onload>
 	<onload condition="SubString(Skin.String(ItemToEdit.SubMenu),custom1)">SetProperty(custom1,custom1,1124)</onload>
@@ -56,6 +55,7 @@
 				<height>40</height>
 				<align>center</align>
 				<label>31716</label>
+				<textcolor>$VAR[FontColorVar]</textcolor>
 				<font>Font_Reg31_Caps</font>
 			</control>
 			<control type="label">
@@ -65,12 +65,13 @@
 				<height>40</height>
 				<align>center</align>
 				<label>31717</label>
+				<textcolor>$VAR[FontColorVar]</textcolor>
 				<font>Font_Reg31_Caps</font>
 			</control>
 			<control type="panel" id="4">
-				<posx>252</posx>
+				<posx>254</posx>
 				<posy>240</posy>
-				<width>448</width>
+				<width>446</width>
 				<height>540</height>
 				<aligny>center</aligny>
 				<onback>Skin.SetString(ItemToEdit.SubMenu,$INFO[Control.Getlabel(12111)])</onback>
@@ -78,32 +79,33 @@
 				<orientation>vertical</orientation>
 				<onright>5</onright>
 				<onleft>5</onleft>
-				<itemlayout height="60" width="448">
+				<itemlayout height="60" width="446">
 					<control type="image">
-						<width>448</width>
+						<width>446</width>
 						<height>60</height>
-						<texture border="3">button-nofocus.png</texture>
+						<texture border="3">list-nofocus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
 					<control type="label">
-						<width>448</width>
+						<width>446</width>
 						<height>60</height>
 						<textoffsetx>10</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
 						<font>Font_Reg30_2</font>
+						<textcolor>grey</textcolor>
 					</control>
 				</itemlayout>
-				<focusedlayout height="60" width="448">
+				<focusedlayout height="60" width="446">
 					<control type="group">
 						<visible>Control.HasFocus(4)</visible>
 						<control type="image">
-							<width>448</width>
+							<width>446</width>
 							<height>60</height>
-							<texture border="3">button-focus.png</texture>
+							<texture border="3,0,0,20">list-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						</control>
 						<control type="label">
-							<width>448</width>
+							<width>446</width>
 							<height>60</height>
 							<textoffsetx>10</textoffsetx>
 							<label>$INFO[ListItem.Label]</label>
@@ -114,13 +116,13 @@
 					<control type="group">
 						<visible>!Control.HasFocus(4)</visible>
 						<control type="image">
-							<width>448</width>
+							<width>446</width>
 							<height>60</height>
-							<texture border="3">button-nofocus.png</texture>
+							<texture border="3">list-nofocus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						</control>
 						<control type="label">
-							<width>448</width>
+							<width>446</width>
 							<textoffsetx>10</textoffsetx>
 							<label>$INFO[ListItem.Label]</label>
 							<font>Font_Reg30_2</font>
@@ -128,7 +130,7 @@
 						</control>
 					</control>
 					<control type="label">
-						<width>448</width>
+						<width>446</width>
 						<textoffsetx>10</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
 						<font>Font_Reg30_2</font>
@@ -168,12 +170,6 @@
 						<onclick>Dialog.Close(1150)</onclick>
 					</item>
 					<item>
-						<label>31724</label>
-						<onclick>SetProperty(SubmenuType,shutdown,1124)</onclick>
-						<onclick>Skin.SetString(ItemToEdit.SubMenu,$INFO[Control.Getlabel(12111)])</onclick>
-						<onclick>Dialog.Close(1150)</onclick>
-					</item>
-					<item>
 						<label>31725</label>
 						<onclick>SetProperty(SubmenuType,pvr,1124)</onclick>
 						<onclick>Skin.SetString(ItemToEdit.SubMenu,$INFO[Control.Getlabel(12111)])</onclick>
@@ -190,7 +186,7 @@
 			<control type="grouplist" id="5">
 				<posx>700</posx>
 				<posy>240</posy>
-				<width>528</width>
+				<width>526</width>
 				<height>720</height>
 				<aligny>center</aligny>
 				<scrolltime>0</scrolltime>
@@ -202,6 +198,7 @@
 				<include>Animation_VisibleChange200</include>
 				<control type="radiobutton" id="7">
 					<label>$LOCALIZE[31718] 1 (1-5)</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_SubMenuSettingsButton</include>
 					<onclick condition="IsEmpty(Window(1124).Property(custom1))">SetProperty(custom1,custom1,1124)</onclick>
 					<onclick condition="!IsEmpty(Window(1124).Property(custom1))">ClearProperty(custom1,1124)</onclick>
@@ -209,6 +206,7 @@
 				</control>
 				<control type="radiobutton" id="8">
 					<label>$LOCALIZE[31718] 2 (6-10)</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_SubMenuSettingsButton</include>
 					<onclick condition="IsEmpty(Window(1124).Property(custom2))">SetProperty(custom2,custom2,1124)</onclick>
 					<onclick condition="!IsEmpty(Window(1124).Property(custom2))">ClearProperty(custom2,1124)</onclick>
@@ -216,6 +214,7 @@
 				</control>
 				<control type="radiobutton" id="9">
 					<label>$LOCALIZE[31718] 3 (11-15)</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_SubMenuSettingsButton</include>
 					<onclick condition="IsEmpty(Window(1124).Property(custom3))">SetProperty(custom3,custom3,1124)</onclick>
 					<onclick condition="!IsEmpty(Window(1124).Property(custom3))">ClearProperty(custom3,1124)</onclick>
@@ -223,6 +222,7 @@
 				</control>
 				<control type="radiobutton" id="10">
 					<label>$LOCALIZE[31718] 4 (16-20)</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_SubMenuSettingsButton</include>
 					<onclick condition="IsEmpty(Window(1124).Property(custom4))">SetProperty(custom4,custom4,1124)</onclick>
 					<onclick condition="!IsEmpty(Window(1124).Property(custom4))">ClearProperty(custom4,1124)</onclick>
@@ -230,6 +230,7 @@
 				</control>
 				<control type="radiobutton" id="11">
 					<label>$LOCALIZE[31718] 5 (21-25)</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_SubMenuSettingsButton</include>
 					<onclick condition="IsEmpty(Window(1124).Property(custom5))">SetProperty(custom5,custom5,1124)</onclick>
 					<onclick condition="!IsEmpty(Window(1124).Property(custom5))">ClearProperty(custom5,1124)</onclick>
@@ -237,6 +238,7 @@
 				</control>
 				<control type="radiobutton" id="12">
 					<label>$LOCALIZE[31718] 6 (26-30)</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_SubMenuSettingsButton</include>
 					<onclick condition="IsEmpty(Window(1124).Property(custom6))">SetProperty(custom6,custom6,1124)</onclick>
 					<onclick condition="!IsEmpty(Window(1124).Property(custom6))">ClearProperty(custom6,1124)</onclick>
@@ -244,6 +246,7 @@
 				</control>
 				<control type="radiobutton" id="13">
 					<label>$LOCALIZE[31718] 7 (31-35)</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_SubMenuSettingsButton</include>
 					<onclick condition="IsEmpty(Window(1124).Property(custom7))">SetProperty(custom7,custom7,1124)</onclick>
 					<onclick condition="!IsEmpty(Window(1124).Property(custom7))">ClearProperty(custom7,1124)</onclick>
@@ -251,6 +254,7 @@
 				</control>
 				<control type="radiobutton" id="14">
 					<label>$LOCALIZE[31718] 8 (36-40)</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_SubMenuSettingsButton</include>
 					<onclick condition="IsEmpty(Window(1124).Property(custom8))">SetProperty(custom8,custom8,1124)</onclick>
 					<onclick condition="!IsEmpty(Window(1124).Property(custom8))">ClearProperty(custom8,1124)</onclick>
@@ -258,6 +262,7 @@
 				</control>
 				<control type="radiobutton" id="15">
 					<label>$LOCALIZE[31718] 9 (41-45)</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_SubMenuSettingsButton</include>
 					<onclick condition="IsEmpty(Window(1124).Property(custom9))">SetProperty(custom9,custom9,1124)</onclick>
 					<onclick condition="!IsEmpty(Window(1124).Property(custom9))">ClearProperty(custom9,1124)</onclick>
@@ -265,6 +270,7 @@
 				</control>
 				<control type="radiobutton" id="16">
 					<label>$LOCALIZE[31718] 10 (46-50)</label>
+					<textcolor>grey</textcolor>
 					<include>Objects_SubMenuSettingsButton</include>
 					<onclick condition="IsEmpty(Window(1124).Property(custom0))">SetProperty(custom0,custom0,1124)</onclick>
 					<onclick condition="!IsEmpty(Window(1124).Property(custom0))">ClearProperty(custom0,1124)</onclick>

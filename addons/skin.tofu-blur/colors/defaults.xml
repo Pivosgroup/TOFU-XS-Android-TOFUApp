@@ -3,11 +3,15 @@
 	<color name="fade">A0FFFFFF</color>
 	<color name="colorize">FFFFFFFF</color>
 	<color name="focused">FFFFFFFF</color>
-	<color name="disabled">33FFFFFF</color>
-	<color name="alternate">FFA5A5A5</color>
-	<color name="selected">FFA5A5A5</color>
-	<color name="mainmenu">FF454545</color>
+	<color name="disabled">FFA5A5A5</color>
+	<color name="alternate">FF583D69</color>
+	<color name="selected">FF474747</color>
+	<color name="mainmenu">FF919191</color>
 	<color name="black">FF000000</color>
 	<color name="red">FFCE4421</color>
-	<color name="textshadow">99454545</color>
+	<color name="textshadow">60A3A3A3</color>
+	<color name="icon">FFB3A3AA</color>
+	<color name="purple">FF6F5F7B</color>
+	<color name="lightpurple">FFD1CDD3</color>
+	<color name="grey">FF706E71</color>
 </colors>

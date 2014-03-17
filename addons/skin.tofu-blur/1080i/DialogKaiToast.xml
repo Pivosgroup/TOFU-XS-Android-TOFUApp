@@ -10,6 +10,15 @@
 	<controls>
 		<control type="group">
 			<include>Dialogs_Group</include>
+			<control type="image">
+				<posx>12</posx>
+				<posy>11</posy>
+				<width>744</width>
+				<height>117</height>
+				<texture>common/white.png</texture>
+				<animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
+				<visible>Window.IsVisible(fullscreenvideo)</visible>
+			</control>
 			<include>Dialogs_Tablet</include>
 			<animation effect="slide" end="0,-870" time="0" condition="VideoPlayer.IsFullscreen | [[Window.IsActive(home) | Window.IsActive(1124)] + Skin.HasSetting(lowermainmenu)]">Conditional</animation>
 			<animation effect="slide" end="0,470" time="0" condition="[Window.IsActive(home) + Skin.HasSetting(lowermainmenu) + Window.IsActive(1128)]">Conditional</animation>
@@ -20,6 +29,7 @@
 				<height>110</height>
 				<aspectratio aligny="top">keep</aspectratio>
 				<texture>dialogs/exclamation.png</texture>
+				<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 				<animation effect="fade" start="50" time="800" condition="true" pulse="true">Conditional</animation>
 			</control>
 			<control type="label" id="401">
@@ -27,6 +37,7 @@
 				<posy>33</posy>
 				<width>564</width>
 				<height>32</height>
+				<textcolor>$VAR[FontColorVar]</textcolor>
 				<align>center</align>
 				<font>Font_Bold30</font>
 				<scroll>true</scroll>
@@ -36,6 +47,7 @@
 				<posy>69</posy>
 				<width>564</width>
 				<height>32</height>
+				<textcolor>grey</textcolor>
 				<align>center</align>
 				<scroll>true</scroll>
 			</control>

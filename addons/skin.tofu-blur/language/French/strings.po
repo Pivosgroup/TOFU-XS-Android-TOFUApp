@@ -9,10 +9,6 @@ msgctxt "#31003"
 msgid "N/A"
 msgstr "N/D"
 
-msgctxt "#31004"
-msgid "Month"
-msgstr "Mois"
-
 msgctxt "#31005"
 msgid "Premiered"
 msgstr "Première"
@@ -36,10 +32,6 @@ msgstr "Programmation"
 msgctxt "#31010"
 msgid "General main menu settings"
 msgstr "Paramètres généraux menu principal"
-
-msgctxt "#31011"
-msgid "RottenTomatoes Trailers"
-msgstr "Bandes Annonces Rotten Tomatoes"
 
 msgctxt "#31012"
 msgid "Add group"
@@ -68,18 +60,6 @@ msgstr "Live TV"
 msgctxt "#31018"
 msgid "Big covers"
 msgstr "Grands boîtiers"
-
-msgctxt "#31019"
-msgid "Channel4 News"
-msgstr "Nouvelles Channel4"
-
-msgctxt "#31020"
-msgid "Extras"
-msgstr "Extras"
-
-msgctxt "#31021"
-msgid "Search TOFU for"
-msgstr "Recherche TOFU pour"
 
 msgctxt "#31022"
 msgid "Music - Files"
@@ -113,17 +93,9 @@ msgctxt "#31029"
 msgid "Showcase2"
 msgstr "Vitrine2"
 
-msgctxt "#31030"
-msgid "Change info labels"
-msgstr "Modifier les étiquettes d'info"
-
 msgctxt "#31032"
 msgid "Nothing"
 msgstr "Rien"
-
-msgctxt "#31033"
-msgid "Play item on startup"
-msgstr "Jouer élément au démarrage"
 
 msgctxt "#31034"
 msgid "Move tooltip to top bar"
@@ -132,18 +104,6 @@ msgstr "Déplacer tooltip vers la barre supérieure"
 msgctxt "#31035"
 msgid "Conditional weather"
 msgstr "Condition météo"
-
-msgctxt "#31036"
-msgid "Breadcrumbs classic"
-msgstr "Fil d'ariane classique"
-
-msgctxt "#31037"
-msgid "Default breadcrumbs"
-msgstr "Fil d'ariane par défaut"
-
-msgctxt "#31038"
-msgid "Classic top panels"
-msgstr "Panneau supérieur classique"
 
 msgctxt "#31039"
 msgid "CD-Wall"
@@ -177,14 +137,6 @@ msgctxt "#31048"
 msgid "Visualization presets"
 msgstr "Préréglages de visualisation"
 
-msgctxt "#31053"
-msgid "Fullscreen"
-msgstr "Plein écran"
-
-msgctxt "#31054"
-msgid "Shadow"
-msgstr "Ombre"
-
 msgctxt "#31055"
 msgid "Open playlist"
 msgstr "Ouvrir la playliste"
@@ -217,10 +169,6 @@ msgctxt "#31063"
 msgid "Choose style"
 msgstr "Choisir un style"
 
-msgctxt "#31064"
-msgid "Press SELECT for alternative layout"
-msgstr "Appuyez sur SELECT pour une disposition alternative"
-
 msgctxt "#31065"
 msgid "Info"
 msgstr "Info"
@@ -249,22 +197,6 @@ msgctxt "#31072"
 msgid "System info"
 msgstr "Info système"
 
-msgctxt "#31073"
-msgid "Actor information"
-msgstr "Informations acteur"
-
-msgctxt "#31074"
-msgid "Filmography"
-msgstr "Filmographie"
-
-msgctxt "#31075"
-msgid "Press SELECT to switch between now/next EPG"
-msgstr "Appuyez sur SELECT pour basculer entre maintenant/suivant EPG"
-
-msgctxt "#31080"
-msgid "Director information"
-msgstr "Informations réalisateur"
-
 msgctxt "#31081"
 msgid "Latest MusicVids"
 msgstr "Derniers vidéos clips"
@@ -281,10 +213,6 @@ msgctxt "#31084"
 msgid "Panels"
 msgstr "Panneaux"
 
-msgctxt "#31085"
-msgid "Light"
-msgstr "Léger"
-
 msgctxt "#31086"
 msgid "ClearART"
 msgstr "ClearART"
@@ -293,17 +221,9 @@ msgctxt "#31087"
 msgid "Randomize All"
 msgstr "Aléatoire"
 
-msgctxt "#31088"
-msgid "Use color for all areas"
-msgstr "Couleur pour toutes les zones"
-
 msgctxt "#31089"
 msgid "Both"
 msgstr "Les deux"
-
-msgctxt "#31090"
-msgid "Adjust Transparency"
-msgstr "Ajustez la transparence"
 
 msgctxt "#31091"
 msgid "Random MusicVids"
@@ -313,10 +233,6 @@ msgctxt "#31092"
 msgid "Artist fanart (Extrafanart, fanart.jpg, default fanart)"
 msgstr "Fanart d'artiste (Extrafanart, fanart.jpg, fanart par défaut)"
 
-msgctxt "#31093"
-msgid "Actors born today"
-msgstr "Acteurs nés aujourd'hui"
-
 msgctxt "#31094"
 msgid "Widget fanart"
 msgstr "Widget fanart"
@@ -325,10 +241,6 @@ msgctxt "#31095"
 msgid "Rating"
 msgstr "Note"
 
-msgctxt "#31096"
-msgid "Search on YouTube"
-msgstr "Rechercher sur YouTube"
-
 msgctxt "#31097"
 msgid "Classic OSD style"
 msgstr "OSD modèle classique"
@@ -336,10 +248,6 @@ msgstr "OSD modèle classique"
 msgctxt "#31098"
 msgid "Background path"
 msgstr "Chemin dde l'arrière-plan"
-
-msgctxt "#31099"
-msgid "Top bar style"
-msgstr "Style de la barre supérieure"
 
 msgctxt "#31102"
 msgid "Background"
@@ -381,10 +289,6 @@ msgctxt "#31111"
 msgid "Recording"
 msgstr "Enregistrement"
 
-msgctxt "#31112"
-msgid "Coloured"
-msgstr "Coloré"
-
 msgctxt "#31113"
 msgid "Single Image"
 msgstr "Une image"
@@ -401,53 +305,13 @@ msgctxt "#31116"
 msgid "Show"
 msgstr "Afficher"
 
-msgctxt "#31117"
-msgid "CNN International"
-msgstr "CNN International"
-
-msgctxt "#31118"
-msgid "Radio 105"
-msgstr "Radio 105"
-
-msgctxt "#31119"
-msgid "Radio Montecarlo"
-msgstr "Radio Montecarlo"
-
-msgctxt "#31120"
-msgid "Tom & Jerry"
-msgstr "Tom & Jerry"
-
-msgctxt "#31121"
-msgid "Virgin Music"
-msgstr "Virgin Music"
-
 msgctxt "#31127"
 msgid "Lyrics add-on"
 msgstr "Extensions paroles"
 
-msgctxt "#31128"
-msgid "Lyrics"
-msgstr "Paroles"
-
-msgctxt "#31129"
-msgid "Video Stream"
-msgstr "Flux vidéo"
-
-msgctxt "#31130"
-msgid "Subtitle add-on"
-msgstr "Extensions sous-titres"
-
 msgctxt "#31143"
 msgid "Animated fanart in music visualization"
 msgstr "Fanart animés en visualisation musicale"
-
-msgctxt "#31148"
-msgid "Show timepanel"
-msgstr "Afficher l'horloge"
-
-msgctxt "#31149"
-msgid "This will shutdown TOFU! [CR]Are you sure?"
-msgstr "Cela va arrêter TOFU! [CR]Êtes-vous sûr ?"
 
 msgctxt "#31150"
 msgid "Landscape"
@@ -485,10 +349,6 @@ msgctxt "#31166"
 msgid "Infopanel"
 msgstr "Panneau d'info"
 
-msgctxt "#31167"
-msgid "Playlists for Widget 2"
-msgstr "Playliste pour le widget 2"
-
 msgctxt "#31168"
 msgid "No CoverFlow"
 msgstr "Sans CoverFlow"
@@ -525,14 +385,6 @@ msgctxt "#31176"
 msgid "General options"
 msgstr "Options générales"
 
-msgctxt "#31177"
-msgid "Random color mode"
-msgstr "Mode couleur aléatoire"
-
-msgctxt "#31178"
-msgid "Choose main color"
-msgstr "Choisir la couleur principale"
-
 msgctxt "#31179"
 msgid "Disable media menu and hide options in video info"
 msgstr "Désactiver le menu média et masquer les options d'info vidéo"
@@ -540,10 +392,6 @@ msgstr "Désactiver le menu média et masquer les options d'info vidéo"
 msgctxt "#31180"
 msgid "Hide options in media menu"
 msgstr "Masquer les options dans le menu médias"
-
-msgctxt "#31181"
-msgid "Activate 'Glow Mode'"
-msgstr "Activer le 'Mode Néon'"
 
 msgctxt "#31182"
 msgid "Colored"
@@ -581,10 +429,6 @@ msgctxt "#31191"
 msgid "Use as icon"
 msgstr "Utiliser comme icône"
 
-msgctxt "#31192"
-msgid "Choose font color"
-msgstr "Choisir la couleur du texte"
-
 msgctxt "#31194"
 msgid "Delayed"
 msgstr "Retardé"
@@ -601,45 +445,9 @@ msgctxt "#31198"
 msgid "Extrathumbs"
 msgstr "Extra vignettes"
 
-msgctxt "#31199"
-msgid "News"
-msgstr "Nouveautés"
-
-msgctxt "#31200"
-msgid "TOFU Cinema"
-msgstr "Cinéma TOFU"
-
-msgctxt "#31201"
-msgid "TOFU Trailer"
-msgstr "Bande Annonce TOFU"
-
-msgctxt "#31202"
-msgid "DailyMotion"
-msgstr "DailyMotion"
-
-msgctxt "#31203"
-msgid "YouTube User Uploads"
-msgstr "Youtube : envois utilisateur"
-
-msgctxt "#31204"
-msgid "YouTube User Favorites"
-msgstr "Youtube : favoris utilisateur"
-
-msgctxt "#31205"
-msgid "Youtube Most Viewed"
-msgstr "Youtube : les + vues"
-
-msgctxt "#31206"
-msgid "Youtube Most Popular"
-msgstr "Youtube : les + populaires"
-
 msgctxt "#31220"
 msgid "Random episodes"
 msgstr "Suggestions d'épisodes"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "Défaut"
 
 msgctxt "#31222"
 msgid "Random movies"
@@ -664,10 +472,6 @@ msgstr "Vertical"
 msgctxt "#31229"
 msgid "Horizontal"
 msgstr "Horizontal"
-
-msgctxt "#31230"
-msgid "Viewtypes"
-msgstr "Vues types"
 
 msgctxt "#31231"
 msgid "Navigation"
@@ -729,18 +533,6 @@ msgctxt "#31255"
 msgid "Blu-ray Disc"
 msgstr "Disque Blu-Ray"
 
-msgctxt "#31256"
-msgid "Include already watched Items?"
-msgstr "Inclure les éléments déjà vus ?"
-
-msgctxt "#31265"
-msgid "Smaller pop-up dialogs"
-msgstr "Petite boîte de dialogues"
-
-msgctxt "#31269"
-msgid "Enable background effect [I](Can increase CPU usage!)   [/I]"
-msgstr "Activer l'effet de fumée de l'arrière-plan[I](Peut augmenter la charge CPU!)[/I]"
-
 msgctxt "#31271"
 msgid "Posters"
 msgstr "Affiches"
@@ -752,10 +544,6 @@ msgstr "Disposition"
 msgctxt "#31279"
 msgid "Play trailers in fullscreen"
 msgstr "Jouer les bandes-annonces en plein écran"
-
-msgctxt "#31281"
-msgid "Show video info when player is paused"
-msgstr "Voir les infos vidéo quand le lecteur est en pause"
 
 msgctxt "#31282"
 msgid "Clear Cases"
@@ -792,10 +580,6 @@ msgstr "Conserver"
 msgctxt "#31295"
 msgid "Widget"
 msgstr "Widget"
-
-msgctxt "#31298"
-msgid "Set area color"
-msgstr "Définir la couleur"
 
 msgctxt "#31299"
 msgid "Data provider"
@@ -837,30 +621,6 @@ msgctxt "#31326"
 msgid "Most played albums"
 msgstr "Albums les plus écoutés"
 
-msgctxt "#31327"
-msgid "Most played ROMs"
-msgstr "ROM les plus joués"
-
-msgctxt "#31329"
-msgid "In-progress TV Shows"
-msgstr "Séries en cours"
-
-msgctxt "#31330"
-msgid "Random music"
-msgstr "Musiques aléatoires"
-
-msgctxt "#31331"
-msgid "Latest Music"
-msgstr "Dernières musiques"
-
-msgctxt "#31332"
-msgid "Play Video"
-msgstr "Lire la vidéo"
-
-msgctxt "#31333"
-msgid "Recent"
-msgstr "Récents"
-
 msgctxt "#31334"
 msgid "Latest"
 msgstr "Dernier"
@@ -897,10 +657,6 @@ msgctxt "#31356"
 msgid "Download Subtitles"
 msgstr "Télécharger des sous-titres"
 
-msgctxt "#31357"
-msgid "Mixed info"
-msgstr "Infos variées"
-
 msgctxt "#31358"
 msgid "System info"
 msgstr "Informations système"
@@ -908,10 +664,6 @@ msgstr "Informations système"
 msgctxt "#31359"
 msgid "Latest albums"
 msgstr "Derniers albums"
-
-msgctxt "#31360"
-msgid "Upcoming"
-msgstr "À venir"
 
 msgctxt "#31362"
 msgid "Rounded covers"
@@ -957,10 +709,6 @@ msgctxt "#31383"
 msgid "Backdrop"
 msgstr "Arrière-plan"
 
-msgctxt "#31387"
-msgid "Darken"
-msgstr "Assombrir"
-
 msgctxt "#31388"
 msgid "Floor label"
 msgstr "Étiquette du sol"
@@ -1004,10 +752,6 @@ msgstr "[B]CONFIGURATION DES PARAMÈTRES RÉSEAU[/B][CR][CR]Permettre le contrô
 msgctxt "#31406"
 msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]CONFIGURATION DES PARAMÈTRES SYSTÈME[/B][CR][CR]Configurer les sorties vidéo et audio · Configurer les périphériques de contrôle[CR]Définir les options de gestion d'énergie · Activer le débogage · Configurer la sécurité"
-
-msgctxt "#31407"
-msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the TOFU+ skin · Customize the home menu · Adjust the skin colors[CR]Change skin backgrounds"
-msgstr "[B]CONFIGURATION DES PARAMÈTRES DU THÈME[/B][CR][CR]Configuration du thème TOFU+ · Personnaliser le menu · Modifier les couleurs du thème[CR]Changer les arrière-plans du thème"
 
 msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from pivos.com[CR]Modify Add-on settings"
@@ -1101,10 +845,6 @@ msgctxt "#31483"
 msgid "Show icon label"
 msgstr "Montrer l'étiquette icône"
 
-msgctxt "#31484"
-msgid "Play trailer"
-msgstr "Jouer la bande-annonce"
-
 msgctxt "#31500"
 msgid "Pictures"
 msgstr "Images"
@@ -1125,10 +865,6 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "VIDÉOS"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "Programmes"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "SYSTÈME"
@@ -1136,10 +872,6 @@ msgstr "SYSTÈME"
 msgctxt "#31507"
 msgid "Add-Ons"
 msgstr "Extensions"
-
-msgctxt "#31508"
-msgid "Shutdown"
-msgstr "ARRÊTER"
 
 msgctxt "#31509"
 msgid "Favorites"
@@ -1149,10 +881,6 @@ msgctxt "#31510"
 msgid "Weather"
 msgstr "MÉTÉO"
 
-msgctxt "#31511"
-msgid "Play Disc"
-msgstr "Lire le Disque"
-
 msgctxt "#31600"
 msgid "Main menu item customizer (backgrounds,widgets)"
 msgstr "Personnaliser l'écran principal (arrière-plans, widgets)"
@@ -1160,14 +888,6 @@ msgstr "Personnaliser l'écran principal (arrière-plans, widgets)"
 msgctxt "#31601"
 msgid "CDWall"
 msgstr "Mur de CD"
-
-msgctxt "#31602"
-msgid "Choose main menu style"
-msgstr "Choisir le style du menu principal"
-
-msgctxt "#31610"
-msgid "Set area color for Home window"
-msgstr "Définir la couleur de la fenêtre d'accueil"
 
 msgctxt "#31611"
 msgid "Fullscreen video"
@@ -1181,10 +901,6 @@ msgctxt "#31613"
 msgid "Enable custom startup focus position of main menu"
 msgstr "Activer le choix du menu qui sera sélectionné au démarrage"
 
-msgctxt "#31614"
-msgid "CDArt Manager"
-msgstr "Gestionnaire CDArt"
-
 msgctxt "#31615"
 msgid "Audio visualization"
 msgstr "Visualisation audio"
@@ -1193,25 +909,13 @@ msgctxt "#31616"
 msgid "Low"
 msgstr "Basse"
 
-msgctxt "#31617"
-msgid "High"
-msgstr "Haute"
-
 msgctxt "#31619"
 msgid "Fullscreen video options"
 msgstr "Options video plein écran"
 
-msgctxt "#31620"
-msgid "Add to icon panel"
-msgstr "Ajouter au panneau d'icônes"
-
 msgctxt "#31621"
 msgid "Use Alaska paused label for video OSD"
 msgstr "Utiliser l'OSD Alaska quand la vidéo est en pause"
-
-msgctxt "#31622"
-msgid "Label"
-msgstr "Label(s)"
 
 msgctxt "#31623"
 msgid "Slot"
@@ -1224,10 +928,6 @@ msgstr "Masquer les commandes du lecteur OSD"
 msgctxt "#31628"
 msgid "Current position"
 msgstr "Position courante"
-
-msgctxt "#31629"
-msgid "Channels"
-msgstr "Chaînes"
 
 msgctxt "#31630"
 msgid "Custom"
@@ -1249,10 +949,6 @@ msgctxt "#31634"
 msgid "Main Menu"
 msgstr "Menu principal"
 
-msgctxt "#31635"
-msgid "Similar Artists"
-msgstr "Artistes similaires"
-
 msgctxt "#31636"
 msgid "Rotating"
 msgstr "Pivotant"
@@ -1260,10 +956,6 @@ msgstr "Pivotant"
 msgctxt "#31637"
 msgid "Video OSD Settings"
 msgstr "Réglages de l'OSD vidéo"
-
-msgctxt "#31638"
-msgid "Show 'Next Aired' info"
-msgstr "Afficher info 'Prochaine diffusion'"
 
 msgctxt "#31639"
 msgid "Hide video thumb on info screen"
@@ -1288,14 +980,6 @@ msgstr "Gestionnaire de panneau d'icônes"
 msgctxt "#31645"
 msgid "Background Setup"
 msgstr "Paramètres d'arrière-plan"
-
-msgctxt "#31646"
-msgid "Do you want to download all available [CR]artwork without user interaction?"
-msgstr "Voulez-vous télécharger toutes les images [CR]disponibles sans intervention de l'utilisateur ?"
-
-msgctxt "#31673"
-msgid "Most Played ROMs"
-msgstr "ROM les plus joués"
 
 msgctxt "#31674"
 msgid "Switch panel layout"
@@ -1345,10 +1029,6 @@ msgctxt "#31685"
 msgid "Classic"
 msgstr "Classique"
 
-msgctxt "#31686"
-msgid "Nox"
-msgstr "Nox"
-
 msgctxt "#31687"
 msgid "Furniture settings"
 msgstr "Configuration des éléments"
@@ -1357,10 +1037,6 @@ msgctxt "#31688"
 msgid "Disable timepanel"
 msgstr "Désactiver la barre de temps"
 
-msgctxt "#31689"
-msgid "Disable library stats"
-msgstr "Désactiver les statistiques de la bibliothèque"
-
 msgctxt "#31690"
 msgid "Disable rss panel"
 msgstr "Désactiver la barre rss"
@@ -1368,10 +1044,6 @@ msgstr "Désactiver la barre rss"
 msgctxt "#31691"
 msgid "Toggle position"
 msgstr "Basculer la position"
-
-msgctxt "#31692"
-msgid "Shorter time and library stats panel"
-msgstr "Réduction de la barre de temps et des statistiques de la bibliothèque"
 
 msgctxt "#31694"
 msgid "Fixed list"
@@ -1388,10 +1060,6 @@ msgstr "Affichage alternatif"
 msgctxt "#31697"
 msgid "Choose cover type"
 msgstr "Choisir le type de couverture"
-
-msgctxt "#31698"
-msgid "Show list of actors/artists birthdays"
-msgstr "Afficher les anniversaires des acteurs/artistes"
 
 msgctxt "#31699"
 msgid "Smaller main menu"
@@ -1429,10 +1097,6 @@ msgctxt "#31708"
 msgid "Background Customizer"
 msgstr "Personnaliser l'arrière-plan"
 
-msgctxt "#31709"
-msgid "Set Delay"
-msgstr "Définir le délai"
-
 msgctxt "#31710"
 msgid "Show ExtraFanart"
 msgstr "Montrer les ExtraFanart"
@@ -1448,10 +1112,6 @@ msgstr "Clips Vidéo recommandés"
 msgctxt "#31714"
 msgid "Video Library Node"
 msgstr "Nœud de la bibliothèque vidéo"
-
-msgctxt "#31715"
-msgid "Smart Playlist Manager"
-msgstr "Gestionnaire de playlistes fûtées"
 
 msgctxt "#31716"
 msgid "Default Sets"
@@ -1485,10 +1145,6 @@ msgctxt "#31723"
 msgid "Default Settings Items"
 msgstr "Éléments Régalges par défaut"
 
-msgctxt "#31724"
-msgid "Default Shutdown Items"
-msgstr "Éléments Arrêter par défaut"
-
 msgctxt "#31725"
 msgid "Default PVR Items"
 msgstr "Éléments PVR par défaut"
@@ -1497,21 +1153,9 @@ msgctxt "#31726"
 msgid "Default Video Items"
 msgstr "Éléments Vidéos par défaut"
 
-msgctxt "#31727"
-msgid "Remaining Cities"
-msgstr "Villes restantes"
-
-msgctxt "#31728"
-msgid "Show Cities"
-msgstr "Afficher les villes"
-
 msgctxt "#31729"
 msgid "Move NowPlaying widget to bottom"
 msgstr "Déplacer widget Lecture en cours en bas"
-
-msgctxt "#31730"
-msgid "Script features"
-msgstr "Caractéristiques du script"
 
 msgctxt "#31731"
 msgid "Skin Settings"
@@ -1528,34 +1172,6 @@ msgstr "Choisir la chanson"
 msgctxt "#31734"
 msgid "Use QuickList instead of default shutdown menu"
 msgstr "Utilisez Liste rapide au lieu du menu d'arrêt par défaut"
-
-msgctxt "#31735"
-msgid "[B]CREDITS TO:[/B]"
-msgstr "[B]CRÉDITS À :[/B]"
-
-msgctxt "#31736"
-msgid "[B]N.O.W.A.L.L.[/B] for creating Artwork"
-msgstr "[B]N.O.W.A.L.L.[/B] pour la création d'Artwork"
-
-msgctxt "#31737"
-msgid "[B]Fional88[/B] for creating the tutorial videos"
-msgstr "[B]Fional88[/B] pour la création des tutoriels vidéo"
-
-msgctxt "#31738"
-msgid "[B]www.webdesignerdepot.com[/B] for permission to include the iconpack \"Reflection\""
-msgstr "[B]www.webdesignerdepot.com[/B] pour la permission d'utiliser leur pack d'icone \\\"Reflection\\\""
-
-msgctxt "#31739"
-msgid "[B]DJH_ [/B]for creating Aeon, [B]Jezz_X [/B]for creating Confluence, [B]black[/B] for creating Xperience1080"
-msgstr "[B]DJH_[/B] pour la création d'Aeon, [B]Jezz_X[/B] pour la création de Confluence, [B]black[/B] pour la création d'Xperience1080"
-
-msgctxt "#31740"
-msgid "Translators: [B]CutSickAss[/B], [B]epoke[/B], [B]frodo19[/B], [B]mindweaver[/B], [B]Passer[/B], [B]PatOso[/B], [B]peppe_sr[/B], [B]Rififi77[/B][CR][B]Roman_V_M[/B], [B]lijack[/B]"
-msgstr "Traducteurs : [B]CutSickAss[/B], [B]epoke[/B], [B]frodo19[/B], [B]mindweaver[/B], [B]Passer[/B], [B]PatOso[/B], [B]peppe_sr[/B], [B]Rififi77[/B][CR][B]Roman_V_M[/B], [B]lijack[/B]"
-
-msgctxt "#31741"
-msgid "[CR]Also to: [B]Martijn[/B], [B]Deano316[/B], [B]defluo[/B], [B]fmronan[/B], [B]thrak76[/B], [B]xhaggi[/B] and [CR]all other people who contributed to this project"
-msgstr "[CR]Et aussi : [B]Martijn[/B], [B]Deano316[/B], [B]defluo[/B], [B]fmronan[/B], [B]thrak76[/B], [B]xhaggi[/B] et [CR] toutes les autres personnes qui contribuent à ce projet"
 
 msgctxt "#31800"
 msgid "Fade background in visualisation"
@@ -1577,10 +1193,6 @@ msgctxt "#31804"
 msgid "Panel"
 msgstr "Panneau"
 
-msgctxt "#31807"
-msgid "Choose Icon"
-msgstr "Choisir l'icone"
-
 msgctxt "#31808"
 msgid "Exchange Position"
 msgstr "Choisir la position"
@@ -1592,10 +1204,6 @@ msgstr "Paramètres de visualisation audio"
 msgctxt "#31810"
 msgid "Show ClearArt instead of Logo"
 msgstr "Montrer le ClearArt au lieu du Logo"
-
-msgctxt "#31811"
-msgid "Use Alt Floor"
-msgstr "Utiliser le sol alternatif"
 
 msgctxt "#31812"
 msgid "Show CDArt"
@@ -1609,33 +1217,13 @@ msgctxt "#31814"
 msgid "Always show Submenu"
 msgstr "Toujours afficher le sous-menu"
 
-msgctxt "#31815"
-msgid "Latest Pics"
-msgstr "Dernières images"
-
-msgctxt "#31816"
-msgid "Random Pics"
-msgstr "Images aléatoires"
-
 msgctxt "#31817"
 msgid "Random Artists"
 msgstr "Artistes aléatoires"
 
-msgctxt "#31818"
-msgid "Near Concerts"
-msgstr "Concerts près de"
-
 msgctxt "#31819"
 msgid "Next Aired"
 msgstr "Prochaine diffusion"
-
-msgctxt "#31820"
-msgid "Daily Babes"
-msgstr "Nanas du jour"
-
-msgctxt "#31823"
-msgid "World Map + Icons"
-msgstr "Planisphère + Icones"
 
 msgctxt "#31824"
 msgid "Live DVD cases"
@@ -1697,14 +1285,6 @@ msgctxt "#31839"
 msgid "Restart TOFU"
 msgstr "Redémarrer TOFU"
 
-msgctxt "#31840"
-msgid "Random Movie (Genre)"
-msgstr "Films aléatoires (Genre)"
-
-msgctxt "#31841"
-msgid "Random Movie"
-msgstr "Films aléatoires"
-
 msgctxt "#31842"
 msgid "Movies (Cinema Exp.)"
 msgstr "Films (Cinema Exp.)"
@@ -1720,10 +1300,6 @@ msgstr "Nettoyer la BdD vidéo"
 msgctxt "#31845"
 msgid "Movie Sets"
 msgstr "Sagas"
-
-msgctxt "#31846"
-msgid "Around the world"
-msgstr "Autour du monde"
 
 msgctxt "#31847"
 msgid "Video Files"
@@ -1753,10 +1329,6 @@ msgctxt "#31854"
 msgid "PVR Area"
 msgstr "Zone PVR"
 
-msgctxt "#31855"
-msgid "Featured Area"
-msgstr "Zone suggestion"
-
 msgctxt "#31856"
 msgid "NowPlaying"
 msgstr "Lecture en cours"
@@ -1781,10 +1353,6 @@ msgctxt "#31863"
 msgid "Two Columns"
 msgstr "Deux colonnes"
 
-msgctxt "#31864"
-msgid "Show Widgets"
-msgstr "Afficher les widgets"
-
 msgctxt "#31865"
 msgid "WakeOnLAN"
 msgstr "WakeOnLAN"
@@ -1801,18 +1369,6 @@ msgctxt "#31868"
 msgid "Enter MAC Address"
 msgstr "Entrez l'adresse MAC"
 
-msgctxt "#31869"
-msgid "Online Video Help"
-msgstr "Aide vidéo en ligne"
-
-msgctxt "#31870"
-msgid "Help"
-msgstr "Aide"
-
-msgctxt "#31871"
-msgid "Available at Passion-XBMC repository"
-msgstr "Disponible sur le dépôt Passion-XBMC"
-
 msgctxt "#31872"
 msgid "Mixed Movies"
 msgstr "Mélange de films"
@@ -1824,10 +1380,6 @@ msgstr "Mélange de séries TV"
 msgctxt "#31874"
 msgid "Mixed Music"
 msgstr "Mélange de musiques"
-
-msgctxt "#31875"
-msgid "No Content for this Area"
-msgstr "Pas de contenu pour cette zone"
 
 msgctxt "#31876"
 msgid "Appearance Setup"
@@ -1849,14 +1401,6 @@ msgctxt "#31882"
 msgid "Disable option to hide widgets by pressing \"Back\""
 msgstr "Désactiver l'option de cacher les widgets en appuyant sur \\\"Retour\\\""
 
-msgctxt "#31885"
-msgid "Area-specific Options"
-msgstr "Options zones spécifiques"
-
-msgctxt "#31886"
-msgid "Search Trailer on Youtube"
-msgstr "Rechercher la bande-annonce sur Youtube"
-
 msgctxt "#31888"
 msgid "PRESS ANY KEY"
 msgstr "APPUYER SUR UNE TOUCHE"
@@ -1865,29 +1409,9 @@ msgctxt "#31889"
 msgid "Next Tracks"
 msgstr "Pistes suivantes"
 
-msgctxt "#31890"
-msgid "Collections"
-msgstr "Collections"
-
-msgctxt "#31891"
-msgid "Folders"
-msgstr "Dossiers"
-
-msgctxt "#31892"
-msgid "Categories"
-msgstr "Catégories"
-
-msgctxt "#31895"
-msgid "No library content for this media type"
-msgstr "Aucun contenu de la bibliothèque pour ce type de support"
-
 msgctxt "#31896"
 msgid "10 Day"
 msgstr "10 jours"
-
-msgctxt "#31897"
-msgid "Press DOWN for extended info"
-msgstr "Appuyez sur BAS pour les infos étendues"
 
 msgctxt "#31898"
 msgid "Visibility"
@@ -1913,18 +1437,6 @@ msgctxt "#31905"
 msgid "Needs script.cinema.experience to be available"
 msgstr "Besoin du script.cinema.experience pour être disponible"
 
-msgctxt "#31906"
-msgid "Needs script.randommovie to be available"
-msgstr "Besoin du script.randommovie pour être disponible"
-
-msgctxt "#31909"
-msgid "Bar Style"
-msgstr "Style de barre"
-
-msgctxt "#31910"
-msgid "This feature requires the ColorPicker add-on"
-msgstr "Cette fonction nécessite l'extension ColorPicker"
-
 msgctxt "#31911"
 msgid "Updating add-on repos"
 msgstr "Mise à jour des dépôts d'extension"
@@ -1940,10 +1452,6 @@ msgstr "Cliquez sur les éléments pour accéder aux options"
 msgctxt "#31914"
 msgid "Click on menu items to see available options"
 msgstr "Cliquez sur les menus pour accéder aux options"
-
-msgctxt "#31915"
-msgid "Play some Music to get live Preview of Settings"
-msgstr "Jouer une musique pour un aperçu des réglages"
 
 msgctxt "#31916"
 msgid "Needs \"Additional Artist Info\" activated in Artistslideshow Plugin"
@@ -1997,10 +1505,6 @@ msgctxt "#31954"
 msgid "Function"
 msgstr "Fonction"
 
-msgctxt "#31955"
-msgid "Activate Bottom Menu (Play DVD, toggle widgets)"
-msgstr "Activer le menu inférieur (Lire DVD, basculer entre les widgets)"
-
 msgctxt "#31956"
 msgid "Choose Type"
 msgstr "Choisir le type"
@@ -2020,14 +1524,6 @@ msgstr "Icône"
 msgctxt "#31960"
 msgid "Set icon"
 msgstr "Définir l'icône"
-
-msgctxt "#31961"
-msgid "Set up 'Featured' window appearance"
-msgstr "Configurer l’apparence de la fenêtre 'Suggestions'"
-
-msgctxt "#31962"
-msgid "Set up 'Settings' window appearance"
-msgstr "Configurer l’apparence de la fenêtre 'Paramètres'"
 
 msgctxt "#31963"
 msgid "Fallback settings"

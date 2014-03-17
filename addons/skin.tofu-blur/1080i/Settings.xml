@@ -2,19 +2,11 @@
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<include condition="!Skin.HasSetting(setup-0.1.6)">AutoConfig</include>
+	<include condition="!Skin.HasSetting(setup-0.2.2)">AutoConfig</include>
 	<controls>
 		<include>CommonSettingsBackground</include>
 		<include>CommonMediaPlayingBackground</include>
-		<control type="image">
-			<posy>0</posy>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>common/bgcolor.png</texture>
-			<animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
-			<animation effect="fade" end="100" time="440" delay="160">VisibleChange</animation>
-			<visible>Skin.HasSetting(darkinfopane)</visible>
-		</control>
+		<include>BackgroundDiffuse</include>
 		<control type="group">
 			<animation type="WindowOpen" reversible="false" condition="![Window.Previous(SettingsCategory.xml) | Window.Previous(systeminfo) | Window.Previous(skinsettings)]">
 				<effect type="zoom" start="150" end="100" center="960,540" time="240" tween="cubic" />
@@ -24,41 +16,68 @@
 				<effect type="fade" start="100" end="0" time="240" />
 				<effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
 			</animation>
-			<animation effect="zoom" end="91" center="960,360" time="320" tween="cubic" easing="inout" condition="true">Conditional</animation>
-			<include>Furniture_SettingsBackPanel2</include>
-			<include>Furniture_SettingsInternalBackPanel</include>
-			<control type="list" id="9000">
-				<posx>66</posx>
-				<posy>190</posy>
-				<width>429</width>
-				<height>819</height>
+			<control type="label">
+				<posx>215</posx>
+				<posy>200</posy>
+				<width>1200</width>
+				<height>57</height>
+				<label>[B]$LOCALIZE[5][/B]</label>
+				<font>Font_Reg57_Caps</font>
+				<textcolor>$VAR[FontColorVar]</textcolor>
+			</control>
+			<control type="panel" id="9000">
+				<posx>215</posx>
+				<posy>310</posy>
+				<width>1600</width>
+				<height>548</height>
 				<onleft>ActivateWindow(1121)</onleft>
 				<onright>9001</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
-				<itemlayout height="74" width="429">
+				<itemlayout height="274" width="320">
+					<control type="image">
+						<posx>31</posx>
+						<posy>0</posy>
+						<width>144</width>
+						<height>144</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+						<animation effect="fade" end="40" condition="true">Conditional</animation>
+					</control>
 					<control type="label">
-						<posx>30</posx>
-						<width>389</width>
-						<height>74</height>
+						<posx>103</posx>
+						<posy>150</posy>
+						<width>206</width>
+						<height>30</height>
 						<label>$INFO[ListItem.Label]</label>
-						<font>Font_Bold34_Caps</font>
+						<font>Font_Bold26_Caps</font>
+						<textcolor>$VAR[FontColorVar]</textcolor>
+						<align>center</align>
 					</control>
 				</itemlayout>
-				<focusedlayout height="74" width="429">
+				<focusedlayout height="274" width="320">
 					<control type="image">
-						<width>429</width>
-						<height>74</height>
-						<texture border="3">button-focus2.png</texture>
-						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
-						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>206</width>
+						<height>196</height>
+						<texture>Icon-Selected.png</texture>
 					</control>
 					<control type="label">
-						<posx>30</posx>
-						<width>389</width>
-						<height>74</height>
+						<posx>103</posx>
+						<posy>150</posy>
+						<width>206</width>
+						<height>30</height>
 						<label>$INFO[ListItem.Label]</label>
-						<font>Font_Bold34_Caps</font>
+						<font>Font_Bold26_Caps</font>
+						<align>center</align>
+					</control>
+					<control type="image">
+						<posx>31</posx>
+						<posy>0</posy>
+						<width>144</width>
+						<height>144</height>
+						<texture>$INFO[ListItem.Icon]</texture>
 					</control>
 				</focusedlayout>
 				<content>
@@ -66,88 +85,76 @@
 						<label>480</label>
 						<property name="description">$LOCALIZE[31400]</property>
 						<onclick>ActivateWindow(AppearanceSettings)</onclick>
-						<icon>special://skin/backgrounds/appearance.jpg</icon>
+						<icon>Icon-Appearance.png</icon>
 					</item>
 					<item id="2">
 						<label>157</label>
 						<property name="description">$LOCALIZE[31401]</property>
 						<onclick>ActivateWindow(VideosSettings)</onclick>
-						<icon>special://skin/backgrounds/videos/videos.jpg</icon>
+						<icon>Icon-Videos.png</icon>
 					</item>
 					<item id="3">
 						<label>2</label>
 						<property name="description">$LOCALIZE[31402]</property>
 						<onclick>ActivateWindow(MusicSettings)</onclick>
-						<icon>special://skin/backgrounds/music/music.jpg</icon>
+						<icon>Icon-Music.png</icon>
 					</item>
 					<item id="4">
 						<label>1</label>
 						<property name="description">$LOCALIZE[31403]</property>
 						<onclick>ActivateWindow(PicturesSettings)</onclick>
-						<icon>special://skin/backgrounds/pictures/pictures.jpg</icon>
+						<icon>Icon-Pictures.png</icon>
 					</item>
 					<item id="5">
 						<label>8</label>
 						<property name="description">$LOCALIZE[31404]</property>
 						<onclick>ActivateWindow(WeatherSettings)</onclick>
-						<icon>special://skin/backgrounds/weather/weather.jpg</icon>
+						<icon>Icon-Weather.png</icon>
 					</item>
 					<item id="6">
 						<label>24001</label>
 						<label2>31411</label2>
 						<property name="description">$LOCALIZE[31408]</property>
 						<onclick>ActivateWindow(AddonBrowser)</onclick>
-						<icon>special://skin/backgrounds/programs/programs.jpg</icon>
+						<icon>Icon-Addons.png</icon>
 					</item>
 					<item id="7">
 						<label>14036</label>
 						<property name="description">$LOCALIZE[31405]</property>
 						<onclick>ActivateWindow(ServiceSettings)</onclick>
-						<icon>special://skin/backgrounds/network.jpg</icon>
+						<icon>Icon-Services.png</icon>
 					</item>
 					<item id="8">
 						<label>13000</label>
 						<property name="description">$LOCALIZE[31406]</property>
 						<onclick>ActivateWindow(SystemSettings)</onclick>
-						<icon>special://skin/backgrounds/system/system.jpg</icon>
+						<icon>Icon-System.png</icon>
 					</item>
 					<item id="21">
 						<label>31017</label>
 						<label2>31478</label2>
 						<property name="description">$LOCALIZE[31016]</property>
 						<onclick>ActivateWindow(PVRSettings)</onclick>
-						<icon>special://skin/backgrounds/livetv/livetv.jpg</icon>
+						<icon>Icon-PVR.png</icon>
 					</item>
 					<item id="10">
 						<label>13281</label>
 						<label2>31413</label2>
 						<property name="description">$LOCALIZE[31409]</property>
-						<onclick>ActivateWindow(systeminfo)</onclick>
-						<icon>special://skin/backgrounds/systeminfo.jpg</icon>
-					</item>
-					<item id="9">
-						<label>166</label>
-						<property name="description">$LOCALIZE[31407]</property>
-						<onclick>ActivateWindow(skinsettings)</onclick>
-						<icon>special://skin/backgrounds/skinsetting.jpg</icon>
+						<onclick>ActivateWindow(SystemInfo)</onclick>
+						<icon>Icon-Info.png</icon>
 					</item>
 				</content>
 			</control>
-			<control type="image">
-				<posx>497</posx>
-				<posy>87</posy>
-				<width>1261</width>
-				<height>708</height>
-				<texture background="true">$INFO[Container(9000).ListItem.Icon]</texture>
-				<fadetime>600</fadetime>
-			</control>
 			<control type="textbox">
-				<posx>555</posx>
-				<posy>810</posy>
-				<width>1200</width>
-				<height>210</height>
+				<posx>60</posx>
+				<posy>920</posy>
+				<width>1800</width>
+				<height>160</height>
 				<label>$INFO[Container(9000).ListItem.Property(description)]</label>
-				<font>Font_Reg32</font>
+				<textcolor>grey</textcolor>
+				<font>Font_Bold30_Caps</font>
+				<align>center</align>
 			</control>
 		</control>
 		<control type="group">

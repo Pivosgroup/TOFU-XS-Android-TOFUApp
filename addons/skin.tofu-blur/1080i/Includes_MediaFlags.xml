@@ -207,7 +207,7 @@
 		<height>64</height>
 		<aspectratio>keep</aspectratio>
 		<fadetime>IconCrossfadeTime2</fadetime>
-		<colordiffuse>fade</colordiffuse>
+		<colordiffuse>white</colordiffuse>
 		<animation effect="fade" time="200">VisibleChange</animation>
 	</include>
 	<include name="WidgetFlagVars">
@@ -295,7 +295,6 @@
 					<!--right part -->
 					<animation effect="slide" end="-930" condition="Control.IsVisible(512) | Control.IsVisible(550)">Conditional</animation>
 					<control type="group">
-						<animation effect="slide" end="-15" condition="Control.IsVisible(12100)">Conditional</animation>
 						<control type="image">
 							<!--AspectRatio logo-->
 							<posx>1498</posx>
@@ -313,43 +312,6 @@
 							<texture>$VAR[AudioFlagVar,flags/audio/,.png]</texture>
 							<!--Audio logo-->
 							<include>AudioFlagsVars</include>
-							<animation effect="slide" end="-5" condition="Control.IsVisible(12100)">Conditional</animation>
-						</control>
-					</control>
-					<control type="grouplist" id="12100">
-						<animation effect="fade" start="100" end="85" time="0" condition="true">Conditional</animation>
-						<posx>1881</posx>
-						<orientation>vertical</orientation>
-						<visible>Skin.HasSetting(languageflag)</visible>
-						<control type="image">
-							<width>26</width>
-							<height>22</height>
-							<aspectratio>scale</aspectratio>
-							<texture>$INFO[Window(movieinformation).Property(AudioLanguage.1),flags/language/,.png]</texture>
-							<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.1))</visible>
-							<include>Animation_VisibleChange200</include>
-							<fadetime>400</fadetime>
-						</control>
-						<control type="image">
-							<width>26</width>
-							<height>22</height>
-							<aspectratio>scale</aspectratio>
-							<texture>$INFO[Window(movieinformation).Property(AudioLanguage.2),flags/language/,.png]</texture>
-							<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.2))</visible>
-							<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.1),Window(movieinformation).Property(AudioLanguage.2))</visible>
-							<include>Animation_VisibleChange200</include>
-							<fadetime>400</fadetime>
-						</control>
-						<control type="image">
-							<width>26</width>
-							<height>22</height>
-							<aspectratio>scale</aspectratio>
-							<texture>$INFO[Window(movieinformation).Property(AudioLanguage.3),flags/language/,.png]</texture>
-							<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.3))</visible>
-							<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.1),Window(movieinformation).Property(AudioLanguage.3))</visible>
-							<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.2),Window(movieinformation).Property(AudioLanguage.3))</visible>
-							<include>Animation_VisibleChange200</include>
-							<fadetime>400</fadetime>
 						</control>
 					</control>
 				</control>

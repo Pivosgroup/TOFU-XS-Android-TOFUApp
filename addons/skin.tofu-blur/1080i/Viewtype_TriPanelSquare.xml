@@ -36,6 +36,7 @@
 						<aligny>bottom</aligny>
 						<label fallback="N/A">$VAR[TriPanelSquareValue1Var]</label>
 						<scroll>true</scroll>
+						<textcolor>grey</textcolor>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -56,6 +57,7 @@
 						<aligny>bottom</aligny>
 						<label fallback="N/A">$VAR[TriPanelSquareValue2Var]</label>
 						<scroll>true</scroll>
+						<textcolor>grey</textcolor>
 					</control>
 				</control>
 				<control type="textbox">
@@ -64,6 +66,7 @@
 					<width>432</width>
 					<height>365</height>
 					<label>$VAR[InfoWallTextboxVar]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg28</font>
 					<autoscroll delay="10000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
@@ -170,6 +173,7 @@
 						<aligny>bottom</aligny>
 						<label fallback="N/A">$VAR[TriPanelSquareValue1Var]</label>
 						<scroll>true</scroll>
+						<textcolor>grey</textcolor>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -190,6 +194,7 @@
 						<aligny>bottom</aligny>
 						<label fallback="N/A">$VAR[TriPanelSquareValue2Var]</label>
 						<scroll>true</scroll>
+						<textcolor>grey</textcolor>
 					</control>
 				</control>
 				<control type="textbox">
@@ -198,6 +203,7 @@
 					<width>480</width>
 					<height>400</height>
 					<label>$VAR[InfoWallTextboxVar]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg28</font>
 					<autoscroll delay="10000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
@@ -272,6 +278,7 @@
 							<width>680</width>
 							<height>52</height>
 							<label>$VAR[ListLabel1Var]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg30_2</font>
 						</control>
 						<control type="label">
@@ -292,7 +299,7 @@
 							<height>35</height>
 							<texture>$VAR[WatchedIconVar]</texture>
 							<aspectratio>keep</aspectratio>
-							<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+							<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 							<visible>!Container.Content(songs)</visible>
 						</control>
 					</itemlayout>
@@ -325,7 +332,7 @@
 							<posy>0</posy>
 							<width>842</width>
 							<height>52</height>
-							<texture border="3">list-focus.png</texture>
+							<texture border="3,0,0,20">list-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 							<animation effect="fade" start="100" end="25" tween="sine" easing="inout" time="240" condition="!Control.HasFocus(53)">Conditional</animation>
 						</control>
@@ -405,6 +412,7 @@
 							<width>680</width>
 							<height>49</height>
 							<label>$VAR[ListLabel1Var]</label>
+							<textcolor>grey</textcolor>
 							<font>Font_Reg30_2</font>
 						</control>
 						<control type="label">
@@ -413,6 +421,7 @@
 							<width>680</width>
 							<height>49</height>
 							<label>$VAR[ListLabel2Var]</label>
+							<textcolor>$VAR[FontColorVar]</textcolor>
 							<font>Font_Reg30_2</font>
 						</control>
 						<control type="label">
@@ -434,7 +443,7 @@
 							<texture>$VAR[WatchedIconVar]</texture>
 							<aspectratio>keep</aspectratio>
 							<animation effect="slide" end="-57,35" time="0" condition="Container.Content(songs)">Conditional</animation>
-							<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+							<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 						</control>
 					</itemlayout>
 					<focusedlayout condition="Skin.HasSetting(tripanelsquarebiglist)" height="104">
@@ -466,7 +475,7 @@
 							<posy>0</posy>
 							<width>842</width>
 							<height>103</height>
-							<texture border="3">list-focus.png</texture>
+							<texture border="3,0,0,20">list-focus.png</texture>
 							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 							<animation effect="fade" start="100" end="25" tween="sine" easing="inout" time="240" condition="!Control.HasFocus(53)">Conditional</animation>
 						</control>

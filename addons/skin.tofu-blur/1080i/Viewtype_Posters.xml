@@ -1546,6 +1546,7 @@
 						<height>40</height>
 						<label>[COLOR $VAR[FontColorVar]]$LOCALIZE[31095]: [/COLOR]$INFO[ListItem.RatingAndVotes]</label>
 						<font>Font_Reg32</font>
+						<textcolor>grey</textcolor>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -1558,14 +1559,16 @@
 						<height>40</height>
 						<label>[COLOR $VAR[FontColorVar]]$LOCALIZE[180]:[/COLOR] $INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
 						<font>Font_Reg32</font>
+						<textcolor>grey</textcolor>
 					</control>
 				</control>
 				<control type="textbox">
 					<posx>93</posx>
 					<posy>236</posy>
 					<width>395</width>
-					<height>460</height>
+					<height>452</height>
 					<label fallback="31006">$VAR[InfoWallTextboxVar]</label>
+					<textcolor>grey</textcolor>
 					<font>Font_Reg29</font>
 					<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>

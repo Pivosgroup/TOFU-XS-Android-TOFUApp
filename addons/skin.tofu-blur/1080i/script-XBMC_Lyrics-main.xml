@@ -11,7 +11,7 @@
 			<control type="image">
 				<width>1920</width>
 				<height>620</height>
-				<texture flipy="true" border="3">panel-bottom.png</texture>
+				<texture flipy="true" border="3">panel-top.png</texture>
 				<animation effect="slide" start="0,-489" end="0,0" time="400" tween="cubic" delay="160">windowopen</animation>
 				<animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
@@ -56,7 +56,7 @@
 						<posy>2</posy>
 						<width>1754</width>
 						<height>38</height>
-						<texture border="3">button-focus2.png</texture>
+						<texture border="3">button-focus.png</texture>
 					</control>
 					<control type="label">
 						<posx>878</posx>
@@ -69,9 +69,9 @@
 				</focusedlayout>
 			</control>
 			<control type="spincontrol" id="111">
-				<posx>1800</posx>
+				<posx>1780</posx>
 				<posy>6</posy>
-				<height>98</height>
+				<height>40</height>
 				<textoffsetx>0</textoffsetx>
 				<textcolor>$VAR[FontColorVar]</textcolor>
 				<spinposx>-4</spinposx>
@@ -80,8 +80,8 @@
 				<onright>110</onright>
 				<ondown>110</ondown>
 				<onup>110</onup>
-				<spinwidth>60</spinwidth>
-				<spinheight>92</spinheight>
+				<spinwidth>40</spinwidth>
+				<spinheight>40</spinheight>
 				<visible>Control.IsVisible(110)</visible>
 				<animation effect="fade" time="800">WindowOpen</animation>
 				<animation effect="fade" time="160">WindowClose</animation>
@@ -124,7 +124,7 @@
 						<posy>2</posy>
 						<width>1754</width>
 						<height>38</height>
-						<texture border="3">list-focus.png</texture>
+						<texture border="3,0,0,20">list-focus.png</texture>
 					</control>
 					<control type="label">
 						<posx>878</posx>
@@ -137,9 +137,9 @@
 				</focusedlayout>
 			</control>
 			<control type="spincontrol" id="121">
-				<posx>1800</posx>
+				<posx>1780</posx>
 				<posy>6</posy>
-				<height>98</height>
+				<height>40</height>
 				<textoffsetx>0</textoffsetx>
 				<textcolor>$VAR[FontColorVar]</textcolor>
 				<spinposx>-4</spinposx>
@@ -149,8 +149,8 @@
 				<ondown>120</ondown>
 				<onup>120</onup>
 				<visible>Control.IsVisible(120)</visible>
-				<spinwidth>60</spinwidth>
-				<spinheight>92</spinheight>
+				<spinwidth>40</spinwidth>
+				<spinheight>40</spinheight>
 				<animation effect="fade" time="800">WindowOpen</animation>
 				<animation effect="fade" time="160">WindowClose</animation>
 			</control>

@@ -45,14 +45,6 @@ msgctxt "#31017"
 msgid "Live TV"
 msgstr "TV en directo"
 
-msgctxt "#31020"
-msgid "Extras"
-msgstr "Extras"
-
-msgctxt "#31021"
-msgid "Search TOFU for"
-msgstr "Buscar no TOFU"
-
 msgctxt "#31022"
 msgid "Music - Files"
 msgstr "Música - Ficheiros"
@@ -80,10 +72,6 @@ msgstr "PAUSADO"
 msgctxt "#31048"
 msgid "Visualization presets"
 msgstr "Preconfiguracións de visualización"
-
-msgctxt "#31053"
-msgid "Fullscreen"
-msgstr "Pantalla completa"
 
 msgctxt "#31055"
 msgid "Open playlist"
@@ -137,18 +125,6 @@ msgctxt "#31072"
 msgid "System info"
 msgstr "Información do sistema"
 
-msgctxt "#31073"
-msgid "Actor information"
-msgstr "Información do actor"
-
-msgctxt "#31074"
-msgid "Filmography"
-msgstr "Filmografía"
-
-msgctxt "#31080"
-msgid "Director information"
-msgstr "Información do director"
-
 msgctxt "#31081"
 msgid "Latest MusicVids"
 msgstr "Últimos MusicVids"
@@ -165,33 +141,17 @@ msgctxt "#31084"
 msgid "Panels"
 msgstr "Paneis"
 
-msgctxt "#31085"
-msgid "Light"
-msgstr "Luz"
-
 msgctxt "#31087"
 msgid "Randomize All"
 msgstr "Todo Ó Chou"
-
-msgctxt "#31088"
-msgid "Use color for all areas"
-msgstr "Usar cor para todas as áreas"
 
 msgctxt "#31089"
 msgid "Both"
 msgstr "Ambos"
 
-msgctxt "#31090"
-msgid "Adjust Transparency"
-msgstr "Axustar Transparencia"
-
 msgctxt "#31095"
 msgid "Rating"
 msgstr "Valoración"
-
-msgctxt "#31096"
-msgid "Search on YouTube"
-msgstr "Buscar en YouTube"
 
 msgctxt "#31097"
 msgid "Classic OSD style"
@@ -241,33 +201,9 @@ msgctxt "#31116"
 msgid "Show"
 msgstr "Amosar"
 
-msgctxt "#31117"
-msgid "CNN International"
-msgstr "CNN Internacional"
-
-msgctxt "#31118"
-msgid "Radio 105"
-msgstr "Radio 105"
-
-msgctxt "#31119"
-msgid "Radio Montecarlo"
-msgstr "Radio Montecarlo"
-
-msgctxt "#31120"
-msgid "Tom & Jerry"
-msgstr "Tom e Jerry"
-
 msgctxt "#31127"
 msgid "Lyrics add-on"
 msgstr "Complementos de letras"
-
-msgctxt "#31128"
-msgid "Lyrics"
-msgstr "Letras"
-
-msgctxt "#31130"
-msgid "Subtitle add-on"
-msgstr "Complementos de subtítulos"
 
 msgctxt "#31150"
 msgid "Landscape"
@@ -313,18 +249,6 @@ msgctxt "#31176"
 msgid "General options"
 msgstr "Opcións xerais"
 
-msgctxt "#31177"
-msgid "Random color mode"
-msgstr "Modo de cor ó chou"
-
-msgctxt "#31178"
-msgid "Choose main color"
-msgstr "Escoller cor principal"
-
-msgctxt "#31181"
-msgid "Activate 'Glow Mode'"
-msgstr "Activar 'Modo Brillo'"
-
 msgctxt "#31185"
 msgid "Viewtype"
 msgstr "Tipo de Vista"
@@ -353,17 +277,9 @@ msgctxt "#31195"
 msgid "No background panel"
 msgstr "Sen panel de fondo"
 
-msgctxt "#31199"
-msgid "News"
-msgstr "Novas"
-
 msgctxt "#31220"
 msgid "Random episodes"
 msgstr "Episodios ó chou"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "Predeterminado"
 
 msgctxt "#31222"
 msgid "Random movies"
@@ -384,10 +300,6 @@ msgstr "Vertical"
 msgctxt "#31229"
 msgid "Horizontal"
 msgstr "Horizontal"
-
-msgctxt "#31230"
-msgid "Viewtypes"
-msgstr "Tipos de Vistas"
 
 msgctxt "#31231"
 msgid "Navigation"
@@ -433,14 +345,6 @@ msgctxt "#31255"
 msgid "Blu-ray Disc"
 msgstr "Disco Blu-ray"
 
-msgctxt "#31265"
-msgid "Smaller pop-up dialogs"
-msgstr "Diálogos emerxentes reducidos"
-
-msgctxt "#31269"
-msgid "Enable background effect [I](Can increase CPU usage!)   [/I]"
-msgstr "Habilitar efectos no fondo [i](Pode incrementar o uso da CPU!) [/I]"
-
 msgctxt "#31271"
 msgid "Posters"
 msgstr "Pósters"
@@ -448,10 +352,6 @@ msgstr "Pósters"
 msgctxt "#31279"
 msgid "Play trailers in fullscreen"
 msgstr "Reproducir avances a pantalla completa"
-
-msgctxt "#31281"
-msgid "Show video info when player is paused"
-msgstr "Amosar a info. do vídeo cando o reprodutor estea pausado"
 
 msgctxt "#31284"
 msgid "Cinema"
@@ -505,10 +405,6 @@ msgctxt "#31326"
 msgid "Most played albums"
 msgstr "Álbums máis reproducidos"
 
-msgctxt "#31333"
-msgid "Recent"
-msgstr "Recente"
-
 msgctxt "#31334"
 msgid "Latest"
 msgstr "Máis Recentes"
@@ -544,10 +440,6 @@ msgstr "Información do sistema"
 msgctxt "#31359"
 msgid "Latest albums"
 msgstr "Álbums máis recentes"
-
-msgctxt "#31360"
-msgid "Upcoming"
-msgstr "Vindeiros"
 
 msgctxt "#31364"
 msgid "Platform"
@@ -625,10 +517,6 @@ msgctxt "#31482"
 msgid "Cases"
 msgstr "Caixas"
 
-msgctxt "#31484"
-msgid "Play trailer"
-msgstr "Reproducir avance"
-
 msgctxt "#31500"
 msgid "Pictures"
 msgstr "Imaxes"
@@ -649,10 +537,6 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "Vídeos"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "Aplicativos"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "Sistema"
@@ -661,10 +545,6 @@ msgctxt "#31507"
 msgid "Add-Ons"
 msgstr "Complementos"
 
-msgctxt "#31508"
-msgid "Shutdown"
-msgstr "Apagado"
-
 msgctxt "#31509"
 msgid "Favorites"
 msgstr "Favoritos"
@@ -672,10 +552,6 @@ msgstr "Favoritos"
 msgctxt "#31510"
 msgid "Weather"
 msgstr "Tempo meteorolóxico"
-
-msgctxt "#31511"
-msgid "Play Disc"
-msgstr "Reproducir Disco"
 
 msgctxt "#31611"
 msgid "Fullscreen video"
@@ -688,18 +564,6 @@ msgstr "Visualización de audio"
 msgctxt "#31616"
 msgid "Low"
 msgstr "Baixo"
-
-msgctxt "#31617"
-msgid "High"
-msgstr "Alto"
-
-msgctxt "#31622"
-msgid "Label"
-msgstr "Etiqueta"
-
-msgctxt "#31629"
-msgid "Channels"
-msgstr "Canles"
 
 msgctxt "#31630"
 msgid "Custom"
@@ -720,10 +584,6 @@ msgstr "Submenu"
 msgctxt "#31706"
 msgid "First run help...."
 msgstr "Axuda da primeira execución..."
-
-msgctxt "#31728"
-msgid "Show Cities"
-msgstr "Amosar Cidades"
 
 msgctxt "#31731"
 msgid "Skin Settings"
@@ -749,10 +609,6 @@ msgctxt "#31804"
 msgid "Panel"
 msgstr "Panel"
 
-msgctxt "#31807"
-msgid "Choose Icon"
-msgstr "Escoller Icona"
-
 msgctxt "#31814"
 msgid "Always show Submenu"
 msgstr "Amosar sempre o Submenú"
@@ -761,21 +617,9 @@ msgctxt "#31817"
 msgid "Random Artists"
 msgstr "Artistas Ó Chou"
 
-msgctxt "#31818"
-msgid "Near Concerts"
-msgstr "Concertos Preto de min"
-
 msgctxt "#31819"
 msgid "Next Aired"
 msgstr "Seguinte Emisión"
-
-msgctxt "#31820"
-msgid "Daily Babes"
-msgstr "Rapazas a diario"
-
-msgctxt "#31823"
-msgid "World Map + Icons"
-msgstr "Mapa do Mundo + Iconas"
 
 msgctxt "#31831"
 msgid "Play DVD"
@@ -805,14 +649,6 @@ msgctxt "#31839"
 msgid "Restart TOFU"
 msgstr "Reiniciar TOFU"
 
-msgctxt "#31840"
-msgid "Random Movie (Genre)"
-msgstr "Filme Ó Chou (Xénero)"
-
-msgctxt "#31841"
-msgid "Random Movie"
-msgstr "Filme Ó Chou"
-
 msgctxt "#31843"
 msgid "Clean MusicDB"
 msgstr "Limpar MusicDB"
@@ -824,10 +660,6 @@ msgstr "Limpar VideoDB"
 msgctxt "#31845"
 msgid "Movie Sets"
 msgstr "Conxunto de Filmes"
-
-msgctxt "#31846"
-msgid "Around the world"
-msgstr "En todo o mundo"
 
 msgctxt "#31847"
 msgid "Video Files"
@@ -869,10 +701,6 @@ msgctxt "#31863"
 msgid "Two Columns"
 msgstr "Dúas Columnas"
 
-msgctxt "#31864"
-msgid "Show Widgets"
-msgstr "Amosar Widgets"
-
 msgctxt "#31865"
 msgid "WakeOnLAN"
 msgstr "WakeOnLAN"
@@ -889,10 +717,6 @@ msgctxt "#31868"
 msgid "Enter MAC Address"
 msgstr "Introducir o Enderezo MAC"
 
-msgctxt "#31870"
-msgid "Help"
-msgstr "Axuda"
-
 msgctxt "#31872"
 msgid "Mixed Movies"
 msgstr "Filmes Mesturados"
@@ -905,17 +729,9 @@ msgctxt "#31874"
 msgid "Mixed Music"
 msgstr "Música Mesturada"
 
-msgctxt "#31875"
-msgid "No Content for this Area"
-msgstr "Sen Contido nesta Área"
-
 msgctxt "#31876"
 msgid "Appearance Setup"
 msgstr "Configuración da Apariencia"
-
-msgctxt "#31886"
-msgid "Search Trailer on Youtube"
-msgstr "Buscar Avance no YouTube"
 
 msgctxt "#31888"
 msgid "PRESS ANY KEY"
@@ -924,22 +740,6 @@ msgstr "PREMA CALQUERA TECLA"
 msgctxt "#31889"
 msgid "Next Tracks"
 msgstr "Lista de reprodución"
-
-msgctxt "#31890"
-msgid "Collections"
-msgstr "Coleccións"
-
-msgctxt "#31891"
-msgid "Folders"
-msgstr "Cartafoles"
-
-msgctxt "#31892"
-msgid "Categories"
-msgstr "Categorías"
-
-msgctxt "#31895"
-msgid "No library content for this media type"
-msgstr "Sen contido na biblioteca para esta fonte de medios"
 
 msgctxt "#31896"
 msgid "10 Day"
@@ -964,14 +764,6 @@ msgstr "Información"
 msgctxt "#31905"
 msgid "Needs script.cinema.experience to be available"
 msgstr "É necesario que script.cinema.experience estea dispoñíbel"
-
-msgctxt "#31906"
-msgid "Needs script.randommovie to be available"
-msgstr "É necesario que script.randommovie estea dispoñíbel"
-
-msgctxt "#31909"
-msgid "Bar Style"
-msgstr "Estilo da Barra"
 
 msgctxt "#31912"
 msgid "Updating local add-ons"

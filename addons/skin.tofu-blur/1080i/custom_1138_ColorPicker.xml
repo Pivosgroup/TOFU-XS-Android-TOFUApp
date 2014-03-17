@@ -35,6 +35,14 @@
 				<textcolor>$VAR[FontColorVar]</textcolor>
 				<scroll>true</scroll>
 			</control>
+			<control type="image">
+				<posx>23</posx>
+				<posy>90</posy>
+				<width>734</width>
+				<height>2</height>
+				<texture>line.png</texture>
+				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+			</control>
 			<control type="panel" id="10">
 				<posx>142</posx>
 				<posy>104</posy>
@@ -63,7 +71,7 @@
 						<height>70</height>
 						<texture border="6">views/addonwall_select.png</texture>
 						<include>Animation_VisibleChange200</include>
-						<colordiffuse>black</colordiffuse>
+						<colordiffuse>alternate</colordiffuse>
 						<bordersize>1.7</bordersize>
 						<visible>Control.HasFocus(10)</visible>
 					</control>

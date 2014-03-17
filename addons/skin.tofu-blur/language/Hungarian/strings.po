@@ -9,10 +9,6 @@ msgctxt "#31003"
 msgid "N/A"
 msgstr "Nincs adat"
 
-msgctxt "#31004"
-msgid "Month"
-msgstr "Hónap"
-
 msgctxt "#31005"
 msgid "Premiered"
 msgstr "Bemutató"
@@ -36,10 +32,6 @@ msgstr "Időzítő"
 msgctxt "#31010"
 msgid "General main menu settings"
 msgstr "Általános főmenü beállítások"
-
-msgctxt "#31011"
-msgid "RottenTomatoes Trailers"
-msgstr "RottenTomatoes bemutatók"
 
 msgctxt "#31012"
 msgid "Add group"
@@ -68,18 +60,6 @@ msgstr "Élő TV"
 msgctxt "#31018"
 msgid "Big covers"
 msgstr "Nagy borítók"
-
-msgctxt "#31019"
-msgid "Channel4 News"
-msgstr "Channel4 hírek"
-
-msgctxt "#31020"
-msgid "Extras"
-msgstr "Extra"
-
-msgctxt "#31021"
-msgid "Search TOFU for"
-msgstr "Keresés az TOFU vel"
 
 msgctxt "#31022"
 msgid "Music - Files"
@@ -113,17 +93,9 @@ msgctxt "#31029"
 msgid "Showcase2"
 msgstr "Képborító2"
 
-msgctxt "#31030"
-msgid "Change info labels"
-msgstr "Infó címkék változtatása"
-
 msgctxt "#31032"
 msgid "Nothing"
 msgstr "Semmi"
-
-msgctxt "#31033"
-msgid "Play item on startup"
-msgstr "Elem lejátszása indításkor"
 
 msgctxt "#31034"
 msgid "Move tooltip to top bar"
@@ -132,18 +104,6 @@ msgstr "Buburéktipp mozgatása felülre"
 msgctxt "#31035"
 msgid "Conditional weather"
 msgstr "Időjárás kondíciók"
-
-msgctxt "#31036"
-msgid "Breadcrumbs classic"
-msgstr "Breadcrumbs eredeti"
-
-msgctxt "#31037"
-msgid "Default breadcrumbs"
-msgstr "Alap Breadcrumbs"
-
-msgctxt "#31038"
-msgid "Classic top panels"
-msgstr "Eredeti felső panel"
 
 msgctxt "#31039"
 msgid "CD-Wall"
@@ -177,14 +137,6 @@ msgctxt "#31048"
 msgid "Visualization presets"
 msgstr "Vizualizáció altípus"
 
-msgctxt "#31053"
-msgid "Fullscreen"
-msgstr "Teljes képernyő"
-
-msgctxt "#31054"
-msgid "Shadow"
-msgstr "Árnyék"
-
 msgctxt "#31055"
 msgid "Open playlist"
 msgstr "Lejátszáslista megnyitása"
@@ -217,10 +169,6 @@ msgctxt "#31063"
 msgid "Choose style"
 msgstr "Stílus választás"
 
-msgctxt "#31064"
-msgid "Press SELECT for alternative layout"
-msgstr "Nyomd a Választ gombot másik összeállításhoz "
-
 msgctxt "#31065"
 msgid "Info"
 msgstr "Info"
@@ -249,22 +197,6 @@ msgctxt "#31072"
 msgid "System info"
 msgstr "Rendszer info"
 
-msgctxt "#31073"
-msgid "Actor information"
-msgstr "Szereplő infó"
-
-msgctxt "#31074"
-msgid "Filmography"
-msgstr "Filmtörténet"
-
-msgctxt "#31075"
-msgid "Press SELECT to switch between now/next EPG"
-msgstr "Nyomd a Select gombot a most/következő közti váltáshoz az EPG-n"
-
-msgctxt "#31080"
-msgid "Director information"
-msgstr "Rendező infó"
-
 msgctxt "#31081"
 msgid "Latest MusicVids"
 msgstr "Legutóbbi Zenevideók"
@@ -281,10 +213,6 @@ msgctxt "#31084"
 msgid "Panels"
 msgstr "Panelek"
 
-msgctxt "#31085"
-msgid "Light"
-msgstr "Könnyű"
-
 msgctxt "#31086"
 msgid "ClearART"
 msgstr "ClearART"
@@ -293,17 +221,9 @@ msgctxt "#31087"
 msgid "Randomize All"
 msgstr "Véletlenszerű"
 
-msgctxt "#31088"
-msgid "Use color for all areas"
-msgstr "A szín használata minden helyhez"
-
 msgctxt "#31089"
 msgid "Both"
 msgstr "Mindkettő"
-
-msgctxt "#31090"
-msgid "Adjust Transparency"
-msgstr "Átlátszóság beállítása"
 
 msgctxt "#31091"
 msgid "Random MusicVids"
@@ -313,10 +233,6 @@ msgctxt "#31092"
 msgid "Artist fanart (Extrafanart, fanart.jpg, default fanart)"
 msgstr "Előadó fanart (Extrafanart, fanart.jpg,alap fanart)"
 
-msgctxt "#31093"
-msgid "Actors born today"
-msgstr "Az előadó ma született"
-
 msgctxt "#31094"
 msgid "Widget fanart"
 msgstr "Widget Fanart"
@@ -325,10 +241,6 @@ msgctxt "#31095"
 msgid "Rating"
 msgstr "Pontszám"
 
-msgctxt "#31096"
-msgid "Search on YouTube"
-msgstr "Keresés a YouTube-on"
-
 msgctxt "#31097"
 msgid "Classic OSD style"
 msgstr "Klasszikus OSD stílus"
@@ -336,10 +248,6 @@ msgstr "Klasszikus OSD stílus"
 msgctxt "#31098"
 msgid "Background path"
 msgstr "Háttér elérési út"
-
-msgctxt "#31099"
-msgid "Top bar style"
-msgstr "Felső sáv stílusa"
 
 msgctxt "#31102"
 msgid "Background"
@@ -381,10 +289,6 @@ msgctxt "#31111"
 msgid "Recording"
 msgstr "Felvétel"
 
-msgctxt "#31112"
-msgid "Coloured"
-msgstr "Színes"
-
 msgctxt "#31113"
 msgid "Single Image"
 msgstr "Egyetlen Kép"
@@ -401,53 +305,13 @@ msgctxt "#31116"
 msgid "Show"
 msgstr "Bemutató"
 
-msgctxt "#31117"
-msgid "CNN International"
-msgstr "CNN International"
-
-msgctxt "#31118"
-msgid "Radio 105"
-msgstr "Radio 105"
-
-msgctxt "#31119"
-msgid "Radio Montecarlo"
-msgstr "Radio Montecarlo"
-
-msgctxt "#31120"
-msgid "Tom & Jerry"
-msgstr "Tom & Jerry"
-
-msgctxt "#31121"
-msgid "Virgin Music"
-msgstr "Virgin Music"
-
 msgctxt "#31127"
 msgid "Lyrics add-on"
 msgstr "Dalszöveg kiegészítő"
 
-msgctxt "#31128"
-msgid "Lyrics"
-msgstr "Dalszöveg"
-
-msgctxt "#31129"
-msgid "Video Stream"
-msgstr "Film adatfolyam"
-
-msgctxt "#31130"
-msgid "Subtitle add-on"
-msgstr "Felirat kiegészítő"
-
 msgctxt "#31143"
 msgid "Animated fanart in music visualization"
 msgstr "Fanart animáció, a zenei vizualizációnál"
-
-msgctxt "#31148"
-msgid "Show timepanel"
-msgstr "Időpanelt mutat"
-
-msgctxt "#31149"
-msgid "This will shutdown TOFU! [CR]Are you sure?"
-msgstr "Ez bezárja TOFU-t! [CR]Ezt akarod?"
 
 msgctxt "#31150"
 msgid "Landscape"
@@ -485,10 +349,6 @@ msgctxt "#31166"
 msgid "Infopanel"
 msgstr "Infópanel"
 
-msgctxt "#31167"
-msgid "Playlists for Widget 2"
-msgstr "Lejátszási lista a 2-es Widgethez"
-
 msgctxt "#31168"
 msgid "No CoverFlow"
 msgstr "Nincs CoverFlow"
@@ -525,14 +385,6 @@ msgctxt "#31176"
 msgid "General options"
 msgstr "Általános opciók"
 
-msgctxt "#31177"
-msgid "Random color mode"
-msgstr "Napszak alapú szín választása"
-
-msgctxt "#31178"
-msgid "Choose main color"
-msgstr "Színválasztás"
-
 msgctxt "#31179"
 msgid "Disable media menu and hide options in video info"
 msgstr "Média menü és film infó tiltása"
@@ -540,10 +392,6 @@ msgstr "Média menü és film infó tiltása"
 msgctxt "#31180"
 msgid "Hide options in media menu"
 msgstr "Média menü opciók elrejtése"
-
-msgctxt "#31181"
-msgid "Activate 'Glow Mode'"
-msgstr "'Ragyogás' aktiválása"
 
 msgctxt "#31182"
 msgid "Colored"
@@ -581,10 +429,6 @@ msgctxt "#31191"
 msgid "Use as icon"
 msgstr "Ikonként használ"
 
-msgctxt "#31192"
-msgid "Choose font color"
-msgstr "Betűszín választása"
-
 msgctxt "#31194"
 msgid "Delayed"
 msgstr "Késleltet"
@@ -601,45 +445,9 @@ msgctxt "#31198"
 msgid "Extrathumbs"
 msgstr "Extra-miniképek"
 
-msgctxt "#31199"
-msgid "News"
-msgstr "Újdonságok"
-
-msgctxt "#31200"
-msgid "TOFU Cinema"
-msgstr "TOFU Filmek"
-
-msgctxt "#31201"
-msgid "TOFU Trailer"
-msgstr "TOFU Bemutatók"
-
-msgctxt "#31202"
-msgid "DailyMotion"
-msgstr "DailyMotion"
-
-msgctxt "#31203"
-msgid "YouTube User Uploads"
-msgstr "Youtube felhasználók által feltöltve"
-
-msgctxt "#31204"
-msgid "YouTube User Favorites"
-msgstr "Youtube felhasználók kedvencei"
-
-msgctxt "#31205"
-msgid "Youtube Most Viewed"
-msgstr "Youtube , legtöbbször nézett"
-
-msgctxt "#31206"
-msgid "Youtube Most Popular"
-msgstr "Youtube , legtöbbek kedvence"
-
 msgctxt "#31220"
 msgid "Random episodes"
 msgstr "Kiemelt részek"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "Alapérték"
 
 msgctxt "#31222"
 msgid "Random movies"
@@ -664,10 +472,6 @@ msgstr "Vertikális"
 msgctxt "#31229"
 msgid "Horizontal"
 msgstr "Horizontális"
-
-msgctxt "#31230"
-msgid "Viewtypes"
-msgstr "Nézettípusok"
 
 msgctxt "#31231"
 msgid "Navigation"
@@ -729,18 +533,6 @@ msgctxt "#31255"
 msgid "Blu-ray Disc"
 msgstr "Blu-Ray lemez"
 
-msgctxt "#31256"
-msgid "Include already watched Items?"
-msgstr "A nézett elemekkel együtt?"
-
-msgctxt "#31265"
-msgid "Smaller pop-up dialogs"
-msgstr "Kisebb Pop-up Dialógok"
-
-msgctxt "#31269"
-msgid "Enable background effect [I](Can increase CPU usage!)   [/I]"
-msgstr "Háttér Effekt engedélyezése[I](Magasabb processzor használat!) [/I]"
-
 msgctxt "#31271"
 msgid "Posters"
 msgstr "Poszterek"
@@ -752,10 +544,6 @@ msgstr "Áttekintés"
 msgctxt "#31279"
 msgid "Play trailers in fullscreen"
 msgstr "Filmbemutatók teljes képernyőn"
-
-msgctxt "#31281"
-msgid "Show video info when player is paused"
-msgstr "Filminfó mutatása \"Pillanat állj\" -nál"
 
 msgctxt "#31282"
 msgid "Clear Cases"
@@ -792,10 +580,6 @@ msgstr "Megtart"
 msgctxt "#31295"
 msgid "Widget"
 msgstr "Widget"
-
-msgctxt "#31298"
-msgid "Set area color"
-msgstr "Színkiemelés beállítása"
 
 msgctxt "#31299"
 msgid "Data provider"
@@ -837,30 +621,6 @@ msgctxt "#31326"
 msgid "Most played albums"
 msgstr "Legtöbbet játszott albumok"
 
-msgctxt "#31327"
-msgid "Most played ROMs"
-msgstr "Legtöbbet játszott ROM-ok"
-
-msgctxt "#31329"
-msgid "In-progress TV Shows"
-msgstr "Folyamatban levő sorozatok"
-
-msgctxt "#31330"
-msgid "Random music"
-msgstr "Véletlen zenék"
-
-msgctxt "#31331"
-msgid "Latest Music"
-msgstr "Utóbbi zenék"
-
-msgctxt "#31332"
-msgid "Play Video"
-msgstr "Film lejátszás"
-
-msgctxt "#31333"
-msgid "Recent"
-msgstr "Jelenlegi"
-
 msgctxt "#31334"
 msgid "Latest"
 msgstr "Frissebbek"
@@ -897,10 +657,6 @@ msgctxt "#31356"
 msgid "Download Subtitles"
 msgstr "Felirat letöltése"
 
-msgctxt "#31357"
-msgid "Mixed info"
-msgstr "Kevert információ"
-
 msgctxt "#31358"
 msgid "System info"
 msgstr "Rendszerinfó"
@@ -908,10 +664,6 @@ msgstr "Rendszerinfó"
 msgctxt "#31359"
 msgid "Latest albums"
 msgstr "Legutóbbi albumok"
-
-msgctxt "#31360"
-msgid "Upcoming"
-msgstr "Következő"
 
 msgctxt "#31362"
 msgid "Rounded covers"
@@ -957,10 +709,6 @@ msgctxt "#31383"
 msgid "Backdrop"
 msgstr "Háttér"
 
-msgctxt "#31387"
-msgid "Darken"
-msgstr "Sötétebb"
-
 msgctxt "#31388"
 msgid "Floor label"
 msgstr "Alsó-sáv:"
@@ -1004,10 +752,6 @@ msgstr "[B]HÁLÓZATI BEÁLLÍTÁSOK[/B][CR][CR]TOFU távoli vezérlésének be�
 msgctxt "#31406"
 msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]RENDSZERBEÁLLÍTÁSOK[/B][CR][CR]Kijelzők beállítása, kalibrálása · Hangkimenet konfigurálása · Távkapcsoló beállítása[CR]Energiagazdálkodási lehetőségek · Hibakeresés bekapcsolása[CR]"
-
-msgctxt "#31407"
-msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the TOFU+ skin · Customize the home menu · Adjust the skin colors[CR]Change skin backgrounds"
-msgstr "[B]FELSZÍN BEÁLLÍTÁSOK[/B][CR][CR]Az TOFU+ felszín beállítása · Sajátképernyő elemek hozzáadása/elvétele[CR]Felszín háttereinek megváltoztatása"
 
 msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from pivos.com[CR]Modify Add-on settings"
@@ -1101,10 +845,6 @@ msgctxt "#31483"
 msgid "Show icon label"
 msgstr "Ikoncímke mutatása"
 
-msgctxt "#31484"
-msgid "Play trailer"
-msgstr "Bemutató lejátszása"
-
 msgctxt "#31500"
 msgid "Pictures"
 msgstr "Képek"
@@ -1125,10 +865,6 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "Videók"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "Programok"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "Beállítás"
@@ -1136,10 +872,6 @@ msgstr "Beállítás"
 msgctxt "#31507"
 msgid "Add-Ons"
 msgstr "Kiegészítők"
-
-msgctxt "#31508"
-msgid "Shutdown"
-msgstr "Kikapcsolás"
 
 msgctxt "#31509"
 msgid "Favorites"
@@ -1149,10 +881,6 @@ msgctxt "#31510"
 msgid "Weather"
 msgstr "Időjárás"
 
-msgctxt "#31511"
-msgid "Play Disc"
-msgstr "Lemez lejátszása"
-
 msgctxt "#31600"
 msgid "Main menu item customizer (backgrounds,widgets)"
 msgstr "Főmenü testreszabása(hátterek, widgetek)"
@@ -1160,14 +888,6 @@ msgstr "Főmenü testreszabása(hátterek, widgetek)"
 msgctxt "#31601"
 msgid "CDWall"
 msgstr "CD Háttér"
-
-msgctxt "#31602"
-msgid "Choose main menu style"
-msgstr "Főmenü stílus kiválasztása"
-
-msgctxt "#31610"
-msgid "Set area color for Home window"
-msgstr "Saját szín választása a menühöz"
 
 msgctxt "#31611"
 msgid "Fullscreen video"
@@ -1181,10 +901,6 @@ msgctxt "#31613"
 msgid "Enable custom startup focus position of main menu"
 msgstr "Indításkor a főmenü fókusz helyzetének megjegyzése"
 
-msgctxt "#31614"
-msgid "CDArt Manager"
-msgstr "CDArt rendező"
-
 msgctxt "#31615"
 msgid "Audio visualization"
 msgstr "Zenei vizualizáció"
@@ -1193,25 +909,13 @@ msgctxt "#31616"
 msgid "Low"
 msgstr "Alacsony"
 
-msgctxt "#31617"
-msgid "High"
-msgstr "Magas"
-
 msgctxt "#31619"
 msgid "Fullscreen video options"
 msgstr "Teljes képernyős opciók"
 
-msgctxt "#31620"
-msgid "Add to icon panel"
-msgstr "Az ikonpanelhez ad"
-
 msgctxt "#31621"
 msgid "Use Alaska paused label for video OSD"
 msgstr "Használd az 'ALASZKA' pillanat állj feliratot a film OSD-n"
-
-msgctxt "#31622"
-msgid "Label"
-msgstr "Címke"
 
 msgctxt "#31623"
 msgid "Slot"
@@ -1224,10 +928,6 @@ msgstr "OSD lejátszógombok elrejtése"
 msgctxt "#31628"
 msgid "Current position"
 msgstr "Jelenlegi helyzet"
-
-msgctxt "#31629"
-msgid "Channels"
-msgstr "Csatornák"
 
 msgctxt "#31630"
 msgid "Custom"
@@ -1249,10 +949,6 @@ msgctxt "#31634"
 msgid "Main Menu"
 msgstr "Főmenü"
 
-msgctxt "#31635"
-msgid "Similar Artists"
-msgstr "Ugyanazon előadók"
-
 msgctxt "#31636"
 msgid "Rotating"
 msgstr "Forgatás"
@@ -1260,10 +956,6 @@ msgstr "Forgatás"
 msgctxt "#31637"
 msgid "Video OSD Settings"
 msgstr "Video osd helyzet"
-
-msgctxt "#31638"
-msgid "Show 'Next Aired' info"
-msgstr "A\"Következő sugárzott\" infó mutatása"
 
 msgctxt "#31639"
 msgid "Hide video thumb on info screen"
@@ -1288,14 +980,6 @@ msgstr "Ikon panel rendező"
 msgctxt "#31645"
 msgid "Background Setup"
 msgstr "Háttér beállítás"
-
-msgctxt "#31646"
-msgid "Do you want to download all available [CR]artwork without user interaction?"
-msgstr "Szeretnél letölteni minden lehetséges letölthető [CR]artworkot beavatkozás nélkül?"
-
-msgctxt "#31673"
-msgid "Most Played ROMs"
-msgstr "Legtöbbet játszott ROM-ok"
 
 msgctxt "#31674"
 msgid "Switch panel layout"
@@ -1345,10 +1029,6 @@ msgctxt "#31685"
 msgid "Classic"
 msgstr "Klasszikus"
 
-msgctxt "#31686"
-msgid "Nox"
-msgstr "Nox"
-
 msgctxt "#31687"
 msgid "Furniture settings"
 msgstr "Kinézet beállítás"
@@ -1357,10 +1037,6 @@ msgctxt "#31688"
 msgid "Disable timepanel"
 msgstr "Időpanel tiltása"
 
-msgctxt "#31689"
-msgid "Disable library stats"
-msgstr "Könyvtár statisztikák tiltása"
-
 msgctxt "#31690"
 msgid "Disable rss panel"
 msgstr "RSS panel tiltása"
@@ -1368,10 +1044,6 @@ msgstr "RSS panel tiltása"
 msgctxt "#31691"
 msgid "Toggle position"
 msgstr "Pozició"
-
-msgctxt "#31692"
-msgid "Shorter time and library stats panel"
-msgstr "Rövidebb idő, és könyvtár statisztikák panel"
 
 msgctxt "#31694"
 msgid "Fixed list"
@@ -1388,10 +1060,6 @@ msgstr "Alternatív nézet"
 msgctxt "#31697"
 msgid "Choose cover type"
 msgstr "Válassz borító típust"
-
-msgctxt "#31698"
-msgid "Show list of actors/artists birthdays"
-msgstr "Előadók születésnapjának listája"
 
 msgctxt "#31699"
 msgid "Smaller main menu"
@@ -1429,10 +1097,6 @@ msgctxt "#31708"
 msgid "Background Customizer"
 msgstr "Háttér testreszabás"
 
-msgctxt "#31709"
-msgid "Set Delay"
-msgstr "Késleltetést beállít"
-
 msgctxt "#31710"
 msgid "Show ExtraFanart"
 msgstr "Extrafanartot mutat"
@@ -1448,10 +1112,6 @@ msgstr "Ajánlott zenei videók"
 msgctxt "#31714"
 msgid "Video Library Node"
 msgstr "Filmkönyvtár"
-
-msgctxt "#31715"
-msgid "Smart Playlist Manager"
-msgstr "Smart lejátszási lista rendező"
 
 msgctxt "#31716"
 msgid "Default Sets"
@@ -1485,10 +1145,6 @@ msgctxt "#31723"
 msgid "Default Settings Items"
 msgstr "Alap beállítás elemek"
 
-msgctxt "#31724"
-msgid "Default Shutdown Items"
-msgstr "Alap kikapcsolás elemek"
-
 msgctxt "#31725"
 msgid "Default PVR Items"
 msgstr "Alap PVR elemek"
@@ -1497,21 +1153,9 @@ msgctxt "#31726"
 msgid "Default Video Items"
 msgstr "Alap video elemek"
 
-msgctxt "#31727"
-msgid "Remaining Cities"
-msgstr "Hátralevő várorsok"
-
-msgctxt "#31728"
-msgid "Show Cities"
-msgstr "Városok mutatása"
-
 msgctxt "#31729"
 msgid "Move NowPlaying widget to bottom"
 msgstr "Most játszott widgetet alulra mozgat"
-
-msgctxt "#31730"
-msgid "Script features"
-msgstr "Script jellemzők"
 
 msgctxt "#31731"
 msgid "Skin Settings"
@@ -1528,34 +1172,6 @@ msgstr "Dalválasztás"
 msgctxt "#31734"
 msgid "Use QuickList instead of default shutdown menu"
 msgstr "Gyorslista használata a kikapcsolás menü helyett"
-
-msgctxt "#31735"
-msgid "[B]CREDITS TO:[/B]"
-msgstr "[B]Köszönet:[/B]"
-
-msgctxt "#31736"
-msgid "[B]N.O.W.A.L.L.[/B] for creating Artwork"
-msgstr "[B]N.O.W.A.L.L.-nak[/B] a képek készítéséért"
-
-msgctxt "#31737"
-msgid "[B]Fional88[/B] for creating the tutorial videos"
-msgstr "[B]Fional88-nak[/B] a bemutató videókért"
-
-msgctxt "#31738"
-msgid "[B]www.webdesignerdepot.com[/B] for permission to include the iconpack \"Reflection\""
-msgstr "[B]a www.webdesignerdepot.com-nak[/B] az engedélyért a  \"Reflection\" ikonok használatához"
-
-msgctxt "#31739"
-msgid "[B]DJH_ [/B]for creating Aeon, [B]Jezz_X [/B]for creating Confluence, [B]black[/B] for creating Xperience1080"
-msgstr "[B]DJH_ -nak[/B] az Aeon, [B]Jezz_X -nek[/B] a Confluence, [B]black-nak[/B] az Xperience1080 skin készítőinek"
-
-msgctxt "#31740"
-msgid "Translators: [B]CutSickAss[/B], [B]epoke[/B], [B]frodo19[/B], [B]mindweaver[/B], [B]Passer[/B], [B]PatOso[/B], [B]peppe_sr[/B], [B]Rififi77[/B][CR][B]Roman_V_M[/B], [B]lijack[/B]"
-msgstr "Fordítók: [B]CutSickAss[/B], [B]epoke[/B], [B]Frodo[/B], [B]mindweaver[/B], [B]Passer[/B], [B]PatOso[/B], [B]peppe_sr[/B], [B]Rififi77[/B][CR][B]Roman_V_M[/B], [B]lijack[/B]"
-
-msgctxt "#31741"
-msgid "[CR]Also to: [B]Martijn[/B], [B]Deano316[/B], [B]defluo[/B], [B]fmronan[/B], [B]thrak76[/B], [B]xhaggi[/B] and [CR]all other people who contributed to this project"
-msgstr "[CR]És még: [B]Martijn[/B], [B]Deano316[/B], [B]defluo[/B], [B]fmronan[/B], [B]thrak76[/B], [B]xhaggi[/B], és  [CR] mindenkinek a projektben részt vesz."
 
 msgctxt "#31800"
 msgid "Fade background in visualisation"
@@ -1577,10 +1193,6 @@ msgctxt "#31804"
 msgid "Panel"
 msgstr "Panel"
 
-msgctxt "#31807"
-msgid "Choose Icon"
-msgstr "Ikon választás"
-
 msgctxt "#31808"
 msgid "Exchange Position"
 msgstr "Pozició csere"
@@ -1592,10 +1204,6 @@ msgstr "Zenei vizualizácó beállítása"
 msgctxt "#31810"
 msgid "Show ClearArt instead of Logo"
 msgstr "ClearArtot mutat Logo helyett"
-
-msgctxt "#31811"
-msgid "Use Alt Floor"
-msgstr "Régi alsósáv használata"
 
 msgctxt "#31812"
 msgid "Show CDArt"
@@ -1609,33 +1217,13 @@ msgctxt "#31814"
 msgid "Always show Submenu"
 msgstr "Almenü mutatása mindig"
 
-msgctxt "#31815"
-msgid "Latest Pics"
-msgstr "Legutóbbi képek"
-
-msgctxt "#31816"
-msgid "Random Pics"
-msgstr "Véletlen képek"
-
 msgctxt "#31817"
 msgid "Random Artists"
 msgstr "Véletlen előadók"
 
-msgctxt "#31818"
-msgid "Near Concerts"
-msgstr "Közeli koncertek"
-
 msgctxt "#31819"
 msgid "Next Aired"
 msgstr "Következő sugárzott"
-
-msgctxt "#31820"
-msgid "Daily Babes"
-msgstr "Napi csajok"
-
-msgctxt "#31823"
-msgid "World Map + Icons"
-msgstr "Világtérkép ikonokkal"
 
 msgctxt "#31824"
 msgid "Live DVD cases"
@@ -1697,14 +1285,6 @@ msgctxt "#31839"
 msgid "Restart TOFU"
 msgstr "TOFU újraindítása"
 
-msgctxt "#31840"
-msgid "Random Movie (Genre)"
-msgstr "Véletlen filmek (műfaj)"
-
-msgctxt "#31841"
-msgid "Random Movie"
-msgstr "Véletlen filmek"
-
 msgctxt "#31842"
 msgid "Movies (Cinema Exp.)"
 msgstr "Filmek (Cinema Exp.)"
@@ -1720,10 +1300,6 @@ msgstr "Film-médiatár tisztítása"
 msgctxt "#31845"
 msgid "Movie Sets"
 msgstr "Movie Szettek"
-
-msgctxt "#31846"
-msgid "Around the world"
-msgstr "Világszerte"
 
 msgctxt "#31847"
 msgid "Video Files"
@@ -1753,10 +1329,6 @@ msgctxt "#31854"
 msgid "PVR Area"
 msgstr "PVR "
 
-msgctxt "#31855"
-msgid "Featured Area"
-msgstr "Kiemelt hely"
-
 msgctxt "#31856"
 msgid "NowPlaying"
 msgstr "Most játszott"
@@ -1781,10 +1353,6 @@ msgctxt "#31863"
 msgid "Two Columns"
 msgstr "Két oszlop"
 
-msgctxt "#31864"
-msgid "Show Widgets"
-msgstr "Widgetet mutat"
-
 msgctxt "#31865"
 msgid "WakeOnLAN"
 msgstr "Lanon keresztül ébresztés"
@@ -1801,18 +1369,6 @@ msgctxt "#31868"
 msgid "Enter MAC Address"
 msgstr "Mac cím megadása"
 
-msgctxt "#31869"
-msgid "Online Video Help"
-msgstr "Online videó segítség"
-
-msgctxt "#31870"
-msgid "Help"
-msgstr "Segítség"
-
-msgctxt "#31871"
-msgid "Available at Passion-XBMC repository"
-msgstr "A Passion-XBMC repository-ban található"
-
 msgctxt "#31872"
 msgid "Mixed Movies"
 msgstr "Kevert filmek"
@@ -1824,10 +1380,6 @@ msgstr "Kevert sorozatok"
 msgctxt "#31874"
 msgid "Mixed Music"
 msgstr "Kevert zenék"
-
-msgctxt "#31875"
-msgid "No Content for this Area"
-msgstr "Nincs elem ezen a helyen"
 
 msgctxt "#31876"
 msgid "Appearance Setup"
@@ -1849,14 +1401,6 @@ msgctxt "#31882"
 msgid "Disable option to hide widgets by pressing \"Back\""
 msgstr "Widget elrejtése a vissza gombbal, opció kikapcsolása"
 
-msgctxt "#31885"
-msgid "Area-specific Options"
-msgstr "Hely specifikus opciók"
-
-msgctxt "#31886"
-msgid "Search Trailer on Youtube"
-msgstr "Bemutató keresése a Youtube-on"
-
 msgctxt "#31888"
 msgid "PRESS ANY KEY"
 msgstr "Nyomj egy gombot"
@@ -1865,29 +1409,9 @@ msgctxt "#31889"
 msgid "Next Tracks"
 msgstr "Új Számok"
 
-msgctxt "#31890"
-msgid "Collections"
-msgstr "Gyűjtemények"
-
-msgctxt "#31891"
-msgid "Folders"
-msgstr "Mappák"
-
-msgctxt "#31892"
-msgid "Categories"
-msgstr "Kategóriák"
-
-msgctxt "#31895"
-msgid "No library content for this media type"
-msgstr "Nincsenek elemek ehhez a média típushoz"
-
 msgctxt "#31896"
 msgid "10 Day"
 msgstr "10 Napos"
-
-msgctxt "#31897"
-msgid "Press DOWN for extended info"
-msgstr "Nyomd a LE gombot több infóért"
 
 msgctxt "#31898"
 msgid "Visibility"
@@ -1913,18 +1437,6 @@ msgctxt "#31905"
 msgid "Needs script.cinema.experience to be available"
 msgstr "A script.cinema.experience kell a használatához"
 
-msgctxt "#31906"
-msgid "Needs script.randommovie to be available"
-msgstr "A script.randommovie kell a használatához"
-
-msgctxt "#31909"
-msgid "Bar Style"
-msgstr "Szalag stílusa"
-
-msgctxt "#31910"
-msgid "This feature requires the ColorPicker add-on"
-msgstr "Ehhez a ColorPicker kiegészítő kell"
-
 msgctxt "#31911"
 msgid "Updating add-on repos"
 msgstr "Kiegészítő tárolóhely frissítése"
@@ -1940,10 +1452,6 @@ msgstr "Kattints a az elérhető opciókhoz"
 msgctxt "#31914"
 msgid "Click on menu items to see available options"
 msgstr "Kattints a menü elemeken az elérhető opciókhoz"
-
-msgctxt "#31915"
-msgid "Play some Music to get live Preview of Settings"
-msgstr "Néhány zene lejátszása az élő előnézet beállításhoz"
 
 msgctxt "#31916"
 msgid "Needs \"Additional Artist Info\" activated in Artistslideshow Plugin"
@@ -1997,10 +1505,6 @@ msgctxt "#31954"
 msgid "Function"
 msgstr "Funkciók"
 
-msgctxt "#31955"
-msgid "Activate Bottom Menu (Play DVD, toggle widgets)"
-msgstr "Alsó menü aktiválása (DVD lejátszása, widgetek stb.)"
-
 msgctxt "#31956"
 msgid "Choose Type"
 msgstr "Típus választás"
@@ -2020,14 +1524,6 @@ msgstr "Ikon"
 msgctxt "#31960"
 msgid "Set icon"
 msgstr "Ikon kiválasztása"
-
-msgctxt "#31961"
-msgid "Set up 'Featured' window appearance"
-msgstr "Kiemelt ablak beállítása"
-
-msgctxt "#31962"
-msgid "Set up 'Settings' window appearance"
-msgstr "Beállítások ablak beállítása"
 
 msgctxt "#31963"
 msgid "Fallback settings"

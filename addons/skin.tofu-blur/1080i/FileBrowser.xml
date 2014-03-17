@@ -33,18 +33,20 @@
 				</control>
 				<control type="label" id="412">
 					<posx>1226</posx>
-					<posy>810</posy>
+					<posy>800</posy>
 					<width>579</width>
 					<height>60</height>
 					<align>center</align>
 					<font>Font_Reg26</font>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 				</control>
 				<control type="label" id="411">
 					<posx>1226</posx>
-					<posy>900</posy>
+					<posy>170</posy>
 					<width>579</width>
 					<align>center</align>
 					<font>Font_Reg40</font>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 				</control>
 			</control>
 			<control type="image">
@@ -54,17 +56,6 @@
 				<height>880</height>
 				<texture border="5">panel.png</texture>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-			</control>
-			<control type="scrollbar" id="60">
-				<posx>1197</posx>
-				<posy>158</posy>
-				<width>40</width>
-				<height>728</height>
-				<include>Animation_VerticalScrollBar</include>
-				<onup>60</onup>
-				<ondown>60</ondown>
-				<onleft>451</onleft>
-				<onright>413</onright>
 			</control>
 			<control type="list" id="450">
 				<posx>102</posx>
@@ -91,6 +82,7 @@
 						<height>61</height>
 						<font>Font_Reg30_2</font>
 						<info>ListItem.Label</info>
+						<textcolor>grey</textcolor>
 					</control>
 					<control type="label">
 						<posx>1041</posx>
@@ -99,6 +91,7 @@
 						<align>right</align>
 						<font>Font_Reg30_2</font>
 						<info>ListItem.Label2</info>
+						<textcolor>$VAR[FontColorVar]</textcolor>
 					</control>
 					<control type="image">
 						<posx>1032</posx>
@@ -120,7 +113,7 @@
 						<posx>0</posx>
 						<width>1117</width>
 						<height>61</height>
-						<texture border="3">list-focus.png</texture>
+						<texture border="3,0,0,20">list-focus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<animation effect="fade" start="100" end="50" time="160" condition="!Control.HasFocus(450)">Conditional</animation>
 					</control>
@@ -173,6 +166,7 @@
 						<height>61</height>
 						<font>Font_Reg30_2</font>
 						<info>ListItem.Label</info>
+						<textcolor>grey</textcolor>
 					</control>
 					<control type="label">
 						<posx>1041</posx>
@@ -181,6 +175,7 @@
 						<align>right</align>
 						<font>Font_Reg30_2</font>
 						<info>ListItem.Label2</info>
+						<textcolor>$VAR[FontColorVar]</textcolor>
 					</control>
 					<control type="image">
 						<posx>1032</posx>
@@ -202,7 +197,7 @@
 						<posx>10</posx>
 						<width>1117</width>
 						<height>61</height>
-						<texture border="3">list-focus.png</texture>
+						<texture border="3,0,0,20">list-focus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<animation effect="fade" start="100" end="50" time="160" condition="!Control.HasFocus(451)">Conditional</animation>
 					</control>
@@ -230,11 +225,22 @@
 					</control>
 				</focusedlayout>
 			</control>
+			<control type="scrollbar" id="60">
+				<posx>1197</posx>
+				<posy>158</posy>
+				<width>40</width>
+				<height>728</height>
+				<include>Animation_VerticalScrollBar</include>
+				<onup>60</onup>
+				<ondown>60</ondown>
+				<onleft>451</onleft>
+				<onright>413</onright>
+			</control>
 			<control type="grouplist">
-				<posx>102</posx>
-				<posy>898</posy>
+				<posx>120</posx>
+				<posy>920</posy>
 				<width>1117</width>
-				<height>100</height>
+				<height>50</height>
 				<onleft>451</onleft>
 				<onright>451</onright>
 				<onup>451</onup>
@@ -242,54 +248,51 @@
 				<scrolltime tween="quadratic">200</scrolltime>
 				<orientation>horizontal</orientation>
 				<control type="button" id="413">
-					<width>279</width>
-					<height>91</height>
-					<textoffsety>16</textoffsety>
+					<width>270</width>
+					<height>50</height>
 					<align>center</align>
-					<aligny>top</aligny>
-					<texturefocus border="3">button-focus2.png</texturefocus>
-					<texturenofocus border="3">-</texturenofocus>
+					<textcolor>grey</textcolor>
+					<texturefocus border="3">button-focus.png</texturefocus>
+					<texturenofocus border="3">button-nofocus.png</texturenofocus>
 					<label>186</label>
-					<font>Font_Reg38</font>
+					<font>Font_Reg30</font>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				</control>
 				<control type="button" id="414">
-					<width>279</width>
-					<height>91</height>
-					<textoffsety>16</textoffsety>
+					<width>270</width>
+					<height>50</height>
 					<align>center</align>
-					<aligny>top</aligny>
-					<texturefocus border="3">button-focus2.png</texturefocus>
-					<texturenofocus border="3">-</texturenofocus>
+					<textcolor>grey</textcolor>
+					<texturefocus border="3">button-focus.png</texturefocus>
+					<texturenofocus border="3">button-nofocus.png</texturenofocus>
 					<label>222</label>
-					<font>Font_Reg38</font>
+					<font>Font_Reg30</font>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				</control>
 				<control type="button" id="415">
-					<width>279</width>
-					<height>91</height>
-					<textoffsety>16</textoffsety>
+					<width>270</width>
+					<height>50</height>
 					<align>center</align>
-					<aligny>top</aligny>
-					<texturefocus border="3">button-focus2.png</texturefocus>
-					<texturenofocus border="3">-</texturenofocus>
+					<textcolor>grey</textcolor>
+					<texturefocus border="3">button-focus.png</texturefocus>
+					<texturenofocus border="3">button-nofocus.png</texturenofocus>
 					<label>119</label>
-					<font>Font_Reg38</font>
+					<font>Font_Reg30</font>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				</control>
 				<control type="radiobutton" id="416">
-					<width>279</width>
-					<height>91</height>
-					<textoffsety>16</textoffsety>
-					<align>center</align>
-					<aligny>top</aligny>
-					<texturefocus border="3">button-focus2.png</texturefocus>
-					<texturenofocus border="3">-</texturenofocus>
+					<width>270</width>
+					<height>50</height>
+					<texturefocus border="3">button-focus.png</texturefocus>
+					<texturenofocus border="3">button-nofocus.png</texturenofocus>
 					<label>749</label>
-					<font>Font_Reg38</font>
+					<font>Font_Reg30</font>
+					<textcolor>grey</textcolor>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-					<textureradioon>-</textureradioon>
-					<textureradiooff>-</textureradiooff>
+					<textureradioonfocus>settings/settings_radiobutton-on.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="$VAR[FontColorVar]">settings/settings_radiobutton-on.png</textureradioonnofocus>
+					<textureradioofffocus>settings/settings_radiobutton-off.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="$VAR[FontColorVar]">settings/settings_radiobutton-off.png</textureradiooffnofocus>
 				</control>
 			</control>
 		</control>

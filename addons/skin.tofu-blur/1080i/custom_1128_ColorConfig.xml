@@ -21,7 +21,7 @@
 					<posx>6</posx>
 					<posy>-14</posy>
 					<width>737</width>
-					<height>300</height>
+					<height>330</height>
 					<texture border="5">panel.png</texture>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				</control>
@@ -46,12 +46,14 @@
 				</control>
 				<control type="radiobutton" id="15">
 					<label>$LOCALIZE[31182] $LOCALIZE[31083]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<include>ColorChooserButton</include>
 					<onclick>Skin.ToggleSetting(colortext)</onclick>
 					<selected>Skin.HasSetting(colortext)</selected>
 				</control>
 				<control type="button" id="11">
 					<label>- $LOCALIZE[31976]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<include>ColorChooserButton</include>
 					<onclick>SetProperty(coloritem,fontcolor,1124)</onclick>
 					<onclick>ActivateWindow(1138)</onclick>
@@ -59,12 +61,14 @@
 				</control>
 				<control type="radiobutton" id="16">
 					<label>$LOCALIZE[31182] $LOCALIZE[31084]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<include>ColorChooserButton</include>
 					<onclick>Skin.ToggleSetting(colorpanels)</onclick>
 					<selected>Skin.HasSetting(colorpanels)</selected>
 				</control>
 				<control type="button" id="12">
 					<label>- $LOCALIZE[31976]</label>
+					<textcolor>$VAR[FontColorVar]</textcolor>
 					<include>ColorChooserButton</include>
 					<onclick>SetProperty(coloritem,panelcolor,1124)</onclick>
 					<onclick>ActivateWindow(1138)</onclick>

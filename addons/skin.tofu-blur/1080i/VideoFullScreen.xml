@@ -10,8 +10,7 @@
 				<posy>-465</posy>
 				<width>1920</width>
 				<height>670</height>
-				<texture flipy="true" border="3">panel-bottom.png</texture>
-				<animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+				<texture flipy="true" border="3">panel-top.png</texture>
 				<animation effect="slide" end="0,270" time="160" tween="cubic" condition="VideoPlayer.Content(LiveTV) + System.GetBool(pvrplayback.signalquality)">Conditional</animation>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			</control>

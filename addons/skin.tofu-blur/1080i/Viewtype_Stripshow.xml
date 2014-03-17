@@ -65,6 +65,7 @@
 				<width>930</width>
 				<height>57</height>
 				<label fallback="31006">$INFO[ListItem.Label]</label>
+				<textcolor>$VAR[FontColorVar]</textcolor>
 				<font>Font_Reg28</font>
 			</control>
 		</control>

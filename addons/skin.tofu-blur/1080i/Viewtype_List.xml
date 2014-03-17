@@ -130,6 +130,7 @@
 					<height>40</height>
 					<label>[COLOR $VAR[FontColorVar]]$LOCALIZE[31095]: [/COLOR]$INFO[ListItem.RatingAndVotes]</label>
 					<font>Font_Reg32</font>
+					<textcolor>grey</textcolor>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -142,14 +143,16 @@
 					<height>40</height>
 					<label>[COLOR $VAR[FontColorVar]]$LOCALIZE[180]:[/COLOR] $INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
 					<font>Font_Reg32</font>
+					<textcolor>grey</textcolor>
 				</control>
 			</control>
 			<control type="textbox">
 				<posx>-46</posx>
 				<posy>275</posy>
-				<width>455</width>
+				<width>445</width>
 				<height>396</height>
 				<label fallback="31006">$VAR[InfoWallTextboxVar]</label>
+				<textcolor>grey</textcolor>
 				<font>Font_Reg29</font>
 				<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 			</control>
@@ -226,6 +229,7 @@
 						<height>82</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$VAR[ListImage1Var]</texture>
+						<colordiffuse>grey</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>925</posx>
@@ -243,6 +247,7 @@
 						<height>98</height>
 						<align>center</align>
 						<label>$VAR[ListLabel5Var]</label>
+						<textcolor>grey</textcolor>
 						<font>Font_Bold56</font>
 					</control>
 					<control type="label">
@@ -251,6 +256,7 @@
 						<width>720</width>
 						<height>48</height>
 						<label fallback="..">$VAR[ListLabel1Var]</label>
+						<textcolor>grey</textcolor>
 						<font>Font_Reg38</font>
 					</control>
 					<control type="label">
@@ -268,6 +274,7 @@
 						<height>48</height>
 						<align>center</align>
 						<label>$VAR[ListLabel3Var]</label>
+						<textcolor>grey</textcolor>
 						<font>Font_Info</font>
 						<animation effect="slide" end="26" time="0" condition="Container.Content(songs) + !IsEmpty(ListItem.DiscNumber)">Conditional</animation>
 						<animation effect="slide" end="0,18" time="0" condition="Container.Content(seasons)">Conditional</animation>
@@ -279,6 +286,7 @@
 						<height>36</height>
 						<align>center</align>
 						<label>$INFO[ListItem.Genre]</label>
+						<textcolor>grey</textcolor>
 						<font>Font_Info</font>
 						<visible>Window.IsActive(programs) + !Container.Content(addons)</visible>
 					</control>
@@ -289,6 +297,7 @@
 						<height>27</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$VAR[ListImage2Var]</texture>
+						<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>1072</posx>
@@ -297,7 +306,7 @@
 						<height>45</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$VAR[WatchedIconVar]</texture>
-						<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+						<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 						<visible>!Container.Content(songs)</visible>
 					</control>
 				</itemlayout>
@@ -315,7 +324,7 @@
 						<posy>0</posy>
 						<width>1112</width>
 						<height>100</height>
-						<texture border="3">list-focus.png</texture>
+						<texture border="3,0,0,20">list-focus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<animation effect="fade" start="100" end="25" tween="sine" easing="inout" time="240" condition="!Control.HasFocus(50)">Conditional</animation>
 					</control>
@@ -416,6 +425,7 @@
 						<height>98</height>
 						<font>Font_Reg38</font>
 						<info>ListItem.Label</info>
+						<textcolor>grey</textcolor>
 						<visible>!IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
@@ -424,6 +434,7 @@
 						<height>98</height>
 						<font>Font_Reg38</font>
 						<info>ListItem.Label</info>
+						<textcolor>grey</textcolor>
 						<visible>IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="textbox">
@@ -433,6 +444,7 @@
 						<height>98</height>
 						<align>center</align>
 						<label>$INFO[ListItem.Label2]</label>
+						<textcolor>grey</textcolor>
 						<font>Font_Info</font>
 					</control>
 					<control type="image">
@@ -442,7 +454,7 @@
 						<height>45</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$VAR[WatchedIconVar]</texture>
-						<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+						<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>49</posx>
@@ -450,7 +462,7 @@
 						<width>90</width>
 						<height>90</height>
 						<texture>$VAR[SmallListIconVar,defaulticons/]</texture>
-						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+						<colordiffuse>grey</colordiffuse>
 					</control>
 				</itemlayout>
 				<focusedlayout height="100" condition="!Skin.HasSetting(slimlist)">
@@ -467,7 +479,7 @@
 						<posy>0</posy>
 						<width>1112</width>
 						<height>100</height>
-						<texture border="3">list-focus.png</texture>
+						<texture border="3,0,0,20">list-focus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<animation effect="fade" start="100" end="25" tween="sine" easing="inout" time="240" condition="!Control.HasFocus(50)">Conditional</animation>
 					</control>
@@ -529,6 +541,7 @@
 						<height>60</height>
 						<font>Font_Reg30_2</font>
 						<label>$VAR[SlimListLabel1Var]</label>
+						<textcolor>grey</textcolor>
 					</control>
 					<control type="label">
 						<posx>1041</posx>
@@ -557,7 +570,7 @@
 						<height>45</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$VAR[WatchedIconVar]</texture>
-						<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+						<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>60</posx>
@@ -565,7 +578,7 @@
 						<width>55</width>
 						<height>55</height>
 						<texture>$VAR[SmallListIconVar,defaulticons/]</texture>
-						<colordiffuse>$VAR[DefaultColorVar]</colordiffuse>
+						<colordiffuse>grey</colordiffuse>
 						<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] | Stringcompare(ListItem.Label,..)</visible>
 					</control>
 				</itemlayout>
@@ -583,7 +596,7 @@
 						<posy>0</posy>
 						<width>1112</width>
 						<height>62</height>
-						<texture border="3">list-focus.png</texture>
+						<texture border="3,0,0,20">list-focus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<animation effect="fade" start="100" end="25" tween="sine" easing="inout" time="240" condition="!Control.HasFocus(50)">Conditional</animation>
 					</control>
@@ -641,14 +654,6 @@
 				<ondown>62</ondown>
 				<onleft>50</onleft>
 				<onright>5001</onright>
-			</control>
-			<control type="label" id="161">
-				<posx>158</posx>
-				<posy>954</posy>
-				<width>450</width>
-				<height>62</height>
-				<label>$VAR[ListBottomLabelVar]</label>
-				<font>Font_Reg26</font>
 			</control>
 		</control>
 	</include>

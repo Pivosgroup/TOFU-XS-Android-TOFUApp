@@ -41,10 +41,6 @@ msgctxt "#31017"
 msgid "Live TV"
 msgstr "Živá TV"
 
-msgctxt "#31020"
-msgid "Extras"
-msgstr "Extra"
-
 msgctxt "#31022"
 msgid "Music - Files"
 msgstr "Hudba - Súbory"
@@ -68,10 +64,6 @@ msgstr "PAUZA"
 msgctxt "#31045"
 msgid "Entries"
 msgstr "Plagát"
-
-msgctxt "#31053"
-msgid "Fullscreen"
-msgstr "Celá obrazovka"
 
 msgctxt "#31055"
 msgid "Open playlist"
@@ -108,10 +100,6 @@ msgstr "Späť"
 msgctxt "#31072"
 msgid "System info"
 msgstr "Systémové informácie"
-
-msgctxt "#31085"
-msgid "Light"
-msgstr "slabý(é)"
 
 msgctxt "#31089"
 msgid "Both"
@@ -157,10 +145,6 @@ msgctxt "#31115"
 msgid "Customizer"
 msgstr "Prispôsobenie"
 
-msgctxt "#31128"
-msgid "Lyrics"
-msgstr "Texty skladieb"
-
 msgctxt "#31162"
 msgid "Trailers"
 msgstr "Upútavky na film"
@@ -172,14 +156,6 @@ msgstr "Veľký zoznam"
 msgctxt "#31198"
 msgid "Extrathumbs"
 msgstr "Extra náhľady"
-
-msgctxt "#31199"
-msgid "News"
-msgstr "Noviny"
-
-msgctxt "#31221"
-msgid "Default"
-msgstr "Štandardná"
 
 msgctxt "#31235"
 msgid "Shift"
@@ -313,10 +289,6 @@ msgctxt "#31504"
 msgid "Videos"
 msgstr "Video"
 
-msgctxt "#31505"
-msgid "Programs"
-msgstr "Programy"
-
 msgctxt "#31506"
 msgid "System"
 msgstr "Systém"
@@ -324,10 +296,6 @@ msgstr "Systém"
 msgctxt "#31507"
 msgid "Add-Ons"
 msgstr "Doplnky"
-
-msgctxt "#31508"
-msgid "Shutdown"
-msgstr "Vypnúť"
 
 msgctxt "#31509"
 msgid "Favorites"
@@ -349,18 +317,6 @@ msgctxt "#31616"
 msgid "Low"
 msgstr "Nízka"
 
-msgctxt "#31617"
-msgid "High"
-msgstr "Vysoká"
-
-msgctxt "#31622"
-msgid "Label"
-msgstr "Label"
-
-msgctxt "#31629"
-msgid "Channels"
-msgstr "Kanály"
-
 msgctxt "#31630"
 msgid "Custom"
 msgstr "Vlastné"
@@ -381,25 +337,9 @@ msgctxt "#31853"
 msgid "Music Files"
 msgstr "Hudba Súbory"
 
-msgctxt "#31870"
-msgid "Help"
-msgstr "Nápoveda"
-
 msgctxt "#31889"
 msgid "Next Tracks"
 msgstr "Playlist"
-
-msgctxt "#31890"
-msgid "Collections"
-msgstr "Kolekcie"
-
-msgctxt "#31891"
-msgid "Folders"
-msgstr "Priečinky"
-
-msgctxt "#31892"
-msgid "Categories"
-msgstr "Kategórie"
 
 msgctxt "#31899"
 msgid "Shutdown timer"

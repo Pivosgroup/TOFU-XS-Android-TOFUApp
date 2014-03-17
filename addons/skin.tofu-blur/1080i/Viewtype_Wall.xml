@@ -92,7 +92,7 @@
 				<width>275</width>
 				<height>268</height>
 				<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
-				<texture border="3">list-focus.png</texture>
+				<texture border="3">button-focus.png</texture>
 			</control>
 			<control type="image">
 				<posx>5</posx>
