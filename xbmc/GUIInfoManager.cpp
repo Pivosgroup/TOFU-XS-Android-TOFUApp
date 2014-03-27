@@ -86,6 +86,7 @@
 #include "cores/AudioEngine/Utils/AEUtil.h"
 #include "cores/VideoRenderers/BaseRenderer.h"
 #include "interfaces/info/InfoExpression.h"
+#include <map>
 
 #if defined(TARGET_DARWIN_OSX)
 #include "osx/smc.h"
@@ -105,6 +106,12 @@ using namespace ADDON;
 using namespace PVR;
 using namespace INFO;
 using namespace EPG;
+
+struct app_info
+{
+  std::string title;
+  std::string icon;
+};
 
 CGUIInfoManager::CGUIInfoManager(void) :
     Observable()
@@ -969,6 +976,24 @@ int CGUIInfoManager::TranslateSingleString(const CStdString &strCondition, bool 
           CStdString label = CGUIInfoLabel::GetLabel(param);
           StringUtils::ToLower(label);
           return AddMultiInfo(GUIInfo(SYSTEM_ADDON_VERSION, ConditionalStringParameter(label), 1));
+        }
+        else if (prop.name == "apptitle")
+        {
+          int infoLabel = TranslateSingleString(param, listItemDependent);
+          if (infoLabel > 0)
+            return AddMultiInfo(GUIInfo(SYSTEM_APP_TITLE, infoLabel, 0));
+          CStdString label = CGUIInfoLabel::GetLabel(param);
+          StringUtils::ToLower(label);
+          return AddMultiInfo(GUIInfo(SYSTEM_APP_TITLE, ConditionalStringParameter(label), 1));
+        }
+        else if (prop.name == "appicon")
+        {
+          int infoLabel = TranslateSingleString(param, listItemDependent);
+          if (infoLabel > 0)
+            return AddMultiInfo(GUIInfo(SYSTEM_APP_ICON, infoLabel, 0));
+          CStdString label = CGUIInfoLabel::GetLabel(param);
+          StringUtils::ToLower(label);
+          return AddMultiInfo(GUIInfo(SYSTEM_APP_ICON, ConditionalStringParameter(label), 1));
         }
         else if (prop.name == "idletime")
           return AddMultiInfo(GUIInfo(SYSTEM_IDLE_TIME, atoi(param.c_str())));
@@ -3296,6 +3321,51 @@ CStdString CGUIInfoManager::GetMultiInfoLabel(const GUIInfo &info, int contextWi
       return addon->Icon();
     if (addon && info.m_info == SYSTEM_ADDON_VERSION)
       return addon->Version().c_str();
+  }
+  else if (info.m_info == SYSTEM_APP_TITLE ||
+           info.m_info == SYSTEM_APP_ICON)
+  {
+    static std::map<std::string, app_info>  appMap;
+    std::string                             app_name;
+    app_info*                               appInfo   = NULL;
+
+    if (info.GetData2() == 0)
+      app_name = GetLabel(info.GetData1());
+    else
+      app_name = m_stringParameters[info.GetData1()];
+
+    if (!app_name.empty())
+    {
+      std::map<std::string, app_info>::iterator it;
+      it = appMap.find(app_name);
+      if (it == appMap.end())
+      {
+        CFileItemList  items;
+        CDirectory::GetDirectory("androidapp://sources/apps/", items);
+
+        for (int i = 0; i < items.Size(); i++)
+        {
+          std::string app = URIUtils::GetFileName(items[i]->GetPath());
+          if (app == app_name)
+          {
+            app_info newInfo;
+
+            newInfo.title = items[i]->GetLabel();
+            newInfo.icon  = items[i]->GetArt("thumb");
+            appMap[app]   = newInfo;
+            appInfo       = &appMap[app];
+            break;
+          }
+        }
+      }
+      else
+        appInfo = &(it->second);
+
+      if (info.m_info == SYSTEM_APP_TITLE)
+        return appInfo->title;
+      else if (info.m_info == SYSTEM_APP_ICON)
+        return appInfo->icon;
+    }
   }
   else if (info.m_info == PLAYLIST_LENGTH ||
            info.m_info == PLAYLIST_POSITION ||
