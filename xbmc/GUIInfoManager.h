@@ -414,6 +414,9 @@ namespace INFO
 #define SYSTEM_CAN_HIBERNATE        752
 #define SYSTEM_CAN_REBOOT           753
 
+#define SYSTEM_APP_TITLE            760
+#define SYSTEM_APP_ICON             761
+
 #define SLIDESHOW_ISPAUSED          800
 #define SLIDESHOW_ISRANDOM          801
 #define SLIDESHOW_ISACTIVE          802
