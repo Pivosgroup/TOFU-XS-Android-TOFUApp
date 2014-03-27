@@ -36,6 +36,7 @@
 #include "dialogs/GUIDialogNumeric.h"
 #include "dialogs/GUIDialogProgress.h"
 #include "dialogs/GUIDialogYesNo.h"
+#include "dialogs/GUIDialogSelect.h"
 #include "GUIUserMessages.h"
 #include "windows/GUIWindowLoginScreen.h"
 #include "video/windows/GUIWindowVideoBase.h"
@@ -96,6 +97,10 @@
 #include <vector>
 #include "settings/AdvancedSettings.h"
 #include "settings/DisplaySettings.h"
+
+#ifdef TARGET_ANDROID
+#include "filesystem/AndroidAppDirectory.h"
+#endif
 
 using namespace std;
 using namespace XFILE;
@@ -168,6 +173,7 @@ const BUILT_IN commands[] = {
   { "Skin.SetLargeImage",         true,   "Prompts and sets a large skin images" },
   { "Skin.SetFile",               true,   "Prompts and sets a file" },
   { "Skin.SetAddon",              true,   "Prompts and set an addon" },
+  { "Skin.SetApp",                true,   "Prompts and set an app" },
   { "Skin.SetBool",               true,   "Sets a skin setting on" },
   { "Skin.Reset",                 true,   "Resets a skin setting to default" },
   { "Skin.ResetSettings",         false,  "Resets all skin settings" },
@@ -1342,6 +1348,30 @@ int CBuiltins::Execute(const CStdString& execString)
       CSkinSettings::Get().SetString(string, result);
       CSettings::Get().Save();
     }
+  }
+  else if (execute.Equals("skin.setapp") && params.size() > 0)
+  {
+#ifdef TARGET_ANDROID
+    int string = CSkinSettings::Get().TranslateString(params[0]);
+    
+    CFileItemList items;
+    XFILE::CAndroidAppDirectory apps;
+    if (apps.GetDirectory("apps", items))
+    {
+      CGUIDialogSelect *dialog = (CGUIDialogSelect*)g_windowManager.GetWindow(WINDOW_DIALOG_SELECT);
+      dialog->SetHeading("Android Apps");
+      dialog->Reset();
+      dialog->SetItems(&items);
+      dialog->DoModal();
+      if (dialog->IsConfirmed())
+      {
+        CFileItemPtr  selected  = dialog->GetSelectedItem();
+        std::string   app       = URIUtils::GetFileName(selected->GetPath());
+        CSkinSettings::Get().SetString(string, app);
+        CSettings::Get().Save();
+      }
+    }
+#endif
   }
   else if (execute.Equals("dialog.close") && params.size())
   {
