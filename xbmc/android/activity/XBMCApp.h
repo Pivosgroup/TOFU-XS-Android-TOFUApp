@@ -134,6 +134,7 @@ private:
   static int m_savedVolume;
   bool m_firstrun;
   bool m_exiting;
+  bool m_inFront;
   pthread_t m_thread;
   static CCriticalSection m_applicationsMutex;
   static std::vector<androidPackage> m_applications;
