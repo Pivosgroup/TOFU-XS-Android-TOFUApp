@@ -33,6 +33,8 @@
 
 #include "input/MouseStat.h"
 #include "input/XBMC_keysym.h"
+#include "input/XBMC_vkeys.h"
+#include "input/KeyboardStat.h"
 #include "guilib/Key.h"
 #include "windowing/XBMC_events.h"
 #include <android/log.h>
@@ -166,7 +168,16 @@ void CXBMCApp::onResume()
     SetSystemVolume(m_savedVolume);
 
   if (!m_firstrun && m_inFront)
-    g_windowManager.ActivateWindow(WINDOW_HOME);
+  {
+    XBMC_keysym sym;
+    // Emulate browser_home button
+    sym.scancode  = 0xb4;
+    sym.sym       = XBMCK_BROWSER_HOME;
+    sym.unicode   = 0x0000;
+    sym.mod       = XBMCKMOD_NUM;
+    CKey key(g_Keyboard.ProcessKeyDown(sym));
+    g_application.OnKey(key);
+  }
   
   m_inFront = true;
 
