@@ -103,7 +103,7 @@
 				<posy>-856</posy>
 				<width>513</width>
 				<height>46</height>
-				<texture border="51,3,51,3">tab.png</texture>
+				<texture border="57,0,57,6">tab.png</texture>
 				<animation effect="slide" start="0,-98" end="0,0" time="80">WindowOpen</animation>
 				<animation effect="slide" end="0,-98" time="80">WindowClose</animation>
 				<animation effect="slide" start="0,-98" end="0,0" time="80">Visible</animation>

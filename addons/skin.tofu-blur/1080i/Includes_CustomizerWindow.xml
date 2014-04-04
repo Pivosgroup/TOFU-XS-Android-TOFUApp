@@ -1438,7 +1438,7 @@
 	</include>
 	<include name="SubMenuListContent1124">
 		<posx>145</posx>
-		<posy>-2</posy>
+		<posy>0</posy>
 		<width>1150</width>
 		<height>50</height>
 		<hitrect x="-238" y="0" w="2400" h="130" />
@@ -1455,8 +1455,8 @@
 				<height>50</height>
 				<align>center</align>
 				<label>$INFO[ListItem.Label]</label>
-				<font>Font_Reg28_Caps</font>
-				<textcolor>$VAR[FontColorVar]</textcolor>
+				<font>Font_Reg30_Caps</font>
+				<textcolor>white</textcolor>
 			</control>
 			<control type="image">
 				<posx>98</posx>
@@ -1474,7 +1474,7 @@
 				<height>50</height>
 				<align>center</align>
 				<label>$INFO[ListItem.Label]</label>
-				<font>Font_Reg28_Caps</font>
+				<font>Font_Reg30_Caps</font>
 				<textcolor>white</textcolor>
 				<animation effect="zoom" center="112,25" start="100" end="130" time="160" tween="quadratic">Focus</animation>
 				<animation effect="zoom" center="112,25" start="130" end="100" time="160" tween="quadratic">Unfocus</animation>
@@ -1487,7 +1487,7 @@
 				<height>50</height>
 				<align>center</align>
 				<label>$INFO[ListItem.Label]</label>
-				<font>Font_Reg28_Caps</font>
+				<font>Font_Reg30_Caps</font>
 				<textcolor>$VAR[FontColorVar]</textcolor>
 				<animation effect="zoom" center="112,25" start="100" end="130" time="160" tween="quadratic">Focus</animation>
 				<animation effect="zoom" center="112,25" start="130" end="100" time="160" tween="quadratic">Unfocus</animation>
@@ -1577,42 +1577,42 @@
 			</item>
 			<!--System-->
 			<item>
-				<label>31731</label>
+				<label>7</label>
 				<property name="DisableIcon">$INFO[Skin.String(SystemSub1)]</property>
 				<onclick condition="IsEmpty(Skin.String(SystemSub1))">Skin.SetString(SystemSub1,1)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SystemSub1))">Skin.Reset(SystemSub1)</onclick>
 				<visible>Substring(Control.GetLabel(4327),settings)</visible>
 			</item>
 			<item>
-				<label>7</label>
+				<label>24001</label>
 				<property name="DisableIcon">$INFO[Skin.String(SystemSub2)]</property>
 				<onclick condition="IsEmpty(Skin.String(SystemSub2))">Skin.SetString(SystemSub2,1)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SystemSub2))">Skin.Reset(SystemSub2)</onclick>
 				<visible>Substring(Control.GetLabel(4327),settings)</visible>
 			</item>
 			<item>
-				<label>13200</label>
+				<label>31968</label>
 				<property name="DisableIcon">$INFO[Skin.String(SystemSub3)]</property>
 				<onclick condition="IsEmpty(Skin.String(SystemSub3))">Skin.SetString(SystemSub3,1)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SystemSub3))">Skin.Reset(SystemSub3)</onclick>
 				<visible>Substring(Control.GetLabel(4327),settings)</visible>
 			</item>
 			<item>
-				<label>130</label>
+				<label>13200</label>
 				<property name="DisableIcon">$INFO[Skin.String(SystemSub4)]</property>
 				<onclick condition="IsEmpty(Skin.String(SystemSub4))">Skin.SetString(SystemSub4,1)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SystemSub4))">Skin.Reset(SystemSub4)</onclick>
 				<visible>Substring(Control.GetLabel(4327),settings)</visible>
 			</item>
 			<item>
-				<label>24001</label>
+				<label>31731</label>
 				<property name="DisableIcon">$INFO[Skin.String(SystemSub5)]</property>
 				<onclick condition="IsEmpty(Skin.String(SystemSub5))">Skin.SetString(SystemSub5,1)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SystemSub5))">Skin.Reset(SystemSub5)</onclick>
 				<visible>Substring(Control.GetLabel(4327),settings)</visible>
 			</item>
 			<item>
-				<label>31732</label>
+				<label>130</label>
 				<property name="DisableIcon">$INFO[Skin.String(SystemSub6)]</property>
 				<onclick condition="IsEmpty(Skin.String(SystemSub6))">Skin.SetString(SystemSub6,1)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(SystemSub6))">Skin.Reset(SystemSub6)</onclick>

@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">52</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<include condition="!Skin.HasSetting(setup-0.2.2)">AutoConfig</include>
+	<include condition="!Skin.HasSetting(setup-0.2.3)">AutoConfig</include>
 	<coordinates>
 		<posx>0</posx>
 		<posy>0</posy>

@@ -1543,6 +1543,14 @@ msgstr ""
 
 # TOFU additions
 
+msgctxt "#31967"
+msgid "Android Apps"
+msgstr ""
+
+msgctxt "#31968"
+msgid "TOFU Settings"
+msgstr ""
+
 msgctxt "#31970"
 msgid "InfoList"
 msgstr ""

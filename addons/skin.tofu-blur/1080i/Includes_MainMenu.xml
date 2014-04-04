@@ -540,29 +540,34 @@
 	</include>
 	<include name="DefaultSystemSubMenu">
 		<item>
-			<label>31731</label>
-			<onclick>ActivateWindow(SkinSettings)</onclick>
-			<visible>Substring(Control.GetLabel(4327),settings) + IsEmpty(Skin.String(SystemSub1))</visible>
-		</item>
-		<item>
 			<label>7</label>
 			<onclick>ActivateWindow(FileManager)</onclick>
-			<visible>Substring(Control.GetLabel(4327),settings) + IsEmpty(Skin.String(SystemSub2))</visible>
-		</item>
-		<item>
-			<label>13200</label>
-			<onclick>ActivateWindow(Profiles)</onclick>
-			<visible>Substring(Control.GetLabel(4327),settings) + IsEmpty(Skin.String(SystemSub3))</visible>
-		</item>
-		<item>
-			<label>130</label>
-			<onclick>ActivateWindow(SystemInfo)</onclick>
-			<visible>Substring(Control.GetLabel(4327),settings) + IsEmpty(Skin.String(SystemSub4))</visible>
+			<visible>Substring(Control.GetLabel(4327),settings) + IsEmpty(Skin.String(SystemSub1))</visible>
 		</item>
 		<item>
 			<label>24001</label>
 			<onclick>ActivateWindow(AddonBrowser)</onclick>
+			<visible>Substring(Control.GetLabel(4327),settings) + IsEmpty(Skin.String(SystemSub2))</visible>
+		</item>
+		<item>
+			<label>31968</label>
+			<onclick>ActivateWindow(Settings)</onclick>
+			<visible>Substring(Control.GetLabel(4327),settings) + IsEmpty(Skin.String(SystemSub3))</visible>
+		</item>
+		<item>
+			<label>13200</label>
+			<onclick>ActivateWindow(Profiles)</onclick>
+			<visible>Substring(Control.GetLabel(4327),settings) + IsEmpty(Skin.String(SystemSub4))</visible>
+		</item>
+		<item>
+			<label>31731</label>
+			<onclick>ActivateWindow(SkinSettings)</onclick>
 			<visible>Substring(Control.GetLabel(4327),settings) + IsEmpty(Skin.String(SystemSub5))</visible>
+		</item>
+		<item>
+			<label>130</label>
+			<onclick>ActivateWindow(SystemInfo)</onclick>
+			<visible>Substring(Control.GetLabel(4327),settings) + IsEmpty(Skin.String(SystemSub6))</visible>
 		</item>
 	</include>
 	<include name="CinemaSubMenuItem">
@@ -750,7 +755,7 @@
 	<include name="SettingsMainMenu">
 		<item id="5">
 			<label fallback="31506">$INFO[Skin.String(SettingsHomeItem.Label)]</label>
-			<property name="Path" fallback="ActivateWindow(settings)">$INFO[Skin.String(SettingsHomeItem.Path)]</property>
+			<property name="Path" fallback="StartAndroidActivity(com.go3c.tofu.settings)">$INFO[Skin.String(SettingsHomeItem.Path)]</property>
 			<property name="Type" fallback="custom">$INFO[Skin.String(SettingsHomeItem.Type)]</property>
 			<property name="SubMenu" fallback="settings">$INFO[Skin.String(SettingsHomeItem.SubMenu)]</property>
 			<property name="InfoLine" fallback="system">$INFO[Skin.String(SettingsHomeItem.InfoLine)]</property>
@@ -786,7 +791,7 @@
 	<include name="VideosMainMenu">
 		<item id="2">
 			<label fallback="31504">$INFO[Skin.String(VideosHomeItem.Label)]</label>
-			<property name="Path" fallback="ActivateWindow(Videos,root)">$INFO[Skin.String(VideosHomeItem.Path)]</property>
+			<property name="Path" fallback="ActivateWindow(Videos)">$INFO[Skin.String(VideosHomeItem.Path)]</property>
 			<property name="Type" fallback="custom">$INFO[Skin.String(VideosHomeItem.Type)]</property>
 			<property name="SubMenu" fallback="videos">$INFO[Skin.String(VideosHomeItem.SubMenu)]</property>
 			<property name="InfoLine" fallback="none">$INFO[Skin.String(VideosHomeItem.InfoLine)]</property>
@@ -1192,9 +1197,9 @@
 		</content>
 	</include>
 	<include name="SubMenuListContent">
-		<posx>145</posx>
-		<posy>-4</posy>
-		<width>1150</width>
+		<posx>130</posx>
+		<posy>0</posy>
+		<width>1180</width>
 		<height>50</height>
 		<onleft>9010</onleft>
 		<onright>9010</onright>
@@ -1206,40 +1211,40 @@
 		<onback>SetFocus(9000)</onback>
 		<ondown condition="!Skin.HasSetting(lowermainmenu) + Control.IsVisible(4444)">4444</ondown>
 		<ondown condition="![!Skin.HasSetting(lowermainmenu) + Control.IsVisible(4444)]">7654</ondown>
-		<itemlayout width="230" height="50">
+		<itemlayout width="236" height="50">
 			<control type="label">
-				<posx>115</posx>
-				<width>224</width>
+				<posx>118</posx>
+				<width>250</width>
 				<height>50</height>
 				<align>center</align>
 				<label>$INFO[ListItem.Label]</label>
-				<font>Font_Reg28_Caps</font>
-				<textcolor>lightpurple</textcolor>
+				<font>Font_Reg30_Caps</font>
+				<textcolor>white</textcolor>
 			</control>
 		</itemlayout>
-		<focusedlayout width="230" height="50">
+		<focusedlayout width="236" height="50">
 			<control type="label">
-				<posx>115</posx>
-				<width>224</width>
+				<posx>118</posx>
+				<width>250</width>
 				<height>50</height>
 				<align>center</align>
 				<label>$INFO[ListItem.Label]</label>
-				<font>Font_Reg28_Caps</font>
-				<textcolor>lightpurple</textcolor>
-				<animation effect="zoom" center="112,25" start="100" end="130" time="160" tween="quadratic">Focus</animation>
-				<animation effect="zoom" center="112,25" start="130" end="100" time="160" tween="quadratic">Unfocus</animation>
+				<animation effect="zoom" center="118,25" start="100" end="130" time="160" tween="quadratic">Focus</animation>
+				<animation effect="zoom" center="118,25" start="130" end="100" time="160" tween="quadratic">Unfocus</animation>
+				<font>Font_Reg30_Caps</font>
+				<textcolor>white</textcolor>
 				<scroll>true</scroll>
 			</control>
 			<control type="label">
-				<posx>115</posx>
-				<width>224</width>
+				<posx>118</posx>
+				<width>250</width>
 				<height>50</height>
 				<align>center</align>
 				<label>$INFO[ListItem.Label]</label>
-				<font>Font_Reg28_Caps</font>
+				<animation effect="zoom" center="118,25" start="100" end="130" time="160" tween="quadratic">Focus</animation>
+				<animation effect="zoom" center="118,25" start="130" end="100" time="160" tween="quadratic">Unfocus</animation>
+				<font>Font_Reg30_Caps</font>
 				<textcolor>white</textcolor>
-				<animation effect="zoom" center="112,25" start="100" end="130" time="160" tween="quadratic">Focus</animation>
-				<animation effect="zoom" center="112,25" start="130" end="100" time="160" tween="quadratic">Unfocus</animation>
 				<scroll>true</scroll>
 				<include>Animation_VisibleChange200</include>
 				<visible>Control.HasFocus(9010)</visible>

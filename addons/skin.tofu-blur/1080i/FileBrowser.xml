@@ -60,7 +60,7 @@
 			<control type="list" id="450">
 				<posx>102</posx>
 				<posy>165</posy>
-				<width>1112</width>
+				<width>800</width>
 				<height>734</height>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime tween="quadratic">200</scrolltime>
@@ -71,80 +71,49 @@
 				<itemlayout height="61">
 					<control type="image">
 						<posy>1</posy>
-						<width>1140</width>
+						<width>800</width>
 						<height>60</height>
 						<texture border="3">list-nofocus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
 					<control type="label">
-						<posx>68</posx>
-						<width>810</width>
+						<posx>60</posx>
+						<width>740</width>
 						<height>61</height>
 						<font>Font_Reg30_2</font>
 						<info>ListItem.Label</info>
 						<textcolor>grey</textcolor>
 					</control>
-					<control type="label">
-						<posx>1041</posx>
-						<width>795</width>
-						<height>61</height>
-						<align>right</align>
-						<font>Font_Reg30_2</font>
-						<info>ListItem.Label2</info>
-						<textcolor>$VAR[FontColorVar]</textcolor>
-					</control>
-					<control type="image">
-						<posx>1032</posx>
-						<posy>16</posy>
-						<width>120</width>
-						<height>30</height>
-						<info>ListItem.Overlay</info>
-					</control>
 				</itemlayout>
 				<focusedlayout height="61">
 					<control type="image">
 						<posy>1</posy>
-						<width>1140</width>
+						<width>800</width>
 						<height>60</height>
 						<texture border="3">list-nofocus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>0</posx>
-						<width>1117</width>
+						<width>800</width>
 						<height>61</height>
 						<texture border="3,0,0,20">list-focus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 						<animation effect="fade" start="100" end="50" time="160" condition="!Control.HasFocus(450)">Conditional</animation>
 					</control>
 					<control type="label">
-						<posx>68</posx>
-						<width>810</width>
+						<posx>60</posx>
+						<width>740</width>
 						<height>61</height>
 						<font>Font_Reg30_2</font>
 						<info>ListItem.Label</info>
-					</control>
-					<control type="label">
-						<posx>1041</posx>
-						<width>795</width>
-						<height>61</height>
-						<align>right</align>
-						<font>Font_Reg30_2</font>
-						<info>ListItem.Label2</info>
-					</control>
-					<control type="image">
-						<posx>1032</posx>
-						<posy>16</posy>
-						<width>120</width>
-						<height>30</height>
-						<info>ListItem.Overlay</info>
 					</control>
 				</focusedlayout>
 			</control>
 			<control type="list" id="451">
 				<posx>102</posx>
 				<posy>156</posy>
-				<width>1112</width>
+				<width>800</width>
 				<height>734</height>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime tween="quadratic">200</scrolltime>
@@ -155,47 +124,31 @@
 				<itemlayout height="61">
 					<control type="image">
 						<posy>1</posy>
-						<width>1156</width>
+						<width>800</width>
 						<height>60</height>
 						<texture border="3">list-nofocus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
 					<control type="label">
 						<posx>68</posx>
-						<width>810</width>
+						<width>740</width>
 						<height>61</height>
 						<font>Font_Reg30_2</font>
 						<info>ListItem.Label</info>
 						<textcolor>grey</textcolor>
 					</control>
-					<control type="label">
-						<posx>1041</posx>
-						<width>795</width>
-						<height>61</height>
-						<align>right</align>
-						<font>Font_Reg30_2</font>
-						<info>ListItem.Label2</info>
-						<textcolor>$VAR[FontColorVar]</textcolor>
-					</control>
-					<control type="image">
-						<posx>1032</posx>
-						<posy>16</posy>
-						<width>120</width>
-						<height>30</height>
-						<info>ListItem.Overlay</info>
-					</control>
 				</itemlayout>
 				<focusedlayout height="61">
 					<control type="image">
 						<posy>1</posy>
-						<width>1156</width>
+						<width>800</width>
 						<height>60</height>
 						<texture border="3">list-nofocus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>10</posx>
-						<width>1117</width>
+						<width>800</width>
 						<height>61</height>
 						<texture border="3,0,0,20">list-focus.png</texture>
 						<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
@@ -203,30 +156,23 @@
 					</control>
 					<control type="label">
 						<posx>68</posx>
-						<width>810</width>
+						<width>740</width>
 						<height>61</height>
 						<font>Font_Reg30_2</font>
 						<info>ListItem.Label</info>
 					</control>
-					<control type="label">
-						<posx>1041</posx>
-						<width>795</width>
-						<height>61</height>
-						<align>right</align>
-						<font>Font_Reg30_2</font>
-						<info>ListItem.Label2</info>
-					</control>
-					<control type="image">
-						<posx>1032</posx>
-						<posy>16</posy>
-						<width>120</width>
-						<height>30</height>
-						<info>ListItem.Overlay</info>
-					</control>
 				</focusedlayout>
 			</control>
+			<control type="image">
+				<posx>901</posx>
+				<posy>118</posy>
+				<width>311</width>
+				<height>873</height>
+				<texture>common/black.png</texture>
+				<animation effect="fade" end="10" condition="true">Conditional</animation>
+			</control>
 			<control type="scrollbar" id="60">
-				<posx>1197</posx>
+				<posx>880</posx>
 				<posy>158</posy>
 				<width>40</width>
 				<height>728</height>
@@ -237,16 +183,16 @@
 				<onright>413</onright>
 			</control>
 			<control type="grouplist">
-				<posx>120</posx>
-				<posy>920</posy>
-				<width>1117</width>
-				<height>50</height>
+				<posx>922</posx>
+				<posy>160</posy>
+				<width>270</width>
+				<height>200</height>
 				<onleft>451</onleft>
 				<onright>451</onright>
-				<onup>451</onup>
-				<ondown>451</ondown>
+				<onup>416</onup>
+				<ondown>413</ondown>
 				<scrolltime tween="quadratic">200</scrolltime>
-				<orientation>horizontal</orientation>
+				<orientation>vertical</orientation>
 				<control type="button" id="413">
 					<width>270</width>
 					<height>50</height>
@@ -293,6 +239,8 @@
 					<textureradioonnofocus colordiffuse="$VAR[FontColorVar]">settings/settings_radiobutton-on.png</textureradioonnofocus>
 					<textureradioofffocus>settings/settings_radiobutton-off.png</textureradioofffocus>
 					<textureradiooffnofocus colordiffuse="$VAR[FontColorVar]">settings/settings_radiobutton-off.png</textureradiooffnofocus>
+					<radiowidth>25</radiowidth>
+					<radioheight>25</radioheight>
 				</control>
 			</control>
 		</control>

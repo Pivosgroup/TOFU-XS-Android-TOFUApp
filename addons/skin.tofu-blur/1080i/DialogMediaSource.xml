@@ -25,7 +25,7 @@
 			<control type="image">
 				<posx>1024</posx>
 				<posy>18</posy>
-				<width>234</width>
+				<width>227</width>
 				<height>456</height>
 				<texture>common/black.png</texture>
 				<animation effect="fade" end="20" condition="true">Conditional</animation>
@@ -131,9 +131,9 @@
 				<textcolor>$VAR[FontColorVar]</textcolor>
 			</control>
 			<control type="image">
-				<posx>16</posx>
-				<posy>394</posy>
-				<width>1006</width>
+				<posx>15</posx>
+				<posy>392</posy>
+				<width>1009</width>
 				<height>82</height>
 				<texture>common/black.png</texture>
 				<animation effect="fade" end="20" condition="true">Conditional</animation>
@@ -148,7 +148,7 @@
 			</control>
 			<control type="button" id="12">
 				<posx>27</posx>
-				<posy>386</posy>
+				<posy>390</posy>
 				<width>980</width>
 				<height>66</height>
 				<align>center</align>

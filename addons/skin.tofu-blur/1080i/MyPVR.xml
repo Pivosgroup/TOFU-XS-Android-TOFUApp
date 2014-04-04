@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol>32</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<include condition="!Skin.HasSetting(setup-0.2.2)">AutoConfig</include>
+	<include condition="!Skin.HasSetting(setup-0.2.3)">AutoConfig</include>
 	<onload condition="!Skin.HasSetting(ExplainMediaMenu)">ActivateWindow(1123)</onload>
 	<controls>
 		<control type="multiimage">
