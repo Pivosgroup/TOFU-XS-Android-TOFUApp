@@ -159,6 +159,13 @@
 						<onclick>Skin.SetString(ItemToEdit.Path,ReplaceWindow(Programs,return))</onclick>
 					</item>
 					<item>
+						<label>31967</label>
+						<onclick>Skin.SetString(ItemToEdit.Type,7)</onclick>
+						<onclick>Skin.SetString(ItemToEdit.Label,$LOCALIZE[31967])</onclick>
+						<onclick>Dialog.Close(1143)</onclick>
+						<onclick>Skin.SetString(ItemToEdit.Path,ReplaceWindow(Programs,androidapp://sources/apps/,return))</onclick>
+					</item>
+					<item>
 						<label>31850</label>
 						<onclick>Skin.SetString(ItemToEdit.Type,7)</onclick>
 						<onclick>Skin.SetString(ItemToEdit.Label,$LOCALIZE[31850])</onclick>

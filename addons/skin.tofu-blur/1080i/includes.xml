@@ -531,7 +531,7 @@
 		<onload>Skin.SetString(CustomSub9_3.Disable,1)</onload>
 		<onload>Skin.SetString(CustomSub9_4.Disable,1)</onload>
 		<onload>Skin.SetString(CustomSub9_5.Disable,1)</onload>
-		<onload>Skin.SetBool(setup-0.2.2)</onload>
+		<onload>Skin.SetBool(setup-0.2.3)</onload>
 	</include>
 	<include name="DelayAnimations">
 		<animation effect="fade" end="100" time="120" delay="1000" condition="Stringcompare(Skin.String(InfopanelDelay),1)">Visible</animation>
@@ -911,7 +911,7 @@
 			<posy>904</posy>
 			<width>513</width>
 			<height>50</height>
-			<texture flipy="true" border="51,3,51,3">tab.png</texture>
+			<texture flipy="true" border="57,0,57,6">tab.png</texture>
 			<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 			<visible>player.chaptercount + ![Player.Forwarding | Player.Rewinding]</visible>
 		</control>

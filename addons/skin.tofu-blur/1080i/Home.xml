@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">9004</defaultcontrol>
-	<include condition="!Skin.HasSetting(setup-0.2.2)">AutoConfig</include>
+	<include condition="!Skin.HasSetting(setup-0.2.3)">AutoConfig</include>
 	<onload condition="!Window.Previous(startup) + Skin.HasSetting(randomizehome) + [Substring(Skin.String(widgetlist),random) | Substring(Skin.String(widget2list),random) | Substring(Skin.String(backgroundlist),random)]">SetProperty(SkinWidgets_RandomItems_Update,true)</onload>
 	<onload>ClearProperty(DontRunTVShowScripts,Home)</onload>
 	<onload>AlarmClock(WidgetMove,Control.Move(8000,1),00:07,silent,loop)</onload>
@@ -331,7 +331,7 @@
 						<posy>613</posy>
 						<width>50</width>
 						<height>15</height>
-						<texture>arrowdown.png</texture>
+						<texture>submenu-arrow.png</texture>
 						<colordiffuse>white</colordiffuse>
 						<visible>Control.HasFocus(9000) + !Skin.HasSetting(showsubmenu) + IntegerGreaterThan(Container(9010).NumItems,0)</visible>
 						<animation effect="zoom" start="100,0" end="100,100" time="400" delay="160" tween="cubic" center="0,613" easing="inout">VisibleChange</animation>
@@ -340,17 +340,16 @@
 						<posx>240</posx>
 						<posy>609</posy>
 						<width>1260</width>
-						<height>40</height>
+						<height>52</height>
 						<animation effect="zoom" end="120" center="960,610" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(smallermainmenu)">Conditional</animation>
 						<animation effect="fade" start="100" end="0" time="240" condition="!Control.HasFocus(9010) + ![IntegerGreaterThan(Container(9010).NumItems,0) + Skin.HasSetting(showsubmenu)]">conditional</animation>
-						<animation effect="zoom" start="240,609,1260,40" end="240,609,1260,1" time="240" tween="cubic" easing="inout" condition="!Control.HasFocus(9010) + ![IntegerGreaterThan(Container(9010).NumItems,0) + Skin.HasSetting(showsubmenu)]">conditional</animation>
+						<animation effect="zoom" start="240,609,1260,52" end="240,609,1260,1" time="240" tween="cubic" easing="inout" condition="!Control.HasFocus(9010) + ![IntegerGreaterThan(Container(9010).NumItems,0) + Skin.HasSetting(showsubmenu)]">conditional</animation>
 						<control type="image">
 							<posx>90</posx>
 							<posy>3</posy>
 							<width>1260</width>
-							<height>40</height>
-							<texture border="51,3,51,3">tab.png</texture>
-							<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
+							<height>52</height>
+							<texture border="57,0,57,6">submenu.png</texture>
 						</control>
 						<include condition="Skin.HasSetting(submenufixedlist)">SubMenuFixedList</include>
 						<include condition="!Skin.HasSetting(submenufixedlist)">SubMenuWrapList</include>
@@ -619,6 +618,7 @@
 				<texturefocus>exit-focus.png</texturefocus>
 				<texturenofocus>exit-nofocus.png</texturenofocus>
 				<include>Animation_OpenCloseZoom</include>
+				<animation effect="slide" end="0,-30" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow)">Conditional</animation>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<onclick>ActivateWindow(shutdownmenu)</onclick>

@@ -55,17 +55,17 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1920</width>
-					<height>46</height>
+					<height>52</height>
 					<texture border="2,2,2,6">rss-bar.png</texture>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					<animation effect="rotatex" end="180" time="320" center="23" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow)">Conditional</animation>
 				</control>
 				<control type="rss">
 					<posx>0</posx>
-					<posy>5</posy>
+					<posy>4</posy>
 					<width>1920</width>
-					<height>86</height>
-					<font>Font_Reg26</font>
+					<height>41</height>
+					<font>Font_Reg30</font>
 					<textcolor>white</textcolor>
 					<urlset>1</urlset>
 					<headlinecolor>white</headlinecolor>

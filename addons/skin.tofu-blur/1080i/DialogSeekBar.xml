@@ -45,7 +45,7 @@
 					<posy>-2</posy>
 					<width>513</width>
 					<height>46</height>
-					<texture border="51,3,51,3">tab.png</texture>
+					<texture border="57,0,57,6">tab.png</texture>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					<visible>[[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek] | [[Player.Paused + Player.Caching] + !Player.Seeking] | Player.Seeking|[Player.DisplayAfterSeek + ![player.forwarding | player.rewinding] + !IsEmpty(Player.SeekOffset)]</visible>
 				</control>
@@ -176,7 +176,7 @@
 					<posy>-53</posy>
 					<width>513</width>
 					<height>46</height>
-					<texture flipy="true" border="51,3,51,3">tab.png</texture>
+					<texture flipy="true" border="57,0,57,6">tab.png</texture>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 				</control>
 				<control type="label" id="1">
@@ -216,7 +216,7 @@
 					<posy>-2</posy>
 					<width>513</width>
 					<height>46</height>
-					<texture border="51,3,51,3">tab.png</texture>
+					<texture border="57,0,57,6">tab.png</texture>
 					<colordiffuse>$VAR[PanelColorVar]</colordiffuse>
 					<visible>[[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek] | [[Player.Paused + Player.Caching] + !Player.Seeking] | Player.Seeking|[Player.DisplayAfterSeek + ![player.forwarding | player.rewinding] + !IsEmpty(Player.SeekOffset)]</visible>
 				</control>

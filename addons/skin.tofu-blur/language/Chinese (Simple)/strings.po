@@ -1539,6 +1539,10 @@ msgstr "播放列表小部件"
 
 # TOFU additions
 
+msgctxt "#31967"
+msgid "Android Apps"
+msgstr "安卓应用"
+
 msgctxt "#31971"
 msgid "Local subtitle available"
 msgstr "有本地字幕"
