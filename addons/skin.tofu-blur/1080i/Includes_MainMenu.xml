@@ -551,7 +551,7 @@
 		</item>
 		<item>
 			<label>31968</label>
-			<onclick>ActivateWindow(Settings)</onclick>
+			<onclick>StartAndroidActivity(com.go3c.tofu.settings)</onclick>
 			<visible>Substring(Control.GetLabel(4327),settings) + IsEmpty(Skin.String(SystemSub3))</visible>
 		</item>
 		<item>
@@ -755,7 +755,7 @@
 	<include name="SettingsMainMenu">
 		<item id="5">
 			<label fallback="31506">$INFO[Skin.String(SettingsHomeItem.Label)]</label>
-			<property name="Path" fallback="StartAndroidActivity(com.go3c.tofu.settings)">$INFO[Skin.String(SettingsHomeItem.Path)]</property>
+			<property name="Path" fallback="ActivateWindow(Settings)">$INFO[Skin.String(SettingsHomeItem.Path)]</property>
 			<property name="Type" fallback="custom">$INFO[Skin.String(SettingsHomeItem.Type)]</property>
 			<property name="SubMenu" fallback="settings">$INFO[Skin.String(SettingsHomeItem.SubMenu)]</property>
 			<property name="InfoLine" fallback="system">$INFO[Skin.String(SettingsHomeItem.InfoLine)]</property>
