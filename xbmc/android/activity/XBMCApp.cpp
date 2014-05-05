@@ -178,6 +178,8 @@ void CXBMCApp::onResume()
     CKey key(g_Keyboard.ProcessKeyDown(sym));
     g_application.OnKey(key);
   }
+  else // Tickle the screensaver
+    g_application.WakeUpScreenSaver();
   
   m_inFront = true;
 
