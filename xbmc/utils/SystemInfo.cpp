@@ -805,6 +805,11 @@ CStdString CSysInfo::GetUAWindowsVersion()
 
 CStdString CSysInfo::GetUserAgent()
 {
+/* PIVOS: HACK: Spoof IE to avoid getting ads returned
+ *        by providers who don't recognize our user-agent.
+ *        e.g. iqiyi.com.  Hopefully, this is temporary...
+ */
+#if 0 
   CStdString result;
   result = "XBMC/" + g_infoManager.GetLabel(SYSTEM_BUILD_VERSION) + " (";
 #if defined(TARGET_WINDOWS)
@@ -828,6 +833,9 @@ CStdString CSysInfo::GetUserAgent()
   result += "; http://xbmc.org)";
 
   return result;
+#else
+  return "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)";
+#endif
 }
 
 bool CSysInfo::IsAppleTV2()
