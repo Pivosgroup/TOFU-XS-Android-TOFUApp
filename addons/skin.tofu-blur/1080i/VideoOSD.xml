@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="2901">
-	<defaultcontrol>703</defaultcontrol>
+	<defaultcontrol>602</defaultcontrol>
 	<controls>
 		<control type="group">
 			<animation effect="slide" start="0,-218" end="0,0" time="240" tween="quadratic">WindowOpen</animation>
