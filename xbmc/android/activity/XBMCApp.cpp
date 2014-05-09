@@ -186,6 +186,12 @@ void CXBMCApp::onPause()
 {
   android_printf("%s: ", __PRETTY_FUNCTION__);
 
+  /* TODO: Ideally we'll save a resume point and resume when we're
+   * called again.  Getting that right will be a bit complex. Just
+   * stop playback for now.
+   */
+  g_application.StopPlaying();
+
   m_savedVolume = GetSystemVolume();
   // Restore android volume
   SetSystemVolume(m_initialVolume);
