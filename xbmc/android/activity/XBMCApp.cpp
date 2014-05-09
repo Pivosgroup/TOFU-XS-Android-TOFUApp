@@ -478,7 +478,7 @@ void CXBMCApp::ShowStatusBar(bool show)
 
 void CXBMCApp::PlayBackEnded()
 {
-  if (m_runAsLauncher && m_moveTaskToBackWhenDone)
+  if (m_moveTaskToBackWhenDone)
   {
     android_printf("%s: moveTaskToBack", __PRETTY_FUNCTION__);
     m_moveTaskToBackWhenDone = false;
@@ -766,17 +766,10 @@ void CXBMCApp::onNewIntent(CJNIIntent intent)
     {
       android_printf("CXBMCApp::onNewIntent: filename(%s)", playFile.c_str());
       CApplicationMessenger::Get().MediaPlay(playFile);
-      // if we are a launcher, push us into the back of the activity stack when done.
-      // this acts like a 'finish' but does not cause us to exit.
-      if (m_runAsLauncher)
-        m_moveTaskToBackWhenDone = true;
+      m_moveTaskToBackWhenDone = true;
     }
-    else if (m_runAsLauncher)
-    {
-      // if we are a launcher, and someone told us to play something but
-      // we could not resolve it, just return back to them.
+    else
       moveTaskToBack(true);
-    }
   }
 }
 
