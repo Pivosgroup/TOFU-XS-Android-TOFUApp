@@ -65,6 +65,9 @@
 #if defined(TARGET_DARWIN)
 #include "linux/LinuxResourceCounter.h"
 #endif
+#ifdef TARGET_ANDROID
+#include "android/activity/XBMCApp.h"
+#endif
 
 using namespace PVR;
 
@@ -135,6 +138,24 @@ bool CGUIWindowFullScreen::OnAction(const CAction &action)
       return true;
     }
   }
+
+#ifdef TARGET_ANDROID
+  /* Block access to main GUI when called by an external
+   * android app
+   */
+  if (CXBMCApp::IsCalledByExternalApp())
+  {
+    switch (action.GetID())
+    {
+    case ACTION_SHOW_GUI:
+    case ACTION_SHOW_PLAYLIST:
+      g_application.StopPlaying();
+      return true;
+    default:
+      break;
+    }
+  }
+#endif
 
   switch (action.GetID())
   {
@@ -350,6 +371,19 @@ bool CGUIWindowFullScreen::OnAction(const CAction &action)
   }
 
   return CGUIWindow::OnAction(action);
+}
+
+bool CGUIWindowFullScreen::OnBack(int actionID)
+{
+#ifdef TARGET_ANDROID
+  /* Block access to main GUI when called by an external
+   * android app
+   */
+  if (CXBMCApp::IsCalledByExternalApp())
+    g_application.StopPlaying();
+    return true;
+#endif
+  return CGUIWindow::OnBack(actionID);
 }
 
 void CGUIWindowFullScreen::OnWindowLoaded()
