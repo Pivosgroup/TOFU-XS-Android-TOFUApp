@@ -336,6 +336,11 @@ void CXBMCApp::run()
     appParamParser.Parse((const char **)argv, argc);
 
     free(argv);
+
+    /* We were called with a path to play, odds are we want to fall
+     * back to the caller after playback
+     */
+    m_moveTaskToBackWhenDone = true;
   }
 
   if (startIntent.hasCategory("android.intent.category.HOME"))
