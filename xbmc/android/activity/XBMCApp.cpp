@@ -186,6 +186,12 @@ void CXBMCApp::onPause()
 {
   android_printf("%s: ", __PRETTY_FUNCTION__);
 
+  /* TODO: Ideally we'll save a resume point and resume when we're
+   * called again.  Getting that right will be a bit complex. Just
+   * stop playback for now.
+   */
+  g_application.StopPlaying();
+
   m_savedVolume = GetSystemVolume();
   // Restore android volume
   SetSystemVolume(m_initialVolume);
@@ -328,6 +334,11 @@ void CXBMCApp::run()
     appParamParser.Parse((const char **)argv, argc);
 
     free(argv);
+
+    /* We were called with a path to play, odds are we want to fall
+     * back to the caller after playback
+     */
+    m_moveTaskToBackWhenDone = true;
   }
 
   if (startIntent.hasCategory("android.intent.category.HOME"))
@@ -478,7 +489,7 @@ void CXBMCApp::ShowStatusBar(bool show)
 
 void CXBMCApp::PlayBackEnded()
 {
-  if (m_runAsLauncher && m_moveTaskToBackWhenDone)
+  if (m_moveTaskToBackWhenDone)
   {
     android_printf("%s: moveTaskToBack", __PRETTY_FUNCTION__);
     m_moveTaskToBackWhenDone = false;
@@ -766,17 +777,10 @@ void CXBMCApp::onNewIntent(CJNIIntent intent)
     {
       android_printf("CXBMCApp::onNewIntent: filename(%s)", playFile.c_str());
       CApplicationMessenger::Get().MediaPlay(playFile);
-      // if we are a launcher, push us into the back of the activity stack when done.
-      // this acts like a 'finish' but does not cause us to exit.
-      if (m_runAsLauncher)
-        m_moveTaskToBackWhenDone = true;
+      m_moveTaskToBackWhenDone = true;
     }
-    else if (m_runAsLauncher)
-    {
-      // if we are a launcher, and someone told us to play something but
-      // we could not resolve it, just return back to them.
+    else
       moveTaskToBack(true);
-    }
   }
 }
 

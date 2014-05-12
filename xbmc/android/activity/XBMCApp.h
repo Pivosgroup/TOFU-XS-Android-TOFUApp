@@ -112,6 +112,7 @@ public:
   static bool IsLauncher() { return m_runAsLauncher;};
   static void ShowStatusBar(bool show);
   static void PlayBackEnded();
+  static bool IsCalledByExternalApp() { return m_moveTaskToBackWhenDone; }
 
 protected:
   // limit who can access Volume

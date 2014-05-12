@@ -30,6 +30,7 @@ public:
   virtual ~CGUIWindowFullScreen(void);
   virtual bool OnMessage(CGUIMessage& message);
   virtual bool OnAction(const CAction &action);
+  virtual bool OnBack(int actionID);
   virtual void FrameMove();
   virtual void Process(unsigned int currentTime, CDirtyRegionList &dirtyregion);
   virtual void Render();
