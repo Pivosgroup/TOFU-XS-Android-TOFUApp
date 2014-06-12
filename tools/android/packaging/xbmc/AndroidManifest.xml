@@ -73,7 +73,6 @@
             android:finishOnTaskLaunch="true"
             android:label="TOFU"
             android:launchMode="singleTask"
-            android:noHistory="true"
             android:screenOrientation="sensorLandscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
 
