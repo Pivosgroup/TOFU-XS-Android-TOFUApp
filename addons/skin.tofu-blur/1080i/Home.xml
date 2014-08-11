@@ -619,6 +619,8 @@
 				<texturenofocus>exit-nofocus.png</texturenofocus>
 				<include>Animation_OpenCloseZoom</include>
 				<animation effect="slide" end="0,-30" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow)">Conditional</animation>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<onclick>ActivateWindow(shutdownmenu)</onclick>
