@@ -50,6 +50,7 @@ public:
 protected:
   bool SetDisplayResolution(const char *resolution);
   bool ModeToResolution(const char *mode, RESOLUTION_INFO *res) const;
+  void SetupVideoScaling(const char *mode);
   void EnableFreeScale();
   void DisableFreeScale();
 

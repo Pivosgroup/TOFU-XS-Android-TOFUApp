@@ -2156,13 +2156,18 @@ void CAMLCodec::SetVideoRect(const CRect &SrcRect, const CRect &DestRect)
     return;
   }
 
-  CRect gui, display, dst_rect;
+  CRect gui, dst_rect;
   gui = g_graphicsContext.GetViewWindow();
-  // when display is at 1080p, we have freescale enabled
-  // and that scales all layers into 1080p display including video,
-  // so we have to setup video axis for 720p instead of 1080p... Boooo.
-  display = g_graphicsContext.GetViewWindow();
   dst_rect = m_dst_rect;
+
+  // find the real display size.
+  char mode[32] = {};
+  aml_get_sysfs_str("/sys/class/display/mode", mode, sizeof(mode));
+
+  CRect display = g_graphicsContext.GetViewWindow();
+  if (strstr(mode, "1080"))
+    display = CRect(0, 0, 1920, 1080);
+
   if (gui != display)
   {
     float xscale = display.Width()  / gui.Width();
@@ -2174,6 +2179,15 @@ void CAMLCodec::SetVideoRect(const CRect &SrcRect, const CRect &DestRect)
   }
 
 #if 0
+  std::string display_rectangle = StringUtils::Format("%i,%i,%i,%i",
+                                              (int)display.x1, (int)display.y1,
+                                              (int)display.Width(), (int)display.Height());
+  CLog::Log(LOGDEBUG, "CAMLCodec::SetVideoRect:display_rectangle(%s)", display_rectangle.c_str());
+  std::string gui_rectangle = StringUtils::Format("%i,%i,%i,%i",
+                                              (int)gui.x1, (int)gui.y1,
+                                              (int)gui.Width(), (int)gui.Height());
+  CLog::Log(LOGDEBUG, "CAMLCodec::SetVideoRect:gui_rectangle(%s)", gui_rectangle.c_str());
+
   std::string rectangle = StringUtils::Format("%i,%i,%i,%i",
     (int)dst_rect.x1, (int)dst_rect.y1,
     (int)dst_rect.Width(), (int)dst_rect.Height());
