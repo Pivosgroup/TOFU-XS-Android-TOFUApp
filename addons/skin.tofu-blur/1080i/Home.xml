@@ -615,14 +615,14 @@
 				<posy>1000</posy>
 				<width>80</width>
 				<height>80</height>
-				<texturefocus>exit-focus.png</texturefocus>
-				<texturenofocus>exit-nofocus.png</texturenofocus>
+				<texturefocus>shutdown-focus.png</texturefocus>
+				<texturenofocus>shutdown-nofocus.png</texturenofocus>
 				<include>Animation_OpenCloseZoom</include>
 				<animation effect="slide" end="0,-30" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow)">Conditional</animation>
-				<onleft>9000</onleft>
-				<onright>9000</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
 				<onclick>ActivateWindow(shutdownmenu)</onclick>
 			</control>
 			<control type="button" id="22222">
