@@ -91,6 +91,12 @@ bool CGUIWindowPrograms::OnMessage(CGUIMessage& message)
       }
     }
     break;
+
+  case GUI_MSG_REFRESH_LIST:
+    {
+      Update(m_history.GetParentPath());
+    }
+    break;
   }
 
   return CGUIMediaWindow::OnMessage(message);
