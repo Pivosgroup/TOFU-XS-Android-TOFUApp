@@ -193,6 +193,9 @@ void CXBMCApp::onResume()
     CSingleLock lock(m_applicationsMutex);
     m_applications.clear();
   }
+
+  // Refresh any list in the current window
+  g_windowManager.SendMessage(GUI_MSG_REFRESH_LIST, 0, g_windowManager.GetActiveWindow());
 }
 
 void CXBMCApp::onPause()
