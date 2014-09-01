@@ -89,6 +89,7 @@ void* thread_run(void* obj)
   return NULL;
 }
 CEvent CXBMCApp::m_windowCreated;
+bool CXBMCApp::m_amlREALVIDEO = false;
 bool CXBMCApp::m_runAsLauncher = false;
 ANativeActivity *CXBMCApp::m_activity = NULL;
 ANativeWindow* CXBMCApp::m_window = NULL;
@@ -130,10 +131,14 @@ void CXBMCApp::onStart()
   // we get an onStart call.
   ShowStatusBar(false);
 
-  // non-aml boxes will ignore this intent broadcast.
-  // setup aml scalers to play video as is, unscaled.
-  CJNIIntent intent_aml_video_on = CJNIIntent("android.intent.action.REALVIDEO_ON");
-  sendBroadcast(intent_aml_video_on);
+  if (!m_amlREALVIDEO)
+  {
+    // non-aml boxes will ignore this intent broadcast.
+    // setup aml scalers to play video as is, unscaled.
+    CJNIIntent intent_aml_video_on = CJNIIntent("android.intent.action.REALVIDEO_ON");
+    sendBroadcast(intent_aml_video_on);
+    m_amlREALVIDEO = true;
+  }
 
   if (!m_firstrun)
   {
@@ -156,6 +161,13 @@ void CXBMCApp::onResume()
   // is now too early and we have not been given our window
   // back, so do the ShowStatusBar call again to take affect.
   ShowStatusBar(false);
+
+  if (!m_amlREALVIDEO)
+  {
+    CJNIIntent intent_aml_video_on = CJNIIntent("android.intent.action.REALVIDEO_ON");
+    sendBroadcast(intent_aml_video_on);
+    m_amlREALVIDEO = true;
+  }
 
   CJNIIntentFilter intentFilter;
   intentFilter.addAction("android.intent.action.BATTERY_CHANGED");
@@ -214,9 +226,13 @@ void CXBMCApp::onPause()
 
   unregisterReceiver(*this);
 
-  // non-aml boxes will ignore this intent broadcast.
-  CJNIIntent intent_aml_video_off = CJNIIntent("android.intent.action.REALVIDEO_OFF");
-  sendBroadcast(intent_aml_video_off);
+  if (m_amlREALVIDEO)
+  {
+    // non-aml boxes will ignore this intent broadcast.
+    CJNIIntent intent_aml_video_off = CJNIIntent("android.intent.action.REALVIDEO_OFF");
+    sendBroadcast(intent_aml_video_off);
+    m_amlREALVIDEO = false;
+  }
 }
 
 void CXBMCApp::onStop()

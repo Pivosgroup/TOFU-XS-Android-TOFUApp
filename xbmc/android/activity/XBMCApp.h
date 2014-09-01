@@ -144,6 +144,7 @@ private:
   static ANativeWindow* m_window;
   static CEvent m_windowCreated;
   static bool m_runAsLauncher;
+  static bool m_amlREALVIDEO;
   static bool m_moveTaskToBackWhenDone;
 
   void XBMC_Pause(bool pause);
