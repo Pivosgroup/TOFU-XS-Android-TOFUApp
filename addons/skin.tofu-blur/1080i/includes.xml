@@ -1636,7 +1636,7 @@
 						<enable>Player.SeekEnabled</enable>
 						<onclick>PlayerControl(Rewind)</onclick>
 					</control>
-					<control type="togglebutton" id="70021">
+					<control type="togglebutton" id="602">
 						<width>100</width>
 						<height>100</height>
 						<texturefocus>BigIcons/ButtonPause.png</texturefocus>
