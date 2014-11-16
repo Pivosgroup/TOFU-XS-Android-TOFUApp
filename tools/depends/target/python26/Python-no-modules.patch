@@ -6,7 +6,7 @@ diff -ruN setup.py /setup.py
  
      def build_extensions(self):
 -
-+	return
++        return
          # Detect which modules should be compiled
          missing = self.detect_modules()
 

@@ -37,17 +37,18 @@
         "import " MODULE "\n" \
         "xbmc.abortRequested = False\n" \
         "class xbmcout:\n" \
-        "\tdef __init__(self, loglevel=" MODULE ".LOGNOTICE):\n" \
-        "\t\tself.ll=loglevel\n" \
-        "\tdef write(self, data):\n" \
-        "\t\t" MODULE ".log(data,self.ll)\n" \
-        "\tdef close(self):\n" \
-        "\t\t" MODULE ".log('.')\n" \
-        "\tdef flush(self):\n" \
-        "\t\t" MODULE ".log('.')\n" \
+        "  def __init__(self, loglevel=" MODULE ".LOGNOTICE):\n" \
+        "    self.ll=loglevel\n" \
+        "  def write(self, data):\n" \
+        "    " MODULE ".log(data,self.ll)\n" \
+        "  def close(self):\n" \
+        "    " MODULE ".log('.')\n" \
+        "  def flush(self):\n" \
+        "    " MODULE ".log('.')\n" \
         "import sys\n" \
         "sys.stdout = xbmcout()\n" \
-        "sys.stderr = xbmcout(" MODULE ".LOGERROR)\n"
+        "sys.stderr = xbmcout(" MODULE ".LOGERROR)\n" \
+        ""
 
 #define RUNSCRIPT_OVERRIDE_HACK \
         "" \
