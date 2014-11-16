@@ -6,6 +6,7 @@ DEPS= ../../Makefile.include Makefile \
       Python-no-export-path.patch \
       python-osx-environ-fix.patch \
       Python-2.6.5-ffi-static.patch \
+      Python-android-binmodule.patch \
       Python-2.6.5-urllib.diff \
 
 # lib name, version
@@ -37,6 +38,7 @@ $(PLATFORM): $(TARBALLS_LOCATION)/$(ARCHIVE) $(DEPS)
 	cd $(PLATFORM); patch -p0 < ../Python-no-export-path.patch
 	cd $(PLATFORM); patch -p1 < ../python-osx-environ-fix.patch
 	cd $(PLATFORM); patch -p0 < ../Python-2.6.5-ffi-static.patch
+	cd $(PLATFORM); patch -p0 < ../Python-android-binmodule.patch
 ifeq ($(OS),ios)
 	cd $(PLATFORM); patch -p0 < ../Python-2.6.5-urllib.diff
 endif
