@@ -12,7 +12,11 @@ VERSION=1.1.7
 SOURCE=$(LIBNAME)-$(VERSION)
 ARCHIVE=$(SOURCE).tar.gz
 
-CROSSFLAGS=PYTHONXCPREFIX="$(PREFIX)" LDFLAGS="$(LDFLAGS)"
+ifeq ($(OS),android)
+	CROSSFLAGS=PYTHONXCPREFIX="$(PREFIX)" LDFLAGS="$(LDFLAGS) -L$(PREFIX)/lib/dummy-libxbmc -ltofu -lm"
+else
+	CROSSFLAGS=PYTHONXCPREFIX="$(PREFIX)" LDFLAGS="$(LDFLAGS)"
+endif
 
 LIBDYLIB=$(PLATFORM)/dist/PIL-$(VERSION)-py2.6-$(OS)-$(CPU).egg
 
@@ -30,13 +34,14 @@ $(PLATFORM): $(TARBALLS_LOCATION)/$(ARCHIVE) $(DEPS)
 	cd $(PLATFORM); patch -p0 < ../Imaging-1.1.7-zip-include.patch
 	cd $(PLATFORM); patch -p0 < ../Imaging-1.1.7-remove-zlib-check.patch
 	cd $(PLATFORM); sed -ie "s|"darwin"|"darwinNot"|g" "setup.py"
+	cp setup.cfg $(PLATFORM)/
 
 $(LIBDYLIB): $(PLATFORM)
 	mkdir -p $(PLATFORM)/output
 	cd $(PLATFORM); $(CROSSFLAGS) $(NATIVEPREFIX)/bin/python setup.py build -x bdist_egg --plat-name $(OS)-$(CPU)
 
 .installed-$(PLATFORM): $(LIBDYLIB)
-	mkdir -p $(PREFIX)/lib/python2.6/site-packages/PIL
+	rm -rf $(PREFIX)/lib/python2.6/site-packages/PIL; mkdir -p $(PREFIX)/lib/python2.6/site-packages/PIL
 	unzip -oq $(LIBDYLIB) -d $(PREFIX)/lib/python2.6/site-packages/PIL/
 	echo 'PIL' > $(PREFIX)/lib/python2.6/site-packages/PIL.pth
 	touch $@
