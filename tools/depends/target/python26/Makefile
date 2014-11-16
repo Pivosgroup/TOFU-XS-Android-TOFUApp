@@ -1,7 +1,12 @@
 include ../../Makefile.include
-DEPS= ../../Makefile.include Makefile Python-2.6.2-android.patch \
-      Python-2.6.5-xcompile.patch Python-2.6-ctypes.patch \
-      Python-no-modules.patch Python-no-export-path.patch modules.setup
+DEPS= ../../Makefile.include Makefile \
+      Python-2.6.5-xcompile.patch \
+      Python-2.6.2-android.patch \
+      Python-no-modules.patch \
+      Python-no-export-path.patch \
+      python-osx-environ-fix.patch \
+      Python-2.6.5-ffi-static.patch \
+      Python-2.6.5-urllib.diff \
 
 # lib name, version
 LIBNAME=Python

@@ -1,6 +1,10 @@
 include ../../Makefile.include
-DEPS= ../../Makefile.include Makefile Imaging-1.1.7-access.patch \
-      Imaging-1.1.7-crosscompiling-0.1.patch Imaging-1.1.7-setuptools-0.1.patch
+DEPS= ../../Makefile.include Makefile \
+      Imaging-1.1.7-crosscompiling-0.1.patch \
+      Imaging-1.1.7-setuptools-0.1.patch \
+      Imaging-1.1.7-access.patch \
+      Imaging-1.1.7-zip-include.patch \
+      Imaging-1.1.7-remove-zlib-check.patch
 
 # lib name, version
 LIBNAME=Imaging
