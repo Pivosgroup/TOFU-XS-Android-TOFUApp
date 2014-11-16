@@ -71,15 +71,35 @@
         "os.chdir           = chdir_xbmc\n" \
         ""
 
+#if defined(TARGET_ANDROID)
+// we do not ship python setuptools module and it is needed by site-packages
+// this adds a simple implementation of pkg_resources.resource_filename,
+// others might also be needed in the future.
+#define RUNSCRIPT_SETUPTOOLS_HACK \
+        "" \
+        "import imp,sys\n" \
+        "pkg_resources_code = \\\n" \
+        "\"\"\"\n" \
+        "def resource_filename(__name__,__path__):\n" \
+        "  return __path__\n" \
+        "\"\"\"\n" \
+        "pkg_resources = imp.new_module('pkg_resources')\n" \
+        "exec pkg_resources_code in pkg_resources.__dict__\n" \
+        "sys.modules['pkg_resources'] = pkg_resources\n" \
+        ""
+#else
+#define RUNSCRIPT_SETUPTOOLS_HACK
+#endif
+
 #define RUNSCRIPT_POSTSCRIPT \
         "print '-->Python Interpreter Initialized<--'\n" \
         ""
 
 #define RUNSCRIPT_BWCOMPATIBLE \
-  RUNSCRIPT_PRAMBLE RUNSCRIPT_OVERRIDE_HACK RUNSCRIPT_POSTSCRIPT
+  RUNSCRIPT_PRAMBLE RUNSCRIPT_OVERRIDE_HACK RUNSCRIPT_SETUPTOOLS_HACK RUNSCRIPT_POSTSCRIPT
 
 #define RUNSCRIPT_COMPLIANT \
-  RUNSCRIPT_PRAMBLE RUNSCRIPT_POSTSCRIPT
+  RUNSCRIPT_PRAMBLE RUNSCRIPT_SETUPTOOLS_HACK RUNSCRIPT_POSTSCRIPT
 
 namespace PythonBindings {
   void initModule_xbmcgui(void);
