@@ -1,9 +1,10 @@
 /images/*
 xbmc/assets/*
 xbmc/lib/*
-xbmc/libs/*
+xbmc/gdb/*
 xbmc/obj/*
-xbmc/res/drawable/splash.png
+xbmc/res/raw*
+xbmc/res/drawable*
 xbmc/src/R.java
 xbmc/src/org/xbmc/xbmc/*.class
 xbmc/classes.dex

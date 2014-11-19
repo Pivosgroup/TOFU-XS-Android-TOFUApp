@@ -214,6 +214,15 @@ bool CPythonInvoker::execute(const std::string &script, const std::vector<std::s
 
   Py_DECREF(sysMod); // release ref to sysMod
 
+#ifdef TARGET_ANDROID
+  // Android build of python does not include site-packages path, add it.
+  std::string sitepackagepath = getenv("PYTHONHOME");
+  sitepackagepath += "/lib/python2.6/site-packages";
+  addNativePath(sitepackagepath.c_str());
+  // toss in path to our local libs for good measure.
+  addNativePath(getenv("XBMC_ANDROID_LIBS"));
+#endif
+
   // set current directory and python's path.
   if (m_argv != NULL)
     PySys_SetArgv(m_argc, m_argv);

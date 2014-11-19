@@ -166,12 +166,9 @@ extern "C" void __stdcall init_emu_environ()
   string apkPath = getenv("XBMC_ANDROID_APK");
   apkPath += "/assets/python2.6";
   dll_putenv(string("PYTHONHOME=" + apkPath).c_str());
-  dll_putenv("PYTHONOPTIMIZE=");
-  dll_putenv("PYTHONNOUSERSITE=1");
   dll_putenv("PYTHONPATH=");
-#else
-  dll_putenv("PYTHONOPTIMIZE=1");
 #endif
+  dll_putenv("PYTHONOPTIMIZE=1");
 
   //dll_putenv("PYTHONCASEOK=1");
   //dll_putenv("PYTHONDEBUG=1");

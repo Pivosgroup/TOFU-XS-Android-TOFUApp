@@ -437,8 +437,8 @@ bool XBPython::InitializeEngine()
 #endif
 
 
-// Darwin packs .pyo files, we need PYTHONOPTIMIZE on in order to load them.
-#if defined(TARGET_DARWIN)
+// Android/Darwin packs .pyo files, we need PYTHONOPTIMIZE on in order to load them.
+#if defined(TARGET_DARWIN) || defined(TARGET_ANDROID)
    setenv("PYTHONOPTIMIZE", "1", 1);
 #endif
       // Info about interesting python envvars available
@@ -478,8 +478,6 @@ bool XBPython::InitializeEngine()
       apkPath += "/assets/python2.6";
       setenv("PYTHONHOME",apkPath.c_str(), 1);
       setenv("PYTHONPATH", "", 1);
-      setenv("PYTHONOPTIMIZE","",1);
-      setenv("PYTHONNOUSERSITE","1",1);
 #endif
 
       if (PyEval_ThreadsInitialized())
