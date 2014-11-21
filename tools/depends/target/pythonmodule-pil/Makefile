@@ -37,18 +37,18 @@ $(PLATFORM): $(TARBALLS_LOCATION)/$(ARCHIVE) $(DEPS)
 	cp setup.cfg $(PLATFORM)/
 
 $(LIBDYLIB): $(PLATFORM)
-	mkdir -p $(PLATFORM)/output
 	cd $(PLATFORM); $(CROSSFLAGS) $(NATIVEPREFIX)/bin/python setup.py build -x bdist_egg --plat-name $(OS)-$(CPU)
 
-.installed-$(PLATFORM): $(LIBDYLIB)
+$(PLATFORM)/build/script.test.pil.zip:
+	zip -0 -r $(PLATFORM)/build/script.test.pil.zip script.test.pil
+
+.installed-$(PLATFORM): $(LIBDYLIB) $(PLATFORM)/build/script.test.pil.zip
 	rm -rf $(PREFIX)/lib/python2.6/site-packages/PIL; mkdir -p $(PREFIX)/lib/python2.6/site-packages/PIL
 	unzip -oq $(LIBDYLIB) -d $(PREFIX)/lib/python2.6/site-packages/PIL/
 	echo 'PIL' > $(PREFIX)/lib/python2.6/site-packages/PIL.pth
 	touch $@
 
-clean:
-	$(MAKE) -C $(PLATFORM) clean
-	rm -f .installed-$(PLATFORM)
+clean: distclean
 
 distclean::
 	rm -rf $(PLATFORM) .installed-$(PLATFORM)

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.test.pil"
+       name="Test PIL"
+       version="0.0.7"
+       provider-name="dream-team">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.pil" version="1.1.7"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">NationWide</summary>
+    <description lang="en"></description>
+    <platform>all</platform>
+  </extension>
+</addon>

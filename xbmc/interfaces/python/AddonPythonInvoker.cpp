@@ -75,6 +75,8 @@
 // we do not ship python setuptools module and it is needed by site-packages
 // this adds a simple implementation of pkg_resources.resource_filename,
 // others might also be needed in the future.
+// note: pkg_resources_code is a string; multi-line strings are triple quoted
+// and exec will strip them just like single quoted string.
 #define RUNSCRIPT_SETUPTOOLS_HACK \
         "" \
         "import imp,sys\n" \
