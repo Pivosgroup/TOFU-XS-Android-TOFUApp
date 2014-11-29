@@ -200,7 +200,7 @@ void CStereoscopicsManager::GetSupportedModes(std::vector<std::pair<int, int> >&
            i == RENDER_STEREO_MODE_SPLIT_HORIZONTAL) &&
           i != omitIncompatible)
         continue;
-      modes.push_back(make_pair(i, 36502 + i));
+      modes.push_back(std::make_pair(i, 36502 + i));
     }
   }
 }
