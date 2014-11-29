@@ -26,6 +26,8 @@ int  PosixParseHex(char *str, unsigned char *addr);
 bool IsWireless(int socket, const char *interface);
 bool PosixCheckInterfaceUp(const std::string &interface);
 std::string PosixGetDefaultGateway(const std::string &interface);
+std::string PosixGetMacAddress(const std::string& interfaceName);
+void PosixGetMacAddressRaw(const std::string& interfaceName, char rawMac[6]);
 
 //-----------------------------------------------------------------------
 //-----------------------------------------------------------------------

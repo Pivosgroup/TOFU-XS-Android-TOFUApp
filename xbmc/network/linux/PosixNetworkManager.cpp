@@ -35,11 +35,35 @@
 #include <string.h>
 #include <sys/ioctl.h>
 #include <sys/socket.h>
-#include <linux/wireless.h>
-#include <net/if_arp.h>
+
+#if defined(TARGET_DARWIN)
+  #include <sys/sockio.h>
+  #include <net/if.h>
+  #include <net/if_dl.h>
+  #if defined(TARGET_DARWIN_OSX)
+    #include <net/if_types.h>
+    #include <net/route.h>
+    #include <netinet/if_ether.h>
+  #else //IOS
+    #include "network/osx/ioshacks.h"
+  #endif
+  #include <ifaddrs.h>
+#elif defined(TARGET_FREEBSD)
+  #include <sys/sockio.h>
+  #include <sys/wait.h>
+  #include <net/if.h>
+  #include <net/if_arp.h>
+  #include <net/if_dl.h>
+  #include <ifaddrs.h>
+  #include <net/route.h>
+  #include <netinet/if_ether.h>
+#else
+  #include <linux/wireless.h>
+  #include <net/if_arp.h>
+#endif
 
 #if defined(TARGET_ANDROID)
-#include "android/bionic_supplement/bionic_supplement.h"
+  #include "android/bionic_supplement/bionic_supplement.h"
 #endif
 
 #define ARPHRD_80211    801   // wifi
@@ -114,8 +138,12 @@ CPosixNetworkManager::~CPosixNetworkManager()
 
 bool CPosixNetworkManager::CanManageConnections()
 {
+#if defined(TARGET_DARWIN)
+  return false;
+#else
   return true;
   //return g_advancedSettings.m_enableNetworkManager;
+#endif
 }
 
 IPassphraseStorage* CPosixNetworkManager::GetPassphraseStorage()
@@ -208,13 +236,45 @@ void CPosixNetworkManager::RestoreSystemConnection()
 
   // humm, how do we check ?
   // m_post_failed = true;
-
 }
 
 void CPosixNetworkManager::FindNetworkInterfaces()
 {
   m_connections.clear();
+  bool   managed = CanManageConnections();
 
+#if defined(TARGET_DARWIN) || defined(TARGET_FREEBSD)
+  // Query the list of interfaces.
+  struct ifaddrs *list;
+  if (getifaddrs(&list) < 0)
+    return;
+
+  struct ifaddrs *cur;
+  for(cur = list; cur != NULL; cur = cur->ifa_next)
+  {
+    if(cur->ifa_addr->sa_family != AF_INET)
+      continue;
+
+    if (strncmp(cur->ifa_name, "en", 2) != 0 != 0)
+      continue;
+
+    std::string essid = "Wired";
+    ConnectionType connection = NETWORK_CONNECTION_TYPE_WIRED;
+    EncryptionType encryption = NETWORK_CONNECTION_ENCRYPTION_NONE;
+
+    // format up 'wire.<mac address>.<interface name>
+    std::string macaddress = PosixGetMacAddress(cur->ifa_name);
+    /*
+     CLog::Log(LOGDEBUG, "CPosixNetworkManager::FindNetworkInterfaces, "
+     "interfaceName(%s), macaddress(%s), essid(%s)",
+     interfaceName, macaddress.c_str(), essid.c_str());
+    */
+    m_connections.push_back(CConnectionPtr(new CPosixConnection(managed,
+      m_socket, cur->ifa_name, macaddress.c_str(), essid.c_str(), connection, encryption, 100)));
+  }
+  freeifaddrs(list);
+
+#else
   FILE *fp = fopen("/proc/net/dev", "r");
   if (!fp)
     return;
@@ -223,7 +283,6 @@ void CPosixNetworkManager::FindNetworkInterfaces()
   char   *line = NULL;
   size_t linel = 0;
   char   *interfaceName;
-  bool   managed = CanManageConnections();
 
   while (getdelim(&line, &linel, '\n', fp) > 0)
   {
@@ -282,22 +341,14 @@ void CPosixNetworkManager::FindNetworkInterfaces()
         if ((ifr.ifr_hwaddr.sa_family == ARPHRD_ETHER || ifr.ifr_hwaddr.sa_family == ARPHRD_80211)
            && !(ifr.ifr_flags & IFF_LOOPBACK))
         {
-          char macaddress[1024] = {0};
-          if (ioctl(m_socket, SIOCGIFHWADDR, &ifr) >= 0)
-          {
-            // format up 'wire.<mac address>.<interface name>
-            sprintf(macaddress, "%02X:%02X:%02X:%02X:%02X:%02X",
-              ifr.ifr_hwaddr.sa_data[0], ifr.ifr_hwaddr.sa_data[1],
-              ifr.ifr_hwaddr.sa_data[2], ifr.ifr_hwaddr.sa_data[3],
-              ifr.ifr_hwaddr.sa_data[4], ifr.ifr_hwaddr.sa_data[5]);
-          }
+          std::string macaddress = PosixGetMacAddress(interfaceName);
           /*
           CLog::Log(LOGDEBUG, "CPosixNetworkManager::FindNetworkInterfaces, "
             "interfaceName(%s), macaddress(%s), essid(%s)",
-            interfaceName, macaddress, essid.c_str());
+            interfaceName, macaddress.c_str(), essid.c_str());
           */
           m_connections.push_back(CConnectionPtr(new CPosixConnection(managed,
-             m_socket, interfaceName, macaddress, essid.c_str(), connection, encryption, 100)));
+             m_socket, interfaceName, macaddress.c_str(), essid.c_str(), connection, encryption, 100)));
         }
       }
     }
@@ -305,10 +356,15 @@ void CPosixNetworkManager::FindNetworkInterfaces()
 
   free(line);
   fclose(fp);
+#endif
 }
 
 bool CPosixNetworkManager::FindWifiConnections(const char *interfaceName)
 {
+#if defined(TARGET_DARWIN) || defined(TARGET_FREEBSD)
+  // darwin treats wired and wifi as the same interface.
+  return false;
+#else
   bool managed = CanManageConnections();
   // Query the wireless extentsions version number. It will help us when we
   // parse the resulting events
@@ -515,4 +571,5 @@ bool CPosixNetworkManager::FindWifiConnections(const char *interfaceName)
   free(res_buf);
   res_buf = NULL;
   return true;
+#endif
 }

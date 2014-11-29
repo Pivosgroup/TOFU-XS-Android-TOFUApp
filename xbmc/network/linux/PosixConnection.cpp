@@ -40,7 +40,14 @@
   #include <linux/if.h>
   #include <linux/wireless.h>
   #include <linux/sockios.h>
+#endif
+
+#if defined(TARGET_DARWIN)
+  #include <ifaddrs.h>
+  #include <net/if.h>
+  #include <net/if_dl.h>
   #include <net/if_arp.h>
+  #include <sys/sockio.h>
 #endif
 
 #if defined(TARGET_ANDROID)
@@ -124,6 +131,9 @@ bool PosixGuessIsHexPassPhrase(const std::string &passphrase, EncryptionType enc
 
 bool IsWireless(int socket, const char *interface)
 {
+#if defined(TARGET_DARWIN) || defined(TARGET_FREEBSD)
+  return false;
+#else
   struct iwreq wrq;
   memset(&wrq, 0x00, sizeof(iwreq));
 
@@ -132,6 +142,7 @@ bool IsWireless(int socket, const char *interface)
     return false;
 
    return true;
+#endif
 }
 
 bool PosixCheckInterfaceUp(const std::string &interface)
@@ -159,6 +170,65 @@ std::string PosixGetDefaultGateway(const std::string &interface)
 {
   std::string result = "";
 
+#if defined(TARGET_DARWIN)
+  FILE* pipe = popen("echo \"show State:/Network/Global/IPv4\" | scutil | grep Router", "r");
+  Sleep(100);
+  if (pipe)
+  {
+    std::string tmpStr;
+    char buffer[256] = {'\0'};
+    if (fread(buffer, sizeof(char), sizeof(buffer), pipe) > 0 && !ferror(pipe))
+    {
+      tmpStr = buffer;
+      if (tmpStr.length() >= 11)
+        result = tmpStr.substr(11);
+    }
+    pclose(pipe);
+  }
+  if (result.empty())
+    CLog::Log(LOGWARNING, "Unable to determine gateway");
+#elif defined(TARGET_FREEBSD)
+  size_t needed;
+  int mib[6];
+  char *buf, *next, *lim;
+  char line[16];
+  struct rt_msghdr *rtm;
+  struct sockaddr *sa;
+  struct sockaddr_in *sockin;
+
+  mib[0] = CTL_NET;
+  mib[1] = PF_ROUTE;
+  mib[2] = 0;
+  mib[3] = 0;
+  mib[4] = NET_RT_DUMP;
+  mib[5] = 0;
+  if (sysctl(mib, 6, NULL, &needed, NULL, 0) < 0)
+    return result;
+
+  if ((buf = (char *)malloc(needed)) == NULL)
+    return result;
+
+  if (sysctl(mib, 6, buf, &needed, NULL, 0) < 0) {
+    free(buf);
+    return result;
+  }
+
+  lim  = buf + needed;
+  for (next = buf; next < lim; next += rtm->rtm_msglen) {
+    rtm = (struct rt_msghdr *)next;
+    sa = (struct sockaddr *)(rtm + 1);
+    sa = (struct sockaddr *)(SA_SIZE(sa) + (char *)sa);
+    sockin = (struct sockaddr_in *)sa;
+    if (inet_ntop(AF_INET, &sockin->sin_addr.s_addr,
+                  line, sizeof(line)) == NULL) {
+      free(buf);
+      return result;
+	  }
+	  result = line;
+    break;
+  }
+  free(buf);
+#else
   FILE* fp = fopen("/proc/net/route", "r");
   if (!fp)
     return result;
@@ -199,8 +269,59 @@ std::string PosixGetDefaultGateway(const std::string &interface)
   }
   free(line);
   fclose(fp);
+#endif
 
   return result;
+}
+
+std::string PosixGetMacAddress(const std::string& interfaceName)
+{
+  char rawMac[6];
+  ::PosixGetMacAddressRaw(interfaceName, rawMac);
+  // this MUST cast to uint8_t or rawMac with high bit set will
+  // be formatted as 'FFFFFFxx'.
+  return StringUtils::Format("%02X:%02X:%02X:%02X:%02X:%02X",
+    (uint8_t)rawMac[0], (uint8_t)rawMac[1], (uint8_t)rawMac[2],
+    (uint8_t)rawMac[3], (uint8_t)rawMac[4], (uint8_t)rawMac[5]);
+}
+
+void PosixGetMacAddressRaw(const std::string& interfaceName, char rawMac[6])
+{
+  memset(rawMac, 0, 6);
+
+#if defined(TARGET_DARWIN) || defined(TARGET_FREEBSD)
+#if !defined(IFT_ETHER)
+#define IFT_ETHER 0x6/* Ethernet CSMACD */
+#endif
+  // Query the list of interfaces.
+  struct ifaddrs *list;
+  if( getifaddrs(&list) < 0 )
+    return;
+
+  struct ifaddrs *interface;
+  for(interface = list; interface != NULL; interface = interface->ifa_next)
+  {
+    if(interfaceName == interface->ifa_name)
+    {
+      if ( (interface->ifa_addr->sa_family == AF_LINK) && (((const struct sockaddr_dl *) interface->ifa_addr)->sdl_type == IFT_ETHER) )
+      {
+        const struct sockaddr_dl* dlAddr = (const struct sockaddr_dl*) interface->ifa_addr;
+        const uint8_t* base = (const uint8_t *) &dlAddr->sdl_data[dlAddr->sdl_nlen];
+        if( dlAddr->sdl_alen > 5 )
+          memcpy(rawMac, base, 6);
+      }
+      break;
+    }
+  }
+  freeifaddrs(list);
+#else
+  struct ifreq ifr;
+  strcpy(ifr.ifr_name, interfaceName.c_str());
+  SOCKET soc = socket(AF_INET, SOCK_STREAM, 0);
+  if (ioctl(soc, SIOCGIFHWADDR, &ifr) >= 0)
+    memcpy(rawMac, ifr.ifr_hwaddr.sa_data, 6);
+  closesocket(soc);
+#endif
 }
 
 //-----------------------------------------------------------------------
@@ -268,46 +389,60 @@ std::string CPosixConnection::GetGateway() const
 std::string CPosixConnection::GetNameServer() const
 {
   std::string nameserver("127.0.0.1");
+  std::vector<std::string> result;
 
-#if defined(TARGET_ANDROID)
-  char ns[PROP_VALUE_MAX];
+#if defined(TARGET_DARWIN)
+  FILE* pipe = popen("scutil --dns | grep \"nameserver\" | tail -n2", "r");
+  Sleep(100);
+  if (pipe)
+  {
+    std::vector<std::string> tmp_strings;
+    char buffer[256] = {'\0'};
+    if (fread(buffer, sizeof(char), sizeof(buffer), pipe) > 0 && !ferror(pipe))
+    {
+      tmp_strings = StringUtils::Split(buffer, "\n");
+      for (unsigned int i = 0; i < tmp_strings.size(); i ++)
+      {
+        // result looks like this - > '  nameserver[0] : 192.168.1.1'
+        // 2 blank spaces + 13 in 'nameserver[0]' + blank + ':' + blank == 18 :)
+        if (tmp_strings[i].length() >= 18)
+          result.push_back(tmp_strings[i].substr(18));
+      }
+    }
+    pclose(pipe);
+  }
+#elif defined(TARGET_ANDROID)
+  char tmp_string[PROP_VALUE_MAX];
 
-  if (__system_property_get("net.dns1", ns))
-    nameserver = ns;
+  if (__system_property_get("net.dns1", tmp_string))
+    result.push_back(tmp_string);
+  if (__system_property_get("net.dns2", tmp_string))
+    result.push_back(tmp_string);
+  if (__system_property_get("net.dns3", tmp_string))
+    result.push_back(tmp_string);
 #else
   res_init();
   for (int i = 0; i < _res.nscount; i ++)
   {
-      nameserver = inet_ntoa(((struct sockaddr_in *)&_res.nsaddr_list[0])->sin_addr);
-      break;
+    std::string ns = inet_ntoa(((struct sockaddr_in *)&_res.nsaddr_list[i])->sin_addr);
+    result.push_back(ns);
   }
 #endif
+
+  if (!result.empty())
+    nameserver = result[0];
+
   return nameserver;
 }
 
 std::string CPosixConnection::GetMacAddress() const
 {
-  std::string result("00:00:00:00:00:00");
-
-  struct ifreq ifr;
-  strcpy(ifr.ifr_name, m_interface.c_str());
-  if (ioctl(m_socket, SIOCGIFHWADDR, &ifr) >= 0)
-  {
-    result = StringUtils::Format("%02X:%02X:%02X:%02X:%02X:%02X",
-      ifr.ifr_hwaddr.sa_data[0], ifr.ifr_hwaddr.sa_data[1],
-      ifr.ifr_hwaddr.sa_data[2], ifr.ifr_hwaddr.sa_data[3],
-      ifr.ifr_hwaddr.sa_data[4], ifr.ifr_hwaddr.sa_data[5]);
-  }
-
-  return result;
+  return PosixGetMacAddress(m_interface);
 }
 
 void CPosixConnection::GetMacAddressRaw(char rawMac[6]) const
 {
-  struct ifreq ifr;
-  strcpy(ifr.ifr_name, m_interface.c_str());
-  if (ioctl(m_socket, SIOCGIFHWADDR, &ifr) >= 0)
-    memcpy(rawMac, ifr.ifr_hwaddr.sa_data, 6);
+  ::PosixGetMacAddressRaw(m_interface, rawMac);
 }
 
 std::string CPosixConnection::GetInterfaceName() const
@@ -348,6 +483,9 @@ ConnectionState CPosixConnection::GetState() const
 
   if (m_type == NETWORK_CONNECTION_TYPE_WIFI)
   {
+#if defined(TARGET_DARWIN)
+    return NETWORK_CONNECTION_STATE_DISCONNECTED;
+#else
     // for wifi, we need to check we have a wifi driver name.
     struct iwreq wrq;
     strcpy(wrq.ifr_name, m_interface.c_str());
@@ -375,6 +513,7 @@ ConnectionState CPosixConnection::GetState() const
     // m_essid was defaulted to 'Wifi'. So ignore this check.
     if (m_essid != test_essid)
       return NETWORK_CONNECTION_STATE_DISCONNECTED;
+#endif
 #endif
   }
 

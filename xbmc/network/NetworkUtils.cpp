@@ -47,6 +47,23 @@
   #include <sys/wait.h>
 #endif
 
+#if defined(TARGET_DARWIN)
+#include <sys/param.h>
+#include <sys/file.h>
+#include <sys/socket.h>
+#include <sys/sysctl.h>
+
+#include <net/if.h>
+#include <net/if_dl.h>
+#include <net/if_types.h>
+#include <net/route.h>
+
+#include <netinet/in.h>
+#include <netinet/if_ether.h>
+
+#include <arpa/inet.h>
+#endif
+
 /* slightly modified in_ether taken from the etherboot project (http://sourceforge.net/projects/etherboot) */
 static bool in_ether(const char *bufp, unsigned char *addr)
 {
@@ -467,7 +484,7 @@ std::string CNetworkUtils::GetRemoteMacAddress(unsigned long host_ip)
   {   
     char *buf, *next;
 
-    if (buf = (char*)malloc(needed))
+    if ((buf = (char*)malloc(needed)))
     {      
       if (sysctl(mib, sizeof(mib) / sizeof(mib[0]), buf, &needed, NULL, 0) == 0)
       {        
@@ -488,7 +505,7 @@ std::string CNetworkUtils::GetRemoteMacAddress(unsigned long host_ip)
 
           char macaddress[256] = {0};
           sprintf(macaddress, "%02X:%02X:%02X:%02X:%02X:%02X",
-            cp[0], cp1], cp[2], cp[3], cp[4], cp[5]);
+            cp[0], cp[1], cp[2], cp[3], cp[4], cp[5]);
           mac_addr = macaddress;
           break;
         }
