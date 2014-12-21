@@ -1974,7 +1974,11 @@ void CAMLCodec::Process()
           if (abs_error > 0.150)
           {
             // big error so try to reset pts_pcrscr
-            SetVideoPtsSeconds(app_pts);
+            // do not reset if the error is very big,
+            // might just be dvdplayer wonking out on a discontinuity
+            // and we just need to let it settle down.
+            if (abs_error < 10.0)
+              SetVideoPtsSeconds(app_pts);
           }
           else
           {
