@@ -1740,7 +1740,7 @@ int CAMLCodec::Decode(uint8_t *pData, size_t iSize, double dts, double pts)
   // OpenDecoder call. So we need to restore it but it does not seem to stick :)
   g_renderManager.RegisterRenderUpdateCallBack((const void*)this, RenderUpdateCallBack);
 
-  if (pData)
+  if (pData && iSize)
   {
     am_private->am_pkt.data = pData;
     am_private->am_pkt.data_size = iSize;
