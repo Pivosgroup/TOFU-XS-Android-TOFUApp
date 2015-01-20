@@ -1448,7 +1448,7 @@ bool CAMLCodec::OpenDecoder(CDVDStreamInfo &hints)
   m_cur_pts = 0;
   m_cur_pictcnt = 0;
   m_old_pictcnt = 0;
-  m_dst_rect.SetRect(0, 0, 0, 0);
+  m_gui_dst_rect.SetRect(0, 0, 0, 0);
   m_zoom = -1;
   m_contrast = -1;
   m_brightness = -1;
@@ -2156,9 +2156,9 @@ void CAMLCodec::SetVideoRect(const CRect &SrcRect, const CRect &DestRect)
   }
 
   // dest_rect
-  if (m_dst_rect != DestRect)
+  if (m_gui_dst_rect != DestRect)
   {
-    m_dst_rect  = DestRect;
+    m_gui_dst_rect  = DestRect;
     update = true;
   }
 
@@ -2169,26 +2169,33 @@ void CAMLCodec::SetVideoRect(const CRect &SrcRect, const CRect &DestRect)
     return;
   }
 
-  CRect gui, dst_rect;
-  gui = g_graphicsContext.GetViewWindow();
-  dst_rect = m_dst_rect;
-
-  // find the real display size.
+  // default display to same as gui size.
+  CRect display = g_graphicsContext.GetViewWindow();
+  // find the real display size. Normally in Android
+  // this will be the same as gui but aml system.prop can
+  // override with const.window.w/const.window.h in
+  // SurfaceFlinger::getDisplayInfo. So we cannot trust
+  // gui to reflect true display size value.
   char mode[32] = {};
   aml_get_sysfs_str("/sys/class/display/mode", mode, sizeof(mode));
 
-  CRect display = g_graphicsContext.GetViewWindow();
-  if (strstr(mode, "1080"))
+  if (strstr(mode, "720"))
+    display = CRect(0, 0, 1280, 720);
+  else if (strstr(mode, "1080"))
     display = CRect(0, 0, 1920, 1080);
 
-  if (gui != display)
+  // /sys/class/video/axis, this must relative
+  // to true display size, not gui size.
+  CRect vid_dst_rect = m_gui_dst_rect;
+  CRect gui_rect = g_graphicsContext.GetViewWindow();
+  if (gui_rect != display)
   {
-    float xscale = display.Width()  / gui.Width();
-    float yscale = display.Height() / gui.Height();
-    dst_rect.x1 *= xscale;
-    dst_rect.x2 *= xscale;
-    dst_rect.y1 *= yscale;
-    dst_rect.y2 *= yscale;
+    float xscale = display.Width()  / gui_rect.Width();
+    float yscale = display.Height() / gui_rect.Height();
+    vid_dst_rect.x1 *= xscale;
+    vid_dst_rect.x2 *= xscale;
+    vid_dst_rect.y1 *= yscale;
+    vid_dst_rect.y2 *= yscale;
   }
 
 #if 0
@@ -2197,13 +2204,13 @@ void CAMLCodec::SetVideoRect(const CRect &SrcRect, const CRect &DestRect)
                                               (int)display.Width(), (int)display.Height());
   CLog::Log(LOGDEBUG, "CAMLCodec::SetVideoRect:display_rectangle(%s)", display_rectangle.c_str());
   std::string gui_rectangle = StringUtils::Format("%i,%i,%i,%i",
-                                              (int)gui.x1, (int)gui.y1,
-                                              (int)gui.Width(), (int)gui.Height());
+                                              (int)gui_rect.x1, (int)gui_rect.y1,
+                                              (int)gui_rect.Width(), (int)gui_rect.Height());
   CLog::Log(LOGDEBUG, "CAMLCodec::SetVideoRect:gui_rectangle(%s)", gui_rectangle.c_str());
 
   std::string rectangle = StringUtils::Format("%i,%i,%i,%i",
-    (int)dst_rect.x1, (int)dst_rect.y1,
-    (int)dst_rect.Width(), (int)dst_rect.Height());
+    (int)vid_dst_rect.x1, (int)vid_dst_rect.y1,
+    (int)vid_dst_rect.Width(), (int)vid_dst_rect.Height());
   CLog::Log(LOGDEBUG, "CAMLCodec::SetVideoRect:dst_rect(%s)", rectangle.c_str());
   CLog::Log(LOGDEBUG, "CAMLCodec::SetVideoRect:m_stereo_mode(%d)", m_stereo_mode);
   CLog::Log(LOGDEBUG, "CAMLCodec::SetVideoRect:m_stereo_view(%d)", m_stereo_view);
@@ -2211,17 +2218,17 @@ void CAMLCodec::SetVideoRect(const CRect &SrcRect, const CRect &DestRect)
 
 
   if (m_stereo_mode == RENDER_STEREO_MODE_SPLIT_VERTICAL)
-    dst_rect.x2 *= 2.0;
+    vid_dst_rect.x2 *= 2.0;
   else if (m_stereo_mode == RENDER_STEREO_MODE_SPLIT_HORIZONTAL)
-    dst_rect.y2 *= 2.0;
+    vid_dst_rect.y2 *= 2.0;
 
   // goofy 0/1 based difference in aml axis coordinates.
   // fix them.
-  dst_rect.x2--;
-  dst_rect.y2--;
+  vid_dst_rect.x2--;
+  vid_dst_rect.y2--;
 
   char video_axis[256] = {};
-  sprintf(video_axis, "%d %d %d %d", (int)dst_rect.x1, (int)dst_rect.y1, (int)dst_rect.x2, (int)dst_rect.y2);
+  sprintf(video_axis, "%d %d %d %d", (int)vid_dst_rect.x1, (int)vid_dst_rect.y1, (int)vid_dst_rect.x2, (int)vid_dst_rect.y2);
 
   aml_set_sysfs_str("/sys/class/video/axis", video_axis);
   // make sure we are in 'full stretch' so we can stretch
